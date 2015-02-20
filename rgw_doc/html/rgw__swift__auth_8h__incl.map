@@ -1,0 +1,19 @@
+<map id="rgw_swift_auth.h" name="rgw_swift_auth.h">
+<area shape="rect" id="node2" href="$rgw__op_8h.html" title="rgw_op.h" alt="" coords="1947,155,2020,181"/>
+<area shape="rect" id="node48" href="$rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="2061,80,2143,107"/>
+<area shape="rect" id="node7" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1295,619,1405,645"/>
+<area shape="rect" id="node16" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="94,701,172,728"/>
+<area shape="rect" id="node18" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="197,701,283,728"/>
+<area shape="rect" id="node19" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2609,701,2703,728"/>
+<area shape="rect" id="node28" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1001,304,1095,331"/>
+<area shape="rect" id="node42" href="$rgw__user_8h.html" title="rgw_user.h" alt="" coords="1906,229,1992,256"/>
+<area shape="rect" id="node46" href="$rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2302,229,2401,256"/>
+<area shape="rect" id="node22" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2492,701,2585,728"/>
+<area shape="rect" id="node34" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="1647,387,1725,413"/>
+<area shape="rect" id="node37" href="$rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="903,544,1017,571"/>
+<area shape="rect" id="node38" href="$rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1379,387,1497,413"/>
+<area shape="rect" id="node39" href="$rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1393,469,1513,496"/>
+<area shape="rect" id="node41" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1393,544,1513,571"/>
+<area shape="rect" id="node43" href="$rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1945,544,2033,571"/>
+<area shape="rect" id="node44" href="$rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="2158,304,2263,331"/>
+</map>

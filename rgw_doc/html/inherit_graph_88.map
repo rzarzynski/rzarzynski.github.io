@@ -1,0 +1,22 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classRGWHandler.html" title="RGWHandler" alt="" coords="6,509,106,536"/>
+<area shape="rect" id="node2" href="$classRGWHandler__ObjStore.html" title="RGWHandler_ObjStore" alt="" coords="167,484,326,511"/>
+<area shape="rect" id="node20" href="$classRGWHandler__SWIFT__Auth.html" title="RGWHandler_SWIFT_Auth" alt="" coords="155,535,338,561"/>
+<area shape="rect" id="node3" href="$classRGWHandler__Auth__S3.html" title="RGWHandler_Auth_S3" alt="" coords="399,208,556,235"/>
+<area shape="rect" id="node12" href="$classRGWHandler__ObjStore__S3.html" title="RGWHandler_ObjStore_S3" alt="" coords="387,484,568,511"/>
+<area shape="rect" id="node16" href="$classRGWHandler__ObjStore__SWIFT.html" title="RGWHandler_ObjStore\l_SWIFT" alt="" coords="398,639,557,681"/>
+<area shape="rect" id="node4" href="$classRGWHandler__Bucket.html" title="RGWHandler_Bucket" alt="" coords="629,5,777,32"/>
+<area shape="rect" id="node5" href="$classRGWHandler__Config.html" title="RGWHandler_Config" alt="" coords="630,56,775,83"/>
+<area shape="rect" id="node6" href="$classRGWHandler__Log.html" title="RGWHandler_Log" alt="" coords="639,107,767,133"/>
+<area shape="rect" id="node7" href="$classRGWHandler__Metadata.html" title="RGWHandler_Metadata" alt="" coords="622,157,783,184"/>
+<area shape="rect" id="node8" href="$classRGWHandler__Opstate.html" title="RGWHandler_Opstate" alt="" coords="626,208,779,235"/>
+<area shape="rect" id="node9" href="$classRGWHandler__ReplicaLog.html" title="RGWHandler_ReplicaLog" alt="" coords="617,259,789,285"/>
+<area shape="rect" id="node10" href="$classRGWHandler__Usage.html" title="RGWHandler_Usage" alt="" coords="630,309,775,336"/>
+<area shape="rect" id="node11" href="$classRGWHandler__User.html" title="RGWHandler_User" alt="" coords="635,360,770,387"/>
+<area shape="rect" id="node13" href="$classRGWHandler__ObjStore__Bucket__S3.html" title="RGWHandler_ObjStore\l_Bucket_S3" alt="" coords="623,411,782,453"/>
+<area shape="rect" id="node14" href="$classRGWHandler__ObjStore__Obj__S3.html" title="RGWHandler_ObjStore\l_Obj_S3" alt="" coords="623,477,782,518"/>
+<area shape="rect" id="node15" href="$classRGWHandler__ObjStore__Service__S3.html" title="RGWHandler_ObjStore\l_Service_S3" alt="" coords="623,542,782,583"/>
+<area shape="rect" id="node17" href="$classRGWHandler__ObjStore__Bucket__SWIFT.html" title="RGWHandler_ObjStore\l_Bucket_SWIFT" alt="" coords="623,607,782,649"/>
+<area shape="rect" id="node18" href="$classRGWHandler__ObjStore__Obj__SWIFT.html" title="RGWHandler_ObjStore\l_Obj_SWIFT" alt="" coords="623,673,782,714"/>
+<area shape="rect" id="node19" href="$classRGWHandler__ObjStore__Service__SWIFT.html" title="RGWHandler_ObjStore\l_Service_SWIFT" alt="" coords="623,738,782,779"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="RGWOp_Opstate_Delete" name="RGWOp_Opstate_Delete">
+<area shape="rect" id="node2" href="$classRGWRESTOp.html" title="{RGWRESTOp\n|# http_ret\l# flusher\l|+ RGWRESTOp()\l+ init()\l+ send_response()\l+ check_caps()\l+ verify_permission()\l}" alt="" coords="32,382,176,533"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="15,6,192,333"/>
+</map>

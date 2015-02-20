@@ -1,0 +1,5 @@
+<map id="RGWSetTempUrl_ObjStore_SWIFT" name="RGWSetTempUrl_ObjStore_SWIFT">
+<area shape="rect" id="node2" href="$classRGWSetTempUrl__ObjStore.html" title="{RGWSetTempUrl_ObjStore\n||+ RGWSetTempUrl_ObjStore()\l+ ~RGWSetTempUrl_ObjStore()\l}" alt="" coords="4,611,213,703"/>
+<area shape="rect" id="node3" href="$classRGWSetTempUrl.html" title="{RGWSetTempUrl\n|# ret\l# temp_url_keys\l|+ RGWSetTempUrl()\l+ verify_permission()\l+ execute()\l+ get_params()\l+ send_response()\l+ name()\l+ get_type()\l}" alt="" coords="37,382,181,562"/>
+<area shape="rect" id="node4" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="21,6,197,333"/>
+</map>

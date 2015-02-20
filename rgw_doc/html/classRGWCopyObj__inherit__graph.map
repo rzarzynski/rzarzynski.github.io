@@ -1,0 +1,6 @@
+<map id="RGWCopyObj" name="RGWCopyObj">
+<area shape="rect" id="node3" href="$classRGWCopyObj__ObjStore.html" title="{RGWCopyObj_ObjStore\n||+ RGWCopyObj_ObjStore()\l+ ~RGWCopyObj_ObjStore()\l}" alt="" coords="128,859,320,951"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="135,6,312,333"/>
+<area shape="rect" id="node4" href="$classRGWCopyObj__ObjStore__S3.html" title="{RGWCopyObj_ObjStore_S3\n||+ RGWCopyObj_ObjStore_S3()\l+ ~RGWCopyObj_ObjStore_S3()\l+ init_dest_policy()\l+ get_params()\l+ send_partial_response()\l+ send_response()\l}" alt="" coords="5,1022,219,1173"/>
+<area shape="rect" id="node5" href="$classRGWCopyObj__ObjStore__SWIFT.html" title="{RGWCopyObj_ObjStore\l_SWIFT\n||+ RGWCopyObj_ObjStore\l_SWIFT()\l+ ~RGWCopyObj_ObjStore\l_SWIFT()\l+ init_dest_policy()\l+ get_params()\l+ send_response()\l+ send_partial_response()\l}" alt="" coords="244,1000,428,1195"/>
+</map>

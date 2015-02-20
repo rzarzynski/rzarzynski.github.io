@@ -1,0 +1,3 @@
+<map id="RGWAccessControlPolicy_SWIFT" name="RGWAccessControlPolicy_SWIFT">
+<area shape="rect" id="node2" href="$classRGWAccessControlPolicy.html" title="{RGWAccessControlPolicy\n|# cct\l# acl\l# owner\l|+ RGWAccessControlPolicy()\l+ RGWAccessControlPolicy()\l+ ~RGWAccessControlPolicy()\l+ set_ctx()\l+ get_perm()\l+ get_group_perm()\l+ verify_permission()\l+ encode()\l+ decode()\l+ dump()\land 6 more...\l+ generate_test_instances()\l}" alt="" coords="5,6,211,274"/>
+</map>

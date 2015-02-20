@@ -1,0 +1,5 @@
+<map id="RGWUser" name="RGWUser">
+<area shape="rect" id="node2" href="$classRGWSubUserPool.html" title="{RGWSubUserPool\n||+ RGWSubUserPool()\l+ ~RGWSubUserPool()\l+ exists()\l+ init()\l+ add()\l+ remove()\l+ modify()\l}" alt="" coords="5,5,164,171"/>
+<area shape="rect" id="node3" href="$classRGWUserCapPool.html" title="{RGWUserCapPool\n||+ RGWUserCapPool()\l+ ~RGWUserCapPool()\l+ init()\l+ add()\l+ remove()\l}" alt="" coords="190,20,351,156"/>
+<area shape="rect" id="node4" href="$classRGWAccessKeyPool.html" title="{RGWAccessKeyPool\n||+ RGWAccessKeyPool()\l+ ~RGWAccessKeyPool()\l+ init()\l+ add()\l+ remove()\l}" alt="" coords="376,20,552,156"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="RGWAccessControlPolicy" name="RGWAccessControlPolicy">
+<area shape="rect" id="node2" href="$classRGWAccessControlPolicy__S3.html" title="{RGWAccessControlPolicy_S3\n||+ RGWAccessControlPolicy_S3()\l+ ~RGWAccessControlPolicy_S3()\l+ xml_end()\l+ to_xml()\l+ rebuild()\l+ compare_group_name()\l+ create_canned()\l+ create_from_headers()\l}" alt="" coords="5,323,232,503"/>
+<area shape="rect" id="node3" href="$classRGWAccessControlPolicy__SWIFT.html" title="{RGWAccessControlPolicy\l_SWIFT\n||+ RGWAccessControlPolicy\l_SWIFT()\l+ ~RGWAccessControlPolicy\l_SWIFT()\l+ add_grants()\l+ create()\l+ to_str()\l}" alt="" coords="257,323,455,503"/>
+</map>

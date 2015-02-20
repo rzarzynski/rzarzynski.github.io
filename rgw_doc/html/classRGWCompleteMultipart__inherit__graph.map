@@ -1,0 +1,5 @@
+<map id="RGWCompleteMultipart" name="RGWCompleteMultipart">
+<area shape="rect" id="node3" href="$classRGWCompleteMultipart__ObjStore.html" title="{RGWCompleteMultipart\l_ObjStore\n||+ RGWCompleteMultipart\l_ObjStore()\l+ ~RGWCompleteMultipart\l_ObjStore()\l+ get_params()\l}" alt="" coords="9,699,191,850"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="11,6,188,333"/>
+<area shape="rect" id="node4" href="$classRGWCompleteMultipart__ObjStore__S3.html" title="{RGWCompleteMultipart\l_ObjStore_S3\n||+ RGWCompleteMultipart\l_ObjStore_S3()\l+ ~RGWCompleteMultipart\l_ObjStore_S3()\l+ send_response()\l}" alt="" coords="9,899,191,1050"/>
+</map>

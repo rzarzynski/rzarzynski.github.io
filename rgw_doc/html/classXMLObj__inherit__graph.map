@@ -1,0 +1,38 @@
+<map id="XMLObj" name="XMLObj">
+<area shape="rect" id="node2" href="$classACLDisplayName__S3.html" title="{ACLDisplayName_S3\n||+ ACLDisplayName_S3()\l+ ~ACLDisplayName_S3()\l}" alt="" coords="5,366,184,458"/>
+<area shape="rect" id="node3" href="$classACLEmail__S3.html" title="{ACLEmail_S3\n||+ ACLEmail_S3()\l+ ~ACLEmail_S3()\l}" alt="" coords="209,366,340,458"/>
+<area shape="rect" id="node4" href="$classACLGrant__S3.html" title="{ACLGrant_S3\n||+ ACLGrant_S3()\l+ ~ACLGrant_S3()\l+ to_xml()\l+ xml_end()\l+ xml_start()\l+ uri_to_group()\l+ group_to_uri()\l}" alt="" coords="365,329,495,495"/>
+<area shape="rect" id="node5" href="$classACLGrantee__S3.html" title="{ACLGrantee_S3\n||+ ACLGrantee_S3()\l+ ~ACLGrantee_S3()\l+ xml_start()\l}" alt="" coords="521,359,665,465"/>
+<area shape="rect" id="node6" href="$classACLID__S3.html" title="{ACLID_S3\n||+ ACLID_S3()\l+ ~ACLID_S3()\l+ to_str()\l}" alt="" coords="690,359,803,465"/>
+<area shape="rect" id="node7" href="$classACLOwner__S3.html" title="{ACLOwner_S3\n||+ ACLOwner_S3()\l+ ~ACLOwner_S3()\l+ xml_end()\l+ to_xml()\l}" alt="" coords="827,351,964,473"/>
+<area shape="rect" id="node8" href="$classACLPermission__S3.html" title="{ACLPermission_S3\n||+ ACLPermission_S3()\l+ ~ACLPermission_S3()\l+ xml_end()\l+ to_xml()\l}" alt="" coords="989,351,1152,473"/>
+<area shape="rect" id="node9" href="$classACLURI__S3.html" title="{ACLURI_S3\n||+ ACLURI_S3()\l+ ~ACLURI_S3()\l}" alt="" coords="1177,366,1300,458"/>
+<area shape="rect" id="node10" href="$classCORSRuleAllowedHeader__S3.html" title="{CORSRuleAllowedHeader_S3\n||+ CORSRuleAllowedHeader_S3()\l+ ~CORSRuleAllowedHeader_S3()\l}" alt="" coords="1324,366,1551,458"/>
+<area shape="rect" id="node11" href="$classCORSRuleAllowedMethod__S3.html" title="{CORSRuleAllowedMethod_S3\n||+ CORSRuleAllowedMethod_S3()\l+ ~CORSRuleAllowedMethod_S3()\l}" alt="" coords="1575,366,1803,458"/>
+<area shape="rect" id="node12" href="$classCORSRuleAllowedOrigin__S3.html" title="{CORSRuleAllowedOrigin_S3\n||+ CORSRuleAllowedOrigin_S3()\l+ ~CORSRuleAllowedOrigin_S3()\l}" alt="" coords="1828,366,2047,458"/>
+<area shape="rect" id="node13" href="$classCORSRuleExposeHeader__S3.html" title="{CORSRuleExposeHeader_S3\n||+ CORSRuleExposeHeader_S3()\l+ ~CORSRuleExposeHeader_S3()\l}" alt="" coords="2071,366,2296,458"/>
+<area shape="rect" id="node14" href="$classCORSRuleID__S3.html" title="{CORSRuleID_S3\n||+ CORSRuleID_S3()\l+ ~CORSRuleID_S3()\l}" alt="" coords="2321,366,2473,458"/>
+<area shape="rect" id="node15" href="$classCORSRuleMaxAgeSeconds__S3.html" title="{CORSRuleMaxAgeSeconds_S3\n||+ CORSRuleMaxAgeSeconds_S3()\l+ ~CORSRuleMaxAgeSeconds_S3()\l}" alt="" coords="2498,366,2736,458"/>
+<area shape="rect" id="node16" href="$classRGWAccessControlList__S3.html" title="{RGWAccessControlList_S3\n||+ RGWAccessControlList_S3()\l+ ~RGWAccessControlList_S3()\l+ xml_end()\l+ to_xml()\l+ create_canned()\l+ create_from_grants()\l}" alt="" coords="2761,337,2975,487"/>
+<area shape="rect" id="node17" href="$classRGWAccessControlPolicy__S3.html" title="{RGWAccessControlPolicy_S3\n||+ RGWAccessControlPolicy_S3()\l+ ~RGWAccessControlPolicy_S3()\l+ xml_end()\l+ to_xml()\l+ rebuild()\l+ compare_group_name()\l+ create_canned()\l+ create_from_headers()\l}" alt="" coords="2999,322,3227,502"/>
+<area shape="rect" id="node18" href="$classRGWCORSConfiguration__S3.html" title="{RGWCORSConfiguration_S3\n||+ RGWCORSConfiguration_S3()\l+ ~RGWCORSConfiguration_S3()\l+ xml_end()\l+ to_xml()\l}" alt="" coords="3251,351,3473,473"/>
+<area shape="rect" id="node19" href="$classRGWCORSRule__S3.html" title="{RGWCORSRule_S3\n||+ RGWCORSRule_S3()\l+ ~RGWCORSRule_S3()\l+ xml_end()\l+ to_xml()\l}" alt="" coords="3498,351,3669,473"/>
+<area shape="rect" id="node20" href="$classRGWCreateBucketConfig.html" title="{RGWCreateBucketConfig\n||+ RGWCreateBucketConfig()\l+ ~RGWCreateBucketConfig()\l}" alt="" coords="3694,366,3895,458"/>
+<area shape="rect" id="node21" href="$classRGWLocationConstraint.html" title="{RGWLocationConstraint\n|+ location_constraint\l|+ RGWLocationConstraint()\l+ ~RGWLocationConstraint()\l+ xml_end()\l}" alt="" coords="3920,359,4112,465"/>
+<area shape="rect" id="node22" href="$classRGWMultiCompleteUpload.html" title="{RGWMultiCompleteUpload\n|+ parts\l|+ RGWMultiCompleteUpload()\l+ ~RGWMultiCompleteUpload()\l+ xml_end()\l}" alt="" coords="4136,359,4344,465"/>
+<area shape="rect" id="node23" href="$classRGWMultiDelDelete.html" title="{RGWMultiDelDelete\n|+ objects\l+ quiet\l|+ RGWMultiDelDelete()\l+ ~RGWMultiDelDelete()\l+ xml_end()\l+ is_quiet()\l}" alt="" coords="4369,344,4537,480"/>
+<area shape="rect" id="node24" href="$classRGWMultiDelKey.html" title="{RGWMultiDelKey\n||+ RGWMultiDelKey()\l+ ~RGWMultiDelKey()\l}" alt="" coords="4563,366,4716,458"/>
+<area shape="rect" id="node25" href="$classRGWMultiDelObject.html" title="{RGWMultiDelObject\n||+ RGWMultiDelObject()\l+ ~RGWMultiDelObject()\l+ xml_end()\l+ get_key()\l+ get_version_id()\l}" alt="" coords="4742,344,4911,480"/>
+<area shape="rect" id="node26" href="$classRGWMultiDelQuiet.html" title="{RGWMultiDelQuiet\n||+ RGWMultiDelQuiet()\l+ ~RGWMultiDelQuiet()\l}" alt="" coords="4936,366,5099,458"/>
+<area shape="rect" id="node27" href="$classRGWMultiDelVersionId.html" title="{RGWMultiDelVersionId\n||+ RGWMultiDelVersionId()\l+ ~RGWMultiDelVersionId()\l}" alt="" coords="5123,366,5309,458"/>
+<area shape="rect" id="node28" href="$classRGWMultiETag.html" title="{RGWMultiETag\n||+ RGWMultiETag()\l+ ~RGWMultiETag()\l}" alt="" coords="5334,366,5476,458"/>
+<area shape="rect" id="node29" href="$classRGWMultiPart.html" title="{RGWMultiPart\n||+ RGWMultiPart()\l+ ~RGWMultiPart()\l+ xml_end()\l+ get_etag()\l+ get_num()\l}" alt="" coords="5501,344,5635,480"/>
+<area shape="rect" id="node30" href="$classRGWMultiPartNumber.html" title="{RGWMultiPartNumber\n||+ RGWMultiPartNumber()\l+ ~RGWMultiPartNumber()\l}" alt="" coords="5660,366,5841,458"/>
+<area shape="rect" id="node31" href="$classRGWXMLParser.html" title="{RGWXMLParser\n||+ RGWXMLParser()\l+ ~RGWXMLParser()\l+ init()\l+ xml_start()\l+ xml_end()\l+ handle_data()\l+ parse()\l+ get_xml()\l+ set_failure()\l# alloc_obj()\l}" alt="" coords="5866,307,6013,517"/>
+<area shape="rect" id="node32" href="$classRGWACLXMLParser__S3.html" title="{RGWACLXMLParser_S3\n||+ RGWACLXMLParser_S3()\l}" alt="" coords="5287,580,5476,657"/>
+<area shape="rect" id="node33" href="$classRGWCORSXMLParser__S3.html" title="{RGWCORSXMLParser_S3\n||+ RGWCORSXMLParser_S3()\l}" alt="" coords="5500,580,5703,657"/>
+<area shape="rect" id="node34" href="$classRGWCreateBucketParser.html" title="{RGWCreateBucketParser\n||+ RGWCreateBucketParser()\l+ ~RGWCreateBucketParser()\l+ get_location_constraint()\l}" alt="" coords="5727,565,5928,672"/>
+<area shape="rect" id="node35" href="$classRGWMultiDelXMLParser.html" title="{RGWMultiDelXMLParser\n||+ RGWMultiDelXMLParser()\l+ ~RGWMultiDelXMLParser()\l}" alt="" coords="5953,573,6148,665"/>
+<area shape="rect" id="node36" href="$classRGWMultiXMLParser.html" title="{RGWMultiXMLParser\n||+ RGWMultiXMLParser()\l+ ~RGWMultiXMLParser()\l}" alt="" coords="6173,573,6349,665"/>
+<area shape="rect" id="node37" href="$classRGWSetBucketVersioningParser.html" title="{RGWSetBucketVersioningParser\n||+ RGWSetBucketVersioningParser()\l+ ~RGWSetBucketVersioningParser()\l+ get_versioning_status()\l}" alt="" coords="6373,565,6616,672"/>
+</map>

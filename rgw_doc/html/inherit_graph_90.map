@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classRGWHTTPClient.html" title="RGWHTTPClient" alt="" coords="6,121,130,148"/>
+<area shape="rect" id="node2" href="$classRGW__Auth__S3__Keystone__ValidateToken.html" title="RGW_Auth_S3_Keystone\l_ValidateToken" alt="" coords="189,5,363,46"/>
+<area shape="rect" id="node3" href="$classRGWPostHTTPData.html" title="RGWPostHTTPData" alt="" coords="203,71,349,97"/>
+<area shape="rect" id="node4" href="$classRGWRESTSimpleRequest.html" title="RGWRESTSimpleRequest" alt="" coords="186,121,366,148"/>
+<area shape="rect" id="node7" href="$classRGWValidateKeystoneToken.html" title="RGWValidateKeystoneToken" alt="" coords="179,172,373,199"/>
+<area shape="rect" id="node8" href="$classRGWValidateSwiftToken.html" title="RGWValidateSwiftToken" alt="" coords="192,223,360,249"/>
+<area shape="rect" id="node5" href="$classRGWRESTStreamReadRequest.html" title="RGWRESTStreamReadRequest" alt="" coords="421,96,635,123"/>
+<area shape="rect" id="node6" href="$classRGWRESTStreamWriteRequest.html" title="RGWRESTStreamWriteRequest" alt="" coords="421,147,635,173"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="RGWQuotaCache&lt; T &gt;::AsyncRefreshHandler" name="RGWQuotaCache&lt; T &gt;::AsyncRefreshHandler">
+<area shape="rect" id="node2" href="$classBucketAsyncRefreshHandler.html" title="{BucketAsyncRefreshHandler\l\&lt; rgw_bucket \&gt;\n||+ BucketAsyncRefreshHandler()\l+ drop_reference()\l+ handle_response()\l+ init_fetch()\l}" alt="" coords="5,205,215,341"/>
+<area shape="rect" id="node3" href="$classUserAsyncRefreshHandler.html" title="{UserAsyncRefreshHandler\l\&lt; string \&gt;\n||+ UserAsyncRefreshHandler()\l+ drop_reference()\l+ init_fetch()\l+ handle_response()\l}" alt="" coords="239,205,437,341"/>
+</map>

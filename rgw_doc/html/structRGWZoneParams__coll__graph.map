@@ -1,0 +1,4 @@
+<map id="RGWZoneParams" name="RGWZoneParams">
+<area shape="rect" id="node2" href="$structRGWAccessKey.html" title="{RGWAccessKey\n|+ id\l+ key\l+ subuser\l|+ RGWAccessKey()\l+ encode()\l+ decode()\l+ dump()\l+ dump_plain()\l+ dump()\l+ decode_json()\l+ decode_json()\l+ generate_test_instances()\l}" alt="" coords="5,57,189,281"/>
+<area shape="rect" id="node3" href="$structrgw__bucket.html" title="{rgw_bucket\n|+ name\l+ data_pool\l+ data_extra_pool\l+ index_pool\l+ marker\l+ bucket_id\l+ oid\l|+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="213,6,397,333"/>
+</map>

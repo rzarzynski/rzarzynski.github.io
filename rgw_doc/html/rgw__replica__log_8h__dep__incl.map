@@ -1,0 +1,6 @@
+<map id="rgw_replica_log.h" name="rgw_replica_log.h">
+<area shape="rect" id="node2" href="$rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="5,80,107,107"/>
+<area shape="rect" id="node3" href="$rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="132,80,228,107"/>
+<area shape="rect" id="node4" href="$rgw__replica__log_8cc.html" title="rgw_replica_log.cc" alt="" coords="252,80,381,107"/>
+<area shape="rect" id="node5" href="$rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="407,80,565,107"/>
+</map>

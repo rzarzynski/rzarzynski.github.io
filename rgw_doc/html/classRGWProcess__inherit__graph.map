@@ -1,0 +1,4 @@
+<map id="RGWProcess" name="RGWProcess">
+<area shape="rect" id="node2" href="$classRGWFCGXProcess.html" title="{RGWFCGXProcess\n||+ RGWFCGXProcess()\l+ run()\l+ handle_request()\l}" alt="" coords="5,329,164,436"/>
+<area shape="rect" id="node3" href="$classRGWLoadGenProcess.html" title="{RGWLoadGenProcess\n||+ RGWLoadGenProcess()\l+ run()\l+ checkpoint()\l+ handle_request()\l+ gen_request()\l+ set_access_key()\l}" alt="" coords="190,307,364,458"/>
+</map>

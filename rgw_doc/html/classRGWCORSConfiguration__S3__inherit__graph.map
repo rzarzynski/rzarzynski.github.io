@@ -1,0 +1,4 @@
+<map id="RGWCORSConfiguration_S3" name="RGWCORSConfiguration_S3">
+<area shape="rect" id="node2" href="$classRGWCORSConfiguration.html" title="{RGWCORSConfiguration\n|# rules\l|+ RGWCORSConfiguration()\l+ ~RGWCORSConfiguration()\l+ encode()\l+ decode()\l+ dump()\l+ get_rules()\l+ is_empty()\l+ get_origins_list()\l+ host_name_rule()\l+ erase_host_name_rule()\l+ dump()\l+ stack_rule()\l}" alt="" coords="5,13,203,251"/>
+<area shape="rect" id="node3" href="$classXMLObj.html" title="{XMLObj\n|# data\l# children\l# attr_map\l|+ XMLObj()\l+ ~XMLObj()\l+ xml_start()\l+ xml_end()\l+ xml_handle_data()\l+ get_data()\l+ get_parent()\l+ add_child()\l+ get_attr()\l+ find()\l+ find_first()\l}" alt="" coords="227,5,367,259"/>
+</map>

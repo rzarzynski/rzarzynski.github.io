@@ -1,0 +1,5 @@
+<map id="RGWMultipartUploadEntry" name="RGWMultipartUploadEntry">
+<area shape="rect" id="node2" href="$classRGWMPObj.html" title="{RGWMPObj\n||+ RGWMPObj()\l+ RGWMPObj()\l+ init()\l+ init()\l+ get_meta()\l+ get_part()\l+ get_part()\l+ get_upload_id()\l+ get_key()\l+ from_meta()\l+ clear()\l}" alt="" coords="5,361,128,585"/>
+<area shape="rect" id="node3" href="$structRGWObjEnt.html" title="{RGWObjEnt\n|+ ns\l+ owner\l+ owner_display_name\l+ size\l+ mtime\l+ etag\l+ content_type\l+ tag\l+ flags\l+ versioned_epoch\l|+ RGWObjEnt()\l+ dump()\l+ is_current()\l+ is_delete_marker()\l+ is_visible()\l}" alt="" coords="153,339,308,607"/>
+<area shape="rect" id="node4" href="$structrgw__obj__key.html" title="{rgw_obj_key\n|+ name\l+ instance\l|+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="173,6,288,274"/>
+</map>

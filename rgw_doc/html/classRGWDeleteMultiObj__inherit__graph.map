@@ -1,0 +1,5 @@
+<map id="RGWDeleteMultiObj" name="RGWDeleteMultiObj">
+<area shape="rect" id="node3" href="$classRGWDeleteMultiObj__ObjStore.html" title="{RGWDeleteMultiObj_ObjStore\n||+ RGWDeleteMultiObj_ObjStore()\l+ ~RGWDeleteMultiObj\l_ObjStore()\l+ get_params()\l}" alt="" coords="17,771,236,893"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="38,6,215,333"/>
+<area shape="rect" id="node4" href="$classRGWDeleteMultiObj__ObjStore__S3.html" title="{RGWDeleteMultiObj_ObjStore_S3\n||+ RGWDeleteMultiObj_ObjStore_S3()\l+ ~RGWDeleteMultiObj\l_ObjStore_S3()\l+ send_status()\l+ begin_response()\l+ send_partial_response()\l+ end_response()\l}" alt="" coords="5,941,248,1107"/>
+</map>

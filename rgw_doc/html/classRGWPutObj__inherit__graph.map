@@ -1,0 +1,6 @@
+<map id="RGWPutObj" name="RGWPutObj">
+<area shape="rect" id="node3" href="$classRGWPutObj__ObjStore.html" title="{RGWPutObj_ObjStore\n||+ RGWPutObj_ObjStore()\l+ ~RGWPutObj_ObjStore()\l+ verify_params()\l+ get_params()\l+ get_data()\l}" alt="" coords="123,875,304,1011"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="125,6,301,333"/>
+<area shape="rect" id="node4" href="$classRGWPutObj__ObjStore__S3.html" title="{RGWPutObj_ObjStore_S3\n||+ RGWPutObj_ObjStore_S3()\l+ ~RGWPutObj_ObjStore_S3()\l+ get_params()\l+ send_response()\l}" alt="" coords="5,1081,208,1202"/>
+<area shape="rect" id="node5" href="$classRGWPutObj__ObjStore__SWIFT.html" title="{RGWPutObj_ObjStore\l_SWIFT\n||+ RGWPutObj_ObjStore\l_SWIFT()\l+ ~RGWPutObj_ObjStore\l_SWIFT()\l+ get_params()\l+ send_response()\l}" alt="" coords="233,1059,407,1224"/>
+</map>

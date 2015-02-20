@@ -1,0 +1,3 @@
+<map id="UserQuotas" name="UserQuotas">
+<area shape="rect" id="node2" href="$structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size_kb\l+ max_objects\l+ enabled\l+ max_size_soft_threshold\l+ max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,5,184,200"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="RGWDeleteObj_ObjStore" name="RGWDeleteObj_ObjStore">
+<area shape="rect" id="node4" href="$classRGWDeleteObj__ObjStore__S3.html" title="{RGWDeleteObj_ObjStore_S3\n||+ RGWDeleteObj_ObjStore_S3()\l+ ~RGWDeleteObj_ObjStore_S3()\l+ send_response()\l}" alt="" coords="5,804,227,911"/>
+<area shape="rect" id="node5" href="$classRGWDeleteObj__ObjStore__SWIFT.html" title="{RGWDeleteObj_ObjStore\l_SWIFT\n||+ RGWDeleteObj_ObjStore\l_SWIFT()\l+ ~RGWDeleteObj_ObjStore\l_SWIFT()\l+ send_response()\l}" alt="" coords="251,782,441,933"/>
+<area shape="rect" id="node2" href="$classRGWDeleteObj.html" title="{RGWDeleteObj\n|# ret\l# delete_marker\l# version_id\l|+ RGWDeleteObj()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="159,382,303,591"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="142,6,319,333"/>
+</map>

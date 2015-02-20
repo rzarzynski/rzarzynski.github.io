@@ -1,0 +1,4 @@
+<map id="RGWGetBucketLocation_ObjStore_S3" name="RGWGetBucketLocation_ObjStore_S3">
+<area shape="rect" id="node2" href="$classRGWGetBucketLocation.html" title="{RGWGetBucketLocation\n||+ RGWGetBucketLocation()\l+ ~RGWGetBucketLocation()\l+ verify_permission()\l+ execute()\l+ send_response()\l+ name()\l+ op_mask()\l}" alt="" coords="5,381,200,547"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="14,6,191,333"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="RGWCompleteMultipart_ObjStore" name="RGWCompleteMultipart_ObjStore">
+<area shape="rect" id="node4" href="$classRGWCompleteMultipart__ObjStore__S3.html" title="{RGWCompleteMultipart\l_ObjStore_S3\n||+ RGWCompleteMultipart\l_ObjStore_S3()\l+ ~RGWCompleteMultipart\l_ObjStore_S3()\l+ send_response()\l}" alt="" coords="9,899,191,1050"/>
+<area shape="rect" id="node2" href="$classRGWCompleteMultipart.html" title="{RGWCompleteMultipart\n|# ret\l# upload_id\l# etag\l# data\l# len\l|+ RGWCompleteMultipart()\l+ ~RGWCompleteMultipart()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ get_params()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="5,382,195,650"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="11,6,188,333"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="RGWPutACLs_ObjStore_S3" name="RGWPutACLs_ObjStore_S3">
+<area shape="rect" id="node2" href="$classRGWPutACLs__ObjStore.html" title="{RGWPutACLs_ObjStore\n||+ RGWPutACLs_ObjStore()\l+ ~RGWPutACLs_ObjStore()\l+ get_params()\l}" alt="" coords="16,683,211,789"/>
+<area shape="rect" id="node3" href="$classRGWPutACLs.html" title="{RGWPutACLs\n|# ret\l# len\l# data\l|+ RGWPutACLs()\l+ ~RGWPutACLs()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ get_policy_from_state()\l+ get_params()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="28,381,199,635"/>
+<area shape="rect" id="node4" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="25,6,201,333"/>
+</map>

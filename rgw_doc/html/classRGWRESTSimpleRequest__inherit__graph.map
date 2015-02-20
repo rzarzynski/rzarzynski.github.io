@@ -1,0 +1,5 @@
+<map id="RGWRESTSimpleRequest" name="RGWRESTSimpleRequest">
+<area shape="rect" id="node3" href="$classRGWRESTStreamReadRequest.html" title="{RGWRESTStreamReadRequest\n||+ send_data()\l+ receive_data()\l+ RGWRESTStreamReadRequest()\l+ ~RGWRESTStreamReadRequest()\l+ get_obj()\l+ complete()\l+ set_in_cb()\l# handle_header()\l}" alt="" coords="5,697,245,877"/>
+<area shape="rect" id="node4" href="$classRGWRESTStreamWriteRequest.html" title="{RGWRESTStreamWriteRequest\n||+ add_output_data()\l+ send_data()\l+ RGWRESTStreamWriteRequest()\l+ ~RGWRESTStreamWriteRequest()\l+ put_obj_init()\l+ complete()\l+ get_out_cb()\l}" alt="" coords="270,704,511,869"/>
+<area shape="rect" id="node2" href="$classRGWHTTPClient.html" title="{RGWHTTPClient\n|# cct\l# headers\l|+ ~RGWHTTPClient()\l+ RGWHTTPClient()\l+ append_header()\l+ receive_header()\l+ receive_data()\l+ send_data()\l+ set_send_length()\l+ process()\l+ process()\l+ init_async()\l+ process_request()\l+ complete_request()\l}" alt="" coords="181,5,333,259"/>
+</map>

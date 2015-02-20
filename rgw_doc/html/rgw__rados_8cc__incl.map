@@ -1,0 +1,14 @@
+<map id="rgw_rados.cc" name="rgw_rados.cc">
+<area shape="rect" id="node10" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="2099,171,2192,197"/>
+<area shape="rect" id="node21" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1151,419,1229,445"/>
+<area shape="rect" id="node27" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="1785,253,1863,280"/>
+<area shape="rect" id="node28" href="$rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="2040,253,2155,280"/>
+<area shape="rect" id="node30" href="$rgw__cache_8h.html" title="rgw_cache.h" alt="" coords="1332,88,1428,115"/>
+<area shape="rect" id="node32" href="$rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="827,336,925,363"/>
+<area shape="rect" id="node36" href="$rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1738,88,1837,115"/>
+<area shape="rect" id="node37" href="$rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1355,253,1444,280"/>
+<area shape="rect" id="node50" href="$rgw__gc_8h.html" title="rgw_gc.h" alt="" coords="2079,88,2152,115"/>
+<area shape="rect" id="node15" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1843,336,1953,363"/>
+<area shape="rect" id="node29" href="$rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="2467,253,2585,280"/>
+<area shape="rect" id="node35" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="700,419,781,445"/>
+</map>

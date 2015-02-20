@@ -1,0 +1,6 @@
+<map id="RGWOptionsCORS_ObjStore" name="RGWOptionsCORS_ObjStore">
+<area shape="rect" id="node4" href="$classRGWOptionsCORS__ObjStore__S3.html" title="{RGWOptionsCORS_ObjStore_S3\n||+ RGWOptionsCORS_ObjStore_S3()\l+ ~RGWOptionsCORS_ObjStore_S3()\l+ send_response()\l}" alt="" coords="5,847,252,953"/>
+<area shape="rect" id="node5" href="$classRGWOptionsCORS__ObjStore__SWIFT.html" title="{RGWOptionsCORS_ObjStore\l_SWIFT\n||+ RGWOptionsCORS_ObjStore\l_SWIFT()\l+ ~RGWOptionsCORS_ObjStore\l_SWIFT()\l+ send_response()\l}" alt="" coords="278,825,495,975"/>
+<area shape="rect" id="node2" href="$classRGWOptionsCORS.html" title="{RGWOptionsCORS\n|# ret\l# rule\l# origin\l# req_hdrs\l# req_meth\l|+ RGWOptionsCORS()\l+ verify_permission()\l+ validate_cors_request()\l+ execute()\l+ get_response_params()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="172,381,343,635"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="169,6,345,333"/>
+</map>

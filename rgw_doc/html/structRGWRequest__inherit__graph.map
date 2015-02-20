@@ -1,0 +1,4 @@
+<map id="RGWRequest" name="RGWRequest">
+<area shape="rect" id="node2" href="$structRGWFCGXRequest.html" title="{RGWFCGXRequest\n|+ fcgx\l+ qr\l|+ RGWFCGXRequest()\l+ ~RGWFCGXRequest()\l}" alt="" coords="5,272,173,379"/>
+<area shape="rect" id="node3" href="$structRGWLoadGenRequest.html" title="{RGWLoadGenRequest\n|+ method\l+ resource\l+ content_length\l+ fail_flag\l|+ RGWLoadGenRequest()\l}" alt="" coords="199,265,375,386"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="RGWAccessControlList_S3" name="RGWAccessControlList_S3">
+<area shape="rect" id="node2" href="$classRGWAccessControlList.html" title="{RGWAccessControlList\n|# cct\l# acl_user_map\l# acl_group_map\l# grant_map\l|+ RGWAccessControlList()\l+ RGWAccessControlList()\l+ set_ctx()\l+ ~RGWAccessControlList()\l+ get_perm()\l+ get_group_perm()\l+ encode()\l+ decode()\l+ dump()\l+ add_grant()\l+ get_grant_map()\l+ create_default()\l+ generate_test_instances()\l# _add_grant()\l}" alt="" coords="5,5,195,317"/>
+<area shape="rect" id="node3" href="$classXMLObj.html" title="{XMLObj\n|# data\l# children\l# attr_map\l|+ XMLObj()\l+ ~XMLObj()\l+ xml_start()\l+ xml_end()\l+ xml_handle_data()\l+ get_data()\l+ get_parent()\l+ add_child()\l+ get_attr()\l+ find()\l+ find_first()\l}" alt="" coords="219,35,359,288"/>
+</map>

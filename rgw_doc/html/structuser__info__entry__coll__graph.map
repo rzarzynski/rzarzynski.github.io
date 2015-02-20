@@ -1,0 +1,6 @@
+<map id="user_info_entry" name="user_info_entry">
+<area shape="rect" id="node2" href="$structRGWUserInfo.html" title="{RGWUserInfo\n|+ auid\l+ user_id\l+ display_name\l+ user_email\l+ access_keys\l+ swift_keys\l+ subusers\l+ suspended\l+ max_buckets\l+ op_mask\l+ system\l+ default_placement\l+ placement_tags\l+ temp_url_keys\l|+ RGWUserInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ clear()\l+ generate_test_instances()\l}" alt="" coords="99,278,283,634"/>
+<area shape="rect" id="node3" href="$structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size_kb\l+ max_objects\l+ enabled\l+ max_size_soft_threshold\l+ max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,5,184,200"/>
+<area shape="rect" id="node4" href="$classRGWUserCaps.html" title="{RGWUserCaps\n||+ add_from_string()\l+ remove_from_string()\l+ encode()\l+ decode()\l+ check_cap()\l+ dump()\l+ dump()\l+ decode_json()\l+ parse_cap_perm()\l}" alt="" coords="208,5,365,200"/>
+<area shape="rect" id="node5" href="$structRGWObjVersionTracker.html" title="{RGWObjVersionTracker\n|+ read_version\l+ write_version\l|+ version_for_read()\l+ version_for_write()\l+ version_for_check()\l+ prepare_op_for_read()\l+ prepare_op_for_write()\l+ apply_write()\l+ clear()\l+ generate_new_write_ver()\l}" alt="" coords="307,359,489,553"/>
+</map>

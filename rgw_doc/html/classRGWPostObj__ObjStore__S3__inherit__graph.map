@@ -1,0 +1,5 @@
+<map id="RGWPostObj_ObjStore_S3" name="RGWPostObj_ObjStore_S3">
+<area shape="rect" id="node2" href="$classRGWPostObj__ObjStore.html" title="{RGWPostObj_ObjStore\n||+ RGWPostObj_ObjStore()\l+ ~RGWPostObj_ObjStore()\l+ verify_params()\l}" alt="" coords="15,859,203,965"/>
+<area shape="rect" id="node3" href="$classRGWPostObj.html" title="{RGWPostObj\n|# min_len\l# max_len\l# ret\l# len\l# ofs\l# supplied_md5_b64\l# supplied_etag\l# etag\l# boundary\l# data_pending\l# content_type\l# policy\l# attrs\l|+ RGWPostObj()\l+ init()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ select_processor()\l+ dispose_processor()\l+ get_params()\l+ get_data()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="34,381,184,811"/>
+<area shape="rect" id="node4" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="21,6,197,333"/>
+</map>

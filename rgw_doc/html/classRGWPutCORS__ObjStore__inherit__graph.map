@@ -1,0 +1,5 @@
+<map id="RGWPutCORS_ObjStore" name="RGWPutCORS_ObjStore">
+<area shape="rect" id="node4" href="$classRGWPutCORS__ObjStore__S3.html" title="{RGWPutCORS_ObjStore_S3\n||+ RGWPutCORS_ObjStore_S3()\l+ ~RGWPutCORS_ObjStore_S3()\l+ get_params()\l+ send_response()\l}" alt="" coords="5,782,227,903"/>
+<area shape="rect" id="node2" href="$classRGWPutCORS.html" title="{RGWPutCORS\n|# ret\l# cors_bl\l|+ RGWPutCORS()\l+ ~RGWPutCORS()\l+ verify_permission()\l+ execute()\l+ get_params()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="44,382,188,591"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="27,6,204,333"/>
+</map>

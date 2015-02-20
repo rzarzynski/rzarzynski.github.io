@@ -1,0 +1,4 @@
+<map id="RGWReplicaLogger" name="RGWReplicaLogger">
+<area shape="rect" id="node2" href="$classRGWReplicaBucketLogger.html" title="{RGWReplicaBucketLogger\n||+ RGWReplicaBucketLogger()\l+ update_bound()\l+ delete_bound()\l+ get_bounds()\l+ convert_old_bounds()\l}" alt="" coords="5,219,203,355"/>
+<area shape="rect" id="node3" href="$classRGWReplicaObjectLogger.html" title="{RGWReplicaObjectLogger\n||+ RGWReplicaObjectLogger()\l+ create_log_objects()\l+ update_bound()\l+ delete_bound()\l+ get_bounds()\l}" alt="" coords="227,219,423,355"/>
+</map>

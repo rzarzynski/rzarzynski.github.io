@@ -1,0 +1,5 @@
+<map id="RGWAbortMultipart_ObjStore_S3" name="RGWAbortMultipart_ObjStore_S3">
+<area shape="rect" id="node2" href="$classRGWAbortMultipart__ObjStore.html" title="{RGWAbortMultipart_ObjStore\n||+ RGWAbortMultipart_ObjStore()\l+ ~RGWAbortMultipart\l_ObjStore()\l}" alt="" coords="15,611,229,717"/>
+<area shape="rect" id="node3" href="$classRGWAbortMultipart.html" title="{RGWAbortMultipart\n|# ret\l|+ RGWAbortMultipart()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="45,382,200,562"/>
+<area shape="rect" id="node4" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="34,6,211,333"/>
+</map>

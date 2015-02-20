@@ -1,0 +1,9 @@
+<map id="RGWXMLParser" name="RGWXMLParser">
+<area shape="rect" id="node3" href="$classRGWACLXMLParser__S3.html" title="{RGWACLXMLParser_S3\n||+ RGWACLXMLParser_S3()\l}" alt="" coords="5,580,195,657"/>
+<area shape="rect" id="node4" href="$classRGWCORSXMLParser__S3.html" title="{RGWCORSXMLParser_S3\n||+ RGWCORSXMLParser_S3()\l}" alt="" coords="219,580,421,657"/>
+<area shape="rect" id="node5" href="$classRGWCreateBucketParser.html" title="{RGWCreateBucketParser\n||+ RGWCreateBucketParser()\l+ ~RGWCreateBucketParser()\l+ get_location_constraint()\l}" alt="" coords="446,565,647,672"/>
+<area shape="rect" id="node6" href="$classRGWMultiDelXMLParser.html" title="{RGWMultiDelXMLParser\n||+ RGWMultiDelXMLParser()\l+ ~RGWMultiDelXMLParser()\l}" alt="" coords="671,573,867,665"/>
+<area shape="rect" id="node7" href="$classRGWMultiXMLParser.html" title="{RGWMultiXMLParser\n||+ RGWMultiXMLParser()\l+ ~RGWMultiXMLParser()\l}" alt="" coords="892,573,1068,665"/>
+<area shape="rect" id="node8" href="$classRGWSetBucketVersioningParser.html" title="{RGWSetBucketVersioningParser\n||+ RGWSetBucketVersioningParser()\l+ ~RGWSetBucketVersioningParser()\l+ get_versioning_status()\l}" alt="" coords="1092,565,1335,672"/>
+<area shape="rect" id="node2" href="$classXMLObj.html" title="{XMLObj\n|# data\l# children\l# attr_map\l|+ XMLObj()\l+ ~XMLObj()\l+ xml_start()\l+ xml_end()\l+ xml_handle_data()\l+ get_data()\l+ get_parent()\l+ add_child()\l+ get_attr()\l+ find()\l+ find_first()\l}" alt="" coords="587,5,727,259"/>
+</map>

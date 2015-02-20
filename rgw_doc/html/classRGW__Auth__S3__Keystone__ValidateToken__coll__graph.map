@@ -1,0 +1,8 @@
+<map id="RGW_Auth_S3_Keystone_ValidateToken" name="RGW_Auth_S3_Keystone_ValidateToken">
+<area shape="rect" id="node2" href="$classRGWHTTPClient.html" title="{RGWHTTPClient\n|# cct\l# headers\l|+ ~RGWHTTPClient()\l+ RGWHTTPClient()\l+ append_header()\l+ receive_header()\l+ receive_data()\l+ send_data()\l+ set_send_length()\l+ process()\l+ process()\l+ init_async()\l+ process_request()\l+ complete_request()\l}" alt="" coords="19,421,171,675"/>
+<area shape="rect" id="node3" href="$classKeystoneToken.html" title="{KeystoneToken\n|+ service_catalog\l|+ parse()\l+ expired()\l+ decode_json()\l}" alt="" coords="195,495,320,601"/>
+<area shape="rect" id="node4" href="$classKeystoneToken_1_1User.html" title="{KeystoneToken::User\n|+ id\l+ name\l+ user_name\l+ roles\l|+ decode_json()\l+ has_role()\l}" alt="" coords="5,221,153,357"/>
+<area shape="rect" id="node5" href="$classKeystoneToken_1_1Token.html" title="{KeystoneToken::Token\n|+ id\l+ expires\l|+ Token()\l+ decode_json()\l}" alt="" coords="179,236,336,343"/>
+<area shape="rect" id="node6" href="$classKeystoneToken_1_1Token_1_1Tenant.html" title="{KeystoneToken::Token\l::Tenant\n|+ id\l+ name\l+ description\l+ enabled\l|+ Tenant()\l+ decode_json()\l}" alt="" coords="179,6,336,157"/>
+<area shape="rect" id="node7" href="$classKeystoneToken_1_1Metadata.html" title="{KeystoneToken::Metadata\n|+ is_admin\l|+ Metadata()\l+ decode_json()\l}" alt="" coords="361,243,535,335"/>
+</map>

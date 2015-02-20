@@ -1,0 +1,9 @@
+<map id="rgw_rest_conn.h" name="rgw_rest_conn.h">
+<area shape="rect" id="node2" href="$rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="838,80,959,107"/>
+<area shape="rect" id="node4" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="890,155,1011,181"/>
+<area shape="rect" id="node5" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="895,229,1005,256"/>
+<area shape="rect" id="node16" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="765,312,843,339"/>
+<area shape="rect" id="node18" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="867,312,953,339"/>
+<area shape="rect" id="node19" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1131,312,1224,339"/>
+<area shape="rect" id="node22" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="1248,312,1341,339"/>
+</map>

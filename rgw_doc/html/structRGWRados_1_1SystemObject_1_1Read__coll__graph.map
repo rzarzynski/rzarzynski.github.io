@@ -1,0 +1,8 @@
+<map id="RGWRados::SystemObject::Read" name="RGWRados::SystemObject::Read">
+<area shape="rect" id="node2" href="$structRGWRados_1_1SystemObject_1_1Read_1_1StatParams.html" title="{RGWRados::SystemObject\l::Read::StatParams\n|+ lastmod\l+ obj_size\l+ attrs\l|+ StatParams()\l}" alt="" coords="5,258,189,379"/>
+<area shape="rect" id="node3" href="$structrgw__err.html" title="{rgw_err\n|+ http_ret\l+ ret\l+ s3_code\l+ message\l|+ rgw_err()\l+ rgw_err()\l+ clear()\l+ is_clear()\l+ is_err()\l}" alt="" coords="54,6,140,186"/>
+<area shape="rect" id="node4" href="$structRGWRados_1_1SystemObject_1_1Read_1_1ReadParams.html" title="{RGWRados::SystemObject\l::Read::ReadParams\n||}" alt="" coords="213,273,397,365"/>
+<area shape="rect" id="node5" href="$structrgw__cache__entry__info.html" title="{rgw_cache_entry_info\n|+ cache_locator\l+ gen\l|+ rgw_cache_entry_info()\l}" alt="" coords="221,50,389,142"/>
+<area shape="rect" id="node6" href="$structRGWRados_1_1SystemObject_1_1Read_1_1GetObjState.html" title="{RGWRados::SystemObject\l::Read::GetObjState\n|+ io_ctx\l+ has_ioctx\l+ last_ver\l|+ GetObjState()\l+ get_ioctx()\l}" alt="" coords="421,251,605,387"/>
+<area shape="rect" id="node7" href="$classRGWRados_1_1SystemObject.html" title="{RGWRados::SystemObject\n||+ SystemObject()\l+ get_store()\l+ get_obj()\l+ get_ctx()\l# get_state()\l}" alt="" coords="629,251,813,387"/>
+</map>

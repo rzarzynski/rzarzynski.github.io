@@ -1,0 +1,5 @@
+<map id="RGWListBuckets_ObjStore_S3" name="RGWListBuckets_ObjStore_S3">
+<area shape="rect" id="node2" href="$classRGWListBuckets__ObjStore.html" title="{RGWListBuckets_ObjStore\n||+ RGWListBuckets_ObjStore()\l+ ~RGWListBuckets_ObjStore()\l}" alt="" coords="16,729,225,821"/>
+<area shape="rect" id="node3" href="$classRGWListBuckets.html" title="{RGWListBuckets\n|# ret\l# sent_data\l# marker\l# limit\l# limit_max\l|+ RGWListBuckets()\l+ verify_permission()\l+ execute()\l+ get_params()\l+ send_response_begin()\l+ send_response_data()\l+ send_response_end()\l+ send_response()\l+ should_get_stats()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="37,382,205,679"/>
+<area shape="rect" id="node4" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="33,6,209,333"/>
+</map>

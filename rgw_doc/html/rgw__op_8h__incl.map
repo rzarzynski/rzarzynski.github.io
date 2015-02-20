@@ -1,0 +1,17 @@
+<map id="rgw_op.h" name="rgw_op.h">
+<area shape="rect" id="node6" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1391,469,1501,496"/>
+<area shape="rect" id="node15" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2619,552,2697,579"/>
+<area shape="rect" id="node17" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2722,552,2808,579"/>
+<area shape="rect" id="node18" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="159,552,252,579"/>
+<area shape="rect" id="node27" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1717,155,1811,181"/>
+<area shape="rect" id="node41" href="$rgw__user_8h.html" title="rgw_user.h" alt="" coords="1027,80,1113,107"/>
+<area shape="rect" id="node45" href="$rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="559,80,659,107"/>
+<area shape="rect" id="node21" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="377,552,471,579"/>
+<area shape="rect" id="node33" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="1210,237,1288,264"/>
+<area shape="rect" id="node36" href="$rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1777,395,1892,421"/>
+<area shape="rect" id="node37" href="$rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1481,237,1599,264"/>
+<area shape="rect" id="node38" href="$rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1479,320,1600,347"/>
+<area shape="rect" id="node40" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1418,395,1539,421"/>
+<area shape="rect" id="node42" href="$rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="749,395,837,421"/>
+<area shape="rect" id="node43" href="$rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="799,237,904,264"/>
+</map>

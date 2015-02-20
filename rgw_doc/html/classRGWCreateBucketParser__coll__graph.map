@@ -1,0 +1,4 @@
+<map id="RGWCreateBucketParser" name="RGWCreateBucketParser">
+<area shape="rect" id="node2" href="$classRGWXMLParser.html" title="{RGWXMLParser\n||+ RGWXMLParser()\l+ ~RGWXMLParser()\l+ init()\l+ xml_start()\l+ xml_end()\l+ handle_data()\l+ parse()\l+ get_xml()\l+ set_failure()\l# alloc_obj()\l}" alt="" coords="31,307,179,517"/>
+<area shape="rect" id="node3" href="$classXMLObj.html" title="{XMLObj\n|# data\l# children\l# attr_map\l|+ XMLObj()\l+ ~XMLObj()\l+ xml_start()\l+ xml_end()\l+ xml_handle_data()\l+ get_data()\l+ get_parent()\l+ add_child()\l+ get_attr()\l+ find()\l+ find_first()\l}" alt="" coords="35,5,175,259"/>
+</map>

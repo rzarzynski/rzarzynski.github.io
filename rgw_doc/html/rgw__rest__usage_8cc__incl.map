@@ -1,0 +1,20 @@
+<map id="rgw_rest_usage.cc" name="rgw_rest_usage.cc">
+<area shape="rect" id="node2" href="$rgw__op_8h.html" title="rgw_op.h" alt="" coords="2125,229,2199,256"/>
+<area shape="rect" id="node44" href="$rgw__usage_8h.html" title="rgw_usage.h" alt="" coords="2849,379,2945,405"/>
+<area shape="rect" id="node45" href="$rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="2691,80,2816,107"/>
+<area shape="rect" id="node7" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1202,544,1312,571"/>
+<area shape="rect" id="node16" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="583,627,661,653"/>
+<area shape="rect" id="node18" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="473,627,559,653"/>
+<area shape="rect" id="node19" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="152,627,245,653"/>
+<area shape="rect" id="node27" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1745,379,1839,405"/>
+<area shape="rect" id="node37" href="$rgw__user_8h.html" title="rgw_user.h" alt="" coords="2270,304,2356,331"/>
+<area shape="rect" id="node42" href="$rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2517,304,2616,331"/>
+<area shape="rect" id="node22" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="3075,627,3168,653"/>
+<area shape="rect" id="node33" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="1095,461,1173,488"/>
+<area shape="rect" id="node35" href="$rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="2049,461,2164,488"/>
+<area shape="rect" id="node36" href="$rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="953,461,1071,488"/>
+<area shape="rect" id="node38" href="$rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="2341,461,2429,488"/>
+<area shape="rect" id="node39" href="$rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="2930,461,3035,488"/>
+<area shape="rect" id="node46" href="$rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="2712,155,2793,181"/>
+<area shape="rect" id="node49" href="$rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="2525,155,2629,181"/>
+</map>

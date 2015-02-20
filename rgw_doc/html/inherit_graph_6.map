@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classRGWQuotaCache_1_1AsyncRefreshHandler.html" title="RGWQuotaCache\&lt; T \&gt;\l::AsyncRefreshHandler" alt="" coords="192,57,352,98"/>
+<area shape="rect" id="node2" href="$classBucketAsyncRefreshHandler.html" title="BucketAsyncRefreshHandler" alt="" coords="409,144,599,171"/>
+<area shape="rect" id="node3" href="$classUserAsyncRefreshHandler.html" title="UserAsyncRefreshHandler" alt="" coords="415,35,593,61"/>
+<area shape="rect" id="node5" href="$structget__obj__data.html" title="get_obj_data" alt="" coords="224,123,320,149"/>
+<area shape="rect" id="node6" href="$classRGWGetBucketStats__CB.html" title="RGWGetBucketStats_CB" alt="" coords="185,173,359,200"/>
+<area shape="rect" id="node7" href="$classRGWGetUserStats__CB.html" title="RGWGetUserStats_CB" alt="" coords="191,5,353,32"/>
+</map>

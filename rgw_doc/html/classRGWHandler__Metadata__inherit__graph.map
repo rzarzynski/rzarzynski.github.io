@@ -1,0 +1,5 @@
+<map id="RGWHandler_Metadata" name="RGWHandler_Metadata">
+<area shape="rect" id="node2" href="$classRGWHandler__Auth__S3.html" title="{RGWHandler_Auth_S3\n||+ RGWHandler_Auth_S3()\l+ ~RGWHandler_Auth_S3()\l+ validate_bucket_name()\l+ validate_object_name()\l+ init()\l+ authorize()\l}" alt="" coords="7,683,192,834"/>
+<area shape="rect" id="node3" href="$classRGWHandler__ObjStore.html" title="{RGWHandler_ObjStore\n||+ RGWHandler_ObjStore()\l+ ~RGWHandler_ObjStore()\l+ read_permissions()\l+ authorize()\l# is_obj_update_op()\l# op_get()\l# op_put()\l# op_delete()\l# op_head()\l# op_post()\l# op_copy()\l# op_options()\l# validate_bucket_name()\l# validate_object_name()\l# allocate_formatter()\l}" alt="" coords="7,352,193,635"/>
+<area shape="rect" id="node4" href="$classRGWHandler.html" title="{RGWHandler\n|# store\l# s\l|+ RGWHandler()\l+ ~RGWHandler()\l+ init()\l+ get_op()\l+ put_op()\l+ read_permissions()\l+ authorize()\l# do_read_permissions()\l# op_get()\l# op_put()\l# op_delete()\l# op_head()\l# op_post()\l# op_copy()\l# op_options()\l}" alt="" coords="18,6,181,303"/>
+</map>

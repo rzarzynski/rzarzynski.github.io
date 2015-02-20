@@ -1,0 +1,14 @@
+<map id="RGWRESTMgr" name="RGWRESTMgr">
+<area shape="rect" id="node2" href="$classRGWRESTMgr__Admin.html" title="{RGWRESTMgr_Admin\n||+ RGWRESTMgr_Admin()\l+ ~RGWRESTMgr_Admin()\l}" alt="" coords="5,293,189,385"/>
+<area shape="rect" id="node3" href="$classRGWRESTMgr__Bucket.html" title="{RGWRESTMgr_Bucket\n||+ RGWRESTMgr_Bucket()\l+ ~RGWRESTMgr_Bucket()\l+ get_handler()\l}" alt="" coords="215,285,404,392"/>
+<area shape="rect" id="node4" href="$classRGWRESTMgr__Config.html" title="{RGWRESTMgr_Config\n||+ RGWRESTMgr_Config()\l+ ~RGWRESTMgr_Config()\l+ get_handler()\l}" alt="" coords="428,285,615,392"/>
+<area shape="rect" id="node5" href="$classRGWRESTMgr__Log.html" title="{RGWRESTMgr_Log\n||+ RGWRESTMgr_Log()\l+ ~RGWRESTMgr_Log()\l+ get_handler()\l}" alt="" coords="639,285,808,392"/>
+<area shape="rect" id="node6" href="$classRGWRESTMgr__Metadata.html" title="{RGWRESTMgr_Metadata\n||+ RGWRESTMgr_Metadata()\l+ ~RGWRESTMgr_Metadata()\l+ get_handler()\l}" alt="" coords="833,285,1036,392"/>
+<area shape="rect" id="node7" href="$classRGWRESTMgr__Opstate.html" title="{RGWRESTMgr_Opstate\n||+ RGWRESTMgr_Opstate()\l+ ~RGWRESTMgr_Opstate()\l+ get_handler()\l}" alt="" coords="1060,285,1255,392"/>
+<area shape="rect" id="node8" href="$classRGWRESTMgr__ReplicaLog.html" title="{RGWRESTMgr_ReplicaLog\n||+ RGWRESTMgr_ReplicaLog()\l+ ~RGWRESTMgr_ReplicaLog()\l+ get_handler()\l}" alt="" coords="1279,285,1492,392"/>
+<area shape="rect" id="node9" href="$classRGWRESTMgr__S3.html" title="{RGWRESTMgr_S3\n||+ RGWRESTMgr_S3()\l+ ~RGWRESTMgr_S3()\l+ get_resource_mgr()\l+ get_handler()\l}" alt="" coords="1517,278,1680,399"/>
+<area shape="rect" id="node10" href="$classRGWRESTMgr__SWIFT.html" title="{RGWRESTMgr_SWIFT\n||+ RGWRESTMgr_SWIFT()\l+ ~RGWRESTMgr_SWIFT()\l+ get_resource_mgr()\l+ get_handler()\l}" alt="" coords="1705,278,1895,399"/>
+<area shape="rect" id="node11" href="$classRGWRESTMgr__SWIFT__Auth.html" title="{RGWRESTMgr_SWIFT_Auth\n||+ RGWRESTMgr_SWIFT_Auth()\l+ ~RGWRESTMgr_SWIFT_Auth()\l+ get_resource_mgr()\l+ get_handler()\l}" alt="" coords="1920,278,2143,399"/>
+<area shape="rect" id="node12" href="$classRGWRESTMgr__Usage.html" title="{RGWRESTMgr_Usage\n||+ RGWRESTMgr_Usage()\l+ ~RGWRESTMgr_Usage()\l+ get_handler()\l}" alt="" coords="2168,285,2355,392"/>
+<area shape="rect" id="node13" href="$classRGWRESTMgr__User.html" title="{RGWRESTMgr_User\n||+ RGWRESTMgr_User()\l+ ~RGWRESTMgr_User()\l+ get_handler()\l}" alt="" coords="2379,285,2555,392"/>
+</map>

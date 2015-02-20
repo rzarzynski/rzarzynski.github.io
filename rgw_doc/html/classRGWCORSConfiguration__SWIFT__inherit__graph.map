@@ -1,0 +1,3 @@
+<map id="RGWCORSConfiguration_SWIFT" name="RGWCORSConfiguration_SWIFT">
+<area shape="rect" id="node2" href="$classRGWCORSConfiguration.html" title="{RGWCORSConfiguration\n|# rules\l|+ RGWCORSConfiguration()\l+ ~RGWCORSConfiguration()\l+ encode()\l+ decode()\l+ dump()\l+ get_rules()\l+ is_empty()\l+ get_origins_list()\l+ host_name_rule()\l+ erase_host_name_rule()\l+ dump()\l+ stack_rule()\l}" alt="" coords="5,6,203,245"/>
+</map>

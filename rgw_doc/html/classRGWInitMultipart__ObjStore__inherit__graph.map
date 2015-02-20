@@ -1,0 +1,5 @@
+<map id="RGWInitMultipart_ObjStore" name="RGWInitMultipart_ObjStore">
+<area shape="rect" id="node4" href="$classRGWInitMultipart__ObjStore__S3.html" title="{RGWInitMultipart_ObjStore_S3\n||+ RGWInitMultipart_ObjStore_S3()\l+ ~RGWInitMultipart_ObjStore_S3()\l+ get_params()\l+ send_response()\l}" alt="" coords="5,811,237,933"/>
+<area shape="rect" id="node2" href="$classRGWInitMultipart.html" title="{RGWInitMultipart\n|# ret\l# upload_id\l# policy\l|+ RGWInitMultipart()\l+ init()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ get_params()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="49,382,193,621"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="33,6,209,333"/>
+</map>

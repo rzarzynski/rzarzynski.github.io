@@ -1,0 +1,6 @@
+<map id="KeystoneToken" name="KeystoneToken">
+<area shape="rect" id="node2" href="$classKeystoneToken_1_1User.html" title="{KeystoneToken::User\n|+ id\l+ name\l+ user_name\l+ roles\l|+ decode_json()\l+ has_role()\l}" alt="" coords="5,221,153,357"/>
+<area shape="rect" id="node3" href="$classKeystoneToken_1_1Token.html" title="{KeystoneToken::Token\n|+ id\l+ expires\l|+ Token()\l+ decode_json()\l}" alt="" coords="179,236,336,343"/>
+<area shape="rect" id="node4" href="$classKeystoneToken_1_1Token_1_1Tenant.html" title="{KeystoneToken::Token\l::Tenant\n|+ id\l+ name\l+ description\l+ enabled\l|+ Tenant()\l+ decode_json()\l}" alt="" coords="179,6,336,157"/>
+<area shape="rect" id="node5" href="$classKeystoneToken_1_1Metadata.html" title="{KeystoneToken::Metadata\n|+ is_admin\l|+ Metadata()\l+ decode_json()\l}" alt="" coords="361,243,535,335"/>
+</map>

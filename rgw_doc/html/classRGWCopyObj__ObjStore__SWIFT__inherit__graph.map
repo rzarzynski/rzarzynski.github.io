@@ -1,0 +1,5 @@
+<map id="RGWCopyObj_ObjStore_SWIFT" name="RGWCopyObj_ObjStore_SWIFT">
+<area shape="rect" id="node2" href="$classRGWCopyObj__ObjStore.html" title="{RGWCopyObj_ObjStore\n||+ RGWCopyObj_ObjStore()\l+ ~RGWCopyObj_ObjStore()\l}" alt="" coords="5,859,197,951"/>
+<area shape="rect" id="node3" href="$classRGWCopyObj.html" title="{RGWCopyObj\n|# dest_policy\l# if_mod\l# if_unmod\l# if_match\l# if_nomatch\l# ofs\l# len\l# end\l# mod_time\l# unmod_time\land 21 more...\l|+ RGWCopyObj()\l+ init()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ progress_cb()\l+ init_dest_policy()\l+ get_params()\l+ send_partial_response()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l+ parse_copy_location()\l# init_common()\l}" alt="" coords="15,381,187,811"/>
+<area shape="rect" id="node4" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="13,6,189,333"/>
+</map>

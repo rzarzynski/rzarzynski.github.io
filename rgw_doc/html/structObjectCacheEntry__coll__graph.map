@@ -1,0 +1,4 @@
+<map id="ObjectCacheEntry" name="ObjectCacheEntry">
+<area shape="rect" id="node2" href="$structObjectCacheInfo.html" title="{ObjectCacheInfo\n|+ status\l+ flags\l+ epoch\l+ data\l+ xattrs\l+ rm_xattrs\l+ version\l|+ ObjectCacheInfo()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="5,221,189,445"/>
+<area shape="rect" id="node3" href="$structObjectMetaInfo.html" title="{ObjectMetaInfo\n|+ size\l+ mtime\l|+ ObjectMetaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="5,6,189,157"/>
+</map>
