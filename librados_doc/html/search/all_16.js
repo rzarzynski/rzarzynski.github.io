@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['watch_2fnotify',['Watch/Notify',['../group__librados__h__watch__notify.html',1,'']]],
+  ['wait',['wait',['../structlibrados_1_1PoolAsyncCompletion.html#a5525c511be0db174017fe5b32af553c5',1,'librados::PoolAsyncCompletion::wait()'],['../structlibrados_1_1PoolAsyncCompletionImpl.html#a7277d416f8e343df8a177064c8e3fe59',1,'librados::PoolAsyncCompletionImpl::wait()']]],
+  ['wait_5ffor_5fcomplete',['wait_for_complete',['../structlibrados_1_1AioCompletionImpl.html#ad8aeb622a6fa283247b5f82c108b0024',1,'librados::AioCompletionImpl::wait_for_complete()'],['../structlibrados_1_1AioCompletion.html#a70f3e93291b38f64ff8ca99c59d6b154',1,'librados::AioCompletion::wait_for_complete()']]],
+  ['wait_5ffor_5fcomplete_5fand_5fcb',['wait_for_complete_and_cb',['../structlibrados_1_1AioCompletionImpl.html#ac866a78e205461883e06a0a8f758aa51',1,'librados::AioCompletionImpl::wait_for_complete_and_cb()'],['../structlibrados_1_1AioCompletion.html#aebb93614b24c004925d667fcad00cda6',1,'librados::AioCompletion::wait_for_complete_and_cb()']]],
+  ['wait_5ffor_5flatest_5fosdmap',['wait_for_latest_osdmap',['../classlibrados_1_1Rados.html#af23046235ce81988a8817e58ad21e922',1,'librados::Rados::wait_for_latest_osdmap()'],['../classlibrados_1_1RadosClient.html#a7868b9a1ddab4f20c7c289bae1a821a7',1,'librados::RadosClient::wait_for_latest_osdmap()']]],
+  ['wait_5ffor_5fsafe',['wait_for_safe',['../structlibrados_1_1AioCompletionImpl.html#a8f9d75fc5bfb93df22dd3422e1cb58d8',1,'librados::AioCompletionImpl::wait_for_safe()'],['../structlibrados_1_1AioCompletion.html#a0c660b9b16847e0fd67bbf34ff0221a4',1,'librados::AioCompletion::wait_for_safe()']]],
+  ['wait_5ffor_5fsafe_5fand_5fcb',['wait_for_safe_and_cb',['../structlibrados_1_1AioCompletionImpl.html#a316cdf043fd92655187a3a4798f06244',1,'librados::AioCompletionImpl::wait_for_safe_and_cb()'],['../structlibrados_1_1AioCompletion.html#a7d48b93587f36eb06b7233130e785fff',1,'librados::AioCompletion::wait_for_safe_and_cb()']]],
+  ['watch',['watch',['../structlibrados_1_1IoCtxImpl.html#ae60fdb5724b1b91eca5cef50c93d44ad',1,'librados::IoCtxImpl::watch()'],['../classlibrados_1_1IoCtx.html#a7b0aa70f5764cdeef331b7d9e7c0133a',1,'librados::IoCtx::watch()']]],
+  ['watch2',['watch2',['../classlibrados_1_1IoCtx.html#a851620db1a61b1504fae2e257a53d9d9',1,'librados::IoCtx']]],
+  ['watch_5fcheck',['watch_check',['../structlibrados_1_1IoCtxImpl.html#a94d4175d3d71986b2cfe8edb636c077f',1,'librados::IoCtxImpl::watch_check()'],['../classlibrados_1_1IoCtx.html#ac1058807db9306e0be68d24b2dc98d95',1,'librados::IoCtx::watch_check()']]],
+  ['watch_5fflush',['watch_flush',['../classlibrados_1_1Rados.html#a6be996e45e81b95f11e16a5ed49237a2',1,'librados::Rados::watch_flush()'],['../classlibrados_1_1RadosClient.html#a5c4b560cf2a427edaa1f27a6d8182d19',1,'librados::RadosClient::watch_flush()']]],
+  ['watchctx',['WatchCtx',['../classlibrados_1_1WatchCtx.html',1,'librados']]],
+  ['watchctx2',['WatchCtx2',['../classlibrados_1_1WatchCtx2.html',1,'librados']]],
+  ['watcher_5fid',['watcher_id',['../structobj__watch__t.html#a9b773ca6095b61ee6154107d59939a50',1,'obj_watch_t']]],
+  ['watchinfo',['WatchInfo',['../structWatchInfo.html',1,'WatchInfo'],['../structWatchInfo.html#a81ddf9adf6c10b3c111b7347ec2dc2f3',1,'WatchInfo::WatchInfo()']]],
+  ['wcb',['wcb',['../structC__WatchCB.html#acc2f564ec3b9a424c204e1912e419ccf',1,'C_WatchCB::wcb()'],['../structC__WatchCB2.html#abc00e061d04c7d8b0e56717feaac7136',1,'C_WatchCB2::wcb()']]],
+  ['write',['write',['../structlibrados_1_1IoCtxImpl.html#ac3726c187c1f3ba8892e439cc90a32e2',1,'librados::IoCtxImpl::write()'],['../classlibrados_1_1ObjectWriteOperation.html#af9266e0e065136ff5ac0867888247f24',1,'librados::ObjectWriteOperation::write()'],['../classlibrados_1_1IoCtx.html#a23f6ddd2030130e2464dc15cc6e5af76',1,'librados::IoCtx::write()']]],
+  ['write_5ffull',['write_full',['../structlibrados_1_1IoCtxImpl.html#add83c73f604f0117e3c4d3c81e56b5ee',1,'librados::IoCtxImpl::write_full()'],['../classlibrados_1_1ObjectWriteOperation.html#a1f37cadc7ef6e2090412e02509f8763a',1,'librados::ObjectWriteOperation::write_full()'],['../classlibrados_1_1IoCtx.html#ad55ef9e2db706f65927f7f5d49e934b1',1,'librados::IoCtx::write_full()']]]
+];
