@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -86,6 +86,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="structRGWQuotaInfo-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">RGWQuotaInfo Struct Reference</div>  </div>
@@ -116,16 +118,27 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a7ae595fcdb65b156ac1607a6dee0cc39"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWQuotaInfo.html#a7ae595fcdb65b156ac1607a6dee0cc39">max_size_kb</a></td></tr>
-<tr class="separator:a7ae595fcdb65b156ac1607a6dee0cc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1488b728b6c6a2a50189503dddbf5916"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a></td></tr>
+<tr class="separator:a1488b728b6c6a2a50189503dddbf5916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a425e1d2833678631d7d27fef8cd1da1f"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a></td></tr>
 <tr class="separator:a425e1d2833678631d7d27fef8cd1da1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dbb532beaa44f6aba6766bf845315cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a></td></tr>
 <tr class="separator:a4dbb532beaa44f6aba6766bf845315cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcfdd7944be04c475aca17fe3cce00b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWQuotaInfo.html#abcfdd7944be04c475aca17fe3cce00b8">check_on_raw</a></td></tr>
+<tr class="separator:abcfdd7944be04c475aca17fe3cce00b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:a06716c4be1ae4301ba7420d0a731e2df"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">max_size_soft_threshold</a></td></tr>
 <tr class="separator:a06716c4be1ae4301ba7420d0a731e2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4db7bae2a930d3c468c53af0da07962c"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">max_objs_soft_threshold</a></td></tr>
 <tr class="separator:a4db7bae2a930d3c468c53af0da07962c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a80d709a6200a9b04d47bdd9f4dad6f99"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a80d709a6200a9b04d47bdd9f4dad6f99"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structRGWQuotaInfo.html#a80d709a6200a9b04d47bdd9f4dad6f99">RGWQuotaCache</a></td></tr>
+<tr class="separator:a80d709a6200a9b04d47bdd9f4dad6f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2e1556af526a14dbcaa5b0e1e61b6e08"></a>
@@ -232,7 +245,42 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a80d709a6200a9b04d47bdd9f4dad6f99"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classRGWQuotaCache.html">RGWQuotaCache</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="abcfdd7944be04c475aca17fe3cce00b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RGWQuotaInfo::check_on_raw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4dbb532beaa44f6aba6766bf845315cd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -260,21 +308,29 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a4db7bae2a930d3c468c53af0da07962c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int64_t RGWQuotaInfo::max_objs_soft_threshold</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a7ae595fcdb65b156ac1607a6dee0cc39"></a>
+<a class="anchor" id="a1488b728b6c6a2a50189503dddbf5916"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int64_t RGWQuotaInfo::max_size_kb</td>
+          <td class="memname">int64_t RGWQuotaInfo::max_size</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -284,11 +340,19 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a06716c4be1ae4301ba7420d0a731e2df"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int64_t RGWQuotaInfo::max_size_soft_threshold</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -300,7 +364,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

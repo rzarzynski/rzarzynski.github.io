@@ -1,0 +1,19 @@
+<map id="rgw_orphan.cc" name="rgw_orphan.cc">
+<area shape="rect" id="node6" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1012,155,1105,181"/>
+<area shape="rect" id="node50" href="$rgw__orphan_8h.html" title="rgw_orphan.h" alt="" coords="161,80,260,107"/>
+<area shape="rect" id="node12" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1347,320,1457,347"/>
+<area shape="rect" id="node44" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="1171,237,1249,264"/>
+<area shape="rect" id="node46" href="$rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1275,237,1389,264"/>
+<area shape="rect" id="node48" href="$rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="1968,237,2136,264"/>
+<area shape="rect" id="node49" href="$rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="611,237,745,264"/>
+<area shape="rect" id="node22" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1113,403,1191,429"/>
+<area shape="rect" id="node23" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1109,485,1239,512"/>
+<area shape="rect" id="node24" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1366,485,1452,512"/>
+<area shape="rect" id="node25" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="696,403,789,429"/>
+<area shape="rect" id="node28" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="813,403,907,429"/>
+<area shape="rect" id="node31" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="931,403,1037,429"/>
+<area shape="rect" id="node36" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="2219,403,2305,429"/>
+<area shape="rect" id="node32" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="1003,485,1084,512"/>
+<area shape="rect" id="node40" href="$rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2243,485,2357,512"/>
+<area shape="rect" id="node47" href="$rgw__period__history_8h.html" title="rgw_period_history.h" alt="" coords="397,320,539,347"/>
+</map>

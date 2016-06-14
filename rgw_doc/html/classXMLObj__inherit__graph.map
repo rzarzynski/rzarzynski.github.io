@@ -29,10 +29,12 @@
 <area shape="rect" id="node29" href="$classRGWMultiPart.html" title="{RGWMultiPart\n||+ RGWMultiPart()\l+ ~RGWMultiPart()\l+ xml_end()\l+ get_etag()\l+ get_num()\l}" alt="" coords="5501,344,5635,480"/>
 <area shape="rect" id="node30" href="$classRGWMultiPartNumber.html" title="{RGWMultiPartNumber\n||+ RGWMultiPartNumber()\l+ ~RGWMultiPartNumber()\l}" alt="" coords="5660,366,5841,458"/>
 <area shape="rect" id="node31" href="$classRGWXMLParser.html" title="{RGWXMLParser\n||+ RGWXMLParser()\l+ ~RGWXMLParser()\l+ init()\l+ xml_start()\l+ xml_end()\l+ handle_data()\l+ parse()\l+ get_xml()\l+ set_failure()\l# alloc_obj()\l}" alt="" coords="5866,307,6013,517"/>
-<area shape="rect" id="node32" href="$classRGWACLXMLParser__S3.html" title="{RGWACLXMLParser_S3\n||+ RGWACLXMLParser_S3()\l}" alt="" coords="5287,580,5476,657"/>
-<area shape="rect" id="node33" href="$classRGWCORSXMLParser__S3.html" title="{RGWCORSXMLParser_S3\n||+ RGWCORSXMLParser_S3()\l}" alt="" coords="5500,580,5703,657"/>
-<area shape="rect" id="node34" href="$classRGWCreateBucketParser.html" title="{RGWCreateBucketParser\n||+ RGWCreateBucketParser()\l+ ~RGWCreateBucketParser()\l+ get_location_constraint()\l}" alt="" coords="5727,565,5928,672"/>
-<area shape="rect" id="node35" href="$classRGWMultiDelXMLParser.html" title="{RGWMultiDelXMLParser\n||+ RGWMultiDelXMLParser()\l+ ~RGWMultiDelXMLParser()\l}" alt="" coords="5953,573,6148,665"/>
-<area shape="rect" id="node36" href="$classRGWMultiXMLParser.html" title="{RGWMultiXMLParser\n||+ RGWMultiXMLParser()\l+ ~RGWMultiXMLParser()\l}" alt="" coords="6173,573,6349,665"/>
-<area shape="rect" id="node37" href="$classRGWSetBucketVersioningParser.html" title="{RGWSetBucketVersioningParser\n||+ RGWSetBucketVersioningParser()\l+ ~RGWSetBucketVersioningParser()\l+ get_versioning_status()\l}" alt="" coords="6373,565,6616,672"/>
+<area shape="rect" id="node32" href="$classRGWACLXMLParser__S3.html" title="{RGWACLXMLParser_S3\n||+ RGWACLXMLParser_S3()\l}" alt="" coords="5071,588,5260,665"/>
+<area shape="rect" id="node33" href="$classRGWCORSXMLParser__S3.html" title="{RGWCORSXMLParser_S3\n||+ RGWCORSXMLParser_S3()\l}" alt="" coords="5284,588,5487,665"/>
+<area shape="rect" id="node34" href="$classRGWCreateBucketParser.html" title="{RGWCreateBucketParser\n||+ RGWCreateBucketParser()\l+ ~RGWCreateBucketParser()\l+ get_location_constraint()\l}" alt="" coords="5511,573,5712,680"/>
+<area shape="rect" id="node35" href="$classRGWMultiDelXMLParser.html" title="{RGWMultiDelXMLParser\n||+ RGWMultiDelXMLParser()\l+ ~RGWMultiDelXMLParser()\l}" alt="" coords="5737,581,5932,673"/>
+<area shape="rect" id="node36" href="$classRGWMultiXMLParser.html" title="{RGWMultiXMLParser\n||+ RGWMultiXMLParser()\l+ ~RGWMultiXMLParser()\l}" alt="" coords="5957,581,6133,673"/>
+<area shape="rect" id="node37" href="$classRGWSetBucketVersioningParser.html" title="{RGWSetBucketVersioningParser\n||+ RGWSetBucketVersioningParser()\l+ ~RGWSetBucketVersioningParser()\l+ get_versioning_status()\l}" alt="" coords="6157,573,6400,680"/>
+<area shape="rect" id="node38" href="$classRGWSetRequestPaymentParser.html" title="{RGWSetRequestPaymentParser\n||+ RGWSetRequestPaymentParser()\l+ ~RGWSetRequestPaymentParser()\l+ get_request_payment\l_payer()\l}" alt="" coords="6424,566,6667,687"/>
+<area shape="rect" id="node39" href="$classRGWXMLDecoder_1_1XMLParser.html" title="{RGWXMLDecoder::XMLParser\n||+ XMLParser()\l+ ~XMLParser()\l}" alt="" coords="6691,581,6895,673"/>
 </map>

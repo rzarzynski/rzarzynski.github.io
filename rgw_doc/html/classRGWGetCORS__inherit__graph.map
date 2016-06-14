@@ -1,5 +1,5 @@
 <map id="RGWGetCORS" name="RGWGetCORS">
-<area shape="rect" id="node3" href="$classRGWGetCORS__ObjStore.html" title="{RGWGetCORS_ObjStore\n||+ RGWGetCORS_ObjStore()\l+ ~RGWGetCORS_ObjStore()\l}" alt="" coords="15,595,216,687"/>
-<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="27,6,204,333"/>
-<area shape="rect" id="node4" href="$classRGWGetCORS__ObjStore__S3.html" title="{RGWGetCORS_ObjStore_S3\n||+ RGWGetCORS_ObjStore_S3()\l+ ~RGWGetCORS_ObjStore_S3()\l+ send_response()\l}" alt="" coords="4,736,227,843"/>
+<area shape="rect" id="node3" href="$classRGWGetCORS__ObjStore.html" title="{RGWGetCORS_ObjStore\n||+ RGWGetCORS_ObjStore()\l+ ~RGWGetCORS_ObjStore()\l}" alt="" coords="15,625,216,717"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="19,6,213,362"/>
+<area shape="rect" id="node4" href="$classRGWGetCORS__ObjStore__S3.html" title="{RGWGetCORS_ObjStore_S3\n||+ RGWGetCORS_ObjStore_S3()\l+ ~RGWGetCORS_ObjStore_S3()\l+ send_response()\l}" alt="" coords="4,765,227,872"/>
 </map>

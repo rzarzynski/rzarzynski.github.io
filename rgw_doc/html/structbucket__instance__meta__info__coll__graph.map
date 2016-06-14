@@ -1,0 +1,4 @@
+<map id="bucket_instance_meta_info" name="bucket_instance_meta_info">
+<area shape="rect" id="node3" href="$classRGWBucketInstanceMetadataObject.html" title="{RGWBucketInstanceMetadata\lObject\n||+ RGWBucketInstanceMetadata\lObject()\l+ RGWBucketInstanceMetadata\lObject()\l+ dump()\l+ decode_json()\l+ get_bucket_info()\l}" alt="" coords="102,209,313,389"/>
+<area shape="rect" id="node4" href="$classRGWMetadataObject.html" title="{RGWMetadataObject\n|# objv\l# mtime\l|+ RGWMetadataObject()\l+ ~RGWMetadataObject()\l+ get_version()\l+ get_mtime()\l+ dump()\l}" alt="" coords="121,6,295,157"/>
+</map>

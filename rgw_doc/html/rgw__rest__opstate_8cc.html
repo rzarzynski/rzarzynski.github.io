@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -95,12 +95,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="rgw__rest__opstate_8h_source.html">rgw_rest_opstate.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__client__io_8h_source.html">rgw_client_io.h</a>&quot;</code><br/>
 <code>#include &quot;common/errno.h&quot;</code><br/>
+<code>#include &quot;include/assert.h&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_rest_opstate.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rest__opstate_8cc__incl.png" border="0" usemap="#rgw__rest__opstate_8cc" alt=""/></div>
 <map name="rgw__rest__opstate_8cc" id="rgw__rest__opstate_8cc">
-<area shape="rect" id="node4" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="1569,80,1651,107"/><area shape="rect" id="node6" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="2187,155,2260,181"/><area shape="rect" id="node43" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="2680,80,2784,107"/><area shape="rect" id="node48" href="rgw__rest__opstate_8h.html" title="rgw_rest_opstate.h" alt="" coords="3107,80,3240,107"/><area shape="rect" id="node49" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="2816,387,2925,413"/><area shape="rect" id="node39" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="403,387,508,413"/><area shape="rect" id="node11" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="2006,469,2116,496"/><area shape="rect" id="node20" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2402,552,2480,579"/><area shape="rect" id="node21" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="838,552,924,579"/><area shape="rect" id="node22" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2708,552,2801,579"/><area shape="rect" id="node29" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1236,304,1329,331"/><area shape="rect" id="node38" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="666,229,752,256"/><area shape="rect" id="node42" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="525,229,624,256"/><area shape="rect" id="node23" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="3129,552,3223,579"/><area shape="rect" id="node35" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="2022,387,2100,413"/><area shape="rect" id="node37" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="879,387,993,413"/><area shape="rect" id="node44" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="2421,304,2544,331"/><area shape="rect" id="node45" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="2619,469,2717,496"/><area shape="rect" id="node46" href="rgw__policy__s3_8h.html" title="rgw_policy_s3.h" alt="" coords="2927,469,3043,496"/><area shape="rect" id="node47" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2283,304,2397,331"/></map>
+<area shape="rect" id="node4" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="100,80,181,107"/><area shape="rect" id="node6" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="994,155,1068,181"/><area shape="rect" id="node38" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="233,304,342,331"/><area shape="rect" id="node41" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="980,80,1084,107"/><area shape="rect" id="node49" href="rgw__rest__opstate_8h.html" title="rgw_rest_opstate.h" alt="" coords="1249,80,1382,107"/><area shape="rect" id="node34" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="468,304,573,331"/><area shape="rect" id="node16" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1386,379,1496,405"/><area shape="rect" id="node25" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1907,453,1985,480"/><area shape="rect" id="node27" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2163,453,2249,480"/><area shape="rect" id="node28" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="929,453,1022,480"/><area shape="rect" id="node31" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1382,304,1476,331"/><area shape="rect" id="node32" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="583,229,669,256"/><area shape="rect" id="node37" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1282,229,1381,256"/><area shape="rect" id="node26" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1804,528,1933,555"/><area shape="rect" id="node29" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="558,453,652,480"/><area shape="rect" id="node43" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="1694,155,1817,181"/><area shape="rect" id="node44" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="2238,379,2337,405"/><area shape="rect" id="node45" href="rgw__policy__s3_8h.html" title="rgw_policy_s3.h" alt="" coords="906,379,1021,405"/><area shape="rect" id="node46" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="1846,155,1961,181"/><area shape="rect" id="node47" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="852,155,970,181"/><area shape="rect" id="node48" href="rgw__ldap_8h.html" title="rgw_ldap.h" alt="" coords="422,229,508,256"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -138,7 +139,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

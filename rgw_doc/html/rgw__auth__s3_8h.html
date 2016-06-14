@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -93,14 +93,14 @@ Include dependency graph for rgw_auth_s3.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__auth__s3_8h__incl.png" border="0" usemap="#rgw__auth__s3_8h" alt=""/></div>
 <map name="rgw__auth__s3_8h" id="rgw__auth__s3_8h">
-<area shape="rect" id="node2" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="895,80,1005,107"/><area shape="rect" id="node13" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="765,163,843,189"/><area shape="rect" id="node15" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="867,163,953,189"/><area shape="rect" id="node16" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1131,163,1224,189"/><area shape="rect" id="node19" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1248,163,1341,189"/></map>
+<area shape="rect" id="node2" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1303,80,1413,107"/><area shape="rect" id="node13" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="505,163,583,189"/><area shape="rect" id="node14" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="436,245,565,272"/><area shape="rect" id="node15" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="642,245,728,272"/><area shape="rect" id="node16" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1511,163,1604,189"/><area shape="rect" id="node19" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1553,395,1647,421"/><area shape="rect" id="node22" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="804,163,911,189"/><area shape="rect" id="node30" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1781,163,1867,189"/><area shape="rect" id="node23" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="804,245,885,272"/><area shape="rect" id="node34" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="1729,245,1844,272"/><area shape="rect" id="node35" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1679,320,1800,347"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__auth__s3_8h__dep__incl.png" border="0" usemap="#rgw__auth__s3_8hdep" alt=""/></div>
 <map name="rgw__auth__s3_8hdep" id="rgw__auth__s3_8hdep">
-<area shape="rect" id="node2" href="rgw__loadgen_8cc.html" title="rgw_loadgen.cc" alt="" coords="5,80,117,107"/><area shape="rect" id="node3" href="rgw__rest__client_8cc.html" title="rgw_rest_client.cc" alt="" coords="143,80,271,107"/><area shape="rect" id="node4" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="295,80,405,107"/></map>
+<area shape="rect" id="node2" href="librgw_8cc.html" title="librgw.cc" alt="" coords="5,80,79,107"/><area shape="rect" id="node3" href="rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="104,80,189,107"/><area shape="rect" id="node4" href="rgw__loadgen_8cc.html" title="rgw_loadgen.cc" alt="" coords="214,80,327,107"/><area shape="rect" id="node5" href="rgw__rest__client_8cc.html" title="rgw_rest_client.cc" alt="" coords="352,80,480,107"/><area shape="rect" id="node6" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="505,80,615,107"/></map>
 </div>
 </div>
 <p><a href="rgw__auth__s3_8h_source.html">Go to the source code of this file.</a></p>
@@ -113,8 +113,72 @@ Functions</h2></td></tr>
 <tr class="separator:a43a1ae42691fdd3e5b0e4529aa4f1db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe7ae36e62e302b387b9ebe8957ce021"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__auth__s3_8h.html#abe7ae36e62e302b387b9ebe8957ce021">rgw_get_s3_header_digest</a> (const string &amp;auth_hdr, const string &amp;key, string &amp;dest)</td></tr>
 <tr class="separator:abe7ae36e62e302b387b9ebe8957ce021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab445240b9bd2860e19bdcdf5e58b0fff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__auth__s3_8h.html#ab445240b9bd2860e19bdcdf5e58b0fff">rgw_hash_s3_string_sha256</a> (const char *data, int len, string &amp;dest)</td></tr>
+<tr class="separator:ab445240b9bd2860e19bdcdf5e58b0fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06531b05dafbed1a60e2fe37f5b3e840"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__auth__s3_8h.html#a06531b05dafbed1a60e2fe37f5b3e840">rgw_create_s3_v4_canonical_request</a> (struct <a class="el" href="structreq__state.html">req_state</a> *s, const string &amp;canonical_uri, const string &amp;canonical_qs, const string &amp;canonical_hdrs, const string &amp;signed_hdrs, const string &amp;request_payload, bool unsigned_payload, string &amp;canonical_req, string &amp;canonical_req_hash)</td></tr>
+<tr class="separator:a06531b05dafbed1a60e2fe37f5b3e840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53cbb3c9859e0ea08a027a340e079cd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__auth__s3_8h.html#a53cbb3c9859e0ea08a027a340e079cd2">rgw_create_s3_v4_string_to_sign</a> (CephContext *cct, const string &amp;algorithm, const string &amp;request_date, const string &amp;credential_scope, const string &amp;hashed_qr, string &amp;string_to_sign)</td></tr>
+<tr class="separator:a53cbb3c9859e0ea08a027a340e079cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc383756a5d6e222706cd58295aec72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__auth__s3_8h.html#adfc383756a5d6e222706cd58295aec72">rgw_calculate_s3_v4_aws_signature</a> (struct <a class="el" href="structreq__state.html">req_state</a> *s, const string &amp;access_key_id, const string &amp;date, const string &amp;region, const string &amp;service, const string &amp;string_to_sign, string &amp;signature)</td></tr>
+<tr class="separator:adfc383756a5d6e222706cd58295aec72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="adfc383756a5d6e222706cd58295aec72"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rgw_calculate_s3_v4_aws_signature </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structreq__state.html">req_state</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>access_key_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>region</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>service</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>string_to_sign</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>signature</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a5c203a5b36e5cc19ca73a4509169d5fc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -215,6 +279,124 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a06531b05dafbed1a60e2fe37f5b3e840"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rgw_create_s3_v4_canonical_request </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structreq__state.html">req_state</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>canonical_uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>canonical_qs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>canonical_hdrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>signed_hdrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>request_payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>unsigned_payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>canonical_req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>canonical_req_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a53cbb3c9859e0ea08a027a340e079cd2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rgw_create_s3_v4_string_to_sign </td>
+          <td>(</td>
+          <td class="paramtype">CephContext *&#160;</td>
+          <td class="paramname"><em>cct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>algorithm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>request_date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>credential_scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>hashed_qr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>string_to_sign</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="abe7ae36e62e302b387b9ebe8957ce021"></a>
 <div class="memitem">
 <div class="memproto">
@@ -247,10 +429,42 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab445240b9bd2860e19bdcdf5e58b0fff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rgw_hash_s3_string_sha256 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

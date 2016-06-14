@@ -1,9 +1,15 @@
 <map id="rgw_civetweb.cc" name="rgw_civetweb.cc">
-<area shape="rect" id="node4" href="$rgw__civetweb_8h.html" title="rgw_civetweb.h" alt="" coords="487,80,600,107"/>
-<area shape="rect" id="node5" href="$rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="744,155,853,181"/>
-<area shape="rect" id="node8" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="775,229,885,256"/>
-<area shape="rect" id="node17" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="603,312,681,339"/>
-<area shape="rect" id="node19" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="706,312,792,339"/>
-<area shape="rect" id="node20" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="969,312,1063,339"/>
-<area shape="rect" id="node23" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="1844,312,1937,339"/>
+<area shape="rect" id="node4" href="$rgw__civetweb_8h.html" title="rgw_civetweb.h" alt="" coords="733,80,845,107"/>
+<area shape="rect" id="node5" href="$rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="980,155,1089,181"/>
+<area shape="rect" id="node10" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1147,229,1257,256"/>
+<area shape="rect" id="node19" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="565,312,643,339"/>
+<area shape="rect" id="node20" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="588,395,717,421"/>
+<area shape="rect" id="node21" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="325,395,411,421"/>
+<area shape="rect" id="node22" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1041,312,1135,339"/>
+<area shape="rect" id="node25" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2369,544,2463,571"/>
+<area shape="rect" id="node27" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="104,312,211,339"/>
+<area shape="rect" id="node35" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1159,312,1245,339"/>
+<area shape="rect" id="node28" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="116,395,197,421"/>
+<area shape="rect" id="node39" href="$rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2653,395,2768,421"/>
+<area shape="rect" id="node40" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="2523,469,2644,496"/>
 </map>

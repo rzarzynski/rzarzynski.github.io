@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -84,29 +84,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">rgw_metadata.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;common/ceph_json.h&quot;</code><br/>
+<div class="textblock"><code>#include &lt;boost/intrusive_ptr.hpp&gt;</code><br/>
+<code>#include &quot;common/ceph_json.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__metadata_8h_source.html">rgw_metadata.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__coroutine_8h_source.html">rgw_coroutine.h</a>&quot;</code><br/>
 <code>#include &quot;cls/version/cls_version_types.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rados_8h_source.html">rgw_rados.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__tools_8h_source.html">rgw_tools.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__cr__rados_8h_source.html">rgw_cr_rados.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__boost__asio__yield_8h_source.html">rgw_boost_asio_yield.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_metadata.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__metadata_8cc__incl.png" border="0" usemap="#rgw__metadata_8cc" alt=""/></div>
 <map name="rgw__metadata_8cc" id="rgw__metadata_8cc">
-<area shape="rect" id="node3" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="626,320,741,347"/><area shape="rect" id="node29" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1332,80,1425,107"/><area shape="rect" id="node41" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="258,320,346,347"/><area shape="rect" id="node6" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="862,395,972,421"/><area shape="rect" id="node15" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="878,477,956,504"/><area shape="rect" id="node17" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="767,477,853,504"/><area shape="rect" id="node18" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1574,477,1668,504"/><area shape="rect" id="node21" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1082,477,1176,504"/><area shape="rect" id="node34" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1760,320,1838,347"/><area shape="rect" id="node37" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="816,163,934,189"/><area shape="rect" id="node38" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="843,245,964,272"/><area shape="rect" id="node40" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="843,320,964,347"/></map>
+<area shape="rect" id="node4" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="813,163,928,189"/><area shape="rect" id="node33" href="rgw__coroutine_8h.html" title="rgw_coroutine.h" alt="" coords="3077,163,3192,189"/><area shape="rect" id="node39" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1331,80,1424,107"/><area shape="rect" id="node46" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="2802,163,2891,189"/><area shape="rect" id="node47" href="rgw__cr__rados_8h.html" title="rgw_cr_rados.h" alt="" coords="3079,80,3189,107"/><area shape="rect" id="node50" href="rgw__boost__asio__yield_8h.html" title="rgw_boost_asio_yield.h" alt="" coords="3214,80,3372,107"/><area shape="rect" id="node7" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="2017,245,2127,272"/><area shape="rect" id="node27" href="rgw__period__history_8h.html" title="rgw_period_history.h" alt="" coords="569,245,711,272"/><area shape="rect" id="node16" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2165,328,2243,355"/><area shape="rect" id="node17" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="2028,411,2157,437"/><area shape="rect" id="node18" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2319,328,2405,355"/><area shape="rect" id="node19" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2767,328,2860,355"/><area shape="rect" id="node20" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1611,328,1704,355"/><area shape="rect" id="node21" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="1728,328,1835,355"/><area shape="rect" id="node26" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="2054,328,2140,355"/><area shape="rect" id="node38" href="rgw__boost__asio__coroutine_8h.html" title="rgw_boost_asio_coroutine.h" alt="" coords="3223,245,3407,272"/><area shape="rect" id="node43" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="2033,163,2111,189"/><area shape="rect" id="node44" href="rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="1123,163,1291,189"/><area shape="rect" id="node45" href="rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="613,163,747,189"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLogStatusDump.html">LogStatusDump</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWMetadataLogData.html">RGWMetadataLogData</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLogInfoCompletion.html">RGWMetadataLogInfoCompletion</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataTopHandler.html">RGWMetadataTopHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +120,13 @@ Classes</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a5580a2b7c4743669bb9ca22b07e84324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__metadata_8cc.html#a5580a2b7c4743669bb9ca22b07e84324">dout_subsys</a>&#160;&#160;&#160;ceph_subsys_rgw</td></tr>
 <tr class="separator:a5580a2b7c4743669bb9ca22b07e84324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a13de36fb64d3ede28ff7f27335e80fbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__metadata_8cc.html#a13de36fb64d3ede28ff7f27335e80fbe">decode_json_obj</a> (<a class="el" href="rgw__metadata_8h.html#af43317dbf8c164afb601da7ad1a76492">RGWMDLogStatus</a> &amp;status, JSONObj *obj)</td></tr>
+<tr class="separator:a13de36fb64d3ede28ff7f27335e80fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c8369eae913c3adddd395da35001bb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__metadata_8cc.html#a61c8369eae913c3adddd395da35001bb">_mdlog_info_completion</a> (librados::completion_t cb, void *arg)</td></tr>
+<tr class="separator:a61c8369eae913c3adddd395da35001bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -130,6 +140,67 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define dout_subsys&#160;&#160;&#160;ceph_subsys_rgw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a61c8369eae913c3adddd395da35001bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void _mdlog_info_completion </td>
+          <td>(</td>
+          <td class="paramtype">librados::completion_t&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a13de36fb64d3ede28ff7f27335e80fbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_json_obj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rgw__metadata_8h.html#af43317dbf8c164afb601da7ad1a76492">RGWMDLogStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JSONObj *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -160,7 +231,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

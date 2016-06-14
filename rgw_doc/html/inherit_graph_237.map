@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classRGWRadosThread.html" title="RGWRadosThread" alt="" coords="5,56,139,83"/>
+<area shape="rect" id="node2" href="$classRGWDataNotifier.html" title="RGWDataNotifier" alt="" coords="216,5,341,32"/>
+<area shape="rect" id="node3" href="$classRGWMetaNotifier.html" title="RGWMetaNotifier" alt="" coords="215,56,342,83"/>
+<area shape="rect" id="node4" href="$classRGWSyncProcessorThread.html" title="RGWSyncProcessorThread" alt="" coords="187,107,371,133"/>
+<area shape="rect" id="node5" href="$classRGWDataSyncProcessorThread.html" title="RGWDataSyncProcessorThread" alt="" coords="419,81,631,108"/>
+<area shape="rect" id="node6" href="$classRGWMetaSyncProcessorThread.html" title="RGWMetaSyncProcessorThread" alt="" coords="419,132,632,159"/>
+</map>

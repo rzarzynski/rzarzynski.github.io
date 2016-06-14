@@ -1,0 +1,4 @@
+<map id="RGWBucketWebsiteConf" name="RGWBucketWebsiteConf">
+<area shape="rect" id="node2" href="$structRGWRedirectInfo.html" title="{RGWRedirectInfo\n|+ http_redirect_code\l|+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="145,197,285,318"/>
+<area shape="rect" id="node4" href="$structRGWBWRoutingRules.html" title="{RGWBWRoutingRules\n|+ rules\l|+ encode()\l+ decode()\l+ dump()\l+ dump_xml()\l+ decode_json()\l+ check_key_condition()\l+ check_error_code_condition()\l+ check_key_and_error\l_code_condition()\l}" alt="" coords="311,160,515,355"/>
+</map>

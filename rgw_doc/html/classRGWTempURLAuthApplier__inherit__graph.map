@@ -1,0 +1,5 @@
+<map id="RGWTempURLAuthApplier" name="RGWTempURLAuthApplier">
+<area shape="rect" id="node2" href="$classRGWLocalAuthApplier.html" title="{RGWLocalAuthApplier\n|+ NO_SUBUSER\l# user_info\l# subuser\l|+ RGWLocalAuthApplier()\l+ get_perms_from_aclspec()\l+ is_admin_of()\l+ is_owner_of()\l+ get_perm_mask()\l+ to_str()\l+ load_acct_info()\l# get_perm_mask()\l}" alt="" coords="13,390,200,599"/>
+<area shape="rect" id="node3" href="$classRGWAuthApplier.html" title="{RGWAuthApplier\n|# cct\l|+ RGWAuthApplier()\l+ ~RGWAuthApplier()\l+ load_acct_info()\l+ modify_request_state()\l}" alt="" coords="23,219,189,341"/>
+<area shape="rect" id="node4" href="$classRGWIdentityApplier.html" title="{RGWIdentityApplier\n||+ ~RGWIdentityApplier()\l+ get_perms_from_aclspec()\l+ is_admin_of()\l+ is_owner_of()\l+ get_perm_mask()\l+ is_anonymous()\l+ to_str()\l}" alt="" coords="13,5,200,171"/>
+</map>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -102,6 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals_v.html#index_v"><span>v</span></a></li>
       <li><a href="globals_w.html#index_w"><span>w</span></a></li>
       <li><a href="globals_x.html#index_x"><span>x</span></a></li>
+      <li><a href="globals_y.html#index_y"><span>y</span></a></li>
       <li><a href="globals_z.html#index_z"><span>z</span></a></li>
     </ul>
   </div>
@@ -134,18 +135,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="rgw__user_8h.html#ac29879f1ed9ca3aa4c8065f5f44176a9">rgw_user.h</a>
 , <a class="el" href="rgw__admin_8cc.html#ac29879f1ed9ca3aa4c8065f5f44176a9">rgw_admin.cc</a>
 </li>
-<li>send_http_data()
-: <a class="el" href="rgw__http__client_8cc.html#af578c8304e036d62f874f53b40f672f1">rgw_http_client.cc</a>
+<li>send_to_remote_gateway()
+: <a class="el" href="rgw__admin_8cc.html#a5839bd99649796dc352e2f314675f783">rgw_admin.cc</a>
+</li>
+<li>send_to_remote_or_url()
+: <a class="el" href="rgw__admin_8cc.html#a18cb9b4265475f206b2b32f89c956961">rgw_admin.cc</a>
+</li>
+<li>send_to_url()
+: <a class="el" href="rgw__admin_8cc.html#a77e67cebb02e920d1d602f553e53ffb7">rgw_admin.cc</a>
 </li>
 <li>set_bucket_quota()
-: <a class="el" href="rgw__admin_8cc.html#a7a7a6e819450196d62aa76905b91a162">rgw_admin.cc</a>
+: <a class="el" href="rgw__admin_8cc.html#ac7ac1e8e51231c8d76171a724c8b8377">rgw_admin.cc</a>
 </li>
 <li>set_copy_attrs()
-: <a class="el" href="rgw__rados_8cc.html#a5394a91b025fd09a99c70ca53d59905a">rgw_rados.cc</a>
+: <a class="el" href="rgw__rados_8cc.html#a65f0c3ac1b08545f5d4175615eed6a74">rgw_rados.cc</a>
+</li>
+<li>set_date_header()
+: <a class="el" href="rgw__rest__conn_8cc.html#aa41d3900865cfbb67cbd4508ac161096">rgw_rest_conn.cc</a>
 </li>
 <li>set_err_msg()
 : <a class="el" href="rgw__bucket_8cc.html#a7388b7d86227213f6b7c5f3877447d35">rgw_bucket.cc</a>
 , <a class="el" href="rgw__user_8cc.html#a7388b7d86227213f6b7c5f3877447d35">rgw_user.cc</a>
+</li>
+<li>set_header()
+: <a class="el" href="rgw__rest__conn_8cc.html#aadb2f269beb4e57221fe9a16e36c1cdc">rgw_rest_conn.cc</a>
 </li>
 <li>set_logging()
 : <a class="el" href="rgw__main_8cc.html#ab5b8ab278478157891d1547b67b29e56">rgw_main.cc</a>
@@ -157,8 +170,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="rgw__admin_8cc.html#af97bb58c52e49b8f83659a1b83411f9c">rgw_admin.cc</a>
 </li>
 <li>set_req_state_err()
-: <a class="el" href="rgw__rest_8cc.html#a08932f795f9a12a48c6ec84050a7f51c">rgw_rest.cc</a>
-, <a class="el" href="rgw__rest_8h.html#a08932f795f9a12a48c6ec84050a7f51c">rgw_rest.h</a>
+: <a class="el" href="rgw__rest_8cc.html#a53d1273d55fd8ef26925dad2c16d2718">rgw_rest.cc</a>
+, <a class="el" href="rgw__rest_8h.html#a33b9df536b6506f8428bee216041dc21">rgw_rest.h</a>
 </li>
 <li>set_str_from_headers()
 : <a class="el" href="rgw__rest__client_8cc.html#ab4f60e826eb9d1f1c246a8dc52a1d1f6">rgw_rest_client.cc</a>
@@ -190,13 +203,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="rgw__main_8cc.html#afea693cea375ed56d167f4acd852a06b">rgw_main.cc</a>
 </li>
 <li>signal_shutdown()
-: <a class="el" href="rgw__main_8cc.html#a8722eb4a4ced2971cbfdd354ce7806b3">rgw_main.cc</a>
+: <a class="el" href="rgw__loadgen__process_8cc.html#a80876c3df4dfb0c5d793cb641c884600">rgw_loadgen_process.cc</a>
+, <a class="el" href="rgw__main_8cc.html#a80876c3df4dfb0c5d793cb641c884600">rgw_main.cc</a>
+, <a class="el" href="rgw__process_8h.html#a80876c3df4dfb0c5d793cb641c884600">rgw_process.h</a>
 </li>
 <li>signed_subresources
 : <a class="el" href="rgw__auth__s3_8cc.html#a23feadc083a95d8865a5bcd61dde1b76">rgw_auth_s3.cc</a>
 </li>
 <li>SOCKET_BACKLOG
-: <a class="el" href="rgw__main_8cc.html#a0628d7cccf3f1f5f11bf3acd85c71616">rgw_main.cc</a>
+: <a class="el" href="rgw__process_8h.html#a0628d7cccf3f1f5f11bf3acd85c71616">rgw_process.h</a>
 </li>
 <li>STATUS_ACCEPTED
 : <a class="el" href="rgw__common_8h.html#a1e91dac5250f1946782ee63b20798144">rgw_common.h</a>
@@ -220,7 +235,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="rgw__common_8h.html#a48c109886dd8dc03947b94bc2032c2d4">rgw_common.h</a>
 </li>
 <li>store
-: <a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">rgw_admin.cc</a>
+: <a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">rgw_object_expirer.cc</a>
+, <a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">rgw_admin.cc</a>
 </li>
 <li>str_ends_with()
 : <a class="el" href="rgw__rest_8cc.html#ae05c4a80fe02b8f038d771861fcfb22f">rgw_rest.cc</a>
@@ -228,11 +244,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>STR_LEN_ENTRY
 : <a class="el" href="rgw__common_8cc.html#a3d21bbc119c607e71cf20393d09d18ff">rgw_common.cc</a>
 </li>
-<li>str_startswith()
-: <a class="el" href="rgw__common_8h.html#aea070641badbcaf5b509d1fe18ca933a">rgw_common.h</a>
-</li>
 <li>str_to_perm()
 : <a class="el" href="rgw__json__enc_8cc.html#a8c72896ee1afd068e49fbf3a90654978">rgw_json_enc.cc</a>
+</li>
+<li>STREAM_IO()
+: <a class="el" href="rgw__rest_8h.html#a9944f9bb88ac4c05bf1453ef3e873478">rgw_rest.h</a>
 </li>
 <li>stringcasecmp()
 : <a class="el" href="rgw__string_8h.html#a870b0e0200203b1adb83648e2636fb2c">rgw_string.h</a>
@@ -249,28 +265,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>stringtoull()
 : <a class="el" href="rgw__string_8h.html#a2dcdb6be6015c7b2b1610e7931945eff">rgw_string.h</a>
 </li>
-<li>swift_finalize()
-: <a class="el" href="rgw__swift_8cc.html#ac3cc8facd2c15f55e361d2634dc76f93">rgw_swift.cc</a>
-, <a class="el" href="rgw__swift_8h.html#ac3cc8facd2c15f55e361d2634dc76f93">rgw_swift.h</a>
-</li>
 <li>SWIFT_GROUP_ALL_USERS
 : <a class="el" href="rgw__acl__swift_8cc.html#a0c0f8fb55ffc61ee62aead0badf2f56e">rgw_acl_swift.cc</a>
 </li>
-<li>swift_init()
-: <a class="el" href="rgw__swift_8h.html#a6ffcf4b0632040cb4aff3cb2027037cc">rgw_swift.h</a>
-, <a class="el" href="rgw__swift_8cc.html#a6ffcf4b0632040cb4aff3cb2027037cc">rgw_swift.cc</a>
+<li>SWIFT_PERM_ADMIN
+: <a class="el" href="rgw__acl__swift_8cc.html#a973093bfb12943ef5d318307aecdfc04">rgw_acl_swift.cc</a>
 </li>
 <li>SWIFT_PERM_READ
 : <a class="el" href="rgw__acl__swift_8cc.html#a68c19f2ae1cf962994676ebf32d71968">rgw_acl_swift.cc</a>
 </li>
+<li>SWIFT_PERM_RWRT
+: <a class="el" href="rgw__acl__swift_8cc.html#a0372924ed288fd32fa8a36e58236c655">rgw_acl_swift.cc</a>
+</li>
 <li>SWIFT_PERM_WRITE
 : <a class="el" href="rgw__acl__swift_8cc.html#af1f8b301d01027f094b7a13827368ecc">rgw_acl_swift.cc</a>
+</li>
+<li>sync_status()
+: <a class="el" href="rgw__admin_8cc.html#a313adbe2d817ca90ee002626049cdacf">rgw_admin.cc</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

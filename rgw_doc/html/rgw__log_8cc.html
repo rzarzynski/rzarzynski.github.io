@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -95,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;common/utf8.h&quot;</code><br/>
 <code>#include &quot;common/OutputDataSocket.h&quot;</code><br/>
 <code>#include &quot;common/Formatter.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__bucket_8h_source.html">rgw_bucket.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__log_8h_source.html">rgw_log.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__acl_8h_source.html">rgw_acl.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rados_8h_source.html">rgw_rados.h</a>&quot;</code><br/>
@@ -104,7 +105,7 @@ Include dependency graph for rgw_log.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__log_8cc__incl.png" border="0" usemap="#rgw__log_8cc" alt=""/></div>
 <map name="rgw__log_8cc" id="rgw__log_8cc">
-<area shape="rect" id="node7" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="530,163,608,189"/><area shape="rect" id="node19" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1970,477,2048,504"/><area shape="rect" id="node32" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1304,80,1397,107"/><area shape="rect" id="node43" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="747,320,856,347"/><area shape="rect" id="node8" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1345,395,1455,421"/><area shape="rect" id="node21" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2073,477,2159,504"/><area shape="rect" id="node22" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="629,477,723,504"/><area shape="rect" id="node25" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1505,477,1599,504"/><area shape="rect" id="node38" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1835,320,1949,347"/><area shape="rect" id="node39" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1445,163,1563,189"/><area shape="rect" id="node40" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1443,245,1564,272"/><area shape="rect" id="node42" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1339,320,1460,347"/></map>
+<area shape="rect" id="node7" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1445,80,1544,107"/><area shape="rect" id="node20" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="993,403,1071,429"/><area shape="rect" id="node36" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="3180,155,3273,181"/><area shape="rect" id="node43" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="875,237,953,264"/><area shape="rect" id="node48" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="301,237,411,264"/><area shape="rect" id="node11" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1478,320,1588,347"/><area shape="rect" id="node25" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="504,403,597,429"/><area shape="rect" id="node34" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="2659,237,2748,264"/><area shape="rect" id="node47" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="1569,237,1673,264"/><area shape="rect" id="node21" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1848,485,1977,512"/><area shape="rect" id="node22" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1430,403,1516,429"/><area shape="rect" id="node23" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="723,403,816,429"/><area shape="rect" id="node28" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="1541,403,1648,429"/><area shape="rect" id="node33" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1867,403,1953,429"/><area shape="rect" id="node44" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="3169,237,3284,264"/><area shape="rect" id="node45" href="rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="2927,237,3095,264"/><area shape="rect" id="node46" href="rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="4205,237,4339,264"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -123,7 +124,7 @@ Functions</h2></td></tr>
 <tr class="separator:abf35c631c9edf52a34c27eeb158c92e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a1da9c38a9e274b1cd92211628df396"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__log_8cc.html#a6a1da9c38a9e274b1cd92211628df396">render_log_object_name</a> (const string &amp;format, struct tm *dt, string &amp;bucket_id, const string &amp;bucket_name)</td></tr>
 <tr class="separator:a6a1da9c38a9e274b1cd92211628df396"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeefa9f4c4cef6a626c962e7a1646592d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__log_8cc.html#aeefa9f4c4cef6a626c962e7a1646592d">rgw_log_usage_init</a> (CephContext *cct, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>)</td></tr>
+<tr class="memitem:aeefa9f4c4cef6a626c962e7a1646592d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__log_8cc.html#aeefa9f4c4cef6a626c962e7a1646592d">rgw_log_usage_init</a> (CephContext *cct, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>)</td></tr>
 <tr class="separator:aeefa9f4c4cef6a626c962e7a1646592d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9d5c19a2bcf0f16cdf4da2ea8b1d77d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__log_8cc.html#aa9d5c19a2bcf0f16cdf4da2ea8b1d77d">rgw_log_usage_finalize</a> ()</td></tr>
 <tr class="separator:aa9d5c19a2bcf0f16cdf4da2ea8b1d77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +132,7 @@ Functions</h2></td></tr>
 <tr class="separator:aa6b09d5b242dae9b7fae4ede546ff0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3acc9edd02c915a7b5ffe4e340176045"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__log_8cc.html#a3acc9edd02c915a7b5ffe4e340176045">rgw_format_ops_log_entry</a> (struct <a class="el" href="structrgw__log__entry.html">rgw_log_entry</a> &amp;entry, Formatter *formatter)</td></tr>
 <tr class="separator:a3acc9edd02c915a7b5ffe4e340176045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b03cb485b7c742c38a8a77239d2e07e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__log_8cc.html#a6b03cb485b7c742c38a8a77239d2e07e">rgw_log_op</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, struct <a class="el" href="structreq__state.html">req_state</a> *s, const string &amp;op_name, <a class="el" href="classOpsLogSocket.html">OpsLogSocket</a> *olog)</td></tr>
+<tr class="memitem:a6b03cb485b7c742c38a8a77239d2e07e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__log_8cc.html#a6b03cb485b7c742c38a8a77239d2e07e">rgw_log_op</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, struct <a class="el" href="structreq__state.html">req_state</a> *s, const string &amp;op_name, <a class="el" href="classOpsLogSocket.html">OpsLogSocket</a> *olog)</td></tr>
 <tr class="separator:a6b03cb485b7c742c38a8a77239d2e07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -394,7 +395,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

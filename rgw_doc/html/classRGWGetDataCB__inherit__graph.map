@@ -1,6 +1,8 @@
 <map id="RGWGetDataCB" name="RGWGetDataCB">
-<area shape="rect" id="node2" href="$classRGWGetObj__CB.html" title="{RGWGetObj_CB\n||+ RGWGetObj_CB()\l+ ~RGWGetObj_CB()\l+ handle_data()\l}" alt="" coords="5,184,155,291"/>
-<area shape="rect" id="node3" href="$classRGWRadosPutObj.html" title="{RGWRadosPutObj\n||+ RGWRadosPutObj()\l+ handle_data()\l+ set_extra_data_len()\l+ complete()\l}" alt="" coords="179,177,332,298"/>
-<area shape="rect" id="node4" href="$classRGWRESTStreamOutCB.html" title="{RGWRESTStreamOutCB\n||+ RGWRESTStreamOutCB()\l+ handle_data()\l}" alt="" coords="357,191,549,283"/>
-<area shape="rect" id="node5" href="$classStreamObjData.html" title="{StreamObjData\n||+ StreamObjData()\l}" alt="" coords="574,199,705,276"/>
+<area shape="rect" id="node2" href="$classRGWGetObj__CB.html" title="{RGWGetObj_CB\n||+ RGWGetObj_CB()\l+ ~RGWGetObj_CB()\l+ handle_data()\l}" alt="" coords="5,191,155,297"/>
+<area shape="rect" id="node3" href="$classRGWRadosPutObj.html" title="{RGWRadosPutObj\n||+ RGWRadosPutObj()\l+ handle_data()\l+ set_extra_data_len()\l+ complete()\l+ is_canceled()\l}" alt="" coords="179,176,332,312"/>
+<area shape="rect" id="node4" href="$classRGWRESTStreamOutCB.html" title="{RGWRESTStreamOutCB\n||+ RGWRESTStreamOutCB()\l+ handle_data()\l}" alt="" coords="357,198,549,290"/>
+<area shape="rect" id="node5" href="$classRGWStreamIntoBufferlist.html" title="{RGWStreamIntoBufferlist\n||+ RGWStreamIntoBufferlist()\l+ handle_data()\l}" alt="" coords="574,198,764,290"/>
+<area shape="rect" id="node6" href="$classStreamIntoBufferlist.html" title="{StreamIntoBufferlist\n||+ StreamIntoBufferlist()\l+ handle_data()\l}" alt="" coords="789,198,947,290"/>
+<area shape="rect" id="node7" href="$classStreamObjData.html" title="{StreamObjData\n||+ StreamObjData()\l}" alt="" coords="971,205,1103,283"/>
 </map>

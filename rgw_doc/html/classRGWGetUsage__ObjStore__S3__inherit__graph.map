@@ -1,0 +1,5 @@
+<map id="RGWGetUsage_ObjStore_S3" name="RGWGetUsage_ObjStore_S3">
+<area shape="rect" id="node2" href="$classRGWGetUsage__ObjStore.html" title="{RGWGetUsage_ObjStore\n||+ RGWGetUsage_ObjStore()\l+ ~RGWGetUsage_ObjStore()\l}" alt="" coords="16,758,215,850"/>
+<area shape="rect" id="node3" href="$classRGWGetUsage.html" title="{RGWGetUsage\n|# sent_data\l# start_date\l# end_date\l# show_log_entries\l# show_log_sum\l# categories\l# usage\l# summary_map\l# header\l|+ RGWGetUsage()\l+ verify_permission()\l+ execute()\l+ get_params()\l+ send_response()\l+ should_get_stats()\l+ name()\l+ op_mask()\l}" alt="" coords="44,411,188,709"/>
+<area shape="rect" id="node4" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="19,6,213,362"/>
+</map>

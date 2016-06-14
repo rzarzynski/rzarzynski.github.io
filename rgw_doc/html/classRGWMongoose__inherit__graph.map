@@ -1,3 +1,4 @@
 <map id="RGWMongoose" name="RGWMongoose">
-<area shape="rect" id="node2" href="$classRGWClientIO.html" title="{RGWClientIO\n|# env\l|+ ~RGWClientIO()\l+ RGWClientIO()\l+ init()\l+ print()\l+ write()\l+ flush()\l+ read()\l+ send_status()\l+ send_100_continue()\l+ complete_header()\land 6 more...\l# init_env()\l# write_data()\l# read_data()\l}" alt="" coords="9,6,163,274"/>
+<area shape="rect" id="node2" href="$classRGWStreamIO.html" title="{RGWStreamIO\n||+ ~RGWStreamIO()\l+ RGWStreamIO()\l+ print()\l+ write()\l+ flush()\l+ read()\l+ grab_aws4_sha256_hash()\l+ send_status()\l+ send_100_continue()\l+ complete_header()\l+ send_content_length()\l+ get_bytes_sent()\l+ get_bytes_received()\l# write_data()\l# read_data()\l}" alt="" coords="5,264,195,547"/>
+<area shape="rect" id="node3" href="$classRGWClientIO.html" title="{RGWClientIO\n|# env\l|+ ~RGWClientIO()\l+ RGWClientIO()\l+ init()\l+ get_env()\l+ account()\l+ set_account()\l+ complete_request()\l+ get_bytes_sent()\l+ get_bytes_received()\l# init_env()\l}" alt="" coords="23,6,176,215"/>
 </map>

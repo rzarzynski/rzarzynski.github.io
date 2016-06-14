@@ -1,4 +1,7 @@
 <map id="rgw_rest_user.h" name="rgw_rest_user.h">
-<area shape="rect" id="node2" href="$rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="5,80,101,107"/>
-<area shape="rect" id="node3" href="$rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="125,80,248,107"/>
+<area shape="rect" id="node2" href="$librgw_8cc.html" title="librgw.cc" alt="" coords="5,80,79,107"/>
+<area shape="rect" id="node3" href="$rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="104,80,189,107"/>
+<area shape="rect" id="node4" href="$rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="213,80,309,107"/>
+<area shape="rect" id="node5" href="$rgw__os__lib_8cc.html" title="rgw_os_lib.cc" alt="" coords="334,80,436,107"/>
+<area shape="rect" id="node6" href="$rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="461,80,584,107"/>
 </map>

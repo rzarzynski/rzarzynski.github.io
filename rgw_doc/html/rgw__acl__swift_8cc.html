@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;string.h&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
+<code>#include &quot;common/ceph_json.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__common_8h_source.html">rgw_common.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__user_8h_source.html">rgw_user.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__acl__swift_8h_source.html">rgw_acl_swift.h</a>&quot;</code><br/>
@@ -98,7 +99,7 @@ Include dependency graph for rgw_acl_swift.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__acl__swift_8cc__incl.png" border="0" usemap="#rgw__acl__swift_8cc" alt=""/></div>
 <map name="rgw__acl__swift_8cc" id="rgw__acl__swift_8cc">
-<area shape="rect" id="node4" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1338,469,1448,496"/><area shape="rect" id="node27" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1934,80,2020,107"/><area shape="rect" id="node45" href="rgw__acl__swift_8h.html" title="rgw_acl_swift.h" alt="" coords="2354,469,2467,496"/><area shape="rect" id="node14" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2082,552,2160,579"/><area shape="rect" id="node16" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2185,552,2271,579"/><area shape="rect" id="node17" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="729,552,823,579"/><area shape="rect" id="node20" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="847,552,940,579"/><area shape="rect" id="node28" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1857,395,1945,421"/><area shape="rect" id="node29" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="895,155,988,181"/><area shape="rect" id="node43" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="2158,320,2263,347"/><area shape="rect" id="node35" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1169,320,1247,347"/><area shape="rect" id="node38" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="949,395,1064,421"/><area shape="rect" id="node39" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1431,237,1549,264"/><area shape="rect" id="node40" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1677,320,1797,347"/><area shape="rect" id="node42" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1677,395,1797,421"/></map>
+<area shape="rect" id="node5" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1352,320,1462,347"/><area shape="rect" id="node36" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1529,80,1615,107"/><area shape="rect" id="node50" href="rgw__acl__swift_8h.html" title="rgw_acl_swift.h" alt="" coords="152,320,265,347"/><area shape="rect" id="node15" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="355,403,433,429"/><area shape="rect" id="node16" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="467,485,597,512"/><area shape="rect" id="node17" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1047,485,1133,512"/><area shape="rect" id="node18" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1974,403,2067,429"/><area shape="rect" id="node21" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="649,403,742,429"/><area shape="rect" id="node24" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="918,403,1025,429"/><area shape="rect" id="node31" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1812,403,1898,429"/><area shape="rect" id="node25" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="1158,485,1239,512"/><area shape="rect" id="node35" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="1569,485,1683,512"/><area shape="rect" id="node39" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1471,237,1559,264"/><area shape="rect" id="node41" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="2185,155,2278,181"/><area shape="rect" id="node49" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="2777,485,2882,512"/><area shape="rect" id="node48" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1687,237,1765,264"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -109,15 +110,23 @@ Macros</h2></td></tr>
 <tr class="separator:a68c19f2ae1cf962994676ebf32d71968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1f8b301d01027f094b7a13827368ecc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#af1f8b301d01027f094b7a13827368ecc">SWIFT_PERM_WRITE</a>&#160;&#160;&#160;<a class="el" href="rgw__acl_8h.html#ad59a1a075cfd94b940f7ef3945257b97">RGW_PERM_WRITE_OBJS</a></td></tr>
 <tr class="separator:af1f8b301d01027f094b7a13827368ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0372924ed288fd32fa8a36e58236c655"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#a0372924ed288fd32fa8a36e58236c655">SWIFT_PERM_RWRT</a>&#160;&#160;&#160;(<a class="el" href="rgw__acl__swift_8cc.html#a68c19f2ae1cf962994676ebf32d71968">SWIFT_PERM_READ</a> | <a class="el" href="rgw__acl__swift_8cc.html#af1f8b301d01027f094b7a13827368ecc">SWIFT_PERM_WRITE</a>)</td></tr>
+<tr class="separator:a0372924ed288fd32fa8a36e58236c655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973093bfb12943ef5d318307aecdfc04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#a973093bfb12943ef5d318307aecdfc04">SWIFT_PERM_ADMIN</a>&#160;&#160;&#160;<a class="el" href="rgw__acl_8h.html#a2f73f019a3c8883ebb2732fdaf8f9811">RGW_PERM_FULL_CONTROL</a></td></tr>
+<tr class="separator:a973093bfb12943ef5d318307aecdfc04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c0f8fb55ffc61ee62aead0badf2f56e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#a0c0f8fb55ffc61ee62aead0badf2f56e">SWIFT_GROUP_ALL_USERS</a>&#160;&#160;&#160;&quot;.r:*&quot;</td></tr>
 <tr class="separator:a0c0f8fb55ffc61ee62aead0badf2f56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a045785b9ad0d00434a078ee240f5ee38"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#a045785b9ad0d00434a078ee240f5ee38">parse_list</a> (string &amp;uid_list, vector&lt; string &gt; &amp;uids)</td></tr>
-<tr class="separator:a045785b9ad0d00434a078ee240f5ee38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7dfa99b17a7069649f45e968cb0ffbf"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#ae7dfa99b17a7069649f45e968cb0ffbf">uid_is_public</a> (string &amp;uid)</td></tr>
-<tr class="separator:ae7dfa99b17a7069649f45e968cb0ffbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6228de583bd5004f3e993b86749b2c05"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#a6228de583bd5004f3e993b86749b2c05">parse_list</a> (const std::string &amp;uid_list, std::vector&lt; std::string &gt; &amp;uids)</td></tr>
+<tr class="separator:a6228de583bd5004f3e993b86749b2c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eef08f04e7d4dc4a67334fa2301206a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#a6eef08f04e7d4dc4a67334fa2301206a">uid_is_public</a> (const string &amp;uid)</td></tr>
+<tr class="separator:a6eef08f04e7d4dc4a67334fa2301206a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeac6cc9eca0ab4d51885f921cd1d2dc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#abeac6cc9eca0ab4d51885f921cd1d2dc">extract_referer_urlspec</a> (const std::string &amp;uid, std::string &amp;url_spec)</td></tr>
+<tr class="separator:abeac6cc9eca0ab4d51885f921cd1d2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6227dd721ecc1712fae32c3f7f578d41"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__acl__swift_8cc.html#a6227dd721ecc1712fae32c3f7f578d41">normalize_referer_urlspec</a> (string &amp;url_spec, bool &amp;is_negative)</td></tr>
+<tr class="separator:a6227dd721ecc1712fae32c3f7f578d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a5580a2b7c4743669bb9ca22b07e84324"></a>
@@ -144,12 +153,36 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a973093bfb12943ef5d318307aecdfc04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SWIFT_PERM_ADMIN&#160;&#160;&#160;<a class="el" href="rgw__acl_8h.html#a2f73f019a3c8883ebb2732fdaf8f9811">RGW_PERM_FULL_CONTROL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a68c19f2ae1cf962994676ebf32d71968"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">#define SWIFT_PERM_READ&#160;&#160;&#160;<a class="el" href="rgw__acl_8h.html#a5a3da67c7de334d2b340ab27eafeba44">RGW_PERM_READ_OBJS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0372924ed288fd32fa8a36e58236c655"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SWIFT_PERM_RWRT&#160;&#160;&#160;(<a class="el" href="rgw__acl__swift_8cc.html#a68c19f2ae1cf962994676ebf32d71968">SWIFT_PERM_READ</a> | <a class="el" href="rgw__acl__swift_8cc.html#af1f8b301d01027f094b7a13827368ecc">SWIFT_PERM_WRITE</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -169,7 +202,75 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a045785b9ad0d00434a078ee240f5ee38"></a>
+<a class="anchor" id="abeac6cc9eca0ab4d51885f921cd1d2dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool extract_referer_urlspec </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>uid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>url_spec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6227dd721ecc1712fae32c3f7f578d41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool normalize_referer_urlspec </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>url_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>is_negative</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6228de583bd5004f3e993b86749b2c05"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -179,13 +280,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">static int parse_list </td>
           <td>(</td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>uid_list</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>uids</em>&#160;</td>
         </tr>
         <tr>
@@ -203,7 +304,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae7dfa99b17a7069649f45e968cb0ffbf"></a>
+<a class="anchor" id="a6eef08f04e7d4dc4a67334fa2301206a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -213,7 +314,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">static bool uid_is_public </td>
           <td>(</td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>uid</em></td><td>)</td>
           <td></td>
         </tr>
@@ -230,7 +331,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

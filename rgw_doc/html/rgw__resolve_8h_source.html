@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -93,36 +93,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rgw__common_8h.html">rgw_common.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span><a class="code" href="classRGWDNSResolver.html">RGWDNSResolver</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classRGWResolver.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWResolver.html">RGWResolver</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="classRGWDNSResolver.html">RGWDNSResolver</a> *resolver;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classRGWResolver.html#adf3cb45985e530994722cce1243a8976">~RGWResolver</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classRGWResolver.html#a3da80795233839c22755457f65976f3e">RGWResolver</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWResolver.html#a8beaf4c656c377dc2b25d7ab815d4e88">resolve_cname</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; hostname, <span class="keywordtype">string</span>&amp; cname, <span class="keywordtype">bool</span> *found);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="rgw__resolve_8h.html#a119b20520784f8b03a32acec7493f0b9">rgw_init_resolver</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="rgw__resolve_8h.html#abd60e514f2995c07bab7c2edaf7ffbe6">rgw_shutdown_resolver</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <a class="code" href="classRGWResolver.html">RGWResolver</a> *<a class="code" href="rgw__resolve_8h.html#ab9ea6e44c30c9d101825dbf9115a8879">rgw_resolver</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classRGWResolver_html"><div class="ttname"><a href="classRGWResolver.html">RGWResolver</a></div><div class="ttdef"><b>Definition:</b> rgw_resolve.h:11</div></div>
-<div class="ttc" id="classRGWDNSResolver_html"><div class="ttname"><a href="classRGWDNSResolver.html">RGWDNSResolver</a></div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:20</div></div>
-<div class="ttc" id="classRGWResolver_html_adf3cb45985e530994722cce1243a8976"><div class="ttname"><a href="classRGWResolver.html#adf3cb45985e530994722cce1243a8976">RGWResolver::~RGWResolver</a></div><div class="ttdeci">~RGWResolver()</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:164</div></div>
-<div class="ttc" id="classRGWResolver_html_a8beaf4c656c377dc2b25d7ab815d4e88"><div class="ttname"><a href="classRGWResolver.html#a8beaf4c656c377dc2b25d7ab815d4e88">RGWResolver::resolve_cname</a></div><div class="ttdeci">int resolve_cname(const string &amp;hostname, string &amp;cname, bool *found)</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:171</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>ceph {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">class </span>DNSResolver;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classRGWResolver.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWResolver.html">RGWResolver</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  DNSResolver *resolver;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classRGWResolver.html#adf3cb45985e530994722cce1243a8976">~RGWResolver</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classRGWResolver.html#a3da80795233839c22755457f65976f3e">RGWResolver</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWResolver.html#a8beaf4c656c377dc2b25d7ab815d4e88">resolve_cname</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; hostname, <span class="keywordtype">string</span>&amp; cname, <span class="keywordtype">bool</span> *found);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="rgw__resolve_8h.html#a119b20520784f8b03a32acec7493f0b9">rgw_init_resolver</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="rgw__resolve_8h.html#abd60e514f2995c07bab7c2edaf7ffbe6">rgw_shutdown_resolver</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <a class="code" href="classRGWResolver.html">RGWResolver</a> *<a class="code" href="rgw__resolve_8h.html#ab9ea6e44c30c9d101825dbf9115a8879">rgw_resolver</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classRGWResolver_html"><div class="ttname"><a href="classRGWResolver.html">RGWResolver</a></div><div class="ttdef"><b>Definition:</b> rgw_resolve.h:13</div></div>
+<div class="ttc" id="classRGWResolver_html_adf3cb45985e530994722cce1243a8976"><div class="ttname"><a href="classRGWResolver.html#adf3cb45985e530994722cce1243a8976">RGWResolver::~RGWResolver</a></div><div class="ttdeci">~RGWResolver()</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:22</div></div>
+<div class="ttc" id="classRGWResolver_html_a8beaf4c656c377dc2b25d7ab815d4e88"><div class="ttname"><a href="classRGWResolver.html#a8beaf4c656c377dc2b25d7ab815d4e88">RGWResolver::resolve_cname</a></div><div class="ttdeci">int resolve_cname(const string &amp;hostname, string &amp;cname, bool *found)</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:29</div></div>
 <div class="ttc" id="rgw__common_8h_html"><div class="ttname"><a href="rgw__common_8h.html">rgw_common.h</a></div></div>
-<div class="ttc" id="rgw__resolve_8h_html_a119b20520784f8b03a32acec7493f0b9"><div class="ttname"><a href="rgw__resolve_8h.html#a119b20520784f8b03a32acec7493f0b9">rgw_init_resolver</a></div><div class="ttdeci">void rgw_init_resolver(void)</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:178</div></div>
-<div class="ttc" id="rgw__resolve_8h_html_ab9ea6e44c30c9d101825dbf9115a8879"><div class="ttname"><a href="rgw__resolve_8h.html#ab9ea6e44c30c9d101825dbf9115a8879">rgw_resolver</a></div><div class="ttdeci">RGWResolver * rgw_resolver</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:175</div></div>
-<div class="ttc" id="rgw__resolve_8h_html_abd60e514f2995c07bab7c2edaf7ffbe6"><div class="ttname"><a href="rgw__resolve_8h.html#abd60e514f2995c07bab7c2edaf7ffbe6">rgw_shutdown_resolver</a></div><div class="ttdeci">void rgw_shutdown_resolver(void)</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:183</div></div>
-<div class="ttc" id="classRGWResolver_html_a3da80795233839c22755457f65976f3e"><div class="ttname"><a href="classRGWResolver.html#a3da80795233839c22755457f65976f3e">RGWResolver::RGWResolver</a></div><div class="ttdeci">RGWResolver()</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:167</div></div>
+<div class="ttc" id="rgw__resolve_8h_html_a119b20520784f8b03a32acec7493f0b9"><div class="ttname"><a href="rgw__resolve_8h.html#a119b20520784f8b03a32acec7493f0b9">rgw_init_resolver</a></div><div class="ttdeci">void rgw_init_resolver(void)</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:36</div></div>
+<div class="ttc" id="rgw__resolve_8h_html_ab9ea6e44c30c9d101825dbf9115a8879"><div class="ttname"><a href="rgw__resolve_8h.html#ab9ea6e44c30c9d101825dbf9115a8879">rgw_resolver</a></div><div class="ttdeci">RGWResolver * rgw_resolver</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:33</div></div>
+<div class="ttc" id="rgw__resolve_8h_html_abd60e514f2995c07bab7c2edaf7ffbe6"><div class="ttname"><a href="rgw__resolve_8h.html#abd60e514f2995c07bab7c2edaf7ffbe6">rgw_shutdown_resolver</a></div><div class="ttdeci">void rgw_shutdown_resolver(void)</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:41</div></div>
+<div class="ttc" id="classRGWResolver_html_a3da80795233839c22755457f65976f3e"><div class="ttname"><a href="classRGWResolver.html#a3da80795233839c22755457f65976f3e">RGWResolver::RGWResolver</a></div><div class="ttdeci">RGWResolver()</div><div class="ttdef"><b>Definition:</b> rgw_resolve.cc:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

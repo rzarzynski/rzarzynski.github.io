@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -100,7 +100,7 @@ Inheritance diagram for RGWAccessControlList:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWAccessControlList__inherit__graph.png" border="0" usemap="#RGWAccessControlList_inherit__map" alt="Inheritance graph"/></div>
 <map name="RGWAccessControlList_inherit__map" id="RGWAccessControlList_inherit__map">
-<area shape="rect" id="node2" href="classRGWAccessControlList__S3.html" title="{RGWAccessControlList_S3\n||+ RGWAccessControlList_S3()\l+ ~RGWAccessControlList_S3()\l+ xml_end()\l+ to_xml()\l+ create_canned()\l+ create_from_grants()\l}" alt="" coords="5,366,219,517"/></map>
+<area shape="rect" id="node2" href="classRGWAccessControlList__S3.html" title="{RGWAccessControlList_S3\n||+ RGWAccessControlList_S3()\l+ ~RGWAccessControlList_S3()\l+ xml_end()\l+ to_xml()\l+ create_canned()\l+ create_from_grants()\l}" alt="" coords="5,411,219,562"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for RGWAccessControlList:</div>
@@ -120,10 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af5087fff71ca9a21a499d99a59645162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa32705064a248eae1358bfe4ed57af29"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#aa32705064a248eae1358bfe4ed57af29">~RGWAccessControlList</a> ()</td></tr>
 <tr class="separator:aa32705064a248eae1358bfe4ed57af29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8154a38e0fce77b15c0a79a8b2dd86c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#ae8154a38e0fce77b15c0a79a8b2dd86c">get_perm</a> (string &amp;id, int perm_mask)</td></tr>
-<tr class="separator:ae8154a38e0fce77b15c0a79a8b2dd86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59842db442660ee8086d85883c55f867"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#a59842db442660ee8086d85883c55f867">get_group_perm</a> (<a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a> group, int perm_mask)</td></tr>
-<tr class="separator:a59842db442660ee8086d85883c55f867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af830fae948bb21b33b79a5179baa4c5d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#af830fae948bb21b33b79a5179baa4c5d">get_perm</a> (const <a class="el" href="classRGWIdentityApplier.html">RGWIdentityApplier</a> &amp;auth_identity, uint32_t perm_mask)</td></tr>
+<tr class="separator:af830fae948bb21b33b79a5179baa4c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a5eac0f2c29b22a20c53fc34a5df50"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#ad3a5eac0f2c29b22a20c53fc34a5df50">get_group_perm</a> (<a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a> group, uint32_t perm_mask)</td></tr>
+<tr class="separator:ad3a5eac0f2c29b22a20c53fc34a5df50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ada238cb63723227fc31fd0407c2d0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#a10ada238cb63723227fc31fd0407c2d0">get_referer_perm</a> (const std::string http_referer, uint32_t perm_mask)</td></tr>
+<tr class="separator:a10ada238cb63723227fc31fd0407c2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58b93bd3b3f3d2a5ff2257c1132daf25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#a58b93bd3b3f3d2a5ff2257c1132daf25">encode</a> (bufferlist &amp;bl) const </td></tr>
 <tr class="separator:a58b93bd3b3f3d2a5ff2257c1132daf25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a167ecd3297dbfe92f0866dfcdf9dd6f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#a167ecd3297dbfe92f0866dfcdf9dd6f6">decode</a> (bufferlist::iterator &amp;bl)</td></tr>
@@ -134,8 +136,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a50e63ef1029c2cb0624bd109101268e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1bdb97c2a64f81f3e9e2d0e462f7ac2"><td class="memItemLeft" align="right" valign="top">multimap&lt; string, <a class="el" href="classACLGrant.html">ACLGrant</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#ae1bdb97c2a64f81f3e9e2d0e462f7ac2">get_grant_map</a> ()</td></tr>
 <tr class="separator:ae1bdb97c2a64f81f3e9e2d0e462f7ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a684496749e050e41cef44b64b7e232ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#a684496749e050e41cef44b64b7e232ca">create_default</a> (string id, string name)</td></tr>
-<tr class="separator:a684496749e050e41cef44b64b7e232ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb44ee5c7616bc0a81f6c884b227513"><td class="memItemLeft" align="right" valign="top">const multimap&lt; string, <br class="typebreak"/>
+<a class="el" href="classACLGrant.html">ACLGrant</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#afbb44ee5c7616bc0a81f6c884b227513">get_grant_map</a> () const </td></tr>
+<tr class="separator:afbb44ee5c7616bc0a81f6c884b227513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29009d7573cc7480930901ecb4738b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#aa29009d7573cc7480930901ecb4738b2">create_default</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;id, string name)</td></tr>
+<tr class="separator:aa29009d7573cc7480930901ecb4738b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -155,6 +160,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a299721b34995d046f432d4d9dc338b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0e901a8ff55335ed949cb06aec1d9c9"><td class="memItemLeft" align="right" valign="top">map&lt; uint32_t, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#aa0e901a8ff55335ed949cb06aec1d9c9">acl_group_map</a></td></tr>
 <tr class="separator:aa0e901a8ff55335ed949cb06aec1d9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82a8c842d7e5d01de6a51a00e8f45ea5"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="structACLReferer.html">ACLReferer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#a82a8c842d7e5d01de6a51a00e8f45ea5">referer_list</a></td></tr>
+<tr class="separator:a82a8c842d7e5d01de6a51a00e8f45ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa57434e7af475b9bb978186ac91b17d1"><td class="memItemLeft" align="right" valign="top">multimap&lt; string, <a class="el" href="classACLGrant.html">ACLGrant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWAccessControlList.html#aa57434e7af475b9bb978186ac91b17d1">grant_map</a></td></tr>
 <tr class="separator:aa57434e7af475b9bb978186ac91b17d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -176,7 +183,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -270,7 +277,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a684496749e050e41cef44b64b7e232ca"></a>
+<a class="anchor" id="aa29009d7573cc7480930901ecb4738b2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -280,7 +287,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void RGWAccessControlList::create_default </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>id</em>, </td>
         </tr>
         <tr>
@@ -415,12 +422,35 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a59842db442660ee8086d85883c55f867"></a>
+<a class="anchor" id="afbb44ee5c7616bc0a81f6c884b227513"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const multimap&lt;string, <a class="el" href="classACLGrant.html">ACLGrant</a>&gt;&amp; RGWAccessControlList::get_grant_map </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad3a5eac0f2c29b22a20c53fc34a5df50"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int RGWAccessControlList::get_group_perm </td>
+          <td class="memname">uint32_t RGWAccessControlList::get_group_perm </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a>&#160;</td>
           <td class="paramname"><em>group</em>, </td>
@@ -428,7 +458,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>perm_mask</em>&#160;</td>
         </tr>
         <tr>
@@ -441,20 +471,46 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae8154a38e0fce77b15c0a79a8b2dd86c"></a>
+<a class="anchor" id="af830fae948bb21b33b79a5179baa4c5d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int RGWAccessControlList::get_perm </td>
+          <td class="memname">uint32_t RGWAccessControlList::get_perm </td>
           <td>(</td>
-          <td class="paramtype">string &amp;&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
+          <td class="paramtype">const <a class="el" href="classRGWIdentityApplier.html">RGWIdentityApplier</a> &amp;&#160;</td>
+          <td class="paramname"><em>auth_identity</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>perm_mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a10ada238cb63723227fc31fd0407c2d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t RGWAccessControlList::get_referer_perm </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>http_referer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>perm_mask</em>&#160;</td>
         </tr>
         <tr>
@@ -572,6 +628,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a82a8c842d7e5d01de6a51a00e8f45ea5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt;<a class="el" href="structACLReferer.html">ACLReferer</a>&gt; RGWAccessControlList::referer_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rgw__acl_8h_source.html">rgw_acl.h</a></li>
 <li><a class="el" href="rgw__acl_8cc.html">rgw_acl.cc</a></li>
@@ -581,7 +657,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

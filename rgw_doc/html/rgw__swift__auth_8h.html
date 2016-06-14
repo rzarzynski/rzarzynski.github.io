@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -83,33 +83,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">rgw_swift_auth.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="rgw__op_8h_source.html">rgw_op.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rest_8h_source.html">rgw_rest.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__auth_8h_source.html">rgw_auth.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_swift_auth.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__swift__auth_8h__incl.png" border="0" usemap="#rgw__swift__auth_8h" alt=""/></div>
 <map name="rgw__swift__auth_8h" id="rgw__swift__auth_8h">
-<area shape="rect" id="node2" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="1947,155,2020,181"/><area shape="rect" id="node48" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="2061,80,2143,107"/><area shape="rect" id="node7" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1295,619,1405,645"/><area shape="rect" id="node16" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="94,701,172,728"/><area shape="rect" id="node18" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="197,701,283,728"/><area shape="rect" id="node19" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2609,701,2703,728"/><area shape="rect" id="node28" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1001,304,1095,331"/><area shape="rect" id="node42" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1906,229,1992,256"/><area shape="rect" id="node46" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2302,229,2401,256"/><area shape="rect" id="node22" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2492,701,2585,728"/><area shape="rect" id="node34" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1647,387,1725,413"/><area shape="rect" id="node37" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="903,544,1017,571"/><area shape="rect" id="node38" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1379,387,1497,413"/><area shape="rect" id="node39" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1393,469,1513,496"/><area shape="rect" id="node41" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1393,544,1513,571"/><area shape="rect" id="node43" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1945,544,2033,571"/><area shape="rect" id="node44" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="2158,304,2263,331"/></map>
+<area shape="rect" id="node2" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="2315,155,2388,181"/><area shape="rect" id="node32" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="2877,552,2963,579"/><area shape="rect" id="node49" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="3007,80,3088,107"/><area shape="rect" id="node13" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1711,469,1821,496"/><area shape="rect" id="node22" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2147,552,2225,579"/><area shape="rect" id="node24" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2403,552,2489,579"/><area shape="rect" id="node25" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="127,552,220,579"/><area shape="rect" id="node37" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1385,304,1479,331"/><area shape="rect" id="node45" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="2711,229,2797,256"/><area shape="rect" id="node48" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1767,229,1867,256"/><area shape="rect" id="node23" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="2121,635,2251,661"/><area shape="rect" id="node26" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2616,552,2709,579"/><area shape="rect" id="node27" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="1485,552,1592,579"/><area shape="rect" id="node36" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2740,635,2855,661"/><area shape="rect" id="node44" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1650,387,1728,413"/><area shape="rect" id="node47" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="2751,304,2856,331"/><area shape="rect" id="node50" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="1872,387,1981,413"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__swift__auth_8h__dep__incl.png" border="0" usemap="#rgw__swift__auth_8hdep" alt=""/></div>
 <map name="rgw__swift__auth_8hdep" id="rgw__swift__auth_8hdep">
-<area shape="rect" id="node2" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="5,80,101,107"/><area shape="rect" id="node3" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="125,80,216,107"/><area shape="rect" id="node4" href="rgw__swift_8cc.html" title="rgw_swift.cc" alt="" coords="240,80,336,107"/><area shape="rect" id="node5" href="rgw__swift__auth_8cc.html" title="rgw_swift_auth.cc" alt="" coords="360,80,488,107"/></map>
+<area shape="rect" id="node2" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="5,80,101,107"/><area shape="rect" id="node3" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="125,80,216,107"/><area shape="rect" id="node4" href="rgw__rest__swift_8cc.html" title="rgw_rest_swift.cc" alt="" coords="240,80,365,107"/><area shape="rect" id="node5" href="rgw__swift__auth_8cc.html" title="rgw_swift_auth.cc" alt="" coords="389,80,517,107"/></map>
 </div>
 </div>
 <p><a href="rgw__swift__auth_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWTempURLAuthApplier.html">RGWTempURLAuthApplier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWTempURLAuthApplier_1_1Factory.html">RGWTempURLAuthApplier::Factory</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWTempURLAuthEngine.html">RGWTempURLAuthEngine</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSignedTokenAuthEngine.html">RGWSignedTokenAuthEngine</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWExternalTokenAuthEngine.html">RGWExternalTokenAuthEngine</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWXAuthTokenExtractor.html">RGWXAuthTokenExtractor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGW__SWIFT__Auth__Get.html">RGW_SWIFT_Auth_Get</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__SWIFT__Auth.html">RGWHandler_SWIFT_Auth</a></td></tr>
@@ -121,11 +133,6 @@ Classes</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a066f9f04f2e035c2be908fc5ff934521"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__swift__auth_8h.html#a066f9f04f2e035c2be908fc5ff934521">RGW_SWIFT_TOKEN_EXPIRATION</a>&#160;&#160;&#160;(15 * 60)</td></tr>
 <tr class="separator:a066f9f04f2e035c2be908fc5ff934521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a6c71c74e88be30deb5423153012a4652"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__swift__auth_8h.html#a6c71c74e88be30deb5423153012a4652">rgw_swift_verify_signed_token</a> (CephContext *cct, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const char *token, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, string *pswift_user)</td></tr>
-<tr class="separator:a6c71c74e88be30deb5423153012a4652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a066f9f04f2e035c2be908fc5ff934521"></a>
@@ -140,55 +147,10 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a6c71c74e88be30deb5423153012a4652"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int rgw_swift_verify_signed_token </td>
-          <td>(</td>
-          <td class="paramtype">CephContext *&#160;</td>
-          <td class="paramname"><em>cct</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
-          <td class="paramname"><em>store</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>token</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>info</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string *&#160;</td>
-          <td class="paramname"><em>pswift_user</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

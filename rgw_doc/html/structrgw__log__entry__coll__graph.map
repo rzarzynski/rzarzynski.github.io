@@ -1,3 +1,4 @@
 <map id="rgw_log_entry" name="rgw_log_entry">
-<area shape="rect" id="node2" href="$structrgw__obj__key.html" title="{rgw_obj_key\n|+ name\l+ instance\l|+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="40,6,155,274"/>
+<area shape="rect" id="node2" href="$structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="136,189,234,413"/>
+<area shape="rect" id="node4" href="$structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="258,160,373,443"/>
 </map>

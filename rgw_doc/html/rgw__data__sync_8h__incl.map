@@ -1,0 +1,20 @@
+<map id="rgw_data_sync.h" name="rgw_data_sync.h">
+<area shape="rect" id="node2" href="$rgw__coroutine_8h.html" title="rgw_coroutine.h" alt="" coords="712,237,827,264"/>
+<area shape="rect" id="node34" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1038,237,1159,264"/>
+<area shape="rect" id="node37" href="$rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2946,80,3045,107"/>
+<area shape="rect" id="node9" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="2154,320,2264,347"/>
+<area shape="rect" id="node33" href="$rgw__boost__asio__coroutine_8h.html" title="rgw_boost_asio_coroutine.h" alt="" coords="472,320,656,347"/>
+<area shape="rect" id="node18" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2402,403,2480,429"/>
+<area shape="rect" id="node19" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="2941,485,3071,512"/>
+<area shape="rect" id="node20" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2882,403,2968,429"/>
+<area shape="rect" id="node21" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1264,403,1357,429"/>
+<area shape="rect" id="node24" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="765,403,859,429"/>
+<area shape="rect" id="node27" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="2556,403,2663,429"/>
+<area shape="rect" id="node32" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1635,403,1721,429"/>
+<area shape="rect" id="node39" href="$rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="3327,237,3416,264"/>
+<area shape="rect" id="node41" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="2201,155,2295,181"/>
+<area shape="rect" id="node50" href="$rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="3783,237,3888,264"/>
+<area shape="rect" id="node46" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="2247,237,2325,264"/>
+<area shape="rect" id="node48" href="$rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="2057,237,2172,264"/>
+<area shape="rect" id="node49" href="$rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="3033,237,3201,264"/>
+</map>

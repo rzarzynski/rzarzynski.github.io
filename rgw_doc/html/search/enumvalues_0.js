@@ -6,8 +6,12 @@ var searchData=
   ['acl_5ftype_5fcanon_5fuser',['ACL_TYPE_CANON_USER',['../rgw__acl_8h.html#aed999ebd9f206debf72a2b7657f81dd5ad6048336bcf893c2c25bfe2893bfbbc9',1,'rgw_acl.h']]],
   ['acl_5ftype_5femail_5fuser',['ACL_TYPE_EMAIL_USER',['../rgw__acl_8h.html#aed999ebd9f206debf72a2b7657f81dd5a8a53c1253df7820cf9f3fc2394ae5f58',1,'rgw_acl.h']]],
   ['acl_5ftype_5fgroup',['ACL_TYPE_GROUP',['../rgw__acl_8h.html#aed999ebd9f206debf72a2b7657f81dd5a278ac2a153037608e0980a9a59ab37e3',1,'rgw_acl.h']]],
+  ['acl_5ftype_5freferer',['ACL_TYPE_REFERER',['../rgw__acl_8h.html#aed999ebd9f206debf72a2b7657f81dd5a15c272818af2f48df1da4a6002249242',1,'rgw_acl.h']]],
   ['acl_5ftype_5funknown',['ACL_TYPE_UNKNOWN',['../rgw__acl_8h.html#aed999ebd9f206debf72a2b7657f81dd5af69730d128dfc80350172f6cf76f25b0',1,'rgw_acl.h']]],
   ['apply_5falways',['APPLY_ALWAYS',['../classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491ba890dafd0949b5c32e9c26e59f57b3004',1,'RGWMetadataHandler']]],
   ['apply_5fnewer',['APPLY_NEWER',['../classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491ba364d82cc599be11f51a07edb1574cd90',1,'RGWMetadataHandler']]],
-  ['apply_5fupdates',['APPLY_UPDATES',['../classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491babbce5c0dea9e17b0cb8c9b0e6c4a8e31',1,'RGWMetadataHandler']]]
+  ['apply_5fupdates',['APPLY_UPDATES',['../classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491babbce5c0dea9e17b0cb8c9b0e6c4a8e31',1,'RGWMetadataHandler']]],
+  ['attrsmod_5fmerge',['ATTRSMOD_MERGE',['../classRGWRados.html#acf6063a74d8174f965ace73d8c72d237ace5a2fd298de3324b5f5e64eb9aad63f',1,'RGWRados']]],
+  ['attrsmod_5fnone',['ATTRSMOD_NONE',['../classRGWRados.html#acf6063a74d8174f965ace73d8c72d237ad5b8899a36ffebe40cd195804739af27',1,'RGWRados']]],
+  ['attrsmod_5freplace',['ATTRSMOD_REPLACE',['../classRGWRados.html#acf6063a74d8174f965ace73d8c72d237aadab0f21916603a30b34a2a62a48eefc',1,'RGWRados']]]
 ];

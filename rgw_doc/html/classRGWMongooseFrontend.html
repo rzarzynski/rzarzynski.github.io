@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -90,19 +90,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">RGWMongooseFrontend Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="rgw__frontend_8h_source.html">rgw_frontend.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for RGWMongooseFrontend:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWMongooseFrontend__inherit__graph.png" border="0" usemap="#RGWMongooseFrontend_inherit__map" alt="Inheritance graph"/></div>
 <map name="RGWMongooseFrontend_inherit__map" id="RGWMongooseFrontend_inherit__map">
-<area shape="rect" id="node2" href="classRGWFrontend.html" title="{RGWFrontend\n||+ ~RGWFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l}" alt="" coords="31,5,165,141"/></map>
+<area shape="rect" id="node2" href="classRGWFrontend.html" title="{RGWFrontend\n||+ ~RGWFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="5,5,200,171"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for RGWMongooseFrontend:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWMongooseFrontend__coll__graph.png" border="0" usemap="#RGWMongooseFrontend_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWMongooseFrontend_coll__map" id="RGWMongooseFrontend_coll__map">
-<area shape="rect" id="node2" href="classRGWFrontend.html" title="{RGWFrontend\n||+ ~RGWFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l}" alt="" coords="31,5,165,141"/></map>
+<area shape="rect" id="node2" href="classRGWFrontend.html" title="{RGWFrontend\n||+ ~RGWFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="5,5,200,171"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -117,6 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a25648d7af6a94802f8467916c66bc402"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d20252cea47eb733aa90dfdb196853f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMongooseFrontend.html#a6d20252cea47eb733aa90dfdb196853f">join</a> ()</td></tr>
 <tr class="separator:a6d20252cea47eb733aa90dfdb196853f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5eeb6bf6816b56db602c52b9dcdb48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMongooseFrontend.html#a4c5eeb6bf6816b56db602c52b9dcdb48">pause_for_new_config</a> () override</td></tr>
+<tr class="separator:a4c5eeb6bf6816b56db602c52b9dcdb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283f81afad0f15e1174aa8df5dde106d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMongooseFrontend.html#a283f81afad0f15e1174aa8df5dde106d">unpause_with_new_config</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>) override</td></tr>
+<tr class="separator:a283f81afad0f15e1174aa8df5dde106d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classRGWFrontend"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classRGWFrontend')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classRGWFrontend.html">RGWFrontend</a></td></tr>
 <tr class="memitem:a138a4105a5c600f3e9d57027436ff9b4 inherit pub_methods_classRGWFrontend"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFrontend.html#a138a4105a5c600f3e9d57027436ff9b4">~RGWFrontend</a> ()</td></tr>
 <tr class="separator:a138a4105a5c600f3e9d57027436ff9b4 inherit pub_methods_classRGWFrontend"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +213,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4c5eeb6bf6816b56db602c52b9dcdb48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWMongooseFrontend::pause_for_new_config </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRGWFrontend.html#a18080ba940cd70ed1562ba04fd8f4df9">RGWFrontend</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a75902e9235c819955edd568d8b0b738e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +254,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -257,13 +288,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="rgw__main_8cc.html">rgw_main.cc</a></li>
+<a class="anchor" id="a283f81afad0f15e1174aa8df5dde106d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWMongooseFrontend::unpause_with_new_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRGWFrontend.html#adf9331d9503c1c71ec305d4f9bedd83c">RGWFrontend</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="rgw__frontend_8h_source.html">rgw_frontend.h</a></li>
+<li><a class="el" href="rgw__civetweb__frontend_8cc.html">rgw_civetweb_frontend.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

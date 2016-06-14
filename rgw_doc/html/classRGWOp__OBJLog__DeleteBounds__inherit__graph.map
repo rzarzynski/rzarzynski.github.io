@@ -1,4 +1,4 @@
 <map id="RGWOp_OBJLog_DeleteBounds" name="RGWOp_OBJLog_DeleteBounds">
-<area shape="rect" id="node2" href="$classRGWRESTOp.html" title="{RGWRESTOp\n|# http_ret\l# flusher\l|+ RGWRESTOp()\l+ init()\l+ send_response()\l+ check_caps()\l+ verify_permission()\l}" alt="" coords="55,382,199,533"/>
-<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="38,6,215,333"/>
+<area shape="rect" id="node2" href="$classRGWRESTOp.html" title="{RGWRESTOp\n|# http_ret\l# flusher\l|+ RGWRESTOp()\l+ init()\l+ send_response()\l+ check_caps()\l+ verify_permission()\l}" alt="" coords="55,411,199,562"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="29,6,224,362"/>
 </map>

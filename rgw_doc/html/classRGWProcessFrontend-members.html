@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -94,17 +94,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="entry"><a class="el" href="classRGWProcessFrontend.html#a778cf2165f305251ade4cc817fee0f81">env</a></td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRGWFrontend.html#a0d5f398acf27ad57a708ac562b3515b0">init</a>()=0</td><td class="entry"><a class="el" href="classRGWFrontend.html">RGWFrontend</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRGWProcessFrontend.html#aa0f4375c96c51e8b816eae440ef5140f">join</a>()</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWProcessFrontend.html#ac572abf782d790be0e0a890c5fe400cf">pprocess</a></td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWProcessFrontend.html#a19e7d1918be7f739ce489b9f5c2f205d">RGWProcessFrontend</a>(RGWProcessEnv &amp;pe, RGWFrontendConfig *_conf)</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWProcessFrontend.html#a6e295287b4d3c0162346926b240ab9d5">run</a>()</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWProcessFrontend.html#ae633ce41c0c35477152ee187d754cbf4">stop</a>()</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWProcessFrontend.html#a1535a584bda35524a4861b47b907b55f">thread</a></td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWProcessFrontend.html#af94ea217541b5843ed71189940816855">pause_for_new_config</a>() override</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWProcessFrontend.html#ac572abf782d790be0e0a890c5fe400cf">pprocess</a></td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWProcessFrontend.html#a19e7d1918be7f739ce489b9f5c2f205d">RGWProcessFrontend</a>(RGWProcessEnv &amp;pe, RGWFrontendConfig *_conf)</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWProcessFrontend.html#a6e295287b4d3c0162346926b240ab9d5">run</a>()</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWProcessFrontend.html#ae633ce41c0c35477152ee187d754cbf4">stop</a>()</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWProcessFrontend.html#a1535a584bda35524a4861b47b907b55f">thread</a></td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWProcessFrontend.html#a6b0e28cb082d99d106b1a3304195210f">unpause_with_new_config</a>(RGWRados *store) override</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRGWFrontend.html#a138a4105a5c600f3e9d57027436ff9b4">~RGWFrontend</a>()</td><td class="entry"><a class="el" href="classRGWFrontend.html">RGWFrontend</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRGWProcessFrontend.html#abecda8090675a105d289da654ffd404c">~RGWProcessFrontend</a>()</td><td class="entry"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:43 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

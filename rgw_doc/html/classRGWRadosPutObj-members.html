@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -90,17 +90,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classRGWRadosPutObj.html#a19be6182302ffcb5920423d99c713bc2">complete</a>(string &amp;etag, time_t *mtime, time_t set_mtime, map&lt; string, bufferlist &gt; &amp;attrs)</td><td class="entry"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRadosPutObj.html#a12bc1689a08e3343203887461198b9ed">complete</a>(string &amp;etag, real_time *mtime, real_time set_mtime, map&lt; string, bufferlist &gt; &amp;attrs, real_time delete_at)</td><td class="entry"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRGWGetDataCB.html#aa4d212f5bf5c19d626075daabef1192b">extra_data_len</a></td><td class="entry"><a class="el" href="classRGWGetDataCB.html">RGWGetDataCB</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRGWRadosPutObj.html#a4ede0be84c4ccb4d4e581409faa51cb3">handle_data</a>(bufferlist &amp;bl, off_t ofs, off_t len)</td><td class="entry"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWGetDataCB.html#ae98b2063433c88e24d2a1e064d9c3c0b">RGWGetDataCB</a>()</td><td class="entry"><a class="el" href="classRGWGetDataCB.html">RGWGetDataCB</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWRadosPutObj.html#a6a32e2fd4b5abce4663cd0cc986fffdd">RGWRadosPutObj</a>(RGWPutObjProcessor_Atomic *p, RGWOpStateSingleOp *_ops, void(*_progress_cb)(off_t, void *), void *_progress_data)</td><td class="entry"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWRadosPutObj.html#a86933cc67c83357a4b127670e4da8e62">set_extra_data_len</a>(uint64_t len)</td><td class="entry"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWGetDataCB.html#af25f6b32e16fafd6dba5c4de2a750790">~RGWGetDataCB</a>()</td><td class="entry"><a class="el" href="classRGWGetDataCB.html">RGWGetDataCB</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRadosPutObj.html#a12f53ddc0703734b26470b5435127655">is_canceled</a>()</td><td class="entry"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWGetDataCB.html#ae98b2063433c88e24d2a1e064d9c3c0b">RGWGetDataCB</a>()</td><td class="entry"><a class="el" href="classRGWGetDataCB.html">RGWGetDataCB</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRadosPutObj.html#a6a32e2fd4b5abce4663cd0cc986fffdd">RGWRadosPutObj</a>(RGWPutObjProcessor_Atomic *p, RGWOpStateSingleOp *_ops, void(*_progress_cb)(off_t, void *), void *_progress_data)</td><td class="entry"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRadosPutObj.html#a86933cc67c83357a4b127670e4da8e62">set_extra_data_len</a>(uint64_t len)</td><td class="entry"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWGetDataCB.html#af25f6b32e16fafd6dba5c4de2a750790">~RGWGetDataCB</a>()</td><td class="entry"><a class="el" href="classRGWGetDataCB.html">RGWGetDataCB</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

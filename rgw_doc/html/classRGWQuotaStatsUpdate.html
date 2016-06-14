@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -107,13 +107,13 @@ Collaboration diagram for RGWQuotaStatsUpdate&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa8eeeec98882feeb81f40da6dd070e8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaStatsUpdate.html#aa8eeeec98882feeb81f40da6dd070e8a">RGWQuotaStatsUpdate</a> (int _objs_delta, uint64_t _added_bytes, uint64_t _removed_bytes)</td></tr>
-<tr class="separator:aa8eeeec98882feeb81f40da6dd070e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a053fea2d87c13b75f21e29e5a069ae46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaStatsUpdate.html#a053fea2d87c13b75f21e29e5a069ae46">update</a> (<a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> *entry)</td></tr>
-<tr class="separator:a053fea2d87c13b75f21e29e5a069ae46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac454baadf3ba96ea67492e58d84f8545"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaStatsUpdate.html#ac454baadf3ba96ea67492e58d84f8545">RGWQuotaStatsUpdate</a> (const int objs_delta, const uint64_t added_bytes, const uint64_t removed_bytes)</td></tr>
+<tr class="separator:ac454baadf3ba96ea67492e58d84f8545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71407d5b856138ddb317a8a73505cdf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaStatsUpdate.html#ab71407d5b856138ddb317a8a73505cdf">update</a> (<a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> *const entry) override</td></tr>
+<tr class="separator:ab71407d5b856138ddb317a8a73505cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa8eeeec98882feeb81f40da6dd070e8a"></a>
+<a class="anchor" id="ac454baadf3ba96ea67492e58d84f8545"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -125,20 +125,20 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classRGWQuotaStatsUpdate.html">RGWQuotaStatsUpdate</a>&lt; T &gt;::<a class="el" href="classRGWQuotaStatsUpdate.html">RGWQuotaStatsUpdate</a> </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_objs_delta</em>, </td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>objs_delta</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>_added_bytes</em>, </td>
+          <td class="paramtype">const uint64_t&#160;</td>
+          <td class="paramname"><em>added_bytes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>_removed_bytes</em>&#160;</td>
+          <td class="paramtype">const uint64_t&#160;</td>
+          <td class="paramname"><em>removed_bytes</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -156,7 +156,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a053fea2d87c13b75f21e29e5a069ae46"></a>
+<a class="anchor" id="ab71407d5b856138ddb317a8a73505cdf"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -168,14 +168,14 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classRGWQuotaStatsUpdate.html">RGWQuotaStatsUpdate</a>&lt; T &gt;::update </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> *const&#160;</td>
           <td class="paramname"><em>entry</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -188,7 +188,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

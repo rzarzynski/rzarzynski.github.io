@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -114,6 +114,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8ecf733f4e7897d522f81103639f8706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cfb2c0c4e57bf41d2e778ce91bc6f29"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectCache.html#a2cfb2c0c4e57bf41d2e778ce91bc6f29">chain_cache_entry</a> (list&lt; <a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> * &gt; &amp;cache_info_entries, <a class="el" href="structRGWChainedCache_1_1Entry.html">RGWChainedCache::Entry</a> *chained_entry)</td></tr>
 <tr class="separator:a2cfb2c0c4e57bf41d2e778ce91bc6f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eab6ab565d38101395e8aa4c488e9f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectCache.html#a7eab6ab565d38101395e8aa4c488e9f4">set_enabled</a> (bool status)</td></tr>
+<tr class="separator:a7eab6ab565d38101395e8aa4c488e9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc0b8bbb23f57c47109bd0e54e3988ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectCache.html#acc0b8bbb23f57c47109bd0e54e3988ca">chain_cache</a> (<a class="el" href="classRGWChainedCache.html">RGWChainedCache</a> *cache)</td></tr>
+<tr class="separator:acc0b8bbb23f57c47109bd0e54e3988ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c6d5ea6640a7234826454e82167473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectCache.html#a86c6d5ea6640a7234826454e82167473">invalidate_all</a> ()</td></tr>
+<tr class="separator:a86c6d5ea6640a7234826454e82167473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2a80a56eecdb392d63296502a8f6b31c"></a>
@@ -140,6 +146,22 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="acc0b8bbb23f57c47109bd0e54e3988ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ObjectCache::chain_cache </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWChainedCache.html">RGWChainedCache</a> *&#160;</td>
+          <td class="paramname"><em>cache</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a2cfb2c0c4e57bf41d2e778ce91bc6f29"></a>
 <div class="memitem">
 <div class="memproto">
@@ -198,6 +220,21 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a86c6d5ea6640a7234826454e82167473"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ObjectCache::invalidate_all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -276,6 +313,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7eab6ab565d38101395e8aa4c488e9f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ObjectCache::set_enabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rgw__cache_8h_source.html">rgw_cache.h</a></li>
 <li><a class="el" href="rgw__cache_8cc.html">rgw_cache.cc</a></li>
@@ -283,7 +336,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

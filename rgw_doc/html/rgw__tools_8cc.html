@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br/>
 <code>#include &quot;common/errno.h&quot;</code><br/>
+<code>#include &quot;common/safe_io.h&quot;</code><br/>
 <code>#include &quot;include/types.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__common_8h_source.html">rgw_common.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rados_8h_source.html">rgw_rados.h</a>&quot;</code><br/>
@@ -100,7 +101,7 @@ Include dependency graph for rgw_tools.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__tools_8cc__incl.png" border="0" usemap="#rgw__tools_8cc" alt=""/></div>
 <map name="rgw__tools_8cc" id="rgw__tools_8cc">
-<area shape="rect" id="node5" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1047,395,1157,421"/><area shape="rect" id="node27" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1032,80,1125,107"/><area shape="rect" id="node41" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="81,320,169,347"/><area shape="rect" id="node14" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1022,477,1100,504"/><area shape="rect" id="node16" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="911,477,997,504"/><area shape="rect" id="node17" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1125,477,1219,504"/><area shape="rect" id="node20" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1915,477,2008,504"/><area shape="rect" id="node33" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1237,320,1315,347"/><area shape="rect" id="node36" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="449,320,564,347"/><area shape="rect" id="node37" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1142,163,1260,189"/><area shape="rect" id="node38" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1142,245,1263,272"/><area shape="rect" id="node40" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1091,320,1212,347"/></map>
+<area shape="rect" id="node6" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1336,245,1446,272"/><area shape="rect" id="node36" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1155,80,1248,107"/><area shape="rect" id="node50" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="54,163,143,189"/><area shape="rect" id="node15" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1065,328,1143,355"/><area shape="rect" id="node16" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1040,411,1170,437"/><area shape="rect" id="node17" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1494,411,1580,437"/><area shape="rect" id="node18" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1270,328,1363,355"/><area shape="rect" id="node21" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="683,328,776,355"/><area shape="rect" id="node24" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="2203,328,2310,355"/><area shape="rect" id="node31" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="801,328,887,355"/><area shape="rect" id="node25" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="2152,411,2234,437"/><area shape="rect" id="node35" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="902,411,1016,437"/><area shape="rect" id="node44" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1942,163,2020,189"/><area shape="rect" id="node46" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1467,163,1582,189"/><area shape="rect" id="node48" href="rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="219,163,387,189"/><area shape="rect" id="node49" href="rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="513,163,647,189"/><area shape="rect" id="node47" href="rgw__period__history_8h.html" title="rgw_period_history.h" alt="" coords="732,245,874,272"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -114,10 +115,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:add03716a4829f37878fe456fdec0adc7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__tools_8cc.html#add03716a4829f37878fe456fdec0adc7">rgw_put_system_obj</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *rgwstore, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, string &amp;oid, const char *data, size_t size, bool exclusive, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t set_mtime, map&lt; string, bufferlist &gt; *pattrs)</td></tr>
-<tr class="separator:add03716a4829f37878fe456fdec0adc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73ee86e7f8461e9b422551899d5c3260"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__tools_8cc.html#a73ee86e7f8461e9b422551899d5c3260">rgw_get_system_obj</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *rgwstore, <a class="el" href="structRGWObjectCtx.html">RGWObjectCtx</a> &amp;obj_ctx, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, const string &amp;key, bufferlist &amp;bl, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t *pmtime, map&lt; string, bufferlist &gt; *pattrs, <a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *cache_info)</td></tr>
-<tr class="separator:a73ee86e7f8461e9b422551899d5c3260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f5d9de0e6b6825add7ced37d47c67e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__tools_8cc.html#a88f5d9de0e6b6825add7ced37d47c67e">rgw_put_system_obj</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *rgwstore, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, string &amp;oid, const char *data, size_t size, bool exclusive, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time set_mtime, map&lt; string, bufferlist &gt; *pattrs)</td></tr>
+<tr class="separator:a88f5d9de0e6b6825add7ced37d47c67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e7007e0459e77af936cd1fc1424db4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__tools_8cc.html#a01e7007e0459e77af936cd1fc1424db4">rgw_get_system_obj</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *rgwstore, <a class="el" href="structRGWObjectCtx.html">RGWObjectCtx</a> &amp;obj_ctx, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, const string &amp;key, bufferlist &amp;bl, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time *pmtime, map&lt; string, bufferlist &gt; *pattrs, <a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *cache_info)</td></tr>
+<tr class="separator:a01e7007e0459e77af936cd1fc1424db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac12724f9d8d2e7817600926a5251f7db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__tools_8cc.html#ac12724f9d8d2e7817600926a5251f7db">parse_mime_map_line</a> (const char *start, const char *end)</td></tr>
 <tr class="separator:ac12724f9d8d2e7817600926a5251f7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3e4384651dc1fe9284b0b547b87aeef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__tools_8cc.html#ac3e4384651dc1fe9284b0b547b87aeef">parse_mime_map</a> (const char *buf)</td></tr>
@@ -266,7 +267,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a73ee86e7f8461e9b422551899d5c3260"></a>
+<a class="anchor" id="a01e7007e0459e77af936cd1fc1424db4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -309,7 +310,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *&#160;</td>
           <td class="paramname"><em>pmtime</em>, </td>
         </tr>
         <tr>
@@ -334,7 +335,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="add03716a4829f37878fe456fdec0adc7"></a>
+<a class="anchor" id="a88f5d9de0e6b6825add7ced37d47c67e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -383,7 +384,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>set_mtime</em>, </td>
         </tr>
         <tr>
@@ -457,7 +458,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

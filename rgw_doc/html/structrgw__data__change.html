@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -109,6 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2484ae000bc2ae2c8cde91ee1521d126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab054eaecf1d160a06df06b66b1259adc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__data__change.html#ab054eaecf1d160a06df06b66b1259adc">dump</a> (Formatter *f) const </td></tr>
 <tr class="separator:ab054eaecf1d160a06df06b66b1259adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8383bb6ceba0d75b68e78ad5a72e3cc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__data__change.html#a8383bb6ceba0d75b68e78ad5a72e3cc1">decode_json</a> (JSONObj *obj)</td></tr>
+<tr class="separator:a8383bb6ceba0d75b68e78ad5a72e3cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -116,8 +118,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a18b73823e1b259520d0d2dadf1eec191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8171b1f3cce9ade5c5e9b3395ef557e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__data__change.html#af8171b1f3cce9ade5c5e9b3395ef557e">key</a></td></tr>
 <tr class="separator:af8171b1f3cce9ade5c5e9b3395ef557e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75db72488bd4ee46d72a1508f587b923"><td class="memItemLeft" align="right" valign="top">utime_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__data__change.html#a75db72488bd4ee46d72a1508f587b923">timestamp</a></td></tr>
-<tr class="separator:a75db72488bd4ee46d72a1508f587b923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd2fd10b94fc095246adf601670497c"><td class="memItemLeft" align="right" valign="top">real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__data__change.html#a1fd2fd10b94fc095246adf601670497c">timestamp</a></td></tr>
+<tr class="separator:a1fd2fd10b94fc095246adf601670497c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2484ae000bc2ae2c8cde91ee1521d126"></a>
@@ -140,6 +142,22 @@ Public Attributes</h2></td></tr>
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8383bb6ceba0d75b68e78ad5a72e3cc1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rgw_data_change::decode_json </td>
+          <td>(</td>
+          <td class="paramtype">JSONObj *&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -209,12 +227,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a75db72488bd4ee46d72a1508f587b923"></a>
+<a class="anchor" id="a1fd2fd10b94fc095246adf601670497c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">utime_t rgw_data_change::timestamp</td>
+          <td class="memname">real_time rgw_data_change::timestamp</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,7 +246,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,0 +1,5 @@
+<map id="rgw::RGWFileHandle::Factory" name="rgw::RGWFileHandle::Factory">
+<area shape="rect" id="node3" href="$structrgw_1_1fh__key.html" title="{rgw::fh_key\n|+ fh_hk\l+ seed\l|+ fh_key()\l+ fh_key()\l+ fh_key()\l+ fh_key()\l+ fh_key()\l+ encode()\l+ decode()\l}" alt="" coords="200,237,291,417"/>
+<area shape="rect" id="node4" href="$classrgw_1_1RGWLibFS.html" title="{rgw::RGWLibFS\n|+ FLAG_NONE\l+ FLAG_CLOSED\l|+ RGWLibFS()\l+ ref()\l+ rele()\l+ authorize()\l+ lookup_fh()\l+ unref()\l+ ref()\l+ getattr()\l+ stat_bucket()\l+ stat_leaf()\land 13 more...\l}" alt="" coords="315,207,444,446"/>
+<area shape="rect" id="node5" href="$classrgw_1_1RGWFileHandle.html" title="{rgw::RGWFileHandle\n|+ fh_hook\l+ root_name\l+ MAX_DEPTH\l+ FLAG_NONE\l+ FLAG_OPEN\l+ FLAG_ROOT\l+ FLAG_CREATE\l+ FLAG_CREATING\l+ FLAG_DIRECTORY\l+ FLAG_BUCKET\l+ FLAG_LOCK\l+ FLAG_DELETED\l|+ RGWFileHandle()\l+ get_key()\l+ get_directory()\l+ get_size()\l+ stype()\l+ get_depth()\l+ get_fh()\l+ get_fs()\l+ get_parent()\l+ get_owner_uid()\land 39 more...\l}" alt="" coords="469,134,623,519"/>
+</map>

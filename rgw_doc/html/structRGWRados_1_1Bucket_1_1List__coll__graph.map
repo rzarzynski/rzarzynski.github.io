@@ -1,6 +1,6 @@
 <map id="RGWRados::Bucket::List" name="RGWRados::Bucket::List">
-<area shape="rect" id="node2" href="$classRGWRados_1_1Bucket.html" title="{RGWRados::Bucket\n||+ Bucket()\l+ get_store()\l+ get_bucket()\l}" alt="" coords="5,361,147,468"/>
-<area shape="rect" id="node3" href="$structrgw__obj__key.html" title="{rgw_obj_key\n|+ name\l+ instance\l|+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="151,6,265,274"/>
-<area shape="rect" id="node4" href="$structRGWRados_1_1Bucket_1_1List_1_1Params.html" title="{RGWRados::Bucket::List\l::Params\n|+ prefix\l+ delim\l+ ns\l+ enforce_ns\l+ list_versions\l|+ Params()\l}" alt="" coords="305,339,476,490"/>
-<area shape="rect" id="node5" href="$classRGWAccessListFilter.html" title="{RGWAccessListFilter\n||+ ~RGWAccessListFilter()\l+ filter()\l}" alt="" coords="302,94,479,186"/>
+<area shape="rect" id="node2" href="$classRGWRados_1_1Bucket.html" title="{RGWRados::Bucket\n||+ Bucket()\l+ get_store()\l+ get_bucket()\l+ get_bucket_info()\l+ get_shard_id()\l+ set_shard_id()\l}" alt="" coords="5,521,147,671"/>
+<area shape="rect" id="node3" href="$structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="203,160,317,443"/>
+<area shape="rect" id="node5" href="$structRGWRados_1_1Bucket_1_1List_1_1Params.html" title="{RGWRados::Bucket::List\l::Params\n|+ enforce_ns\l+ list_versions\l|+ Params()\l}" alt="" coords="305,543,476,649"/>
+<area shape="rect" id="node6" href="$classRGWAccessListFilter.html" title="{RGWAccessListFilter\n||+ ~RGWAccessListFilter()\l+ filter()\l}" alt="" coords="434,255,611,347"/>
 </map>

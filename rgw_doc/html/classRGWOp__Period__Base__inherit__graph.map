@@ -1,0 +1,6 @@
+<map id="RGWOp_Period_Base" name="RGWOp_Period_Base">
+<area shape="rect" id="node4" href="$classRGWOp__Period__Get.html" title="{RGWOp_Period_Get\n||+ execute()\l+ name()\l}" alt="" coords="5,766,149,858"/>
+<area shape="rect" id="node5" href="$classRGWOp__Period__Post.html" title="{RGWOp_Period_Post\n||+ execute()\l+ name()\l}" alt="" coords="174,766,324,858"/>
+<area shape="rect" id="node2" href="$classRGWRESTOp.html" title="{RGWRESTOp\n|# http_ret\l# flusher\l|+ RGWRESTOp()\l+ init()\l+ send_response()\l+ check_caps()\l+ verify_permission()\l}" alt="" coords="91,411,235,562"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="65,6,260,362"/>
+</map>

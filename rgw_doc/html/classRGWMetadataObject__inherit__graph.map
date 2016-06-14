@@ -1,5 +1,5 @@
 <map id="RGWMetadataObject" name="RGWMetadataObject">
-<area shape="rect" id="node2" href="$classRGWBucketEntryMetadataObject.html" title="{RGWBucketEntryMetadataObject\n||+ RGWBucketEntryMetadataObject()\l+ dump()\l}" alt="" coords="5,221,243,313"/>
-<area shape="rect" id="node3" href="$classRGWBucketInstanceMetadataObject.html" title="{RGWBucketInstanceMetadata\lObject\n||+ RGWBucketInstanceMetadata\lObject()\l+ dump()\l}" alt="" coords="267,206,479,327"/>
-<area shape="rect" id="node4" href="$classRGWUserMetadataObject.html" title="{RGWUserMetadataObject\n||+ RGWUserMetadataObject()\l+ dump()\l}" alt="" coords="504,221,699,313"/>
+<area shape="rect" id="node2" href="$classRGWBucketEntryMetadataObject.html" title="{RGWBucketEntryMetadataObject\n||+ RGWBucketEntryMetadataObject()\l+ dump()\l}" alt="" coords="5,250,243,342"/>
+<area shape="rect" id="node3" href="$classRGWBucketInstanceMetadataObject.html" title="{RGWBucketInstanceMetadata\lObject\n||+ RGWBucketInstanceMetadata\lObject()\l+ RGWBucketInstanceMetadata\lObject()\l+ dump()\l+ decode_json()\l+ get_bucket_info()\l}" alt="" coords="267,206,479,386"/>
+<area shape="rect" id="node4" href="$classRGWUserMetadataObject.html" title="{RGWUserMetadataObject\n||+ RGWUserMetadataObject()\l+ dump()\l}" alt="" coords="504,250,699,342"/>
 </map>

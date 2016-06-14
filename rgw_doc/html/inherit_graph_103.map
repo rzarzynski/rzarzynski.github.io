@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structRGWObjectCtx.html" title="RGWObjectCtx" alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node1" href="$classRGWAuthEngine.html" title="RGWAuthEngine" alt="" coords="5,56,128,83"/>
+<area shape="rect" id="node2" href="$classRGWTempURLAuthEngine.html" title="RGWTempURLAuthEngine" alt="" coords="182,31,365,57"/>
+<area shape="rect" id="node3" href="$classRGWTokenBasedAuthEngine.html" title="RGWTokenBasedAuthEngine" alt="" coords="176,81,371,108"/>
+<area shape="rect" id="node4" href="$classRGWAnonymousAuthEngine.html" title="RGWAnonymousAuthEngine" alt="" coords="427,5,618,32"/>
+<area shape="rect" id="node5" href="$classRGWExternalTokenAuthEngine.html" title="RGWExternalTokenAuthEngine" alt="" coords="419,56,626,83"/>
+<area shape="rect" id="node6" href="$classRGWKeystoneAuthEngine.html" title="RGWKeystoneAuthEngine" alt="" coords="434,107,611,133"/>
+<area shape="rect" id="node7" href="$classRGWSignedTokenAuthEngine.html" title="RGWSignedTokenAuthEngine" alt="" coords="423,157,622,184"/>
 </map>

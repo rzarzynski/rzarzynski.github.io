@@ -1,29 +1,5 @@
 var searchData=
 [
-  ['access_5fkey',['access_key',['../structKey.html#a0cf2636c62bd5e678691a60d78edc163',1,'Key']]],
-  ['access_5fkeys',['access_keys',['../structRGWUserInfo.html#af3be88f32b8f2fbc9260dd2f5a866091',1,'RGWUserInfo']]],
-  ['acl',['acl',['../classRGWAccessControlPolicy.html#ad4e46d9cdb7011ab7d8b437032b3ef8b',1,'RGWAccessControlPolicy']]],
-  ['acl_5fgroup_5fmap',['acl_group_map',['../classRGWAccessControlList.html#aa0e901a8ff55335ed949cb06aec1d9c9',1,'RGWAccessControlList']]],
-  ['acl_5fheader_5fperms',['acl_header_perms',['../rgw__acl__s3_8cc.html#ab2fce56929d3f24e554e75ba911d14cb',1,'rgw_acl_s3.cc']]],
-  ['acl_5fuser_5fmap',['acl_user_map',['../classRGWAccessControlList.html#a299721b34995d046f432d4d9dc338b0b',1,'RGWAccessControlList']]],
-  ['acls',['acls',['../classRGWGetACLs.html#aca865c124326951d04b5d21f6b94b4dc',1,'RGWGetACLs']]],
-  ['admin_5furl',['admin_url',['../classKeystoneToken_1_1Service_1_1Endpoint.html#ac0981c45af60e5d1cc3f3e0c06202ae3',1,'KeystoneToken::Service::Endpoint']]],
-  ['aio_5fdata',['aio_data',['../structget__obj__data.html#a6ee6df732505eecf72381798c70ba5c1',1,'get_obj_data']]],
-  ['allowed_5fhdrs',['allowed_hdrs',['../classRGWCORSRule.html#ac9bfb1601826f7d5b00b8d1364ad994f',1,'RGWCORSRule']]],
-  ['allowed_5fmethods',['allowed_methods',['../classRGWCORSRule.html#ad7f8961cd243d6a694ac485866a9d85d',1,'RGWCORSRule']]],
-  ['allowed_5forigins',['allowed_origins',['../classRGWCORSRule.html#aa5582dc2cb0598c329b1188d768bdbeb',1,'RGWCORSRule']]],
-  ['alphanum_5flower_5ftable',['alphanum_lower_table',['../rgw__common_8cc.html#a848f0fa5e353b86426846ecafbe6ba38',1,'rgw_common.cc']]],
-  ['alphanum_5fno_5funderscore_5ftable',['alphanum_no_underscore_table',['../rgw__common_8cc.html#ada0341c42321cec0ff64f3864d9c029e',1,'rgw_common.cc']]],
-  ['alphanum_5ftable',['alphanum_table',['../rgw__common_8cc.html#a489d5db7b7ce03822fdd009c1346e72d',1,'rgw_common.cc']]],
-  ['alphanum_5fupper_5ftable',['alphanum_upper_table',['../rgw__common_8cc.html#ae6075e7bba33b8ecd10bb7b77b211b2e',1,'rgw_common.cc']]],
-  ['api_5fname',['api_name',['../structRGWRegion.html#a2bd754807d8ce3888f456a35427a5a41',1,'RGWRegion']]],
-  ['args',['args',['../structreq__info.html#a7c7740398b9cdf48335a1a4253dbdcf7',1,'req_info']]],
-  ['async_5frefcount',['async_refcount',['../classRGWQuotaCache.html#a577a015625c8c1e6f06b5817da1f2fcf',1,'RGWQuotaCache']]],
-  ['async_5frefresh_5ftime',['async_refresh_time',['../structRGWQuotaCacheStats.html#a348b6616e1b54870f50f1c2ff609798b',1,'RGWQuotaCacheStats']]],
-  ['attr_5fmap',['attr_map',['../classXMLObj.html#a6454d3c4e8a5b173e99417e1ee949d13',1,'XMLObj']]],
-  ['attrs',['attrs',['../structRGWBucketCompleteInfo.html#ab12b4efc2c10f654ab93579f7a7de50e',1,'RGWBucketCompleteInfo::attrs()'],['../classRGWGetObj.html#a7b8270d146bef644aab669eb8a0a302f',1,'RGWGetObj::attrs()'],['../classRGWPostObj.html#a93d9a326ebb81f4c8f201eaedeeb81d3',1,'RGWPostObj::attrs()'],['../classRGWCopyObj.html#af937c0ec57b935fb82850cd53942fc35',1,'RGWCopyObj::attrs()'],['../structbucket__info__entry.html#a769aaea6efe369a12f43ae8eceac1d8c',1,'bucket_info_entry::attrs()'],['../structRGWRados_1_1SystemObject_1_1Read_1_1StatParams.html#a6eca10a141d85fbecdb9d1268312966b',1,'RGWRados::SystemObject::Read::StatParams::attrs()'],['../structRGWRados_1_1Object_1_1Read_1_1Params.html#a410bc9a5ac2d00f308faa4389c32d75c',1,'RGWRados::Object::Read::Params::attrs()']]],
-  ['attrset',['attrset',['../structRGWObjState.html#aa567e6b037a8446900f8100e4f27b8ab',1,'RGWObjState']]],
-  ['auid',['auid',['../structRGWUserInfo.html#ad797498b82e69e77aa8098eaed0c760e',1,'RGWUserInfo']]],
-  ['auth_5fgroups',['auth_groups',['../structrgw__swift__auth__info.html#a9d0ad7fec7fbd3525b2e54252451eb6c',1,'rgw_swift_auth_info']]],
-  ['avail_5fpools',['avail_pools',['../rgw__rados_8cc.html#a42c004bc2fb70718f18f9bf38fe741b2',1,'rgw_rados.cc']]]
+  ['_5fsize',['_size',['../classrgw_1_1RGWStatObjRequest.html#a732a49b095a04049e7bbe89945fa27e5',1,'rgw::RGWStatObjRequest']]],
+  ['_5fyield_5fret',['_yield_ret',['../classRGWCoroutine.html#aca68a280dc4db676ddab29dcab3c795f',1,'RGWCoroutine']]]
 ];

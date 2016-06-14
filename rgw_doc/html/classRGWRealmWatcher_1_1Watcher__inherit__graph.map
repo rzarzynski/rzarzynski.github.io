@@ -1,0 +1,4 @@
+<map id="RGWRealmWatcher::Watcher" name="RGWRealmWatcher::Watcher">
+<area shape="rect" id="node2" href="$classRGWPeriodPusher.html" title="{RGWPeriodPusher\n||+ RGWPeriodPusher()\l+ ~RGWPeriodPusher()\l+ handle_notify()\l+ pause()\l+ resume()\l}" alt="" coords="5,147,165,283"/>
+<area shape="rect" id="node3" href="$classRGWRealmReloader.html" title="{RGWRealmReloader\n||+ RGWRealmReloader()\l+ ~RGWRealmReloader()\l+ handle_notify()\l}" alt="" coords="191,161,364,268"/>
+</map>

@@ -1,3 +1,4 @@
 <map id="KeystoneToken::Token" name="KeystoneToken::Token">
-<area shape="rect" id="node2" href="$classKeystoneToken_1_1Token_1_1Tenant.html" title="{KeystoneToken::Token\l::Tenant\n|+ id\l+ name\l+ description\l+ enabled\l|+ Tenant()\l+ decode_json()\l}" alt="" coords="5,6,163,157"/>
+<area shape="rect" id="node3" href="$classKeystoneToken_1_1Project.html" title="{KeystoneToken::Project\n||+ decode_json()\l}" alt="" coords="81,301,244,379"/>
+<area shape="rect" id="node4" href="$classKeystoneToken_1_1Domain.html" title="{KeystoneToken::Domain\n||+ decode_json()\l}" alt="" coords="171,160,337,237"/>
 </map>

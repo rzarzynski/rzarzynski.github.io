@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;map&gt;</code><br/>
+<code>#include &lt;boost/algorithm/string.hpp&gt;</code><br/>
 <code>#include &quot;common/errno.h&quot;</code><br/>
 <code>#include &quot;common/Formatter.h&quot;</code><br/>
 <code>#include &quot;common/ceph_json.h&quot;</code><br/>
@@ -109,7 +110,7 @@ Include dependency graph for rgw_user.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__user_8cc__incl.png" border="0" usemap="#rgw__user_8cc" alt=""/></div>
 <map name="rgw__user_8cc" id="rgw__user_8cc">
-<area shape="rect" id="node9" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1072,155,1165,181"/><area shape="rect" id="node13" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="966,469,1076,496"/><area shape="rect" id="node21" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="886,552,964,579"/><area shape="rect" id="node27" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2660,552,2753,579"/><area shape="rect" id="node42" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="2267,80,2353,107"/><area shape="rect" id="node46" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1914,80,2013,107"/><area shape="rect" id="node35" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="858,237,936,264"/><area shape="rect" id="node37" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1844,395,1959,421"/><area shape="rect" id="node38" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1506,237,1624,264"/><area shape="rect" id="node23" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1647,552,1733,579"/><area shape="rect" id="node24" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="616,552,709,579"/><area shape="rect" id="node39" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1505,320,1625,347"/><area shape="rect" id="node41" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1307,395,1428,421"/><area shape="rect" id="node43" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="2215,395,2304,421"/><area shape="rect" id="node44" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="2217,237,2321,264"/></map>
+<area shape="rect" id="node10" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1701,155,1795,181"/><area shape="rect" id="node15" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1467,320,1577,347"/><area shape="rect" id="node23" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="742,403,820,429"/><area shape="rect" id="node28" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="144,403,237,429"/><area shape="rect" id="node46" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1079,80,1165,107"/><area shape="rect" id="node49" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2801,80,2900,107"/><area shape="rect" id="node39" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="2889,237,2967,264"/><area shape="rect" id="node41" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1344,237,1459,264"/><area shape="rect" id="node44" href="rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="2595,237,2763,264"/><area shape="rect" id="node45" href="rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="950,237,1084,264"/><area shape="rect" id="node24" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1336,485,1465,512"/><area shape="rect" id="node25" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1083,403,1169,429"/><area shape="rect" id="node26" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2880,403,2973,429"/><area shape="rect" id="node31" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="1284,403,1391,429"/><area shape="rect" id="node35" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1610,403,1696,429"/><area shape="rect" id="node42" href="rgw__period__history_8h.html" title="rgw_period_history.h" alt="" coords="969,320,1111,347"/><area shape="rect" id="node47" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="2481,237,2569,264"/><area shape="rect" id="node48" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="3094,155,3199,181"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -117,6 +118,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuser__info__entry.html">user_info_entry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__flags__desc.html">rgw_flags_desc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserCompleteInfo.html">RGWUserCompleteInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserMetadataObject.html">RGWUserMetadataObject</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,31 +137,31 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a152cf076049349280f7c56fb76aff8c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a152cf076049349280f7c56fb76aff8c7">rgw_get_anon_user</a> (<a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info)</td></tr>
 <tr class="separator:a152cf076049349280f7c56fb76aff8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0eca53947d9150288e36a880561707f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#ab0eca53947d9150288e36a880561707f">rgw_user_is_authenticated</a> (<a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info)</td></tr>
-<tr class="separator:ab0eca53947d9150288e36a880561707f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a819d9e23cea094364f092f5dd67e3f46"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a819d9e23cea094364f092f5dd67e3f46">rgw_user_sync_all_stats</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;user_id)</td></tr>
-<tr class="separator:a819d9e23cea094364f092f5dd67e3f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9a9a0750a56b58b80e2f98088d56bc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#ad9a9a0750a56b58b80e2f98088d56bc0">rgw_store_user_info</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> *old_info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t mtime, bool exclusive)</td></tr>
-<tr class="separator:ad9a9a0750a56b58b80e2f98088d56bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9cbde391473814665f405b77855d47f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#af9cbde391473814665f405b77855d47f">rgw_get_user_info_from_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;key, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t *pmtime)</td></tr>
-<tr class="separator:af9cbde391473814665f405b77855d47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f2bd494fdb96f01fbb32edeef2e0f84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a4f2bd494fdb96f01fbb32edeef2e0f84">rgw_get_user_info_by_uid</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;uid, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t *pmtime, <a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *cache_info)</td></tr>
-<tr class="separator:a4f2bd494fdb96f01fbb32edeef2e0f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0aceadc31ea92ff2a1f9de6aead971aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a0aceadc31ea92ff2a1f9de6aead971aa">rgw_get_user_info_by_email</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;email, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t *pmtime)</td></tr>
-<tr class="separator:a0aceadc31ea92ff2a1f9de6aead971aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f1cfc0805c37250d32bc5687d33e88b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a9f1cfc0805c37250d32bc5687d33e88b">rgw_get_user_info_by_swift</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;swift_name, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t *pmtime)</td></tr>
-<tr class="separator:a9f1cfc0805c37250d32bc5687d33e88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1de48c39aa3c27ba61802acbf18a73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a2e1de48c39aa3c27ba61802acbf18a73">rgw_get_user_info_by_access_key</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;access_key, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t *pmtime)</td></tr>
-<tr class="separator:a2e1de48c39aa3c27ba61802acbf18a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d8eb1c6345eee336e3d296e8210271b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a8d8eb1c6345eee336e3d296e8210271b">rgw_remove_key_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWAccessKey.html">RGWAccessKey</a> &amp;access_key)</td></tr>
+<tr class="memitem:aa47ed433d523f2f3bb87f120e740a675"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#aa47ed433d523f2f3bb87f120e740a675">rgw_user_sync_all_stats</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user_id)</td></tr>
+<tr class="separator:aa47ed433d523f2f3bb87f120e740a675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3740c7763c6f4ce4dea93627a36decc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#af3740c7763c6f4ce4dea93627a36decc">rgw_store_user_info</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> *old_info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time mtime, bool exclusive, map&lt; string, bufferlist &gt; *pattrs)</td></tr>
+<tr class="separator:af3740c7763c6f4ce4dea93627a36decc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0de75ef73ae11cac442099a7a0a1fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#acf0de75ef73ae11cac442099a7a0a1fb">rgw_get_user_info_from_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *const <a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;key, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *const objv_tracker, real_time *const pmtime)</td></tr>
+<tr class="separator:acf0de75ef73ae11cac442099a7a0a1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf858619fe81ae69cc25ce7f96454302"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#adf858619fe81ae69cc25ce7f96454302">rgw_get_user_info_by_uid</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;uid, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *const objv_tracker, real_time *const pmtime, <a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *const cache_info, map&lt; string, bufferlist &gt; *const pattrs)</td></tr>
+<tr class="separator:adf858619fe81ae69cc25ce7f96454302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e001a38c6af8af788038e27769e954"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#ae6e001a38c6af8af788038e27769e954">rgw_get_user_info_by_email</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;email, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time *pmtime)</td></tr>
+<tr class="separator:ae6e001a38c6af8af788038e27769e954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aeed4bd4659f2e673fc0a514ed72923"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a1aeed4bd4659f2e673fc0a514ed72923">rgw_get_user_info_by_swift</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *const <a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;swift_name, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *const objv_tracker, real_time *const pmtime)</td></tr>
+<tr class="separator:a1aeed4bd4659f2e673fc0a514ed72923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0d930124e3ab630b88157dd300bc21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a9d0d930124e3ab630b88157dd300bc21">rgw_get_user_info_by_access_key</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;access_key, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time *pmtime)</td></tr>
+<tr class="separator:a9d0d930124e3ab630b88157dd300bc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c0cdd0271b0a6e8ec802903937baa4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#ae5c0cdd0271b0a6e8ec802903937baa4">rgw_get_user_attrs_by_uid</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user_id, map&lt; string, bufferlist &gt; &amp;attrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
+<tr class="separator:ae5c0cdd0271b0a6e8ec802903937baa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d8eb1c6345eee336e3d296e8210271b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a8d8eb1c6345eee336e3d296e8210271b">rgw_remove_key_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWAccessKey.html">RGWAccessKey</a> &amp;access_key)</td></tr>
 <tr class="separator:a8d8eb1c6345eee336e3d296e8210271b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a5e9bea3e97e34421fc3cf992d40788"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a5a5e9bea3e97e34421fc3cf992d40788">rgw_remove_uid_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;uid)</td></tr>
-<tr class="separator:a5a5e9bea3e97e34421fc3cf992d40788"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff20bbf70df89a0f26ba36e82255f6f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#aff20bbf70df89a0f26ba36e82255f6f7">rgw_remove_email_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;email)</td></tr>
+<tr class="memitem:a0f17b71bca9c176ee07e81db4bfa0f0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a0f17b71bca9c176ee07e81db4bfa0f0e">rgw_remove_uid_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structrgw__user.html">rgw_user</a> &amp;uid)</td></tr>
+<tr class="separator:a0f17b71bca9c176ee07e81db4bfa0f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff20bbf70df89a0f26ba36e82255f6f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#aff20bbf70df89a0f26ba36e82255f6f7">rgw_remove_email_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;email)</td></tr>
 <tr class="separator:aff20bbf70df89a0f26ba36e82255f6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a151110cb3be0c6a04e21b511449719bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a151110cb3be0c6a04e21b511449719bb">rgw_remove_swift_name_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;swift_name)</td></tr>
+<tr class="memitem:a151110cb3be0c6a04e21b511449719bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a151110cb3be0c6a04e21b511449719bb">rgw_remove_swift_name_index</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;swift_name)</td></tr>
 <tr class="separator:a151110cb3be0c6a04e21b511449719bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5a85a88805db0576e30c61f47eeb4d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#aa5a85a88805db0576e30c61f47eeb4d1">rgw_delete_user</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> &amp;objv_tracker)</td></tr>
+<tr class="memitem:aa5a85a88805db0576e30c61f47eeb4d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#aa5a85a88805db0576e30c61f47eeb4d1">rgw_delete_user</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> &amp;objv_tracker)</td></tr>
 <tr class="separator:aa5a85a88805db0576e30c61f47eeb4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac720bafcd3b2c439e7b823277e30e4ae"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#ac720bafcd3b2c439e7b823277e30e4ae">char_is_unreserved_url</a> (char c)</td></tr>
 <tr class="separator:ac720bafcd3b2c439e7b823277e30e4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +173,7 @@ Functions</h2></td></tr>
 <tr class="separator:a47b0d66c667da19499116ee150a0e4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7388b7d86227213f6b7c5f3877447d35"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a7388b7d86227213f6b7c5f3877447d35">set_err_msg</a> (std::string *sink, std::string msg)</td></tr>
 <tr class="separator:a7388b7d86227213f6b7c5f3877447d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2308639a69046ee97daa0463566e0c47"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a2308639a69046ee97daa0463566e0c47">remove_old_indexes</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;old_info, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;new_info, std::string *err_msg)</td></tr>
+<tr class="memitem:a2308639a69046ee97daa0463566e0c47"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a2308639a69046ee97daa0463566e0c47">remove_old_indexes</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;old_info, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;new_info, std::string *err_msg)</td></tr>
 <tr class="separator:a2308639a69046ee97daa0463566e0c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abce729382bfcd829651a668436d1fd8c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#abce729382bfcd829651a668436d1fd8c">dump_subusers_info</a> (Formatter *f, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info)</td></tr>
 <tr class="separator:abce729382bfcd829651a668436d1fd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,8 +183,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8918e41419aa2d453d2e947b91bb26f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47d537ddb323913bb0b912dca5947066"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#a47d537ddb323913bb0b912dca5947066">dump_user_info</a> (Formatter *f, <a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;info, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> *stats=NULL)</td></tr>
 <tr class="separator:a47d537ddb323913bb0b912dca5947066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0db358ce1e9ad2b11c58408e3b9594f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#ad0db358ce1e9ad2b11c58408e3b9594f">rgw_user_init</a> (<a class="el" href="classRGWMetadataManager.html">RGWMetadataManager</a> *mm)</td></tr>
-<tr class="separator:ad0db358ce1e9ad2b11c58408e3b9594f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab14a2153b30d5a7077f60efad2308dcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__user_8cc.html#ab14a2153b30d5a7077f60efad2308dcf">rgw_user_init</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>)</td></tr>
+<tr class="separator:ab14a2153b30d5a7077f60efad2308dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -469,7 +472,46 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2e1de48c39aa3c27ba61802acbf18a73"></a>
+<a class="anchor" id="ae5c0cdd0271b0a6e8ec802903937baa4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rgw_get_user_attrs_by_uid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
+          <td class="paramname"><em>user_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, bufferlist &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *&#160;</td>
+          <td class="paramname"><em>objv_tracker</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get all the custom metadata stored for user specified in  and put it into . Returns: 0 on success, -ERR# on failure. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9d0d930124e3ab630b88157dd300bc21"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -500,7 +542,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *&#160;</td>
           <td class="paramname"><em>pmtime</em>&#160;</td>
         </tr>
         <tr>
@@ -514,7 +556,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0aceadc31ea92ff2a1f9de6aead971aa"></a>
+<a class="anchor" id="ae6e001a38c6af8af788038e27769e954"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -545,7 +587,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *&#160;</td>
           <td class="paramname"><em>pmtime</em>&#160;</td>
         </tr>
         <tr>
@@ -559,20 +601,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9f1cfc0805c37250d32bc5687d33e88b"></a>
+<a class="anchor" id="a1aeed4bd4659f2e673fc0a514ed72923"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int rgw_get_user_info_by_swift </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *const&#160;</td>
           <td class="paramname"><em>store</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>swift_name</em>, </td>
         </tr>
         <tr>
@@ -584,13 +626,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *const&#160;</td>
           <td class="paramname"><em>objv_tracker</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *const&#160;</td>
           <td class="paramname"><em>pmtime</em>&#160;</td>
         </tr>
         <tr>
@@ -604,7 +646,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4f2bd494fdb96f01fbb32edeef2e0f84"></a>
+<a class="anchor" id="adf858619fe81ae69cc25ce7f96454302"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -617,7 +659,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>uid</em>, </td>
         </tr>
         <tr>
@@ -629,20 +671,26 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *const&#160;</td>
           <td class="paramname"><em>objv_tracker</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *const&#160;</td>
           <td class="paramname"><em>pmtime</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *&#160;</td>
-          <td class="paramname"><em>cache_info</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *const&#160;</td>
+          <td class="paramname"><em>cache_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, bufferlist &gt; *const&#160;</td>
+          <td class="paramname"><em>pattrs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -655,20 +703,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af9cbde391473814665f405b77855d47f"></a>
+<a class="anchor" id="acf0de75ef73ae11cac442099a7a0a1fb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int rgw_get_user_info_from_index </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *const&#160;</td>
           <td class="paramname"><em>store</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
@@ -686,13 +734,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *const&#160;</td>
           <td class="paramname"><em>objv_tracker</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *const&#160;</td>
           <td class="paramname"><em>pmtime</em>&#160;</td>
         </tr>
         <tr>
@@ -816,7 +864,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5a5e9bea3e97e34421fc3cf992d40788"></a>
+<a class="anchor" id="a0f17b71bca9c176ee07e81db4bfa0f0e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -829,7 +877,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>uid</em>&#160;</td>
         </tr>
         <tr>
@@ -842,7 +890,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad9a9a0750a56b58b80e2f98088d56bc0"></a>
+<a class="anchor" id="af3740c7763c6f4ce4dea93627a36decc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -873,14 +921,20 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>mtime</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>exclusive</em>&#160;</td>
+          <td class="paramname"><em>exclusive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, bufferlist &gt; *&#160;</td>
+          <td class="paramname"><em>pattrs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -909,15 +963,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad0db358ce1e9ad2b11c58408e3b9594f"></a>
+<a class="anchor" id="ab14a2153b30d5a7077f60efad2308dcf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void rgw_user_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classRGWMetadataManager.html">RGWMetadataManager</a> *&#160;</td>
-          <td class="paramname"><em>mm</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -925,24 +979,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab0eca53947d9150288e36a880561707f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool rgw_user_is_authenticated </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structRGWUserInfo.html">RGWUserInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>info</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>verify that user is an actual user, and not the anonymous user </p>
-
-</div>
-</div>
-<a class="anchor" id="a819d9e23cea094364f092f5dd67e3f46"></a>
+<a class="anchor" id="aa47ed433d523f2f3bb87f120e740a675"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -955,7 +992,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user_id</em>&#160;</td>
         </tr>
         <tr>
@@ -1053,11 +1090,11 @@ Variables</h2></td></tr>
 <div class="line"> { <a class="code" href="rgw__acl_8h.html#a059c015ac0b9c2b9e09872c1d99b9f68">RGW_PERM_WRITE_ACP</a>, <span class="stringliteral">&quot;read-acp&quot;</span> },</div>
 <div class="line"> { 0, NULL }</div>
 <div class="line">}</div>
-<div class="ttc" id="rgw__acl_8h_html_abc3a1b21c3749785b4afea84f6453f69"><div class="ttname"><a href="rgw__acl_8h.html#abc3a1b21c3749785b4afea84f6453f69">RGW_PERM_READ</a></div><div class="ttdeci">#define RGW_PERM_READ</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:17</div></div>
-<div class="ttc" id="rgw__acl_8h_html_a4c22c435a9d5a6a31e49f381bdbb5a7b"><div class="ttname"><a href="rgw__acl_8h.html#a4c22c435a9d5a6a31e49f381bdbb5a7b">RGW_PERM_READ_ACP</a></div><div class="ttdeci">#define RGW_PERM_READ_ACP</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:19</div></div>
-<div class="ttc" id="rgw__acl_8h_html_a2f73f019a3c8883ebb2732fdaf8f9811"><div class="ttname"><a href="rgw__acl_8h.html#a2f73f019a3c8883ebb2732fdaf8f9811">RGW_PERM_FULL_CONTROL</a></div><div class="ttdeci">#define RGW_PERM_FULL_CONTROL</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:23</div></div>
-<div class="ttc" id="rgw__acl_8h_html_a059c015ac0b9c2b9e09872c1d99b9f68"><div class="ttname"><a href="rgw__acl_8h.html#a059c015ac0b9c2b9e09872c1d99b9f68">RGW_PERM_WRITE_ACP</a></div><div class="ttdeci">#define RGW_PERM_WRITE_ACP</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:20</div></div>
-<div class="ttc" id="rgw__acl_8h_html_a38553fd9f18d8c5b8aa008eb80dd5a5d"><div class="ttname"><a href="rgw__acl_8h.html#a38553fd9f18d8c5b8aa008eb80dd5a5d">RGW_PERM_WRITE</a></div><div class="ttdeci">#define RGW_PERM_WRITE</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:18</div></div>
+<div class="ttc" id="rgw__acl_8h_html_abc3a1b21c3749785b4afea84f6453f69"><div class="ttname"><a href="rgw__acl_8h.html#abc3a1b21c3749785b4afea84f6453f69">RGW_PERM_READ</a></div><div class="ttdeci">#define RGW_PERM_READ</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:18</div></div>
+<div class="ttc" id="rgw__acl_8h_html_a4c22c435a9d5a6a31e49f381bdbb5a7b"><div class="ttname"><a href="rgw__acl_8h.html#a4c22c435a9d5a6a31e49f381bdbb5a7b">RGW_PERM_READ_ACP</a></div><div class="ttdeci">#define RGW_PERM_READ_ACP</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:20</div></div>
+<div class="ttc" id="rgw__acl_8h_html_a2f73f019a3c8883ebb2732fdaf8f9811"><div class="ttname"><a href="rgw__acl_8h.html#a2f73f019a3c8883ebb2732fdaf8f9811">RGW_PERM_FULL_CONTROL</a></div><div class="ttdeci">#define RGW_PERM_FULL_CONTROL</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:24</div></div>
+<div class="ttc" id="rgw__acl_8h_html_a059c015ac0b9c2b9e09872c1d99b9f68"><div class="ttname"><a href="rgw__acl_8h.html#a059c015ac0b9c2b9e09872c1d99b9f68">RGW_PERM_WRITE_ACP</a></div><div class="ttdeci">#define RGW_PERM_WRITE_ACP</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:21</div></div>
+<div class="ttc" id="rgw__acl_8h_html_a38553fd9f18d8c5b8aa008eb80dd5a5d"><div class="ttname"><a href="rgw__acl_8h.html#a38553fd9f18d8c5b8aa008eb80dd5a5d">RGW_PERM_WRITE</a></div><div class="ttdeci">#define RGW_PERM_WRITE</div><div class="ttdef"><b>Definition:</b> rgw_acl.h:19</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1104,7 +1141,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

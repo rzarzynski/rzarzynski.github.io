@@ -1,7 +1,19 @@
 <map id="rgw_auth_s3.cc" name="rgw_auth_s3.cc">
-<area shape="rect" id="node3" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="895,80,1005,107"/>
-<area shape="rect" id="node14" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="765,163,843,189"/>
-<area shape="rect" id="node16" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="867,163,953,189"/>
-<area shape="rect" id="node17" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1131,163,1224,189"/>
-<area shape="rect" id="node20" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="1248,163,1341,189"/>
+<area shape="rect" id="node4" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1357,379,1467,405"/>
+<area shape="rect" id="node36" href="$rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="242,304,351,331"/>
+<area shape="rect" id="node39" href="$rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="704,80,786,107"/>
+<area shape="rect" id="node15" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="877,461,955,488"/>
+<area shape="rect" id="node16" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1194,544,1323,571"/>
+<area shape="rect" id="node17" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="784,544,870,571"/>
+<area shape="rect" id="node18" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2432,461,2526,488"/>
+<area shape="rect" id="node21" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="556,461,650,488"/>
+<area shape="rect" id="node24" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="1183,461,1290,488"/>
+<area shape="rect" id="node31" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1314,461,1400,488"/>
+<area shape="rect" id="node25" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="1399,544,1480,571"/>
+<area shape="rect" id="node35" href="$rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="1810,544,1924,571"/>
+<area shape="rect" id="node42" href="$rgw__op_8h.html" title="rgw_op.h" alt="" coords="1027,155,1100,181"/>
+<area shape="rect" id="node49" href="$rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="3170,304,3275,331"/>
+<area shape="rect" id="node47" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="2640,304,2734,331"/>
+<area shape="rect" id="node48" href="$rgw__user_8h.html" title="rgw_user.h" alt="" coords="1021,229,1107,256"/>
+<area shape="rect" id="node50" href="$rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2952,229,3051,256"/>
 </map>

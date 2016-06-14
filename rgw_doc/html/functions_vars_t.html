@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
@@ -79,7 +80,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
-      <li><a href="functions_vars.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_vars.html#index__"><span>_</span></a></li>
+      <li><a href="functions_vars_a.html#index_a"><span>a</span></a></li>
       <li><a href="functions_vars_b.html#index_b"><span>b</span></a></li>
       <li><a href="functions_vars_c.html#index_c"><span>c</span></a></li>
       <li><a href="functions_vars_d.html#index_d"><span>d</span></a></li>
@@ -88,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_vars_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_vars_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_vars_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_vars_j.html#index_j"><span>j</span></a></li>
       <li><a href="functions_vars_k.html#index_k"><span>k</span></a></li>
       <li><a href="functions_vars_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_vars_m.html#index_m"><span>m</span></a></li>
@@ -128,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWObjEnt.html#a9b0430b72285f0e5c6068a069c033d51">RGWObjEnt</a>
 </li>
 <li>tags
-: <a class="el" href="structRGWRegionPlacementTarget.html#a0ebad3dc625b8eba338469824afb047a">RGWRegionPlacementTarget</a>
+: <a class="el" href="structRGWZoneGroupPlacementTarget.html#ada7cfb7e22cf4ba3c4d26f3a6f5268fd">RGWZoneGroupPlacementTarget</a>
 </li>
 <li>tail_bucket
 : <a class="el" href="classRGWObjManifest.html#a844e68e5371bf2b9735a6cc2f6e840c9">RGWObjManifest</a>
@@ -143,12 +146,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWUserAdminOpState.html#acfd9f387234f8a30c8ede32d1b22d1cd">RGWUserAdminOpState</a>
 </li>
 <li>temp_url_keys
-: <a class="el" href="classRGWSetTempUrl.html#a71555766565ddbc29328b9c66ef204cc">RGWSetTempUrl</a>
+: <a class="el" href="classRGWPutMetadataAccount.html#a2cc8cb188dc50c1e14c073de27bb84f1">RGWPutMetadataAccount</a>
 , <a class="el" href="structRGWUserAdminOpState.html#a8d8188d23b06339da6c8396aa82b3322">RGWUserAdminOpState</a>
 , <a class="el" href="structRGWUserInfo.html#ae2ad629f3c21b84aa22c0cfd8876ee89">RGWUserInfo</a>
 </li>
 <li>tenant
-: <a class="el" href="classKeystoneToken_1_1Token.html#a6416b261a6f9b9c9d4fe2f8b6c031bae">KeystoneToken::Token</a>
+: <a class="el" href="structobjexp__hint__entry.html#ae85622c2dac8116b412e991bfd82df27">objexp_hint_entry</a>
+, <a class="el" href="structrgw__bucket.html#ac2d65e02c9242ad2ea2ad31da15d8836">rgw_bucket</a>
+, <a class="el" href="structrgw__user.html#a2bf13ba0bf6b95ba5a0832e2ba1370e0">rgw_user</a>
+</li>
+<li>tenant_v2
+: <a class="el" href="classKeystoneToken_1_1Token.html#ace6b74093a9b45b3a0c4dc0b725af4b5">KeystoneToken::Token</a>
 </li>
 <li>thread
 : <a class="el" href="classRGWProcessFrontend.html#a1535a584bda35524a4861b47b907b55f">RGWProcessFrontend</a>
@@ -159,14 +167,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>time
 : <a class="el" href="structreq__state.html#ad6de7eca47e00c9df6abf3bacb8acc03">req_state</a>
 , <a class="el" href="structrgw__log__entry.html#a4cbc9a8406fd3db5aee6b4baaa604d30">rgw_log_entry</a>
-, <a class="el" href="structRGWOLHPendingInfo.html#adbc9d4daa0964ea2561080e71bf43aab">RGWOLHPendingInfo</a>
+, <a class="el" href="structRGWOLHPendingInfo.html#a18bd4a5ec54f352c0e9c20a2b656e81f">RGWOLHPendingInfo</a>
 </li>
 <li>timestamp
-: <a class="el" href="structrgw__data__change.html#a75db72488bd4ee46d72a1508f587b923">rgw_data_change</a>
+: <a class="el" href="structrgw__data__change.html#a1fd2fd10b94fc095246adf601670497c">rgw_data_change</a>
+, <a class="el" href="structrgw__data__sync__marker.html#aea72f0d07f20df4478c8ad4386a83ffc">rgw_data_sync_marker</a>
+, <a class="el" href="structrgw__datalog__entry.html#a7b74a98170f176bfb7158c7bcb7dba55">rgw_datalog_entry</a>
+, <a class="el" href="structrgw__mdlog__entry.html#a61e00ec20a6a7c3ad481c1904b5a4ac1">rgw_mdlog_entry</a>
+, <a class="el" href="structrgw__meta__sync__marker.html#ae82c4a72576bab2916a5f72b75b39150">rgw_meta_sync_marker</a>
 </li>
 <li>token
 : <a class="el" href="classKeystoneToken.html#a34d9406c91aea434e879a95c5798432d">KeystoneToken</a>
-, <a class="el" href="structtoken__entry.html#a72512f116ac7c6f7658215c3732ef418">token_entry</a>
+, <a class="el" href="classRGWTokenBasedAuthEngine.html#a991681082f92bf5e34d64fd6d2344499">RGWTokenBasedAuthEngine</a>
+</li>
+<li>total_entries
+: <a class="el" href="structrgw__data__sync__marker.html#a4e8f5624e8d791d2265874fa5a6d660a">rgw_data_sync_marker</a>
+, <a class="el" href="structrgw__meta__sync__marker.html#ad658b68c90327f9a4babb507e083f4b5">rgw_meta_sync_marker</a>
 </li>
 <li>total_len
 : <a class="el" href="classRGWGetObj.html#a17b111dec4cde4683db9471df0af978c">RGWGetObj</a>
@@ -174,27 +190,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>total_read
 : <a class="el" href="structget__obj__data.html#a609be95c53a9f27fca0aae5c2d2fdf51">get_obj_data</a>
 </li>
+<li>total_size
+: <a class="el" href="structRGWSLOInfo.html#a6c8fe2c31812bc615b7c5a5b58fc3073">RGWSLOInfo</a>
+</li>
 <li>total_time
 : <a class="el" href="structrgw__log__entry.html#a215d39438eafaeb52aeeedba7e7d7ca1">rgw_log_entry</a>
 </li>
+<li>trans_id
+: <a class="el" href="structreq__state.html#ad668a210fbcce43618d115b5710179e0">req_state</a>
+</li>
+<li>trans_id_suffix
+: <a class="el" href="classRGWRados.html#a722fcba692e0c0ad5f30a865936ece1f">RGWRados</a>
+</li>
 <li>truncated
-: <a class="el" href="classRGWListMultipart.html#a83843595d7895ec140f17adaabc5051f">RGWListMultipart</a>
+: <a class="el" href="structread__remote__data__log__response.html#af49774dda401c14bbe27073db998a177">read_remote_data_log_response</a>
+, <a class="el" href="structrgw__datalog__shard__data.html#aad802f4cb19392a043f75d3c75e28491">rgw_datalog_shard_data</a>
+, <a class="el" href="structrgw__mdlog__shard__data.html#ab77660b0c0d37723354b723798f45eb7">rgw_mdlog_shard_data</a>
+, <a class="el" href="classRGWListMultipart.html#a83843595d7895ec140f17adaabc5051f">RGWListMultipart</a>
 </li>
 <li>ts
 : <a class="el" href="structRGWRequest.html#a6bdc854eef4946afab1deffe137a9018">RGWRequest</a>
-</li>
-<li>ttl
-: <a class="el" href="structrgw__swift__auth__info.html#a5236f884dde75d6cd64975bece2710e9">rgw_swift_auth_info</a>
 </li>
 <li>type
 : <a class="el" href="classACLGrant.html#abb425975d1b7d2a282dd11a24dcf6af4">ACLGrant</a>
 , <a class="el" href="classACLGranteeType.html#a2e0a7fccef162a66f933369a1c9475dd">ACLGranteeType</a>
 , <a class="el" href="structgrant__type__to__header.html#a5b71df1721d830f7d3b9be71c7ee7b4e">grant_type_to_header</a>
-, <a class="el" href="classKeystoneToken_1_1Service.html#aa809521d032e37921b187e19d9a771e9">KeystoneToken::Service</a>
+, <a class="el" href="classrgw_1_1RGWToken.html#ac4c8ebc0baf319a7e217ebaf79625bda">rgw::RGWToken</a>
 , <a class="el" href="structRGWUserCap.html#ad383994591121a6b1c573248bc1cfdad">RGWUserCap</a>
 </li>
 <li>type_name
-: <a class="el" href="structrgw__name__to__flag.html#acfbe6ced97dd4db87377dfaa23daaa9a">rgw_name_to_flag</a>
+: <a class="el" href="classrgw_1_1RGWToken.html#a1199b2648d6168a811fc3d6278417c72">rgw::RGWToken</a>
+, <a class="el" href="structrgw__name__to__flag.html#acfbe6ced97dd4db87377dfaa23daaa9a">rgw_name_to_flag</a>
 </li>
 <li>type_specified
 : <a class="el" href="structRGWUserAdminOpState.html#ad192d47197162cc5b97ecdc44066f064">RGWUserAdminOpState</a>
@@ -203,7 +229,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

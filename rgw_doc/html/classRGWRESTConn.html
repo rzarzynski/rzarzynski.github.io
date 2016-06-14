@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -102,23 +102,43 @@ Collaboration diagram for RGWRESTConn:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3085a750861b2d60382196d45249d446"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a3085a750861b2d60382196d45249d446">RGWRESTConn</a> (CephContext *_cct, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, list&lt; string &gt; &amp;endpoints)</td></tr>
-<tr class="separator:a3085a750861b2d60382196d45249d446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1222b9db7e56d62089670c04a8e9c665"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a1222b9db7e56d62089670c04a8e9c665">RGWRESTConn</a> (CephContext *_cct, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;_remote_id, const list&lt; string &gt; &amp;endpoints)</td></tr>
+<tr class="separator:a1222b9db7e56d62089670c04a8e9c665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af19c7e204d2dbd1ec4e276ab961836e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#af19c7e204d2dbd1ec4e276ab961836e4">get_url</a> (string &amp;endpoint)</td></tr>
 <tr class="separator:af19c7e204d2dbd1ec4e276ab961836e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af02c5f4f0321249d3a211b80535b1044"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#af02c5f4f0321249d3a211b80535b1044">forward</a> (const string &amp;uid, <a class="el" href="structreq__info.html">req_info</a> &amp;info, obj_version *objv, size_t max_response, bufferlist *inbl, bufferlist *outbl)</td></tr>
-<tr class="separator:af02c5f4f0321249d3a211b80535b1044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a580b24d5d05c19330c8e9eea2f2111d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a580b24d5d05c19330c8e9eea2f2111d9">put_obj_init</a> (const string &amp;uid, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, uint64_t obj_size, map&lt; string, bufferlist &gt; &amp;attrs, <a class="el" href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a> **req)</td></tr>
-<tr class="separator:a580b24d5d05c19330c8e9eea2f2111d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ae7df3fdb3713856cd5c8a1c3a5b533"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a1ae7df3fdb3713856cd5c8a1c3a5b533">complete_request</a> (<a class="el" href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a> *req, string &amp;etag, time_t *mtime)</td></tr>
-<tr class="separator:a1ae7df3fdb3713856cd5c8a1c3a5b533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ef9388d8bf09690b1a6649970e6244"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a77ef9388d8bf09690b1a6649970e6244">get_obj</a> (const string &amp;uid, <a class="el" href="structreq__info.html">req_info</a> *info, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, bool prepend_metadata, <a class="el" href="classRGWGetDataCB.html">RGWGetDataCB</a> *cb, <a class="el" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> **req)</td></tr>
-<tr class="separator:a77ef9388d8bf09690b1a6649970e6244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2729c6f982e2401402ea5f8dee4fe270"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a2729c6f982e2401402ea5f8dee4fe270">complete_request</a> (<a class="el" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> *req, string &amp;etag, time_t *mtime, map&lt; string, string &gt; &amp;attrs)</td></tr>
-<tr class="separator:a2729c6f982e2401402ea5f8dee4fe270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac833f895cae6760d02b776c2a597f02d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#ac833f895cae6760d02b776c2a597f02d">get_url</a> ()</td></tr>
+<tr class="separator:ac833f895cae6760d02b776c2a597f02d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728bf5cde5f0e9774196f4a67224a5e3"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a728bf5cde5f0e9774196f4a67224a5e3">get_self_zonegroup</a> ()</td></tr>
+<tr class="separator:a728bf5cde5f0e9774196f4a67224a5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a35907a2b268f4a2cd5b9376a0dbe1"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#ae5a35907a2b268f4a2cd5b9376a0dbe1">get_remote_id</a> ()</td></tr>
+<tr class="separator:ae5a35907a2b268f4a2cd5b9376a0dbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51316213202907acf9ba8d79181d4d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWAccessKey.html">RGWAccessKey</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#af51316213202907acf9ba8d79181d4d1">get_key</a> ()</td></tr>
+<tr class="separator:af51316213202907acf9ba8d79181d4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef1ef09ba761a6f76018cc74a685e56"><td class="memItemLeft" align="right" valign="top">CephContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#acef1ef09ba761a6f76018cc74a685e56">get_ctx</a> ()</td></tr>
+<tr class="separator:acef1ef09ba761a6f76018cc74a685e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef331778dac9cd6c5e3611c3b0f23822"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#aef331778dac9cd6c5e3611c3b0f23822">get_endpoint_count</a> () const </td></tr>
+<tr class="separator:aef331778dac9cd6c5e3611c3b0f23822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e78683f8354dcb707e0c4033f34c95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a66e78683f8354dcb707e0c4033f34c95">forward</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;uid, <a class="el" href="structreq__info.html">req_info</a> &amp;info, obj_version *objv, size_t max_response, bufferlist *inbl, bufferlist *outbl)</td></tr>
+<tr class="separator:a66e78683f8354dcb707e0c4033f34c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5886b0cbcfe558a37729c3075ca10c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a5f5886b0cbcfe558a37729c3075ca10c">put_obj_init</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;uid, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, uint64_t obj_size, map&lt; string, bufferlist &gt; &amp;attrs, <a class="el" href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a> **req)</td></tr>
+<tr class="separator:a5f5886b0cbcfe558a37729c3075ca10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8292d4688357649352203ee83f76af32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a8292d4688357649352203ee83f76af32">complete_request</a> (<a class="el" href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a> *req, string &amp;etag, ceph::real_time *mtime)</td></tr>
+<tr class="separator:a8292d4688357649352203ee83f76af32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62ce2c2c39172fd7ce1e2d45e73f349"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#af62ce2c2c39172fd7ce1e2d45e73f349">get_obj</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;uid, <a class="el" href="structreq__info.html">req_info</a> *info, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, const ceph::real_time *mod_ptr, const ceph::real_time *unmod_ptr, uint32_t mod_zone_id, uint64_t mod_pg_ver, bool prepend_metadata, <a class="el" href="classRGWGetDataCB.html">RGWGetDataCB</a> *cb, <a class="el" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> **req)</td></tr>
+<tr class="separator:af62ce2c2c39172fd7ce1e2d45e73f349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2ec6aad0ed49738a77533f3534452a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#a0d2ec6aad0ed49738a77533f3534452a">complete_request</a> (<a class="el" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> *req, string &amp;etag, ceph::real_time *mtime, map&lt; string, string &gt; &amp;attrs)</td></tr>
+<tr class="separator:a0d2ec6aad0ed49738a77533f3534452a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab425bae908b67669e5d805c8ef3d5346"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#ab425bae908b67669e5d805c8ef3d5346">get_resource</a> (const string &amp;resource, <a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *extra_params, map&lt; string, string &gt; *extra_headers, bufferlist &amp;bl, <a class="el" href="classRGWHTTPManager.html">RGWHTTPManager</a> *mgr=NULL)</td></tr>
+<tr class="separator:ab425bae908b67669e5d805c8ef3d5346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21d5a3af44bf9a306d28ce5817bfc24"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:af21d5a3af44bf9a306d28ce5817bfc24"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">get_json_resource</a> (const string &amp;resource, <a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *params, T &amp;t)</td></tr>
+<tr class="separator:af21d5a3af44bf9a306d28ce5817bfc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7c4a64af0822cb4fe312a80d4a329d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:abc7c4a64af0822cb4fe312a80d4a329d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html#abc7c4a64af0822cb4fe312a80d4a329d">get_json_resource</a> (const string &amp;resource, const <a class="el" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> *pp, T &amp;t)</td></tr>
+<tr class="separator:abc7c4a64af0822cb4fe312a80d4a329d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3085a750861b2d60382196d45249d446"></a>
+<a class="anchor" id="a1222b9db7e56d62089670c04a8e9c665"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -137,7 +157,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">list&lt; string &gt; &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>_remote_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const list&lt; string &gt; &amp;&#160;</td>
           <td class="paramname"><em>endpoints</em>&#160;</td>
         </tr>
         <tr>
@@ -151,7 +177,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1ae7df3fdb3713856cd5c8a1c3a5b533"></a>
+<a class="anchor" id="a8292d4688357649352203ee83f76af32"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -170,7 +196,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">ceph::real_time *&#160;</td>
           <td class="paramname"><em>mtime</em>&#160;</td>
         </tr>
         <tr>
@@ -183,7 +209,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2729c6f982e2401402ea5f8dee4fe270"></a>
+<a class="anchor" id="a0d2ec6aad0ed49738a77533f3534452a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -202,7 +228,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">ceph::real_time *&#160;</td>
           <td class="paramname"><em>mtime</em>, </td>
         </tr>
         <tr>
@@ -221,14 +247,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af02c5f4f0321249d3a211b80535b1044"></a>
+<a class="anchor" id="a66e78683f8354dcb707e0c4033f34c95"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int RGWRESTConn::forward </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>uid</em>, </td>
         </tr>
         <tr>
@@ -271,14 +297,151 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a77ef9388d8bf09690b1a6649970e6244"></a>
+<a class="anchor" id="acef1ef09ba761a6f76018cc74a685e56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CephContext* RGWRESTConn::get_ctx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef331778dac9cd6c5e3611c3b0f23822"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t RGWRESTConn::get_endpoint_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af21d5a3af44bf9a306d28ce5817bfc24"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWRESTConn::get_json_resource </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abc7c4a64af0822cb4fe312a80d4a329d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWRESTConn::get_json_resource </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> *&#160;</td>
+          <td class="paramname"><em>pp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af51316213202907acf9ba8d79181d4d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRGWAccessKey.html">RGWAccessKey</a>&amp; RGWRESTConn::get_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af62ce2c2c39172fd7ce1e2d45e73f349"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int RGWRESTConn::get_obj </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>uid</em>, </td>
         </tr>
         <tr>
@@ -292,6 +455,30 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;&#160;</td>
           <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ceph::real_time *&#160;</td>
+          <td class="paramname"><em>mod_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ceph::real_time *&#160;</td>
+          <td class="paramname"><em>unmod_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>mod_zone_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>mod_pg_ver</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -321,6 +508,96 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae5a35907a2b268f4a2cd5b9376a0dbe1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string&amp; RGWRESTConn::get_remote_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab425bae908b67669e5d805c8ef3d5346"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWRESTConn::get_resource </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *&#160;</td>
+          <td class="paramname"><em>extra_params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, string &gt; *&#160;</td>
+          <td class="paramname"><em>extra_headers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bufferlist &amp;&#160;</td>
+          <td class="paramname"><em>bl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRGWHTTPManager.html">RGWHTTPManager</a> *&#160;</td>
+          <td class="paramname"><em>mgr</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a728bf5cde5f0e9774196f4a67224a5e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string&amp; RGWRESTConn::get_self_zonegroup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af19c7e204d2dbd1ec4e276ab961836e4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -337,14 +614,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a580b24d5d05c19330c8e9eea2f2111d9"></a>
+<a class="anchor" id="ac833f895cae6760d02b776c2a597f02d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string RGWRESTConn::get_url </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5f5886b0cbcfe558a37729c3075ca10c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int RGWRESTConn::put_obj_init </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>uid</em>, </td>
         </tr>
         <tr>
@@ -388,7 +680,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,6 +1,10 @@
 <map id="rgw_replica_log.h" name="rgw_replica_log.h">
-<area shape="rect" id="node2" href="$rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="5,80,107,107"/>
-<area shape="rect" id="node3" href="$rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="132,80,228,107"/>
-<area shape="rect" id="node4" href="$rgw__replica__log_8cc.html" title="rgw_replica_log.cc" alt="" coords="252,80,381,107"/>
-<area shape="rect" id="node5" href="$rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="407,80,565,107"/>
+<area shape="rect" id="node2" href="$rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="5,88,107,115"/>
+<area shape="rect" id="node3" href="$rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="132,88,228,115"/>
+<area shape="rect" id="node4" href="$rgw__object__expirer_8cc.html" title="rgw_object_expirer.cc" alt="" coords="145,179,293,205"/>
+<area shape="rect" id="node5" href="$rgw__object__expirer__core_8h.html" title="rgw_object_expirer\l_core.h" alt="" coords="303,81,432,122"/>
+<area shape="rect" id="node6" href="$rgw__object__expirer__core_8cc.html" title="rgw_object_expirer\l_core.cc" alt="" coords="441,171,571,213"/>
+<area shape="rect" id="node8" href="$rgw__replica__log_8cc.html" title="rgw_replica_log.cc" alt="" coords="508,88,637,115"/>
+<area shape="rect" id="node9" href="$rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="663,88,821,115"/>
+<area shape="rect" id="node7" href="$rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="318,179,417,205"/>
 </map>

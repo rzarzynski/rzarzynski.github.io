@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
@@ -128,13 +129,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>s
-: <a class="el" href="classRGWHandler.html#a0f04c8e72d3ef80580398f332b6de7d2">RGWHandler</a>
+: <a class="el" href="classRGWBulkDelete_1_1Deleter.html#a1beb700d2686e5b9db2dd45416e51acd">RGWBulkDelete::Deleter</a>
+, <a class="el" href="classRGWHandler.html#a0f04c8e72d3ef80580398f332b6de7d2">RGWHandler</a>
 , <a class="el" href="classRGWOp.html#aa8767169436c5b26a052b04b4a735808">RGWOp</a>
 , <a class="el" href="structRGWRequest.html#aab29708fe2bee033b5191719ad0868a6">RGWRequest</a>
+, <a class="el" href="classRGWTempURLAuthEngine.html#a2a1ac01dee182d1556d8428ce810a9e0">RGWTempURLAuthEngine</a>
+, <a class="el" href="classRGWXAuthTokenExtractor.html#a8db6e43329af5008d1e6d49c4bd481d8">RGWXAuthTokenExtractor</a>
 </li>
 <li>s3_code
 : <a class="el" href="structrgw__err.html#a6f0d32a57f5789cecff25f7001eb8993">rgw_err</a>
 , <a class="el" href="structrgw__http__errors.html#ac2969e90cd4dec846d26611e884eb86a">rgw_http_errors</a>
+</li>
+<li>save_state()
+: <a class="el" href="classRGWOrphanSearch.html#ab89f9f3c2b118b0f4392ef574f229cfd">RGWOrphanSearch</a>
+</li>
+<li>schedule()
+: <a class="el" href="classRGWCoroutinesManager.html#aa9a96092e6525e2583a7f883e01ae5d4">RGWCoroutinesManager</a>
+, <a class="el" href="classRGWCoroutinesStack.html#a71808034a6a58e12d161a0613db2c98b">RGWCoroutinesStack</a>
+</li>
+<li>schedule_context()
+: <a class="el" href="classRGWRados.html#ace33ddde25ac3fe41d1253df97b61083">RGWRados</a>
+</li>
+<li>scheduled_stacks
+: <a class="el" href="structRGWCoroutinesEnv.html#a781a2cc8d3e9e2fd85cf24fc3dae6887">RGWCoroutinesEnv</a>
 </li>
 <li>script_uri
 : <a class="el" href="structreq__info.html#a05e6c832e173e9bbc903443b759629cb">req_info</a>
@@ -142,27 +159,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>secret_key
 : <a class="el" href="structKey.html#a4a82c59aea817b8f92100b3ee8dd13a8">Key</a>
 </li>
+<li>section
+: <a class="el" href="structrgw__mdlog__entry.html#adb8db94f8f2d38bb7fa9919e5ca7e37d">rgw_mdlog_entry</a>
+</li>
+<li>seed
+: <a class="el" href="structrgw_1_1fh__key.html#a4874c26ca197aa4657ffe3abb946b1f3">rgw::fh_key</a>
+</li>
+<li>seed_signature
+: <a class="el" href="structrgw__aws4__auth.html#aff5901755d7e6661d64e0c6f8bce07ba">rgw_aws4_auth</a>
+</li>
 <li>seek()
 : <a class="el" href="classRGWObjManifest_1_1obj__iterator.html#a87cae4fca6e4f202c12f34a756df6350">RGWObjManifest::obj_iterator</a>
 </li>
 <li>select_bucket_placement()
-: <a class="el" href="classRGWRados.html#a9c7646a4fa3c495cc65ca22a1bb93706">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a041221ff2dc305148c4b03dfb9f7deb8">RGWRados</a>
 </li>
 <li>select_legacy_bucket_placement()
-: <a class="el" href="classRGWRados.html#ae77fa0cc0683f5e50f2d91e8fef913c2">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a78ad36c9ff6bac3b37e851348a1e6690">RGWRados</a>
 </li>
 <li>select_new_bucket_location()
-: <a class="el" href="classRGWRados.html#a93ade01e76b23ac5de78ee8ae758cbda">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a968fffee44dc6fd1d2ab91a0905ad0ba">RGWRados</a>
 </li>
 <li>select_processor()
-: <a class="el" href="classRGWPostObj.html#a5b15eef402d3f47af0825686c293b027">RGWPostObj</a>
+: <a class="el" href="classrgw_1_1RGWWriteRequest.html#a9bdafa7458e1e6f4668f57588256416f">rgw::RGWWriteRequest</a>
+, <a class="el" href="classRGWPostObj.html#a5b15eef402d3f47af0825686c293b027">RGWPostObj</a>
 , <a class="el" href="classRGWPutObj.html#ad8fee379a3c99e7488cdc0e8f68eebf6">RGWPutObj</a>
 </li>
+<li>send()
+: <a class="el" href="classRGWRESTPostResource.html#a8cd5b86ba0594bf344c79a5f3f7c4589">RGWRESTPostResource</a>
+</li>
 <li>send_100_continue()
-: <a class="el" href="classRGWClientIO.html#aa358ea4b8eac1fd14b3d87282dad0b79">RGWClientIO</a>
+: <a class="el" href="classrgw_1_1RGWLibIO.html#abdfc6e58f08de29c1239bb8517acb13c">rgw::RGWLibIO</a>
 , <a class="el" href="classRGWFCGX.html#a91c4aa732686791b0f11a5ec5e6723d8">RGWFCGX</a>
 , <a class="el" href="classRGWLoadGenIO.html#a5bbbff5401c12ac7b9e083b16620ab7b">RGWLoadGenIO</a>
 , <a class="el" href="classRGWMongoose.html#acfdd2ac5d96ef07b3f4653883c3d3403">RGWMongoose</a>
+, <a class="el" href="classRGWStreamIO.html#a74c0ed01240a64d3b438fed725ae2a03">RGWStreamIO</a>
 </li>
 <li>send_chain()
 : <a class="el" href="classRGWGC.html#a2cbb3d6bcbd23a236634f79b457c8bc3">RGWGC</a>
@@ -171,34 +202,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classRGWRados.html#ac0ffea1fe948bf9b571890d1350fdfb6">RGWRados</a>
 </li>
 <li>send_content_length()
-: <a class="el" href="classRGWClientIO.html#a0a6bc6a34b04bc1b3bc467fb67d71d60">RGWClientIO</a>
+: <a class="el" href="classrgw_1_1RGWLibIO.html#a6b171282c402417f1ed7df407ec88e70">rgw::RGWLibIO</a>
 , <a class="el" href="classRGWFCGX.html#a246d6e4f0ea4c22ad27a03935d791159">RGWFCGX</a>
 , <a class="el" href="classRGWLoadGenIO.html#af6f91908ce754cb41f5d369ce4e5b44c">RGWLoadGenIO</a>
 , <a class="el" href="classRGWMongoose.html#a31f71fc15f9cf8be766d8614b37a9389">RGWMongoose</a>
+, <a class="el" href="classRGWStreamIO.html#a970558e58835367cf8196db46201d7bc">RGWStreamIO</a>
 </li>
 <li>send_data()
 : <a class="el" href="classRGW__Auth__S3__Keystone__ValidateToken.html#a70ea6fd5aadbf241ff46c6c11b163639">RGW_Auth_S3_Keystone_ValidateToken</a>
-, <a class="el" href="classRGWHTTPClient.html#a500061f39f2dc679d5dd2526c9d182de">RGWHTTPClient</a>
-, <a class="el" href="classRGWPostHTTPData.html#a0e82f335402fcd632176631cdffe4578">RGWPostHTTPData</a>
+, <a class="el" href="classRGWHTTPClient.html#aaac285bd96558ae37986933d557c951d">RGWHTTPClient</a>
+, <a class="el" href="classRGWHTTPHeadersCollector.html#a15de432c44913abcb17acdadbdf40097">RGWHTTPHeadersCollector</a>
+, <a class="el" href="classRGWHTTPTransceiver.html#aa987543ac7a929d1e0599def686d96c8">RGWHTTPTransceiver</a>
 , <a class="el" href="classRGWRESTSimpleRequest.html#a4b4e000123833e6927a2201c3acd5961">RGWRESTSimpleRequest</a>
-, <a class="el" href="classRGWRESTStreamReadRequest.html#a55ce17c714626fbb0b32619818d4a99b">RGWRESTStreamReadRequest</a>
+, <a class="el" href="classRGWRESTStreamRWRequest.html#acadf319f4a7c14fea54f514b2c35deae">RGWRESTStreamRWRequest</a>
 , <a class="el" href="classRGWRESTStreamWriteRequest.html#a7101b31228cbdc965d2c58f81776a6a8">RGWRESTStreamWriteRequest</a>
-, <a class="el" href="classRGWValidateKeystoneToken.html#ab1575715bf70c63876fb3c1479793c3d">RGWValidateKeystoneToken</a>
-, <a class="el" href="classRGWValidateSwiftToken.html#a38de3eb40a4ff5362e14c295ab7cc841">RGWValidateSwiftToken</a>
+</li>
+<li>send_http_data()
+: <a class="el" href="classRGWHTTPClient.html#a99088a5023d90e504e378e44f8636a60">RGWHTTPClient</a>
 </li>
 <li>send_iter
 : <a class="el" href="classRGWRESTSimpleRequest.html#afc99e42f76af94d970e3c944a738365d">RGWRESTSimpleRequest</a>
 </li>
 <li>send_partial_response()
-: <a class="el" href="classRGWCopyObj.html#ad939fc375828e424d13ed5b501acda27">RGWCopyObj</a>
+: <a class="el" href="classrgw_1_1RGWCopyObjRequest.html#aa6460ddc46d67b1734eb904db8133568">rgw::RGWCopyObjRequest</a>
+, <a class="el" href="classRGWCopyObj.html#ad939fc375828e424d13ed5b501acda27">RGWCopyObj</a>
 , <a class="el" href="classRGWCopyObj__ObjStore__S3.html#a42ecefcea9b7079ed6421a90bddc1d41">RGWCopyObj_ObjStore_S3</a>
 , <a class="el" href="classRGWCopyObj__ObjStore__SWIFT.html#ae5cc1ad160693551316ef3dbfedab6d0">RGWCopyObj_ObjStore_SWIFT</a>
 , <a class="el" href="classRGWDeleteMultiObj.html#a5f10c6ffc7bd77cc2650cf282ab6881a">RGWDeleteMultiObj</a>
 , <a class="el" href="classRGWDeleteMultiObj__ObjStore__S3.html#aeaaa3ce72425660c786051c6e435823a">RGWDeleteMultiObj_ObjStore_S3</a>
 </li>
+<li>send_request()
+: <a class="el" href="classRGWAsyncRadosRequest.html#a815f45bc29dd23dbf4053f7647737216">RGWAsyncRadosRequest</a>
+, <a class="el" href="classRGWFetchRemoteObjCR.html#a362722891f3460a973ea2c319c4b0cc8">RGWFetchRemoteObjCR</a>
+, <a class="el" href="classRGWGetBucketInstanceInfoCR.html#a0f1a0a21b85c772b3e918e345a74afb8">RGWGetBucketInstanceInfoCR</a>
+, <a class="el" href="classRGWListRemoteDataLogShardCR.html#a94e7075967c8131f08ac4ae96fdaaf51">RGWListRemoteDataLogShardCR</a>
+, <a class="el" href="classRGWListRemoteMDLogShardCR.html#a75c996898e133201012c768ea9af5699">RGWListRemoteMDLogShardCR</a>
+, <a class="el" href="classRGWMetaRemoveEntryCR.html#a26c35277f4c61883f6e969e811b918fd">RGWMetaRemoveEntryCR</a>
+, <a class="el" href="classRGWMetaStoreEntryCR.html#a5720cbe7c0f7a482236d2344a1429a49">RGWMetaStoreEntryCR</a>
+, <a class="el" href="classRGWPostRESTResourceCR.html#a490a6f304eadd9e92b51238f9954ac9a">RGWPostRESTResourceCR&lt; S, T &gt;</a>
+, <a class="el" href="classRGWRadosGetOmapKeysCR.html#a146674f35ef8ee1c6f9e9faf0e89bf60">RGWRadosGetOmapKeysCR</a>
+, <a class="el" href="classRGWRadosRemoveOmapKeysCR.html#a7e219c8c79ecd7137df451b79eb6da52">RGWRadosRemoveOmapKeysCR</a>
+, <a class="el" href="classRGWRadosSetOmapKeysCR.html#a5d493a88fe2816e9c01f4bb5c157a402">RGWRadosSetOmapKeysCR</a>
+, <a class="el" href="classRGWRadosTimelogAddCR.html#aef3e3ed0ace617a7a0e7a3a97a802069">RGWRadosTimelogAddCR</a>
+, <a class="el" href="classRGWReadMDLogEntriesCR.html#a2b17f8e139bae6bfb0f1b00ed0a4baee">RGWReadMDLogEntriesCR</a>
+, <a class="el" href="classRGWReadRESTResourceCR.html#ad658caee999893c904cc6c12f77cb197">RGWReadRESTResourceCR&lt; T &gt;</a>
+, <a class="el" href="classRGWRemoveObjCR.html#a0cd9b998e417eae009e12a9701e33bc6">RGWRemoveObjCR</a>
+, <a class="el" href="classRGWSimpleCoroutine.html#aee9301e815dbb552d64e931086b1522c">RGWSimpleCoroutine</a>
+, <a class="el" href="classRGWSimpleRadosLockCR.html#ab810c5859f972d1709323c57a208b3a2">RGWSimpleRadosLockCR</a>
+, <a class="el" href="classRGWSimpleRadosReadAttrsCR.html#ae5c9bd7492ebfcefda9153d354c4e9f6">RGWSimpleRadosReadAttrsCR</a>
+, <a class="el" href="classRGWSimpleRadosReadCR.html#a96039bad0eabfc9f0faf5c40f317adb8">RGWSimpleRadosReadCR&lt; T &gt;</a>
+, <a class="el" href="classRGWSimpleRadosUnlockCR.html#a828969424e9bc49c309d0261e8f070b8">RGWSimpleRadosUnlockCR</a>
+, <a class="el" href="classRGWSimpleRadosWriteAttrsCR.html#a4cab8ec9278187c45283b19f785ef6d9">RGWSimpleRadosWriteAttrsCR</a>
+, <a class="el" href="classRGWSimpleRadosWriteCR.html#a29cffd48efe381397a5faabe4479b555">RGWSimpleRadosWriteCR&lt; T &gt;</a>
+, <a class="el" href="classRGWStatObjCR.html#a0441689b343fa34fa31a629671a1fc0a">RGWStatObjCR</a>
+, <a class="el" href="classRGWWaitCR.html#a556ebb7d2019e29a0c9800e85be83941">RGWWaitCR</a>
+</li>
 <li>send_response()
-: <a class="el" href="classRGWAbortMultipart.html#abe116844f0ee252f9223cbdf54ee317e">RGWAbortMultipart</a>
+: <a class="el" href="classrgw_1_1RGWCopyObjRequest.html#ac179a6372df267a3dd96ab9ee80f0023">rgw::RGWCopyObjRequest</a>
+, <a class="el" href="classrgw_1_1RGWCreateBucketRequest.html#a4a00892570c705783e99c5f07b83f2bf">rgw::RGWCreateBucketRequest</a>
+, <a class="el" href="classrgw_1_1RGWDeleteBucketRequest.html#a930f5926835a32d837d6832e4f8cd6b0">rgw::RGWDeleteBucketRequest</a>
+, <a class="el" href="classrgw_1_1RGWDeleteObjRequest.html#a432839cd0eb1a6747bed32f9f355fbba">rgw::RGWDeleteObjRequest</a>
+, <a class="el" href="classrgw_1_1RGWPutObjRequest.html#a98caf495b4be30b835b70697773a433a">rgw::RGWPutObjRequest</a>
+, <a class="el" href="classrgw_1_1RGWReaddirRequest.html#a63f223c029b152d713934935322fa564">rgw::RGWReaddirRequest</a>
+, <a class="el" href="classrgw_1_1RGWStatBucketRequest.html#aabc2bc87cd873984329527cb888b5c1b">rgw::RGWStatBucketRequest</a>
+, <a class="el" href="classrgw_1_1RGWStatLeafRequest.html#a37d71b098e09e54279cf799bca037b79">rgw::RGWStatLeafRequest</a>
+, <a class="el" href="classrgw_1_1RGWWriteRequest.html#ab7f5ee8359ae059c4808a0eeea1205c5">rgw::RGWWriteRequest</a>
+, <a class="el" href="classRGWAbortMultipart.html#abe116844f0ee252f9223cbdf54ee317e">RGWAbortMultipart</a>
 , <a class="el" href="classRGWAbortMultipart__ObjStore__S3.html#a90c1ce0fa6f0802c6589fc439e135c4e">RGWAbortMultipart_ObjStore_S3</a>
+, <a class="el" href="classRGWBulkDelete.html#a0af10560285354921eca6428d449a7c2">RGWBulkDelete</a>
+, <a class="el" href="classRGWBulkDelete__ObjStore__SWIFT.html#ae0b73782aaadb1c89154a3be5009f66d">RGWBulkDelete_ObjStore_SWIFT</a>
 , <a class="el" href="classRGWCompleteMultipart.html#a195e37bf6bc0165a8814dc209aa7138f">RGWCompleteMultipart</a>
 , <a class="el" href="classRGWCompleteMultipart__ObjStore__S3.html#a631d6316b6a32cab437205df7f66828b">RGWCompleteMultipart_ObjStore_S3</a>
 , <a class="el" href="classRGWCopyObj.html#ac1cc2f094b9f916cbc558ee6320aa752">RGWCopyObj</a>
@@ -210,6 +282,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classRGWDeleteBucket.html#a8c597b4eae66e777c7cf6938434549d9">RGWDeleteBucket</a>
 , <a class="el" href="classRGWDeleteBucket__ObjStore__S3.html#a5a0775f2b8808fa7c21e32f1724e12f2">RGWDeleteBucket_ObjStore_S3</a>
 , <a class="el" href="classRGWDeleteBucket__ObjStore__SWIFT.html#a5f99094726892a35d3a7d1d363046f44">RGWDeleteBucket_ObjStore_SWIFT</a>
+, <a class="el" href="classRGWDeleteBucketWebsite.html#aa67b122409582fecafc956e4a02703e9">RGWDeleteBucketWebsite</a>
+, <a class="el" href="classRGWDeleteBucketWebsite__ObjStore__S3.html#a03b8daa454b833d337b7daa059d7c106">RGWDeleteBucketWebsite_ObjStore_S3</a>
 , <a class="el" href="classRGWDeleteCORS.html#aea02789f780168691503991873e0f51e">RGWDeleteCORS</a>
 , <a class="el" href="classRGWDeleteCORS__ObjStore__S3.html#acc63f3e0590258d834488fe96783ac75">RGWDeleteCORS_ObjStore_S3</a>
 , <a class="el" href="classRGWDeleteObj.html#a5803b2f0ab58dfc0e3c0e653426b868a">RGWDeleteObj</a>
@@ -224,8 +298,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classRGWGetBucketLogging__ObjStore__S3.html#ab92a3c345aacaf032d7b82b365352af0">RGWGetBucketLogging_ObjStore_S3</a>
 , <a class="el" href="classRGWGetBucketVersioning.html#a128bddf1758655a3c03134d6b5514051">RGWGetBucketVersioning</a>
 , <a class="el" href="classRGWGetBucketVersioning__ObjStore__S3.html#a29443d05100d01fccbfc3cd68aab167f">RGWGetBucketVersioning_ObjStore_S3</a>
+, <a class="el" href="classRGWGetBucketWebsite.html#a37eb3b6d4445f771c5601b2a63f96946">RGWGetBucketWebsite</a>
+, <a class="el" href="classRGWGetBucketWebsite__ObjStore__S3.html#ac652a357a623efae2f69ca08eb70ccb5">RGWGetBucketWebsite_ObjStore_S3</a>
 , <a class="el" href="classRGWGetCORS.html#ae4fe12c34b7812a1c0e3c970bd88c772">RGWGetCORS</a>
 , <a class="el" href="classRGWGetCORS__ObjStore__S3.html#a3748822e61f624a6bc409c2af2445ad2">RGWGetCORS_ObjStore_S3</a>
+, <a class="el" href="classRGWGetRequestPayment.html#a4e743c9e6416c424e46803f793f2f543">RGWGetRequestPayment</a>
+, <a class="el" href="classRGWGetRequestPayment__ObjStore__S3.html#a529723166026dd5318671536bafe71e5">RGWGetRequestPayment_ObjStore_S3</a>
+, <a class="el" href="classRGWGetUsage.html#a1481c990dc265cc9327fa455b1dc0883">RGWGetUsage</a>
+, <a class="el" href="classRGWGetUsage__ObjStore__S3.html#ac82990a573f60505194cad660f145348">RGWGetUsage_ObjStore_S3</a>
 , <a class="el" href="classRGWInitMultipart.html#a71763760ffb48935944a2fe8a0eb44e1">RGWInitMultipart</a>
 , <a class="el" href="classRGWInitMultipart__ObjStore__S3.html#ac9762f4c572e8c781748aea55e718ddb">RGWInitMultipart_ObjStore_S3</a>
 , <a class="el" href="classRGWListBucket.html#ada775c7878be97ff8f3064bd8eec8fc7">RGWListBucket</a>
@@ -249,7 +329,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classRGWOp__Metadata__Put.html#acd44baaaedbc6332825fd4fbae553781">RGWOp_Metadata_Put</a>
 , <a class="el" href="classRGWOp__OBJLog__GetBounds.html#a138a3c241f66d69371f1b43d1b9b26e3">RGWOp_OBJLog_GetBounds</a>
 , <a class="el" href="classRGWOp__Opstate__List.html#a75e8a4ded1f584ec2c7b9ef2dccf1369">RGWOp_Opstate_List</a>
-, <a class="el" href="classRGWOp__RegionMap__Get.html#ae685eebab6d6d25cb1a99bfa7ba5a5fe">RGWOp_RegionMap_Get</a>
+, <a class="el" href="classRGWOp__Period__Base.html#aa46b61211e264812e0f98608f3ccbfcf">RGWOp_Period_Base</a>
+, <a class="el" href="classRGWOp__Realm__Get.html#a1f6cce50aeea3db70a1aead9ed4379a1">RGWOp_Realm_Get</a>
+, <a class="el" href="classRGWOp__ZoneGroupMap__Get.html#a8c4fed2ab6c0e96693a6026cf7863bad">RGWOp_ZoneGroupMap_Get</a>
 , <a class="el" href="classRGWOptionsCORS.html#a4ac961a64b3ba237e210d6947f9d08bd">RGWOptionsCORS</a>
 , <a class="el" href="classRGWOptionsCORS__ObjStore__S3.html#aa8c649349a7f2d14b369d94c2178a119">RGWOptionsCORS_ObjStore_S3</a>
 , <a class="el" href="classRGWOptionsCORS__ObjStore__SWIFT.html#a1b080e62160e639b7b82c3d914a659d3">RGWOptionsCORS_ObjStore_SWIFT</a>
@@ -260,16 +342,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classRGWPutACLs__ObjStore__SWIFT.html#aa6b6775e8a52b718527810885dfc5078">RGWPutACLs_ObjStore_SWIFT</a>
 , <a class="el" href="classRGWPutCORS.html#a0c0b5d56bde873f56157d33891321584">RGWPutCORS</a>
 , <a class="el" href="classRGWPutCORS__ObjStore__S3.html#a99402dad704761b6bb6ebf65ae85da3a">RGWPutCORS_ObjStore_S3</a>
-, <a class="el" href="classRGWPutMetadata.html#a19589be197b725fbf578209f84bbb2da">RGWPutMetadata</a>
-, <a class="el" href="classRGWPutMetadata__ObjStore__SWIFT.html#a9d939aeb328f638adc7b854bc31f0401">RGWPutMetadata_ObjStore_SWIFT</a>
+, <a class="el" href="classRGWPutMetadataAccount.html#a4bb65e1ef549eff656e63ce55da03f2f">RGWPutMetadataAccount</a>
+, <a class="el" href="classRGWPutMetadataAccount__ObjStore__SWIFT.html#a9301b20b3707bc1486bc58ff46622d4f">RGWPutMetadataAccount_ObjStore_SWIFT</a>
+, <a class="el" href="classRGWPutMetadataBucket.html#a1367ddd03b3a367ecfdc5e92130415b0">RGWPutMetadataBucket</a>
+, <a class="el" href="classRGWPutMetadataBucket__ObjStore__SWIFT.html#afaf1c9ecbaeee33a23836dfdeebea4bd">RGWPutMetadataBucket_ObjStore_SWIFT</a>
+, <a class="el" href="classRGWPutMetadataObject.html#a10c07de8988c31b9dd738a08f83a96f6">RGWPutMetadataObject</a>
+, <a class="el" href="classRGWPutMetadataObject__ObjStore__SWIFT.html#acf46ca5d000189b93d17e1bf552a5c17">RGWPutMetadataObject_ObjStore_SWIFT</a>
 , <a class="el" href="classRGWPutObj.html#a32eae6d1aa879c81958bd3db2e6f847f">RGWPutObj</a>
 , <a class="el" href="classRGWPutObj__ObjStore__S3.html#a2c139bba9904d1c537fc65ea8ceb90ab">RGWPutObj_ObjStore_S3</a>
 , <a class="el" href="classRGWPutObj__ObjStore__SWIFT.html#a9b5152e8a3687219208fb30c8f7e3c8c">RGWPutObj_ObjStore_SWIFT</a>
 , <a class="el" href="classRGWRESTOp.html#a004130dd5a24ba7541461e0ae91a8686">RGWRESTOp</a>
 , <a class="el" href="classRGWSetBucketVersioning.html#af537265f9214f5802b363be46dd06998">RGWSetBucketVersioning</a>
 , <a class="el" href="classRGWSetBucketVersioning__ObjStore__S3.html#ae86bc38f189395fd12b5dfdfac9bbf20">RGWSetBucketVersioning_ObjStore_S3</a>
-, <a class="el" href="classRGWSetTempUrl.html#acba93cebac1f66f5466adfb81e35060e">RGWSetTempUrl</a>
-, <a class="el" href="classRGWSetTempUrl__ObjStore__SWIFT.html#a17f8371270b5d2600cfb8491e8199ec7">RGWSetTempUrl_ObjStore_SWIFT</a>
+, <a class="el" href="classRGWSetBucketWebsite.html#a79cd71c01cb6801cf5d0db9fee9c8725">RGWSetBucketWebsite</a>
+, <a class="el" href="classRGWSetBucketWebsite__ObjStore__S3.html#a9d76b156700e012d582d489f64aef805">RGWSetBucketWebsite_ObjStore_S3</a>
+, <a class="el" href="classRGWSetRequestPayment.html#a2b359cc122063eb229322187ebc368b3">RGWSetRequestPayment</a>
+, <a class="el" href="classRGWSetRequestPayment__ObjStore__S3.html#ae20ae3ce8f06c93a82bfe240ca29686f">RGWSetRequestPayment_ObjStore_S3</a>
 , <a class="el" href="classRGWStatAccount.html#a7f5977b7014d37896b39a5ff82d9eeff">RGWStatAccount</a>
 , <a class="el" href="classRGWStatAccount__ObjStore__SWIFT.html#a51fd52fe75798211c64b41eac015eed0">RGWStatAccount_ObjStore_SWIFT</a>
 , <a class="el" href="classRGWStatBucket.html#a535afc629b8054e1921242f4fb5f8fc9">RGWStatBucket</a>
@@ -277,44 +365,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classRGWStatBucket__ObjStore__SWIFT.html#a53cb0020e2d5d506eee4269b30e3a4e5">RGWStatBucket_ObjStore_SWIFT</a>
 </li>
 <li>send_response_begin()
-: <a class="el" href="classRGWListBuckets.html#a2879ad1c01b4fb0d99a7acce2649a204">RGWListBuckets</a>
+: <a class="el" href="classrgw_1_1RGWListBucketsRequest.html#a2000cc05c28804e04a10620eab3bdf53">rgw::RGWListBucketsRequest</a>
+, <a class="el" href="classRGWListBuckets.html#a2879ad1c01b4fb0d99a7acce2649a204">RGWListBuckets</a>
 , <a class="el" href="classRGWListBuckets__ObjStore__S3.html#afd175fd190d16241e5044d5fdbfbcb9b">RGWListBuckets_ObjStore_S3</a>
 , <a class="el" href="classRGWListBuckets__ObjStore__SWIFT.html#aa2bf61b3a5d20da755248108a406d33b">RGWListBuckets_ObjStore_SWIFT</a>
 </li>
 <li>send_response_data()
-: <a class="el" href="classRGWGetObj.html#a56283adf24ea54e57f935b219e110d0a">RGWGetObj</a>
+: <a class="el" href="classrgw_1_1RGWListBucketsRequest.html#a384688b20c1b8f4bbb9aaff335239963">rgw::RGWListBucketsRequest</a>
+, <a class="el" href="classrgw_1_1RGWReadRequest.html#a048d9c743d05e997636aaea1a89e7aa6">rgw::RGWReadRequest</a>
+, <a class="el" href="classrgw_1_1RGWStatObjRequest.html#ae7703b5ff67da9d27369e448ace4180b">rgw::RGWStatObjRequest</a>
+, <a class="el" href="classRGWGetObj.html#a56283adf24ea54e57f935b219e110d0a">RGWGetObj</a>
 , <a class="el" href="classRGWGetObj__ObjStore__S3.html#a85a1f66f2f9b1339af98223bfe2a86b4">RGWGetObj_ObjStore_S3</a>
+, <a class="el" href="classRGWGetObj__ObjStore__S3Website.html#adc992f8df83c7a680ae0608425616576">RGWGetObj_ObjStore_S3Website</a>
 , <a class="el" href="classRGWGetObj__ObjStore__SWIFT.html#ab757268bb1646b9c67a2455015c7d2a3">RGWGetObj_ObjStore_SWIFT</a>
 , <a class="el" href="classRGWListBuckets.html#aacfa5baa64f162d55ff1361efd3c82ab">RGWListBuckets</a>
 , <a class="el" href="classRGWListBuckets__ObjStore__S3.html#a707f7c00a53e533ad484030d38200616">RGWListBuckets_ObjStore_S3</a>
 , <a class="el" href="classRGWListBuckets__ObjStore__SWIFT.html#ae6bd1a776bdce595b41764b6269ca75d">RGWListBuckets_ObjStore_SWIFT</a>
 </li>
+<li>send_response_data_error()
+: <a class="el" href="classrgw_1_1RGWReadRequest.html#a76bd369cf6dcec239b36e74ff1af9fb6">rgw::RGWReadRequest</a>
+, <a class="el" href="classrgw_1_1RGWStatObjRequest.html#aeaf06ce869fba5c3bf85f29343359f3d">rgw::RGWStatObjRequest</a>
+, <a class="el" href="classRGWGetObj.html#a19ad8e2efec87e0ae0685d3f92c16438">RGWGetObj</a>
+, <a class="el" href="classRGWGetObj__ObjStore__S3.html#a49b0d741deeba4a6a99c8b48dfd5b011">RGWGetObj_ObjStore_S3</a>
+, <a class="el" href="classRGWGetObj__ObjStore__S3Website.html#aa0ed18d96f24eead845fa84d38c18e7a">RGWGetObj_ObjStore_S3Website</a>
+, <a class="el" href="classRGWGetObj__ObjStore__SWIFT.html#a0af1ff782a23c53e666d7dabf7edda38">RGWGetObj_ObjStore_SWIFT</a>
+</li>
 <li>send_response_end()
-: <a class="el" href="classRGWListBuckets.html#aa72f16f2c3a06655e15ed16364466e6e">RGWListBuckets</a>
+: <a class="el" href="classrgw_1_1RGWListBucketsRequest.html#a1696d5967f7de8188ca2a865a5be7860">rgw::RGWListBucketsRequest</a>
+, <a class="el" href="classRGWListBuckets.html#aa72f16f2c3a06655e15ed16364466e6e">RGWListBuckets</a>
 , <a class="el" href="classRGWListBuckets__ObjStore__S3.html#afcebe748496c5a96724c8ea92481e116">RGWListBuckets_ObjStore_S3</a>
 , <a class="el" href="classRGWListBuckets__ObjStore__SWIFT.html#a2aaa3b66faf682133cbeccf4213b2b9d">RGWListBuckets_ObjStore_SWIFT</a>
 , <a class="el" href="classRGWOp__BILog__List.html#ad5cb544256e23399179245f9cde45b99">RGWOp_BILog_List</a>
 , <a class="el" href="classRGWOp__Opstate__List.html#a9141634303f71f84d891052a9a7aea61">RGWOp_Opstate_List</a>
 </li>
 <li>send_status()
-: <a class="el" href="classRGWClientIO.html#a430b18637ac6a17c22eea7e8126709d8">RGWClientIO</a>
+: <a class="el" href="classrgw_1_1RGWLibIO.html#a4465c0812c9d0360fb8c843968354837">rgw::RGWLibIO</a>
 , <a class="el" href="classRGWDeleteMultiObj.html#acb5ca8306252614b4af1b5e8019f95ee">RGWDeleteMultiObj</a>
 , <a class="el" href="classRGWDeleteMultiObj__ObjStore__S3.html#a0676f0addaa169ba2549fcb3aefdbcec">RGWDeleteMultiObj_ObjStore_S3</a>
-, <a class="el" href="classRGWFCGX.html#a67f2b03d85630cf244eb8468cce7f347">RGWFCGX</a>
-, <a class="el" href="classRGWLoadGenIO.html#ae3edcccf4e9bf201aedc0a491f614100">RGWLoadGenIO</a>
-, <a class="el" href="classRGWMongoose.html#a45387c37b4689a0ef3f950de53dbb983">RGWMongoose</a>
+, <a class="el" href="classRGWFCGX.html#a3fda45a8c408cec6a80e6678fdd42d9d">RGWFCGX</a>
+, <a class="el" href="classRGWLoadGenIO.html#a0c6ff47cd7bbbb48d3d6dbe59cef8b48">RGWLoadGenIO</a>
+, <a class="el" href="classRGWMongoose.html#a99422874ae59ca67304a1c9384be7d34">RGWMongoose</a>
+, <a class="el" href="classRGWStreamIO.html#a0bcf78cf0cbdec303d172fe79e687e51">RGWStreamIO</a>
 </li>
 <li>send_versioned_response()
-: <a class="el" href="classRGWListBucket__ObjStore__S3.html#aa5a3b607fbb4f0f95ba7467708731edd">RGWListBucket_ObjStore_S3</a>
+: <a class="el" href="classrgw_1_1RGWReaddirRequest.html#abb541000a93595345b11acfcc3788b7a">rgw::RGWReaddirRequest</a>
+, <a class="el" href="classrgw_1_1RGWStatLeafRequest.html#ab4198fe81558945256401b582e79440e">rgw::RGWStatLeafRequest</a>
+, <a class="el" href="classRGWListBucket__ObjStore__S3.html#aa5a3b607fbb4f0f95ba7467708731edd">RGWListBucket_ObjStore_S3</a>
 </li>
 <li>sent_data
-: <a class="el" href="classRGWListBuckets.html#a3efc0acb578f7d212361e5cffc6be09c">RGWListBuckets</a>
+: <a class="el" href="classRGWGetUsage.html#ac53b74ba854b372cfdf57700aa1faef1">RGWGetUsage</a>
+, <a class="el" href="classRGWListBuckets.html#a3efc0acb578f7d212361e5cffc6be09c">RGWListBuckets</a>
 </li>
 <li>sent_header
 : <a class="el" href="classRGWGetObj__ObjStore.html#aeca760aff31394390c3439876de4f7c2">RGWGetObj_ObjStore</a>
 </li>
-<li>service_catalog
-: <a class="el" href="classKeystoneToken.html#a33a1d2005a6ec4045db5a228222a7d7f">KeystoneToken</a>
+<li>serve_errordoc()
+: <a class="el" href="classRGWHandler__REST__S3Website.html#ab101865640025723b6e334b13d4ce8dd">RGWHandler_REST_S3Website</a>
 </li>
 <li>set()
 : <a class="el" href="classACLGranteeType.html#a345a0290a9860b65e6e51042d08680a4">ACLGranteeType</a>
@@ -325,31 +431,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classXMLObjIter.html#a5939c655e54f8b87f1eaf577860bdce4">XMLObjIter</a>
 </li>
 <li>set_access_key()
-: <a class="el" href="classRGWLoadGenProcess.html#a37b2ab1fe1f47cefa240a5893a230aed">RGWLoadGenProcess</a>
+: <a class="el" href="classrgw_1_1RGWLibProcess.html#a53e7fb44b61efa817522d869e92d692b">rgw::RGWLibProcess</a>
+, <a class="el" href="classRGWLoadGenProcess.html#a37b2ab1fe1f47cefa240a5893a230aed">RGWLoadGenProcess</a>
 , <a class="el" href="structRGWUserAdminOpState.html#a5f08ed7ed447709ddc9d89b5ad22bf8f">RGWUserAdminOpState</a>
 </li>
 <li>set_account()
-: <a class="el" href="classRGWClientIO.html#a6614388e46fd71b34485098cfe11f2fc">RGWClientIO</a>
+: <a class="el" href="classRGWClientIO.html#abcaaa4f1d05336548c5ead3fc05433c8">RGWClientIO</a>
+</li>
+<li>set_admin()
+: <a class="el" href="structRGWUserAdminOpState.html#ae0205d447538b438e42638bf5f4f3805">RGWUserAdminOpState</a>
 </li>
 <li>set_as_default()
-: <a class="el" href="structRGWRegion.html#a289d247be785bfd4de937b19006f49c6">RGWRegion</a>
+: <a class="el" href="classRGWSystemMetaObj.html#a112384a310641818ec4fc3fd9860c6c7">RGWSystemMetaObj</a>
+, <a class="el" href="structRGWZoneGroup.html#a33df917e311ff7f2856a6f995a051c90">RGWZoneGroup</a>
+, <a class="el" href="structRGWZoneParams.html#aa88f2b3d2555680194c5ffff72480f28">RGWZoneParams</a>
+</li>
+<li>set_atime()
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#a31ca13a8d792f594a537fa058d846292">rgw::RGWFileHandle</a>
 </li>
 <li>set_atomic()
 : <a class="el" href="structRGWObjectCtx.html#a5d7af9dc04ac726a515676f945aa9db5">RGWObjectCtx</a>
 , <a class="el" href="classRGWRados.html#a251034ea68698a2f3166b8a4471e2a73">RGWRados</a>
 </li>
 <li>set_attr()
-: <a class="el" href="classRGWCache.html#ac69796dfa7fecc656f748fb304f28911">RGWCache&lt; T &gt;</a>
-, <a class="el" href="classRGWMetadataManager.html#a475c7a8414675cb8dd88916f84aaddb7">RGWMetadataManager</a>
-, <a class="el" href="classRGWRados.html#ac89474509340fb84e696dc34a3d61888">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a4bc9756a57d44cd1cd78a99208ce97d5">RGWRados</a>
 </li>
 <li>set_attrs()
-: <a class="el" href="classRGWCache.html#a49dd72e1611971d3ce6f28ad5c6d6997">RGWCache&lt; T &gt;</a>
-, <a class="el" href="classRGWMetadataManager.html#ad33895062b36b8f773a29a5af39d141a">RGWMetadataManager</a>
-, <a class="el" href="classRGWRados.html#aa938cca19677c546ab88ac9ce2edfeeb">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a82502e6a48b03df96c1360231d7a05ae">RGWRados</a>
 </li>
 <li>set_bilog_flags()
 : <a class="el" href="classRGWRados_1_1Bucket_1_1UpdateIndex.html#aeb2a6804ea53f1506a838e36840bcaca">RGWRados::Bucket::UpdateIndex</a>
+</li>
+<li>set_blocked_by()
+: <a class="el" href="classRGWCoroutinesStack.html#abb2376246509c51b909b66c00bfba7bd">RGWCoroutinesStack</a>
 </li>
 <li>set_bucket()
 : <a class="el" href="structRGWBucketAdminOpState.html#a67cfaacb6c7302d5972d43709d8ddfff">RGWBucketAdminOpState</a>
@@ -358,7 +472,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWBucketAdminOpState.html#ad4bd1f0ea85aeb141bba5a56698134a0">RGWBucketAdminOpState</a>
 </li>
 <li>set_bucket_location_by_rule()
-: <a class="el" href="classRGWRados.html#a6a2475c2785cb9089727703315e0ee9d">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a59b052c4039aa9081761df539d273e42">RGWRados</a>
 </li>
 <li>set_bucket_name()
 : <a class="el" href="structRGWBucketAdminOpState.html#a96234a3eba62a12a0e9a4e05b98552af">RGWBucketAdminOpState</a>
@@ -367,16 +481,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classRGWRados.html#a673c52c883fdfb29ea18ff2a31dffe37">RGWRados</a>
 </li>
 <li>set_bucket_quota()
-: <a class="el" href="structRGWUserAdminOpState.html#adb3ffe27c58be7ac798599612c009578">RGWUserAdminOpState</a>
+: <a class="el" href="classRGWPeriod.html#ab4cbadb0dc967e31b3ec75c729388eb9">RGWPeriod</a>
+, <a class="el" href="structRGWUserAdminOpState.html#adb3ffe27c58be7ac798599612c009578">RGWUserAdminOpState</a>
 </li>
 <li>set_buckets_enabled()
 : <a class="el" href="classRGWRados.html#a82ab799eaa7fb269c92a29294ff55bc0">RGWRados</a>
+</li>
+<li>set_cache_enabled()
+: <a class="el" href="classRGWRados.html#a372dcd363ad143251f99d3bb71d6d3e1">RGWRados</a>
 </li>
 <li>set_cancelled()
 : <a class="el" href="structget__obj__data.html#af98cd7ef0568b04f508f2cde97612a6c">get_obj_data</a>
 </li>
 <li>set_canon()
-: <a class="el" href="classACLGrant.html#a14718453522e8447a854b5efa69259bd">ACLGrant</a>
+: <a class="el" href="classACLGrant.html#a54ed7830e5d257d37b2d670e1be94807">ACLGrant</a>
 </li>
 <li>set_caps()
 : <a class="el" href="structRGWUserAdminOpState.html#ae5e7531eeb33899a0568219af73c44ae">RGWUserAdminOpState</a>
@@ -387,10 +505,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_context()
 : <a class="el" href="classRGWRados.html#a8288b37333dac0c20ab7152bc44707af">RGWRados</a>
 </li>
+<li>set_cr_done()
+: <a class="el" href="classRGWCoroutine.html#a15bce10b8fbd959412a9473b03f0dd82">RGWCoroutine</a>
+</li>
+<li>set_cr_error()
+: <a class="el" href="classRGWCoroutine.html#a576a8ced300f52809ad477f0082e3bcd">RGWCoroutine</a>
+</li>
+<li>set_ctime()
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#ae0578e2667ece4725262575f6feaa31b">rgw::RGWFileHandle</a>
+</li>
 <li>set_ctx()
 : <a class="el" href="classObjectCache.html#a8ecf733f4e7897d522f81103639f8706">ObjectCache</a>
 , <a class="el" href="classRGWAccessControlList.html#af5087fff71ca9a21a499d99a59645162">RGWAccessControlList</a>
 , <a class="el" href="classRGWAccessControlPolicy.html#aaded4552d8caf3c6e0eb1d520a8cf8dc">RGWAccessControlPolicy</a>
+</li>
+<li>set_current_period()
+: <a class="el" href="classRGWRealm.html#ad71c49bf63546441188ccf0bdb9fd9cf">RGWRealm</a>
+</li>
+<li>set_custom_http_response()
+: <a class="el" href="classRGWGetObj__ObjStore__S3.html#a1b5667dfd76da43a1887c006a4dbc6d8">RGWGetObj_ObjStore_S3</a>
 </li>
 <li>set_date()
 : <a class="el" href="structRGWLoadGenRequestEnv.html#a493c4209cb065a189340f3df69313cbf">RGWLoadGenRequestEnv</a>
@@ -398,8 +531,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_delete_children()
 : <a class="el" href="structRGWBucketAdminOpState.html#a524e1bb6006ef905c4ed16e84a78d30d">RGWBucketAdminOpState</a>
 </li>
+<li>set_description()
+: <a class="el" href="classRGWCoroutine.html#a08295386b658198679ac3c52b0f65eb1">RGWCoroutine</a>
+</li>
 <li>set_display_name()
 : <a class="el" href="structRGWUserAdminOpState.html#a6761a58d22e5e02d15ba6bc600fd7442">RGWUserAdminOpState</a>
+</li>
+<li>set_enabled()
+: <a class="el" href="classObjectCache.html#a7eab6ab565d38101395e8aa4c488e9f4">ObjectCache</a>
+</li>
+<li>set_epoch()
+: <a class="el" href="classRGWPeriod.html#a79d645ea58d88abc55e47dd5bff69c3b">RGWPeriod</a>
 </li>
 <li>set_exclusive()
 : <a class="el" href="structRGWUserAdminOpState.html#aee7d96c136c4f9d19242038d6ebe7af9">RGWUserAdminOpState</a>
@@ -456,7 +598,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classRGWGetObj.html#a11e56723ede705b4fcf6d105e5638edd">RGWGetObj</a>
 </li>
 <li>set_group()
-: <a class="el" href="classACLGrant.html#a455a7fa0d54a49b7338c0f9c85b8af60">ACLGrant</a>
+: <a class="el" href="classACLGrant.html#ae1796faf4223ef1af8a59aa7c2392b67">ACLGrant</a>
 </li>
 <li>set_head()
 : <a class="el" href="classRGWObjManifest.html#a1bb0b42e6a32ef8a77bdda3c0f6d055e">RGWObjManifest</a>
@@ -464,11 +606,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_head_size()
 : <a class="el" href="classRGWObjManifest.html#a9afd0edc97131a8d73f207fd44f2e76e">RGWObjManifest</a>
 </li>
+<li>set_headers()
+: <a class="el" href="classRGWRESTSimpleRequest.html#a7d240ce19860e585f71333dc40dca78f">RGWRESTSimpleRequest</a>
+</li>
 <li>set_id()
-: <a class="el" href="classACLOwner.html#a3eeac03fa4807a9f812bd1be04184494">ACLOwner</a>
+: <a class="el" href="classACLOwner.html#af1bf8eb8a289cdf16e1a4f21636cfa7b">ACLOwner</a>
+, <a class="el" href="classRGWPeriod.html#afff76caceb2f2e55f0463d71f769b83c">RGWPeriod</a>
+, <a class="el" href="classRGWSystemMetaObj.html#abedb6ea3bd4d2f173639392375e9d02f">RGWSystemMetaObj</a>
 </li>
 <li>set_in_cb()
-: <a class="el" href="classRGWRESTStreamReadRequest.html#a18986f08c3ccd2d39a1671d7b4f303f0">RGWRESTStreamReadRequest</a>
+: <a class="el" href="classRGWRESTStreamRWRequest.html#a99e56b96206e26d346549ac53b13e287">RGWRESTStreamRWRequest</a>
 </li>
 <li>set_in_extra_data()
 : <a class="el" href="classrgw__obj.html#a244794360fcf52da4b630ae69f884c68">rgw_obj</a>
@@ -479,11 +626,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_instance()
 : <a class="el" href="classrgw__obj.html#a994eb4861078aeb6f8dfa8bca15cb682">rgw_obj</a>
 </li>
+<li>set_interval_wait()
+: <a class="el" href="classRGWCoroutinesStack.html#ad2c03a7755c8fcfb60e6f28cb0ee5801">RGWCoroutinesStack</a>
+</li>
+<li>set_io_blocked()
+: <a class="el" href="classRGWCoroutine.html#a83c79463d59e40ac18fb8c9ef7225d45">RGWCoroutine</a>
+, <a class="el" href="classRGWCoroutinesStack.html#a6d4c9bd8b3561a9483937a72d6c9c642">RGWCoroutinesStack</a>
+</li>
+<li>set_is_scheduled()
+: <a class="el" href="classRGWCoroutinesStack.html#aadfafd9d227e33cdf2d197c85a2f54f4">RGWCoroutinesStack</a>
+</li>
 <li>set_key_type()
 : <a class="el" href="structRGWUserAdminOpState.html#a06096b704f1aceac3a9d7a65a80e6951">RGWUserAdminOpState</a>
 </li>
+<li>set_latest_epoch()
+: <a class="el" href="classRGWPeriod.html#a103116e91249c0bf7bdc8539213de913">RGWPeriod</a>
+</li>
 <li>set_loc()
 : <a class="el" href="classrgw__obj.html#a75970fd354bea37525006cbb121f9ab3">rgw_obj</a>
+</li>
+<li>set_locked()
+: <a class="el" href="classRGWContinuousLeaseCR.html#a0abd8e2e305ee4218af05ab3ea39d872">RGWContinuousLeaseCR</a>
 </li>
 <li>set_logging()
 : <a class="el" href="classRGWRESTMgr.html#a7419a3f794d68979289e75f822c28d02">RGWRESTMgr</a>
@@ -491,23 +654,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_manifest()
 : <a class="el" href="classRGWObjManifest_1_1obj__iterator.html#a37b7d9509c021f14c6b9495a25136bb3">RGWObjManifest::obj_iterator</a>
 </li>
+<li>set_marker_tracker()
+: <a class="el" href="classRGWDataSyncShardCR.html#a2dc1da9b52d1a43527169fa3962fab04">RGWDataSyncShardCR</a>
+, <a class="el" href="classRGWMetaSyncShardCR.html#a1d3da2d344a075b9f57893d3de27422f">RGWMetaSyncShardCR</a>
+</li>
 <li>set_max_buckets()
-: <a class="el" href="structRGWUserAdminOpState.html#a510f34870bf21ea1105c5a37785abe28">RGWUserAdminOpState</a>
+: <a class="el" href="structRGWUserAdminOpState.html#a9f25af86c515cd049ea96f34df9f24ae">RGWUserAdminOpState</a>
 </li>
 <li>set_max_head_size()
 : <a class="el" href="classRGWObjManifest.html#a11025bf31c1b9ce09e0e0590dbaef801">RGWObjManifest</a>
 </li>
-<li>set_mtime
-: <a class="el" href="structRGWRados_1_1Object_1_1Write_1_1MetaParams.html#aa9075f94c2230a8bb32243bb1f81fa4d">RGWRados::Object::Write::MetaParams</a>
+<li>set_mtime()
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#a20daf561a0fb92aa12ae6cd449b93afb">rgw::RGWFileHandle</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Write_1_1MetaParams.html#a7f6cbe73116dfb78df2f01394288acf3">RGWRados::Object::Write::MetaParams</a>
 </li>
 <li>set_multipart_part_rule()
 : <a class="el" href="classRGWObjManifest.html#a35bb7534bb3f9343171715a2e551cd58">RGWObjManifest</a>
 </li>
 <li>set_name()
-: <a class="el" href="classACLOwner.html#a2f6c02856e1d649c121b716ac8b6ab2f">ACLOwner</a>
+: <a class="el" href="classACLOwner.html#a680ee3df46e1a8b3aba5511a3e24517c">ACLOwner</a>
+, <a class="el" href="classRGWSystemMetaObj.html#a1b7619b1ad55c748595ae55fc9dad9c5">RGWSystemMetaObj</a>
+</li>
+<li>set_need_retry()
+: <a class="el" href="classRGWSyncShardMarkerTrack.html#ae16d9bbeef29b0e40aac79a38dec8e46">RGWSyncShardMarkerTrack&lt; T, K &gt;</a>
+</li>
+<li>set_nlink()
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#a20a64de75ec640751e3503c2cfaf3da3">rgw::RGWFileHandle</a>
 </li>
 <li>set_ns()
-: <a class="el" href="classrgw__obj.html#a7f22877da0ff516af0d9b9769cab7c5f">rgw_obj</a>
+: <a class="el" href="classrgw__obj.html#ace474136a877856e46eef1c94e335757">rgw_obj</a>
 </li>
 <li>set_obj()
 : <a class="el" href="classrgw__obj.html#a0e8aee0a17235e6a951ee1b14f307501">rgw_obj</a>
@@ -519,7 +694,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWBucketAdminOpState.html#af06adc40d4c413f82ae5e73c581b9820">RGWBucketAdminOpState</a>
 </li>
 <li>set_olh()
-: <a class="el" href="classRGWRados.html#a09ec0ead46df1c1e890c160ee91e6b85">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a4330c273bb3af1ea605ec06fa150d88c">RGWRados</a>
 </li>
 <li>set_olh_epoch()
 : <a class="el" href="classRGWPutObjProcessor__Atomic.html#a5b4b0f29627407ad8b456e292d43ea0f">RGWPutObjProcessor_Atomic</a>
@@ -527,20 +702,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_op_mask()
 : <a class="el" href="structRGWUserAdminOpState.html#a4a24ab7b107a56e4d57230bd31a82d38">RGWUserAdminOpState</a>
 </li>
+<li>set_outbl()
+: <a class="el" href="classRGWRESTStreamRWRequest.html#ab3a00268a34f8cf4b7e78d42b8671d39">RGWRESTStreamRWRequest</a>
+</li>
 <li>set_owner()
 : <a class="el" href="classRGWAccessControlPolicy.html#afee8b7f6ac3c554565c2c72f88158691">RGWAccessControlPolicy</a>
+</li>
+<li>set_params()
+: <a class="el" href="classRGWRESTSimpleRequest.html#a5fa8142c6b47ae5f589ef26c01584123">RGWRESTSimpleRequest</a>
 </li>
 <li>set_perm()
 : <a class="el" href="structRGWUserAdminOpState.html#afa1f97c163157d5d9a9243d769e0d954">RGWUserAdminOpState</a>
 </li>
 <li>set_permissions()
-: <a class="el" href="classACLPermission.html#ae6feb3a3e3d615288a93ba95a7121cb6">ACLPermission</a>
+: <a class="el" href="classACLPermission.html#a38714b1c297d924634cc4a3386849437">ACLPermission</a>
 </li>
 <li>set_populated()
 : <a class="el" href="structRGWUserAdminOpState.html#ac506dfb9006f755d7815ea4b07e7bc07">RGWUserAdminOpState</a>
 </li>
 <li>set_post_data()
-: <a class="el" href="classRGWPostHTTPData.html#a2419be95f8ebc6a2ad5246d245e37cfb">RGWPostHTTPData</a>
+: <a class="el" href="classRGWHTTPTransceiver.html#abd8c12eaff4e72b22336e632826663fd">RGWHTTPTransceiver</a>
+</li>
+<li>set_predecessor()
+: <a class="el" href="classRGWPeriod.html#adb42ef2eeb3237e165e6979493667f68">RGWPeriod</a>
 </li>
 <li>set_prefetch_data()
 : <a class="el" href="structRGWObjectCtx.html#a793aa6972a90bfb9019b22d7029118b1">RGWObjectCtx</a>
@@ -555,12 +739,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_purge_keys()
 : <a class="el" href="structRGWUserAdminOpState.html#ae9d15574d2aa2614d1f8dd52c601bc03">RGWUserAdminOpState</a>
 </li>
-<li>set_region()
-: <a class="el" href="classRGWRados.html#a0d1366444ae5c746613c93f01ecd4b4c">RGWRados</a>
+<li>set_read_attrs()
+: <a class="el" href="classRGWAsyncGetSystemObj.html#aa1da9ba548de8d92080c24d2d08193a4">RGWAsyncGetSystemObj</a>
+</li>
+<li>set_realm_epoch()
+: <a class="el" href="classRGWPeriod.html#a41ac8e06c3cb9ed1ea6add29ee7d971a">RGWPeriod</a>
+</li>
+<li>set_realm_id()
+: <a class="el" href="classRGWPeriod.html#a6ab1191f5a5a3879abbe091aa69f4277">RGWPeriod</a>
+</li>
+<li>set_referer()
+: <a class="el" href="classACLGrant.html#a8a80f4b0c64c4eda8ff66ca8c8c31222">ACLGrant</a>
 </li>
 <li>set_response()
 : <a class="el" href="classRGWGetBucketStats__CB.html#ac41f300725402db794943c7cb033d3b7">RGWGetBucketStats_CB</a>
 , <a class="el" href="classRGWGetUserStats__CB.html#a4383daddf2df38d6c94cd3bd05973114">RGWGetUserStats_CB</a>
+</li>
+<li>set_retcode()
+: <a class="el" href="classRGWCoroutine.html#a71a3278d2998c966e8a08021ed4a3936">RGWCoroutine</a>
 </li>
 <li>set_secret_key()
 : <a class="el" href="structRGWUserAdminOpState.html#a27c6c6744bab2689301bb14ec52ffdc7">RGWUserAdminOpState</a>
@@ -568,18 +764,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_send_length()
 : <a class="el" href="classRGWHTTPClient.html#a340f32b14fc826866fe476175ceb2ed8">RGWHTTPClient</a>
 </li>
+<li>set_shard_id()
+: <a class="el" href="classRGWRados_1_1Bucket.html#ac23dd48c9cec3a7b0f3975dce571753b">RGWRados::Bucket</a>
+</li>
+<li>set_size()
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#a174ce3fbc31fbb2ff07875aea1d56fe1">rgw::RGWFileHandle</a>
+</li>
+<li>set_sleeping()
+: <a class="el" href="classRGWCoroutine.html#aab2ada61e785db0e4d6f50f56825fdf8">RGWCoroutine</a>
+, <a class="el" href="classRGWCoroutinesStack.html#ad53a1f6649145a553136a4b1ea00474f">RGWCoroutinesStack</a>
+</li>
 <li>set_state()
-: <a class="el" href="classRGWOpState.html#af21ee20dc274919b1e942e44aafb0cfa">RGWOpState</a>
+: <a class="el" href="classRGWCoroutine.html#af1d7a6ff09f7d4ad4a09daebdfb364f2">RGWCoroutine</a>
+, <a class="el" href="classRGWOpState.html#af21ee20dc274919b1e942e44aafb0cfa">RGWOpState</a>
 , <a class="el" href="classRGWOpStateSingleOp.html#ac1002ea10e8d9c1f8952408becb2102e">RGWOpStateSingleOp</a>
 </li>
 <li>set_stats()
-: <a class="el" href="classRGWQuotaCache.html#af37ce4036639e271d6c070f6ae18a1ef">RGWQuotaCache&lt; T &gt;</a>
+: <a class="el" href="classRGWQuotaCache.html#a81bd315d7c70e10c277d5790d9575f39">RGWQuotaCache&lt; T &gt;</a>
+</li>
+<li>set_status()
+: <a class="el" href="classRGWCoroutine.html#a6389d99ed7c42126a5d7713de8cc77cb">RGWCoroutine</a>
+, <a class="el" href="classRGWFormatter__Plain.html#ac02b443d83d8d11be54137df0b94c58d">RGWFormatter_Plain</a>
 </li>
 <li>set_subuser()
 : <a class="el" href="structRGWUserAdminOpState.html#ac2e0decba241a3c2a53641badde00e69">RGWUserAdminOpState</a>
 </li>
 <li>set_suspension()
 : <a class="el" href="structRGWUserAdminOpState.html#a738569882b50d661ed1595e7c243c898">RGWUserAdminOpState</a>
+</li>
+<li>set_sync_info_cr()
+: <a class="el" href="classRGWDataSyncCR.html#a4d99564a74791648df3b743a4ce787d2">RGWDataSyncCR</a>
 </li>
 <li>set_system()
 : <a class="el" href="classRGWHTTPArgs.html#a330dfe2287a6e98b126bc59a0a635203">RGWHTTPArgs</a>
@@ -591,21 +805,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_temp_url_key()
 : <a class="el" href="structRGWUserAdminOpState.html#a481d48ddbf32ac345bda8b25f3a7ccff">RGWUserAdminOpState</a>
 </li>
+<li>set_threaded()
+: <a class="el" href="classRGWHTTPManager.html#af5cc9dab93dca0091e454d9625c08e9a">RGWHTTPManager</a>
+</li>
+<li>set_times()
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#a527db9bd370f200b120ec9d136a38c15">rgw::RGWFileHandle</a>
+</li>
 <li>set_trivial_rule()
 : <a class="el" href="classRGWObjManifest.html#ad50eac3e1a074e290ccdeaf0a8236ffd">RGWObjManifest</a>
+</li>
+<li>set_uid()
+: <a class="el" href="classrgw_1_1RGWLibIO.html#ac013c5a146e3f429e942c6152c3b1078">rgw::RGWLibIO</a>
 </li>
 <li>set_user_email()
 : <a class="el" href="structRGWUserAdminOpState.html#a513e03f4198b2dde953849c6c62547fd">RGWUserAdminOpState</a>
 </li>
 <li>set_user_id()
-: <a class="el" href="structRGWBucketAdminOpState.html#a6a1cd85582585040d721b0e3ed71d02e">RGWBucketAdminOpState</a>
-, <a class="el" href="structRGWUserAdminOpState.html#a90ee3ca21461da53b828f7158e1d6330">RGWUserAdminOpState</a>
+: <a class="el" href="structRGWBucketAdminOpState.html#a779d63f61eb995c43fbc6f18ce01d02b">RGWBucketAdminOpState</a>
+, <a class="el" href="structRGWUserAdminOpState.html#a9a0b1d80bbbc9e93aa2b680e84c1d82c">RGWUserAdminOpState</a>
 </li>
 <li>set_user_info()
-: <a class="el" href="structRGWUserAdminOpState.html#a01d1476b6667d7da702e48bc63c28608">RGWUserAdminOpState</a>
+: <a class="el" href="classRGWHTTPClient.html#a67ad4f0175fb610332e4ffc238576152">RGWHTTPClient</a>
+, <a class="el" href="classRGWRESTPostResource.html#a3557555690f849a6cea8cbee8c5b1fb7">RGWRESTPostResource</a>
+, <a class="el" href="classRGWRESTReadResource.html#a0161e8ac59f42ec6b9770ef5c0f33c5f">RGWRESTReadResource</a>
+, <a class="el" href="structRGWUserAdminOpState.html#a01d1476b6667d7da702e48bc63c28608">RGWUserAdminOpState</a>
 </li>
 <li>set_user_quota()
-: <a class="el" href="structRGWUserAdminOpState.html#aef08bf564aa24e993b8ee554fcf5bd48">RGWUserAdminOpState</a>
+: <a class="el" href="classRGWPeriod.html#a5dc256106ff8cab0455efdd4e9c8dbd0">RGWPeriod</a>
+, <a class="el" href="structRGWUserAdminOpState.html#aef08bf564aa24e993b8ee554fcf5bd48">RGWUserAdminOpState</a>
 </li>
 <li>set_vals()
 : <a class="el" href="classRGWPolicyCondition.html#a3108fbbbeadc134716c6a3e25bc0b0ba">RGWPolicyCondition</a>
@@ -613,34 +840,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_var_checked()
 : <a class="el" href="classRGWPolicy.html#a64d3d8af38c801000ea31a6e86df0add">RGWPolicy</a>
 </li>
+<li>set_verify_ssl()
+: <a class="el" href="classRGWHTTPClient.html#a1db09d373a335c53cf1fd6d6339b5feb">RGWHTTPClient</a>
+</li>
 <li>set_version_id()
 : <a class="el" href="classRGWPutObjProcessor__Atomic.html#a7909728f367fcf8b53c224173e7a40c8">RGWPutObjProcessor_Atomic</a>
 </li>
 <li>set_versioning_disabled()
 : <a class="el" href="classRGWRados_1_1Object.html#aa2aa41fbde8ffd7db162585fc530cef9">RGWRados::Object</a>
 </li>
-<li>set_zone()
-: <a class="el" href="classRGWRados.html#a5aae134e369fa7ddc360c9ca71a9ca4f">RGWRados</a>
+<li>set_wait_for_child()
+: <a class="el" href="classRGWCoroutinesStack.html#a8b2ef308a7c14fefa85f7cc36d096ac2">RGWCoroutinesStack</a>
 </li>
 <li>shadow_obj
 : <a class="el" href="structRGWObjState.html#a74ec7155f985463579e9029bc4fae106">RGWObjState</a>
 </li>
 <li>shard
 : <a class="el" href="structRGWDataChangesLog_1_1LogMarker.html#a5f744c328eedfbfb9aadbb006f8c955a">RGWDataChangesLog::LogMarker</a>
+, <a class="el" href="structRGWOrphanSearchStage.html#ac37aa25546c2a8eec888d131f1bc37f1">RGWOrphanSearchStage</a>
 </li>
 <li>shard_id
 : <a class="el" href="structrgw__bucket__shard.html#a6f623c8052fa8df15ed2a6747fbd624c">rgw_bucket_shard</a>
+, <a class="el" href="classRGWListBucket.html#afc6090ca35197c503e6c2916b5a57d81">RGWListBucket</a>
 , <a class="el" href="structRGWRados_1_1BucketShard.html#a6e01b39e21378c5a641020515ef0e78d">RGWRados::BucketShard</a>
 </li>
 <li>shard_name()
-: <a class="el" href="classRGWRados.html#a8298c3120bc7e8de5d979c8f6f6049bb">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a0cba6de61d430a8de64dd444c10e9a29">RGWRados</a>
+</li>
+<li>shard_obj_name()
+: <a class="el" href="structRGWDataSyncEnv.html#ab2486920568268e3f244b1401b930028">RGWDataSyncEnv</a>
+, <a class="el" href="classRGWDataSyncStatusManager.html#a6d87d4cc74849ea3b9658c4baffe2630">RGWDataSyncStatusManager</a>
+, <a class="el" href="structRGWMetaSyncEnv.html#ac372e8cc10cda802d7b2f33374a467ca">RGWMetaSyncEnv</a>
+</li>
+<li>short_zone_ids
+: <a class="el" href="structRGWPeriodMap.html#a850e99a751aff2dd156ba366c65e67f3">RGWPeriodMap</a>
 </li>
 <li>should_get_stats()
-: <a class="el" href="classRGWListBuckets.html#a518d1e80a4940a748e9254bcdbffeeec">RGWListBuckets</a>
+: <a class="el" href="classRGWGetUsage.html#abc248bbaec5b8766e65116307d24d1ac">RGWGetUsage</a>
+, <a class="el" href="classRGWListBuckets.html#a518d1e80a4940a748e9254bcdbffeeec">RGWListBuckets</a>
 , <a class="el" href="classRGWListBuckets__ObjStore__SWIFT.html#a90894abca0ad7a2068115139a76fd6cd">RGWListBuckets_ObjStore_SWIFT</a>
 </li>
+<li>should_redirect()
+: <a class="el" href="structRGWBucketWebsiteConf.html#ae3d01f6a66cf1f13de40680ded875b6d">RGWBucketWebsiteConf</a>
+</li>
 <li>show()
-: <a class="el" href="classRGWUsage.html#aa37c2470565d85f5f7db9e5cbf0891b8">RGWUsage</a>
+: <a class="el" href="classRGWUsage.html#adb6941af748bd8733e9113bd20d8b125">RGWUsage</a>
+</li>
+<li>show_log_entries
+: <a class="el" href="classRGWGetUsage.html#a7d7e9be8548d9e29a3cffedbaeab1feb">RGWGetUsage</a>
+</li>
+<li>show_log_sum
+: <a class="el" href="classRGWGetUsage.html#ace54c7fa3980b6fc8d69101366154cae">RGWGetUsage</a>
 </li>
 <li>sign()
 : <a class="el" href="structRGWLoadGenRequestEnv.html#a1f88a634c0be91e3b7d6c35d20a01ca9">RGWLoadGenRequestEnv</a>
@@ -648,33 +898,95 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>sign_request()
 : <a class="el" href="classRGWRESTSimpleRequest.html#aea204638a337913d4fd50079d6423071">RGWRESTSimpleRequest</a>
 </li>
+<li>signature
+: <a class="el" href="structrgw__aws4__auth.html#a973abf9743a58f99f08edf587cafdada">rgw_aws4_auth</a>
+</li>
+<li>SignatureHelper()
+: <a class="el" href="classRGWTempURLAuthEngine_1_1SignatureHelper.html#a46249f5c6b19e1c74023350b46b3067e">RGWTempURLAuthEngine::SignatureHelper</a>
+</li>
+<li>signed_hdrs
+: <a class="el" href="structrgw__aws4__auth.html#a7a0d55364a3937b37135d902dc4a1fde">rgw_aws4_auth</a>
+</li>
+<li>signedheaders
+: <a class="el" href="structrgw__aws4__auth.html#a107a2c15c19f3af7bbb59d47f940ab28">rgw_aws4_auth</a>
+</li>
+<li>signing_k
+: <a class="el" href="structrgw__aws4__auth.html#a7a08a951a35512e8d1e49efe025aa6c1">rgw_aws4_auth</a>
+</li>
+<li>signing_key
+: <a class="el" href="structrgw__aws4__auth.html#a6bb9e231da915d92119e0c83ac905419">rgw_aws4_auth</a>
+</li>
+<li>simple_receive_http_data()
+: <a class="el" href="classRGWHTTPClient.html#a923163ec9c0c814039adbd41c213eddd">RGWHTTPClient</a>
+</li>
+<li>simple_receive_http_header()
+: <a class="el" href="classRGWHTTPClient.html#abd8fbd77908a89ff6291662854b89b68">RGWHTTPClient</a>
+</li>
+<li>simple_send_http_data()
+: <a class="el" href="classRGWHTTPClient.html#a524331338f36ad7b99ab91e16479d6d3">RGWHTTPClient</a>
+</li>
+<li>sio
+: <a class="el" href="classRGWClientIOStreamBuf.html#a2f450bcc747f93c54e41d37f2ff33bd3">RGWClientIOStreamBuf</a>
+</li>
 <li>size
-: <a class="el" href="structObjectMetaInfo.html#aa513f8c0c91e0c89a588f0517e047afb">ObjectMetaInfo</a>
+: <a class="el" href="structbucket__list__entry.html#a817827afb68d08c984ef0cbdf8030867">bucket_list_entry</a>
+, <a class="el" href="structObjectMetaInfo.html#aa513f8c0c91e0c89a588f0517e047afb">ObjectMetaInfo</a>
 , <a class="el" href="structplain__stack__entry.html#af516233db45e18148871c74d0bc4edd3">plain_stack_entry</a>
+, <a class="el" href="structrgw__slo__part.html#a8cf175097f5db7208a96f021ca791dfc">rgw_slo_part</a>
 , <a class="el" href="structRGWBucketEnt.html#a33cfe5a0bc2030baefece598b4dac1bc">RGWBucketEnt</a>
 , <a class="el" href="structRGWObjEnt.html#aabd4f03b7695df02a8a92fec03580655">RGWObjEnt</a>
 , <a class="el" href="structRGWObjManifestPart.html#a23e58a7cd30a314dc1f8519f25d2ba90">RGWObjManifestPart</a>
 , <a class="el" href="structRGWObjState.html#a565f124606c4c3e5d17d71ff74c6c58f">RGWObjState</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Stat_1_1Result.html#a300a069c0e0beb7d517735333eafeb82">RGWRados::Object::Stat::Result</a>
+, <a class="el" href="structRGWStorageStats.html#a77261d5571d293874c35c65ab3fd1dec">RGWStorageStats</a>
 , <a class="el" href="structRGWUploadPartInfo.html#aacb6fa4f5eba4d3c3a8ea2d45002bb5f">RGWUploadPartInfo</a>
+</li>
+<li>size_bytes
+: <a class="el" href="structrgw__slo__entry.html#a1d1145aa8981200cd6b20c734094a371">rgw_slo_entry</a>
 </li>
 <li>size_rounded
 : <a class="el" href="structRGWBucketEnt.html#ac719704fc00807a24af41476d13dff38">RGWBucketEnt</a>
+, <a class="el" href="structRGWStorageStats.html#ac891d7744349b17104cf737933b2e103">RGWStorageStats</a>
+</li>
+<li>skip_manifest
+: <a class="el" href="classRGWGetObj.html#a75305fe9e6a2ef63a46094b1b9aab5f2">RGWGetObj</a>
+</li>
+<li>slo_info
+: <a class="el" href="classRGWPutObj.html#af5544ce47960035d34033c992ce826f7">RGWPutObj</a>
 </li>
 <li>sock_fd
 : <a class="el" href="classRGWProcess.html#aee61a7a9e12ffdfb403bac103cbc8533">RGWProcess</a>
 </li>
 <li>source
 : <a class="el" href="structRGWRados_1_1Object_1_1Read.html#a3024d2dda669d0413f0e44cecf577812">RGWRados::Object::Read</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Stat.html#a256a96c954be4316a4b84f1651786590">RGWRados::Object::Stat</a>
 , <a class="el" href="structRGWRados_1_1SystemObject_1_1Read.html#a40105a623bb76564f64cf9b54dd06f14">RGWRados::SystemObject::Read</a>
 </li>
 <li>source_zone
-: <a class="el" href="classRGWCopyObj.html#a1d25153ecc99610263df5a1f5c774ed4">RGWCopyObj</a>
+: <a class="el" href="structrgw__sync__error__info.html#a57762fd99b670d8862cbc7fb127ac569">rgw_sync_error_info</a>
+, <a class="el" href="classRGWCopyObj.html#a1d25153ecc99610263df5a1f5c774ed4">RGWCopyObj</a>
+, <a class="el" href="structRGWDataSyncEnv.html#a2899a20cb4b4d790c2a24bd295b79023">RGWDataSyncEnv</a>
+</li>
+<li>spawn()
+: <a class="el" href="classRGWCoroutine.html#a1ef9eb58401aeb5626538e29fce21b12">RGWCoroutine</a>
+, <a class="el" href="classRGWCoroutinesStack.html#a5507a2bea9518fd3bdf1f56c9327c9fe">RGWCoroutinesStack</a>
+</li>
+<li>spawn_next()
+: <a class="el" href="classRGWListRemoteDataLogCR.html#aea493f8ac2e42ea9b84cd488238271f2">RGWListRemoteDataLogCR</a>
+, <a class="el" href="classRGWListRemoteMDLogCR.html#a176a14d89df5731e834a741ad0cef8fd">RGWListRemoteMDLogCR</a>
+, <a class="el" href="classRGWReadRemoteDataLogInfoCR.html#a7eeaa2f62d7304f76cb25375b681ea84">RGWReadRemoteDataLogInfoCR</a>
+, <a class="el" href="classRGWReadRemoteMDLogInfoCR.html#a2c17f343865fbfe94f872208448cd0b1">RGWReadRemoteMDLogInfoCR</a>
+, <a class="el" href="classRGWShardCollectCR.html#a5d4854348bb1ce4f07f55951e9a7a791">RGWShardCollectCR</a>
+</li>
+<li>spawned
+: <a class="el" href="classRGWCoroutine.html#a620d434a11f6184045ad000d33dbd477">RGWCoroutine</a>
 </li>
 <li>src
 : <a class="el" href="structRGWCloneRangeInfo.html#a99189b96d5cb4e4104296503e4725830">RGWCloneRangeInfo</a>
 </li>
 <li>src_bucket
-: <a class="el" href="classRGWCopyObj.html#ad66d83e4839833ed71630e7f447bd7aa">RGWCopyObj</a>
+: <a class="el" href="structreq__init__state.html#a0e184b06054ea849bb1b3c5e732aabe0">req_init_state</a>
+, <a class="el" href="classRGWCopyObj.html#ad66d83e4839833ed71630e7f447bd7aa">RGWCopyObj</a>
 </li>
 <li>src_bucket_info
 : <a class="el" href="classRGWCopyObj.html#a43c22057380bbe7083bfb16c37a9a651">RGWCopyObj</a>
@@ -683,6 +995,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structreq__state.html#a0a8be031d3dfaa6ff9500ae0aa3e580f">req_state</a>
 , <a class="el" href="classRGWCopyObj.html#ab860955c6c93daee522f5009c9cc5d27">RGWCopyObj</a>
 </li>
+<li>src_mtime
+: <a class="el" href="classRGWCopyObj.html#ac1b4ac84071693bf313b73978efcf2e5">RGWCopyObj</a>
+</li>
+<li>src_name
+: <a class="el" href="classrgw_1_1RGWCopyObjRequest.html#a49a290359e4fec4be49d694b174aa0b7">rgw::RGWCopyObjRequest</a>
+</li>
 <li>src_object
 : <a class="el" href="structreq__state.html#a72a6e29f70fea4bf43a5c684f0487285">req_state</a>
 , <a class="el" href="classRGWCopyObj.html#a2a6cabdfc4a48375de2c8af761d14bb8">RGWCopyObj</a>
@@ -690,12 +1008,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>src_ofs
 : <a class="el" href="structRGWCloneRangeInfo.html#aa8bc0113ded2dafa9ed41039ce71294d">RGWCloneRangeInfo</a>
 </li>
+<li>src_parent
+: <a class="el" href="classrgw_1_1RGWCopyObjRequest.html#afa4e69794fe431ddeb98085f2ca7dbab">rgw::RGWCopyObjRequest</a>
+</li>
+<li>src_tenant_name
+: <a class="el" href="structreq__state.html#a65a2f9c358fd949c7acf60cd0c85d3a9">req_state</a>
+, <a class="el" href="classRGWCopyObj.html#af716ddd2435c14f85a481366a6f91bc3">RGWCopyObj</a>
+</li>
+<li>stack
+: <a class="el" href="classRGWCoroutine.html#a1beb8ca86f8399dadec929a74c7d73f5">RGWCoroutine</a>
+, <a class="el" href="structRGWCoroutinesEnv.html#a783f3f3565fc809334c9eb65d7d6319c">RGWCoroutinesEnv</a>
+</li>
 <li>stack_rule()
 : <a class="el" href="classRGWCORSConfiguration.html#afa8888f012b644cef0a0b249288f1bb4">RGWCORSConfiguration</a>
 </li>
+<li>stage
+: <a class="el" href="structRGWOrphanSearchStage.html#aa6859378500ae0fb04e53eb7faa2775b">RGWOrphanSearchStage</a>
+, <a class="el" href="structRGWOrphanSearchState.html#a3d0477c0c9b2619d05ba23f4763f7443">RGWOrphanSearchState</a>
+</li>
 <li>start()
-: <a class="el" href="classRGWFormatterFlusher.html#a400ff77832d16c903d33d159a9b63bf1">RGWFormatterFlusher</a>
+: <a class="el" href="classRGWAsyncRadosProcessor.html#a50780b689c46807cc6f3a952f73a9f6c">RGWAsyncRadosProcessor</a>
+, <a class="el" href="classRGWFormatterFlusher.html#a400ff77832d16c903d33d159a9b63bf1">RGWFormatterFlusher</a>
 , <a class="el" href="classRGWGetObj.html#a350d0f005adbc8a1556560873d3f31b4">RGWGetObj</a>
+, <a class="el" href="classRGWRadosThread.html#a3a3ffb6d5e5b5bf9762162404f48bdce">RGWRadosThread</a>
+, <a class="el" href="classRGWSyncShardMarkerTrack.html#a9d4d9da2f1e61d999c3404f4ca89aa30">RGWSyncShardMarkerTrack&lt; T, K &gt;</a>
+</li>
+<li>start_date
+: <a class="el" href="classRGWGetUsage.html#a71ca6e4d09b2a85cb2110973c2e45a6f">RGWGetUsage</a>
 </li>
 <li>start_ofs
 : <a class="el" href="structRGWObjManifestRule.html#a98187622ba1d66b8bb66d58e3292cfc4">RGWObjManifestRule</a>
@@ -705,28 +1044,106 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>start_processor()
 : <a class="el" href="classRGWGC.html#afe89bcf26949b653bedeaecc8619efec">RGWGC</a>
+, <a class="el" href="classRGWObjectExpirer.html#a2d8d78c2114d069cf23e89b5890bceb7">RGWObjectExpirer</a>
+</li>
+<li>start_req()
+: <a class="el" href="classrgw_1_1RGWLibFrontend.html#aa9be79aefc5f482de545faa1d971e701">rgw::RGWLibFrontend</a>
+</li>
+<li>start_request()
+: <a class="el" href="classrgw_1_1RGWLibProcess.html#a974153fb85a7afade423503ef983ff71">rgw::RGWLibProcess</a>
+</li>
+<li>start_time
+: <a class="el" href="structRGWOrphanSearchInfo.html#a0852c4db1c14548daf8e38a61f879bf0">RGWOrphanSearchInfo</a>
 </li>
 <li>started
 : <a class="el" href="classRGWFormatterFlusher.html#ae66751eee34f1a22b8e49b5b7b63f370">RGWFormatterFlusher</a>
 </li>
 <li>stat()
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#a42f32743687a46f2f670e785938cf7b0">rgw::RGWFileHandle</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Stat.html#a16128987e1aeb1249d1e4f5d9e444b27">RGWRados::Object::Stat</a>
+</li>
+<li>Stat()
+: <a class="el" href="structRGWRados_1_1Object_1_1Stat.html#a32e8477f1ed185db6f97935a18fca07a">RGWRados::Object::Stat</a>
+</li>
+<li>stat()
 : <a class="el" href="structRGWRados_1_1SystemObject_1_1Read.html#ac972acced7cab45b2f966f12de1a2dfa">RGWRados::SystemObject::Read</a>
+</li>
+<li>stat_async()
+: <a class="el" href="structRGWRados_1_1Object_1_1Stat.html#a2672b8a8e7179afc29a6fef866960cc4">RGWRados::Object::Stat</a>
+</li>
+<li>stat_bucket()
+: <a class="el" href="classrgw_1_1RGWLibFS.html#a8eecd5c12a238d61161a4937e4622680">rgw::RGWLibFS</a>
 </li>
 <li>stat_buckets
 : <a class="el" href="structRGWBucketAdminOpState.html#a724c2587ecaeb9f0d2be67ce16e71d8b">RGWBucketAdminOpState</a>
+</li>
+<li>stat_leaf()
+: <a class="el" href="classrgw_1_1RGWLibFS.html#aaff0d404a8c3dfc2ded831f803236050">rgw::RGWLibFS</a>
 </li>
 <li>stat_params
 : <a class="el" href="structRGWRados_1_1SystemObject_1_1Read.html#a8c7c5f9c59fbe5baedf15dec7d25bd06">RGWRados::SystemObject::Read</a>
 </li>
 <li>stat_system_obj()
-: <a class="el" href="classRGWRados.html#ada21179fa1847fc9bba928d302d87d54">RGWRados</a>
+: <a class="el" href="classRGWRados.html#a83ea6712a201789f7bb5abdfd03cc273">RGWRados</a>
 </li>
 <li>state
-: <a class="el" href="structRGWRados_1_1Object_1_1Read.html#a961ad1a51290c6505ea8ef6c814b3254">RGWRados::Object::Read</a>
-, <a class="el" href="structRGWRados_1_1SystemObject_1_1Read.html#a3b706d668d947ad79ea0ae9a3b92cdaf">RGWRados::SystemObject::Read</a>
+: <a class="el" href="structrgw__bucket__shard__sync__info.html#a63a6b1db25870a05aca150e0599e3ec1">rgw_bucket_shard_sync_info</a>
+, <a class="el" href="structrgw__data__sync__info.html#a64fd1a7c51704d8977a6f8196498ab70">rgw_data_sync_info</a>
+, <a class="el" href="structrgw__data__sync__marker.html#a8dce3672e184305c7ea19f45f14178ad">rgw_data_sync_marker</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a64dede94f4bcc794b705e62b6a6958db">rgw_meta_sync_info</a>
+, <a class="el" href="structrgw__meta__sync__marker.html#a942658b5cd86e38b8deb954fc80c1361">rgw_meta_sync_marker</a>
+, <a class="el" href="classRGWCoroutine.html#a68f108b40805707bfd66ef07b0787047">RGWCoroutine</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Read.html#a961ad1a51290c6505ea8ef6c814b3254">RGWRados::Object::Read</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Stat.html#a9c35b14da81c24bb21684839e4ec91a6">RGWRados::Object::Stat</a>
+</li>
+<li>State()
+: <a class="el" href="structRGWRados_1_1Object_1_1Stat_1_1State.html#a475f52465c74551af441bf6190af72cc">RGWRados::Object::Stat::State</a>
+</li>
+<li>state
+: <a class="el" href="structRGWRados_1_1SystemObject_1_1Read.html#a3b706d668d947ad79ea0ae9a3b92cdaf">RGWRados::SystemObject::Read</a>
 </li>
 <li>state_from_str()
 : <a class="el" href="classRGWOpState.html#ae14d7ea88f65b8a8c1a02263642f6cae">RGWOpState</a>
+</li>
+<li>state_init()
+: <a class="el" href="classRGWCloneMetaLogCoroutine.html#a32be3afa91e329afab50b0fc6a4212ed">RGWCloneMetaLogCoroutine</a>
+</li>
+<li>state_read_shard_status()
+: <a class="el" href="classRGWCloneMetaLogCoroutine.html#ad3a710634de531941b693caa66bed2bc">RGWCloneMetaLogCoroutine</a>
+</li>
+<li>state_read_shard_status_complete()
+: <a class="el" href="classRGWCloneMetaLogCoroutine.html#a9b1b3e00a3bbcc4ef5182ff2e7201686">RGWCloneMetaLogCoroutine</a>
+</li>
+<li>state_receive_rest_response()
+: <a class="el" href="classRGWCloneMetaLogCoroutine.html#aadfbcf5076ae1bf306983d8ef34aa71f">RGWCloneMetaLogCoroutine</a>
+</li>
+<li>state_send_rest_request()
+: <a class="el" href="classRGWCloneMetaLogCoroutine.html#a5a0b4db8522400b7e39054e478c77408">RGWCloneMetaLogCoroutine</a>
+</li>
+<li>state_store_mdlog_entries()
+: <a class="el" href="classRGWCloneMetaLogCoroutine.html#ac1dbe94ee77cbf3b0426664999e41974">RGWCloneMetaLogCoroutine</a>
+</li>
+<li>state_store_mdlog_entries_complete()
+: <a class="el" href="classRGWCloneMetaLogCoroutine.html#af2d967c78048e121ba2c2721d2ff39ff">RGWCloneMetaLogCoroutine</a>
+</li>
+<li>StateBuildingFullSyncMaps
+: <a class="el" href="structrgw__data__sync__info.html#a0fdb45e7336e71bedab27e1061d37a9ea1d71888534d89211833ef4b827b4df64">rgw_data_sync_info</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a550876307fd125825921e43e06b829a8a2d2ec081ab409d32ab805d82e3490852">rgw_meta_sync_info</a>
+</li>
+<li>StateFullSync
+: <a class="el" href="structrgw__bucket__shard__sync__info.html#ad2c3ed5bf74c0355f4b5120603080455a22b3e220fa354eacac58d7882d1c08eb">rgw_bucket_shard_sync_info</a>
+</li>
+<li>StateIncrementalSync
+: <a class="el" href="structrgw__bucket__shard__sync__info.html#ad2c3ed5bf74c0355f4b5120603080455a71685811c8a84f8cf0fa85849d54f28e">rgw_bucket_shard_sync_info</a>
+</li>
+<li>StateInit
+: <a class="el" href="structrgw__bucket__shard__sync__info.html#ad2c3ed5bf74c0355f4b5120603080455ae093b01e782bbbfe2f2dc2339dbb2bad">rgw_bucket_shard_sync_info</a>
+, <a class="el" href="structrgw__data__sync__info.html#a0fdb45e7336e71bedab27e1061d37a9eab3efba2e9dfa467c966bc03aa66cba9e">rgw_data_sync_info</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a550876307fd125825921e43e06b829a8a553431dd3492ee6bce48c25cc37f0971">rgw_meta_sync_info</a>
+</li>
+<li>StateSync
+: <a class="el" href="structrgw__data__sync__info.html#a0fdb45e7336e71bedab27e1061d37a9eadd673254bf558ed4d311ca5d38c249f9">rgw_data_sync_info</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a550876307fd125825921e43e06b829a8aac4bfe7f6c7ccc7708aeebf977a54b54">rgw_meta_sync_info</a>
 </li>
 <li>StatParams()
 : <a class="el" href="structRGWRados_1_1SystemObject_1_1Read_1_1StatParams.html#ad0deec245e1605a82ba1ac6612011998">RGWRados::SystemObject::Read::StatParams</a>
@@ -745,30 +1162,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>status
 : <a class="el" href="structLogStatusDump.html#ad2a06efedcebe389ead4caa63a936a1e">LogStatusDump</a>
 , <a class="el" href="structObjectCacheInfo.html#a142944093887fdac746930965a49dc69">ObjectCacheInfo</a>
-, <a class="el" href="structrgw__swift__auth__info.html#a990f3701903e26e077f9a43ac8dafa76">rgw_swift_auth_info</a>
 , <a class="el" href="structRGWMetadataLogData.html#a914c77518fad54973aa7caa0c9774beb">RGWMetadataLogData</a>
 , <a class="el" href="classRGWRESTSimpleRequest.html#a736636c3faa2a232bfa46562a01bb49f">RGWRESTSimpleRequest</a>
 </li>
 <li>status_dumped
 : <a class="el" href="classRGWDeleteMultiObj.html#a65effd10062a675d43ff7645e1785d18">RGWDeleteMultiObj</a>
 </li>
+<li>status_oid()
+: <a class="el" href="classRGWBucketSyncStatusManager.html#aa9b8686fb525e144e2ffb7cd5a44893c">RGWBucketSyncStatusManager</a>
+, <a class="el" href="structRGWDataSyncEnv.html#aff11b8e925f561d2365876e12502e702">RGWDataSyncEnv</a>
+, <a class="el" href="structRGWMetaSyncEnv.html#acb3600306dd508fb378174f061ad64dc">RGWMetaSyncEnv</a>
+</li>
 <li>stop()
-: <a class="el" href="classRGWFrontend.html#a55d89f359e256d70dd9c3b5f5e168b97">RGWFrontend</a>
+: <a class="el" href="classrgw_1_1RGWLib.html#a6d3ae367ebf3829faece8cdc2b807533">rgw::RGWLib</a>
+, <a class="el" href="classRGWAsyncRadosProcessor.html#a3ff823f452f9b0d792ffb505a054858c">RGWAsyncRadosProcessor</a>
+, <a class="el" href="classRGWCoroutinesManager.html#a5a5299490b5965c91497a8839ead8f33">RGWCoroutinesManager</a>
+, <a class="el" href="classRGWDataSyncStatusManager.html#a54073af63e876f5fef1857f42a6e236c">RGWDataSyncStatusManager</a>
+, <a class="el" href="classRGWFrontend.html#a55d89f359e256d70dd9c3b5f5e168b97">RGWFrontend</a>
+, <a class="el" href="classRGWHTTPManager.html#a28da2691e647f536b1aa88a23cfb8309">RGWHTTPManager</a>
+, <a class="el" href="classRGWMetaSyncStatusManager.html#a09e7d7e861cb968355de446bd88049f8">RGWMetaSyncStatusManager</a>
 , <a class="el" href="classRGWMongooseFrontend.html#a25648d7af6a94802f8467916c66bc402">RGWMongooseFrontend</a>
+, <a class="el" href="classRGWObjectExpirer_1_1OEWorker.html#ab0c10b9af3e0883b459dda824da8a8ed">RGWObjectExpirer::OEWorker</a>
 , <a class="el" href="classRGWProcessFrontend.html#ae633ce41c0c35477152ee187d754cbf4">RGWProcessFrontend</a>
+, <a class="el" href="classRGWRadosThread.html#adc9504bf3a47b83bcc0c0881d6249801">RGWRadosThread</a>
 , <a class="el" href="classRGWUserStatsCache.html#a54fb1ccca1699a8cf961cef71e1f2fdf">RGWUserStatsCache</a>
+</li>
+<li>stop_process()
+: <a class="el" href="classRGWRadosThread.html#a04c76b86dac9aa41c2880f75f5ad44ac">RGWRadosThread</a>
 </li>
 <li>stop_processor()
 : <a class="el" href="classRGWGC.html#a01dd1a8e79ef7dda9ae8c3df6197f62b">RGWGC</a>
+, <a class="el" href="classRGWObjectExpirer.html#a3d608acf6b7598cd1e55d87669716146">RGWObjectExpirer</a>
+</li>
+<li>stop_spawned_services()
+: <a class="el" href="classRGWDataSyncShardCR.html#a8fda94b24da122a98785d578746049ab">RGWDataSyncShardCR</a>
 </li>
 <li>stop_thread()
 : <a class="el" href="classRGWUserStatsCache.html#a18bad64508c120544a74db3646cfa96c">RGWUserStatsCache</a>
 </li>
+<li>storage_class
+: <a class="el" href="structbucket__list__entry.html#a9a3aa7e87643823af91ca87046eb0f41">bucket_list_entry</a>
+</li>
 <li>store
-: <a class="el" href="structRGWBucketInstanceMetadataHandler_1_1list__keys__info.html#a64fc3ac3f6680ee6dcf17424df4b1540">RGWBucketInstanceMetadataHandler::list_keys_info</a>
+: <a class="el" href="classRGWAsyncRadosProcessor.html#ae60e8990e5280532cae13cfbee575fd6">RGWAsyncRadosProcessor</a>
+, <a class="el" href="structRGWBucketInstanceMetadataHandler_1_1list__keys__info.html#a64fc3ac3f6680ee6dcf17424df4b1540">RGWBucketInstanceMetadataHandler::list_keys_info</a>
 , <a class="el" href="structRGWBucketMetadataHandler_1_1list__keys__info.html#a1adcc5a87e2329bf15c9e3009fbd7dd8">RGWBucketMetadataHandler::list_keys_info</a>
+, <a class="el" href="classRGWBulkDelete_1_1Deleter.html#aafefee08019f6ca62f59c3117272550f">RGWBulkDelete::Deleter</a>
+, <a class="el" href="structRGWDataSyncEnv.html#ab7541b364e300f4ede2ed5980ec4b1fa">RGWDataSyncEnv</a>
+, <a class="el" href="classRGWExternalTokenAuthEngine.html#af10c10cb64ca2be26b4468bd7044c8a8">RGWExternalTokenAuthEngine</a>
 , <a class="el" href="classRGWHandler.html#a20d55e657ddb8fb1b83585a21c51c953">RGWHandler</a>
+, <a class="el" href="structRGWMetaSyncEnv.html#a8064825477daed04afa31af7b610210c">RGWMetaSyncEnv</a>
 , <a class="el" href="structRGWObjectCtx.html#a3dc28afcc3b20c510f032e651bf5cb44">RGWObjectCtx</a>
+, <a class="el" href="classRGWObjectExpirer.html#af7d7951e43b56f114c066b8fb0195580">RGWObjectExpirer</a>
 , <a class="el" href="classRGWOp.html#aeb3e258c53141f1cbfb83e113cda4eed">RGWOp</a>
 , <a class="el" href="classRGWProcess.html#a126e710ca27fdcfa8249d3dda943ffaa">RGWProcess</a>
 , <a class="el" href="structRGWProcessEnv.html#ab65455bc7b3390107eab6307f76d437d">RGWProcessEnv</a>
@@ -776,17 +1221,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classRGWQuotaCache_1_1AsyncRefreshHandler.html#a839d81b0a4c654158889a4c254be92cf">RGWQuotaCache&lt; T &gt;::AsyncRefreshHandler</a>
 , <a class="el" href="classRGWQuotaCache.html#ab4b0bf2be0f3dcfc6057da739d7e6936">RGWQuotaCache&lt; T &gt;</a>
 , <a class="el" href="structRGWRados_1_1BucketShard.html#aa48a69ecee350370d75e7d2ec72929e4">RGWRados::BucketShard</a>
-, <a class="el" href="structRGWRegion.html#a27f833cf1fad27cfe881298b9158aaad">RGWRegion</a>
-, <a class="el" href="structRGWRegionMap.html#aa453607308f0c8fff182c20c66196dd8">RGWRegionMap</a>
+, <a class="el" href="classRGWRadosThread.html#ac525c973ddceaf25042e413a8fc4f8e4">RGWRadosThread</a>
+, <a class="el" href="classRGWRemoteAuthApplier.html#a0a0695d206f174e0fb6e097d1663068c">RGWRemoteAuthApplier</a>
 , <a class="el" href="classRGWReplicaLogger.html#affd2e01a4bc67443f8a70553d378bd94">RGWReplicaLogger</a>
+, <a class="el" href="classRGWSignedTokenAuthEngine.html#a83cba4ff938ef09b963d630562d362a6">RGWSignedTokenAuthEngine</a>
+, <a class="el" href="classRGWSystemMetaObj.html#aeb68b845b161bdf0b370b4bfe33310c0">RGWSystemMetaObj</a>
+, <a class="el" href="classRGWTempURLAuthEngine.html#a0c444825c905f75dcecd0be41c6ae23f">RGWTempURLAuthEngine</a>
 , <a class="el" href="structRGWUserMetadataHandler_1_1list__keys__info.html#ab6e8a5262b00bcc3bd2c2b7d52c6dc43">RGWUserMetadataHandler::list_keys_info</a>
+</li>
+<li>store_entries()
+: <a class="el" href="classRGWOrphanStore.html#a68a24b594a09be53fea6cf202f844ef9">RGWOrphanStore</a>
+</li>
+<li>store_entries_in_shard()
+: <a class="el" href="classRGWMetadataLog.html#a9082fc55ef71a4cef73aa3962c9732ee">RGWMetadataLog</a>
 </li>
 <li>store_entry()
 : <a class="el" href="classRGWStateLog.html#a1e6e06cd6168454e455fbfaff363b414">RGWStateLog</a>
 </li>
 <li>store_info()
-: <a class="el" href="structRGWRegion.html#a16595d794d527abbd06c3b05d54a9f09">RGWRegion</a>
-, <a class="el" href="structRGWZoneParams.html#a29e8945a79c942397b6545b35d859765">RGWZoneParams</a>
+: <a class="el" href="classRGWPeriod.html#a360f4640a3723ef68db0adc199f873cd">RGWPeriod</a>
+, <a class="el" href="classRGWSystemMetaObj.html#ad5e3d5a057e56c8be32e5c42f88af920">RGWSystemMetaObj</a>
+</li>
+<li>store_marker()
+: <a class="el" href="classRGWBucketFullSyncShardMarkerTrack.html#a503bf70b5b0220c9f1e4af6af2fb9202">RGWBucketFullSyncShardMarkerTrack</a>
+, <a class="el" href="classRGWBucketIncSyncShardMarkerTrack.html#a98628fb808b84880959f7034f04aea8d">RGWBucketIncSyncShardMarkerTrack</a>
+, <a class="el" href="classRGWDataSyncShardMarkerTrack.html#ace9bb9bda50fdeb3def344c6d5c63601">RGWDataSyncShardMarkerTrack</a>
+, <a class="el" href="classRGWMetaSyncShardMarkerTrack.html#a98286c53c1a93a183814901827d6f038">RGWMetaSyncShardMarkerTrack</a>
+, <a class="el" href="classRGWSyncShardMarkerTrack.html#a7378881fa6fe8576269217d32b21fb69">RGWSyncShardMarkerTrack&lt; T, K &gt;</a>
+</li>
+<li>store_name()
+: <a class="el" href="classRGWSystemMetaObj.html#a64f6febbffe7edbf3abc9df5d8b46f99">RGWSystemMetaObj</a>
 </li>
 <li>StoreDestructor()
 : <a class="el" href="classStoreDestructor.html#abdd4b14dbfc7419b28784ccf4e6674be">StoreDestructor</a>
@@ -794,6 +1258,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>str
 : <a class="el" href="structrgw__flags__desc.html#a7789a6e5d048f898604fa895f21f9d47">rgw_flags_desc</a>
 , <a class="el" href="structstr__len.html#a5be5c51ee2341d8e4031905a78ae491a">str_len</a>
+</li>
+<li>StreamIntoBufferlist()
+: <a class="el" href="classStreamIntoBufferlist.html#ad92edf7e1e4e5efa55c3b9e964ec6b6a">StreamIntoBufferlist</a>
 </li>
 <li>StreamObjData()
 : <a class="el" href="classStreamObjData.html#a3fa448bf7c1ffc8427d20ba078349ac7">StreamObjData</a>
@@ -807,11 +1274,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>stripe_max_size
 : <a class="el" href="structRGWObjManifestRule.html#a5c3d82adb5d3ee0ff3a1119568d76eb2">RGWObjManifestRule</a>
 </li>
+<li>stype()
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#a56f38544722185b5776797652641a1f1">rgw::RGWFileHandle</a>
+</li>
 <li>sub_resource_exists()
-: <a class="el" href="classRGWHTTPArgs.html#a5b9384aa36243812ecdbbf5829db96a9">RGWHTTPArgs</a>
+: <a class="el" href="classRGWHTTPArgs.html#af8aa340c607083e9473b75a1ed02e776">RGWHTTPArgs</a>
 </li>
 <li>subuser
 : <a class="el" href="structRGWAccessKey.html#ac012e756bc10bbe9fccdbc7d632340e7">RGWAccessKey</a>
+, <a class="el" href="classRGWLocalAuthApplier.html#a6f7ad448a6175692b9bdbd9d20a33b13">RGWLocalAuthApplier</a>
 , <a class="el" href="structRGWUserAdminOpState.html#ad655246f7e095be98e09080f6519c235">RGWUserAdminOpState</a>
 </li>
 <li>subuser_params_checked
@@ -824,6 +1295,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classRGWUser.html#ac1a440c0648dd3306c5ff29a5f9f1b05">RGWUser</a>
 , <a class="el" href="structRGWUserInfo.html#ae615b0ece386e5159bea4459ada88d12">RGWUserInfo</a>
 </li>
+<li>summary_map
+: <a class="el" href="classRGWGetUsage.html#ab7eadc754170ed63dc8ffd20273a0826">RGWGetUsage</a>
+</li>
 <li>supplied_etag
 : <a class="el" href="classRGWPostObj.html#a221454ee82a2036ad4f33d98273da8d5">RGWPostObj</a>
 , <a class="el" href="classRGWPutObj.html#a3d90970377b397d7e237122cc9f0d651">RGWPutObj</a>
@@ -831,6 +1305,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>supplied_md5_b64
 : <a class="el" href="classRGWPostObj.html#a9516466abd3dcf3cab7c8b3c65656303">RGWPostObj</a>
 , <a class="el" href="classRGWPutObj.html#ae8be34122687ffca10e4251722a02c0f">RGWPutObj</a>
+</li>
+<li>supports_account_metadata()
+: <a class="el" href="classRGWListBuckets.html#abcafb0af492e0419d4b958752809f57a">RGWListBuckets</a>
+, <a class="el" href="classRGWListBuckets__ObjStore__SWIFT.html#af85239632da2929ae520c5383ab13cff">RGWListBuckets_ObjStore_SWIFT</a>
 </li>
 <li>suspended
 : <a class="el" href="structRGWUserAdminOpState.html#aabd28fb0a755c4c60ba35c79c0e7a386">RGWUserAdminOpState</a>
@@ -840,28 +1318,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWUserAdminOpState.html#a99c954543e8dc98955222ef8efc77fe6">RGWUserAdminOpState</a>
 </li>
 <li>swap_modified_buckets()
-: <a class="el" href="classRGWUserStatsCache.html#a41360c58968ec23658654ed6d482068d">RGWUserStatsCache</a>
-</li>
-<li>swift_groups
-: <a class="el" href="structreq__state.html#a39d39e988f59cf95259d195f5f0e4d6f">req_state</a>
+: <a class="el" href="classRGWUserStatsCache.html#a1eec91672b7f6e0c7a9bbb328c988545">RGWUserStatsCache</a>
 </li>
 <li>swift_keys
 : <a class="el" href="structRGWUserInfo.html#a018c6bb939db4e3d47db30a266404d7a">RGWUserInfo</a>
 </li>
-<li>swift_user
-: <a class="el" href="structreq__state.html#aa3904b44ec593a75819c56a165a1f9ce">req_state</a>
+<li>swift_ver_location
+: <a class="el" href="structRGWBucketInfo.html#a1db1ca1feff3c2d72792004843f2244f">RGWBucketInfo</a>
+, <a class="el" href="classRGWCreateBucket.html#aeb6bbc9456666eca8817f37463260ded">RGWCreateBucket</a>
+, <a class="el" href="classRGWPutMetadataBucket.html#a3e6c688c38cf4c08b9b3340d03560b62">RGWPutMetadataBucket</a>
+</li>
+<li>swift_versioning
+: <a class="el" href="structRGWBucketInfo.html#a6df150a10eb4d80e1cffee48e11584d9">RGWBucketInfo</a>
+</li>
+<li>swift_versioning_copy()
+: <a class="el" href="classRGWRados.html#af329c86f90a81c5ce4d20610c19c3766">RGWRados</a>
 </li>
 <li>sync_all_users()
 : <a class="el" href="classRGWUserStatsCache.html#ae960bf36c705c18deed61711c4e36e0b">RGWUserStatsCache</a>
 </li>
 <li>sync_bucket()
-: <a class="el" href="classRGWUserStatsCache.html#a7e5a3d90c23ea1bd6bd5955bbbf540ed">RGWUserStatsCache</a>
+: <a class="el" href="classRGWUserStatsCache.html#af82665a417aaf31dde69038802efadcb">RGWUserStatsCache</a>
+</li>
+<li>sync_info
+: <a class="el" href="structrgw__data__sync__status.html#a2dc714770c1e3188847638cfc2cf7c62">rgw_data_sync_status</a>
+, <a class="el" href="structrgw__meta__sync__status.html#a3cb7e80cb17e925f42b67c5ed5e14571">rgw_meta_sync_status</a>
+</li>
+<li>sync_markers
+: <a class="el" href="structrgw__data__sync__status.html#ad5056f821ea14774b579ef17f120dc27">rgw_data_sync_status</a>
+, <a class="el" href="structrgw__meta__sync__status.html#aa32b20722d7f5b1a21ad34243e5a23ad">rgw_meta_sync_status</a>
+</li>
+<li>sync_status_oid()
+: <a class="el" href="classRGWDataSyncStatusManager.html#ac2205eff7f98bfd4db2323b8937fc6bc">RGWDataSyncStatusManager</a>
 </li>
 <li>sync_type_t
 : <a class="el" href="classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491b">RGWMetadataHandler</a>
 </li>
 <li>sync_user()
-: <a class="el" href="classRGWUserStatsCache.html#a955b9a18352d46e4bf2a397350d8a7b5">RGWUserStatsCache</a>
+: <a class="el" href="classRGWUserStatsCache.html#ae22b6774e29919b1e74a4a63ec2cca8c">RGWUserStatsCache</a>
+</li>
+<li>SyncState
+: <a class="el" href="structrgw__bucket__shard__sync__info.html#ad2c3ed5bf74c0355f4b5120603080455">rgw_bucket_shard_sync_info</a>
+, <a class="el" href="structrgw__data__sync__info.html#a0fdb45e7336e71bedab27e1061d37a9e">rgw_data_sync_info</a>
+, <a class="el" href="structrgw__data__sync__marker.html#a59a56a0906b7ac5ed6c24d10c42efb87">rgw_data_sync_marker</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a550876307fd125825921e43e06b829a8">rgw_meta_sync_info</a>
+, <a class="el" href="structrgw__meta__sync__marker.html#a4ef54e8775f35240a47a40f5661ec9f4">rgw_meta_sync_marker</a>
+</li>
+<li>sys_get()
+: <a class="el" href="classRGWHTTPArgs.html#a1123793fda8b7f0f91a303cbe94a0657">RGWHTTPArgs</a>
 </li>
 <li>system
 : <a class="el" href="structRGWUserAdminOpState.html#ab93a3b968753dade7bd3a4e6777c46cd">RGWUserAdminOpState</a>
@@ -872,6 +1376,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>system_obj_get_attr()
 : <a class="el" href="classRGWRados.html#a17129874026f52649722be9322907058">RGWRados</a>
+</li>
+<li>system_obj_set_attr()
+: <a class="el" href="classRGWRados.html#aebc0356e7bee8ffe467582ed7b819487">RGWRados</a>
+</li>
+<li>system_obj_set_attrs()
+: <a class="el" href="classRGWCache.html#a05615a8191adbd0f1d9a2f8ea86ffd68">RGWCache&lt; T &gt;</a>
+, <a class="el" href="classRGWRados.html#a5508acc7d593f345975003875bbb716f">RGWRados</a>
 </li>
 <li>system_request
 : <a class="el" href="structreq__state.html#a46fbc2642077b98fc7d78d26c297bb51">req_state</a>
@@ -886,7 +1397,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

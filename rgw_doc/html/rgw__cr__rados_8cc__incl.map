@@ -1,0 +1,20 @@
+<map id="rgw_cr_rados.cc" name="rgw_cr_rados.cc">
+<area shape="rect" id="node2" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="923,80,1016,107"/>
+<area shape="rect" id="node41" href="$rgw__coroutine_8h.html" title="rgw_coroutine.h" alt="" coords="2883,163,2997,189"/>
+<area shape="rect" id="node46" href="$rgw__boost__asio__yield_8h.html" title="rgw_boost_asio_yield.h" alt="" coords="2862,80,3020,107"/>
+<area shape="rect" id="node47" href="$rgw__cr__rados_8h.html" title="rgw_cr_rados.h" alt="" coords="3045,80,3155,107"/>
+<area shape="rect" id="node8" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1734,245,1844,272"/>
+<area shape="rect" id="node34" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="1953,163,2031,189"/>
+<area shape="rect" id="node37" href="$rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="984,163,1099,189"/>
+<area shape="rect" id="node39" href="$rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="400,163,568,189"/>
+<area shape="rect" id="node40" href="$rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="1209,163,1343,189"/>
+<area shape="rect" id="node19" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1673,328,1751,355"/>
+<area shape="rect" id="node20" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1237,411,1367,437"/>
+<area shape="rect" id="node21" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1510,328,1596,355"/>
+<area shape="rect" id="node22" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2856,328,2949,355"/>
+<area shape="rect" id="node25" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="1827,328,1920,355"/>
+<area shape="rect" id="node26" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="1944,328,2051,355"/>
+<area shape="rect" id="node30" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="2321,328,2407,355"/>
+<area shape="rect" id="node38" href="$rgw__period__history_8h.html" title="rgw_period_history.h" alt="" coords="1238,245,1380,272"/>
+<area shape="rect" id="node45" href="$rgw__boost__asio__coroutine_8h.html" title="rgw_boost_asio_coroutine.h" alt="" coords="3048,245,3232,272"/>
+</map>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -99,14 +99,16 @@ Collaboration diagram for KeystoneToken:</div>
 <div class="dyncontent">
 <div class="center"><img src="classKeystoneToken__coll__graph.png" border="0" usemap="#KeystoneToken_coll__map" alt="Collaboration graph"/></div>
 <map name="KeystoneToken_coll__map" id="KeystoneToken_coll__map">
-<area shape="rect" id="node2" href="classKeystoneToken_1_1User.html" title="{KeystoneToken::User\n|+ id\l+ name\l+ user_name\l+ roles\l|+ decode_json()\l+ has_role()\l}" alt="" coords="5,221,153,357"/><area shape="rect" id="node3" href="classKeystoneToken_1_1Token.html" title="{KeystoneToken::Token\n|+ id\l+ expires\l|+ Token()\l+ decode_json()\l}" alt="" coords="179,236,336,343"/><area shape="rect" id="node4" href="classKeystoneToken_1_1Token_1_1Tenant.html" title="{KeystoneToken::Token\l::Tenant\n|+ id\l+ name\l+ description\l+ enabled\l|+ Tenant()\l+ decode_json()\l}" alt="" coords="179,6,336,157"/><area shape="rect" id="node5" href="classKeystoneToken_1_1Metadata.html" title="{KeystoneToken::Metadata\n|+ is_admin\l|+ Metadata()\l+ decode_json()\l}" alt="" coords="361,243,535,335"/></map>
+<area shape="rect" id="node2" href="classKeystoneToken_1_1User.html" title="{KeystoneToken::User\n|+ roles_v2\l|+ decode_json()\l}" alt="" coords="5,301,153,379"/><area shape="rect" id="node4" href="classKeystoneToken_1_1Domain.html" title="{KeystoneToken::Domain\n||+ decode_json()\l}" alt="" coords="85,160,251,237"/><area shape="rect" id="node5" href="classKeystoneToken_1_1Project.html" title="{KeystoneToken::Project\n||+ decode_json()\l}" alt="" coords="179,301,341,379"/><area shape="rect" id="node6" href="classKeystoneToken_1_1Token.html" title="{KeystoneToken::Token\n|+ expires\l|+ Token()\l+ decode_json()\l}" alt="" coords="281,443,439,535"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken_1_1Metadata.html">Metadata</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken_1_1Domain.html">Domain</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken_1_1Service.html">Service</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken_1_1Project.html">Project</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken_1_1Role.html">Role</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken_1_1Token.html">Token</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,24 +117,66 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a93313743d94a2ecf824c1996f18321c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a93313743d94a2ecf824c1996f18321c6">parse</a> (CephContext *cct, bufferlist &amp;bl)</td></tr>
-<tr class="separator:a93313743d94a2ecf824c1996f18321c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c7b2136be19dd3de840cbd1bfc085f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a53c7b2136be19dd3de840cbd1bfc085f">KeystoneToken</a> ()=default</td></tr>
+<tr class="separator:a53c7b2136be19dd3de840cbd1bfc085f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699d933baae064c16fe46ff0f3600320"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a699d933baae064c16fe46ff0f3600320">get_expires</a> () const </td></tr>
+<tr class="separator:a699d933baae064c16fe46ff0f3600320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691b2ee9fa25795e4fa4574ef002302a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a691b2ee9fa25795e4fa4574ef002302a">get_domain_id</a> () const </td></tr>
+<tr class="separator:a691b2ee9fa25795e4fa4574ef002302a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a8f6c452a114cd739bf6cddc8de79e"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#af6a8f6c452a114cd739bf6cddc8de79e">get_domain_name</a> () const </td></tr>
+<tr class="separator:af6a8f6c452a114cd739bf6cddc8de79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab663b0d4ddc9ba5e45123246b1263adc"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#ab663b0d4ddc9ba5e45123246b1263adc">get_project_id</a> () const </td></tr>
+<tr class="separator:ab663b0d4ddc9ba5e45123246b1263adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3e8d022cca899f03931023a8acf36f"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a1b3e8d022cca899f03931023a8acf36f">get_project_name</a> () const </td></tr>
+<tr class="separator:a1b3e8d022cca899f03931023a8acf36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c8a106b109ac14ac82b14bdf422a087"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a5c8a106b109ac14ac82b14bdf422a087">get_user_id</a> () const </td></tr>
+<tr class="separator:a5c8a106b109ac14ac82b14bdf422a087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116e2c9b25ac12a454f9df1d60142a3a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a116e2c9b25ac12a454f9df1d60142a3a">get_user_name</a> () const </td></tr>
+<tr class="separator:a116e2c9b25ac12a454f9df1d60142a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ffa42d56c83d5b61ed2fa9e64121ad1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a8ffa42d56c83d5b61ed2fa9e64121ad1">has_role</a> (const string &amp;r) const </td></tr>
+<tr class="separator:a8ffa42d56c83d5b61ed2fa9e64121ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d468f312e6af7064f1a26ed3e54cee7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a8d468f312e6af7064f1a26ed3e54cee7">expired</a> ()</td></tr>
 <tr class="separator:a8d468f312e6af7064f1a26ed3e54cee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296271af67a9924b4ed5101014aae611"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a296271af67a9924b4ed5101014aae611">parse</a> (CephContext *cct, const string &amp;token_str, bufferlist &amp;bl)</td></tr>
+<tr class="separator:a296271af67a9924b4ed5101014aae611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3346dbfc8c8ed885fe7d6e17ef78172"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#ae3346dbfc8c8ed885fe7d6e17ef78172">decode_json</a> (JSONObj *access_obj)</td></tr>
 <tr class="separator:ae3346dbfc8c8ed885fe7d6e17ef78172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a78cc08f5dfd677a925f516f52530a6ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKeystoneToken_1_1Metadata.html">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a78cc08f5dfd677a925f516f52530a6ac">metadata</a></td></tr>
-<tr class="separator:a78cc08f5dfd677a925f516f52530a6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a1d2005a6ec4045db5a228222a7d7f"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="classKeystoneToken_1_1Service.html">Service</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a33a1d2005a6ec4045db5a228222a7d7f">service_catalog</a></td></tr>
-<tr class="separator:a33a1d2005a6ec4045db5a228222a7d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34d9406c91aea434e879a95c5798432d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKeystoneToken_1_1Token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a34d9406c91aea434e879a95c5798432d">token</a></td></tr>
 <tr class="separator:a34d9406c91aea434e879a95c5798432d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4629a3830fed735a13a60a0f71e17d67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKeystoneToken_1_1Project.html">Project</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#a4629a3830fed735a13a60a0f71e17d67">project</a></td></tr>
+<tr class="separator:a4629a3830fed735a13a60a0f71e17d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac25d4d7b86e1504adb97a9bbd469da32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKeystoneToken_1_1User.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#ac25d4d7b86e1504adb97a9bbd469da32">user</a></td></tr>
 <tr class="separator:ac25d4d7b86e1504adb97a9bbd469da32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb945b938ee7075620b5c86c8f7186dc"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="classKeystoneToken_1_1Role.html">Role</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeystoneToken.html#abb945b938ee7075620b5c86c8f7186dc">roles</a></td></tr>
+<tr class="separator:abb945b938ee7075620b5c86c8f7186dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a53c7b2136be19dd3de840cbd1bfc085f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">KeystoneToken::KeystoneToken </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae3346dbfc8c8ed885fe7d6e17ef78172"></a>
 <div class="memitem">
@@ -173,7 +217,184 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a93313743d94a2ecf824c1996f18321c6"></a>
+<a class="anchor" id="a691b2ee9fa25795e4fa4574ef002302a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; KeystoneToken::get_domain_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af6a8f6c452a114cd739bf6cddc8de79e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; KeystoneToken::get_domain_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a699d933baae064c16fe46ff0f3600320"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t KeystoneToken::get_expires </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab663b0d4ddc9ba5e45123246b1263adc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; KeystoneToken::get_project_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b3e8d022cca899f03931023a8acf36f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; KeystoneToken::get_project_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5c8a106b109ac14ac82b14bdf422a087"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; KeystoneToken::get_user_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a116e2c9b25ac12a454f9df1d60142a3a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; KeystoneToken::get_user_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8ffa42d56c83d5b61ed2fa9e64121ad1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool KeystoneToken::has_role </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a296271af67a9924b4ed5101014aae611"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -182,6 +403,12 @@ Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">CephContext *&#160;</td>
           <td class="paramname"><em>cct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>token_str</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -200,24 +427,24 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a78cc08f5dfd677a925f516f52530a6ac"></a>
+<a class="anchor" id="a4629a3830fed735a13a60a0f71e17d67"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKeystoneToken_1_1Metadata.html">Metadata</a> KeystoneToken::metadata</td>
+          <td class="memname"><a class="el" href="classKeystoneToken_1_1Project.html">Project</a> KeystoneToken::project</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a33a1d2005a6ec4045db5a228222a7d7f"></a>
+<a class="anchor" id="abb945b938ee7075620b5c86c8f7186dc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">list&lt;<a class="el" href="classKeystoneToken_1_1Service.html">Service</a>&gt; KeystoneToken::service_catalog</td>
+          <td class="memname">list&lt;<a class="el" href="classKeystoneToken_1_1Role.html">Role</a>&gt; KeystoneToken::roles</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -256,7 +483,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

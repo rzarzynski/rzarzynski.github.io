@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -90,17 +90,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classRGWRESTConn.html">RGWRESTConn</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#a1ae7df3fdb3713856cd5c8a1c3a5b533">complete_request</a>(RGWRESTStreamWriteRequest *req, string &amp;etag, time_t *mtime)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#a2729c6f982e2401402ea5f8dee4fe270">complete_request</a>(RGWRESTStreamReadRequest *req, string &amp;etag, time_t *mtime, map&lt; string, string &gt; &amp;attrs)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#af02c5f4f0321249d3a211b80535b1044">forward</a>(const string &amp;uid, req_info &amp;info, obj_version *objv, size_t max_response, bufferlist *inbl, bufferlist *outbl)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#a77ef9388d8bf09690b1a6649970e6244">get_obj</a>(const string &amp;uid, req_info *info, rgw_obj &amp;obj, bool prepend_metadata, RGWGetDataCB *cb, RGWRESTStreamReadRequest **req)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#a8292d4688357649352203ee83f76af32">complete_request</a>(RGWRESTStreamWriteRequest *req, string &amp;etag, ceph::real_time *mtime)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#a0d2ec6aad0ed49738a77533f3534452a">complete_request</a>(RGWRESTStreamReadRequest *req, string &amp;etag, ceph::real_time *mtime, map&lt; string, string &gt; &amp;attrs)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#a66e78683f8354dcb707e0c4033f34c95">forward</a>(const rgw_user &amp;uid, req_info &amp;info, obj_version *objv, size_t max_response, bufferlist *inbl, bufferlist *outbl)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#acef1ef09ba761a6f76018cc74a685e56">get_ctx</a>()</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#aef331778dac9cd6c5e3611c3b0f23822">get_endpoint_count</a>() const </td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">get_json_resource</a>(const string &amp;resource, param_vec_t *params, T &amp;t)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#abc7c4a64af0822cb4fe312a80d4a329d">get_json_resource</a>(const string &amp;resource, const rgw_http_param_pair *pp, T &amp;t)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#af51316213202907acf9ba8d79181d4d1">get_key</a>()</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#af62ce2c2c39172fd7ce1e2d45e73f349">get_obj</a>(const rgw_user &amp;uid, req_info *info, rgw_obj &amp;obj, const ceph::real_time *mod_ptr, const ceph::real_time *unmod_ptr, uint32_t mod_zone_id, uint64_t mod_pg_ver, bool prepend_metadata, RGWGetDataCB *cb, RGWRESTStreamReadRequest **req)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#ae5a35907a2b268f4a2cd5b9376a0dbe1">get_remote_id</a>()</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#ab425bae908b67669e5d805c8ef3d5346">get_resource</a>(const string &amp;resource, param_vec_t *extra_params, map&lt; string, string &gt; *extra_headers, bufferlist &amp;bl, RGWHTTPManager *mgr=NULL)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#a728bf5cde5f0e9774196f4a67224a5e3">get_self_zonegroup</a>()</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#af19c7e204d2dbd1ec4e276ab961836e4">get_url</a>(string &amp;endpoint)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#a580b24d5d05c19330c8e9eea2f2111d9">put_obj_init</a>(const string &amp;uid, rgw_obj &amp;obj, uint64_t obj_size, map&lt; string, bufferlist &gt; &amp;attrs, RGWRESTStreamWriteRequest **req)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#a3085a750861b2d60382196d45249d446">RGWRESTConn</a>(CephContext *_cct, RGWRados *store, list&lt; string &gt; &amp;endpoints)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#ac833f895cae6760d02b776c2a597f02d">get_url</a>()</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWRESTConn.html#a5f5886b0cbcfe558a37729c3075ca10c">put_obj_init</a>(const rgw_user &amp;uid, rgw_obj &amp;obj, uint64_t obj_size, map&lt; string, bufferlist &gt; &amp;attrs, RGWRESTStreamWriteRequest **req)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWRESTConn.html#a1222b9db7e56d62089670c04a8e9c665">RGWRESTConn</a>(CephContext *_cct, RGWRados *store, const string &amp;_remote_id, const list&lt; string &gt; &amp;endpoints)</td><td class="entry"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

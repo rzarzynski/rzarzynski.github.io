@@ -1,0 +1,4 @@
+<map id="RGWRealmReloader::Pauser" name="RGWRealmReloader::Pauser">
+<area shape="rect" id="node2" href="$classRGWFrontendPauser.html" title="{RGWFrontendPauser\n||+ RGWFrontendPauser()\l+ pause()\l+ resume()\l}" alt="" coords="5,175,171,281"/>
+<area shape="rect" id="node3" href="$classRGWPeriodPusher.html" title="{RGWPeriodPusher\n||+ RGWPeriodPusher()\l+ ~RGWPeriodPusher()\l+ handle_notify()\l+ pause()\l+ resume()\l}" alt="" coords="195,160,356,296"/>
+</map>

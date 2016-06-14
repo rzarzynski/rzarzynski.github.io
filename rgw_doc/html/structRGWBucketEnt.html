@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -99,7 +99,7 @@ Collaboration diagram for RGWBucketEnt:</div>
 <div class="dyncontent">
 <div class="center"><img src="structRGWBucketEnt__coll__graph.png" border="0" usemap="#RGWBucketEnt_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWBucketEnt_coll__map" id="RGWBucketEnt_coll__map">
-<area shape="rect" id="node2" href="structrgw__bucket.html" title="{rgw_bucket\n|+ name\l+ data_pool\l+ data_extra_pool\l+ index_pool\l+ marker\l+ bucket_id\l+ oid\l|+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="5,6,189,333"/></map>
+<area shape="rect" id="node2" href="structrgw__bucket.html" title="{rgw_bucket\n||+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="5,264,189,517"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -130,8 +130,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a33cfe5a0bc2030baefece598b4dac1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac719704fc00807a24af41476d13dff38"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWBucketEnt.html#ac719704fc00807a24af41476d13dff38">size_rounded</a></td></tr>
 <tr class="separator:ac719704fc00807a24af41476d13dff38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac25f950fb400587a39aa0feca906167d"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWBucketEnt.html#ac25f950fb400587a39aa0feca906167d">creation_time</a></td></tr>
-<tr class="separator:ac25f950fb400587a39aa0feca906167d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c94efe6064b471a67ac0555df926e02"><td class="memItemLeft" align="right" valign="top">real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWBucketEnt.html#a1c94efe6064b471a67ac0555df926e02">creation_time</a></td></tr>
+<tr class="separator:a1c94efe6064b471a67ac0555df926e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2cf28bf71c2572e51986e10935a901"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWBucketEnt.html#a4a2cf28bf71c2572e51986e10935a901">count</a></td></tr>
 <tr class="separator:a4a2cf28bf71c2572e51986e10935a901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -178,7 +178,7 @@ Public Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -323,12 +323,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac25f950fb400587a39aa0feca906167d"></a>
+<a class="anchor" id="a1c94efe6064b471a67ac0555df926e02"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">time_t RGWBucketEnt::creation_time</td>
+          <td class="memname">real_time RGWBucketEnt::creation_time</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -367,7 +367,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

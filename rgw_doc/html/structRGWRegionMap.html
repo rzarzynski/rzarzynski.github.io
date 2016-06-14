@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -98,25 +98,15 @@ Collaboration diagram for RGWRegionMap:</div>
 <div class="dyncontent">
 <div class="center"><img src="structRGWRegionMap__coll__graph.png" border="0" usemap="#RGWRegionMap_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWRegionMap_coll__map" id="RGWRegionMap_coll__map">
-<area shape="rect" id="node2" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size_kb\l+ max_objects\l+ enabled\l+ max_size_soft_threshold\l+ max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,5,184,200"/></map>
+<area shape="rect" id="node2" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size\l+ max_objects\l+ enabled\l+ check_on_raw\l# max_size_soft_threshold\l# max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,6,184,215"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30f945de2c38c96e3349ac289a26aaa8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a30f945de2c38c96e3349ac289a26aaa8">RGWRegionMap</a> ()</td></tr>
-<tr class="separator:a30f945de2c38c96e3349ac289a26aaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a895a4cee53db11b634b36fb4b7e7d00d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a895a4cee53db11b634b36fb4b7e7d00d">encode</a> (bufferlist &amp;bl) const </td></tr>
 <tr class="separator:a895a4cee53db11b634b36fb4b7e7d00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a8df5fe67b36c1a124013f7c377f0d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a9a8df5fe67b36c1a124013f7c377f0d2">decode</a> (bufferlist::iterator &amp;bl)</td></tr>
 <tr class="separator:a9a8df5fe67b36c1a124013f7c377f0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aead1a7fca0d219e95cbc74e5a3ba5122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#aead1a7fca0d219e95cbc74e5a3ba5122">get_params</a> (CephContext *cct, string &amp;pool_name, string &amp;oid)</td></tr>
-<tr class="separator:aead1a7fca0d219e95cbc74e5a3ba5122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a739b771d29024e05183aa29e5a38afc3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a739b771d29024e05183aa29e5a38afc3">read</a> (CephContext *cct, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="structRGWRegionMap.html#aa453607308f0c8fff182c20c66196dd8">store</a>)</td></tr>
-<tr class="separator:a739b771d29024e05183aa29e5a38afc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa453607308f0c8fff182c20c66196dd8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#aa453607308f0c8fff182c20c66196dd8">store</a> (CephContext *cct, <a class="el" href="classRGWRados.html">RGWRados</a> *store)</td></tr>
-<tr class="separator:aa453607308f0c8fff182c20c66196dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a850d219379d6f5581d416105496e79f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a850d219379d6f5581d416105496e79f9">update</a> (<a class="el" href="structRGWRegion.html">RGWRegion</a> &amp;region)</td></tr>
-<tr class="separator:a850d219379d6f5581d416105496e79f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f360de47f91be3d088c77834fea6f4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a9f360de47f91be3d088c77834fea6f4a">dump</a> (Formatter *f) const </td></tr>
 <tr class="separator:a9f360de47f91be3d088c77834fea6f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc913bb69efc0e1f92e45a54c42f3e39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#afc913bb69efc0e1f92e45a54c42f3e39">decode_json</a> (JSONObj *obj)</td></tr>
@@ -124,12 +114,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac1235a3f2cb4820bec7632cee9acebf9"><td class="memItemLeft" align="right" valign="top">Mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#ac1235a3f2cb4820bec7632cee9acebf9">lock</a></td></tr>
-<tr class="separator:ac1235a3f2cb4820bec7632cee9acebf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77869b8fef2b29a1cf8e821eb4436850"><td class="memItemLeft" align="right" valign="top">map&lt; string, <a class="el" href="structRGWRegion.html">RGWRegion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a77869b8fef2b29a1cf8e821eb4436850">regions</a></td></tr>
-<tr class="separator:a77869b8fef2b29a1cf8e821eb4436850"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8459cb31651a41823daee7be25ba81f"><td class="memItemLeft" align="right" valign="top">map&lt; string, <a class="el" href="structRGWRegion.html">RGWRegion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#ab8459cb31651a41823daee7be25ba81f">regions_by_api</a></td></tr>
-<tr class="separator:ab8459cb31651a41823daee7be25ba81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17745e0024851fb64b3cba40c3eeebf6"><td class="memItemLeft" align="right" valign="top">map&lt; string, <a class="el" href="structRGWZoneGroup.html">RGWZoneGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a17745e0024851fb64b3cba40c3eeebf6">regions</a></td></tr>
+<tr class="separator:a17745e0024851fb64b3cba40c3eeebf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0440eee295d09900768d9d0a6d144e8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#ae0440eee295d09900768d9d0a6d144e8">master_region</a></td></tr>
 <tr class="separator:ae0440eee295d09900768d9d0a6d144e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad36afd57eadc15eb55ad2aef4516b87e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#ad36afd57eadc15eb55ad2aef4516b87e">bucket_quota</a></td></tr>
@@ -137,30 +123,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6e5ab8a2bdb2e9360d0c9ee82a0ffd43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRegionMap.html#a6e5ab8a2bdb2e9360d0c9ee82a0ffd43">user_quota</a></td></tr>
 <tr class="separator:a6e5ab8a2bdb2e9360d0c9ee82a0ffd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a30f945de2c38c96e3349ac289a26aaa8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">RGWRegionMap::RGWRegionMap </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a9a8df5fe67b36c1a124013f7c377f0d2"></a>
 <div class="memitem">
@@ -226,106 +188,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aead1a7fca0d219e95cbc74e5a3ba5122"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RGWRegionMap::get_params </td>
-          <td>(</td>
-          <td class="paramtype">CephContext *&#160;</td>
-          <td class="paramname"><em>cct</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
-          <td class="paramname"><em>pool_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
-          <td class="paramname"><em>oid</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a739b771d29024e05183aa29e5a38afc3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RGWRegionMap::read </td>
-          <td>(</td>
-          <td class="paramtype">CephContext *&#160;</td>
-          <td class="paramname"><em>cct</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
-          <td class="paramname"><em>store</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa453607308f0c8fff182c20c66196dd8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RGWRegionMap::store </td>
-          <td>(</td>
-          <td class="paramtype">CephContext *&#160;</td>
-          <td class="paramname"><em>cct</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
-          <td class="paramname"><em>store</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a850d219379d6f5581d416105496e79f9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RGWRegionMap::update </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structRGWRegion.html">RGWRegion</a> &amp;&#160;</td>
-          <td class="paramname"><em>region</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="ad36afd57eadc15eb55ad2aef4516b87e"></a>
 <div class="memitem">
@@ -333,18 +195,6 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structRGWQuotaInfo.html">RGWQuotaInfo</a> RGWRegionMap::bucket_quota</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac1235a3f2cb4820bec7632cee9acebf9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Mutex RGWRegionMap::lock</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -363,24 +213,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a77869b8fef2b29a1cf8e821eb4436850"></a>
+<a class="anchor" id="a17745e0024851fb64b3cba40c3eeebf6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">map&lt;string, <a class="el" href="structRGWRegion.html">RGWRegion</a>&gt; RGWRegionMap::regions</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab8459cb31651a41823daee7be25ba81f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">map&lt;string, <a class="el" href="structRGWRegion.html">RGWRegion</a>&gt; RGWRegionMap::regions_by_api</td>
+          <td class="memname">map&lt;string, <a class="el" href="structRGWZoneGroup.html">RGWZoneGroup</a>&gt; RGWRegionMap::regions</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -407,7 +245,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

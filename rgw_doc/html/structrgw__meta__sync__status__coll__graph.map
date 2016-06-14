@@ -1,0 +1,3 @@
+<map id="rgw_meta_sync_status" name="rgw_meta_sync_status">
+<area shape="rect" id="node2" href="$structrgw__meta__sync__info.html" title="{rgw_meta_sync_info\n|+ state\l+ num_shards\l+ realm_epoch\l|+ encode()\l+ decode()\l+ decode_json()\l+ dump()\l+ rgw_meta_sync_info()\l}" alt="" coords="12,147,175,312"/>
+</map>

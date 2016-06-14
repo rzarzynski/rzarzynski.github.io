@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -89,22 +89,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">rgw_http_client.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;curl/curl.h&gt;</code><br/>
+<div class="textblock"><code>#include &lt;boost/utility/string_ref.hpp&gt;</code><br/>
+<code>#include &lt;curl/curl.h&gt;</code><br/>
 <code>#include &lt;curl/easy.h&gt;</code><br/>
 <code>#include &lt;curl/multi.h&gt;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__common_8h_source.html">rgw_common.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__http__client_8h_source.html">rgw_http_client.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__http__errors_8h_source.html">rgw_http_errors.h</a>&quot;</code><br/>
+<code>#include &quot;common/RefCountedObj.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__coroutine_8h_source.html">rgw_coroutine.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_http_client.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__http__client_8cc__incl.png" border="0" usemap="#rgw__http__client_8cc" alt=""/></div>
 <map name="rgw__http__client_8cc" id="rgw__http__client_8cc">
-<area shape="rect" id="node5" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="895,155,1005,181"/><area shape="rect" id="node29" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="841,80,961,107"/><area shape="rect" id="node16" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="765,237,843,264"/><area shape="rect" id="node18" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="867,237,953,264"/><area shape="rect" id="node19" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1131,237,1224,264"/><area shape="rect" id="node22" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1248,237,1341,264"/></map>
+<area shape="rect" id="node6" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1441,171,1551,197"/><area shape="rect" id="node39" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="2711,411,2832,437"/><area shape="rect" id="node42" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="1380,88,1503,115"/><area shape="rect" id="node44" href="rgw__coroutine_8h.html" title="rgw_coroutine.h" alt="" coords="1036,88,1151,115"/><area shape="rect" id="node17" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="510,253,588,280"/><area shape="rect" id="node18" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="407,336,536,363"/><area shape="rect" id="node19" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="613,336,699,363"/><area shape="rect" id="node20" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2280,253,2373,280"/><area shape="rect" id="node23" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2585,485,2679,512"/><area shape="rect" id="node26" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="2397,253,2504,280"/><area shape="rect" id="node34" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="2529,253,2615,280"/><area shape="rect" id="node27" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="1596,336,1677,363"/><area shape="rect" id="node38" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2741,336,2856,363"/><area shape="rect" id="node48" href="rgw__boost__asio__coroutine_8h.html" title="rgw_boost_asio_coroutine.h" alt="" coords="1101,171,1285,197"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmulti__req__data.html">multi_req_data</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__http__req__data.html">rgw_http_req_data</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -116,16 +120,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a22153f6e822e5ad4e0d24af3307ee4f9"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__http__client_8cc.html#a22153f6e822e5ad4e0d24af3307ee4f9">receive_http_header</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
-<tr class="separator:a22153f6e822e5ad4e0d24af3307ee4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a146fb03b86ae6e58dfaf9c1d07119b7d"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__http__client_8cc.html#a146fb03b86ae6e58dfaf9c1d07119b7d">receive_http_data</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
-<tr class="separator:a146fb03b86ae6e58dfaf9c1d07119b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af578c8304e036d62f874f53b40f672f1"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__http__client_8cc.html#af578c8304e036d62f874f53b40f672f1">send_http_data</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
-<tr class="separator:af578c8304e036d62f874f53b40f672f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb9631a0b664ba14dea6f8f314f0e457"><td class="memItemLeft" align="right" valign="top">static curl_slist *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__http__client_8cc.html#abb9631a0b664ba14dea6f8f314f0e457">headers_to_slist</a> (list&lt; pair&lt; string, string &gt; &gt; &amp;headers)</td></tr>
-<tr class="separator:abb9631a0b664ba14dea6f8f314f0e457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0b98707a553facc716858911b4e3af4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__http__client_8cc.html#ae0b98707a553facc716858911b4e3af4">do_curl_wait</a> (CephContext *cct, CURLM *handle)</td></tr>
-<tr class="separator:ae0b98707a553facc716858911b4e3af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3dcb72a14cd49c4ffca5876fb2b748"><td class="memItemLeft" align="right" valign="top">static curl_slist *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__http__client_8cc.html#aab3dcb72a14cd49c4ffca5876fb2b748">headers_to_slist</a> (<a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> &amp;headers)</td></tr>
+<tr class="separator:aab3dcb72a14cd49c4ffca5876fb2b748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a332b9bc5d4a76486efe28c534b2ec75d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__http__client_8cc.html#a332b9bc5d4a76486efe28c534b2ec75d">do_curl_wait</a> (CephContext *cct, CURLM *handle, int <a class="el" href="rgw__main_8cc.html#ab18701c3e636e0ab033fbbb2d63c5a10">signal_fd</a>)</td></tr>
+<tr class="separator:a332b9bc5d4a76486efe28c534b2ec75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a5580a2b7c4743669bb9ca22b07e84324"></a>
@@ -153,7 +151,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ae0b98707a553facc716858911b4e3af4"></a>
+<a class="anchor" id="a332b9bc5d4a76486efe28c534b2ec75d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -170,7 +168,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">CURLM *&#160;</td>
-          <td class="paramname"><em>handle</em>&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_fd</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,7 +191,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abb9631a0b664ba14dea6f8f314f0e457"></a>
+<a class="anchor" id="aab3dcb72a14cd49c4ffca5876fb2b748"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -197,147 +201,9 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">static curl_slist* headers_to_slist </td>
           <td>(</td>
-          <td class="paramtype">list&lt; pair&lt; string, string &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> &amp;&#160;</td>
           <td class="paramname"><em>headers</em></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a146fb03b86ae6e58dfaf9c1d07119b7d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static size_t receive_http_data </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>nmemb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>_info</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a22153f6e822e5ad4e0d24af3307ee4f9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static size_t receive_http_header </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>nmemb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>_info</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af578c8304e036d62f874f53b40f672f1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static size_t send_http_data </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>nmemb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>_info</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -352,7 +218,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -96,12 +96,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="rgw__rest__log_8h_source.html">rgw_rest_log.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__client__io_8h_source.html">rgw_client_io.h</a>&quot;</code><br/>
 <code>#include &quot;common/errno.h&quot;</code><br/>
+<code>#include &quot;include/assert.h&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_rest_log.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rest__log_8cc__incl.png" border="0" usemap="#rgw__rest__log_8cc" alt=""/></div>
 <map name="rgw__rest__log_8cc" id="rgw__rest__log_8cc">
-<area shape="rect" id="node4" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="1201,80,1283,107"/><area shape="rect" id="node6" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="2077,155,2151,181"/><area shape="rect" id="node43" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="2587,80,2691,107"/><area shape="rect" id="node48" href="rgw__rest__log_8h.html" title="rgw_rest_log.h" alt="" coords="1739,155,1845,181"/><area shape="rect" id="node49" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="2787,387,2896,413"/><area shape="rect" id="node39" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="246,387,351,413"/><area shape="rect" id="node11" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1746,469,1856,496"/><area shape="rect" id="node20" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2361,552,2439,579"/><area shape="rect" id="node21" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2147,552,2233,579"/><area shape="rect" id="node22" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="245,552,339,579"/><area shape="rect" id="node29" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1199,304,1292,331"/><area shape="rect" id="node38" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1307,229,1393,256"/><area shape="rect" id="node42" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1542,229,1641,256"/><area shape="rect" id="node23" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2971,552,3064,579"/><area shape="rect" id="node35" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="883,387,961,413"/><area shape="rect" id="node37" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="663,387,777,413"/><area shape="rect" id="node44" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="2479,304,2601,331"/><area shape="rect" id="node45" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="2479,469,2577,496"/><area shape="rect" id="node46" href="rgw__policy__s3_8h.html" title="rgw_policy_s3.h" alt="" coords="2602,469,2717,496"/><area shape="rect" id="node47" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2239,304,2353,331"/></map>
+<area shape="rect" id="node4" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="1110,80,1192,107"/><area shape="rect" id="node6" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="1193,155,1266,181"/><area shape="rect" id="node37" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="216,155,325,181"/><area shape="rect" id="node41" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="2008,80,2112,107"/><area shape="rect" id="node49" href="rgw__rest__log_8h.html" title="rgw_rest_log.h" alt="" coords="606,80,713,107"/><area shape="rect" id="node33" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="1346,304,1450,331"/><area shape="rect" id="node16" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1002,453,1112,480"/><area shape="rect" id="node25" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1600,528,1678,555"/><area shape="rect" id="node27" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1856,528,1942,555"/><area shape="rect" id="node28" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="521,528,614,555"/><area shape="rect" id="node29" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="718,304,812,331"/><area shape="rect" id="node31" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1028,229,1114,256"/><area shape="rect" id="node36" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="802,229,901,256"/><area shape="rect" id="node26" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1250,603,1380,629"/><area shape="rect" id="node30" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="597,379,712,405"/><area shape="rect" id="node43" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="2093,304,2216,331"/><area shape="rect" id="node44" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="1896,453,1994,480"/><area shape="rect" id="node45" href="rgw__policy__s3_8h.html" title="rgw_policy_s3.h" alt="" coords="2291,304,2406,331"/><area shape="rect" id="node46" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2030,155,2145,181"/><area shape="rect" id="node47" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="839,155,957,181"/><area shape="rect" id="node48" href="rgw__ldap_8h.html" title="rgw_ldap.h" alt="" coords="1980,229,2065,256"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -110,11 +111,15 @@ Macros</h2></td></tr>
 <tr class="separator:a0a47bac59348421b5c64031ca63a6d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5580a2b7c4743669bb9ca22b07e84324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__log_8cc.html#a5580a2b7c4743669bb9ca22b07e84324">dout_subsys</a>&#160;&#160;&#160;ceph_subsys_rgw</td></tr>
 <tr class="separator:a5580a2b7c4743669bb9ca22b07e84324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9403a214575f6bfadde5dd5f8fe2f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__log_8cc.html#abf9403a214575f6bfadde5dd5f8fe2f8">LARGE_ENOUGH_BUF</a>&#160;&#160;&#160;(128 * 1024)</td></tr>
+<tr class="separator:abf9403a214575f6bfadde5dd5f8fe2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9403a214575f6bfadde5dd5f8fe2f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__log_8cc.html#abf9403a214575f6bfadde5dd5f8fe2f8">LARGE_ENOUGH_BUF</a>&#160;&#160;&#160;(128 * 1024)</td></tr>
+<tr class="separator:abf9403a214575f6bfadde5dd5f8fe2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afa00f8ebaa42b1b920441701f546d1b4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__log_8cc.html#afa00f8ebaa42b1b920441701f546d1b4">parse_date_str</a> (string &amp;in, utime_t &amp;out)</td></tr>
-<tr class="separator:afa00f8ebaa42b1b920441701f546d1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9427137f079c474a22d45b71e803e6c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__log_8cc.html#aa9427137f079c474a22d45b71e803e6c">parse_date_str</a> (string &amp;in, real_time &amp;out)</td></tr>
+<tr class="separator:aa9427137f079c474a22d45b71e803e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a5580a2b7c4743669bb9ca22b07e84324"></a>
@@ -123,6 +128,30 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define dout_subsys&#160;&#160;&#160;ceph_subsys_rgw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf9403a214575f6bfadde5dd5f8fe2f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LARGE_ENOUGH_BUF&#160;&#160;&#160;(128 * 1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf9403a214575f6bfadde5dd5f8fe2f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LARGE_ENOUGH_BUF&#160;&#160;&#160;(128 * 1024)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -142,7 +171,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="afa00f8ebaa42b1b920441701f546d1b4"></a>
+<a class="anchor" id="aa9427137f079c474a22d45b71e803e6c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -158,7 +187,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">real_time &amp;&#160;</td>
           <td class="paramname"><em>out</em>&#160;</td>
         </tr>
         <tr>
@@ -179,7 +208,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

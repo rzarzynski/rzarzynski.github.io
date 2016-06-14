@@ -1,0 +1,20 @@
+<map id="rgw_cr_rest.h" name="rgw_cr_rest.h">
+<area shape="rect" id="node4" href="$rgw__coroutine_8h.html" title="rgw_coroutine.h" alt="" coords="588,155,702,181"/>
+<area shape="rect" id="node36" href="$rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1691,80,1809,107"/>
+<area shape="rect" id="node11" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1566,320,1676,347"/>
+<area shape="rect" id="node35" href="$rgw__boost__asio__coroutine_8h.html" title="rgw_boost_asio_coroutine.h" alt="" coords="384,237,568,264"/>
+<area shape="rect" id="node20" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1807,403,1885,429"/>
+<area shape="rect" id="node21" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1562,485,1692,512"/>
+<area shape="rect" id="node22" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2012,403,2098,429"/>
+<area shape="rect" id="node23" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1689,403,1782,429"/>
+<area shape="rect" id="node26" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2710,403,2804,429"/>
+<area shape="rect" id="node29" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="1252,403,1358,429"/>
+<area shape="rect" id="node34" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1578,403,1664,429"/>
+<area shape="rect" id="node37" href="$rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1704,155,1797,181"/>
+<area shape="rect" id="node48" href="$rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="2328,155,2449,181"/>
+<area shape="rect" id="node44" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="1078,237,1156,264"/>
+<area shape="rect" id="node45" href="$rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1934,237,2049,264"/>
+<area shape="rect" id="node46" href="$rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="2174,237,2342,264"/>
+<area shape="rect" id="node47" href="$rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="1775,237,1909,264"/>
+<area shape="rect" id="node49" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="2575,237,2696,264"/>
+</map>

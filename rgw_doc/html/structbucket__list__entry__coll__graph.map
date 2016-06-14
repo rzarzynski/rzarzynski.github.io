@@ -1,0 +1,4 @@
+<map id="bucket_list_entry" name="bucket_list_entry">
+<area shape="rect" id="node2" href="$structbucket__entry__owner.html" title="{bucket_entry_owner\n||+ bucket_entry_owner()\l+ bucket_entry_owner()\l+ decode_json()\l}" alt="" coords="156,248,314,355"/>
+<area shape="rect" id="node4" href="$structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="339,160,454,443"/>
+</map>

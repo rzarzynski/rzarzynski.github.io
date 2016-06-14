@@ -1,0 +1,7 @@
+<map id="RGWTokenBasedAuthEngine" name="RGWTokenBasedAuthEngine">
+<area shape="rect" id="node3" href="$classRGWAnonymousAuthEngine.html" title="{RGWAnonymousAuthEngine\n||+ RGWAnonymousAuthEngine()\l+ is_applicable()\l+ get_name()\l+ authenticate()\l}" alt="" coords="5,390,215,511"/>
+<area shape="rect" id="node4" href="$classRGWExternalTokenAuthEngine.html" title="{RGWExternalTokenAuthEngine\n|# store\l# apl_factory\l|+ RGWExternalTokenAuthEngine()\l+ get_name()\l+ is_applicable()\l+ authenticate()\l}" alt="" coords="240,383,467,519"/>
+<area shape="rect" id="node5" href="$classRGWKeystoneAuthEngine.html" title="{RGWKeystoneAuthEngine\n|# apl_factory\l|+ RGWKeystoneAuthEngine()\l+ get_name()\l+ is_applicable()\l+ authenticate()\l# decode_pki_token()\l# get_from_keystone()\l# get_acl_strategy()\l# get_creds_info()\l}" alt="" coords="491,361,688,541"/>
+<area shape="rect" id="node6" href="$classRGWSignedTokenAuthEngine.html" title="{RGWSignedTokenAuthEngine\n|# store\l# apl_factory\l|+ RGWSignedTokenAuthEngine()\l+ get_name()\l+ is_applicable()\l+ authenticate()\l}" alt="" coords="712,383,931,519"/>
+<area shape="rect" id="node2" href="$classRGWAuthEngine.html" title="{RGWAuthEngine\n|# cct\l|+ get_name()\l+ is_applicable()\l+ authenticate()\l+ ~RGWAuthEngine()\l# RGWAuthEngine()\l# RGWAuthEngine()\l# operator=()\l}" alt="" coords="395,5,545,171"/>
+</map>

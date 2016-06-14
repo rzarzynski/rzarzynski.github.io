@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
@@ -128,8 +129,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>uid
-: <a class="el" href="structRGWBucketAdminOpState.html#a64c6f71a06d910c1e6a1f76cecde0d2f">RGWBucketAdminOpState</a>
+: <a class="el" href="structRGWBucketAdminOpState.html#a8b54221fe13985ea84b4011cbac58873">RGWBucketAdminOpState</a>
 , <a class="el" href="structUserInfo.html#abb7d6ca9f6674d18048073d24cf41b99">UserInfo</a>
+</li>
+<li>ulp_buffer
+: <a class="el" href="classrgw_1_1RGWReadRequest.html#ae3dc139d32c983d341745e5b46c8a70c">rgw::RGWReadRequest</a>
+</li>
+<li>unblock_stack()
+: <a class="el" href="classRGWCoroutinesStack.html#a7e3d91470778fd3ba4575845412308be">RGWCoroutinesStack</a>
+</li>
+<li>underflow()
+: <a class="el" href="classRGWClientIOStreamBuf.html#a44d0f6075e1a8db0ba4ac57ba69fc543">RGWClientIOStreamBuf</a>
 </li>
 <li>unique_id()
 : <a class="el" href="classRGWRados.html#a304ad03233aedb3e1df2e5361ca34550">RGWRados</a>
@@ -137,8 +147,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>unique_tag
 : <a class="el" href="classRGWPutObjProcessor__Atomic.html#a2fc34f3d69930246f8cb18d3f2f36a72">RGWPutObjProcessor_Atomic</a>
 </li>
+<li>unique_trans_id()
+: <a class="el" href="classRGWRados.html#a6bc9f4edc24c987d2c2a4bfe63596363">RGWRados</a>
+</li>
+<li>UNKNOWN_ACCT
+: <a class="el" href="classRGWThirdPartyAccountAuthApplier.html#aa0b3bcd298636aeb7076c499720c0bca">RGWThirdPartyAccountAuthApplier&lt; T &gt;</a>
+</li>
 <li>unlink()
-: <a class="el" href="classRGWBucket.html#a277f2fddd95155741b51ecd85e42e33c">RGWBucket</a>
+: <a class="el" href="classrgw_1_1RGWLibFS.html#a6e23bf8e011a2db04726178609a2a58e">rgw::RGWLibFS</a>
+, <a class="el" href="classRGWBucket.html#a277f2fddd95155741b51ecd85e42e33c">RGWBucket</a>
 , <a class="el" href="classRGWBucketAdminOp.html#a19076d8a4145f858abe1850af9c514a9">RGWBucketAdminOp</a>
 </li>
 <li>unlink_obj_instance()
@@ -151,21 +168,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classRGWRados.html#aca748352d84d7fcf82ce9fb642c5c1f4">RGWRados</a>
 </li>
 <li>unmod_ptr
-: <a class="el" href="classRGWCopyObj.html#aa42316b9d842c49c9d7ad77f8841c68d">RGWCopyObj</a>
-, <a class="el" href="classRGWGetObj.html#a6672fdc148725601f0f4b4003c2e6d47">RGWGetObj</a>
-, <a class="el" href="structRGWRados_1_1Object_1_1Read_1_1ConditionParams.html#a2e1ed61fa11f5a7151ee4d21e1111210">RGWRados::Object::Read::ConditionParams</a>
+: <a class="el" href="classRGWCopyObj.html#ae8c4f8c89195ee9a3c8d9a0cf6e78e54">RGWCopyObj</a>
+, <a class="el" href="classRGWGetObj.html#a25cd4d243176dd776e553074cf29e0ab">RGWGetObj</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Read_1_1ConditionParams.html#a33f2d9ad16048e2650c558a87bcafdb0">RGWRados::Object::Read::ConditionParams</a>
+</li>
+<li>unmod_since
+: <a class="el" href="classRGWDeleteObj.html#abf204e8051bf19dcbd3784af1c1dd872">RGWDeleteObj</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Delete_1_1DeleteParams.html#a58b2826e36b9013533f346499adea649">RGWRados::Object::Delete::DeleteParams</a>
 </li>
 <li>unmod_time
-: <a class="el" href="classRGWCopyObj.html#ae3fe2da9c0cfef1acd9419e6b069d31d">RGWCopyObj</a>
-, <a class="el" href="classRGWGetObj.html#a6dfe4413200f6cc38ed36149ef9489db">RGWGetObj</a>
+: <a class="el" href="classRGWCopyObj.html#a672b209e598e6771b7f01df6d484595a">RGWCopyObj</a>
+, <a class="el" href="classRGWGetObj.html#a05e8a6dc4ba76f52679ebb91288ca429">RGWGetObj</a>
+</li>
+<li>unpause_with_new_config()
+: <a class="el" href="classRGWFrontend.html#adf9331d9503c1c71ec305d4f9bedd83c">RGWFrontend</a>
+, <a class="el" href="classRGWMongooseFrontend.html#a283f81afad0f15e1174aa8df5dde106d">RGWMongooseFrontend</a>
+, <a class="el" href="classRGWProcess.html#ab8f82142a1874e46f21d3dcec9440e67">RGWProcess</a>
+, <a class="el" href="classRGWProcessFrontend.html#a6b0e28cb082d99d106b1a3304195210f">RGWProcessFrontend</a>
+</li>
+<li>unref()
+: <a class="el" href="classrgw_1_1RGWLibFS.html#aee335d52eb05461a644505a4fba5277d">rgw::RGWLibFS</a>
+</li>
+<li>unregister()
+: <a class="el" href="classRGWAioCompletionNotifier.html#aef3017f3ee006020816918c7e565db55">RGWAioCompletionNotifier</a>
+</li>
+<li>unregister_completion_notifier()
+: <a class="el" href="classRGWCompletionManager.html#a59000341974b441e5d2bbd0989f5d185">RGWCompletionManager</a>
+</li>
+<li>unregister_fs()
+: <a class="el" href="classrgw_1_1RGWLibProcess.html#a6ee7e893ea6aab2639704c631760ce2b">rgw::RGWLibProcess</a>
+</li>
+<li>unregister_watch()
+: <a class="el" href="classRGWWatcher.html#aa6467906a386ff3e890b189f6a188fb3">RGWWatcher</a>
 </li>
 <li>unset_cb()
 : <a class="el" href="classRGWGetBucketStatsContext.html#a15049f5c2f08a516b870c2579386c154">RGWGetBucketStatsContext</a>
 </li>
+<li>unwatch()
+: <a class="el" href="classRGWRados.html#ac1e9c43a92680939a29a6dfb1ce14b82">RGWRados</a>
+</li>
+<li>unwind()
+: <a class="el" href="classRGWCoroutinesStack.html#a43023dae081b3939287bf5564f3904dd">RGWCoroutinesStack</a>
+</li>
 <li>update()
-: <a class="el" href="classRGWQuotaCache_1_1StatsAsyncTestSet.html#aaaec709243b74cb9e044ed3e153e5c4f">RGWQuotaCache&lt; T &gt;::StatsAsyncTestSet</a>
-, <a class="el" href="classRGWQuotaStatsUpdate.html#a053fea2d87c13b75f21e29e5a069ae46">RGWQuotaStatsUpdate&lt; T &gt;</a>
-, <a class="el" href="structRGWRegionMap.html#a850d219379d6f5581d416105496e79f9">RGWRegionMap</a>
+: <a class="el" href="classRGWPeriod.html#a42f8d11607a1c3fde791734cb96a11f8">RGWPeriod</a>
+, <a class="el" href="structRGWPeriodMap.html#a64aaec0c294ac150ab64f4617c31fabd">RGWPeriodMap</a>
+, <a class="el" href="classRGWQuotaCache_1_1StatsAsyncTestSet.html#aaaec709243b74cb9e044ed3e153e5c4f">RGWQuotaCache&lt; T &gt;::StatsAsyncTestSet</a>
+, <a class="el" href="classRGWQuotaStatsUpdate.html#ab71407d5b856138ddb317a8a73505cdf">RGWQuotaStatsUpdate&lt; T &gt;</a>
+, <a class="el" href="classRGWSystemMetaObj.html#aacbed2678f67c0098d337baec2fe3af8">RGWSystemMetaObj</a>
 </li>
 <li>update_bound()
 : <a class="el" href="classRGWReplicaBucketLogger.html#a525f27f38db61f0bfe7133bd21e2a7c9">RGWReplicaBucketLogger</a>
@@ -184,12 +234,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>update_location()
 : <a class="el" href="classRGWObjManifest_1_1obj__iterator.html#aedbe4178723cd4ccfa86c06385a7900d">RGWObjManifest::obj_iterator</a>
 </li>
+<li>update_master()
+: <a class="el" href="structRGWZoneGroup.html#a281bf43a63222b3414cb087f9e5ea5f4">RGWZoneGroup</a>
+</li>
+<li>update_name()
+: <a class="el" href="classRGWSystemMetaObj.html#a014b8aa1266dbcf5da95ddd32fb8b735">RGWSystemMetaObj</a>
+</li>
 <li>update_olh()
 : <a class="el" href="classRGWRados.html#a0fc918cb7bf2026af6ffe5a15c2f98c7">RGWRados</a>
 </li>
+<li>update_shards()
+: <a class="el" href="classRGWMetadataLog.html#af00eb77e516deadc49358941e28f5ea3">RGWMetadataLog</a>
+</li>
 <li>update_stats()
-: <a class="el" href="classRGWQuotaHandler.html#a77e4b6e326bab28e70ed9cf49588af5b">RGWQuotaHandler</a>
-, <a class="el" href="classRGWQuotaHandlerImpl.html#a05c32d8e0ff5602139720d0cf4e0496c">RGWQuotaHandlerImpl</a>
+: <a class="el" href="classRGWQuotaHandler.html#acfa6d1f55fb3e1aa944b7cdb7d1be70f">RGWQuotaHandler</a>
+, <a class="el" href="classRGWQuotaHandlerImpl.html#a7b91e70ae43c139c99fa97a470bb301b">RGWQuotaHandlerImpl</a>
 </li>
 <li>update_user_bucket_stats()
 : <a class="el" href="classRGWRados.html#ae8ab6966ff03da7669e4a33b143137e4">RGWRados</a>
@@ -206,7 +265,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classRGWListBucketMultiparts.html#ae73196ac9040d4e12c96e1afab340bea">RGWListBucketMultiparts</a>
 </li>
 <li>uri
-: <a class="el" href="structrgw__log__entry.html#a2184ab3eccef5df2971ef825c5393c83">rgw_log_entry</a>
+: <a class="el" href="classrgw_1_1RGWCreateBucketRequest.html#a13bc87810d8a55e5743d31b5a58a9f6c">rgw::RGWCreateBucketRequest</a>
+, <a class="el" href="classrgw_1_1RGWDeleteBucketRequest.html#a9132b1799bda88fbfb22f7676639ad59">rgw::RGWDeleteBucketRequest</a>
+, <a class="el" href="classrgw_1_1RGWStatBucketRequest.html#ab24567ae4df5a9c208e6923179ba5e72">rgw::RGWStatBucketRequest</a>
+, <a class="el" href="structrgw__log__entry.html#a2184ab3eccef5df2971ef825c5393c83">rgw_log_entry</a>
 , <a class="el" href="structRGWLoadGenRequestEnv.html#af010de2c48d4750a37a3b2d9beb16d2b">RGWLoadGenRequestEnv</a>
 </li>
 <li>uri_to_group()
@@ -216,19 +278,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>url
 : <a class="el" href="classRGWRESTSimpleRequest.html#aefad03f209535cf3eacf14db7bd5fff9">RGWRESTSimpleRequest</a>
 </li>
+<li>url_bucket
+: <a class="el" href="structreq__init__state.html#ad7a9e77165f3566c53ddd427932074d2">req_init_state</a>
+</li>
+<li>url_spec
+: <a class="el" href="classACLGrant.html#a13c84a448fca899f34ba0b8bca20f860">ACLGrant</a>
+, <a class="el" href="structACLReferer.html#a0dd33bdeaa745502b235684d882d7868">ACLReferer</a>
+</li>
+<li>usage
+: <a class="el" href="classRGWGetUsage.html#a73bd9b1592c6bf637c8ea79c1de6245b">RGWGetUsage</a>
+</li>
 <li>usage_log_pool
 : <a class="el" href="structRGWZoneParams.html#a3c1fd9b9dcfc00e22c2d86e303e439fd">RGWZoneParams</a>
 </li>
 <li>UsageLogger()
 : <a class="el" href="classUsageLogger.html#af6296598346a6e1a1e44cf42fff04a5c">UsageLogger</a>
 </li>
+<li>use_default()
+: <a class="el" href="classRGWSystemMetaObj.html#adcb8df296129e65cd7da15bb5a42608b">RGWSystemMetaObj</a>
+</li>
+<li>use_next_epoch()
+: <a class="el" href="classRGWPeriod.html#af090928a5c0dd21bb6e87ed1cd1764d9">RGWPeriod</a>
+</li>
 <li>user
 : <a class="el" href="structKey.html#aaca92db562986ff41f41a0beab51704e">Key</a>
 , <a class="el" href="classKeystoneToken.html#ac25d4d7b86e1504adb97a9bbd469da32">KeystoneToken</a>
-, <a class="el" href="structreq__state.html#a304c30fce2e179077548292462ebf3c6">req_state</a>
+, <a class="el" href="structreq__state.html#a790486d3727d3bfd75f815d0c5a5d5cd">req_state</a>
+, <a class="el" href="classrgw_1_1RGWLibRequest.html#a627331b15ca015992654df452c74406d">rgw::RGWLibRequest</a>
 , <a class="el" href="structrgw__log__entry.html#afe109070c30cb28a38e7158af9c2bf04">rgw_log_entry</a>
-, <a class="el" href="structrgw__swift__auth__info.html#a3164cb4ac895cfa814c7c19d9d54dbe7">rgw_swift_auth_info</a>
-, <a class="el" href="classRGWGetUserStats__CB.html#a0c82a6b4262d13bd64b4a574ec00eff1">RGWGetUserStats_CB</a>
+, <a class="el" href="classRGWGetUserStats__CB.html#a26f9488207b8fcdb269412b776236682">RGWGetUserStats_CB</a>
+</li>
+<li>user_acl
+: <a class="el" href="structreq__state.html#a7d542d1b08a225b8e081ac58e4252f17">req_state</a>
 </li>
 <li>user_agent
 : <a class="el" href="structrgw__log__entry.html#a33f9b44661c2114b6f9782b2b6c4a03e">rgw_log_entry</a>
@@ -247,30 +328,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWUserAdminOpState.html#afed00d30c12f6d9d918232338b0c44ca">RGWUserAdminOpState</a>
 </li>
 <li>user_id
-: <a class="el" href="structRGWUID.html#ab0213aef157cea6affaf945837d70eee">RGWUID</a>
-, <a class="el" href="structRGWUserAdminOpState.html#a6fff7fe0f6bec1669f3493ba4d813a5a">RGWUserAdminOpState</a>
-, <a class="el" href="structRGWUserInfo.html#a52be19316e19174f6c85862f2167bd3c">RGWUserInfo</a>
+: <a class="el" href="structRGWUID.html#a739c59b5a8645be0b3987194b989f576">RGWUID</a>
+, <a class="el" href="structRGWUserAdminOpState.html#aa01b521a9789c487938c6b03e09adf8d">RGWUserAdminOpState</a>
+, <a class="el" href="structRGWUserInfo.html#a8bf5afa289f85baa264c25a90ddc0f0d">RGWUserInfo</a>
+</li>
+<li>user_info
+: <a class="el" href="structrgw__http__req__data.html#a517cc938a6fdea5b1c81e9432e691bb8">rgw_http_req_data</a>
+, <a class="el" href="classRGWLocalAuthApplier.html#a62c93085b4d3b5b7e1219260bdc006b6">RGWLocalAuthApplier</a>
 </li>
 <li>user_keys_pool
 : <a class="el" href="structRGWZoneParams.html#ac876d27b898efe817f3503cb64aa9e83">RGWZoneParams</a>
-</li>
-<li>user_manifest_parts_hash
-: <a class="el" href="classRGWPutObj.html#a44e8091fc122002e7156558c09c5dd92">RGWPutObj</a>
-</li>
-<li>user_name
-: <a class="el" href="classKeystoneToken_1_1User.html#ae465802d58f03c06b3ed93ee85e4c50c">KeystoneToken::User</a>
 </li>
 <li>user_params_checked
 : <a class="el" href="structRGWUserAdminOpState.html#a13762b4f773f0335e2374be16cc6511e">RGWUserAdminOpState</a>
 </li>
 <li>user_permitted()
-: <a class="el" href="structRGWRegionPlacementTarget.html#acbb9b48f32ef4ad929edc4783f291cec">RGWRegionPlacementTarget</a>
+: <a class="el" href="structRGWZoneGroupPlacementTarget.html#aeaf32124d4d5de8bffc1558a668bd525">RGWZoneGroupPlacementTarget</a>
 </li>
 <li>user_quota
 : <a class="el" href="classRGWOp.html#aac1c4cc7ce554d7d5a595c047e4d77f2">RGWOp</a>
+, <a class="el" href="structRGWPeriodConfig.html#a611b8462bba038a39aa6ad83093be670">RGWPeriodConfig</a>
 , <a class="el" href="structRGWRegionMap.html#a6e5ab8a2bdb2e9360d0c9ee82a0ffd43">RGWRegionMap</a>
 , <a class="el" href="structRGWUserAdminOpState.html#a31d2d7130a8f9f8ef2f5abb7f2446a6c">RGWUserAdminOpState</a>
 , <a class="el" href="structRGWUserInfo.html#ab72853686fecc81575a2920b495bdf27">RGWUserInfo</a>
+, <a class="el" href="structRGWZoneGroupMap.html#afe0f68a3f78f100a5f87cedc3d9b94d7">RGWZoneGroupMap</a>
 , <a class="el" href="structUserQuotas.html#ada91751054155bf03442088ab802824f">UserQuotas</a>
 </li>
 <li>user_quota_specified
@@ -283,16 +364,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWZoneParams.html#ab0e9f8becfe3a0584eea3584ced04614">RGWZoneParams</a>
 </li>
 <li>UserAsyncRefreshHandler()
-: <a class="el" href="classUserAsyncRefreshHandler.html#a7e669035c6cd9b126081289c79937a2d">UserAsyncRefreshHandler</a>
+: <a class="el" href="classUserAsyncRefreshHandler.html#ac96a8c18cd037499198bc5e7f99df3e0">UserAsyncRefreshHandler</a>
 </li>
 <li>UserQuotas()
-: <a class="el" href="structUserQuotas.html#a1245b1935efc135573d18dc5afaac715">UserQuotas</a>
+: <a class="el" href="structUserQuotas.html#ad203e238c2f0e521955775cd852753c1">UserQuotas</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

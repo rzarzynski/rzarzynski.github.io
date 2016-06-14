@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -103,12 +103,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classRGWUsage.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWUsage.html">RGWUsage</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classRGWUsage.html#aa37c2470565d85f5f7db9e5cbf0891b8">show</a>(<a class="code" href="classRGWRados.html">RGWRados</a> *<a class="code" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, std::string&amp; uid, uint64_t start_epoch,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classRGWUsage.html#adb6941af748bd8733e9113bd20d8b125">show</a>(<a class="code" href="classRGWRados.html">RGWRados</a> *<a class="code" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="code" href="structrgw__user.html">rgw_user</a>&amp; uid, uint64_t start_epoch,</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;              uint64_t end_epoch, <span class="keywordtype">bool</span> show_log_entries, <span class="keywordtype">bool</span> show_log_sum,</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;          std::map&lt;std::string, bool&gt; *categories,</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;              <a class="code" href="classRGWFormatterFlusher.html">RGWFormatterFlusher</a>&amp; flusher);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classRGWUsage.html#abaef1892b4d5d863f9eda3de5286a9bd">trim</a>(<a class="code" href="classRGWRados.html">RGWRados</a> *store, std::string&amp; uid, uint64_t start_epoch,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classRGWUsage.html#a4bb6e6074ba6b642bd58dcc2d4c3e919">trim</a>(<a class="code" href="classRGWRados.html">RGWRados</a> *store, <a class="code" href="structrgw__user.html">rgw_user</a>&amp; uid, uint64_t start_epoch,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;              uint64_t end_epoch);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
@@ -116,15 +116,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classRGWUsage_html"><div class="ttname"><a href="classRGWUsage.html">RGWUsage</a></div><div class="ttdef"><b>Definition:</b> rgw_usage.h:16</div></div>
 <div class="ttc" id="rgw__formats_8h_html"><div class="ttname"><a href="rgw__formats_8h.html">rgw_formats.h</a></div></div>
-<div class="ttc" id="classRGWRados_html"><div class="ttname"><a href="classRGWRados.html">RGWRados</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:1158</div></div>
-<div class="ttc" id="rgw__admin_8cc_html_a9b49a835107f65049c05bddc99751652"><div class="ttname"><a href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a></div><div class="ttdeci">static RGWRados * store</div><div class="ttdef"><b>Definition:</b> rgw_admin.cc:40</div></div>
-<div class="ttc" id="classRGWUsage_html_abaef1892b4d5d863f9eda3de5286a9bd"><div class="ttname"><a href="classRGWUsage.html#abaef1892b4d5d863f9eda3de5286a9bd">RGWUsage::trim</a></div><div class="ttdeci">static int trim(RGWRados *store, std::string &amp;uid, uint64_t start_epoch, uint64_t end_epoch)</div><div class="ttdef"><b>Definition:</b> rgw_usage.cc:138</div></div>
-<div class="ttc" id="classRGWFormatterFlusher_html"><div class="ttname"><a href="classRGWFormatterFlusher.html">RGWFormatterFlusher</a></div><div class="ttdef"><b>Definition:</b> rgw_formats.h:57</div></div>
-<div class="ttc" id="classRGWUsage_html_aa37c2470565d85f5f7db9e5cbf0891b8"><div class="ttname"><a href="classRGWUsage.html#aa37c2470565d85f5f7db9e5cbf0891b8">RGWUsage::show</a></div><div class="ttdeci">static int show(RGWRados *store, std::string &amp;uid, uint64_t start_epoch, uint64_t end_epoch, bool show_log_entries, bool show_log_sum, std::map&lt; std::string, bool &gt; *categories, RGWFormatterFlusher &amp;flusher)</div><div class="ttdef"><b>Definition:</b> rgw_usage.cc:33</div></div>
+<div class="ttc" id="classRGWUsage_html_a4bb6e6074ba6b642bd58dcc2d4c3e919"><div class="ttname"><a href="classRGWUsage.html#a4bb6e6074ba6b642bd58dcc2d4c3e919">RGWUsage::trim</a></div><div class="ttdeci">static int trim(RGWRados *store, rgw_user &amp;uid, uint64_t start_epoch, uint64_t end_epoch)</div><div class="ttdef"><b>Definition:</b> rgw_usage.cc:144</div></div>
+<div class="ttc" id="classRGWRados_html"><div class="ttname"><a href="classRGWRados.html">RGWRados</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:1702</div></div>
+<div class="ttc" id="rgw__admin_8cc_html_a9b49a835107f65049c05bddc99751652"><div class="ttname"><a href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a></div><div class="ttdeci">static RGWRados * store</div><div class="ttdef"><b>Definition:</b> rgw_admin.cc:46</div></div>
+<div class="ttc" id="classRGWFormatterFlusher_html"><div class="ttname"><a href="classRGWFormatterFlusher.html">RGWFormatterFlusher</a></div><div class="ttdef"><b>Definition:</b> rgw_formats.h:61</div></div>
+<div class="ttc" id="classRGWUsage_html_adb6941af748bd8733e9113bd20d8b125"><div class="ttname"><a href="classRGWUsage.html#adb6941af748bd8733e9113bd20d8b125">RGWUsage::show</a></div><div class="ttdeci">static int show(RGWRados *store, rgw_user &amp;uid, uint64_t start_epoch, uint64_t end_epoch, bool show_log_entries, bool show_log_sum, std::map&lt; std::string, bool &gt; *categories, RGWFormatterFlusher &amp;flusher)</div><div class="ttdef"><b>Definition:</b> rgw_usage.cc:33</div></div>
+<div class="ttc" id="structrgw__user_html"><div class="ttname"><a href="structrgw__user.html">rgw_user</a></div><div class="ttdef"><b>Definition:</b> rgw_basic_types.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

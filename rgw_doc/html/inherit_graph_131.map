@@ -1,4 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classRGWQuotaHandler.html" title="RGWQuotaHandler" alt="" coords="6,5,141,32"/>
-<area shape="rect" id="node2" href="$classRGWQuotaHandlerImpl.html" title="RGWQuotaHandlerImpl" alt="" coords="189,5,349,32"/>
+<area shape="rect" id="node1" href="$classRGWCoroutinesManager.html" title="RGWCoroutinesManager" alt="" coords="5,107,173,133"/>
+<area shape="rect" id="node2" href="$classRGWDataNotifierManager.html" title="RGWDataNotifierManager" alt="" coords="222,5,397,32"/>
+<area shape="rect" id="node3" href="$classRGWMetaNotifierManager.html" title="RGWMetaNotifierManager" alt="" coords="221,56,397,83"/>
+<area shape="rect" id="node4" href="$classRGWRemoteBucketLog.html" title="RGWRemoteBucketLog" alt="" coords="228,107,391,133"/>
+<area shape="rect" id="node5" href="$classRGWRemoteDataLog.html" title="RGWRemoteDataLog" alt="" coords="234,157,385,184"/>
+<area shape="rect" id="node6" href="$classRGWRemoteMetaLog.html" title="RGWRemoteMetaLog" alt="" coords="234,208,385,235"/>
 </map>

@@ -1,3 +1,3 @@
 <map id="RGWRados::Object::Read::Params" name="RGWRados::Object::Read::Params">
-<area shape="rect" id="node2" href="$structrgw__err.html" title="{rgw_err\n|+ http_ret\l+ ret\l+ s3_code\l+ message\l|+ rgw_err()\l+ rgw_err()\l+ clear()\l+ is_clear()\l+ is_err()\l}" alt="" coords="51,6,137,186"/>
+<area shape="rect" id="node2" href="$structrgw__err.html" title="{rgw_err\n|+ http_ret\l+ ret\l|+ rgw_err()\l+ rgw_err()\l+ clear()\l+ is_clear()\l+ is_err()\l}" alt="" coords="51,161,137,311"/>
 </map>

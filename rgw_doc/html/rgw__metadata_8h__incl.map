@@ -1,7 +1,14 @@
 <map id="rgw_metadata.h" name="rgw_metadata.h">
-<area shape="rect" id="node4" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="846,80,956,107"/>
-<area shape="rect" id="node13" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="282,163,360,189"/>
-<area shape="rect" id="node15" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="171,163,257,189"/>
-<area shape="rect" id="node16" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1195,163,1288,189"/>
-<area shape="rect" id="node19" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="1312,163,1405,189"/>
+<area shape="rect" id="node4" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="2135,80,2245,107"/>
+<area shape="rect" id="node38" href="$rgw__period__history_8h.html" title="rgw_period_history.h" alt="" coords="287,80,429,107"/>
+<area shape="rect" id="node13" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1417,163,1495,189"/>
+<area shape="rect" id="node14" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1168,245,1297,272"/>
+<area shape="rect" id="node15" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1622,245,1708,272"/>
+<area shape="rect" id="node16" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2613,163,2707,189"/>
+<area shape="rect" id="node19" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2339,395,2432,421"/>
+<area shape="rect" id="node22" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="2047,163,2153,189"/>
+<area shape="rect" id="node30" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="2782,163,2868,189"/>
+<area shape="rect" id="node23" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="1733,245,1815,272"/>
+<area shape="rect" id="node34" href="$rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="3052,245,3167,272"/>
+<area shape="rect" id="node35" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="2759,320,2880,347"/>
 </map>

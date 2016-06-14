@@ -1,0 +1,5 @@
+<map id="RGWPutMetadataAccount" name="RGWPutMetadataAccount">
+<area shape="rect" id="node3" href="$classRGWPutMetadataAccount__ObjStore.html" title="{RGWPutMetadataAccount\l_ObjStore\n||+ RGWPutMetadataAccount\l_ObjStore()\l+ ~RGWPutMetadataAccount\l_ObjStore()\l}" alt="" coords="5,816,203,952"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="7,6,201,362"/>
+<area shape="rect" id="node4" href="$classRGWPutMetadataAccount__ObjStore__SWIFT.html" title="{RGWPutMetadataAccount\l_ObjStore_SWIFT\n||+ RGWPutMetadataAccount\l_ObjStore_SWIFT()\l+ ~RGWPutMetadataAccount\l_ObjStore_SWIFT()\l+ get_params()\l+ send_response()\l}" alt="" coords="5,1000,203,1165"/>
+</map>

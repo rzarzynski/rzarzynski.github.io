@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -100,20 +100,22 @@ Inheritance diagram for RGWCopyObj:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWCopyObj__inherit__graph.png" border="0" usemap="#RGWCopyObj_inherit__map" alt="Inheritance graph"/></div>
 <map name="RGWCopyObj_inherit__map" id="RGWCopyObj_inherit__map">
-<area shape="rect" id="node3" href="classRGWCopyObj__ObjStore.html" title="{RGWCopyObj_ObjStore\n||+ RGWCopyObj_ObjStore()\l+ ~RGWCopyObj_ObjStore()\l}" alt="" coords="128,859,320,951"/><area shape="rect" id="node2" href="classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="135,6,312,333"/><area shape="rect" id="node4" href="classRGWCopyObj__ObjStore__S3.html" title="{RGWCopyObj_ObjStore_S3\n||+ RGWCopyObj_ObjStore_S3()\l+ ~RGWCopyObj_ObjStore_S3()\l+ init_dest_policy()\l+ get_params()\l+ send_partial_response()\l+ send_response()\l}" alt="" coords="5,1022,219,1173"/><area shape="rect" id="node5" href="classRGWCopyObj__ObjStore__SWIFT.html" title="{RGWCopyObj_ObjStore\l_SWIFT\n||+ RGWCopyObj_ObjStore\l_SWIFT()\l+ ~RGWCopyObj_ObjStore\l_SWIFT()\l+ init_dest_policy()\l+ get_params()\l+ send_response()\l+ send_partial_response()\l}" alt="" coords="244,1000,428,1195"/></map>
+<area shape="rect" id="node3" href="classrgw_1_1RGWCopyObjRequest.html" title="{rgw::RGWCopyObjRequest\n|+ src_parent\l+ dst_parent\l+ src_name\l+ dst_name\l|+ RGWCopyObjRequest()\l+ only_bucket()\l+ op_init()\l+ header_init()\l+ get_params()\l+ send_response()\l+ send_partial_response()\l}" alt="" coords="5,905,189,1114"/><area shape="rect" id="node4" href="classRGWCopyObj__ObjStore.html" title="{RGWCopyObj_ObjStore\n||+ RGWCopyObj_ObjStore()\l+ ~RGWCopyObj_ObjStore()\l}" alt="" coords="213,963,405,1055"/><area shape="rect" id="node2" href="classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="105,6,300,362"/><area shape="rect" id="node5" href="classRGWCopyObj__ObjStore__S3.html" title="{RGWCopyObj_ObjStore_S3\n||+ RGWCopyObj_ObjStore_S3()\l+ ~RGWCopyObj_ObjStore_S3()\l+ init_dest_policy()\l+ get_params()\l+ send_partial_response()\l+ send_response()\l}" alt="" coords="90,1193,304,1343"/><area shape="rect" id="node6" href="classRGWCopyObj__ObjStore__SWIFT.html" title="{RGWCopyObj_ObjStore\l_SWIFT\n||+ RGWCopyObj_ObjStore\l_SWIFT()\l+ ~RGWCopyObj_ObjStore\l_SWIFT()\l+ init_dest_policy()\l+ get_params()\l+ send_response()\l+ send_partial_response()\l# dump_copy_info()\l}" alt="" coords="329,1163,513,1373"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for RGWCopyObj:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWCopyObj__coll__graph.png" border="0" usemap="#RGWCopyObj_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWCopyObj_coll__map" id="RGWCopyObj_coll__map">
-<area shape="rect" id="node2" href="classRGWOp.html" title="{RGWOp\n|# cors_exist\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="1505,2022,1681,2261"/><area shape="rect" id="node3" href="classRGWRados.html" title="{RGWRados\n|+ zone_conn_map\l+ region_conn_map\l# cct\l# rados\l# gc_pool_ctx\l# pools_initialized\l# region_name\l# zone_name\l|+ RGWRados()\l+ set_context()\l+ set_region()\l+ set_zone()\l+ ~RGWRados()\l+ get_required_alignment()\l+ get_max_chunk_size()\l+ list_raw_objects()\l+ list_raw_prefixed_objs()\l+ list_regions()\land 167 more...\l}" alt="" coords="1021,1166,1197,1493"/><area shape="rect" id="node7" href="structRGWRegion.html" title="{RGWRegion\n|+ name\l+ api_name\l+ endpoints\l+ is_master\l+ master_zone\l+ zones\l+ placement_targets\l+ default_placement\l+ hostnames\l+ cct\l|+ RGWRegion()\l+ encode()\l+ decode()\l+ init()\l+ create_default()\l+ store_info()\l+ read_info()\l+ read_default()\l+ set_as_default()\l+ equals()\l+ dump()\l+ decode_json()\l+ get_pool_name()\l}" alt="" coords="1152,1571,1292,1957"/><area shape="rect" id="node15" href="classRGWHandler.html" title="{RGWHandler\n||+ RGWHandler()\l+ ~RGWHandler()\l+ init()\l+ get_op()\l+ put_op()\l+ read_permissions()\l+ authorize()\l# do_read_permissions()\l# op_get()\l# op_put()\l# op_delete()\l# op_head()\l# op_post()\l# op_copy()\l# op_options()\l}" alt="" coords="1370,1623,1533,1905"/><area shape="rect" id="node4" href="structRGWRegionMap.html" title="{RGWRegionMap\n|+ lock\l+ regions\l+ regions_by_api\l+ master_region\l|+ RGWRegionMap()\l+ encode()\l+ decode()\l+ get_params()\l+ read()\l+ store()\l+ update()\l+ dump()\l+ decode_json()\l}" alt="" coords="1228,790,1368,1029"/><area shape="rect" id="node5" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size_kb\l+ max_objects\l+ enabled\l+ max_size_soft_threshold\l+ max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="1287,259,1465,453"/><area shape="rect" id="node17" href="structRGWUserInfo.html" title="{RGWUserInfo\n|+ auid\l+ user_id\l+ display_name\l+ user_email\l+ access_keys\l+ swift_keys\l+ subusers\l+ suspended\l+ max_buckets\l+ op_mask\l+ system\l+ default_placement\l+ placement_tags\l+ temp_url_keys\l|+ RGWUserInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ clear()\l+ generate_test_instances()\l}" alt="" coords="1567,731,1751,1087"/><area shape="rect" id="node29" href="structRGWBucketInfo.html" title="{RGWBucketInfo\n|+ owner\l+ flags\l+ region\l+ creation_time\l+ placement_rule\l+ has_instance_obj\l+ ep_objv\l+ num_shards\l+ bucket_index_shard\l_hash_type\l+ NUM_SHARDS_BLIND_BUCKET\l|+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ versioned()\l+ versioning_status()\l+ versioning_enabled()\l+ RGWBucketInfo()\l+ generate_test_instances()\l}" alt="" coords="1775,739,2013,1080"/><area shape="rect" id="node6" href="classRGWMetadataManager.html" title="{RGWMetadataManager\n||+ RGWMetadataManager()\l+ ~RGWMetadataManager()\l+ register_handler()\l+ get_handler()\l+ put_entry()\l+ remove_entry()\l+ set_attr()\l+ set_attrs()\l+ get()\l+ put()\land 9 more...\l}" alt="" coords="239,797,425,1021"/><area shape="rect" id="node8" href="classRGWDataChangesLog.html" title="{RGWDataChangesLog\n||+ RGWDataChangesLog()\l+ ~RGWDataChangesLog()\l+ choose_oid()\l+ add_entry()\l+ renew_entries()\l+ list_entries()\l+ trim_entries()\l+ trim_entries()\l+ get_info()\l+ lock_exclusive()\l+ unlock()\l+ list_entries()\l+ going_down()\l}" alt="" coords="449,783,633,1036"/><area shape="rect" id="node9" href="classRGWRESTConn.html" title="{RGWRESTConn\n||+ RGWRESTConn()\l+ get_url()\l+ forward()\l+ put_obj_init()\l+ complete_request()\l+ get_obj()\l+ complete_request()\l}" alt="" coords="658,827,803,992"/><area shape="rect" id="node10" href="classRGWQuotaHandler.html" title="{RGWQuotaHandler\n||+ RGWQuotaHandler()\l+ ~RGWQuotaHandler()\l+ check_quota()\l+ update_stats()\l+ generate_handler()\l+ free_handler()\l}" alt="" coords="828,834,991,985"/><area shape="rect" id="node11" href="structRGWZoneParams.html" title="{RGWZoneParams\n|+ name\l+ is_master\l+ placement_pools\l|+ RGWZoneParams()\l+ init_name()\l+ init()\l+ init_default()\l+ store_info()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ get_pool_name()\l}" alt="" coords="1393,790,1541,1029"/><area shape="rect" id="node12" href="structRGWAccessKey.html" title="{RGWAccessKey\n|+ id\l+ key\l+ subuser\l|+ RGWAccessKey()\l+ encode()\l+ decode()\l+ dump()\l+ dump_plain()\l+ dump()\l+ decode_json()\l+ decode_json()\l+ generate_test_instances()\l}" alt="" coords="5,244,189,468"/><area shape="rect" id="node13" href="structrgw__bucket.html" title="{rgw_bucket\n|+ name\l+ data_pool\l+ data_extra_pool\l+ index_pool\l+ marker\l+ bucket_id\l+ oid\l|+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="1908,193,2092,519"/><area shape="rect" id="node16" href="structreq__state.html" title="{req_state\n|+ cct\l+ op\l+ content_started\l+ format\l+ formatter\l+ decoded_uri\l+ relative_uri\l+ length\l+ content_length\l+ generic_attrs\land 29 more...\l|+ req_state()\l+ ~req_state()\l}" alt="" coords="2163,1210,2287,1449"/><area shape="rect" id="node14" href="structRGWZone.html" title="{RGWZone\n|+ name\l+ endpoints\l+ log_meta\l+ log_data\l+ bucket_index_max_shards\l|+ RGWZone()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="1015,812,1204,1007"/><area shape="rect" id="node18" href="classRGWUserCaps.html" title="{RGWUserCaps\n||+ add_from_string()\l+ remove_from_string()\l+ encode()\l+ decode()\l+ check_cap()\l+ dump()\l+ dump()\l+ decode_json()\l+ parse_cap_perm()\l}" alt="" coords="1580,259,1737,453"/><area shape="rect" id="node19" href="structrgw__err.html" title="{rgw_err\n|+ http_ret\l+ ret\l+ s3_code\l+ message\l|+ rgw_err()\l+ rgw_err()\l+ clear()\l+ is_clear()\l+ is_err()\l}" alt="" coords="2090,819,2176,999"/><area shape="rect" id="node20" href="classRGWAccessControlPolicy.html" title="{RGWAccessControlPolicy\n|# cct\l|+ RGWAccessControlPolicy()\l+ RGWAccessControlPolicy()\l+ ~RGWAccessControlPolicy()\l+ set_ctx()\l+ get_perm()\l+ get_group_perm()\l+ verify_permission()\l+ encode()\l+ decode()\l+ dump()\land 6 more...\l+ generate_test_instances()\l}" alt="" coords="2908,790,3113,1029"/><area shape="rect" id="node21" href="classRGWAccessControlList.html" title="{RGWAccessControlList\n|# cct\l# acl_user_map\l# acl_group_map\l# grant_map\l|+ RGWAccessControlList()\l+ RGWAccessControlList()\l+ set_ctx()\l+ ~RGWAccessControlList()\l+ get_perm()\l+ get_group_perm()\l+ encode()\l+ decode()\l+ dump()\l+ add_grant()\l+ get_grant_map()\l+ create_default()\l+ generate_test_instances()\l# _add_grant()\l}" alt="" coords="2922,200,3112,512"/><area shape="rect" id="node22" href="classACLOwner.html" title="{ACLOwner\n|# id\l# display_name\l|+ ACLOwner()\l+ ~ACLOwner()\l+ encode()\l+ decode()\l+ dump()\l+ set_id()\l+ set_name()\l+ get_id()\l+ get_display_name()\l+ generate_test_instances()\l}" alt="" coords="2713,244,2897,468"/><area shape="rect" id="node23" href="structreq__info.html" title="{req_info\n|+ x_meta_map\l+ host\l+ method\l+ script_uri\l+ request_uri\l+ effective_uri\l+ request_params\l+ domain\l|+ req_info()\l+ rebuild_from()\l+ init_meta_info()\l}" alt="" coords="2481,805,2607,1014"/><area shape="rect" id="node24" href="classRGWEnv.html" title="{RGWEnv\n||+ RGWEnv()\l+ ~RGWEnv()\l+ init()\l+ init()\l+ set()\l+ get()\l+ get_int()\l+ get_bool()\l+ get_size()\l+ exists()\l+ exists_prefix()\l+ remove()\l+ get_map()\l}" alt="" coords="2166,229,2281,483"/><area shape="rect" id="node27" href="classRGWClientIO.html" title="{RGWClientIO\n||+ ~RGWClientIO()\l+ RGWClientIO()\l+ init()\l+ print()\l+ write()\l+ flush()\l+ read()\l+ send_status()\l+ send_100_continue()\l+ complete_header()\land 6 more...\l# init_env()\l# write_data()\l# read_data()\l}" alt="" coords="2301,775,2455,1043"/><area shape="rect" id="node25" href="classRGWConf.html" title="{RGWConf\n|+ enable_ops_log\l+ enable_usage_log\l+ defer_to_bucket_acls\l|+ RGWConf()\l# init()\l}" alt="" coords="2145,6,2303,127"/><area shape="rect" id="node26" href="classRGWHTTPArgs.html" title="{RGWHTTPArgs\n||+ RGWHTTPArgs()\l+ set()\l+ parse()\l+ get()\l+ get()\l+ get_bool()\l+ get_bool()\l+ get_bool()\l+ exists()\l+ sub_resource_exists()\l+ get_params()\l+ get_sub_resources()\l+ get_num_params()\l+ has_response_modifier()\l+ set_system()\l}" alt="" coords="2513,215,2689,497"/><area shape="rect" id="node28" href="structrgw__obj__key.html" title="{rgw_obj_key\n|+ name\l+ instance\l|+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="2769,775,2884,1043"/><area shape="rect" id="node30" href="structRGWObjVersionTracker.html" title="{RGWObjVersionTracker\n|+ read_version\l+ write_version\l|+ version_for_read()\l+ version_for_write()\l+ version_for_check()\l+ prepare_op_for_read()\l+ prepare_op_for_write()\l+ apply_write()\l+ clear()\l+ generate_new_write_ver()\l}" alt="" coords="2306,259,2488,453"/><area shape="rect" id="node31" href="classRGWCORSConfiguration.html" title="{RGWCORSConfiguration\n|# rules\l|+ RGWCORSConfiguration()\l+ ~RGWCORSConfiguration()\l+ encode()\l+ decode()\l+ dump()\l+ get_rules()\l+ is_empty()\l+ get_origins_list()\l+ host_name_rule()\l+ erase_host_name_rule()\l+ dump()\l+ stack_rule()\l}" alt="" coords="1558,1645,1756,1883"/></map>
+<area shape="rect" id="node2" href="classRGWOp.html" title="{RGWOp\n|# cors_exist\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="2596,1454,2791,1722"/><area shape="rect" id="node38" href="structRGWRequest.html" title="{RGWRequest\n|+ id\l+ ts\l|+ RGWRequest()\l+ ~RGWRequest()\l+ init_state()\l+ log_format()\l+ log_init()\l+ log()\l}" alt="" coords="2395,2039,2527,2204"/><area shape="rect" id="node3" href="classRGWRados.html" title="{RGWRados\n|+ zone_conn_map\l+ zonegroup_conn_map\l+ zone_id_by_name\l+ zone_name_by_id\l+ period_puller\l+ period_history\l# cct\l# rados\l# next_rados_handle\l# handle_lock\l# rados_map\l# gc_pool_ctx\l# objexp_pool_ctx\l# pools_initialized\l# finisher\l# zone_short_id\l|+ RGWRados()\l+ get_new_req_id()\l+ set_context()\l+ init_host_id()\l+ get_zone_conn_by_id()\l+ get_zone_conn_by_name()\l+ find_zone_id_by_name()\l+ get_zonegroup()\l+ get_zone_params()\l+ get_zonegroup()\land 225 more...\l+ make_bucket_entry_name()\l}" alt="" coords="3171,720,3365,1179"/><area shape="rect" id="node12" href="classRGWSystemMetaObj.html" title="{RGWSystemMetaObj\n|# cct\l|+ RGWSystemMetaObj()\l+ RGWSystemMetaObj()\l+ RGWSystemMetaObj()\l+ RGWSystemMetaObj()\l+ RGWSystemMetaObj()\l+ get_name()\l+ get_id()\l+ set_name()\l+ set_id()\l+ clear_id()\land 22 more...\l# store_name()\l# store_info()\l# read_info()\l# read_id()\l# read_default()\l# use_default()\l}" alt="" coords="2917,1432,3085,1744"/><area shape="rect" id="node22" href="classRGWHandler.html" title="{RGWHandler\n||+ RGWHandler()\l+ ~RGWHandler()\l+ init()\l+ init_permissions()\l+ retarget()\l+ read_permissions()\l+ authorize()\l+ postauth_init()\l+ error_handler()\l# do_init_permissions()\l# do_read_permissions()\l}" alt="" coords="3085,2712,3248,2936"/><area shape="rect" id="node4" href="classRGWCoroutinesManagerRegistry.html" title="{RGWCoroutinesManagerRegistry\n||+ RGWCoroutinesManagerRegistry()\l+ ~RGWCoroutinesManagerRegistry()\l+ add()\l+ remove()\l+ hook_to_admin_command()\l+ call()\l+ dump()\l}" alt="" coords="4000,259,4245,424"/><area shape="rect" id="node7" href="classRGWChainedCacheImpl.html" title="{RGWChainedCacheImpl\&lt; T \&gt;\n||+ RGWChainedCacheImpl()\l+ init()\l+ find()\l+ put()\l+ chain_cb()\l+ invalidate()\l+ invalidate_all()\l}" alt="" coords="4270,259,4468,424"/><area shape="rect" id="node8" href="classRGWChainedCache.html" title="{RGWChainedCache\n||+ ~RGWChainedCache()\l+ chain_cb()\l+ invalidate()\l+ invalidate_all()\l}" alt="" coords="4285,6,4453,127"/><area shape="rect" id="node9" href="classRGWMetadataManager.html" title="{RGWMetadataManager\n||+ RGWMetadataManager()\l+ ~RGWMetadataManager()\l+ init()\l+ get_oldest_log_period()\l+ get_log()\l+ register_handler()\l+ get_handler()\l+ put_entry()\l+ remove_entry()\l+ get()\land 10 more...\l}" alt="" coords="2965,229,3152,453"/><area shape="rect" id="node10" href="classRGWDataChangesLog.html" title="{RGWDataChangesLog\n||+ RGWDataChangesLog()\l+ ~RGWDataChangesLog()\l+ choose_oid()\l+ add_entry()\l+ get_log_shard_id()\l+ renew_entries()\l+ list_entries()\l+ trim_entries()\l+ trim_entries()\l+ get_info()\land 6 more...\l}" alt="" coords="3176,229,3360,453"/><area shape="rect" id="node11" href="classRGWRealm.html" title="{RGWRealm\n||+ RGWRealm()\l+ RGWRealm()\l+ RGWRealm()\l+ RGWRealm()\l+ encode()\l+ decode()\l+ create()\l+ delete_obj()\l+ get_pool_name()\l+ get_default_oid()\land 11 more...\l}" alt="" coords="3204,2009,3333,2233"/><area shape="rect" id="node17" href="structRGWZoneGroup.html" title="{RGWZoneGroup\n|+ endpoints\l+ is_master\l+ zones\l+ placement_targets\l+ hostnames\l+ hostnames_s3website\l+ api_hostname_map\l+ api_endpoints_map\l|+ RGWZoneGroup()\l+ RGWZoneGroup()\l+ RGWZoneGroup()\l+ RGWZoneGroup()\l+ is_master_zonegroup()\l+ update_master()\l+ post_process_params()\l+ encode()\l+ decode()\l+ read_default_id()\land 13 more...\l+ generate_test_instances()\l}" alt="" coords="2909,1951,3093,2292"/><area shape="rect" id="node18" href="structRGWZoneParams.html" title="{RGWZoneParams\n|+ user_uid_pool\l+ placement_pools\l|+ RGWZoneParams()\l+ RGWZoneParams()\l+ RGWZoneParams()\l+ RGWZoneParams()\l+ get_pool_name()\l+ get_default_oid()\l+ get_names_oid_prefix()\l+ get_info_oid_prefix()\l+ get_predefined_name()\l+ init()\land 9 more...\l+ generate_test_instances()\l}" alt="" coords="2135,1995,2319,2248"/><area shape="rect" id="node19" href="structRGWAccessKey.html" title="{RGWAccessKey\n||+ RGWAccessKey()\l+ RGWAccessKey()\l+ encode()\l+ decode()\l+ dump()\l+ dump_plain()\l+ dump()\l+ decode_json()\l+ decode_json()\l+ generate_test_instances()\l}" alt="" coords="1983,486,2167,695"/><area shape="rect" id="node20" href="structrgw__bucket.html" title="{rgw_bucket\n||+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="2080,823,2264,1076"/><area shape="rect" id="node21" href="structRGWZone.html" title="{RGWZone\n|+ endpoints\l+ log_meta\l+ log_data\l+ read_only\l+ bucket_index_max_shards\l|+ RGWZone()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ is_read_only()\l+ generate_test_instances()\l}" alt="" coords="2611,229,2800,453"/><area shape="rect" id="node23" href="structreq__state.html" title="{req_state\n|+ cct\l+ op\l+ op_type\l+ content_started\l+ format\l+ formatter\l+ decoded_uri\l+ relative_uri\l+ length\l+ content_length\land 32 more...\l|+ req_state()\l+ ~req_state()\l}" alt="" coords="2294,2409,2417,2647"/><area shape="rect" id="node24" href="structRGWUserInfo.html" title="{RGWUserInfo\n|+ auid\l+ access_keys\l+ swift_keys\l+ subusers\l+ suspended\l+ max_buckets\l+ op_mask\l+ admin\l+ system\l+ placement_tags\l+ temp_url_keys\l|+ RGWUserInfo()\l+ get_key0()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ generate_test_instances()\l}" alt="" coords="448,1432,632,1744"/><area shape="rect" id="node26" href="structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="1124,229,1223,453"/><area shape="rect" id="node28" href="structrgw__err.html" title="{rgw_err\n|+ http_ret\l+ ret\l|+ rgw_err()\l+ rgw_err()\l+ clear()\l+ is_clear()\l+ is_err()\l}" alt="" coords="121,1215,207,1366"/><area shape="rect" id="node31" href="classACLOwner.html" title="{ACLOwner\n||+ ACLOwner()\l+ ~ACLOwner()\l+ encode()\l+ decode()\l+ dump()\l+ set_id()\l+ set_name()\l+ get_id()\l+ get_id()\l+ get_display_name()\l+ generate_test_instances()\l}" alt="" coords="669,837,853,1061"/><area shape="rect" id="node32" href="structreq__init__state.html" title="{req_init_state\n||}" alt="" coords="325,1797,424,1875"/><area shape="rect" id="node33" href="structreq__info.html" title="{req_info\n|+ x_meta_map\l+ method\l|+ req_info()\l+ rebuild_from()\l+ init_meta_info()\l}" alt="" coords="3469,2061,3592,2182"/><area shape="rect" id="node39" href="structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="1212,1447,1327,1729"/><area shape="rect" id="node40" href="structRGWBucketInfo.html" title="{RGWBucketInfo\n|+ flags\l+ creation_time\l+ has_instance_obj\l+ ep_objv\l+ num_shards\l+ bucket_index_shard\l_hash_type\l+ requester_pays\l+ has_website\l+ index_type\l+ swift_versioning\l+ NUM_SHARDS_BLIND_BUCKET\l|+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ versioned()\l+ versioning_status()\l+ versioning_enabled()\l+ has_swift_versioning()\l+ RGWBucketInfo()\l+ generate_test_instances()\l}" alt="" coords="1581,1403,1819,1773"/><area shape="rect" id="node42" href="structRGWBucketWebsiteConf.html" title="{RGWBucketWebsiteConf\n||+ RGWBucketWebsiteConf()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ decode_xml()\l+ dump_xml()\l+ should_redirect()\l+ get_effective_key()\l}" alt="" coords="1392,852,1584,1047"/><area shape="rect" id="node43" href="structRGWRedirectInfo.html" title="{RGWRedirectInfo\n|+ http_redirect_code\l|+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="1713,281,1853,402"/><area shape="rect" id="node14" href="classRGWRESTConn.html" title="{RGWRESTConn\n||+ RGWRESTConn()\l+ get_url()\l+ get_url()\l+ get_self_zonegroup()\l+ get_remote_id()\l+ get_key()\l+ get_ctx()\l+ get_endpoint_count()\l+ forward()\l+ put_obj_init()\land 6 more...\l}" alt="" coords="3384,229,3537,453"/><area shape="rect" id="node15" href="classRGWPeriod.html" title="{RGWPeriod\n||+ RGWPeriod()\l+ RGWPeriod()\l+ get_id()\l+ get_epoch()\l+ get_realm_epoch()\l+ get_predecessor()\l+ get_master_zone()\l+ get_master_zonegroup()\l+ get_realm()\l+ get_map()\land 32 more...\l+ get_staging_id()\l}" alt="" coords="3563,222,3737,461"/><area shape="rect" id="node16" href="classRGWQuotaHandler.html" title="{RGWQuotaHandler\n||+ RGWQuotaHandler()\l+ ~RGWQuotaHandler()\l+ check_quota()\l+ update_stats()\l+ generate_handler()\l+ free_handler()\l}" alt="" coords="3763,266,3925,417"/><area shape="rect" id="node25" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size\l+ max_objects\l+ enabled\l+ check_on_raw\l# max_size_soft_threshold\l# max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="1093,845,1272,1054"/><area shape="rect" id="node27" href="classRGWUserCaps.html" title="{RGWUserCaps\n||+ add_from_string()\l+ remove_from_string()\l+ encode()\l+ decode()\l+ check_cap()\l+ is_valid_cap_type()\l+ dump()\l+ dump()\l+ decode_json()\l+ parse_cap_perm()\l}" alt="" coords="284,845,441,1054"/><area shape="rect" id="node29" href="classRGWAccessControlPolicy.html" title="{RGWAccessControlPolicy\n|# cct\l|+ RGWAccessControlPolicy()\l+ RGWAccessControlPolicy()\l+ ~RGWAccessControlPolicy()\l+ set_ctx()\l+ get_perm()\l+ get_group_perm()\l+ verify_permission()\l+ encode()\l+ decode()\l+ dump()\land 7 more...\l+ generate_test_instances()\l}" alt="" coords="1351,1469,1556,1707"/><area shape="rect" id="node30" href="classRGWAccessControlList.html" title="{RGWAccessControlList\n|# cct\l# acl_user_map\l# acl_group_map\l# referer_list\l# grant_map\l|+ RGWAccessControlList()\l+ RGWAccessControlList()\l+ set_ctx()\l+ ~RGWAccessControlList()\l+ get_perm()\l+ get_group_perm()\l+ get_referer_perm()\l+ encode()\l+ decode()\l+ dump()\l+ add_grant()\l+ get_grant_map()\l+ get_grant_map()\l+ create_default()\l+ generate_test_instances()\l# _add_grant()\l}" alt="" coords="878,771,1068,1127"/><area shape="rect" id="node34" href="classRGWEnv.html" title="{RGWEnv\n||+ RGWEnv()\l+ ~RGWEnv()\l+ init()\l+ init()\l+ set()\l+ get()\l+ get_int()\l+ get_bool()\l+ get_size()\l+ exists()\l+ exists_prefix()\l+ remove()\l+ get_map()\l}" alt="" coords="3673,1461,3788,1715"/><area shape="rect" id="node37" href="classRGWClientIO.html" title="{RGWClientIO\n||+ ~RGWClientIO()\l+ RGWClientIO()\l+ init()\l+ get_env()\l+ account()\l+ set_account()\l+ complete_request()\l+ get_bytes_sent()\l+ get_bytes_received()\l# init_env()\l}" alt="" coords="3621,2017,3775,2226"/><area shape="rect" id="node35" href="classRGWConf.html" title="{RGWConf\n|+ enable_ops_log\l+ enable_usage_log\l+ defer_to_bucket_acls\l|+ RGWConf()\l# init()\l}" alt="" coords="3995,889,4153,1010"/><area shape="rect" id="node36" href="classRGWHTTPArgs.html" title="{RGWHTTPArgs\n||+ RGWHTTPArgs()\l+ set()\l+ parse()\l+ append()\l+ get()\l+ get_bool()\l+ get_bool()\l+ get_bool()\l+ sys_get()\l+ exists()\land 6 more...\l}" alt="" coords="3459,1476,3596,1700"/><area shape="rect" id="node41" href="structRGWObjVersionTracker.html" title="{RGWObjVersionTracker\n|+ read_version\l+ write_version\l|+ version_for_read()\l+ version_for_write()\l+ version_for_check()\l+ prepare_op_for_read()\l+ prepare_op_for_write()\l+ apply_write()\l+ clear()\l+ generate_new_write_ver()\l}" alt="" coords="1609,852,1791,1047"/><area shape="rect" id="node44" href="structRGWBWRoutingRules.html" title="{RGWBWRoutingRules\n|+ rules\l|+ encode()\l+ decode()\l+ dump()\l+ dump_xml()\l+ decode_json()\l+ check_key_condition()\l+ check_error_code_condition()\l+ check_key_and_error\l_code_condition()\l}" alt="" coords="1485,244,1688,439"/><area shape="rect" id="node45" href="classRGWCORSConfiguration.html" title="{RGWCORSConfiguration\n|# rules\l|+ RGWCORSConfiguration()\l+ ~RGWCORSConfiguration()\l+ encode()\l+ decode()\l+ dump()\l+ get_rules()\l+ is_empty()\l+ get_origins_list()\l+ host_name_rule()\l+ erase_host_name_rule()\l+ dump()\l+ stack_rule()\l}" alt="" coords="2499,830,2697,1069"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afe0c1b16a4e50428d72dc90873352fa0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#afe0c1b16a4e50428d72dc90873352fa0">RGWCopyObj</a> ()</td></tr>
 <tr class="separator:afe0c1b16a4e50428d72dc90873352fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f607bdedcdf77558f5ac04d7eed818"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a91f607bdedcdf77558f5ac04d7eed818">emplace_attr</a> (std::string &amp;&amp;key, buffer::list &amp;&amp;bl)</td></tr>
+<tr class="separator:a91f607bdedcdf77558f5ac04d7eed818"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af407a6d32564585bc857e28253dd577e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#af407a6d32564585bc857e28253dd577e">init</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="classRGWOp.html#aeb3e258c53141f1cbfb83e113cda4eed">store</a>, struct <a class="el" href="structreq__state.html">req_state</a> *<a class="el" href="classRGWOp.html#aa8767169436c5b26a052b04b4a735808">s</a>, <a class="el" href="classRGWHandler.html">RGWHandler</a> *h)</td></tr>
 <tr class="separator:af407a6d32564585bc857e28253dd577e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f6b315a7aa54643d0708fbfe3f77276"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a6f6b315a7aa54643d0708fbfe3f77276">verify_permission</a> ()</td></tr>
@@ -134,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac1cc2f094b9f916cbc558ee6320aa752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee81fa59495e9fd64ce318de73c0b02"><td class="memItemLeft" align="right" valign="top">virtual const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a5ee81fa59495e9fd64ce318de73c0b02">name</a> ()</td></tr>
 <tr class="separator:a5ee81fa59495e9fd64ce318de73c0b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2339dba468df68cff6269cb0463fb4cf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8">RGWOpType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a2339dba468df68cff6269cb0463fb4cf">get_type</a> ()</td></tr>
+<tr class="memitem:a2339dba468df68cff6269cb0463fb4cf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="rgw__common_8h.html#adedf6eb016de146128a1adb706df37d8">RGWOpType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a2339dba468df68cff6269cb0463fb4cf">get_type</a> ()</td></tr>
 <tr class="separator:a2339dba468df68cff6269cb0463fb4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec6724cf32200e287ed1b3b88ab141e"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#adec6724cf32200e287ed1b3b88ab141e">op_mask</a> ()</td></tr>
 <tr class="separator:adec6724cf32200e287ed1b3b88ab141e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +145,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae8de1561ce404ba6cbf089f36b75fa03 inherit pub_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7707b832e2bdc3f3dbe4c277886ab4a inherit pub_methods_classRGWOp"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#ab7707b832e2bdc3f3dbe4c277886ab4a">~RGWOp</a> ()</td></tr>
 <tr class="separator:ab7707b832e2bdc3f3dbe4c277886ab4a inherit pub_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8079b1d8ec176195f7962fde767c367 inherit pub_methods_classRGWOp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#ae8079b1d8ec176195f7962fde767c367">get_ret</a> () const </td></tr>
+<tr class="separator:ae8079b1d8ec176195f7962fde767c367 inherit pub_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a668a23916047b39abced1f9ce700e3e5 inherit pub_methods_classRGWOp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#a668a23916047b39abced1f9ce700e3e5">init_processing</a> ()</td></tr>
 <tr class="separator:a668a23916047b39abced1f9ce700e3e5 inherit pub_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee6efa6682a8a6d7a169b9243c309ce1 inherit pub_methods_classRGWOp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#aee6efa6682a8a6d7a169b9243c309ce1">read_bucket_cors</a> ()</td></tr>
@@ -157,6 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ade327762d9bd49bca8a58f4a8cc10923 inherit pub_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8f404111d7eb843869baef66e693e85 inherit pub_methods_classRGWOp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#ad8f404111d7eb843869baef66e693e85">complete</a> ()</td></tr>
 <tr class="separator:ad8f404111d7eb843869baef66e693e85 inherit pub_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde2090dfeacc73c1ab089bccc67e69b inherit pub_methods_classRGWOp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#afde2090dfeacc73c1ab089bccc67e69b">error_handler</a> (int err_no, string *error_content)</td></tr>
+<tr class="separator:afde2090dfeacc73c1ab089bccc67e69b inherit pub_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -168,6 +174,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a474a72e5ac925836990125bfecf32695"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a474a72e5ac925836990125bfecf32695">init_common</a> ()</td></tr>
 <tr class="separator:a474a72e5ac925836990125bfecf32695"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classRGWOp"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classRGWOp')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classRGWOp.html">RGWOp</a></td></tr>
+<tr class="memitem:a0000d8e3e395f700fb955845d825c596 inherit pro_methods_classRGWOp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#a0000d8e3e395f700fb955845d825c596">do_aws4_auth_completion</a> ()</td></tr>
+<tr class="separator:a0000d8e3e395f700fb955845d825c596 inherit pro_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a133d0c2273a19f57762efe52dceac inherit pro_methods_classRGWOp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#a28a133d0c2273a19f57762efe52dceac">init_quota</a> ()</td></tr>
 <tr class="separator:a28a133d0c2273a19f57762efe52dceac inherit pro_methods_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -189,34 +197,38 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a152d34d47e92e7af89b4d95e234c1dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051c904f8f42108d97352cd135779c51"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a051c904f8f42108d97352cd135779c51">end</a></td></tr>
 <tr class="separator:a051c904f8f42108d97352cd135779c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a548e93738840e6642acc4ad6785a1d12"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a548e93738840e6642acc4ad6785a1d12">mod_time</a></td></tr>
-<tr class="separator:a548e93738840e6642acc4ad6785a1d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3fe2da9c0cfef1acd9419e6b069d31d"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#ae3fe2da9c0cfef1acd9419e6b069d31d">unmod_time</a></td></tr>
-<tr class="separator:ae3fe2da9c0cfef1acd9419e6b069d31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec973fc55c31d5488f73f24d8fda8987"><td class="memItemLeft" align="right" valign="top">time_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#aec973fc55c31d5488f73f24d8fda8987">mod_ptr</a></td></tr>
-<tr class="separator:aec973fc55c31d5488f73f24d8fda8987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa42316b9d842c49c9d7ad77f8841c68d"><td class="memItemLeft" align="right" valign="top">time_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#aa42316b9d842c49c9d7ad77f8841c68d">unmod_ptr</a></td></tr>
-<tr class="separator:aa42316b9d842c49c9d7ad77f8841c68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f5a2e8d7c797d89318a3d938d87912f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a0f5a2e8d7c797d89318a3d938d87912f">ret</a></td></tr>
-<tr class="separator:a0f5a2e8d7c797d89318a3d938d87912f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af937c0ec57b935fb82850cd53942fc35"><td class="memItemLeft" align="right" valign="top">map&lt; string, bufferlist &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#af937c0ec57b935fb82850cd53942fc35">attrs</a></td></tr>
-<tr class="separator:af937c0ec57b935fb82850cd53942fc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5774670cd867b63b0bf84a704f58904f"><td class="memItemLeft" align="right" valign="top">ceph::real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a5774670cd867b63b0bf84a704f58904f">mod_time</a></td></tr>
+<tr class="separator:a5774670cd867b63b0bf84a704f58904f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672b209e598e6771b7f01df6d484595a"><td class="memItemLeft" align="right" valign="top">ceph::real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a672b209e598e6771b7f01df6d484595a">unmod_time</a></td></tr>
+<tr class="separator:a672b209e598e6771b7f01df6d484595a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fff85085166d3c72e13374dd6a6c50f"><td class="memItemLeft" align="right" valign="top">ceph::real_time *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a9fff85085166d3c72e13374dd6a6c50f">mod_ptr</a></td></tr>
+<tr class="separator:a9fff85085166d3c72e13374dd6a6c50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c4f8c89195ee9a3c8d9a0cf6e78e54"><td class="memItemLeft" align="right" valign="top">ceph::real_time *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#ae8c4f8c89195ee9a3c8d9a0cf6e78e54">unmod_ptr</a></td></tr>
+<tr class="separator:ae8c4f8c89195ee9a3c8d9a0cf6e78e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f7f46976a07de5db95354ad99895e5"><td class="memItemLeft" align="right" valign="top">map&lt; string, buffer::list &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#ae4f7f46976a07de5db95354ad99895e5">attrs</a></td></tr>
+<tr class="separator:ae4f7f46976a07de5db95354ad99895e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af716ddd2435c14f85a481366a6f91bc3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#af716ddd2435c14f85a481366a6f91bc3">src_tenant_name</a></td></tr>
+<tr class="separator:af716ddd2435c14f85a481366a6f91bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab860955c6c93daee522f5009c9cc5d27"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#ab860955c6c93daee522f5009c9cc5d27">src_bucket_name</a></td></tr>
 <tr class="separator:ab860955c6c93daee522f5009c9cc5d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad66d83e4839833ed71630e7f447bd7aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__bucket.html">rgw_bucket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#ad66d83e4839833ed71630e7f447bd7aa">src_bucket</a></td></tr>
 <tr class="separator:ad66d83e4839833ed71630e7f447bd7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a6cabdfc4a48375de2c8af761d14bb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__obj__key.html">rgw_obj_key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a2a6cabdfc4a48375de2c8af761d14bb8">src_object</a></td></tr>
 <tr class="separator:a2a6cabdfc4a48375de2c8af761d14bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf8ed7ddc21055a424f95855ca8ac32"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#abcf8ed7ddc21055a424f95855ca8ac32">dest_tenant_name</a></td></tr>
+<tr class="separator:abcf8ed7ddc21055a424f95855ca8ac32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fffd6e65c8ab043a56c2b34d46fab2c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a8fffd6e65c8ab043a56c2b34d46fab2c">dest_bucket_name</a></td></tr>
 <tr class="separator:a8fffd6e65c8ab043a56c2b34d46fab2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ffd36af7dced5a85987dd8a58adaedc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__bucket.html">rgw_bucket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a0ffd36af7dced5a85987dd8a58adaedc">dest_bucket</a></td></tr>
 <tr class="separator:a0ffd36af7dced5a85987dd8a58adaedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d98e2e9e845f71710ebf7904b030391"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a1d98e2e9e845f71710ebf7904b030391">dest_object</a></td></tr>
 <tr class="separator:a1d98e2e9e845f71710ebf7904b030391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c756e5f33be1e32f18ffcdbec490910"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a8c756e5f33be1e32f18ffcdbec490910">mtime</a></td></tr>
-<tr class="separator:a8c756e5f33be1e32f18ffcdbec490910"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb4bbf7c06d7f631ac1bbe8317fa1ab9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#abb4bbf7c06d7f631ac1bbe8317fa1ab9">replace_attrs</a></td></tr>
-<tr class="separator:abb4bbf7c06d7f631ac1bbe8317fa1ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b4ac84071693bf313b73978efcf2e5"><td class="memItemLeft" align="right" valign="top">ceph::real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#ac1b4ac84071693bf313b73978efcf2e5">src_mtime</a></td></tr>
+<tr class="separator:ac1b4ac84071693bf313b73978efcf2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2dae1c44ae57b06c91e99606f4161ad"><td class="memItemLeft" align="right" valign="top">ceph::real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#af2dae1c44ae57b06c91e99606f4161ad">mtime</a></td></tr>
+<tr class="separator:af2dae1c44ae57b06c91e99606f4161ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a917767dff81a8e190422616fac9b4aa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWRados.html#acf6063a74d8174f965ace73d8c72d237">RGWRados::AttrsMod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a917767dff81a8e190422616fac9b4aa4">attrs_mod</a></td></tr>
+<tr class="separator:a917767dff81a8e190422616fac9b4aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43c22057380bbe7083bfb16c37a9a651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a43c22057380bbe7083bfb16c37a9a651">src_bucket_info</a></td></tr>
 <tr class="separator:a43c22057380bbe7083bfb16c37a9a651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a490e68c50f09720920cb1d7c7f51d8f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a490e68c50f09720920cb1d7c7f51d8f8">dest_bucket_info</a></td></tr>
@@ -235,6 +247,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a7022e491db13d7a2a2ad90554242a7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25ab49f0945efaf8f843036bb8fc420f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a25ab49f0945efaf8f843036bb8fc420f">olh_epoch</a></td></tr>
 <tr class="separator:a25ab49f0945efaf8f843036bb8fc420f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a70b6a8abd83e36de56f78f52cf841"><td class="memItemLeft" align="right" valign="top">ceph::real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#ab5a70b6a8abd83e36de56f78f52cf841">delete_at</a></td></tr>
+<tr class="separator:ab5a70b6a8abd83e36de56f78f52cf841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e419827ebe32f8c1978175e94ddc37a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCopyObj.html#a0e419827ebe32f8c1978175e94ddc37a">copy_if_newer</a></td></tr>
+<tr class="separator:a0e419827ebe32f8c1978175e94ddc37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classRGWOp"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classRGWOp')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classRGWOp.html">RGWOp</a></td></tr>
 <tr class="memitem:aa8767169436c5b26a052b04b4a735808 inherit pro_attribs_classRGWOp"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structreq__state.html">req_state</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#aa8767169436c5b26a052b04b4a735808">s</a></td></tr>
 <tr class="separator:aa8767169436c5b26a052b04b4a735808 inherit pro_attribs_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,6 +266,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:acbbf857a847c848956eaa8ebecc77455 inherit pro_attribs_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac1c4cc7ce554d7d5a595c047e4d77f2 inherit pro_attribs_classRGWOp"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#aac1c4cc7ce554d7d5a595c047e4d77f2">user_quota</a></td></tr>
 <tr class="separator:aac1c4cc7ce554d7d5a595c047e4d77f2 inherit pro_attribs_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915f54146838596b5d019945eda92729 inherit pro_attribs_classRGWOp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOp.html#a915f54146838596b5d019945eda92729">op_ret</a></td></tr>
+<tr class="separator:a915f54146838596b5d019945eda92729 inherit pro_attribs_classRGWOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="afe0c1b16a4e50428d72dc90873352fa0"></a>
@@ -276,6 +294,40 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a91f607bdedcdf77558f5ac04d7eed818"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWCopyObj::emplace_attr </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">buffer::list &amp;&amp;&#160;</td>
+          <td class="paramname"><em>bl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad91df8793dca87aa4974c45858bc9660"></a>
 <div class="memitem">
 <div class="memproto">
@@ -322,7 +374,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGWCopyObj__ObjStore__S3.html#a2178157996e4587807e6bebac1bf70b1">RGWCopyObj_ObjStore_S3</a>, and <a class="el" href="classRGWCopyObj__ObjStore__SWIFT.html#ab9ee9bed74d8a70ba278d3c1b75235e8">RGWCopyObj_ObjStore_SWIFT</a>.</p>
+<p>Implemented in <a class="el" href="classrgw_1_1RGWCopyObjRequest.html#aa206fe3d27c4a15cc569d987f580f6b1">rgw::RGWCopyObjRequest</a>, <a class="el" href="classRGWCopyObj__ObjStore__S3.html#a2178157996e4587807e6bebac1bf70b1">RGWCopyObj_ObjStore_S3</a>, and <a class="el" href="classRGWCopyObj__ObjStore__SWIFT.html#ab9ee9bed74d8a70ba278d3c1b75235e8">RGWCopyObj_ObjStore_SWIFT</a>.</p>
 
 </div>
 </div>
@@ -334,7 +386,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8">RGWOpType</a> RGWCopyObj::get_type </td>
+          <td class="memname">virtual <a class="el" href="rgw__common_8h.html#adedf6eb016de146128a1adb706df37d8">RGWOpType</a> RGWCopyObj::get_type </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -594,7 +646,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classRGWCopyObj__ObjStore__S3.html#a42ecefcea9b7079ed6421a90bddc1d41">RGWCopyObj_ObjStore_S3</a>, and <a class="el" href="classRGWCopyObj__ObjStore__SWIFT.html#ae5cc1ad160693551316ef3dbfedab6d0">RGWCopyObj_ObjStore_SWIFT</a>.</p>
+<p>Reimplemented in <a class="el" href="classrgw_1_1RGWCopyObjRequest.html#aa6460ddc46d67b1734eb904db8133568">rgw::RGWCopyObjRequest</a>, <a class="el" href="classRGWCopyObj__ObjStore__S3.html#a42ecefcea9b7079ed6421a90bddc1d41">RGWCopyObj_ObjStore_S3</a>, and <a class="el" href="classRGWCopyObj__ObjStore__SWIFT.html#ae5cc1ad160693551316ef3dbfedab6d0">RGWCopyObj_ObjStore_SWIFT</a>.</p>
 
 </div>
 </div>
@@ -621,7 +673,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRGWOp.html#a29843329e795ba43bd348710a40283b9">RGWOp</a>.</p>
 
-<p>Implemented in <a class="el" href="classRGWCopyObj__ObjStore__S3.html#ae6c076d8d4f1e5be86f746c08047d71f">RGWCopyObj_ObjStore_S3</a>, and <a class="el" href="classRGWCopyObj__ObjStore__SWIFT.html#a5af215689328b2c7122e6554a34002ed">RGWCopyObj_ObjStore_SWIFT</a>.</p>
+<p>Implemented in <a class="el" href="classrgw_1_1RGWCopyObjRequest.html#ac179a6372df267a3dd96ab9ee80f0023">rgw::RGWCopyObjRequest</a>, <a class="el" href="classRGWCopyObj__ObjStore__S3.html#ae6c076d8d4f1e5be86f746c08047d71f">RGWCopyObj_ObjStore_S3</a>, and <a class="el" href="classRGWCopyObj__ObjStore__SWIFT.html#a5af215689328b2c7122e6554a34002ed">RGWCopyObj_ObjStore_SWIFT</a>.</p>
 
 </div>
 </div>
@@ -651,7 +703,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="af937c0ec57b935fb82850cd53942fc35"></a>
+<a class="anchor" id="ae4f7f46976a07de5db95354ad99895e5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -659,7 +711,27 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">map&lt;string, bufferlist&gt; RGWCopyObj::attrs</td>
+          <td class="memname">map&lt;string, buffer::list&gt; RGWCopyObj::attrs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a917767dff81a8e190422616fac9b4aa4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRGWRados.html#acf6063a74d8174f965ace73d8c72d237">RGWRados::AttrsMod</a> RGWCopyObj::attrs_mod</td>
         </tr>
       </table>
   </td>
@@ -680,6 +752,46 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">string RGWCopyObj::client_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0e419827ebe32f8c1978175e94ddc37a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RGWCopyObj::copy_if_newer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab5a70b6a8abd83e36de56f78f52cf841"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ceph::real_time RGWCopyObj::delete_at</td>
         </tr>
       </table>
   </td>
@@ -780,6 +892,26 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classRGWAccessControlPolicy.html">RGWAccessControlPolicy</a> RGWCopyObj::dest_policy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abcf8ed7ddc21055a424f95855ca8ac32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string RGWCopyObj::dest_tenant_name</td>
         </tr>
       </table>
   </td>
@@ -951,7 +1083,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec973fc55c31d5488f73f24d8fda8987"></a>
+<a class="anchor" id="a9fff85085166d3c72e13374dd6a6c50f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -959,7 +1091,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">time_t* RGWCopyObj::mod_ptr</td>
+          <td class="memname">ceph::real_time* RGWCopyObj::mod_ptr</td>
         </tr>
       </table>
   </td>
@@ -971,7 +1103,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a548e93738840e6642acc4ad6785a1d12"></a>
+<a class="anchor" id="a5774670cd867b63b0bf84a704f58904f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -979,7 +1111,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">time_t RGWCopyObj::mod_time</td>
+          <td class="memname">ceph::real_time RGWCopyObj::mod_time</td>
         </tr>
       </table>
   </td>
@@ -991,7 +1123,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8c756e5f33be1e32f18ffcdbec490910"></a>
+<a class="anchor" id="af2dae1c44ae57b06c91e99606f4161ad"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -999,7 +1131,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">time_t RGWCopyObj::mtime</td>
+          <td class="memname">ceph::real_time RGWCopyObj::mtime</td>
         </tr>
       </table>
   </td>
@@ -1060,46 +1192,6 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">string RGWCopyObj::op_id</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="abb4bbf7c06d7f631ac1bbe8317fa1ab9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RGWCopyObj::replace_attrs</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0f5a2e8d7c797d89318a3d938d87912f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RGWCopyObj::ret</td>
         </tr>
       </table>
   </td>
@@ -1191,6 +1283,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac1b4ac84071693bf313b73978efcf2e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ceph::real_time RGWCopyObj::src_mtime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a2a6cabdfc4a48375de2c8af761d14bb8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1211,7 +1323,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa42316b9d842c49c9d7ad77f8841c68d"></a>
+<a class="anchor" id="af716ddd2435c14f85a481366a6f91bc3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1219,7 +1331,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">time_t* RGWCopyObj::unmod_ptr</td>
+          <td class="memname">string RGWCopyObj::src_tenant_name</td>
         </tr>
       </table>
   </td>
@@ -1231,7 +1343,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae3fe2da9c0cfef1acd9419e6b069d31d"></a>
+<a class="anchor" id="ae8c4f8c89195ee9a3c8d9a0cf6e78e54"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1239,7 +1351,27 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">time_t RGWCopyObj::unmod_time</td>
+          <td class="memname">ceph::real_time* RGWCopyObj::unmod_ptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a672b209e598e6771b7f01df6d484595a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ceph::real_time RGWCopyObj::unmod_time</td>
         </tr>
       </table>
   </td>
@@ -1278,7 +1410,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:41 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

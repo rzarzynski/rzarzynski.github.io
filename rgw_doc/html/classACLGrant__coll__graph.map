@@ -1,4 +1,5 @@
 <map id="ACLGrant" name="ACLGrant">
-<area shape="rect" id="node2" href="$classACLPermission.html" title="{ACLPermission\n|# flags\l|+ ACLPermission()\l+ ~ACLPermission()\l+ get_permissions()\l+ set_permissions()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="5,6,189,186"/>
-<area shape="rect" id="node3" href="$classACLGranteeType.html" title="{ACLGranteeType\n|# type\l|+ ACLGranteeType()\l+ ~ACLGranteeType()\l+ get_type()\l+ set()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="213,6,397,186"/>
+<area shape="rect" id="node2" href="$classACLPermission.html" title="{ACLPermission\n|# flags\l|+ ACLPermission()\l+ ~ACLPermission()\l+ get_permissions()\l+ set_permissions()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="5,182,189,362"/>
+<area shape="rect" id="node3" href="$structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="319,160,417,384"/>
+<area shape="rect" id="node5" href="$classACLGranteeType.html" title="{ACLGranteeType\n|# type\l|+ ACLGranteeType()\l+ ~ACLGranteeType()\l+ get_type()\l+ set()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="441,182,625,362"/>
 </map>

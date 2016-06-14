@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -92,17 +92,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#a10cb7c502aab88178fbab6537e960aba">chain_cache_entry</a>(list&lt; rgw_cache_entry_info * &gt; &amp;cache_info_entries, RGWChainedCache::Entry *chained_entry)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRGWCache.html#afce1284529762097216d7556ed196ef1">delete_system_obj</a>(rgw_obj &amp;obj, RGWObjVersionTracker *objv_tracker)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#ac8f1191640ec01b6efce85a17395892a">get_system_obj</a>(RGWObjectCtx &amp;obj_ctx, RGWRados::SystemObject::Read::GetObjState &amp;read_state, RGWObjVersionTracker *objv_tracker, rgw_obj &amp;obj, bufferlist &amp;bl, off_t ofs, off_t end, rgw_cache_entry_info *cache_info)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWCache.html#ada4475a66070769c08acf7174369f26e">put_obj_data</a>(void *ctx, rgw_obj &amp;obj, const char *data, off_t ofs, size_t len, bool exclusive)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#ab29cf320b6690a607b3c9c4f6a9eb8e5">put_system_obj_impl</a>(rgw_obj &amp;obj, uint64_t size, time_t *mtime, map&lt; std::string, bufferlist &gt; &amp;attrs, int flags, bufferlist &amp;data, RGWObjVersionTracker *objv_tracker, time_t set_mtime)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWCache.html#a43c5b0f89c74da19ad808454ed5ecac1">raw_obj_stat</a>(rgw_obj &amp;obj, uint64_t *psize, time_t *pmtime, uint64_t *epoch, map&lt; string, bufferlist &gt; *attrs, bufferlist *first_chunk, RGWObjVersionTracker *objv_tracker)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#a5c75c7615c819040174640c03ce4e9d0">RGWCache</a>()</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWCache.html#ac69796dfa7fecc656f748fb304f28911">set_attr</a>(void *ctx, rgw_obj &amp;obj, const char *name, bufferlist &amp;bl, RGWObjVersionTracker *objv_tracker)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#a49dd72e1611971d3ce6f28ad5c6d6997">set_attrs</a>(void *ctx, rgw_obj &amp;obj, map&lt; string, bufferlist &gt; &amp;attrs, map&lt; string, bufferlist &gt; *rmattrs, RGWObjVersionTracker *objv_tracker)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#af7f36e5bfb830be024cf84b22e84a00b">get_system_obj</a>(RGWObjectCtx &amp;obj_ctx, RGWRados::SystemObject::Read::GetObjState &amp;read_state, RGWObjVersionTracker *objv_tracker, rgw_obj &amp;obj, bufferlist &amp;bl, off_t ofs, off_t end, map&lt; string, bufferlist &gt; *attrs, rgw_cache_entry_info *cache_info)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWCache.html#a2e1e253ba14ebad962410d52339f5e33">put_system_obj_data</a>(void *ctx, rgw_obj &amp;obj, bufferlist &amp;bl, off_t ofs, bool exclusive)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#a2bebccdcf985e72c9d76d42cbf477fd4">put_system_obj_impl</a>(rgw_obj &amp;obj, uint64_t size, real_time *mtime, map&lt; std::string, bufferlist &gt; &amp;attrs, int flags, bufferlist &amp;data, RGWObjVersionTracker *objv_tracker, real_time set_mtime)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWCache.html#a26bca560d0d337c043234983a0e673af">raw_obj_stat</a>(rgw_obj &amp;obj, uint64_t *psize, real_time *pmtime, uint64_t *epoch, map&lt; string, bufferlist &gt; *attrs, bufferlist *first_chunk, RGWObjVersionTracker *objv_tracker)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#aff5d8642eae6023dc6b910a7d37821ba">register_chained_cache</a>(RGWChainedCache *cc)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWCache.html#a5c75c7615c819040174640c03ce4e9d0">RGWCache</a>()</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWCache.html#a05615a8191adbd0f1d9a2f8ea86ffd68">system_obj_set_attrs</a>(void *ctx, rgw_obj &amp;obj, map&lt; string, bufferlist &gt; &amp;attrs, map&lt; string, bufferlist &gt; *rmattrs, RGWObjVersionTracker *objv_tracker)</td><td class="entry"><a class="el" href="classRGWCache.html">RGWCache&lt; T &gt;</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:41 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

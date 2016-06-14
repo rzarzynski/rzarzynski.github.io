@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -96,8 +96,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;common/Formatter.h&quot;</code><br/>
 <code>#include &quot;common/utf8.h&quot;</code><br/>
 <code>#include &quot;common/ceph_json.h&quot;</code><br/>
+<code>#include &quot;common/safe_io.h&quot;</code><br/>
+<code>#include &lt;boost/algorithm/string.hpp&gt;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rest_8h_source.html">rgw_rest.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rest__s3_8h_source.html">rgw_rest_s3.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__rest__s3website_8h_source.html">rgw_rest_s3website.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__auth__s3_8h_source.html">rgw_auth_s3.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__acl_8h_source.html">rgw_acl.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__policy__s3_8h_source.html">rgw_policy_s3.h</a>&quot;</code><br/>
@@ -105,12 +108,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="rgw__cors_8h_source.html">rgw_cors.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__cors__s3_8h_source.html">rgw_cors_s3.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__client__io_8h_source.html">rgw_client_io.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__keystone_8h_source.html">rgw_keystone.h</a>&quot;</code><br/>
+<code>#include &lt;typeinfo&gt;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__ldap_8h_source.html">rgw_ldap.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__token_8h_source.html">rgw_token.h</a>&quot;</code><br/>
+<code>#include &quot;include/assert.h&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_rest_s3.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rest__s3_8cc__incl.png" border="0" usemap="#rgw__rest__s3_8cc" alt=""/></div>
 <map name="rgw__rest__s3_8cc" id="rgw__rest__s3_8cc">
-<area shape="rect" id="node8" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="3255,80,3336,107"/><area shape="rect" id="node21" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2073,461,2151,488"/><area shape="rect" id="node23" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2841,461,2927,488"/><area shape="rect" id="node34" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1906,229,1992,256"/><area shape="rect" id="node40" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="2327,80,2431,107"/><area shape="rect" id="node46" href="rgw__policy__s3_8h.html" title="rgw_policy_s3.h" alt="" coords="2679,379,2795,405"/><area shape="rect" id="node48" href="rgw__auth__s3_8h.html" title="rgw_auth_s3.h" alt="" coords="1093,155,1200,181"/><area shape="rect" id="node49" href="rgw__cors__s3_8h.html" title="rgw_cors_s3.h" alt="" coords="3212,379,3319,405"/><area shape="rect" id="node50" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="32,304,141,331"/><area shape="rect" id="node10" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="2341,155,2415,181"/><area shape="rect" id="node36" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="3343,379,3448,405"/><area shape="rect" id="node15" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1205,379,1315,405"/><area shape="rect" id="node24" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1853,461,1947,488"/><area shape="rect" id="node31" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1681,304,1775,331"/><area shape="rect" id="node39" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2050,229,2149,256"/><area shape="rect" id="node25" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2227,461,2320,488"/><area shape="rect" id="node35" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1450,304,1539,331"/><area shape="rect" id="node41" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="1283,229,1405,256"/><area shape="rect" id="node42" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="2556,379,2655,405"/><area shape="rect" id="node47" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="1057,304,1172,331"/><area shape="rect" id="node45" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="3053,461,3135,488"/></map>
+<area shape="rect" id="node10" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="1481,155,1562,181"/><area shape="rect" id="node20" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1045,528,1123,555"/><area shape="rect" id="node22" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1669,528,1755,555"/><area shape="rect" id="node26" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1136,304,1222,331"/><area shape="rect" id="node30" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="127,379,237,405"/><area shape="rect" id="node33" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="1745,155,1849,181"/><area shape="rect" id="node39" href="rgw__policy__s3_8h.html" title="rgw_policy_s3.h" alt="" coords="1383,453,1498,480"/><area shape="rect" id="node40" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="514,304,629,331"/><area shape="rect" id="node44" href="rgw__ldap_8h.html" title="rgw_ldap.h" alt="" coords="2229,229,2314,256"/><area shape="rect" id="node45" href="rgw__rest__s3website_8h.html" title="rgw_rest_s3website.h" alt="" coords="1647,80,1795,107"/><area shape="rect" id="node46" href="rgw__auth__s3_8h.html" title="rgw_auth_s3.h" alt="" coords="633,155,739,181"/><area shape="rect" id="node47" href="rgw__cors__s3_8h.html" title="rgw_cors_s3.h" alt="" coords="2163,453,2270,480"/><area shape="rect" id="node50" href="rgw__token_8h.html" title="rgw_token.h" alt="" coords="2442,229,2535,256"/><area shape="rect" id="node12" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="1477,229,1550,256"/><area shape="rect" id="node28" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="1751,453,1855,480"/><area shape="rect" id="node16" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="675,453,785,480"/><area shape="rect" id="node25" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="822,379,915,405"/><area shape="rect" id="node21" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="866,603,995,629"/><area shape="rect" id="node23" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="539,528,633,555"/><area shape="rect" id="node27" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1041,379,1130,405"/><area shape="rect" id="node35" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="703,304,826,331"/><area shape="rect" id="node36" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="2041,453,2139,480"/><area shape="rect" id="node43" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1699,229,1817,256"/><area shape="rect" id="node38" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="2186,528,2267,555"/><area shape="rect" id="node41" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="473,379,594,405"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -125,6 +133,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCreateBucketParser.html">RGWCreateBucketParser</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSetRequestPaymentParser.html">RGWSetRequestPaymentParser</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -134,6 +144,12 @@ Macros</h2></td></tr>
 <tr class="separator:a892f8650d5b019c0a30eb140dfa8ca10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad87c74d2401cd379e0b4f56fe25f9f73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#ad87c74d2401cd379e0b4f56fe25f9f73">CREATE_BUCKET_MAX_REQ_LEN</a>&#160;&#160;&#160;(512 * 1024) /* this is way more than enough */</td></tr>
 <tr class="separator:ad87c74d2401cd379e0b4f56fe25f9f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b5fef9e7042a5de0dd494935bbc96f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#ab4b5fef9e7042a5de0dd494935bbc96f">GET_REQUEST_PAYMENT_BUF_MAX</a>&#160;&#160;&#160;(128 * 1024)</td></tr>
+<tr class="separator:ab4b5fef9e7042a5de0dd494935bbc96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a097dd46944cc44851d6e24254e2d9191"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a097dd46944cc44851d6e24254e2d9191">AWS4_HMAC_SHA256_STR</a>&#160;&#160;&#160;&quot;AWS4-HMAC-SHA256&quot;</td></tr>
+<tr class="separator:a097dd46944cc44851d6e24254e2d9191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2412cd146d4b14972587bd0c9ff095b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a2412cd146d4b14972587bd0c9ff095b2">CREDENTIALS_PREFIX_LEN</a>&#160;&#160;&#160;(sizeof(<a class="el" href="rgw__rest__s3_8cc.html#a097dd46944cc44851d6e24254e2d9191">AWS4_HMAC_SHA256_STR</a>) - 1)</td></tr>
+<tr class="separator:a2412cd146d4b14972587bd0c9ff095b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -145,10 +161,15 @@ Functions</h2></td></tr>
 <tr class="separator:a7a7b78efced36f1a33d5ff3554b39224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac990cdf6feddbce7fdaa83b644066a71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#ac990cdf6feddbce7fdaa83b644066a71">rgw_get_errno_s3</a> (<a class="el" href="structrgw__http__errors.html">rgw_http_errors</a> *e, int err_no)</td></tr>
 <tr class="separator:ac990cdf6feddbce7fdaa83b644066a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956df4dd7aaa66d85c4942060b9660a6"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a956df4dd7aaa66d85c4942060b9660a6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a956df4dd7aaa66d85c4942060b9660a6">decode_attr_bl_single_value</a> (map&lt; string, bufferlist &gt; &amp;attrs, const char *attr_name, T *result, T def_val)</td></tr>
+<tr class="separator:a956df4dd7aaa66d85c4942060b9660a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499743410b296af7916fef185c740847"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a499743410b296af7916fef185c740847">dump_usage_categories_info</a> (Formatter *formatter, const rgw_usage_log_entry &amp;entry, map&lt; string, bool &gt; *categories)</td></tr>
+<tr class="separator:a499743410b296af7916fef185c740847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64d1e9bfd8f7007768e916b0425b101f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a64d1e9bfd8f7007768e916b0425b101f">dump_bucket_metadata</a> (struct <a class="el" href="structreq__state.html">req_state</a> *s, <a class="el" href="structRGWBucketEnt.html">RGWBucketEnt</a> &amp;bucket)</td></tr>
 <tr class="separator:a64d1e9bfd8f7007768e916b0425b101f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a441059ef01407e43781fd9cb68dcc2f0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a441059ef01407e43781fd9cb68dcc2f0">create_s3_policy</a> (struct <a class="el" href="structreq__state.html">req_state</a> *s, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="classRGWAccessControlPolicy__S3.html">RGWAccessControlPolicy_S3</a> &amp;s3policy)</td></tr>
-<tr class="separator:a441059ef01407e43781fd9cb68dcc2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47be25521662866ef34bc5f223afdf3d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a47be25521662866ef34bc5f223afdf3d">create_s3_policy</a> (struct <a class="el" href="structreq__state.html">req_state</a> *s, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="classRGWAccessControlPolicy__S3.html">RGWAccessControlPolicy_S3</a> &amp;s3policy, <a class="el" href="classACLOwner.html">ACLOwner</a> &amp;owner)</td></tr>
+<tr class="separator:a47be25521662866ef34bc5f223afdf3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba018ab19b95dd27cc956e92191fe49"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a6ba018ab19b95dd27cc956e92191fe49">get_success_retcode</a> (int code)</td></tr>
 <tr class="separator:a6ba018ab19b95dd27cc956e92191fe49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac64669034a230cf31be8eb2f862195f8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#ac64669034a230cf31be8eb2f862195f8">parse_params</a> (const string &amp;params_str, string &amp;first, map&lt; string, string &gt; &amp;params)</td></tr>
@@ -159,23 +180,53 @@ Functions</h2></td></tr>
 <tr class="separator:aee2457fb6d8115a5d0316783447460df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa99c4d582704001c648dc900f361dfa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#afa99c4d582704001c648dc900f361dfa">index_of</a> (bufferlist &amp;bl, int max_len, const string &amp;str, bool check_crlf, bool *reached_boundary, int *skip)</td></tr>
 <tr class="separator:afa99c4d582704001c648dc900f361dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b3a7c693096e039e45e333d5f9680ce"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a7b3a7c693096e039e45e333d5f9680ce">looks_like_ip_address</a> (const char *bucket)</td></tr>
-<tr class="separator:a7b3a7c693096e039e45e333d5f9680ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f1cd4840d813d1c3823b04b099967b0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a2f1cd4840d813d1c3823b04b099967b0">init_anon_user</a> (struct <a class="el" href="structreq__state.html">req_state</a> *s)</td></tr>
 <tr class="separator:a2f1cd4840d813d1c3823b04b099967b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766322786cb1112c42f3103b2418112d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a766322786cb1112c42f3103b2418112d">is_base64_for_content_md5</a> (unsigned char c)</td></tr>
+<tr class="separator:a766322786cb1112c42f3103b2418112d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454cc241777a7ecb0eb78a7300e53414"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#a454cc241777a7ecb0eb78a7300e53414">char_needs_aws4_escaping</a> (char c)</td></tr>
+<tr class="separator:a454cc241777a7ecb0eb78a7300e53414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebea7ddf0abda72002cb6465999fbe7f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#aebea7ddf0abda72002cb6465999fbe7f">aws4_uri_encode</a> (const string &amp;src, string &amp;dst)</td></tr>
+<tr class="separator:aebea7ddf0abda72002cb6465999fbe7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ab069f885162c20e67e0776702524841a"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structresponse__attr__param.html">response_attr_param</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#ab069f885162c20e67e0776702524841a">resp_attr_params</a> []</td></tr>
 <tr class="separator:ab069f885162c20e67e0776702524841a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae844cb8d3c1003124a8335a9c979c691"><td class="memItemLeft" align="right" valign="top">static std::array&lt; string, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8cc.html#ae844cb8d3c1003124a8335a9c979c691">aws4_presigned_required_keys</a> = { &quot;Credential&quot;, &quot;SignedHeaders&quot;, &quot;Signature&quot; }</td></tr>
+<tr class="separator:ae844cb8d3c1003124a8335a9c979c691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a097dd46944cc44851d6e24254e2d9191"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AWS4_HMAC_SHA256_STR&#160;&#160;&#160;&quot;AWS4-HMAC-SHA256&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad87c74d2401cd379e0b4f56fe25f9f73"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">#define CREATE_BUCKET_MAX_REQ_LEN&#160;&#160;&#160;(512 * 1024) /* this is way more than enough */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2412cd146d4b14972587bd0c9ff095b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CREDENTIALS_PREFIX_LEN&#160;&#160;&#160;(sizeof(<a class="el" href="rgw__rest__s3_8cc.html#a097dd46944cc44851d6e24254e2d9191">AWS4_HMAC_SHA256_STR</a>) - 1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -206,8 +257,78 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab4b5fef9e7042a5de0dd494935bbc96f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GET_REQUEST_PAYMENT_BUF_MAX&#160;&#160;&#160;(128 * 1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a441059ef01407e43781fd9cb68dcc2f0"></a>
+<a class="anchor" id="aebea7ddf0abda72002cb6465999fbe7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void aws4_uri_encode </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a454cc241777a7ecb0eb78a7300e53414"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool char_needs_aws4_escaping </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47be25521662866ef34bc5f223afdf3d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -230,7 +351,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classRGWAccessControlPolicy__S3.html">RGWAccessControlPolicy_S3</a> &amp;&#160;</td>
-          <td class="paramname"><em>s3policy</em>&#160;</td>
+          <td class="paramname"><em>s3policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classACLOwner.html">ACLOwner</a> &amp;&#160;</td>
+          <td class="paramname"><em>owner</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -243,6 +370,46 @@ Variables</h2></td></tr>
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a956df4dd7aaa66d85c4942060b9660a6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int decode_attr_bl_single_value </td>
+          <td>(</td>
+          <td class="paramtype">map&lt; string, bufferlist &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>attr_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>def_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -291,6 +458,46 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="structRGWBucketEnt.html">RGWBucketEnt</a> &amp;&#160;</td>
           <td class="paramname"><em>bucket</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a499743410b296af7916fef185c740847"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void dump_usage_categories_info </td>
+          <td>(</td>
+          <td class="paramtype">Formatter *&#160;</td>
+          <td class="paramname"><em>formatter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const rgw_usage_log_entry &amp;&#160;</td>
+          <td class="paramname"><em>entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, bool &gt; *&#160;</td>
+          <td class="paramname"><em>categories</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -413,6 +620,30 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a766322786cb1112c42f3103b2418112d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool is_base64_for_content_md5 </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aee2457fb6d8115a5d0316783447460df"></a>
 <div class="memitem">
 <div class="memproto">
@@ -457,30 +688,6 @@ Variables</h2></td></tr>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7b3a7c693096e039e45e333d5f9680ce"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool looks_like_ip_address </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>bucket</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -592,6 +799,26 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="ae844cb8d3c1003124a8335a9c979c691"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;string, 3&gt; aws4_presigned_required_keys = { &quot;Credential&quot;, &quot;SignedHeaders&quot;, &quot;Signature&quot; }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab069f885162c20e67e0776702524841a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +851,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

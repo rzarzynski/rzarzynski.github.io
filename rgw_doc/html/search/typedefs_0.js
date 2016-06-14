@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['rgwaccesshandle',['RGWAccessHandle',['../rgw__common_8h.html#a4a95f97ed31b39286a86480bece78a63',1,'rgw_common.h']]],
-  ['rgwgetkeystoneadmintoken',['RGWGetKeystoneAdminToken',['../rgw__swift_8cc.html#ac53d74386ac4c678edf081b8a414eb87',1,'rgw_swift.cc']]],
-  ['rgwgetrevokedtokens',['RGWGetRevokedTokens',['../rgw__swift_8cc.html#aa4aac9b5486b7480682122491c400eaa',1,'rgw_swift.cc']]],
-  ['rgwreplicaitemmarker',['RGWReplicaItemMarker',['../rgw__replica__log_8h.html#a4bd5c1dee5c2919d30790d90b3726d85',1,'rgw_replica_log.h']]],
-  ['rgwreplicaprogressmarker',['RGWReplicaProgressMarker',['../rgw__replica__log_8h.html#aeb614179113738818d573b1ee11ae79a',1,'rgw_replica_log.h']]]
+  ['acl_5fstrategy_5ft',['acl_strategy_t',['../classRGWRemoteAuthApplier.html#a8bcb0819a8d7521441eb73c82e8111df',1,'RGWRemoteAuthApplier::acl_strategy_t()'],['../classRGWKeystoneAuthEngine.html#a66ad5fb9bbe1421ea2b135d599226681',1,'RGWKeystoneAuthEngine::acl_strategy_t()']]],
+  ['aclspec_5ft',['aclspec_t',['../classRGWIdentityApplier.html#a2506bd92994cba265341cc27ad145f9b',1,'RGWIdentityApplier::aclspec_t()'],['../classRGWRemoteAuthApplier.html#a94519ac34c1d72a773e8fe182e55e70c',1,'RGWRemoteAuthApplier::aclspec_t()']]],
+  ['aplptr_5ft',['aplptr_t',['../classRGWAuthApplier.html#ab8345244a37967eb6e24cc1f59bf90f8',1,'RGWAuthApplier']]]
 ];

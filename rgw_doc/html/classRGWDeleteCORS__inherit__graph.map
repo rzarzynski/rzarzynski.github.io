@@ -1,5 +1,5 @@
 <map id="RGWDeleteCORS" name="RGWDeleteCORS">
-<area shape="rect" id="node3" href="$classRGWDeleteCORS__ObjStore.html" title="{RGWDeleteCORS_ObjStore\n||+ RGWDeleteCORS_ObjStore()\l+ ~RGWDeleteCORS_ObjStore()\l}" alt="" coords="16,595,235,687"/>
-<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="37,6,213,333"/>
-<area shape="rect" id="node4" href="$classRGWDeleteCORS__ObjStore__S3.html" title="{RGWDeleteCORS_ObjStore_S3\n||+ RGWDeleteCORS_ObjStore_S3()\l+ ~RGWDeleteCORS_ObjStore_S3()\l+ send_response()\l}" alt="" coords="5,736,245,843"/>
+<area shape="rect" id="node3" href="$classRGWDeleteCORS__ObjStore.html" title="{RGWDeleteCORS_ObjStore\n||+ RGWDeleteCORS_ObjStore()\l+ ~RGWDeleteCORS_ObjStore()\l}" alt="" coords="16,625,235,717"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="28,6,223,362"/>
+<area shape="rect" id="node4" href="$classRGWDeleteCORS__ObjStore__S3.html" title="{RGWDeleteCORS_ObjStore_S3\n||+ RGWDeleteCORS_ObjStore_S3()\l+ ~RGWDeleteCORS_ObjStore_S3()\l+ send_response()\l}" alt="" coords="5,765,245,872"/>
 </map>

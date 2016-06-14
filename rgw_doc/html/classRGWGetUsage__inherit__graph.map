@@ -1,0 +1,5 @@
+<map id="RGWGetUsage" name="RGWGetUsage">
+<area shape="rect" id="node3" href="$classRGWGetUsage__ObjStore.html" title="{RGWGetUsage_ObjStore\n||+ RGWGetUsage_ObjStore()\l+ ~RGWGetUsage_ObjStore()\l}" alt="" coords="16,758,215,850"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="19,6,213,362"/>
+<area shape="rect" id="node4" href="$classRGWGetUsage__ObjStore__S3.html" title="{RGWGetUsage_ObjStore_S3\n||+ RGWGetUsage_ObjStore_S3()\l+ ~RGWGetUsage_ObjStore_S3()\l+ get_params()\l+ send_response()\l}" alt="" coords="5,899,227,1021"/>
+</map>

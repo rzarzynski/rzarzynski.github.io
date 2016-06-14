@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['key',['Key',['../structKey.html',1,'']]],
-  ['keystonetoken',['KeystoneToken',['../classKeystoneToken.html',1,'']]]
+  ['hextable',['HexTable',['../classHexTable.html',1,'']]],
+  ['history',['History',['../classRGWPeriodHistory_1_1History.html',1,'RGWPeriodHistory']]]
 ];

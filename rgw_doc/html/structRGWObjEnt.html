@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -98,7 +98,7 @@ Collaboration diagram for RGWObjEnt:</div>
 <div class="dyncontent">
 <div class="center"><img src="structRGWObjEnt__coll__graph.png" border="0" usemap="#RGWObjEnt_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWObjEnt_coll__map" id="RGWObjEnt_coll__map">
-<area shape="rect" id="node2" href="structrgw__obj__key.html" title="{rgw_obj_key\n|+ name\l+ instance\l|+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="25,6,140,274"/></map>
+<area shape="rect" id="node2" href="structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="192,189,291,413"/><area shape="rect" id="node4" href="structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="315,160,429,443"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -120,14 +120,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a08fd5b2eb55b0ab963ab254947e2eeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7e41d791718ab091ea188147a5d4449"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#ac7e41d791718ab091ea188147a5d4449">ns</a></td></tr>
 <tr class="separator:ac7e41d791718ab091ea188147a5d4449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae2c614ede7339b088a220895bb5c3f1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#aae2c614ede7339b088a220895bb5c3f1">owner</a></td></tr>
-<tr class="separator:aae2c614ede7339b088a220895bb5c3f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548200a0eef6a2e1865bfc8cd7177af9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__user.html">rgw_user</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#a548200a0eef6a2e1865bfc8cd7177af9">owner</a></td></tr>
+<tr class="separator:a548200a0eef6a2e1865bfc8cd7177af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6800390f2c5338d4c182723c4b86c3e2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#a6800390f2c5338d4c182723c4b86c3e2">owner_display_name</a></td></tr>
 <tr class="separator:a6800390f2c5338d4c182723c4b86c3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd4f03b7695df02a8a92fec03580655"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#aabd4f03b7695df02a8a92fec03580655">size</a></td></tr>
 <tr class="separator:aabd4f03b7695df02a8a92fec03580655"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25a6edd3f52481d89e6550443185a1d6"><td class="memItemLeft" align="right" valign="top">utime_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#a25a6edd3f52481d89e6550443185a1d6">mtime</a></td></tr>
-<tr class="separator:a25a6edd3f52481d89e6550443185a1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ddc2219682806ad5ece79124c417b2"><td class="memItemLeft" align="right" valign="top">ceph::real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#a32ddc2219682806ad5ece79124c417b2">mtime</a></td></tr>
+<tr class="separator:a32ddc2219682806ad5ece79124c417b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00b894d9754eb2085ed339416a62141c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#a00b894d9754eb2085ed339416a62141c">etag</a></td></tr>
 <tr class="separator:a00b894d9754eb2085ed339416a62141c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ca1029242600323e3b8e0060a27aa04"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWObjEnt.html#a9ca1029242600323e3b8e0060a27aa04">content_type</a></td></tr>
@@ -300,12 +300,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a25a6edd3f52481d89e6550443185a1d6"></a>
+<a class="anchor" id="a32ddc2219682806ad5ece79124c417b2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">utime_t RGWObjEnt::mtime</td>
+          <td class="memname">ceph::real_time RGWObjEnt::mtime</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -324,12 +324,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aae2c614ede7339b088a220895bb5c3f1"></a>
+<a class="anchor" id="a548200a0eef6a2e1865bfc8cd7177af9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string RGWObjEnt::owner</td>
+          <td class="memname"><a class="el" href="structrgw__user.html">rgw_user</a> RGWObjEnt::owner</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -391,7 +391,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

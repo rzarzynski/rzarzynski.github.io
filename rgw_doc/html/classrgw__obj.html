@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -99,7 +99,7 @@ Collaboration diagram for rgw_obj:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrgw__obj__coll__graph.png" border="0" usemap="#rgw__obj_coll__map" alt="Collaboration graph"/></div>
 <map name="rgw__obj_coll__map" id="rgw__obj_coll__map">
-<area shape="rect" id="node2" href="structrgw__bucket.html" title="{rgw_bucket\n|+ name\l+ data_pool\l+ data_extra_pool\l+ index_pool\l+ marker\l+ bucket_id\l+ oid\l|+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="5,6,189,333"/></map>
+<area shape="rect" id="node2" href="structrgw__bucket.html" title="{rgw_bucket\n||+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="176,264,360,517"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -144,6 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0e8aee0a17235e6a951ee1b14f307501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9cbfc8dcd5ad0cac4f42c32cb25f693"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrgw__obj.html#ae9cbfc8dcd5ad0cac4f42c32cb25f693">get_index_key_name</a> () const </td></tr>
 <tr class="separator:ae9cbfc8dcd5ad0cac4f42c32cb25f693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241fafcae8bedc6669c3b08e0aa3ef07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrgw__obj.html#a241fafcae8bedc6669c3b08e0aa3ef07">from_index_key</a> (<a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;b, const <a class="el" href="structrgw__obj__key.html">rgw_obj_key</a> &amp;key)</td></tr>
+<tr class="separator:a241fafcae8bedc6669c3b08e0aa3ef07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a118e4cc528289e78438aed8bc6a5da6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrgw__obj.html#a118e4cc528289e78438aed8bc6a5da6f">get_index_key</a> (<a class="el" href="structrgw__obj__key.html">rgw_obj_key</a> *key) const </td></tr>
 <tr class="separator:a118e4cc528289e78438aed8bc6a5da6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5a229f3f285c813bd01e983156fcbfc"><td class="memItemLeft" align="right" valign="top">string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrgw__obj.html#ab5a229f3f285c813bd01e983156fcbfc">get_hash_object</a> ()</td></tr>
@@ -169,6 +171,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:acdddba8448ff4314fcbe436241e8afb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82ba714dca0665ae8d13d4c58b902408"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrgw__obj.html#a82ba714dca0665ae8d13d4c58b902408">translate_raw_obj_to_obj_in_ns</a> (string &amp;obj, string &amp;instance, string &amp;<a class="el" href="classrgw__obj.html#aa798207966b9834b698260ef9b3055f7">ns</a>)</td></tr>
 <tr class="separator:a82ba714dca0665ae8d13d4c58b902408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8feb3a15b6a69b93937502fec7f2dee"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrgw__obj.html#ae8feb3a15b6a69b93937502fec7f2dee">parse_raw_oid</a> (const string &amp;oid, string *obj_name, string *obj_instance, string *obj_ns)</td></tr>
+<tr class="separator:ae8feb3a15b6a69b93937502fec7f2dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a254c9ccdec588075ac5595988849f3af"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrgw__obj.html#a254c9ccdec588075ac5595988849f3af">strip_namespace_from_object</a> (string &amp;obj, string &amp;<a class="el" href="classrgw__obj.html#aa798207966b9834b698260ef9b3055f7">ns</a>, string &amp;instance)</td></tr>
 <tr class="separator:a254c9ccdec588075ac5595988849f3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcf4b050e92175899e7323f21f3ab523"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrgw__obj.html#adcf4b050e92175899e7323f21f3ab523">generate_test_instances</a> (list&lt; <a class="el" href="classrgw__obj.html">rgw_obj</a> * &gt; &amp;o)</td></tr>
@@ -354,6 +358,40 @@ Public Attributes</h2></td></tr>
           <td class="paramtype">bufferlist &amp;&#160;</td>
           <td class="paramname"><em>bl</em></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a241fafcae8bedc6669c3b08e0aa3ef07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rgw_obj::from_index_key </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrgw__obj__key.html">rgw_obj_key</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -799,6 +837,52 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae8feb3a15b6a69b93937502fec7f2dee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool rgw_obj::parse_raw_oid </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>oid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string *&#160;</td>
+          <td class="paramname"><em>obj_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string *&#160;</td>
+          <td class="paramname"><em>obj_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string *&#160;</td>
+          <td class="paramname"><em>obj_ns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4c00431b5efecd736f2a9549576113d5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1107,7 +1191,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

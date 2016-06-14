@@ -1,3 +1,3 @@
 <map id="RGWQuotaCacheStats" name="RGWQuotaCacheStats">
-<area shape="rect" id="node2" href="$structRGWStorageStats.html" title="{RGWStorageStats\n|+ category\l+ num_kb\l+ num_kb_rounded\l+ num_objects\l|+ RGWStorageStats()\l+ dump()\l}" alt="" coords="9,5,159,141"/>
+<area shape="rect" id="node2" href="$structRGWStorageStats.html" title="{RGWStorageStats\n|+ category\l+ size\l+ size_rounded\l+ num_objects\l|+ RGWStorageStats()\l+ dump()\l}" alt="" coords="9,5,159,141"/>
 </map>

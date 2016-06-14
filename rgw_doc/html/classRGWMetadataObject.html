@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -98,7 +98,7 @@ Inheritance diagram for RGWMetadataObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWMetadataObject__inherit__graph.png" border="0" usemap="#RGWMetadataObject_inherit__map" alt="Inheritance graph"/></div>
 <map name="RGWMetadataObject_inherit__map" id="RGWMetadataObject_inherit__map">
-<area shape="rect" id="node2" href="classRGWBucketEntryMetadataObject.html" title="{RGWBucketEntryMetadataObject\n||+ RGWBucketEntryMetadataObject()\l+ dump()\l}" alt="" coords="5,221,243,313"/><area shape="rect" id="node3" href="classRGWBucketInstanceMetadataObject.html" title="{RGWBucketInstanceMetadata\lObject\n||+ RGWBucketInstanceMetadata\lObject()\l+ dump()\l}" alt="" coords="267,206,479,327"/><area shape="rect" id="node4" href="classRGWUserMetadataObject.html" title="{RGWUserMetadataObject\n||+ RGWUserMetadataObject()\l+ dump()\l}" alt="" coords="504,221,699,313"/></map>
+<area shape="rect" id="node2" href="classRGWBucketEntryMetadataObject.html" title="{RGWBucketEntryMetadataObject\n||+ RGWBucketEntryMetadataObject()\l+ dump()\l}" alt="" coords="5,250,243,342"/><area shape="rect" id="node3" href="classRGWBucketInstanceMetadataObject.html" title="{RGWBucketInstanceMetadata\lObject\n||+ RGWBucketInstanceMetadata\lObject()\l+ RGWBucketInstanceMetadata\lObject()\l+ dump()\l+ decode_json()\l+ get_bucket_info()\l}" alt="" coords="267,206,479,386"/><area shape="rect" id="node4" href="classRGWUserMetadataObject.html" title="{RGWUserMetadataObject\n||+ RGWUserMetadataObject()\l+ dump()\l}" alt="" coords="504,250,699,342"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for RGWMetadataObject:</div>
@@ -116,8 +116,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adefd7bdcd724ff13b3644ef5911f88b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22dc29641541f670a5f02f9a06e5a13d"><td class="memItemLeft" align="right" valign="top">obj_version &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataObject.html#a22dc29641541f670a5f02f9a06e5a13d">get_version</a> ()</td></tr>
 <tr class="separator:a22dc29641541f670a5f02f9a06e5a13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa69589104a82421b17457acff274afd3"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataObject.html#aa69589104a82421b17457acff274afd3">get_mtime</a> ()</td></tr>
-<tr class="separator:aa69589104a82421b17457acff274afd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1bd8eae8681e40e491ba60152a19be7"><td class="memItemLeft" align="right" valign="top">real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataObject.html#af1bd8eae8681e40e491ba60152a19be7">get_mtime</a> ()</td></tr>
+<tr class="separator:af1bd8eae8681e40e491ba60152a19be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10cb44f33efb0ea96d3d13995dede87a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataObject.html#a10cb44f33efb0ea96d3d13995dede87a">dump</a> (Formatter *f) const =0</td></tr>
 <tr class="separator:a10cb44f33efb0ea96d3d13995dede87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -125,8 +125,8 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a661f723fb120d7aeb21336b1dcf2f243"><td class="memItemLeft" align="right" valign="top">obj_version&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataObject.html#a661f723fb120d7aeb21336b1dcf2f243">objv</a></td></tr>
 <tr class="separator:a661f723fb120d7aeb21336b1dcf2f243"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4c1c5e2b1390c16c92e488f9b3fd713"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataObject.html#af4c1c5e2b1390c16c92e488f9b3fd713">mtime</a></td></tr>
-<tr class="separator:af4c1c5e2b1390c16c92e488f9b3fd713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14d783bb03635d2eaac1176967be420"><td class="memItemLeft" align="right" valign="top">ceph::real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataObject.html#af14d783bb03635d2eaac1176967be420">mtime</a></td></tr>
+<tr class="separator:af14d783bb03635d2eaac1176967be420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a039c2693bba765491f163782074a868a"></a>
@@ -202,7 +202,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa69589104a82421b17457acff274afd3"></a>
+<a class="anchor" id="af1bd8eae8681e40e491ba60152a19be7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -210,7 +210,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">time_t RGWMetadataObject::get_mtime </td>
+          <td class="memname">real_time RGWMetadataObject::get_mtime </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -241,7 +241,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="af4c1c5e2b1390c16c92e488f9b3fd713"></a>
+<a class="anchor" id="af14d783bb03635d2eaac1176967be420"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -249,7 +249,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">time_t RGWMetadataObject::mtime</td>
+          <td class="memname">ceph::real_time RGWMetadataObject::mtime</td>
         </tr>
       </table>
   </td>
@@ -288,7 +288,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

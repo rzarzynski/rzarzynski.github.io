@@ -1,4 +1,5 @@
 <map id="RGWProcess" name="RGWProcess">
-<area shape="rect" id="node2" href="$classRGWFCGXProcess.html" title="{RGWFCGXProcess\n||+ RGWFCGXProcess()\l+ run()\l+ handle_request()\l}" alt="" coords="5,329,164,436"/>
-<area shape="rect" id="node3" href="$classRGWLoadGenProcess.html" title="{RGWLoadGenProcess\n||+ RGWLoadGenProcess()\l+ run()\l+ checkpoint()\l+ handle_request()\l+ gen_request()\l+ set_access_key()\l}" alt="" coords="190,307,364,458"/>
+<area shape="rect" id="node2" href="$classrgw_1_1RGWLibProcess.html" title="{rgw::RGWLibProcess\n||+ RGWLibProcess()\l+ run()\l+ checkpoint()\l+ register_fs()\l+ unregister_fs()\l+ enqueue_req()\l+ handle_request()\l+ process_request()\l+ process_request()\l+ set_access_key()\l+ start_request()\l+ finish_request()\l}" alt="" coords="5,337,153,575"/>
+<area shape="rect" id="node3" href="$classRGWFCGXProcess.html" title="{RGWFCGXProcess\n||+ RGWFCGXProcess()\l+ run()\l+ handle_request()\l}" alt="" coords="179,403,337,509"/>
+<area shape="rect" id="node4" href="$classRGWLoadGenProcess.html" title="{RGWLoadGenProcess\n||+ RGWLoadGenProcess()\l+ run()\l+ checkpoint()\l+ handle_request()\l+ gen_request()\l+ set_access_key()\l}" alt="" coords="363,381,537,531"/>
 </map>

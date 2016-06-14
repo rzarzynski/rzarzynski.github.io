@@ -1,4 +1,5 @@
 <map id="rgw_acl_s3.h" name="rgw_acl_s3.h">
-<area shape="rect" id="node8" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="280,80,361,107"/>
-<area shape="rect" id="node9" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="177,80,255,107"/>
+<area shape="rect" id="node7" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="248,80,329,107"/>
+<area shape="rect" id="node9" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="547,80,625,107"/>
+<area shape="rect" id="node11" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="511,155,640,181"/>
 </map>

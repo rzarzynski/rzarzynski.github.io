@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -113,8 +113,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4ede0be84c4ccb4d4e581409faa51cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86933cc67c83357a4b127670e4da8e62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRadosPutObj.html#a86933cc67c83357a4b127670e4da8e62">set_extra_data_len</a> (uint64_t len)</td></tr>
 <tr class="separator:a86933cc67c83357a4b127670e4da8e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19be6182302ffcb5920423d99c713bc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRadosPutObj.html#a19be6182302ffcb5920423d99c713bc2">complete</a> (string &amp;etag, time_t *mtime, time_t set_mtime, map&lt; string, bufferlist &gt; &amp;attrs)</td></tr>
-<tr class="separator:a19be6182302ffcb5920423d99c713bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12bc1689a08e3343203887461198b9ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRadosPutObj.html#a12bc1689a08e3343203887461198b9ed">complete</a> (string &amp;etag, real_time *mtime, real_time set_mtime, map&lt; string, bufferlist &gt; &amp;attrs, real_time delete_at)</td></tr>
+<tr class="separator:a12bc1689a08e3343203887461198b9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f53ddc0703734b26470b5435127655"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRadosPutObj.html#a12f53ddc0703734b26470b5435127655">is_canceled</a> ()</td></tr>
+<tr class="separator:a12f53ddc0703734b26470b5435127655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classRGWGetDataCB"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classRGWGetDataCB')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classRGWGetDataCB.html">RGWGetDataCB</a></td></tr>
 <tr class="memitem:ae98b2063433c88e24d2a1e064d9c3c0b inherit pub_methods_classRGWGetDataCB"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetDataCB.html#ae98b2063433c88e24d2a1e064d9c3c0b">RGWGetDataCB</a> ()</td></tr>
 <tr class="separator:ae98b2063433c88e24d2a1e064d9c3c0b inherit pub_methods_classRGWGetDataCB"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,7 +177,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a19be6182302ffcb5920423d99c713bc2"></a>
+<a class="anchor" id="a12bc1689a08e3343203887461198b9ed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -191,20 +193,26 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *&#160;</td>
           <td class="paramname"><em>mtime</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>set_mtime</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">map&lt; string, bufferlist &gt; &amp;&#160;</td>
-          <td class="paramname"><em>attrs</em>&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real_time&#160;</td>
+          <td class="paramname"><em>delete_at</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -263,6 +271,29 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a12f53ddc0703734b26470b5435127655"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RGWRadosPutObj::is_canceled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a86933cc67c83357a4b127670e4da8e62"></a>
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +326,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

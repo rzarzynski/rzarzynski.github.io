@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -99,7 +99,7 @@ Collaboration diagram for rgw_log_entry:</div>
 <div class="dyncontent">
 <div class="center"><img src="structrgw__log__entry__coll__graph.png" border="0" usemap="#rgw__log__entry_coll__map" alt="Collaboration graph"/></div>
 <map name="rgw__log__entry_coll__map" id="rgw__log__entry_coll__map">
-<area shape="rect" id="node2" href="structrgw__obj__key.html" title="{rgw_obj_key\n|+ name\l+ instance\l|+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="40,6,155,274"/></map>
+<area shape="rect" id="node2" href="structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="136,189,234,413"/><area shape="rect" id="node4" href="structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="258,160,373,443"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -118,10 +118,10 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a90733e7c62281f5984133c326923afa4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__log__entry.html#a90733e7c62281f5984133c326923afa4">object_owner</a></td></tr>
-<tr class="separator:a90733e7c62281f5984133c326923afa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33cd2436f57de96e3ff76af62fcf81d2"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__log__entry.html#a33cd2436f57de96e3ff76af62fcf81d2">bucket_owner</a></td></tr>
-<tr class="separator:a33cd2436f57de96e3ff76af62fcf81d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae3adcfc52f84f57d010d3e2cb42132d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__user.html">rgw_user</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__log__entry.html#aae3adcfc52f84f57d010d3e2cb42132d">object_owner</a></td></tr>
+<tr class="separator:aae3adcfc52f84f57d010d3e2cb42132d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78841d4b4e376c8a9e780a6ab89d94c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__user.html">rgw_user</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__log__entry.html#a78841d4b4e376c8a9e780a6ab89d94c8">bucket_owner</a></td></tr>
+<tr class="separator:a78841d4b4e376c8a9e780a6ab89d94c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb6f426308baba8701f51fdf885c43f0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__log__entry.html#afb6f426308baba8701f51fdf885c43f0">bucket</a></td></tr>
 <tr class="separator:afb6f426308baba8701f51fdf885c43f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cbc9a8406fd3db5aee6b4baaa604d30"><td class="memItemLeft" align="right" valign="top">utime_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__log__entry.html#a4cbc9a8406fd3db5aee6b4baaa604d30">time</a></td></tr>
@@ -269,12 +269,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a33cd2436f57de96e3ff76af62fcf81d2"></a>
+<a class="anchor" id="a78841d4b4e376c8a9e780a6ab89d94c8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string rgw_log_entry::bucket_owner</td>
+          <td class="memname"><a class="el" href="structrgw__user.html">rgw_user</a> rgw_log_entry::bucket_owner</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -353,12 +353,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a90733e7c62281f5984133c326923afa4"></a>
+<a class="anchor" id="aae3adcfc52f84f57d010d3e2cb42132d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string rgw_log_entry::object_owner</td>
+          <td class="memname"><a class="el" href="structrgw__user.html">rgw_user</a> rgw_log_entry::object_owner</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -469,7 +469,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

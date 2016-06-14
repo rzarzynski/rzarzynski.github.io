@@ -1,3 +1,4 @@
 <map id="RGWBucketAdminOpState" name="RGWBucketAdminOpState">
-<area shape="rect" id="node2" href="$structrgw__bucket.html" title="{rgw_bucket\n|+ name\l+ data_pool\l+ data_extra_pool\l+ index_pool\l+ marker\l+ bucket_id\l+ oid\l|+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="5,6,189,333"/>
+<area shape="rect" id="node2" href="$structrgw__bucket.html" title="{rgw_bucket\n||+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="138,264,322,517"/>
+<area shape="rect" id="node4" href="$structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="346,279,445,503"/>
 </map>

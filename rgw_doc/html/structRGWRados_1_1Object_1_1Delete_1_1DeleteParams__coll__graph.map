@@ -1,3 +1,4 @@
 <map id="RGWRados::Object::Delete::DeleteParams" name="RGWRados::Object::Delete::DeleteParams">
-<area shape="rect" id="node2" href="$classACLOwner.html" title="{ACLOwner\n|# id\l# display_name\l|+ ACLOwner()\l+ ~ACLOwner()\l+ encode()\l+ decode()\l+ dump()\l+ set_id()\l+ set_name()\l+ get_id()\l+ get_display_name()\l+ generate_test_instances()\l}" alt="" coords="5,5,189,229"/>
+<area shape="rect" id="node2" href="$structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="99,160,198,384"/>
+<area shape="rect" id="node4" href="$classACLOwner.html" title="{ACLOwner\n||+ ACLOwner()\l+ ~ACLOwner()\l+ encode()\l+ decode()\l+ dump()\l+ set_id()\l+ set_name()\l+ get_id()\l+ get_id()\l+ get_display_name()\l+ generate_test_instances()\l}" alt="" coords="238,448,422,672"/>
 </map>

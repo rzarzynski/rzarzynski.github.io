@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -105,13 +105,13 @@ Collaboration diagram for RGWGetUserStats_CB:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWGetUserStats__CB__coll__graph.png" border="0" usemap="#RGWGetUserStats__CB_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWGetUserStats__CB_coll__map" id="RGWGetUserStats__CB_coll__map">
-<area shape="rect" id="node3" href="structRGWStorageStats.html" title="{RGWStorageStats\n|+ category\l+ num_kb\l+ num_kb_rounded\l+ num_objects\l|+ RGWStorageStats()\l+ dump()\l}" alt="" coords="161,5,311,141"/></map>
+<area shape="rect" id="node3" href="structRGWStorageStats.html" title="{RGWStorageStats\n|+ category\l+ size\l+ size_rounded\l+ num_objects\l|+ RGWStorageStats()\l+ dump()\l}" alt="" coords="161,204,311,340"/><area shape="rect" id="node4" href="structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="336,160,435,384"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad86d33f05190e5bddc7202b670062886"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUserStats__CB.html#ad86d33f05190e5bddc7202b670062886">RGWGetUserStats_CB</a> (const string &amp;_user)</td></tr>
-<tr class="separator:ad86d33f05190e5bddc7202b670062886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae983a812401911eccfe459777b37c273"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUserStats__CB.html#ae983a812401911eccfe459777b37c273">RGWGetUserStats_CB</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;_user)</td></tr>
+<tr class="separator:ae983a812401911eccfe459777b37c273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a330deb65e44c48be0c4fe21966db0834"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUserStats__CB.html#a330deb65e44c48be0c4fe21966db0834">~RGWGetUserStats_CB</a> ()</td></tr>
 <tr class="separator:a330deb65e44c48be0c4fe21966db0834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dabd8d1d6b634aa1d1e680f462689a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUserStats__CB.html#a9dabd8d1d6b634aa1d1e680f462689a5">handle_response</a> (int r)=0</td></tr>
@@ -121,13 +121,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a0c82a6b4262d13bd64b4a574ec00eff1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUserStats__CB.html#a0c82a6b4262d13bd64b4a574ec00eff1">user</a></td></tr>
-<tr class="separator:a0c82a6b4262d13bd64b4a574ec00eff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f9488207b8fcdb269412b776236682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__user.html">rgw_user</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUserStats__CB.html#a26f9488207b8fcdb269412b776236682">user</a></td></tr>
+<tr class="separator:a26f9488207b8fcdb269412b776236682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a889217ed7d97b62f952dde5650471eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWStorageStats.html">RGWStorageStats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUserStats__CB.html#a889217ed7d97b62f952dde5650471eb9">stats</a></td></tr>
 <tr class="separator:a889217ed7d97b62f952dde5650471eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad86d33f05190e5bddc7202b670062886"></a>
+<a class="anchor" id="ae983a812401911eccfe459777b37c273"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -137,14 +137,14 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">RGWGetUserStats_CB::RGWGetUserStats_CB </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>_user</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -246,7 +246,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0c82a6b4262d13bd64b4a574ec00eff1"></a>
+<a class="anchor" id="a26f9488207b8fcdb269412b776236682"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -254,7 +254,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string RGWGetUserStats_CB::user</td>
+          <td class="memname"><a class="el" href="structrgw__user.html">rgw_user</a> RGWGetUserStats_CB::user</td>
         </tr>
       </table>
   </td>
@@ -272,7 +272,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:41 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

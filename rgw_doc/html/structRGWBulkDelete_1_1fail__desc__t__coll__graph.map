@@ -1,0 +1,4 @@
+<map id="RGWBulkDelete::fail_desc_t" name="RGWBulkDelete::fail_desc_t">
+<area shape="rect" id="node2" href="$structRGWBulkDelete_1_1acct__path__t.html" title="{RGWBulkDelete::acct\l_path_t\n||}" alt="" coords="5,507,157,599"/>
+<area shape="rect" id="node4" href="$structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="175,160,289,443"/>
+</map>

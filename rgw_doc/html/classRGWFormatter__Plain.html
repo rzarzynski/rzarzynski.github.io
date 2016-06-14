@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -109,10 +109,16 @@ Collaboration diagram for RGWFormatter_Plain:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa035fc9b382a611e0ae5e826b54c4386"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFormatter__Plain.html#aa035fc9b382a611e0ae5e826b54c4386">RGWFormatter_Plain</a> ()</td></tr>
-<tr class="separator:aa035fc9b382a611e0ae5e826b54c4386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab7e81ce564b6b814fd58ee6d5e808a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFormatter__Plain.html#a9ab7e81ce564b6b814fd58ee6d5e808a">RGWFormatter_Plain</a> (bool use_kv=false)</td></tr>
+<tr class="separator:a9ab7e81ce564b6b814fd58ee6d5e808a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22936a9a778172327ef0687557bb7a05"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFormatter__Plain.html#a22936a9a778172327ef0687557bb7a05">~RGWFormatter_Plain</a> ()</td></tr>
 <tr class="separator:a22936a9a778172327ef0687557bb7a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02b443d83d8d11be54137df0b94c58d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFormatter__Plain.html#ac02b443d83d8d11be54137df0b94c58d">set_status</a> (int status, const char *status_name)</td></tr>
+<tr class="separator:ac02b443d83d8d11be54137df0b94c58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab406576e5daac205d82a36f75bddd1c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFormatter__Plain.html#ab406576e5daac205d82a36f75bddd1c2">output_header</a> ()</td></tr>
+<tr class="separator:ab406576e5daac205d82a36f75bddd1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fd4f32ef564d8f0eec618aafba268d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFormatter__Plain.html#a06fd4f32ef564d8f0eec618aafba268d">output_footer</a> ()</td></tr>
+<tr class="separator:a06fd4f32ef564d8f0eec618aafba268d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9b077770c232b8ee2bc6d7128609dd2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFormatter__Plain.html#ab9b077770c232b8ee2bc6d7128609dd2">flush</a> (ostream &amp;os)</td></tr>
 <tr class="separator:ab9b077770c232b8ee2bc6d7128609dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16eaf8ee443bbf3236d80eafacbf2233"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFormatter__Plain.html#a16eaf8ee443bbf3236d80eafacbf2233">reset</a> ()</td></tr>
@@ -145,17 +151,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a57ebcdc245c97cfe4b4a76d5e3bb669c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa035fc9b382a611e0ae5e826b54c4386"></a>
+<a class="anchor" id="a9ab7e81ce564b6b814fd58ee6d5e808a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">RGWFormatter_Plain::RGWFormatter_Plain </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_kv</em> = <code>false</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -582,6 +597,52 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a06fd4f32ef564d8f0eec618aafba268d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RGWFormatter_Plain::output_footer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab406576e5daac205d82a36f75bddd1c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RGWFormatter_Plain::output_header </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a16eaf8ee443bbf3236d80eafacbf2233"></a>
 <div class="memitem">
 <div class="memproto">
@@ -599,6 +660,40 @@ Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac02b443d83d8d11be54137df0b94c58d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RGWFormatter_Plain::set_status </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>status_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -636,7 +731,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:41 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

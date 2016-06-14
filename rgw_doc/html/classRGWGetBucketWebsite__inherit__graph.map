@@ -1,0 +1,4 @@
+<map id="RGWGetBucketWebsite" name="RGWGetBucketWebsite">
+<area shape="rect" id="node3" href="$classRGWGetBucketWebsite__ObjStore__S3.html" title="{RGWGetBucketWebsite\l_ObjStore_S3\n||+ RGWGetBucketWebsite\l_ObjStore_S3()\l+ ~RGWGetBucketWebsite\l_ObjStore_S3()\l+ send_response()\l}" alt="" coords="10,641,195,791"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="5,6,200,362"/>
+</map>

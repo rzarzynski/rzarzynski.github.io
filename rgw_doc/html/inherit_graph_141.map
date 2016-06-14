@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structRGWRados_1_1Object_1_1Delete_1_1DeleteParams.html" title="RGWRados::Object::Delete\l::DeleteParams" alt="" coords="6,5,191,46"/>
+<area shape="rect" id="node1" href="$classRGWFormatterFlusher.html" title="RGWFormatterFlusher" alt="" coords="5,31,160,57"/>
+<area shape="rect" id="node2" href="$classRGWRESTFlusher.html" title="RGWRESTFlusher" alt="" coords="211,5,346,32"/>
+<area shape="rect" id="node3" href="$classRGWStreamFlusher.html" title="RGWStreamFlusher" alt="" coords="209,56,349,83"/>
 </map>

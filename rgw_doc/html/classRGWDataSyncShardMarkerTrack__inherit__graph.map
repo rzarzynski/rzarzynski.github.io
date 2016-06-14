@@ -1,0 +1,3 @@
+<map id="RGWDataSyncShardMarkerTrack" name="RGWDataSyncShardMarkerTrack">
+<area shape="rect" id="node2" href="$classRGWSyncShardMarkerTrack.html" title="{RGWSyncShardMarkerTrack\l\&lt; string, string \&gt;\n|# need_retry_set\l|+ RGWSyncShardMarkerTrack()\l+ ~RGWSyncShardMarkerTrack()\l+ start()\l+ try_update_high_marker()\l+ finish()\l+ flush()\l+ need_retry()\l+ set_need_retry()\l+ reset_need_retry()\l# store_marker()\l# handle_finish()\l}" alt="" coords="15,6,235,245"/>
+</map>

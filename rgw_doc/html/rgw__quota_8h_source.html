@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -107,80 +107,122 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;include/atomic.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;common/lru_map.h&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="classRGWRados.html">RGWRados</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span>JSONObj;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html">   26</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structRGWQuotaInfo.html">RGWQuotaInfo</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a7ae595fcdb65b156ac1607a6dee0cc39">   27</a></span>&#160;  int64_t <a class="code" href="structRGWQuotaInfo.html#a7ae595fcdb65b156ac1607a6dee0cc39">max_size_kb</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">   28</a></span>&#160;  int64_t <a class="code" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">   29</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">   30</a></span>&#160;  int64_t <a class="code" href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">max_size_soft_threshold</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">   31</a></span>&#160;  int64_t <a class="code" href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">max_objs_soft_threshold</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a2e1556af526a14dbcaa5b0e1e61b6e08">   33</a></span>&#160;  <a class="code" href="structRGWQuotaInfo.html#a2e1556af526a14dbcaa5b0e1e61b6e08">RGWQuotaInfo</a>() : <a class="code" href="structRGWQuotaInfo.html#a7ae595fcdb65b156ac1607a6dee0cc39">max_size_kb</a>(-1), <a class="code" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a>(-1), <a class="code" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a>(false),</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                   <a class="code" href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">max_size_soft_threshold</a>(-1), <a class="code" href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">max_objs_soft_threshold</a>(-1) {}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">   36</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">encode</a>(bufferlist&amp; bl)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    ENCODE_START(1, 1, bl);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(<a class="code" href="structRGWQuotaInfo.html#a7ae595fcdb65b156ac1607a6dee0cc39">max_size_kb</a>, bl);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(<a class="code" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a>, bl);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(<a class="code" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a>, bl);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    ENCODE_FINISH(bl);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">   43</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">decode</a>(bufferlist::iterator&amp; bl) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    DECODE_START(1, bl);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">::decode</a>(<a class="code" href="structRGWQuotaInfo.html#a7ae595fcdb65b156ac1607a6dee0cc39">max_size_kb</a>, bl);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">::decode</a>(<a class="code" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a>, bl);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">::decode</a>(<a class="code" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a>, bl);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    DECODE_FINISH(bl);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structRGWQuotaInfo.html#a92253614e484fac7f9f20182966fcd5e">dump</a>(Formatter *f) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structRGWQuotaInfo.html#afed8ae3d178babb8c9512d16881b646b">decode_json</a>(JSONObj *obj);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;WRITE_CLASS_ENCODER(<a class="code" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>)</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="rgw__quota_8h.html#a2f88eef7cafb83862963fb3411125def">   23</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> int64_t <a class="code" href="rgw__quota_8h.html#a2f88eef7cafb83862963fb3411125def">rgw_rounded_kb</a>(int64_t bytes)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> (bytes + 1023) / 1024;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="classRGWRados.html">RGWRados</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span>JSONObj;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structRGWQuotaInfo.html">RGWQuotaInfo</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a80d709a6200a9b04d47bdd9f4dad6f99">   32</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classRGWQuotaCache.html">RGWQuotaCache</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">/* The quota thresholds after which comparing against cached storage stats</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">   * is disallowed. Those fields may be accessed only by the RGWQuotaCache.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">   * They are not intended as tunables but rather as a mean to store results</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">   * of repeating calculations in the quota cache subsystem. */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">   38</a></span>&#160;  int64_t <a class="code" href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">max_size_soft_threshold</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">   39</a></span>&#160;  int64_t <a class="code" href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">max_objs_soft_threshold</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">   42</a></span>&#160;  int64_t <a class="code" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">   43</a></span>&#160;  int64_t <a class="code" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">   44</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">/* Do we want to compare with raw, not rounded RGWStorageStats::size (true)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">   * or maybe rounded-to-4KiB RGWStorageStats::size_rounded (false)? */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#abcfdd7944be04c475aca17fe3cce00b8">   47</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structRGWQuotaInfo.html#abcfdd7944be04c475aca17fe3cce00b8">check_on_raw</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#a2e1556af526a14dbcaa5b0e1e61b6e08">   49</a></span>&#160;  <a class="code" href="structRGWQuotaInfo.html#a2e1556af526a14dbcaa5b0e1e61b6e08">RGWQuotaInfo</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    : <a class="code" href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">max_size_soft_threshold</a>(-1),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">max_objs_soft_threshold</a>(-1),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a>(-1),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a>(-1),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a>(false),</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#abcfdd7944be04c475aca17fe3cce00b8">check_on_raw</a>(false) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;struct <a class="code" href="structrgw__bucket.html">rgw_bucket</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classRGWQuotaHandler.html">   60</a></span>&#160;class <a class="code" href="classRGWQuotaHandler.html">RGWQuotaHandler</a> {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classRGWQuotaHandler.html#a197b92043c2b5bddee1d7b2efd12501e">   62</a></span>&#160;  <a class="code" href="classRGWQuotaHandler.html#a197b92043c2b5bddee1d7b2efd12501e">RGWQuotaHandler</a>() {}</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classRGWQuotaHandler.html#affc6e8fa2238490820444812c2b83e24">   63</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classRGWQuotaHandler.html#affc6e8fa2238490820444812c2b83e24">~RGWQuotaHandler</a>() {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> check_quota(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; bucket_owner, rgw_bucket&amp; bucket,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                          <a class="code" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>&amp; user_quota, <a class="code" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>&amp; bucket_quota,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;              uint64_t num_objs, uint64_t size) = 0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> update_stats(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; bucket_owner, rgw_bucket&amp; bucket, <span class="keywordtype">int</span> obj_delta, uint64_t added_bytes, uint64_t removed_bytes) = 0;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">static</span> RGWQuotaHandler *generate_handler(<a class="code" href="classRGWRados.html">RGWRados</a> *<a class="code" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <span class="keywordtype">bool</span> quota_threads);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> free_handler(RGWQuotaHandler *handler);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structRGWQuotaInfo_html_a06716c4be1ae4301ba7420d0a731e2df"><div class="ttname"><a href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">RGWQuotaInfo::max_size_soft_threshold</a></div><div class="ttdeci">int64_t max_size_soft_threshold</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:30</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_a2e1556af526a14dbcaa5b0e1e61b6e08"><div class="ttname"><a href="structRGWQuotaInfo.html#a2e1556af526a14dbcaa5b0e1e61b6e08">RGWQuotaInfo::RGWQuotaInfo</a></div><div class="ttdeci">RGWQuotaInfo()</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:33</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_afed8ae3d178babb8c9512d16881b646b"><div class="ttname"><a href="structRGWQuotaInfo.html#afed8ae3d178babb8c9512d16881b646b">RGWQuotaInfo::decode_json</a></div><div class="ttdeci">void decode_json(JSONObj *obj)</div><div class="ttdef"><b>Definition:</b> rgw_json_enc.cc:484</div></div>
-<div class="ttc" id="classRGWRados_html"><div class="ttname"><a href="classRGWRados.html">RGWRados</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:1158</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html"><div class="ttname"><a href="structRGWQuotaInfo.html">RGWQuotaInfo</a></div><div class="ttdef"><b>Definition:</b> rgw_quota.h:26</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_a425e1d2833678631d7d27fef8cd1da1f"><div class="ttname"><a href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">RGWQuotaInfo::max_objects</a></div><div class="ttdeci">int64_t max_objects</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:28</div></div>
-<div class="ttc" id="rgw__admin_8cc_html_a9b49a835107f65049c05bddc99751652"><div class="ttname"><a href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a></div><div class="ttdeci">static RGWRados * store</div><div class="ttdef"><b>Definition:</b> rgw_admin.cc:40</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_a4db7bae2a930d3c468c53af0da07962c"><div class="ttname"><a href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">RGWQuotaInfo::max_objs_soft_threshold</a></div><div class="ttdeci">int64_t max_objs_soft_threshold</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:31</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_a7ae595fcdb65b156ac1607a6dee0cc39"><div class="ttname"><a href="structRGWQuotaInfo.html#a7ae595fcdb65b156ac1607a6dee0cc39">RGWQuotaInfo::max_size_kb</a></div><div class="ttdeci">int64_t max_size_kb</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:27</div></div>
-<div class="ttc" id="classRGWQuotaHandler_html_a197b92043c2b5bddee1d7b2efd12501e"><div class="ttname"><a href="classRGWQuotaHandler.html#a197b92043c2b5bddee1d7b2efd12501e">RGWQuotaHandler::RGWQuotaHandler</a></div><div class="ttdeci">RGWQuotaHandler()</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:62</div></div>
-<div class="ttc" id="structrgw__bucket_html"><div class="ttname"><a href="structrgw__bucket.html">rgw_bucket</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:583</div></div>
-<div class="ttc" id="classRGWQuotaHandler_html"><div class="ttname"><a href="classRGWQuotaHandler.html">RGWQuotaHandler</a></div><div class="ttdef"><b>Definition:</b> rgw_quota.h:60</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_a92253614e484fac7f9f20182966fcd5e"><div class="ttname"><a href="structRGWQuotaInfo.html#a92253614e484fac7f9f20182966fcd5e">RGWQuotaInfo::dump</a></div><div class="ttdeci">void dump(Formatter *f) const </div><div class="ttdef"><b>Definition:</b> rgw_json_enc.cc:477</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_ac6cc2b4e2692bbbb1e0e4003fd5617d3"><div class="ttname"><a href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">RGWQuotaInfo::encode</a></div><div class="ttdeci">void encode(bufferlist &amp;bl) const </div><div class="ttdef"><b>Definition:</b> rgw_quota.h:36</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_a4dbb532beaa44f6aba6766bf845315cd"><div class="ttname"><a href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">RGWQuotaInfo::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:29</div></div>
-<div class="ttc" id="structRGWQuotaInfo_html_ace1a73ac6f01bb0040fb0b73b23a100d"><div class="ttname"><a href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">RGWQuotaInfo::decode</a></div><div class="ttdeci">void decode(bufferlist::iterator &amp;bl)</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:43</div></div>
-<div class="ttc" id="classRGWQuotaHandler_html_affc6e8fa2238490820444812c2b83e24"><div class="ttname"><a href="classRGWQuotaHandler.html#affc6e8fa2238490820444812c2b83e24">RGWQuotaHandler::~RGWQuotaHandler</a></div><div class="ttdeci">virtual ~RGWQuotaHandler()</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:63</div></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">   58</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">encode</a>(bufferlist&amp; bl)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ENCODE_START(3, 1, bl);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a> &lt; 0) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(-<a class="code" href="rgw__quota_8h.html#a2f88eef7cafb83862963fb3411125def">rgw_rounded_kb</a>(abs(<a class="code" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a>)), bl);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(<a class="code" href="rgw__quota_8h.html#a2f88eef7cafb83862963fb3411125def">rgw_rounded_kb</a>(<a class="code" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a>), bl);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(<a class="code" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a>, bl);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(<a class="code" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a>, bl);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(<a class="code" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a>, bl);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">::encode</a>(<a class="code" href="structRGWQuotaInfo.html#abcfdd7944be04c475aca17fe3cce00b8">check_on_raw</a>, bl);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ENCODE_FINISH(bl);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">   71</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">decode</a>(bufferlist::iterator&amp; bl) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    DECODE_START_LEGACY_COMPAT_LEN(3, 1, 1, bl);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    int64_t max_size_kb;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">::decode</a>(max_size_kb, bl);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">::decode</a>(<a class="code" href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">max_objects</a>, bl);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">::decode</a>(<a class="code" href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">enabled</a>, bl);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (struct_v &lt; 2) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a> = max_size_kb * 1024;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">::decode</a>(<a class="code" href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">max_size</a>, bl);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (struct_v &gt;= 3) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">::decode</a>(<a class="code" href="structRGWQuotaInfo.html#abcfdd7944be04c475aca17fe3cce00b8">check_on_raw</a>, bl);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    DECODE_FINISH(bl);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structRGWQuotaInfo.html#a92253614e484fac7f9f20182966fcd5e">dump</a>(Formatter *f) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structRGWQuotaInfo.html#afed8ae3d178babb8c9512d16881b646b">decode_json</a>(JSONObj *obj);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<a class="code" href="namespacergw.html#a12e768365595ed6aa121311114126794">WRITE_CLASS_ENCODER</a>(<a class="code" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;struct <a class="code" href="structrgw__bucket.html">rgw_bucket</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classRGWQuotaHandler.html">   97</a></span>&#160;class <a class="code" href="classRGWQuotaHandler.html">RGWQuotaHandler</a> {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classRGWQuotaHandler.html#a197b92043c2b5bddee1d7b2efd12501e">   99</a></span>&#160;  <a class="code" href="classRGWQuotaHandler.html#a197b92043c2b5bddee1d7b2efd12501e">RGWQuotaHandler</a>() {}</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classRGWQuotaHandler.html#affc6e8fa2238490820444812c2b83e24">  100</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classRGWQuotaHandler.html#affc6e8fa2238490820444812c2b83e24">~RGWQuotaHandler</a>() {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> check_quota(<span class="keyword">const</span> <a class="code" href="structrgw__user.html">rgw_user</a>&amp; bucket_owner, rgw_bucket&amp; bucket,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                          <a class="code" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>&amp; user_quota, <a class="code" href="structRGWQuotaInfo.html">RGWQuotaInfo</a>&amp; bucket_quota,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;              uint64_t num_objs, uint64_t size) = 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> update_stats(<span class="keyword">const</span> <a class="code" href="structrgw__user.html">rgw_user</a>&amp; bucket_owner, rgw_bucket&amp; bucket, <span class="keywordtype">int</span> obj_delta, uint64_t added_bytes, uint64_t removed_bytes) = 0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">static</span> RGWQuotaHandler *generate_handler(<a class="code" href="classRGWRados.html">RGWRados</a> *<a class="code" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <span class="keywordtype">bool</span> quota_threads);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> free_handler(RGWQuotaHandler *handler);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;};</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structRGWQuotaInfo_html_a06716c4be1ae4301ba7420d0a731e2df"><div class="ttname"><a href="structRGWQuotaInfo.html#a06716c4be1ae4301ba7420d0a731e2df">RGWQuotaInfo::max_size_soft_threshold</a></div><div class="ttdeci">int64_t max_size_soft_threshold</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:38</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_abcfdd7944be04c475aca17fe3cce00b8"><div class="ttname"><a href="structRGWQuotaInfo.html#abcfdd7944be04c475aca17fe3cce00b8">RGWQuotaInfo::check_on_raw</a></div><div class="ttdeci">bool check_on_raw</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:47</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_a2e1556af526a14dbcaa5b0e1e61b6e08"><div class="ttname"><a href="structRGWQuotaInfo.html#a2e1556af526a14dbcaa5b0e1e61b6e08">RGWQuotaInfo::RGWQuotaInfo</a></div><div class="ttdeci">RGWQuotaInfo()</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:49</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_afed8ae3d178babb8c9512d16881b646b"><div class="ttname"><a href="structRGWQuotaInfo.html#afed8ae3d178babb8c9512d16881b646b">RGWQuotaInfo::decode_json</a></div><div class="ttdeci">void decode_json(JSONObj *obj)</div><div class="ttdef"><b>Definition:</b> rgw_json_enc.cc:499</div></div>
+<div class="ttc" id="classRGWRados_html"><div class="ttname"><a href="classRGWRados.html">RGWRados</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:1702</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html"><div class="ttname"><a href="structRGWQuotaInfo.html">RGWQuotaInfo</a></div><div class="ttdef"><b>Definition:</b> rgw_quota.h:31</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_a425e1d2833678631d7d27fef8cd1da1f"><div class="ttname"><a href="structRGWQuotaInfo.html#a425e1d2833678631d7d27fef8cd1da1f">RGWQuotaInfo::max_objects</a></div><div class="ttdeci">int64_t max_objects</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:43</div></div>
+<div class="ttc" id="rgw__admin_8cc_html_a9b49a835107f65049c05bddc99751652"><div class="ttname"><a href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a></div><div class="ttdeci">static RGWRados * store</div><div class="ttdef"><b>Definition:</b> rgw_admin.cc:46</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_a4db7bae2a930d3c468c53af0da07962c"><div class="ttname"><a href="structRGWQuotaInfo.html#a4db7bae2a930d3c468c53af0da07962c">RGWQuotaInfo::max_objs_soft_threshold</a></div><div class="ttdeci">int64_t max_objs_soft_threshold</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:39</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_a1488b728b6c6a2a50189503dddbf5916"><div class="ttname"><a href="structRGWQuotaInfo.html#a1488b728b6c6a2a50189503dddbf5916">RGWQuotaInfo::max_size</a></div><div class="ttdeci">int64_t max_size</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:42</div></div>
+<div class="ttc" id="namespacergw_html_a12e768365595ed6aa121311114126794"><div class="ttname"><a href="namespacergw.html#a12e768365595ed6aa121311114126794">rgw::WRITE_CLASS_ENCODER</a></div><div class="ttdeci">WRITE_CLASS_ENCODER(fh_key)</div></div>
+<div class="ttc" id="classRGWQuotaHandler_html_a197b92043c2b5bddee1d7b2efd12501e"><div class="ttname"><a href="classRGWQuotaHandler.html#a197b92043c2b5bddee1d7b2efd12501e">RGWQuotaHandler::RGWQuotaHandler</a></div><div class="ttdeci">RGWQuotaHandler()</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:99</div></div>
+<div class="ttc" id="classRGWQuotaCache_html"><div class="ttname"><a href="classRGWQuotaCache.html">RGWQuotaCache</a></div><div class="ttdef"><b>Definition:</b> rgw_quota.cc:39</div></div>
+<div class="ttc" id="structrgw__bucket_html"><div class="ttname"><a href="structrgw__bucket.html">rgw_bucket</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:690</div></div>
+<div class="ttc" id="classRGWQuotaHandler_html"><div class="ttname"><a href="classRGWQuotaHandler.html">RGWQuotaHandler</a></div><div class="ttdef"><b>Definition:</b> rgw_quota.h:97</div></div>
+<div class="ttc" id="rgw__quota_8h_html_a2f88eef7cafb83862963fb3411125def"><div class="ttname"><a href="rgw__quota_8h.html#a2f88eef7cafb83862963fb3411125def">rgw_rounded_kb</a></div><div class="ttdeci">static int64_t rgw_rounded_kb(int64_t bytes)</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:23</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_a92253614e484fac7f9f20182966fcd5e"><div class="ttname"><a href="structRGWQuotaInfo.html#a92253614e484fac7f9f20182966fcd5e">RGWQuotaInfo::dump</a></div><div class="ttdeci">void dump(Formatter *f) const </div><div class="ttdef"><b>Definition:</b> rgw_json_enc.cc:489</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_ac6cc2b4e2692bbbb1e0e4003fd5617d3"><div class="ttname"><a href="structRGWQuotaInfo.html#ac6cc2b4e2692bbbb1e0e4003fd5617d3">RGWQuotaInfo::encode</a></div><div class="ttdeci">void encode(bufferlist &amp;bl) const </div><div class="ttdef"><b>Definition:</b> rgw_quota.h:58</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_a4dbb532beaa44f6aba6766bf845315cd"><div class="ttname"><a href="structRGWQuotaInfo.html#a4dbb532beaa44f6aba6766bf845315cd">RGWQuotaInfo::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:44</div></div>
+<div class="ttc" id="structRGWQuotaInfo_html_ace1a73ac6f01bb0040fb0b73b23a100d"><div class="ttname"><a href="structRGWQuotaInfo.html#ace1a73ac6f01bb0040fb0b73b23a100d">RGWQuotaInfo::decode</a></div><div class="ttdeci">void decode(bufferlist::iterator &amp;bl)</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:71</div></div>
+<div class="ttc" id="classRGWQuotaHandler_html_affc6e8fa2238490820444812c2b83e24"><div class="ttname"><a href="classRGWQuotaHandler.html#affc6e8fa2238490820444812c2b83e24">RGWQuotaHandler::~RGWQuotaHandler</a></div><div class="ttdeci">virtual ~RGWQuotaHandler()</div><div class="ttdef"><b>Definition:</b> rgw_quota.h:100</div></div>
+<div class="ttc" id="structrgw__user_html"><div class="ttname"><a href="structrgw__user.html">rgw_user</a></div><div class="ttdef"><b>Definition:</b> rgw_basic_types.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

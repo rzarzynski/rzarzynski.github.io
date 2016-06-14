@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -100,25 +100,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;errno.h&gt;</code><br/>
 <code>#include &lt;signal.h&gt;</code><br/>
 <code>#include &lt;curl/curl.h&gt;</code><br/>
+<code>#include &lt;boost/intrusive_ptr.hpp&gt;</code><br/>
 <code>#include &quot;acconfig.h&quot;</code><br/>
-<code>#include &quot;fcgiapp.h&quot;</code><br/>
-<code>#include &quot;<a class="el" href="rgw__fcgi_8h_source.html">rgw_fcgi.h</a>&quot;</code><br/>
 <code>#include &quot;common/ceph_argparse.h&quot;</code><br/>
 <code>#include &quot;global/global_init.h&quot;</code><br/>
 <code>#include &quot;global/signal_handler.h&quot;</code><br/>
 <code>#include &quot;common/config.h&quot;</code><br/>
 <code>#include &quot;common/errno.h&quot;</code><br/>
-<code>#include &quot;common/WorkQueue.h&quot;</code><br/>
 <code>#include &quot;common/Timer.h&quot;</code><br/>
-<code>#include &quot;common/Throttle.h&quot;</code><br/>
-<code>#include &quot;common/QueueRing.h&quot;</code><br/>
 <code>#include &quot;common/safe_io.h&quot;</code><br/>
+<code>#include &quot;include/compat.h&quot;</code><br/>
 <code>#include &quot;include/str_list.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__common_8h_source.html">rgw_common.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rados_8h_source.html">rgw_rados.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="rgw__acl_8h_source.html">rgw_acl.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__user_8h_source.html">rgw_user.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="rgw__op_8h_source.html">rgw_op.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__period__pusher_8h_source.html">rgw_period_pusher.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__realm__reloader_8h_source.html">rgw_realm_reloader.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rest_8h_source.html">rgw_rest.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rest__s3_8h_source.html">rgw_rest_s3.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rest__swift_8h_source.html">rgw_rest_swift.h</a>&quot;</code><br/>
@@ -132,71 +129,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="rgw__replica__log_8h_source.html">rgw_replica_log.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rest__replica__log_8h_source.html">rgw_rest_replica_log.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rest__config_8h_source.html">rgw_rest_config.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__rest__realm_8h_source.html">rgw_rest_realm.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__swift__auth_8h_source.html">rgw_swift_auth.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="rgw__swift_8h_source.html">rgw_swift.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__log_8h_source.html">rgw_log.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__tools_8h_source.html">rgw_tools.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__resolve_8h_source.html">rgw_resolve.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="rgw__loadgen_8h_source.html">rgw_loadgen.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="rgw__civetweb_8h_source.html">rgw_civetweb.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="rgw__civetweb__log_8h_source.html">rgw_civetweb_log.h</a>&quot;</code><br/>
-<code>#include &quot;civetweb/civetweb.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__request_8h_source.html">rgw_request.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__process_8h_source.html">rgw_process.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__frontend_8h_source.html">rgw_frontend.h</a>&quot;</code><br/>
 <code>#include &lt;map&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
-<code>#include &lt;sstream&gt;</code><br/>
 <code>#include &quot;include/types.h&quot;</code><br/>
 <code>#include &quot;common/BackTrace.h&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWRequest.html">RGWRequest</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFrontendConfig.html">RGWFrontendConfig</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWFCGXRequest.html">RGWFCGXRequest</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWProcessEnv.html">RGWProcessEnv</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWProcess.html">RGWProcess</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWProcess_1_1RGWWQ.html">RGWProcess::RGWWQ</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFCGXProcess.html">RGWFCGXProcess</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWLoadGenRequest.html">RGWLoadGenRequest</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWLoadGenProcess.html">RGWLoadGenProcess</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classC__InitTimeout.html">C_InitTimeout</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFrontend.html">RGWFrontend</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWProcessControlThread.html">RGWProcessControlThread</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWProcessFrontend.html">RGWProcessFrontend</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFCGXFrontend.html">RGWFCGXFrontend</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWLoadGenFrontend.html">RGWLoadGenFrontend</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMongooseFrontend.html">RGWMongooseFrontend</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a5580a2b7c4743669bb9ca22b07e84324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a5580a2b7c4743669bb9ca22b07e84324">dout_subsys</a>&#160;&#160;&#160;ceph_subsys_rgw</td></tr>
 <tr class="separator:a5580a2b7c4743669bb9ca22b07e84324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0628d7cccf3f1f5f11bf3acd85c71616"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a0628d7cccf3f1f5f11bf3acd85c71616">SOCKET_BACKLOG</a>&#160;&#160;&#160;1024</td></tr>
-<tr class="separator:a0628d7cccf3f1f5f11bf3acd85c71616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8e7e6278f5fa57f793d6d5ab0db7798"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#ab8e7e6278f5fa57f793d6d5ab0db7798">LARGE_SIZE</a>&#160;&#160;&#160;1024</td></tr>
-<tr class="separator:ab8e7e6278f5fa57f793d6d5ab0db7798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8722eb4a4ced2971cbfdd354ce7806b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a8722eb4a4ced2971cbfdd354ce7806b3">signal_shutdown</a> ()</td></tr>
-<tr class="separator:a8722eb4a4ced2971cbfdd354ce7806b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80876c3df4dfb0c5d793cb641c884600"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a80876c3df4dfb0c5d793cb641c884600">signal_shutdown</a> ()</td></tr>
+<tr class="separator:a80876c3df4dfb0c5d793cb641c884600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf20eb145abf5cc7b5bdfbeb7f910e45"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#abf20eb145abf5cc7b5bdfbeb7f910e45">wait_shutdown</a> ()</td></tr>
 <tr class="separator:abf20eb145abf5cc7b5bdfbeb7f910e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afea693cea375ed56d167f4acd852a06b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#afea693cea375ed56d167f4acd852a06b">signal_fd_init</a> ()</td></tr>
@@ -207,16 +167,18 @@ Functions</h2></td></tr>
 <tr class="separator:a49e0e2f9c508354c27b8da6c3e20e218"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7ecba1c414a8a8d8ff3bb28f1eaa312"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#aa7ecba1c414a8a8d8ff3bb28f1eaa312">godown_alarm</a> (int signum)</td></tr>
 <tr class="separator:aa7ecba1c414a8a8d8ff3bb28f1eaa312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab94e465d0c74a1c6964233b27b96e0b7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#ab94e465d0c74a1c6964233b27b96e0b7">process_request</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="classRGWREST.html">RGWREST</a> *rest, <a class="el" href="structRGWRequest.html">RGWRequest</a> *req, <a class="el" href="classRGWClientIO.html">RGWClientIO</a> *client_io, <a class="el" href="classOpsLogSocket.html">OpsLogSocket</a> *olog)</td></tr>
-<tr class="separator:ab94e465d0c74a1c6964233b27b96e0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b7e934f08ccdedddd9e525f3e93486"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a92b7e934f08ccdedddd9e525f3e93486">civetweb_callback</a> (struct mg_connection *conn)</td></tr>
-<tr class="separator:a92b7e934f08ccdedddd9e525f3e93486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f6adb277615375ea1c15c375db7decd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a0f6adb277615375ea1c15c375db7decd">check_curl</a> ()</td></tr>
 <tr class="separator:a0f6adb277615375ea1c15c375db7decd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad876cdd1a72412cf2e0d2fcde266dd9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#ad876cdd1a72412cf2e0d2fcde266dd9a">usage</a> ()</td></tr>
 <tr class="separator:ad876cdd1a72412cf2e0d2fcde266dd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5b8ab278478157891d1547b67b29e56"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRGWRESTMgr.html">RGWRESTMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#ab5b8ab278478157891d1547b67b29e56">set_logging</a> (<a class="el" href="classRGWRESTMgr.html">RGWRESTMgr</a> *mgr)</td></tr>
 <tr class="separator:ab5b8ab278478157891d1547b67b29e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c5542a513398593bf270eeebd3ea6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a16c5542a513398593bf270eeebd3ea6d">intrusive_ptr_add_ref</a> (CephContext *cct)</td></tr>
+<tr class="separator:a16c5542a513398593bf270eeebd3ea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e97d07a077cd4939ff7cc8a1661e85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#af3e97d07a077cd4939ff7cc8a1661e85">intrusive_ptr_release</a> (CephContext *cct)</td></tr>
+<tr class="separator:af3e97d07a077cd4939ff7cc8a1661e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42157c2305990e51aa6f3e013fae2c5f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a42157c2305990e51aa6f3e013fae2c5f">reloader_handler</a> (int signum)</td></tr>
+<tr class="separator:a42157c2305990e51aa6f3e013fae2c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a217dbf8b442f20279ea00b898af96f52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a217dbf8b442f20279ea00b898af96f52">main</a> (int argc, const char **argv)</td></tr>
 <tr class="separator:a217dbf8b442f20279ea00b898af96f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -228,6 +190,8 @@ Variables</h2></td></tr>
 <tr class="separator:ab18701c3e636e0ab033fbbb2d63c5a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10510f7e3c974ccf09142a8d2c74c990"><td class="memItemLeft" align="right" valign="top">static atomic_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a10510f7e3c974ccf09142a8d2c74c990">disable_signal_fd</a></td></tr>
 <tr class="separator:a10510f7e3c974ccf09142a8d2c74c990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0176e1f5aaa4fdf0816b1dc639f9d5a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWRealmReloader.html">RGWRealmReloader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__main_8cc.html#a0176e1f5aaa4fdf0816b1dc639f9d5a4">preloader</a> = NULL</td></tr>
+<tr class="separator:a0176e1f5aaa4fdf0816b1dc639f9d5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a5580a2b7c4743669bb9ca22b07e84324"></a>
@@ -236,30 +200,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define dout_subsys&#160;&#160;&#160;ceph_subsys_rgw</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab8e7e6278f5fa57f793d6d5ab0db7798"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LARGE_SIZE&#160;&#160;&#160;1024</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0628d7cccf3f1f5f11bf3acd85c71616"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SOCKET_BACKLOG&#160;&#160;&#160;1024</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -278,30 +218,6 @@ Variables</h2></td></tr>
           <td class="memname">static void check_curl </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a92b7e934f08ccdedddd9e525f3e93486"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int civetweb_callback </td>
-          <td>(</td>
-          <td class="paramtype">struct mg_connection *&#160;</td>
-          <td class="paramname"><em>conn</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -362,6 +278,38 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a16c5542a513398593bf270eeebd3ea6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void intrusive_ptr_add_ref </td>
+          <td>(</td>
+          <td class="paramtype">CephContext *&#160;</td>
+          <td class="paramname"><em>cct</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af3e97d07a077cd4939ff7cc8a1661e85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void intrusive_ptr_release </td>
+          <td>(</td>
+          <td class="paramtype">CephContext *&#160;</td>
+          <td class="paramname"><em>cct</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a217dbf8b442f20279ea00b898af96f52"></a>
 <div class="memitem">
 <div class="memproto">
@@ -388,7 +336,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab94e465d0c74a1c6964233b27b96e0b7"></a>
+<a class="anchor" id="a42157c2305990e51aa6f3e013fae2c5f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -396,39 +344,11 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int process_request </td>
+          <td class="memname">static void reloader_handler </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
-          <td class="paramname"><em>store</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signum</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classRGWREST.html">RGWREST</a> *&#160;</td>
-          <td class="paramname"><em>rest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structRGWRequest.html">RGWRequest</a> *&#160;</td>
-          <td class="paramname"><em>req</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classRGWClientIO.html">RGWClientIO</a> *&#160;</td>
-          <td class="paramname"><em>client_io</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classOpsLogSocket.html">OpsLogSocket</a> *&#160;</td>
-          <td class="paramname"><em>olog</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -502,25 +422,17 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8722eb4a4ced2971cbfdd354ce7806b3"></a>
+<a class="anchor" id="a80876c3df4dfb0c5d793cb641c884600"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void signal_shutdown </td>
+          <td class="memname">void signal_shutdown </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -584,6 +496,18 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0176e1f5aaa4fdf0816b1dc639f9d5a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRGWRealmReloader.html">RGWRealmReloader</a>* preloader = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a7945c7654e101e8bc18eadc29ea3ceed"></a>
 <div class="memitem">
 <div class="memproto">
@@ -627,7 +551,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

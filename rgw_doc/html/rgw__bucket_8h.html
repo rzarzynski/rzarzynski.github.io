@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -98,26 +98,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="rgw__string_8h_source.html">rgw_string.h</a>&quot;</code><br/>
 <code>#include &quot;common/Formatter.h&quot;</code><br/>
 <code>#include &quot;common/lru_map.h&quot;</code><br/>
+<code>#include &quot;common/ceph_time.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__formats_8h_source.html">rgw_formats.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_bucket.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__bucket_8h__incl.png" border="0" usemap="#rgw__bucket_8h" alt=""/></div>
 <map name="rgw__bucket_8h" id="rgw__bucket_8h">
-<area shape="rect" id="node5" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1407,395,1517,421"/><area shape="rect" id="node20" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2528,477,2621,504"/><area shape="rect" id="node27" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="349,320,437,347"/><area shape="rect" id="node28" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="873,80,967,107"/><area shape="rect" id="node42" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="153,245,257,272"/><area shape="rect" id="node14" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1627,477,1705,504"/><area shape="rect" id="node16" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1517,477,1603,504"/><area shape="rect" id="node17" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2308,477,2401,504"/><area shape="rect" id="node34" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1698,245,1776,272"/><area shape="rect" id="node37" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="812,320,927,347"/><area shape="rect" id="node38" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="514,163,632,189"/><area shape="rect" id="node39" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="514,245,635,272"/><area shape="rect" id="node41" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="951,320,1072,347"/></map>
+<area shape="rect" id="node5" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1422,245,1532,272"/><area shape="rect" id="node20" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="3204,328,3297,355"/><area shape="rect" id="node35" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1595,163,1684,189"/><area shape="rect" id="node37" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="2380,80,2473,107"/><area shape="rect" id="node48" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="54,411,159,437"/><area shape="rect" id="node14" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1437,328,1515,355"/><area shape="rect" id="node15" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1996,411,2125,437"/><area shape="rect" id="node16" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1522,411,1608,437"/><area shape="rect" id="node17" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="725,328,819,355"/><area shape="rect" id="node23" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="493,328,600,355"/><area shape="rect" id="node30" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="945,328,1031,355"/><area shape="rect" id="node24" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="336,411,417,437"/><area shape="rect" id="node34" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="1281,411,1396,437"/><area shape="rect" id="node44" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1095,163,1173,189"/><area shape="rect" id="node45" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="2417,163,2532,189"/><area shape="rect" id="node46" href="rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="1824,163,1992,189"/><area shape="rect" id="node47" href="rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="2950,163,3084,189"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__bucket_8h__dep__incl.png" border="0" usemap="#rgw__bucket_8hdep" alt=""/></div>
 <map name="rgw__bucket_8hdep" id="rgw__bucket_8hdep">
-<area shape="rect" id="node2" href="rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="1497,80,1599,107"/><area shape="rect" id="node3" href="rgw__bucket_8cc.html" title="rgw_bucket.cc" alt="" coords="1624,80,1731,107"/><area shape="rect" id="node4" href="rgw__json__enc_8cc.html" title="rgw_json_enc.cc" alt="" coords="1755,80,1875,107"/><area shape="rect" id="node5" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="1899,80,1972,107"/><area shape="rect" id="node16" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="2252,304,2387,331"/><area shape="rect" id="node20" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="2149,229,2231,256"/><area shape="rect" id="node25" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="1865,229,2023,256"/><area shape="rect" id="node28" href="rgw__quota_8cc.html" title="rgw_quota.cc" alt="" coords="2355,80,2455,107"/><area shape="rect" id="node29" href="rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="2479,80,2579,107"/><area shape="rect" id="node30" href="rgw__user_8cc.html" title="rgw_user.cc" alt="" coords="2604,80,2697,107"/><area shape="rect" id="node6" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="439,304,535,331"/><area shape="rect" id="node7" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="937,155,1019,181"/><area shape="rect" id="node8" href="rgw__rest__swift_8h.html" title="rgw_rest_swift.h" alt="" coords="305,229,423,256"/><area shape="rect" id="node9" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="559,304,649,331"/><area shape="rect" id="node12" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="1150,304,1281,331"/><area shape="rect" id="node14" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="1616,304,1739,331"/><area shape="rect" id="node17" href="rgw__swift__auth_8h.html" title="rgw_swift_auth.h" alt="" coords="107,229,228,256"/><area shape="rect" id="node21" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="550,229,681,256"/><area shape="rect" id="node22" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="707,229,821,256"/><area shape="rect" id="node23" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="1526,229,1676,256"/><area shape="rect" id="node24" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="1701,229,1840,256"/><area shape="rect" id="node27" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="1333,155,1437,181"/><area shape="rect" id="node11" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="845,229,971,256"/><area shape="rect" id="node13" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="1131,229,1245,256"/><area shape="rect" id="node15" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="1270,229,1399,256"/><area shape="rect" id="node19" href="rgw__swift__auth_8cc.html" title="rgw_swift_auth.cc" alt="" coords="5,304,133,331"/><area shape="rect" id="node26" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="995,229,1105,256"/><area shape="rect" id="node10" href="rgw__rest__swift_8cc.html" title="rgw_rest_swift.cc" alt="" coords="289,304,415,331"/><area shape="rect" id="node18" href="rgw__swift_8cc.html" title="rgw_swift.cc" alt="" coords="157,304,253,331"/></map>
+<area shape="rect" id="node2" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="1381,88,1455,115"/><area shape="rect" id="node8" href="rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="3373,485,3459,512"/><area shape="rect" id="node22" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="93,336,228,363"/><area shape="rect" id="node27" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="1492,261,1573,288"/><area shape="rect" id="node28" href="rgw__realm__reloader_8cc.html" title="rgw_realm_reloader.cc" alt="" coords="3871,261,4024,288"/><area shape="rect" id="node33" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="297,261,455,288"/><area shape="rect" id="node39" href="rgw__json__enc_8cc.html" title="rgw_json_enc.cc" alt="" coords="3956,179,4076,205"/><area shape="rect" id="node40" href="rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="4202,179,4304,205"/><area shape="rect" id="node41" href="rgw__data__sync_8h.html" title="rgw_data_sync.h" alt="" coords="4318,88,4439,115"/><area shape="rect" id="node42" href="rgw__data__sync_8cc.html" title="rgw_data_sync.cc" alt="" coords="4329,179,4457,205"/><area shape="rect" id="node43" href="rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="4482,179,4581,205"/><area shape="rect" id="node44" href="rgw__bucket_8cc.html" title="rgw_bucket.cc" alt="" coords="4771,88,4877,115"/><area shape="rect" id="node45" href="rgw__log_8cc.html" title="rgw_log.cc" alt="" coords="4901,88,4987,115"/><area shape="rect" id="node46" href="rgw__object__expirer_8cc.html" title="rgw_object_expirer.cc" alt="" coords="4605,179,4753,205"/><area shape="rect" id="node47" href="rgw__object__expirer__core_8h.html" title="rgw_object_expirer\l_core.h" alt="" coords="4565,81,4695,122"/><area shape="rect" id="node48" href="rgw__object__expirer__core_8cc.html" title="rgw_object_expirer\l_core.cc" alt="" coords="4779,171,4908,213"/><area shape="rect" id="node49" href="rgw__quota_8cc.html" title="rgw_quota.cc" alt="" coords="5011,88,5111,115"/><area shape="rect" id="node50" href="rgw__user_8cc.html" title="rgw_user.cc" alt="" coords="5136,88,5229,115"/><area shape="rect" id="node3" href="librgw_8cc.html" title="librgw.cc" alt="" coords="2316,485,2389,512"/><area shape="rect" id="node4" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="2168,179,2249,205"/><area shape="rect" id="node5" href="rgw__process_8h.html" title="rgw_process.h" alt="" coords="3209,261,3316,288"/><area shape="rect" id="node9" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="1092,485,1183,512"/><area shape="rect" id="node16" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="1471,336,1593,363"/><area shape="rect" id="node18" href="rgw__rest__swift_8h.html" title="rgw_rest_swift.h" alt="" coords="1327,336,1445,363"/><area shape="rect" id="node20" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="2458,336,2589,363"/><area shape="rect" id="node25" href="rgw__swift__auth_8h.html" title="rgw_swift_auth.h" alt="" coords="2695,261,2816,288"/><area shape="rect" id="node29" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="721,261,852,288"/><area shape="rect" id="node30" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="581,261,696,288"/><area shape="rect" id="node31" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="877,261,1027,288"/><area shape="rect" id="node32" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="1327,261,1467,288"/><area shape="rect" id="node35" href="rgw__request_8h.html" title="rgw_request.h" alt="" coords="3609,261,3713,288"/><area shape="rect" id="node36" href="rgw__request_8cc.html" title="rgw_request.cc" alt="" coords="3965,336,4075,363"/><area shape="rect" id="node37" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="1277,179,1381,205"/><area shape="rect" id="node7" href="rgw__lib_8h.html" title="rgw_lib.h" alt="" coords="3064,411,3137,437"/><area shape="rect" id="node10" href="rgw__fcgi__process_8cc.html" title="rgw_fcgi_process.cc" alt="" coords="3454,411,3596,437"/><area shape="rect" id="node11" href="rgw__loadgen__process_8cc.html" title="rgw_loadgen_process.cc" alt="" coords="3621,411,3787,437"/><area shape="rect" id="node12" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="2220,411,2316,437"/><area shape="rect" id="node13" href="rgw__process_8cc.html" title="rgw_process.cc" alt="" coords="3163,411,3277,437"/><area shape="rect" id="node14" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="1801,261,1916,288"/><area shape="rect" id="node15" href="rgw__os__lib_8cc.html" title="rgw_os_lib.cc" alt="" coords="1770,336,1872,363"/><area shape="rect" id="node17" href="rgw__auth__s3_8cc.html" title="rgw_auth_s3.cc" alt="" coords="3020,261,3135,288"/><area shape="rect" id="node19" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="2495,261,2620,288"/><area shape="rect" id="node21" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="1991,261,2120,288"/><area shape="rect" id="node23" href="rgw__rest__realm_8h.html" title="rgw_rest_realm.h" alt="" coords="2247,261,2369,288"/><area shape="rect" id="node26" href="rgw__swift__auth_8cc.html" title="rgw_swift_auth.cc" alt="" coords="2716,336,2844,363"/><area shape="rect" id="node34" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="1071,336,1181,363"/><area shape="rect" id="node6" href="rgw__frontend_8h.html" title="rgw_frontend.h" alt="" coords="3325,336,3432,363"/><area shape="rect" id="node24" href="rgw__rest__realm_8cc.html" title="rgw_rest_realm.cc" alt="" coords="2050,336,2179,363"/><area shape="rect" id="node38" href="rgw__rest__s3website_8h.html" title="rgw_rest_s3website.h" alt="" coords="1052,261,1200,288"/></map>
 </div>
 </div>
 <p><a href="rgw__bucket_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWBucketCompleteInfo.html">RGWBucketCompleteInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWBucketEntryMetadataObject.html">RGWBucketEntryMetadataObject</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWBucketInstanceMetadataObject.html">RGWBucketInstanceMetadataObject</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserBuckets.html">RGWUserBuckets</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWBucketAdminOpState.html">RGWBucketAdminOpState</a></td></tr>
@@ -128,6 +135,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__data__change.html">rgw_data_change</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__data__change__log__entry.html">rgw_data_change_log_entry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWDataChangesLogInfo.html">RGWDataChangesLogInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html">RGWDataChangesLog</a></td></tr>
@@ -137,44 +146,51 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a64667b47a674a8738a4683b002a6adec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a64667b47a674a8738a4683b002a6adec">DataLogEntityType</a> { <a class="el" href="rgw__bucket_8h.html#a64667b47a674a8738a4683b002a6adecae5512837c9d0dfcc7871d9fbca562963">ENTITY_TYPE_BUCKET</a> = 1
+<tr class="memitem:a64667b47a674a8738a4683b002a6adec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a64667b47a674a8738a4683b002a6adec">DataLogEntityType</a> { <a class="el" href="rgw__bucket_8h.html#a64667b47a674a8738a4683b002a6adeca807fc4f2bdf566736fee0f42d6e0056a">ENTITY_TYPE_UNKNOWN</a> = 0, 
+<a class="el" href="rgw__bucket_8h.html#a64667b47a674a8738a4683b002a6adecae5512837c9d0dfcc7871d9fbca562963">ENTITY_TYPE_BUCKET</a> = 1
  }</td></tr>
 <tr class="separator:a64667b47a674a8738a4683b002a6adec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae52f90819d31dab5a5a2e9f7bba5292a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#ae52f90819d31dab5a5a2e9f7bba5292a">rgw_get_buckets_obj</a> (const string &amp;user_id, string &amp;buckets_obj_id)</td></tr>
-<tr class="separator:ae52f90819d31dab5a5a2e9f7bba5292a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98597dc61d8082f67e406e4b93edbef4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a98597dc61d8082f67e406e4b93edbef4">rgw_bucket_store_info</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;bucket_name, bufferlist &amp;bl, bool exclusive, map&lt; string, bufferlist &gt; *pattrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t mtime)</td></tr>
-<tr class="separator:a98597dc61d8082f67e406e4b93edbef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc11a41254d4b3e893211f07de09f30c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#adc11a41254d4b3e893211f07de09f30c">rgw_bucket_instance_store_info</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;oid, bufferlist &amp;bl, bool exclusive, map&lt; string, bufferlist &gt; *pattrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t mtime)</td></tr>
-<tr class="separator:adc11a41254d4b3e893211f07de09f30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a9aab71ee0e033d7855eb7da2a5063"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a45a9aab71ee0e033d7855eb7da2a5063">rgw_get_buckets_obj</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user_id, string &amp;buckets_obj_id)</td></tr>
+<tr class="separator:a45a9aab71ee0e033d7855eb7da2a5063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2f10482acb7003cea18ab2de0bd8a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#aae2f10482acb7003cea18ab2de0bd8a2">rgw_bucket_store_info</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;bucket_name, bufferlist &amp;bl, bool exclusive, map&lt; string, bufferlist &gt; *pattrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time mtime)</td></tr>
+<tr class="separator:aae2f10482acb7003cea18ab2de0bd8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8e99d5fcd4d8f2602d90bbac15142f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a5d8e99d5fcd4d8f2602d90bbac15142f">rgw_bucket_instance_store_info</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;oid, bufferlist &amp;bl, bool exclusive, map&lt; string, bufferlist &gt; *pattrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time mtime)</td></tr>
+<tr class="separator:a5d8e99d5fcd4d8f2602d90bbac15142f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfe1ffd70c3015690c343f619ed35c82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#acfe1ffd70c3015690c343f619ed35c82">rgw_bucket_parse_bucket_instance</a> (const string &amp;bucket_instance, string *target_bucket_instance, int *shard_id)</td></tr>
 <tr class="separator:acfe1ffd70c3015690c343f619ed35c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34e5fc5c13bcdb49ea90a7429007111b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a34e5fc5c13bcdb49ea90a7429007111b">rgw_bucket_instance_remove_entry</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;entry, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
+<tr class="memitem:a34e5fc5c13bcdb49ea90a7429007111b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a34e5fc5c13bcdb49ea90a7429007111b">rgw_bucket_instance_remove_entry</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;entry, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
 <tr class="separator:a34e5fc5c13bcdb49ea90a7429007111b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b16dd78d22faf92e5d98a14c47d1930"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a7b16dd78d22faf92e5d98a14c47d1930">rgw_bucket_delete_bucket_obj</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;bucket_name, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> &amp;objv_tracker)</td></tr>
-<tr class="separator:a7b16dd78d22faf92e5d98a14c47d1930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a063083850388332d3d1c6f0f42417100"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a063083850388332d3d1c6f0f42417100">rgw_bucket_sync_user_stats</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;user_id, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket)</td></tr>
-<tr class="separator:a063083850388332d3d1c6f0f42417100"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138dd0227f760ac81746aee51f2dfa46"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a138dd0227f760ac81746aee51f2dfa46">rgw_bucket_sync_user_stats</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;bucket_name)</td></tr>
-<tr class="separator:a138dd0227f760ac81746aee51f2dfa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3825a2f2ab98ac88109b5073a840fbb6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a3825a2f2ab98ac88109b5073a840fbb6">rgw_bucket_delete_bucket_obj</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;tenant_name, const string &amp;bucket_name, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> &amp;objv_tracker)</td></tr>
+<tr class="separator:a3825a2f2ab98ac88109b5073a840fbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203a7391a0b1cbb3b10cc6f442dc33a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a203a7391a0b1cbb3b10cc6f442dc33a9">rgw_bucket_sync_user_stats</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user_id, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket)</td></tr>
+<tr class="separator:a203a7391a0b1cbb3b10cc6f442dc33a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57cf083621eec8d41868aefa1190e14b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a57cf083621eec8d41868aefa1190e14b">rgw_bucket_sync_user_stats</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;tenant_name, const string &amp;bucket_name)</td></tr>
+<tr class="separator:a57cf083621eec8d41868aefa1190e14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ecec5fb2996aee9eaff870e25d8063b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a4ecec5fb2996aee9eaff870e25d8063b">rgw_make_bucket_entry_name</a> (const string &amp;tenant_name, const string &amp;bucket_name, string &amp;bucket_entry)</td></tr>
+<tr class="separator:a4ecec5fb2996aee9eaff870e25d8063b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7029759f9babe5155dc84aaba49899db"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a7029759f9babe5155dc84aaba49899db">rgw_make_bucket_entry_name</a> (const string &amp;tenant_name, const string &amp;bucket_name)</td></tr>
+<tr class="separator:a7029759f9babe5155dc84aaba49899db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a1d087391b3fa260e52e8024a0b530"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#ac4a1d087391b3fa260e52e8024a0b530">rgw_parse_url_bucket</a> (const string &amp;bucket, const string &amp;auth_tenant, string &amp;tenant_name, string &amp;bucket_name)</td></tr>
+<tr class="separator:ac4a1d087391b3fa260e52e8024a0b530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1623a7156786f23a74c39153cfe293b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a1623a7156786f23a74c39153cfe293b1">rgw_bucket_init</a> (<a class="el" href="classRGWMetadataManager.html">RGWMetadataManager</a> *mm)</td></tr>
 <tr class="separator:a1623a7156786f23a74c39153cfe293b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adce3de8232834fcc765025b04abfe511"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#adce3de8232834fcc765025b04abfe511">rgw_read_user_buckets</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string user_id, <a class="el" href="classRGWUserBuckets.html">RGWUserBuckets</a> &amp;buckets, const string &amp;marker, uint64_t max, bool need_stats)</td></tr>
-<tr class="separator:adce3de8232834fcc765025b04abfe511"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae667035534f6b8896e9c6d3bcf2afaed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#ae667035534f6b8896e9c6d3bcf2afaed">rgw_link_bucket</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string user_id, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, time_t creation_time, bool update_entrypoint=true)</td></tr>
-<tr class="separator:ae667035534f6b8896e9c6d3bcf2afaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91e05a8f96a828ec2ec42da1e39385b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a91e05a8f96a828ec2ec42da1e39385b0">rgw_unlink_bucket</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string user_id, const string &amp;bucket_name, bool update_entrypoint=true)</td></tr>
-<tr class="separator:a91e05a8f96a828ec2ec42da1e39385b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9d75d2b3dbd24bb3b7ba00d835963ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#ab9d75d2b3dbd24bb3b7ba00d835963ba">rgw_remove_object</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a> &amp;bucket_info, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structrgw__obj__key.html">rgw_obj_key</a> &amp;key)</td></tr>
+<tr class="memitem:aa3b7b0798c08e3da49165427284f3096"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#aa3b7b0798c08e3da49165427284f3096">rgw_read_user_buckets</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user_id, <a class="el" href="classRGWUserBuckets.html">RGWUserBuckets</a> &amp;buckets, const string &amp;marker, const string &amp;end_marker, uint64_t max, bool need_stats, bool *is_truncated, uint64_t default_amount=1000)</td></tr>
+<tr class="separator:aa3b7b0798c08e3da49165427284f3096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510b4facbdcc5b1ba82b966acfe05d1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a510b4facbdcc5b1ba82b966acfe05d1f">rgw_link_bucket</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user_id, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, real_time creation_time, bool update_entrypoint=true)</td></tr>
+<tr class="separator:a510b4facbdcc5b1ba82b966acfe05d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0781db7b0e3b73c5dc65bde9f4457776"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a0781db7b0e3b73c5dc65bde9f4457776">rgw_unlink_bucket</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user_id, const string &amp;tenant_name, const string &amp;bucket_name, bool update_entrypoint=true)</td></tr>
+<tr class="separator:a0781db7b0e3b73c5dc65bde9f4457776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d75d2b3dbd24bb3b7ba00d835963ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#ab9d75d2b3dbd24bb3b7ba00d835963ba">rgw_remove_object</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a> &amp;bucket_info, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structrgw__obj__key.html">rgw_obj_key</a> &amp;key)</td></tr>
 <tr class="separator:ab9d75d2b3dbd24bb3b7ba00d835963ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaecab57940a288949180d7442af11477"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#aaecab57940a288949180d7442af11477">rgw_remove_bucket</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;bucket_owner, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, bool delete_children)</td></tr>
-<tr class="separator:aaecab57940a288949180d7442af11477"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8658f9ba788e03947c8ce96db038333"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#ad8658f9ba788e03947c8ce96db038333">rgw_bucket_set_attrs</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a> &amp;bucket_info, map&lt; string, bufferlist &gt; &amp;attrs, map&lt; string, bufferlist &gt; *rmattrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
-<tr class="separator:ad8658f9ba788e03947c8ce96db038333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab61b9577f2cb2fe017b1e261460444bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#ab61b9577f2cb2fe017b1e261460444bd">check_bad_user_bucket_mapping</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;user_id, bool fix)</td></tr>
-<tr class="separator:ab61b9577f2cb2fe017b1e261460444bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8edd0ca6a57de090e09a4c0a254f9335"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a8edd0ca6a57de090e09a4c0a254f9335">rgw_remove_bucket</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, bool delete_children)</td></tr>
+<tr class="separator:a8edd0ca6a57de090e09a4c0a254f9335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea386b5b2991f70ec74b90a08bebb6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#aaea386b5b2991f70ec74b90a08bebb6c">rgw_bucket_set_attrs</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a> &amp;bucket_info, map&lt; string, bufferlist &gt; &amp;attrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
+<tr class="separator:aaea386b5b2991f70ec74b90a08bebb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a226b82e07c0f0a72d01e636ed7f617d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__bucket_8h.html#a226b82e07c0f0a72d01e636ed7f617d3">check_bad_user_bucket_mapping</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user_id, bool fix)</td></tr>
+<tr class="separator:a226b82e07c0f0a72d01e636ed7f617d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a64667b47a674a8738a4683b002a6adec"></a>
@@ -187,14 +203,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a64667b47a674a8738a4683b002a6adecae5512837c9d0dfcc7871d9fbca562963"></a>ENTITY_TYPE_BUCKET</em>&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a64667b47a674a8738a4683b002a6adeca807fc4f2bdf566736fee0f42d6e0056a"></a>ENTITY_TYPE_UNKNOWN</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a64667b47a674a8738a4683b002a6adecae5512837c9d0dfcc7871d9fbca562963"></a>ENTITY_TYPE_BUCKET</em>&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ab61b9577f2cb2fe017b1e261460444bd"></a>
+<a class="anchor" id="a226b82e07c0f0a72d01e636ed7f617d3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -207,7 +225,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user_id</em>, </td>
         </tr>
         <tr>
@@ -226,7 +244,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7b16dd78d22faf92e5d98a14c47d1930"></a>
+<a class="anchor" id="a3825a2f2ab98ac88109b5073a840fbb6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -239,7 +257,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>tenant_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>bucket_name</em>, </td>
         </tr>
         <tr>
@@ -306,7 +330,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adc11a41254d4b3e893211f07de09f30c"></a>
+<a class="anchor" id="a5d8e99d5fcd4d8f2602d90bbac15142f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -349,7 +373,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>mtime</em>&#160;</td>
         </tr>
         <tr>
@@ -394,7 +418,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad8658f9ba788e03947c8ce96db038333"></a>
+<a class="anchor" id="aaea386b5b2991f70ec74b90a08bebb6c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -419,12 +443,6 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">map&lt; string, bufferlist &gt; *&#160;</td>
-          <td class="paramname"><em>rmattrs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *&#160;</td>
           <td class="paramname"><em>objv_tracker</em>&#160;</td>
         </tr>
@@ -438,7 +456,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a98597dc61d8082f67e406e4b93edbef4"></a>
+<a class="anchor" id="aae2f10482acb7003cea18ab2de0bd8a2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -481,7 +499,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>mtime</em>&#160;</td>
         </tr>
         <tr>
@@ -494,7 +512,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a063083850388332d3d1c6f0f42417100"></a>
+<a class="anchor" id="a203a7391a0b1cbb3b10cc6f442dc33a9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -507,7 +525,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user_id</em>, </td>
         </tr>
         <tr>
@@ -526,7 +544,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a138dd0227f760ac81746aee51f2dfa46"></a>
+<a class="anchor" id="a57cf083621eec8d41868aefa1190e14b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -535,6 +553,12 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
           <td class="paramname"><em>store</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>tenant_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -552,14 +576,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae52f90819d31dab5a5a2e9f7bba5292a"></a>
+<a class="anchor" id="a45a9aab71ee0e033d7855eb7da2a5063"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void rgw_get_buckets_obj </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user_id</em>, </td>
         </tr>
         <tr>
@@ -578,7 +602,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae667035534f6b8896e9c6d3bcf2afaed"></a>
+<a class="anchor" id="a510b4facbdcc5b1ba82b966acfe05d1f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -591,7 +615,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user_id</em>, </td>
         </tr>
         <tr>
@@ -603,7 +627,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>creation_time</em>, </td>
         </tr>
         <tr>
@@ -622,7 +646,103 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adce3de8232834fcc765025b04abfe511"></a>
+<a class="anchor" id="a4ecec5fb2996aee9eaff870e25d8063b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rgw_make_bucket_entry_name </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>tenant_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>bucket_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>bucket_entry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7029759f9babe5155dc84aaba49899db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string rgw_make_bucket_entry_name </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>tenant_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>bucket_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac4a1d087391b3fa260e52e8024a0b530"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rgw_parse_url_bucket </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>bucket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>auth_tenant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>tenant_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>bucket_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa3b7b0798c08e3da49165427284f3096"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -635,7 +755,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user_id</em>, </td>
         </tr>
         <tr>
@@ -653,6 +773,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>end_marker</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>max</em>, </td>
         </tr>
@@ -660,7 +786,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>need_stats</em>&#160;</td>
+          <td class="paramname"><em>need_stats</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>is_truncated</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>default_amount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -673,7 +811,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaecab57940a288949180d7442af11477"></a>
+<a class="anchor" id="a8edd0ca6a57de090e09a4c0a254f9335"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -682,12 +820,6 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
           <td class="paramname"><em>store</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>bucket_owner</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -749,7 +881,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a91e05a8f96a828ec2ec42da1e39385b0"></a>
+<a class="anchor" id="a0781db7b0e3b73c5dc65bde9f4457776"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -762,8 +894,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>tenant_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -790,7 +928,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

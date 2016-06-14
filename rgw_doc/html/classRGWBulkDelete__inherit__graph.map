@@ -1,0 +1,5 @@
+<map id="RGWBulkDelete" name="RGWBulkDelete">
+<area shape="rect" id="node3" href="$classRGWBulkDelete__ObjStore.html" title="{RGWBulkDelete_ObjStore\n||+ RGWBulkDelete_ObjStore()\l+ ~RGWBulkDelete_ObjStore()\l}" alt="" coords="5,670,211,762"/>
+<area shape="rect" id="node2" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="11,6,205,362"/>
+<area shape="rect" id="node4" href="$classRGWBulkDelete__ObjStore__SWIFT.html" title="{RGWBulkDelete_ObjStore\l_SWIFT\n||+ RGWBulkDelete_ObjStore\l_SWIFT()\l+ ~RGWBulkDelete_ObjStore\l_SWIFT()\l+ get_data()\l+ send_response()\l}" alt="" coords="9,811,207,976"/>
+</map>

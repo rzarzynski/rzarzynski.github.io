@@ -1,4 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classRGWQuotaCache.html" title="RGWQuotaCache\&lt; string \&gt;" alt="" coords="5,5,189,32"/>
-<area shape="rect" id="node2" href="$classRGWUserStatsCache.html" title="RGWUserStatsCache" alt="" coords="237,5,389,32"/>
+<area shape="rect" id="node1" href="$classRGWClientIO.html" title="RGWClientIO" alt="" coords="6,31,109,57"/>
+<area shape="rect" id="node2" href="$classrgw_1_1RGWLibIO.html" title="rgw::RGWLibIO" alt="" coords="157,5,272,32"/>
+<area shape="rect" id="node3" href="$classRGWStreamIO.html" title="RGWStreamIO" alt="" coords="159,56,270,83"/>
+<area shape="rect" id="node4" href="$classRGWFCGX.html" title="RGWFCGX" alt="" coords="335,5,427,32"/>
+<area shape="rect" id="node5" href="$classRGWLoadGenIO.html" title="RGWLoadGenIO" alt="" coords="321,56,442,83"/>
+<area shape="rect" id="node6" href="$classRGWMongoose.html" title="RGWMongoose" alt="" coords="324,107,439,133"/>
 </map>

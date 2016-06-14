@@ -1,0 +1,3 @@
+<map id="rgw_data_sync_status" name="rgw_data_sync_status">
+<area shape="rect" id="node2" href="$structrgw__data__sync__info.html" title="{rgw_data_sync_info\n|+ state\l+ num_shards\l|+ encode()\l+ decode()\l+ dump()\l+ rgw_data_sync_info()\l}" alt="" coords="13,5,171,141"/>
+</map>

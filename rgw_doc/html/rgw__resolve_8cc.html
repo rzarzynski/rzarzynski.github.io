@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -82,7 +82,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -97,27 +96,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;acconfig.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__common_8h_source.html">rgw_common.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__resolve_8h_source.html">rgw_resolve.h</a>&quot;</code><br/>
+<code>#include &quot;common/dns_resolve.h&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_resolve.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__resolve_8cc__incl.png" border="0" usemap="#rgw__resolve_8cc" alt=""/></div>
 <map name="rgw__resolve_8cc" id="rgw__resolve_8cc">
-<area shape="rect" id="node7" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="754,155,864,181"/><area shape="rect" id="node30" href="rgw__resolve_8h.html" title="rgw_resolve.h" alt="" coords="669,80,771,107"/><area shape="rect" id="node17" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="582,237,660,264"/><area shape="rect" id="node19" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="685,237,771,264"/><area shape="rect" id="node20" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="948,237,1041,264"/><area shape="rect" id="node23" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1065,237,1159,264"/></map>
+<area shape="rect" id="node7" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1071,155,1181,181"/><area shape="rect" id="node42" href="rgw__resolve_8h.html" title="rgw_resolve.h" alt="" coords="1075,80,1177,107"/><area shape="rect" id="node17" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="346,237,424,264"/><area shape="rect" id="node18" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="411,320,540,347"/><area shape="rect" id="node19" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="566,320,652,347"/><area shape="rect" id="node20" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1215,237,1308,264"/><area shape="rect" id="node23" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1377,469,1471,496"/><area shape="rect" id="node26" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="615,237,721,264"/><area shape="rect" id="node34" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1434,237,1520,264"/><area shape="rect" id="node27" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="779,320,860,347"/><area shape="rect" id="node38" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="1737,320,1852,347"/><area shape="rect" id="node39" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1443,395,1564,421"/></map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDNSResolver.html">RGWDNSResolver</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a5580a2b7c4743669bb9ca22b07e84324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__resolve_8cc.html#a5580a2b7c4743669bb9ca22b07e84324">dout_subsys</a>&#160;&#160;&#160;ceph_subsys_rgw</td></tr>
 <tr class="separator:a5580a2b7c4743669bb9ca22b07e84324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5276e4790ab3dcb5f6de6fe00066a91a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__resolve_8cc.html#a5276e4790ab3dcb5f6de6fe00066a91a">LARGE_ENOUGH_DNS_BUFSIZE</a>&#160;&#160;&#160;1024</td></tr>
-<tr class="separator:a5276e4790ab3dcb5f6de6fe00066a91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b59bfc3e1d7f42e2e5663a82d74a53a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__resolve_8cc.html#a6b59bfc3e1d7f42e2e5663a82d74a53a">MAX_FQDN_SIZE</a>&#160;&#160;&#160;255</td></tr>
-<tr class="separator:a6b59bfc3e1d7f42e2e5663a82d74a53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -138,30 +129,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define dout_subsys&#160;&#160;&#160;ceph_subsys_rgw</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5276e4790ab3dcb5f6de6fe00066a91a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LARGE_ENOUGH_DNS_BUFSIZE&#160;&#160;&#160;1024</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6b59bfc3e1d7f42e2e5663a82d74a53a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX_FQDN_SIZE&#160;&#160;&#160;255</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -217,7 +184,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

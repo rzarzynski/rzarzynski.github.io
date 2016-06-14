@@ -1,0 +1,6 @@
+<map id="RGWUserCompleteInfo" name="RGWUserCompleteInfo">
+<area shape="rect" id="node2" href="$structRGWUserInfo.html" title="{RGWUserInfo\n|+ auid\l+ access_keys\l+ swift_keys\l+ subusers\l+ suspended\l+ max_buckets\l+ op_mask\l+ admin\l+ system\l+ placement_tags\l+ temp_url_keys\l|+ RGWUserInfo()\l+ get_key0()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ generate_test_instances()\l}" alt="" coords="197,461,381,773"/>
+<area shape="rect" id="node3" href="$structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size\l+ max_objects\l+ enabled\l+ check_on_raw\l# max_size_soft_threshold\l# max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,167,184,377"/>
+<area shape="rect" id="node4" href="$structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="371,160,469,384"/>
+<area shape="rect" id="node6" href="$classRGWUserCaps.html" title="{RGWUserCaps\n||+ add_from_string()\l+ remove_from_string()\l+ encode()\l+ decode()\l+ check_cap()\l+ is_valid_cap_type()\l+ dump()\l+ dump()\l+ decode_json()\l+ parse_cap_perm()\l}" alt="" coords="493,167,651,377"/>
+</map>

@@ -1,3 +1,4 @@
 <map id="RGWGetUserStats_CB" name="RGWGetUserStats_CB">
-<area shape="rect" id="node3" href="$structRGWStorageStats.html" title="{RGWStorageStats\n|+ category\l+ num_kb\l+ num_kb_rounded\l+ num_objects\l|+ RGWStorageStats()\l+ dump()\l}" alt="" coords="161,5,311,141"/>
+<area shape="rect" id="node3" href="$structRGWStorageStats.html" title="{RGWStorageStats\n|+ category\l+ size\l+ size_rounded\l+ num_objects\l|+ RGWStorageStats()\l+ dump()\l}" alt="" coords="161,204,311,340"/>
+<area shape="rect" id="node4" href="$structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="336,160,435,384"/>
 </map>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -90,12 +90,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">RGWFrontend Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="rgw__frontend_8h_source.html">rgw_frontend.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for RGWFrontend:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWFrontend__inherit__graph.png" border="0" usemap="#RGWFrontend_inherit__map" alt="Inheritance graph"/></div>
 <map name="RGWFrontend_inherit__map" id="RGWFrontend_inherit__map">
-<area shape="rect" id="node2" href="classRGWMongooseFrontend.html" title="{RGWMongooseFrontend\n||+ RGWMongooseFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l}" alt="" coords="5,212,192,348"/><area shape="rect" id="node3" href="classRGWProcessFrontend.html" title="{RGWProcessFrontend\n|# conf\l# pprocess\l# env\l# thread\l|+ RGWProcessFrontend()\l+ ~RGWProcessFrontend()\l+ run()\l+ stop()\l+ join()\l}" alt="" coords="217,190,399,370"/><area shape="rect" id="node4" href="classRGWFCGXFrontend.html" title="{RGWFCGXFrontend\n||+ RGWFCGXFrontend()\l+ init()\l}" alt="" coords="129,419,292,511"/><area shape="rect" id="node5" href="classRGWLoadGenFrontend.html" title="{RGWLoadGenFrontend\n||+ RGWLoadGenFrontend()\l+ init()\l}" alt="" coords="316,419,495,511"/></map>
+<area shape="rect" id="node2" href="classRGWMongooseFrontend.html" title="{RGWMongooseFrontend\n||+ RGWMongooseFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="5,241,200,407"/><area shape="rect" id="node3" href="classRGWProcessFrontend.html" title="{RGWProcessFrontend\n|# conf\l# pprocess\l# env\l# thread\l|+ RGWProcessFrontend()\l+ ~RGWProcessFrontend()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="224,219,419,429"/><area shape="rect" id="node4" href="classrgw_1_1RGWLibFrontend.html" title="{rgw::RGWLibFrontend\n||+ RGWLibFrontend()\l+ init()\l+ get_process()\l+ enqueue_req()\l+ execute_req()\l+ start_req()\l+ finish_req()\l}" alt="" coords="64,477,216,643"/><area shape="rect" id="node5" href="classRGWFCGXFrontend.html" title="{RGWFCGXFrontend\n||+ RGWFCGXFrontend()\l+ init()\l}" alt="" coords="240,514,403,606"/><area shape="rect" id="node6" href="classRGWLoadGenFrontend.html" title="{RGWLoadGenFrontend\n||+ RGWLoadGenFrontend()\l+ init()\l}" alt="" coords="427,514,605,606"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for RGWFrontend:</div>
@@ -117,6 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a55d89f359e256d70dd9c3b5f5e168b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a198415252e31de329780dc48999629fb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFrontend.html#a198415252e31de329780dc48999629fb">join</a> ()=0</td></tr>
 <tr class="separator:a198415252e31de329780dc48999629fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18080ba940cd70ed1562ba04fd8f4df9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFrontend.html#a18080ba940cd70ed1562ba04fd8f4df9">pause_for_new_config</a> ()=0</td></tr>
+<tr class="separator:a18080ba940cd70ed1562ba04fd8f4df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9331d9503c1c71ec305d4f9bedd83c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWFrontend.html#adf9331d9503c1c71ec305d4f9bedd83c">unpause_with_new_config</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>)=0</td></tr>
+<tr class="separator:adf9331d9503c1c71ec305d4f9bedd83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a138a4105a5c600f3e9d57027436ff9b4"></a>
@@ -164,7 +170,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGWMongooseFrontend.html#ab2639a2c7a6244c80646d5ca78a410f6">RGWMongooseFrontend</a>, <a class="el" href="classRGWLoadGenFrontend.html#a6a1fc9f8e32268250bbac841d05097f2">RGWLoadGenFrontend</a>, and <a class="el" href="classRGWFCGXFrontend.html#ab7ca77098d21a5a2efe7494e126e22dd">RGWFCGXFrontend</a>.</p>
+<p>Implemented in <a class="el" href="classRGWLoadGenFrontend.html#a6a1fc9f8e32268250bbac841d05097f2">RGWLoadGenFrontend</a>, <a class="el" href="classRGWFCGXFrontend.html#ab7ca77098d21a5a2efe7494e126e22dd">RGWFCGXFrontend</a>, <a class="el" href="classRGWMongooseFrontend.html#ab2639a2c7a6244c80646d5ca78a410f6">RGWMongooseFrontend</a>, and <a class="el" href="classrgw_1_1RGWLibFrontend.html#af02af3dda3d938937ffe45d2b8dd1d78">rgw::RGWLibFrontend</a>.</p>
 
 </div>
 </div>
@@ -189,7 +195,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGWMongooseFrontend.html#a6d20252cea47eb733aa90dfdb196853f">RGWMongooseFrontend</a>, and <a class="el" href="classRGWProcessFrontend.html#aa0f4375c96c51e8b816eae440ef5140f">RGWProcessFrontend</a>.</p>
+<p>Implemented in <a class="el" href="classRGWProcessFrontend.html#aa0f4375c96c51e8b816eae440ef5140f">RGWProcessFrontend</a>, and <a class="el" href="classRGWMongooseFrontend.html#a6d20252cea47eb733aa90dfdb196853f">RGWMongooseFrontend</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18080ba940cd70ed1562ba04fd8f4df9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RGWFrontend::pause_for_new_config </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRGWProcessFrontend.html#af94ea217541b5843ed71189940816855">RGWProcessFrontend</a>, and <a class="el" href="classRGWMongooseFrontend.html#a4c5eeb6bf6816b56db602c52b9dcdb48">RGWMongooseFrontend</a>.</p>
 
 </div>
 </div>
@@ -214,7 +245,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGWMongooseFrontend.html#a75902e9235c819955edd568d8b0b738e">RGWMongooseFrontend</a>, and <a class="el" href="classRGWProcessFrontend.html#a6e295287b4d3c0162346926b240ab9d5">RGWProcessFrontend</a>.</p>
+<p>Implemented in <a class="el" href="classRGWProcessFrontend.html#a6e295287b4d3c0162346926b240ab9d5">RGWProcessFrontend</a>, and <a class="el" href="classRGWMongooseFrontend.html#a75902e9235c819955edd568d8b0b738e">RGWMongooseFrontend</a>.</p>
 
 </div>
 </div>
@@ -239,17 +270,43 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGWMongooseFrontend.html#a25648d7af6a94802f8467916c66bc402">RGWMongooseFrontend</a>, and <a class="el" href="classRGWProcessFrontend.html#ae633ce41c0c35477152ee187d754cbf4">RGWProcessFrontend</a>.</p>
+<p>Implemented in <a class="el" href="classRGWProcessFrontend.html#ae633ce41c0c35477152ee187d754cbf4">RGWProcessFrontend</a>, and <a class="el" href="classRGWMongooseFrontend.html#a25648d7af6a94802f8467916c66bc402">RGWMongooseFrontend</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf9331d9503c1c71ec305d4f9bedd83c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RGWFrontend::unpause_with_new_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRGWProcessFrontend.html#a6b0e28cb082d99d106b1a3304195210f">RGWProcessFrontend</a>, and <a class="el" href="classRGWMongooseFrontend.html#a283f81afad0f15e1174aa8df5dde106d">RGWMongooseFrontend</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="rgw__main_8cc.html">rgw_main.cc</a></li>
+<li><a class="el" href="rgw__frontend_8h_source.html">rgw_frontend.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:41 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

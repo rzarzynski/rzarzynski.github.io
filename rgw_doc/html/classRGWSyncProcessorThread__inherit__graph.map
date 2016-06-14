@@ -1,0 +1,5 @@
+<map id="RGWSyncProcessorThread" name="RGWSyncProcessorThread">
+<area shape="rect" id="node3" href="$classRGWDataSyncProcessorThread.html" title="{RGWDataSyncProcessorThread\n||+ RGWDataSyncProcessorThread()\l+ wakeup_sync_shards()\l+ init()\l+ process()\l}" alt="" coords="5,449,237,570"/>
+<area shape="rect" id="node4" href="$classRGWMetaSyncProcessorThread.html" title="{RGWMetaSyncProcessorThread\n||+ RGWMetaSyncProcessorThread()\l+ wakeup_sync_shards()\l+ init()\l+ process()\l}" alt="" coords="262,449,495,570"/>
+<area shape="rect" id="node2" href="$classRGWRadosThread.html" title="{RGWRadosThread\n|# cct\l# store\l# down_flag\l|+ RGWRadosThread()\l+ ~RGWRadosThread()\l+ init()\l+ process()\l+ going_down()\l+ start()\l+ stop()\l# interval_msec()\l# stop_process()\l}" alt="" coords="169,5,329,229"/>
+</map>

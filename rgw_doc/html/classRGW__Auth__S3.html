@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -102,8 +102,16 @@ Collaboration diagram for RGW_Auth_S3:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c9852b867f5c97fc597eb88e839dc2c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGW__Auth__S3.html#a7c9852b867f5c97fc597eb88e839dc2c">authorize</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, struct <a class="el" href="structreq__state.html">req_state</a> *s)</td></tr>
+<tr class="memitem:a7c9852b867f5c97fc597eb88e839dc2c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGW__Auth__S3.html#a7c9852b867f5c97fc597eb88e839dc2c">authorize</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, struct <a class="el" href="structreq__state.html">req_state</a> *s)</td></tr>
 <tr class="separator:a7c9852b867f5c97fc597eb88e839dc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb282b653623435c1fc36a2822421829"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGW__Auth__S3.html#adb282b653623435c1fc36a2822421829">authorize_aws4_auth_complete</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, struct <a class="el" href="structreq__state.html">req_state</a> *s)</td></tr>
+<tr class="separator:adb282b653623435c1fc36a2822421829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c901ed9a3f9fec8d2efb66d2c6e549e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGW__Auth__S3.html#a1c901ed9a3f9fec8d2efb66d2c6e549e">init</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>)</td></tr>
+<tr class="separator:a1c901ed9a3f9fec8d2efb66d2c6e549e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e54067f4726052499caa2b86af3a34c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrgw_1_1LDAPHelper.html">rgw::LDAPHelper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGW__Auth__S3.html#a8e54067f4726052499caa2b86af3a34c">get_ldap_ctx</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>)</td></tr>
+<tr class="separator:a8e54067f4726052499caa2b86af3a34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f7fa18ab1b4a459da930063f80aedb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGW__Auth__S3.html#a81f7fa18ab1b4a459da930063f80aedb">init_impl</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>)</td></tr>
+<tr class="separator:a81f7fa18ab1b4a459da930063f80aedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a7c9852b867f5c97fc597eb88e839dc2c"></a>
@@ -140,6 +148,112 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="adb282b653623435c1fc36a2822421829"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGW_Auth_S3::authorize_aws4_auth_complete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structreq__state.html">req_state</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e54067f4726052499caa2b86af3a34c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classrgw_1_1LDAPHelper.html">rgw::LDAPHelper</a>* RGW_Auth_S3::get_ldap_ctx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1c901ed9a3f9fec8d2efb66d2c6e549e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void RGW_Auth_S3::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a81f7fa18ab1b4a459da930063f80aedb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGW_Auth_S3::init_impl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rgw__rest__s3_8h_source.html">rgw_rest_s3.h</a></li>
 <li><a class="el" href="rgw__rest__s3_8cc.html">rgw_rest_s3.cc</a></li>
@@ -147,7 +261,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

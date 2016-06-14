@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -84,15 +84,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">rgw_op.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;limits.h&gt;</code><br/>
+<code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;set&gt;</code><br/>
 <code>#include &lt;map&gt;</code><br/>
+<code>#include &quot;common/armor.h&quot;</code><br/>
+<code>#include &quot;common/mime.h&quot;</code><br/>
+<code>#include &quot;common/utf8.h&quot;</code><br/>
+<code>#include &quot;common/ceph_json.h&quot;</code><br/>
+<code>#include &quot;common/ceph_time.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__common_8h_source.html">rgw_common.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rados_8h_source.html">rgw_rados.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__user_8h_source.html">rgw_user.h</a>&quot;</code><br/>
@@ -100,19 +106,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="rgw__acl_8h_source.html">rgw_acl.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__cors_8h_source.html">rgw_cors.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__quota_8h_source.html">rgw_quota.h</a>&quot;</code><br/>
+<code>#include &quot;include/assert.h&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_op.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__op_8h__incl.png" border="0" usemap="#rgw__op_8h" alt=""/></div>
 <map name="rgw__op_8h" id="rgw__op_8h">
-<area shape="rect" id="node6" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1391,469,1501,496"/><area shape="rect" id="node15" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2619,552,2697,579"/><area shape="rect" id="node17" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2722,552,2808,579"/><area shape="rect" id="node18" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="159,552,252,579"/><area shape="rect" id="node27" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1717,155,1811,181"/><area shape="rect" id="node41" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1027,80,1113,107"/><area shape="rect" id="node45" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="559,80,659,107"/><area shape="rect" id="node21" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="377,552,471,579"/><area shape="rect" id="node33" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1210,237,1288,264"/><area shape="rect" id="node36" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1777,395,1892,421"/><area shape="rect" id="node37" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1481,237,1599,264"/><area shape="rect" id="node38" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1479,320,1600,347"/><area shape="rect" id="node40" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1418,395,1539,421"/><area shape="rect" id="node42" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="749,395,837,421"/><area shape="rect" id="node43" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="799,237,904,264"/></map>
+<area shape="rect" id="node12" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1409,320,1519,347"/><area shape="rect" id="node21" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="213,403,291,429"/><area shape="rect" id="node23" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="51,403,137,429"/><area shape="rect" id="node24" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2531,403,2625,429"/><area shape="rect" id="node33" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1379,155,1473,181"/><area shape="rect" id="node45" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="2313,80,2399,107"/><area shape="rect" id="node50" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2817,80,2917,107"/><area shape="rect" id="node22" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="878,485,1007,512"/><area shape="rect" id="node26" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2699,403,2793,429"/><area shape="rect" id="node27" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="1506,403,1613,429"/><area shape="rect" id="node32" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1984,403,2070,429"/><area shape="rect" id="node40" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1425,237,1503,264"/><area shape="rect" id="node42" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="739,237,854,264"/><area shape="rect" id="node43" href="rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="2138,237,2306,264"/><area shape="rect" id="node44" href="rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="1528,237,1662,264"/><area shape="rect" id="node48" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="2381,237,2470,264"/><area shape="rect" id="node49" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="2699,155,2803,181"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__op_8h__dep__incl.png" border="0" usemap="#rgw__op_8hdep" alt=""/></div>
 <map name="rgw__op_8hdep" id="rgw__op_8hdep">
-<area shape="rect" id="node2" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="937,229,1033,256"/><area shape="rect" id="node3" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="929,80,1011,107"/><area shape="rect" id="node4" href="rgw__rest__swift_8h.html" title="rgw_rest_swift.h" alt="" coords="410,155,528,181"/><area shape="rect" id="node5" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="309,229,400,256"/><area shape="rect" id="node8" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="2111,229,2243,256"/><area shape="rect" id="node10" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="1785,229,1908,256"/><area shape="rect" id="node12" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="1268,229,1403,256"/><area shape="rect" id="node13" href="rgw__swift__auth_8h.html" title="rgw_swift_auth.h" alt="" coords="5,155,125,181"/><area shape="rect" id="node16" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="201,155,283,181"/><area shape="rect" id="node17" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="605,155,736,181"/><area shape="rect" id="node18" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="1624,155,1739,181"/><area shape="rect" id="node19" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="1763,155,1913,181"/><area shape="rect" id="node20" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="1938,155,2077,181"/><area shape="rect" id="node21" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="813,155,971,181"/><area shape="rect" id="node23" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="1268,80,1372,107"/><area shape="rect" id="node7" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="1475,155,1600,181"/><area shape="rect" id="node9" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="1336,155,1451,181"/><area shape="rect" id="node11" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="1182,155,1311,181"/><area shape="rect" id="node15" href="rgw__swift__auth_8cc.html" title="rgw_swift_auth.cc" alt="" coords="156,229,284,256"/><area shape="rect" id="node22" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="995,155,1105,181"/><area shape="rect" id="node6" href="rgw__rest__swift_8cc.html" title="rgw_rest_swift.cc" alt="" coords="424,229,549,256"/><area shape="rect" id="node14" href="rgw__swift_8cc.html" title="rgw_swift.cc" alt="" coords="17,229,113,256"/></map>
+<area shape="rect" id="node2" href="librgw_8cc.html" title="librgw.cc" alt="" coords="905,528,979,555"/><area shape="rect" id="node3" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="1991,80,2072,107"/><area shape="rect" id="node4" href="rgw__process_8h.html" title="rgw_process.h" alt="" coords="795,155,901,181"/><area shape="rect" id="node8" href="rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="1601,528,1687,555"/><area shape="rect" id="node12" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="1548,379,1639,405"/><area shape="rect" id="node20" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="4200,304,4323,331"/><area shape="rect" id="node22" href="rgw__rest__swift_8h.html" title="rgw_rest_swift.h" alt="" coords="1210,155,1328,181"/><area shape="rect" id="node25" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="3961,229,4092,256"/><area shape="rect" id="node27" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="4168,229,4303,256"/><area shape="rect" id="node30" href="rgw__swift__auth_8h.html" title="rgw_swift_auth.h" alt="" coords="1353,155,1473,181"/><area shape="rect" id="node32" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="2368,155,2449,181"/><area shape="rect" id="node34" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="2475,155,2607,181"/><area shape="rect" id="node35" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="2632,155,2747,181"/><area shape="rect" id="node36" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="2771,155,2921,181"/><area shape="rect" id="node37" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="2946,155,3085,181"/><area shape="rect" id="node38" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="3110,155,3268,181"/><area shape="rect" id="node40" href="rgw__request_8h.html" title="rgw_request.h" alt="" coords="492,155,596,181"/><area shape="rect" id="node41" href="rgw__request_8cc.html" title="rgw_request.cc" alt="" coords="43,229,153,256"/><area shape="rect" id="node42" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="3405,80,3509,107"/><area shape="rect" id="node44" href="rgw__json__enc_8cc.html" title="rgw_json_enc.cc" alt="" coords="4429,80,4549,107"/><area shape="rect" id="node6" href="rgw__lib_8h.html" title="rgw_lib.h" alt="" coords="1217,304,1291,331"/><area shape="rect" id="node9" href="rgw__os__lib_8cc.html" title="rgw_os_lib.cc" alt="" coords="2677,528,2779,555"/><area shape="rect" id="node14" href="rgw__fcgi__process_8cc.html" title="rgw_fcgi_process.cc" alt="" coords="911,304,1053,331"/><area shape="rect" id="node16" href="rgw__loadgen__process_8cc.html" title="rgw_loadgen_process.cc" alt="" coords="721,304,887,331"/><area shape="rect" id="node17" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="2019,304,2115,331"/><area shape="rect" id="node18" href="rgw__process_8cc.html" title="rgw_process.cc" alt="" coords="1079,304,1193,331"/><area shape="rect" id="node19" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="3687,229,3801,256"/><area shape="rect" id="node21" href="rgw__auth__s3_8cc.html" title="rgw_auth_s3.cc" alt="" coords="1600,155,1715,181"/><area shape="rect" id="node24" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="3395,155,3520,181"/><area shape="rect" id="node26" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="3545,155,3673,181"/><area shape="rect" id="node28" href="rgw__rest__realm_8h.html" title="rgw_rest_realm.h" alt="" coords="2120,155,2243,181"/><area shape="rect" id="node31" href="rgw__swift__auth_8cc.html" title="rgw_swift_auth.cc" alt="" coords="1713,229,1841,256"/><area shape="rect" id="node33" href="rgw__realm__reloader_8cc.html" title="rgw_realm_reloader.cc" alt="" coords="1739,155,1892,181"/><area shape="rect" id="node39" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="3826,229,3936,256"/><area shape="rect" id="node5" href="rgw__frontend_8h.html" title="rgw_frontend.h" alt="" coords="418,229,525,256"/><area shape="rect" id="node13" href="rgw__civetweb__frontend_8cc.html" title="rgw_civetweb_frontend.cc" alt="" coords="281,304,455,331"/><area shape="rect" id="node15" href="rgw__frontend_8cc.html" title="rgw_frontend.cc" alt="" coords="480,304,595,331"/><area shape="rect" id="node7" href="rgw__os__lib_8h.html" title="rgw_os_lib.h" alt="" coords="1597,453,1691,480"/><area shape="rect" id="node10" href="rgw__lib__frontend_8h.html" title="rgw_lib_frontend.h" alt="" coords="1343,453,1471,480"/><area shape="rect" id="node11" href="rgw__file_8h.html" title="rgw_file.h" alt="" coords="1343,379,1421,405"/><area shape="rect" id="node23" href="rgw__rest__swift_8cc.html" title="rgw_rest_swift.cc" alt="" coords="1412,229,1537,256"/><area shape="rect" id="node29" href="rgw__rest__realm_8cc.html" title="rgw_rest_realm.cc" alt="" coords="2347,229,2476,256"/><area shape="rect" id="node43" href="rgw__rest__s3website_8h.html" title="rgw_rest_s3website.h" alt="" coords="4003,155,4151,181"/></map>
 </div>
 </div>
 <p><a href="rgw__op_8h_source.html">Go to the source code of this file.</a></p>
@@ -123,7 +130,19 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetObj.html">RGWGetObj</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetObj__CB.html">RGWGetObj_CB</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWBulkDelete.html">RGWBulkDelete</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWBulkDelete_1_1acct__path__t.html">RGWBulkDelete::acct_path_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWBulkDelete_1_1fail__desc__t.html">RGWBulkDelete::fail_desc_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWBulkDelete_1_1Deleter.html">RGWBulkDelete::Deleter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWListBuckets.html">RGWListBuckets</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUsage.html">RGWGetUsage</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWStatAccount.html">RGWStatAccount</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,19 +156,31 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSetBucketVersioning.html">RGWSetBucketVersioning</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetBucketWebsite.html">RGWGetBucketWebsite</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSetBucketWebsite.html">RGWSetBucketWebsite</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDeleteBucketWebsite.html">RGWDeleteBucketWebsite</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWStatBucket.html">RGWStatBucket</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCreateBucket.html">RGWCreateBucket</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDeleteBucket.html">RGWDeleteBucket</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__slo__entry.html">rgw_slo_entry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWSLOInfo.html">RGWSLOInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWPutObj.html">RGWPutObj</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWPostObj.html">RGWPostObj</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWPutMetadata.html">RGWPutMetadata</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWPutMetadataAccount.html">RGWPutMetadataAccount</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSetTempUrl.html">RGWSetTempUrl</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWPutMetadataBucket.html">RGWPutMetadataBucket</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWPutMetadataObject.html">RGWPutMetadataObject</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDeleteObj.html">RGWDeleteObj</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +197,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDeleteCORS.html">RGWDeleteCORS</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOptionsCORS.html">RGWOptionsCORS</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetRequestPayment.html">RGWGetRequestPayment</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSetRequestPayment.html">RGWSetRequestPayment</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWInitMultipart.html">RGWInitMultipart</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,48 +228,28 @@ Macros</h2></td></tr>
 <tr class="memitem:a4e50850641eacc7e1aff37da3178c369"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#a4e50850641eacc7e1aff37da3178c369">MP_META_SUFFIX</a>&#160;&#160;&#160;&quot;.meta&quot;</td></tr>
 <tr class="separator:a4e50850641eacc7e1aff37da3178c369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:adedf6eb016de146128a1adb706df37d8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8">RGWOpType</a> { <br/>
-&#160;&#160;<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a5f2feb3223f9ac87ea7d86eaf1d30841">RGW_OP_UNKNOWN</a> = 0, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a9d82344495860d7c58dc1cc7082b64bb">RGW_OP_GET_OBJ</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a88afb62962b31cc70c3484872ead996e">RGW_OP_LIST_BUCKETS</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a931a76dd58b799b808e0b1217762f03a">RGW_OP_STAT_ACCOUNT</a>, 
-<br/>
-&#160;&#160;<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a189acb7956b7ac1b0aaca911196167b4">RGW_OP_LIST_BUCKET</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a60f19bb07088a6ce2dd217939cccf506">RGW_OP_GET_BUCKET_LOGGING</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a65b4907f969799102ebdaf5aa86eea00">RGW_OP_GET_BUCKET_VERSIONING</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a86fe6e953ac9ee8812270cf08019cb59">RGW_OP_SET_BUCKET_VERSIONING</a>, 
-<br/>
-&#160;&#160;<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a8eaab64414582089a928753102d8cf88">RGW_OP_STAT_BUCKET</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8ab296140a1234ed38611e8a7dd4b71386">RGW_OP_CREATE_BUCKET</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a2fe13cf9a9845d9f68d1c122f0dd484a">RGW_OP_DELETE_BUCKET</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a9da19b773bb8f30b684c2897357ef12b">RGW_OP_PUT_OBJ</a>, 
-<br/>
-&#160;&#160;<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8aad87d8a7ff23a0726bf4a84c68eb6934">RGW_OP_POST_OBJ</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a1851d0dff2367155de9a8702109a1b77">RGW_OP_PUT_METADATA</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a35248fff5d0160d842b10640e46890ae">RGW_OP_SET_TEMPURL</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8af92563cd088e626c9020a15ce2457346">RGW_OP_DELETE_OBJ</a>, 
-<br/>
-&#160;&#160;<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a7441522a314adb74b6dc82fdb351a70b">RGW_OP_COPY_OBJ</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8ac1f1963a34a18821deb2021e65605e53">RGW_OP_GET_ACLS</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a6faff764d6ccb00c46f9e8b6dbbcb113">RGW_OP_PUT_ACLS</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a92b1f947704a29f59571c4a288bd36fb">RGW_OP_GET_CORS</a>, 
-<br/>
-&#160;&#160;<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a1d4ea86d116fcdc7f24da5d2bc51e004">RGW_OP_PUT_CORS</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8af0fb599cefe9b4aa156ff267bccea5a6">RGW_OP_DELETE_CORS</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8aa2f494f12b33d04678c4c3cefc6c7f81">RGW_OP_OPTIONS_CORS</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a332913e75f637b2bf6539c1c3b693683">RGW_OP_INIT_MULTIPART</a>, 
-<br/>
-&#160;&#160;<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8ab79be61b89484c58d1df52fb03ded044">RGW_OP_COMPLETE_MULTIPART</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a6a75cbc1d15e411edf1f4d21f5dfc037">RGW_OP_ABORT_MULTIPART</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a613a478abb3c9d777c81fccfde37f17f">RGW_OP_LIST_MULTIPART</a>, 
-<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a5a54e59519d493b3304c5779371169e7">RGW_OP_LIST_BUCKET_MULTIPARTS</a>, 
-<br/>
-&#160;&#160;<a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8a150c8ef835c92f6764af64334bca79e9">RGW_OP_DELETE_MULTI_OBJ</a>
-<br/>
- }</td></tr>
-<tr class="separator:adedf6eb016de146128a1adb706df37d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8ac5bccf41747e8e98d63449e3262ab9"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#a8ac5bccf41747e8e98d63449e3262ab9">operator&lt;&lt;</a> (ostream &amp;out, const <a class="el" href="structRGWBulkDelete_1_1acct__path__t.html">RGWBulkDelete::acct_path_t</a> &amp;o)</td></tr>
+<tr class="separator:a8ac5bccf41747e8e98d63449e3262ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d9dc933398dbf85bc398c86a1bbf00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#a30d9dc933398dbf85bc398c86a1bbf00">rgw_build_bucket_policies</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, struct <a class="el" href="structreq__state.html">req_state</a> *s)</td></tr>
+<tr class="separator:a30d9dc933398dbf85bc398c86a1bbf00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98567c9426af5d5967dec6014b9c52f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#ab98567c9426af5d5967dec6014b9c52f">rgw_build_object_policies</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, struct <a class="el" href="structreq__state.html">req_state</a> *s, bool prefetch_data)</td></tr>
+<tr class="separator:ab98567c9426af5d5967dec6014b9c52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8298ba5828041a19832541c72590bf24"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#a8298ba5828041a19832541c72590bf24">put_data_and_throttle</a> (<a class="el" href="classRGWPutObjProcessor.html">RGWPutObjProcessor</a> *processor, bufferlist &amp;data, off_t ofs, MD5 *hash, bool need_to_wait)</td></tr>
+<tr class="separator:a8298ba5828041a19832541c72590bf24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af571e008f729debf178dd670f4ef59d0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#af571e008f729debf178dd670f4ef59d0">get_system_versioning_params</a> (<a class="el" href="structreq__state.html">req_state</a> *s, uint64_t *olh_epoch, string *version_id)</td></tr>
+<tr class="separator:af571e008f729debf178dd670f4ef59d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a224b5fc0952c12cea92015f8d92cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#a11a224b5fc0952c12cea92015f8d92cb">format_xattr</a> (std::string &amp;xattr)</td></tr>
+<tr class="separator:a11a224b5fc0952c12cea92015f8d92cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bfd756a359b93dd67271357d6787a1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#a11bfd756a359b93dd67271357d6787a1">rgw_get_request_metadata</a> (CephContext *cct, struct <a class="el" href="structreq__info.html">req_info</a> &amp;info, map&lt; string, bufferlist &gt; &amp;attrs, const bool allow_empty_attrs=true)</td></tr>
+<tr class="separator:a11bfd756a359b93dd67271357d6787a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ec741054aad890be4fe8337564fdc1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#ae6ec741054aad890be4fe8337564fdc1">encode_delete_at_attr</a> (ceph::real_time delete_at, map&lt; string, bufferlist &gt; &amp;attrs)</td></tr>
+<tr class="separator:ae6ec741054aad890be4fe8337564fdc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51675462ec10afd847590fb5853e90d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#ae51675462ec10afd847590fb5853e90d">encode_dlo_manifest_attr</a> (const char *const dlo_manifest, map&lt; string, bufferlist &gt; &amp;attrs)</td></tr>
+<tr class="separator:ae51675462ec10afd847590fb5853e90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c1a793985f222c108341758b9370d2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__op_8h.html#ac8c1a793985f222c108341758b9370d2">complete_etag</a> (MD5 &amp;hash, string *etag)</td></tr>
+<tr class="separator:ac8c1a793985f222c108341758b9370d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a4e50850641eacc7e1aff37da3178c369"></a>
@@ -261,83 +276,370 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="adedf6eb016de146128a1adb706df37d8"></a>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ac8c1a793985f222c108341758b9370d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void complete_etag </td>
+          <td>(</td>
+          <td class="paramtype">MD5 &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string *&#160;</td>
+          <td class="paramname"><em>etag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6ec741054aad890be4fe8337564fdc1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void encode_delete_at_attr </td>
+          <td>(</td>
+          <td class="paramtype">ceph::real_time&#160;</td>
+          <td class="paramname"><em>delete_at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, bufferlist &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae51675462ec10afd847590fb5853e90d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int encode_dlo_manifest_attr </td>
+          <td>(</td>
+          <td class="paramtype">const char *const&#160;</td>
+          <td class="paramname"><em>dlo_manifest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, bufferlist &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a11a224b5fc0952c12cea92015f8d92cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void format_xattr </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>xattr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af571e008f729debf178dd670f4ef59d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int get_system_versioning_params </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structreq__state.html">req_state</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t *&#160;</td>
+          <td class="paramname"><em>olh_epoch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string *&#160;</td>
+          <td class="paramname"><em>version_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8ac5bccf41747e8e98d63449e3262ab9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structRGWBulkDelete_1_1acct__path__t.html">RGWBulkDelete::acct_path_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8298ba5828041a19832541c72590bf24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int put_data_and_throttle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWPutObjProcessor.html">RGWPutObjProcessor</a> *&#160;</td>
+          <td class="paramname"><em>processor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bufferlist &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t&#160;</td>
+          <td class="paramname"><em>ofs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MD5 *&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>need_to_wait</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a30d9dc933398dbf85bc398c86a1bbf00"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="rgw__op_8h.html#adedf6eb016de146128a1adb706df37d8">RGWOpType</a></td>
+          <td class="memname">int rgw_build_bucket_policies </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structreq__state.html">req_state</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a5f2feb3223f9ac87ea7d86eaf1d30841"></a>RGW_OP_UNKNOWN</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a9d82344495860d7c58dc1cc7082b64bb"></a>RGW_OP_GET_OBJ</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a88afb62962b31cc70c3484872ead996e"></a>RGW_OP_LIST_BUCKETS</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a931a76dd58b799b808e0b1217762f03a"></a>RGW_OP_STAT_ACCOUNT</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a189acb7956b7ac1b0aaca911196167b4"></a>RGW_OP_LIST_BUCKET</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a60f19bb07088a6ce2dd217939cccf506"></a>RGW_OP_GET_BUCKET_LOGGING</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a65b4907f969799102ebdaf5aa86eea00"></a>RGW_OP_GET_BUCKET_VERSIONING</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a86fe6e953ac9ee8812270cf08019cb59"></a>RGW_OP_SET_BUCKET_VERSIONING</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a8eaab64414582089a928753102d8cf88"></a>RGW_OP_STAT_BUCKET</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8ab296140a1234ed38611e8a7dd4b71386"></a>RGW_OP_CREATE_BUCKET</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a2fe13cf9a9845d9f68d1c122f0dd484a"></a>RGW_OP_DELETE_BUCKET</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a9da19b773bb8f30b684c2897357ef12b"></a>RGW_OP_PUT_OBJ</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8aad87d8a7ff23a0726bf4a84c68eb6934"></a>RGW_OP_POST_OBJ</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a1851d0dff2367155de9a8702109a1b77"></a>RGW_OP_PUT_METADATA</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a35248fff5d0160d842b10640e46890ae"></a>RGW_OP_SET_TEMPURL</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8af92563cd088e626c9020a15ce2457346"></a>RGW_OP_DELETE_OBJ</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a7441522a314adb74b6dc82fdb351a70b"></a>RGW_OP_COPY_OBJ</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8ac1f1963a34a18821deb2021e65605e53"></a>RGW_OP_GET_ACLS</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a6faff764d6ccb00c46f9e8b6dbbcb113"></a>RGW_OP_PUT_ACLS</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a92b1f947704a29f59571c4a288bd36fb"></a>RGW_OP_GET_CORS</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a1d4ea86d116fcdc7f24da5d2bc51e004"></a>RGW_OP_PUT_CORS</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8af0fb599cefe9b4aa156ff267bccea5a6"></a>RGW_OP_DELETE_CORS</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8aa2f494f12b33d04678c4c3cefc6c7f81"></a>RGW_OP_OPTIONS_CORS</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a332913e75f637b2bf6539c1c3b693683"></a>RGW_OP_INIT_MULTIPART</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8ab79be61b89484c58d1df52fb03ded044"></a>RGW_OP_COMPLETE_MULTIPART</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a6a75cbc1d15e411edf1f4d21f5dfc037"></a>RGW_OP_ABORT_MULTIPART</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a613a478abb3c9d777c81fccfde37f17f"></a>RGW_OP_LIST_MULTIPART</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a5a54e59519d493b3304c5779371169e7"></a>RGW_OP_LIST_BUCKET_MULTIPARTS</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="adedf6eb016de146128a1adb706df37d8a150c8ef835c92f6764af64334bca79e9"></a>RGW_OP_DELETE_MULTI_OBJ</em>&#160;</td><td class="fielddoc">
-</td></tr>
+<p>Get the AccessControlPolicy for an user, bucket or object off of disk. s: The <a class="el" href="structreq__state.html">req_state</a> to draw information from. only_bucket: If true, reads the user and bucket ACLs rather than the object ACL. Returns: 0 on success, -ERR# otherwise. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab98567c9426af5d5967dec6014b9c52f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rgw_build_object_policies </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structreq__state.html">req_state</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>prefetch_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the AccessControlPolicy for a bucket or object off of disk. s: The <a class="el" href="structreq__state.html">req_state</a> to draw information from. only_bucket: If true, reads the bucket ACL rather than the object ACL. Returns: 0 on success, -ERR# otherwise. </p>
+
+</div>
+</div>
+<a class="anchor" id="a11bfd756a359b93dd67271357d6787a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rgw_get_request_metadata </td>
+          <td>(</td>
+          <td class="paramtype">CephContext *&#160;</td>
+          <td class="paramname"><em>cct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structreq__info.html">req_info</a> &amp;&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, bufferlist &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>allow_empty_attrs</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
 </table>
+</div><div class="memdoc">
+<p>Get the HTTP request metadata out of the <a class="el" href="structreq__state.html">req_state</a> as a map(&lt;attr_name, attr_contents&gt;, where attr_name is RGW_ATTR_PREFIX.HTTP_NAME) s: The request state attrs: will be filled up with attrs mapped as &lt;attr_name, attr_contents&gt; </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

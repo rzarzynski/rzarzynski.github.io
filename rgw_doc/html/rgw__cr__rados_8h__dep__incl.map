@@ -1,0 +1,7 @@
+<map id="rgw_cr_rados.h" name="rgw_cr_rados.h">
+<area shape="rect" id="node2" href="$rgw__cr__rados_8cc.html" title="rgw_cr_rados.cc" alt="" coords="5,80,123,107"/>
+<area shape="rect" id="node3" href="$rgw__data__sync_8cc.html" title="rgw_data_sync.cc" alt="" coords="148,80,276,107"/>
+<area shape="rect" id="node4" href="$rgw__metadata_8cc.html" title="rgw_metadata.cc" alt="" coords="300,80,423,107"/>
+<area shape="rect" id="node5" href="$rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="447,80,547,107"/>
+<area shape="rect" id="node6" href="$rgw__sync_8cc.html" title="rgw_sync.cc" alt="" coords="572,80,668,107"/>
+</map>

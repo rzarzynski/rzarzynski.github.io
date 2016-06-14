@@ -1,6 +1,7 @@
 <map id="RGWFrontend" name="RGWFrontend">
-<area shape="rect" id="node2" href="$classRGWMongooseFrontend.html" title="{RGWMongooseFrontend\n||+ RGWMongooseFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l}" alt="" coords="5,212,192,348"/>
-<area shape="rect" id="node3" href="$classRGWProcessFrontend.html" title="{RGWProcessFrontend\n|# conf\l# pprocess\l# env\l# thread\l|+ RGWProcessFrontend()\l+ ~RGWProcessFrontend()\l+ run()\l+ stop()\l+ join()\l}" alt="" coords="217,190,399,370"/>
-<area shape="rect" id="node4" href="$classRGWFCGXFrontend.html" title="{RGWFCGXFrontend\n||+ RGWFCGXFrontend()\l+ init()\l}" alt="" coords="129,419,292,511"/>
-<area shape="rect" id="node5" href="$classRGWLoadGenFrontend.html" title="{RGWLoadGenFrontend\n||+ RGWLoadGenFrontend()\l+ init()\l}" alt="" coords="316,419,495,511"/>
+<area shape="rect" id="node2" href="$classRGWMongooseFrontend.html" title="{RGWMongooseFrontend\n||+ RGWMongooseFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="5,241,200,407"/>
+<area shape="rect" id="node3" href="$classRGWProcessFrontend.html" title="{RGWProcessFrontend\n|# conf\l# pprocess\l# env\l# thread\l|+ RGWProcessFrontend()\l+ ~RGWProcessFrontend()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="224,219,419,429"/>
+<area shape="rect" id="node4" href="$classrgw_1_1RGWLibFrontend.html" title="{rgw::RGWLibFrontend\n||+ RGWLibFrontend()\l+ init()\l+ get_process()\l+ enqueue_req()\l+ execute_req()\l+ start_req()\l+ finish_req()\l}" alt="" coords="64,477,216,643"/>
+<area shape="rect" id="node5" href="$classRGWFCGXFrontend.html" title="{RGWFCGXFrontend\n||+ RGWFCGXFrontend()\l+ init()\l}" alt="" coords="240,514,403,606"/>
+<area shape="rect" id="node6" href="$classRGWLoadGenFrontend.html" title="{RGWLoadGenFrontend\n||+ RGWLoadGenFrontend()\l+ init()\l}" alt="" coords="427,514,605,606"/>
 </map>

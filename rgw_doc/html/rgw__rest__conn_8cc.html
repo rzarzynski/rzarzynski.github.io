@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">rgw_rest_conn.cc File Reference</div>  </div>
 </div><!--header-->
@@ -95,7 +96,7 @@ Include dependency graph for rgw_rest_conn.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rest__conn_8cc__incl.png" border="0" usemap="#rgw__rest__conn_8cc" alt=""/></div>
 <map name="rgw__rest__conn_8cc" id="rgw__rest__conn_8cc">
-<area shape="rect" id="node2" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1534,80,1627,107"/><area shape="rect" id="node36" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="1221,163,1339,189"/><area shape="rect" id="node7" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1063,395,1173,421"/><area shape="rect" id="node32" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="941,320,1019,347"/><area shape="rect" id="node35" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1517,320,1631,347"/><area shape="rect" id="node18" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="972,477,1050,504"/><area shape="rect" id="node20" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1075,477,1161,504"/><area shape="rect" id="node21" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="635,477,729,504"/><area shape="rect" id="node24" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="753,477,846,504"/><area shape="rect" id="node37" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1057,245,1178,272"/><area shape="rect" id="node39" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1057,320,1178,347"/></map>
+<area shape="rect" id="node2" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1809,155,1903,181"/><area shape="rect" id="node47" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="2055,80,2173,107"/><area shape="rect" id="node8" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1849,320,1959,347"/><area shape="rect" id="node41" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="498,237,576,264"/><area shape="rect" id="node43" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="2023,237,2137,264"/><area shape="rect" id="node45" href="rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="1233,237,1401,264"/><area shape="rect" id="node46" href="rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="2162,237,2296,264"/><area shape="rect" id="node19" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1583,403,1661,429"/><area shape="rect" id="node20" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1767,485,1896,512"/><area shape="rect" id="node21" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2277,485,2363,512"/><area shape="rect" id="node22" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1220,403,1313,429"/><area shape="rect" id="node25" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="2773,403,2867,429"/><area shape="rect" id="node28" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="804,403,911,429"/><area shape="rect" id="node34" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="2211,403,2297,429"/><area shape="rect" id="node29" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="828,485,909,512"/><area shape="rect" id="node44" href="rgw__period__history_8h.html" title="rgw_period_history.h" alt="" coords="2169,320,2311,347"/><area shape="rect" id="node48" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="2054,155,2175,181"/><area shape="rect" id="node49" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="2625,237,2745,264"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -109,6 +110,14 @@ Macros</h2></td></tr>
 <tr class="separator:a5580a2b7c4743669bb9ca22b07e84324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6bdab72798af04e7ce8a81f218fee4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__conn_8cc.html#ab6bdab72798af04e7ce8a81f218fee4d">SEARCH_AMZ_PREFIX</a>&#160;&#160;&#160;&quot;HTTP_X_AMZ_&quot;</td></tr>
 <tr class="separator:ab6bdab72798af04e7ce8a81f218fee4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa41d3900865cfbb67cbd4508ac161096"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__conn_8cc.html#aa41d3900865cfbb67cbd4508ac161096">set_date_header</a> (const real_time *t, map&lt; string, string &gt; &amp;headers, const string &amp;header_name)</td></tr>
+<tr class="separator:aa41d3900865cfbb67cbd4508ac161096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb2f269beb4e57221fe9a16e36c1cdc"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aadb2f269beb4e57221fe9a16e36c1cdc"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rgw__rest__conn_8cc.html#aadb2f269beb4e57221fe9a16e36c1cdc">set_header</a> (T val, map&lt; string, string &gt; &amp;headers, const string &amp;header_name)</td></tr>
+<tr class="separator:aadb2f269beb4e57221fe9a16e36c1cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a5580a2b7c4743669bb9ca22b07e84324"></a>
@@ -135,10 +144,93 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aa41d3900865cfbb67cbd4508ac161096"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void set_date_header </td>
+          <td>(</td>
+          <td class="paramtype">const real_time *&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>header_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aadb2f269beb4e57221fe9a16e36c1cdc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void set_header </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; string, string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>header_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,4 @@
 <map id="ACLOwner_S3" name="ACLOwner_S3">
-<area shape="rect" id="node2" href="$classACLOwner.html" title="{ACLOwner\n|# id\l# display_name\l|+ ACLOwner()\l+ ~ACLOwner()\l+ encode()\l+ decode()\l+ dump()\l+ set_id()\l+ set_name()\l+ get_id()\l+ get_display_name()\l+ generate_test_instances()\l}" alt="" coords="5,20,189,244"/>
+<area shape="rect" id="node2" href="$classACLOwner.html" title="{ACLOwner\n|# id\l# display_name\l|+ ACLOwner()\l+ ~ACLOwner()\l+ encode()\l+ decode()\l+ dump()\l+ set_id()\l+ set_name()\l+ get_id()\l+ get_id()\l+ get_display_name()\l+ generate_test_instances()\l}" alt="" coords="5,13,189,251"/>
 <area shape="rect" id="node3" href="$classXMLObj.html" title="{XMLObj\n|# data\l# children\l# attr_map\l|+ XMLObj()\l+ ~XMLObj()\l+ xml_start()\l+ xml_end()\l+ xml_handle_data()\l+ get_data()\l+ get_parent()\l+ add_child()\l+ get_attr()\l+ find()\l+ find_first()\l}" alt="" coords="214,5,353,259"/>
 </map>

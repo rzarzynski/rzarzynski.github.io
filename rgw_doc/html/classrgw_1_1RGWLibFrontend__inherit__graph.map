@@ -1,0 +1,4 @@
+<map id="rgw::RGWLibFrontend" name="rgw::RGWLibFrontend">
+<area shape="rect" id="node2" href="$classRGWProcessFrontend.html" title="{RGWProcessFrontend\n|# conf\l# pprocess\l# env\l# thread\l|+ RGWProcessFrontend()\l+ ~RGWProcessFrontend()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="5,219,200,429"/>
+<area shape="rect" id="node3" href="$classRGWFrontend.html" title="{RGWFrontend\n||+ ~RGWFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="5,5,200,171"/>
+</map>

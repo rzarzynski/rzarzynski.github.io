@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;expat.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;include/types.h&gt;</span></div>
@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *alloc_obj(<span class="keyword">const</span> <span class="keywordtype">char</span> *el);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classRGWCORSXMLParser__S3.html#a3fd773a6096d88e31c4c1cf4b8045b0e">   56</a></span>&#160;  <a class="code" href="classRGWCORSXMLParser__S3.html#a3fd773a6096d88e31c4c1cf4b8045b0e">RGWCORSXMLParser_S3</a>(CephContext *_cct) : cct(_cct) {}</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classRGWCORSXMLParser__S3.html#a3fd773a6096d88e31c4c1cf4b8045b0e">   56</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classRGWCORSXMLParser__S3.html#a3fd773a6096d88e31c4c1cf4b8045b0e">RGWCORSXMLParser_S3</a>(CephContext *_cct) : cct(_cct) {}</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*CEPH_RGW_CORS_S3_H*/</span><span class="preprocessor"></span></div>
 <div class="ttc" id="rgw__cors_8h_html"><div class="ttname"><a href="rgw__cors_8h.html">rgw_cors.h</a></div></div>
@@ -149,10 +149,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classRGWXMLParser_html"><div class="ttname"><a href="classRGWXMLParser.html">RGWXMLParser</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:63</div></div>
 <div class="ttc" id="classRGWCORSConfiguration_html"><div class="ttname"><a href="classRGWCORSConfiguration.html">RGWCORSConfiguration</a></div><div class="ttdef"><b>Definition:</b> rgw_cors.h:93</div></div>
 <div class="ttc" id="classRGWCORSRule__S3_html_a1e801db046a580b9c5ba01abe2178cd0"><div class="ttname"><a href="classRGWCORSRule__S3.html#a1e801db046a580b9c5ba01abe2178cd0">RGWCORSRule_S3::~RGWCORSRule_S3</a></div><div class="ttdeci">~RGWCORSRule_S3()</div><div class="ttdef"><b>Definition:</b> rgw_cors_s3.h:34</div></div>
-<div class="ttc" id="classRGWCORSRule_html"><div class="ttname"><a href="classRGWCORSRule.html">RGWCORSRule</a></div><div class="ttdef"><b>Definition:</b> rgw_cors.h:38</div></div>
-<div class="ttc" id="rgw__xml_8cc_html_a2383d9a2d721aa6ba89c5d804e8f4f96"><div class="ttname"><a href="rgw__xml_8cc.html#a2383d9a2d721aa6ba89c5d804e8f4f96">xml_end</a></div><div class="ttdeci">static void xml_end(void *data, const char *el)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:176</div></div>
+<div class="ttc" id="classRGWCORSRule_html"><div class="ttname"><a href="classRGWCORSRule.html">RGWCORSRule</a></div><div class="ttdef"><b>Definition:</b> rgw_cors.h:37</div></div>
+<div class="ttc" id="rgw__xml_8cc_html_a2383d9a2d721aa6ba89c5d804e8f4f96"><div class="ttname"><a href="rgw__xml_8cc.html#a2383d9a2d721aa6ba89c5d804e8f4f96">xml_end</a></div><div class="ttdeci">static void xml_end(void *data, const char *el)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:182</div></div>
 <div class="ttc" id="classRGWCORSConfiguration__S3_html_af51a5a1c30a0c987c5d75020df097746"><div class="ttname"><a href="classRGWCORSConfiguration__S3.html#af51a5a1c30a0c987c5d75020df097746">RGWCORSConfiguration_S3::RGWCORSConfiguration_S3</a></div><div class="ttdeci">RGWCORSConfiguration_S3()</div><div class="ttdef"><b>Definition:</b> rgw_cors_s3.h:43</div></div>
-<div class="ttc" id="classXMLObj_html"><div class="ttname"><a href="classXMLObj.html">XMLObj</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:37</div></div>
+<div class="ttc" id="classXMLObj_html"><div class="ttname"><a href="classXMLObj.html">XMLObj</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:36</div></div>
 <div class="ttc" id="classRGWCORSConfiguration__S3_html_af9fbf907d8bb16300ea889f1fe8b7886"><div class="ttname"><a href="classRGWCORSConfiguration__S3.html#af9fbf907d8bb16300ea889f1fe8b7886">RGWCORSConfiguration_S3::~RGWCORSConfiguration_S3</a></div><div class="ttdeci">~RGWCORSConfiguration_S3()</div><div class="ttdef"><b>Definition:</b> rgw_cors_s3.h:44</div></div>
 <div class="ttc" id="classRGWCORSXMLParser__S3_html"><div class="ttname"><a href="classRGWCORSXMLParser__S3.html">RGWCORSXMLParser_S3</a></div><div class="ttdef"><b>Definition:</b> rgw_cors_s3.h:50</div></div>
 <div class="ttc" id="classRGWCORSRule__S3_html"><div class="ttname"><a href="classRGWCORSRule__S3.html">RGWCORSRule_S3</a></div><div class="ttdef"><b>Definition:</b> rgw_cors_s3.h:30</div></div>
@@ -161,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:38 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

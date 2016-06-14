@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -90,19 +90,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#a553a63dcfddcd0feb7eb3010e51a9170">add_entry</a>(RGWRados *store, RGWMetadataHandler *handler, const string &amp;section, const string &amp;key, bufferlist &amp;bl)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#aaff3a7bd94a00961d351a62d5160c07d">add_entry</a>(RGWMetadataHandler *handler, const string &amp;section, const string &amp;key, bufferlist &amp;bl)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#a4afea886b639d8f3a85dfd09fea0eef8">complete_list_entries</a>(void *handle)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#adc6c16abaa2213ce03fee6f9a9ffb7ee">get_info</a>(int shard_id, RGWMetadataLogInfo *info)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#a212175f7d18883ac76373868616e67ad">init_list_entries</a>(int shard_id, utime_t &amp;from_time, utime_t &amp;end_time, string &amp;marker, void **handle)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#a457deb288f3010ced6d040741a615aa0">get_info_async</a>(int shard_id, RGWMetadataLogInfo *info, RGWCompletionManager *completion_manager, void *user_info, int *pret)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#a4aa6724b01556b42030a191288cda42e">get_shard_oid</a>(int id, string &amp;oid) const </td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#adb5f32dfee58421f9f4646da837afa59">init_list_entries</a>(int shard_id, const real_time &amp;from_time, const real_time &amp;end_time, string &amp;marker, void **handle)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#a8aba97e2dc1901d087472504c486131c">list_entries</a>(void *handle, int max_entries, list&lt; cls_log_entry &gt; &amp;entries, string *out_marker, bool *truncated)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#ab0a4b20ecf2d4185253224e094dee509">lock_exclusive</a>(int shard_id, utime_t &amp;duration, string &amp;zone_id, string &amp;owner_id)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#a95ab0f7bd543e6a375d982858950e02d">RGWMetadataLog</a>(CephContext *_cct, RGWRados *_store)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#a1301e95480faa6d7a053bcc5422f9441">trim</a>(int shard_id, const utime_t &amp;from_time, const utime_t &amp;end_time, const string &amp;start_marker, const string &amp;end_marker)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#a5ae092ec9afa5f4614e5d14a9d3a7223">lock_exclusive</a>(int shard_id, timespan duration, string &amp;zone_id, string &amp;owner_id)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#ad4638e8d2d55d4601bae83139165b0b1">read_clear_modified</a>(set&lt; int &gt; &amp;modified)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#aa628211fd6dfec7e4cadad13a41f292b">RGWMetadataLog</a>(CephContext *_cct, RGWRados *_store, const std::string &amp;period)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#a9082fc55ef71a4cef73aa3962c9732ee">store_entries_in_shard</a>(list&lt; cls_log_entry &gt; &amp;entries, int shard_id, librados::AioCompletion *completion)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#a37b639b7ce54f3f55c6ff49540658a3d">trim</a>(int shard_id, const real_time &amp;from_time, const real_time &amp;end_time, const string &amp;start_marker, const string &amp;end_marker)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRGWMetadataLog.html#af7fb29bf73a022f37d327effcd24472d">unlock</a>(int shard_id, string &amp;zone_id, string &amp;owner_id)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRGWMetadataLog.html#af00eb77e516deadc49358941e28f5ea3">update_shards</a>(list&lt; int &gt; &amp;shards)</td><td class="entry"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

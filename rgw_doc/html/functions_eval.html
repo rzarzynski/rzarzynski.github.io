@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li class="current"><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
@@ -103,6 +104,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>APPLY_UPDATES
 : <a class="el" href="classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491babbce5c0dea9e17b0cb8c9b0e6c4a8e31">RGWMetadataHandler</a>
 </li>
+<li>ATTRSMOD_MERGE
+: <a class="el" href="classRGWRados.html#acf6063a74d8174f965ace73d8c72d237ace5a2fd298de3324b5f5e64eb9aad63f">RGWRados</a>
+</li>
+<li>ATTRSMOD_NONE
+: <a class="el" href="classRGWRados.html#acf6063a74d8174f965ace73d8c72d237ad5b8899a36ffebe40cd195804739af27">RGWRados</a>
+</li>
+<li>ATTRSMOD_REPLACE
+: <a class="el" href="classRGWRados.html#acf6063a74d8174f965ace73d8c72d237aadab0f21916603a30b34a2a62a48eefc">RGWRados</a>
+</li>
+<li>FullSync
+: <a class="el" href="structrgw__data__sync__marker.html#a59a56a0906b7ac5ed6c24d10c42efb87aac932e31d5c0d2fafb4cef3804606e1a">rgw_data_sync_marker</a>
+, <a class="el" href="structrgw__meta__sync__marker.html#a4ef54e8775f35240a47a40f5661ec9f4a8c66af4c8c288fbeb9218bc541d8f3a4">rgw_meta_sync_marker</a>
+</li>
+<li>IncrementalSync
+: <a class="el" href="structrgw__data__sync__marker.html#a59a56a0906b7ac5ed6c24d10c42efb87a6a54467d952da39231d4cc9bd3e450e9">rgw_data_sync_marker</a>
+, <a class="el" href="structrgw__meta__sync__marker.html#a4ef54e8775f35240a47a40f5661ec9f4a1686b75ebab3e59399660bd8ce415272">rgw_meta_sync_marker</a>
+</li>
 <li>MOD
 : <a class="el" href="structRGWBucketInfo.html#a7c569b24a38c2f003fc01106cefd92b4a45f752880c0f4d05c5f08464f281e8f1">RGWBucketInfo</a>
 </li>
@@ -124,11 +142,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>OPSTATE_UNKNOWN
 : <a class="el" href="classRGWOpState.html#a253c057aa999e28d27bc7415d43182bba3fe7a57635f1d03e7fdf132bade78236">RGWOpState</a>
 </li>
+<li>StateBuildingFullSyncMaps
+: <a class="el" href="structrgw__data__sync__info.html#a0fdb45e7336e71bedab27e1061d37a9ea1d71888534d89211833ef4b827b4df64">rgw_data_sync_info</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a550876307fd125825921e43e06b829a8a2d2ec081ab409d32ab805d82e3490852">rgw_meta_sync_info</a>
+</li>
+<li>StateFullSync
+: <a class="el" href="structrgw__bucket__shard__sync__info.html#ad2c3ed5bf74c0355f4b5120603080455a22b3e220fa354eacac58d7882d1c08eb">rgw_bucket_shard_sync_info</a>
+</li>
+<li>StateIncrementalSync
+: <a class="el" href="structrgw__bucket__shard__sync__info.html#ad2c3ed5bf74c0355f4b5120603080455a71685811c8a84f8cf0fa85849d54f28e">rgw_bucket_shard_sync_info</a>
+</li>
+<li>StateInit
+: <a class="el" href="structrgw__bucket__shard__sync__info.html#ad2c3ed5bf74c0355f4b5120603080455ae093b01e782bbbfe2f2dc2339dbb2bad">rgw_bucket_shard_sync_info</a>
+, <a class="el" href="structrgw__data__sync__info.html#a0fdb45e7336e71bedab27e1061d37a9eab3efba2e9dfa467c966bc03aa66cba9e">rgw_data_sync_info</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a550876307fd125825921e43e06b829a8a553431dd3492ee6bce48c25cc37f0971">rgw_meta_sync_info</a>
+</li>
+<li>StateSync
+: <a class="el" href="structrgw__data__sync__info.html#a0fdb45e7336e71bedab27e1061d37a9eadd673254bf558ed4d311ca5d38c249f9">rgw_data_sync_info</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a550876307fd125825921e43e06b829a8aac4bfe7f6c7ccc7708aeebf977a54b54">rgw_meta_sync_info</a>
+</li>
+<li>TOKEN_AD
+: <a class="el" href="classrgw_1_1RGWToken.html#a7f28b302f9572ed552a45e48c17dd901a176847132325138ec605ed4691688515">rgw::RGWToken</a>
+</li>
+<li>TOKEN_KEYSTONE
+: <a class="el" href="classrgw_1_1RGWToken.html#a7f28b302f9572ed552a45e48c17dd901a1d287345aaaffbf196556a4b03157a08">rgw::RGWToken</a>
+</li>
+<li>TOKEN_LDAP
+: <a class="el" href="classrgw_1_1RGWToken.html#a7f28b302f9572ed552a45e48c17dd901a6176f4bd8e5a3e5e12956c9f761a5a82">rgw::RGWToken</a>
+</li>
+<li>TOKEN_NONE
+: <a class="el" href="classrgw_1_1RGWToken.html#a7f28b302f9572ed552a45e48c17dd901aa10727e376a1e59896d70dd072a3c163">rgw::RGWToken</a>
+</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

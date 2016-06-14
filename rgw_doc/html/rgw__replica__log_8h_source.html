@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -132,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classRGWReplicaLogger.html#affd2e01a4bc67443f8a70553d378bd94">   45</a></span>&#160;  <a class="code" href="classRGWRados.html">RGWRados</a> *<a class="code" href="classRGWReplicaLogger.html#affd2e01a4bc67443f8a70553d378bd94">store</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">int</span> open_ioctx(librados::IoCtx&amp; ctx, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; pool);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classRGWReplicaLogger.html">RGWReplicaLogger</a>(<a class="code" href="classRGWRados.html">RGWRados</a> *_store);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classRGWReplicaLogger.html">RGWReplicaLogger</a>(<a class="code" href="classRGWRados.html">RGWRados</a> *_store);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">int</span> update_bound(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; oid, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; pool,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                   <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; daemon_id, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; marker,</div>
@@ -192,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">string</span> obj_name(<span class="keyword">const</span> <a class="code" href="structrgw__bucket.html">rgw_bucket</a>&amp; bucket, <span class="keywordtype">int</span> shard_id, <span class="keywordtype">bool</span> index_by_instance);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="classRGWReplicaBucketLogger.html">RGWReplicaBucketLogger</a>(<a class="code" href="classRGWRados.html">RGWRados</a> *_store);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classRGWReplicaBucketLogger.html">RGWReplicaBucketLogger</a>(<a class="code" href="classRGWRados.html">RGWRados</a> *_store);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">int</span> update_bound(<span class="keyword">const</span> <a class="code" href="structrgw__bucket.html">rgw_bucket</a>&amp; bucket, <span class="keywordtype">int</span> shard_id, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; daemon_id,</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                   <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; marker, <span class="keyword">const</span> utime_t&amp; time,</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                   <span class="keyword">const</span> list&lt;RGWReplicaItemMarker&gt; *entries);</div>
@@ -208,25 +208,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classRGWReplicaLogger_html_a0b76b368720b0d96d575eacf9dc0c8fe"><div class="ttname"><a href="classRGWReplicaLogger.html#a0b76b368720b0d96d575eacf9dc0c8fe">RGWReplicaLogger::update_bound</a></div><div class="ttdeci">int update_bound(const string &amp;oid, const string &amp;pool, const string &amp;daemon_id, const string &amp;marker, const utime_t &amp;time, const list&lt; RGWReplicaItemMarker &gt; *entries, bool need_to_exist)</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.cc:56</div></div>
 <div class="ttc" id="structRGWReplicaBounds_html_a4006742867adcbd59e3ee43f13f3a8f2"><div class="ttname"><a href="structRGWReplicaBounds.html#a4006742867adcbd59e3ee43f13f3a8f2">RGWReplicaBounds::marker</a></div><div class="ttdeci">string marker</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:34</div></div>
 <div class="ttc" id="structRGWReplicaBounds_html_a0b714ee5855368fe30c8c996c09f8bf8"><div class="ttname"><a href="structRGWReplicaBounds.html#a0b714ee5855368fe30c8c996c09f8bf8">RGWReplicaBounds::markers</a></div><div class="ttdeci">list&lt; RGWReplicaProgressMarker &gt; markers</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:36</div></div>
-<div class="ttc" id="classRGWRados_html"><div class="ttname"><a href="classRGWRados.html">RGWRados</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:1158</div></div>
+<div class="ttc" id="classRGWRados_html"><div class="ttname"><a href="classRGWRados.html">RGWRados</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:1702</div></div>
 <div class="ttc" id="classRGWReplicaObjectLogger_html"><div class="ttname"><a href="classRGWReplicaObjectLogger.html">RGWReplicaObjectLogger</a></div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:64</div></div>
 <div class="ttc" id="structRGWReplicaBounds_html"><div class="ttname"><a href="structRGWReplicaBounds.html">RGWReplicaBounds</a></div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:33</div></div>
 <div class="ttc" id="rgw__replica__log_8h_html_aeb614179113738818d573b1ee11ae79a"><div class="ttname"><a href="rgw__replica__log_8h.html#aeb614179113738818d573b1ee11ae79a">RGWReplicaProgressMarker</a></div><div class="ttdeci">cls_replica_log_progress_marker RGWReplicaProgressMarker</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:31</div></div>
 <div class="ttc" id="classRGWReplicaObjectLogger_html_aa0661324edaf3d6885ddad75bb81da26"><div class="ttname"><a href="classRGWReplicaObjectLogger.html#aa0661324edaf3d6885ddad75bb81da26">RGWReplicaObjectLogger::update_bound</a></div><div class="ttdeci">int update_bound(int shard, const string &amp;daemon_id, const string &amp;marker, const utime_t &amp;time, const list&lt; RGWReplicaItemMarker &gt; *entries)</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:80</div></div>
 <div class="ttc" id="classRGWReplicaLogger_html_a853e7503ba62e8ef2d8197c24520780c"><div class="ttname"><a href="classRGWReplicaLogger.html#a853e7503ba62e8ef2d8197c24520780c">RGWReplicaLogger::cct</a></div><div class="ttdeci">CephContext * cct</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:44</div></div>
-<div class="ttc" id="structrgw__bucket_html"><div class="ttname"><a href="structrgw__bucket.html">rgw_bucket</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:583</div></div>
+<div class="ttc" id="structrgw__bucket_html"><div class="ttname"><a href="structrgw__bucket.html">rgw_bucket</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:690</div></div>
 <div class="ttc" id="rgw__common_8h_html"><div class="ttname"><a href="rgw__common_8h.html">rgw_common.h</a></div></div>
 <div class="ttc" id="classRGWReplicaBucketLogger_html"><div class="ttname"><a href="classRGWReplicaBucketLogger.html">RGWReplicaBucketLogger</a></div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:101</div></div>
 <div class="ttc" id="rgw__replica__log_8h_html_a4bd5c1dee5c2919d30790d90b3726d85"><div class="ttname"><a href="rgw__replica__log_8h.html#a4bd5c1dee5c2919d30790d90b3726d85">RGWReplicaItemMarker</a></div><div class="ttdeci">cls_replica_log_item_marker RGWReplicaItemMarker</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:30</div></div>
 <div class="ttc" id="classRGWReplicaLogger_html"><div class="ttname"><a href="classRGWReplicaLogger.html">RGWReplicaLogger</a></div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:42</div></div>
 <div class="ttc" id="classRGWReplicaObjectLogger_html_a630a6a97dc7c1e271a153774d8986c77"><div class="ttname"><a href="classRGWReplicaObjectLogger.html#a630a6a97dc7c1e271a153774d8986c77">RGWReplicaObjectLogger::get_bounds</a></div><div class="ttdeci">int get_bounds(int shard, RGWReplicaBounds &amp;bounds)</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:94</div></div>
 <div class="ttc" id="classRGWReplicaLogger_html_affd2e01a4bc67443f8a70553d378bd94"><div class="ttname"><a href="classRGWReplicaLogger.html#affd2e01a4bc67443f8a70553d378bd94">RGWReplicaLogger::store</a></div><div class="ttdeci">RGWRados * store</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.h:45</div></div>
-<div class="ttc" id="rgw__json__enc_8cc_html_a65e360aa32e862a7263f627c78e21d0c"><div class="ttname"><a href="rgw__json__enc_8cc.html#a65e360aa32e862a7263f627c78e21d0c">decode_json</a></div><div class="ttdeci">static void decode_json(const char *field, rgw_bucket &amp;bucket, JSONObj *obj)</div><div class="ttdef"><b>Definition:</b> rgw_json_enc.cc:626</div></div>
+<div class="ttc" id="rgw__json__enc_8cc_html_a65e360aa32e862a7263f627c78e21d0c"><div class="ttname"><a href="rgw__json__enc_8cc.html#a65e360aa32e862a7263f627c78e21d0c">decode_json</a></div><div class="ttdeci">static void decode_json(const char *field, rgw_bucket &amp;bucket, JSONObj *obj)</div><div class="ttdef"><b>Definition:</b> rgw_json_enc.cc:826</div></div>
 <div class="ttc" id="classRGWReplicaLogger_html_adb63f071b61e1b272d939390585deffa"><div class="ttname"><a href="classRGWReplicaLogger.html#adb63f071b61e1b272d939390585deffa">RGWReplicaLogger::get_bounds</a></div><div class="ttdeci">int get_bounds(const string &amp;oid, const string &amp;pool, RGWReplicaBounds &amp;bounds)</div><div class="ttdef"><b>Definition:</b> rgw_replica_log.cc:128</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

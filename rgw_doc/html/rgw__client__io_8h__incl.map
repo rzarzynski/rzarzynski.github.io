@@ -1,7 +1,13 @@
 <map id="rgw_client_io.h" name="rgw_client_io.h">
-<area shape="rect" id="node4" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="934,80,1044,107"/>
-<area shape="rect" id="node14" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="253,163,331,189"/>
-<area shape="rect" id="node16" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="142,163,228,189"/>
-<area shape="rect" id="node17" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1921,163,2015,189"/>
-<area shape="rect" id="node20" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2112,163,2205,189"/>
+<area shape="rect" id="node6" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1281,80,1391,107"/>
+<area shape="rect" id="node16" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="614,163,692,189"/>
+<area shape="rect" id="node17" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="352,245,481,272"/>
+<area shape="rect" id="node18" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="659,245,745,272"/>
+<area shape="rect" id="node19" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1964,163,2057,189"/>
+<area shape="rect" id="node22" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2071,395,2164,421"/>
+<area shape="rect" id="node24" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="913,163,1020,189"/>
+<area shape="rect" id="node32" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1146,163,1232,189"/>
+<area shape="rect" id="node25" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="968,245,1049,272"/>
+<area shape="rect" id="node36" href="$rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="1125,245,1240,272"/>
+<area shape="rect" id="node37" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="1851,320,1972,347"/>
 </map>

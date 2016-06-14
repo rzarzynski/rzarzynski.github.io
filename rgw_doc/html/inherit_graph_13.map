@@ -1,3 +1,98 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classKeystoneToken_1_1Service.html" title="KeystoneToken::Service" alt="" coords="5,5,171,32"/>
+<area shape="rect" id="node2" href="$classRGWCoroutinesManagerRegistry.html" title="RGWCoroutinesManagerRegistry" alt="" coords="201,988,418,1015"/>
+<area shape="rect" id="node3" href="$classRGWQuotaCache_1_1AsyncRefreshHandler.html" title="RGWQuotaCache\&lt; T \&gt;\l::AsyncRefreshHandler" alt="" coords="229,2374,389,2415"/>
+<area shape="rect" id="node4" href="$classBucketAsyncRefreshHandler.html" title="BucketAsyncRefreshHandler" alt="" coords="497,2525,687,2552"/>
+<area shape="rect" id="node5" href="$classUserAsyncRefreshHandler.html" title="UserAsyncRefreshHandler" alt="" coords="503,2584,681,2611"/>
+<area shape="rect" id="node6" href="$classboost_1_1asio_1_1coroutine.html" title="boost::asio::coroutine" alt="" coords="5,1039,152,1065"/>
+<area shape="rect" id="node7" href="$classRGWCoroutine.html" title="RGWCoroutine" alt="" coords="254,1039,365,1065"/>
+<area shape="rect" id="node8" href="$classPushAllCR.html" title="PushAllCR" alt="" coords="549,857,635,884"/>
+<area shape="rect" id="node9" href="$classPushAndRetryCR.html" title="A coroutine that calls PushCR, and retries with backoff until success. " alt="" coords="529,908,655,935"/>
+<area shape="rect" id="node10" href="$classRGWBackoffControlCR.html" title="RGWBackoffControlCR" alt="" coords="511,959,673,985"/>
+<area shape="rect" id="node14" href="$classRGWBucketShardFullSyncCR.html" title="RGWBucketShardFullSyncCR" alt="" coords="491,1009,693,1036"/>
+<area shape="rect" id="node15" href="$classRGWBucketShardIncrementalSyncCR.html" title="RGWBucketShardIncremental\lSyncCR" alt="" coords="493,1061,691,1102"/>
+<area shape="rect" id="node16" href="$classRGWBucketSyncSingleEntryCR.html" title="RGWBucketSyncSingleEntry\lCR\&lt; T, K \&gt;" alt="" coords="495,1126,689,1167"/>
+<area shape="rect" id="node17" href="$classRGWCloneMetaLogCoroutine.html" title="RGWCloneMetaLogCoroutine" alt="" coords="495,1192,689,1219"/>
+<area shape="rect" id="node18" href="$classRGWConsumerCR.html" title="RGWConsumerCR\&lt; T \&gt;" alt="" coords="509,1243,675,1269"/>
+<area shape="rect" id="node19" href="$classRGWConsumerCR.html" title="RGWConsumerCR\&lt; string \&gt;" alt="" coords="497,1293,687,1320"/>
+<area shape="rect" id="node21" href="$classRGWContinuousLeaseCR.html" title="RGWContinuousLeaseCR" alt="" coords="504,1344,680,1371"/>
+<area shape="rect" id="node22" href="$classRGWDataSyncCR.html" title="RGWDataSyncCR" alt="" coords="525,1395,659,1421"/>
+<area shape="rect" id="node23" href="$classRGWDataSyncShardCR.html" title="RGWDataSyncShardCR" alt="" coords="509,1445,675,1472"/>
+<area shape="rect" id="node24" href="$classRGWDataSyncSingleEntryCR.html" title="RGWDataSyncSingleEntryCR" alt="" coords="492,1496,692,1523"/>
+<area shape="rect" id="node25" href="$classRGWFetchAllMetaCR.html" title="RGWFetchAllMetaCR" alt="" coords="516,1547,668,1573"/>
+<area shape="rect" id="node26" href="$classRGWInitBucketShardSyncStatusCoroutine.html" title="RGWInitBucketShardSyncStatus\lCoroutine" alt="" coords="484,1598,700,1639"/>
+<area shape="rect" id="node27" href="$classRGWInitDataSyncStatusCoroutine.html" title="RGWInitDataSyncStatusCoroutine" alt="" coords="479,1664,705,1691"/>
+<area shape="rect" id="node28" href="$classRGWInitSyncStatusCoroutine.html" title="RGWInitSyncStatusCoroutine" alt="" coords="493,1715,691,1741"/>
+<area shape="rect" id="node29" href="$classRGWListBucketIndexesCR.html" title="RGWListBucketIndexesCR" alt="" coords="501,1765,683,1792"/>
+<area shape="rect" id="node30" href="$classRGWListBucketIndexLogCR.html" title="RGWListBucketIndexLogCR" alt="" coords="497,1816,687,1843"/>
+<area shape="rect" id="node31" href="$classRGWListBucketShardCR.html" title="RGWListBucketShardCR" alt="" coords="507,167,677,193"/>
+<area shape="rect" id="node32" href="$classRGWMetaSyncCR.html" title="RGWMetaSyncCR" alt="" coords="525,217,659,244"/>
+<area shape="rect" id="node33" href="$classRGWMetaSyncShardCR.html" title="RGWMetaSyncShardCR" alt="" coords="508,268,676,295"/>
+<area shape="rect" id="node34" href="$classRGWMetaSyncSingleEntryCR.html" title="RGWMetaSyncSingleEntryCR" alt="" coords="491,319,693,345"/>
+<area shape="rect" id="node35" href="$classRGWReadBucketSyncStatusCoroutine.html" title="RGWReadBucketSyncStatusCoroutine" alt="" coords="467,369,717,396"/>
+<area shape="rect" id="node36" href="$classRGWReadRemoteBucketIndexLogInfoCR.html" title="RGWReadRemoteBucketIndex\lLogInfoCR" alt="" coords="489,421,695,462"/>
+<area shape="rect" id="node37" href="$classRGWReadRemoteDataLogShardCR.html" title="RGWReadRemoteDataLogShardCR" alt="" coords="475,487,709,513"/>
+<area shape="rect" id="node38" href="$classRGWReadRemoteDataLogShardInfoCR.html" title="RGWReadRemoteDataLogShard\lInfoCR" alt="" coords="485,538,699,579"/>
+<area shape="rect" id="node39" href="$classRGWReadRemoteMDLogShardInfoCR.html" title="RGWReadRemoteMDLogShardInfoCR" alt="" coords="467,604,717,631"/>
+<area shape="rect" id="node40" href="$classRGWReadRemoteMetadataCR.html" title="RGWReadRemoteMetadataCR" alt="" coords="489,655,695,681"/>
+<area shape="rect" id="node41" href="$classRGWRunBucketSyncCoroutine.html" title="RGWRunBucketSyncCoroutine" alt="" coords="489,705,695,732"/>
+<area shape="rect" id="node42" href="$classRGWShardCollectCR.html" title="RGWShardCollectCR" alt="" coords="517,756,667,783"/>
+<area shape="rect" id="node47" href="$classRGWSimpleCoroutine.html" title="RGWSimpleCoroutine" alt="" coords="517,807,667,833"/>
+<area shape="rect" id="node11" href="$classRGWDataSyncControlCR.html" title="RGWDataSyncControlCR" alt="" coords="794,1521,969,1548"/>
+<area shape="rect" id="node12" href="$classRGWDataSyncShardControlCR.html" title="RGWDataSyncShardControlCR" alt="" coords="777,1572,986,1599"/>
+<area shape="rect" id="node13" href="$classRGWMetaSyncShardControlCR.html" title="RGWMetaSyncShardControlCR" alt="" coords="776,1471,987,1497"/>
+<area shape="rect" id="node20" href="$classRGWOmapAppend.html" title="RGWOmapAppend" alt="" coords="814,1623,949,1649"/>
+<area shape="rect" id="node43" href="$classRGWListRemoteDataLogCR.html" title="RGWListRemoteDataLogCR" alt="" coords="786,5,977,32"/>
+<area shape="rect" id="node44" href="$classRGWListRemoteMDLogCR.html" title="RGWListRemoteMDLogCR" alt="" coords="789,56,973,83"/>
+<area shape="rect" id="node45" href="$classRGWReadRemoteDataLogInfoCR.html" title="RGWReadRemoteDataLogInfoCR" alt="" coords="770,107,993,133"/>
+<area shape="rect" id="node46" href="$classRGWReadRemoteMDLogInfoCR.html" title="RGWReadRemoteMDLogInfoCR" alt="" coords="773,157,989,184"/>
+<area shape="rect" id="node48" href="$classRGWFetchRemoteObjCR.html" title="RGWFetchRemoteObjCR" alt="" coords="794,1268,969,1295"/>
+<area shape="rect" id="node49" href="$classRGWGetBucketInstanceInfoCR.html" title="RGWGetBucketInstanceInfoCR" alt="" coords="777,1319,986,1345"/>
+<area shape="rect" id="node50" href="$classRGWListRemoteDataLogShardCR.html" title="RGWListRemoteDataLogShardCR" alt="" coords="769,1369,994,1396"/>
+<area shape="rect" id="node51" href="$classRGWListRemoteMDLogShardCR.html" title="RGWListRemoteMDLogShardCR" alt="" coords="772,1420,991,1447"/>
+<area shape="rect" id="node52" href="$classRGWMetaRemoveEntryCR.html" title="RGWMetaRemoveEntryCR" alt="" coords="789,208,973,235"/>
+<area shape="rect" id="node53" href="$classRGWMetaStoreEntryCR.html" title="RGWMetaStoreEntryCR" alt="" coords="798,259,965,285"/>
+<area shape="rect" id="node54" href="$classRGWPostRESTResourceCR.html" title="RGWPostRESTResourceCR\l\&lt; S, T \&gt;" alt="" coords="784,310,979,351"/>
+<area shape="rect" id="node55" href="$classRGWRadosGetOmapKeysCR.html" title="RGWRadosGetOmapKeysCR" alt="" coords="782,376,981,403"/>
+<area shape="rect" id="node56" href="$classRGWRadosRemoveOmapKeysCR.html" title="RGWRadosRemoveOmapKeysCR" alt="" coords="768,427,995,453"/>
+<area shape="rect" id="node57" href="$classRGWRadosSetOmapKeysCR.html" title="RGWRadosSetOmapKeysCR" alt="" coords="782,477,981,504"/>
+<area shape="rect" id="node58" href="$classRGWRadosTimelogAddCR.html" title="RGWRadosTimelogAddCR" alt="" coords="790,528,973,555"/>
+<area shape="rect" id="node59" href="$classRGWReadMDLogEntriesCR.html" title="RGWReadMDLogEntriesCR" alt="" coords="787,579,976,605"/>
+<area shape="rect" id="node60" href="$classRGWReadRESTResourceCR.html" title="RGWReadRESTResourceCR\&lt; T \&gt;" alt="" coords="766,629,997,656"/>
+<area shape="rect" id="node61" href="$classRGWRemoveObjCR.html" title="RGWRemoveObjCR" alt="" coords="809,680,953,707"/>
+<area shape="rect" id="node62" href="$classRGWSimpleRadosLockCR.html" title="RGWSimpleRadosLockCR" alt="" coords="791,731,972,757"/>
+<area shape="rect" id="node63" href="$classRGWSimpleRadosReadAttrsCR.html" title="RGWSimpleRadosReadAttrsCR" alt="" coords="775,781,987,808"/>
+<area shape="rect" id="node64" href="$classRGWSimpleRadosReadCR.html" title="RGWSimpleRadosReadCR\&lt; T \&gt;" alt="" coords="773,832,989,859"/>
+<area shape="rect" id="node65" href="$classRGWSimpleRadosReadCR.html" title="RGWSimpleRadosReadCR\l\&lt; rgw_data_sync_info \&gt;" alt="" coords="789,883,973,925"/>
+<area shape="rect" id="node67" href="$classRGWSimpleRadosReadCR.html" title="RGWSimpleRadosReadCR\l\&lt; rgw_meta_sync_info \&gt;" alt="" coords="789,949,973,990"/>
+<area shape="rect" id="node69" href="$classRGWSimpleRadosUnlockCR.html" title="RGWSimpleRadosUnlockCR" alt="" coords="784,1015,979,1041"/>
+<area shape="rect" id="node70" href="$classRGWSimpleRadosWriteAttrsCR.html" title="RGWSimpleRadosWriteAttrsCR" alt="" coords="775,1065,987,1092"/>
+<area shape="rect" id="node71" href="$classRGWSimpleRadosWriteCR.html" title="RGWSimpleRadosWriteCR\&lt; T \&gt;" alt="" coords="773,1116,989,1143"/>
+<area shape="rect" id="node72" href="$classRGWStatObjCR.html" title="RGWStatObjCR" alt="" coords="822,1167,941,1193"/>
+<area shape="rect" id="node73" href="$classRGWWaitCR.html" title="RGWWaitCR" alt="" coords="830,1217,933,1244"/>
+<area shape="rect" id="node66" href="$classRGWReadDataSyncStatusCoroutine.html" title="RGWReadDataSyncStatusCoroutine" alt="" coords="1046,891,1285,917"/>
+<area shape="rect" id="node68" href="$classRGWReadSyncStatusCoroutine.html" title="RGWReadSyncStatusCoroutine" alt="" coords="1060,956,1271,983"/>
+<area shape="rect" id="node75" href="$structget__obj__data.html" title="get_obj_data" alt="" coords="261,2643,357,2669"/>
+<area shape="rect" id="node76" href="$structrgw__http__req__data.html" title="rgw_http_req_data" alt="" coords="245,2693,374,2720"/>
+<area shape="rect" id="node77" href="$classRGWAioCompletionNotifier.html" title="RGWAioCompletionNotifier" alt="" coords="218,2120,401,2147"/>
+<area shape="rect" id="node78" href="$classRGWAsyncRadosRequest.html" title="RGWAsyncRadosRequest" alt="" coords="220,2171,399,2197"/>
+<area shape="rect" id="node92" href="$classRGWCompletionManager.html" title="RGWCompletionManager" alt="" coords="224,2272,395,2299"/>
+<area shape="rect" id="node93" href="$classRGWCoroutinesStack.html" title="RGWCoroutinesStack" alt="" coords="233,2323,385,2349"/>
+<area shape="rect" id="node94" href="$classRGWGetBucketStats__CB.html" title="RGWGetBucketStats_CB" alt="" coords="222,2221,397,2248"/>
+<area shape="rect" id="node95" href="$classRGWGetUserStats__CB.html" title="RGWGetUserStats_CB" alt="" coords="229,2592,390,2619"/>
+<area shape="rect" id="node96" href="$classRGWMetadataLogInfoCompletion.html" title="RGWMetadataLogInfoCompletion" alt="" coords="200,2440,419,2467"/>
+<area shape="rect" id="node97" href="$classRGWRESTPostResource.html" title="RGWRESTPostResource" alt="" coords="222,2491,397,2517"/>
+<area shape="rect" id="node98" href="$classRGWRESTReadResource.html" title="RGWRESTReadResource" alt="" coords="220,2541,399,2568"/>
+<area shape="rect" id="node79" href="$classRGWAsyncFetchRemoteObj.html" title="RGWAsyncFetchRemoteObj" alt="" coords="497,2373,687,2400"/>
+<area shape="rect" id="node80" href="$classRGWAsyncGetBucketInstanceInfo.html" title="RGWAsyncGetBucketInstanceInfo" alt="" coords="479,2424,705,2451"/>
+<area shape="rect" id="node81" href="$classRGWAsyncGetSystemObj.html" title="RGWAsyncGetSystemObj" alt="" coords="503,2475,681,2501"/>
+<area shape="rect" id="node82" href="$classRGWAsyncLockSystemObj.html" title="RGWAsyncLockSystemObj" alt="" coords="499,1867,685,1893"/>
+<area shape="rect" id="node83" href="$classRGWAsyncMetaRemoveEntry.html" title="RGWAsyncMetaRemoveEntry" alt="" coords="491,1917,693,1944"/>
+<area shape="rect" id="node84" href="$classRGWAsyncMetaStoreEntry.html" title="RGWAsyncMetaStoreEntry" alt="" coords="501,1968,683,1995"/>
+<area shape="rect" id="node85" href="$classRGWAsyncPutSystemObj.html" title="RGWAsyncPutSystemObj" alt="" coords="503,2019,681,2045"/>
+<area shape="rect" id="node86" href="$classRGWAsyncPutSystemObjAttrs.html" title="RGWAsyncPutSystemObjAttrs" alt="" coords="489,2069,695,2096"/>
+<area shape="rect" id="node87" href="$classRGWAsyncReadMDLogEntries.html" title="RGWAsyncReadMDLogEntries" alt="" coords="489,2120,695,2147"/>
+<area shape="rect" id="node88" href="$classRGWAsyncRemoveObj.html" title="RGWAsyncRemoveObj" alt="" coords="511,2171,673,2197"/>
+<area shape="rect" id="node89" href="$classRGWAsyncStatObj.html" title="RGWAsyncStatObj" alt="" coords="524,2221,660,2248"/>
+<area shape="rect" id="node90" href="$classRGWAsyncUnlockSystemObj.html" title="RGWAsyncUnlockSystemObj" alt="" coords="493,2272,691,2299"/>
+<area shape="rect" id="node91" href="$classRGWAsyncWait.html" title="RGWAsyncWait" alt="" coords="533,2323,651,2349"/>
 </map>

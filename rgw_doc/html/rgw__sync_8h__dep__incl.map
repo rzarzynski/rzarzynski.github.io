@@ -1,0 +1,7 @@
+<map id="rgw_sync.h" name="rgw_sync.h">
+<area shape="rect" id="node2" href="$rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="5,80,107,107"/>
+<area shape="rect" id="node3" href="$rgw__data__sync_8cc.html" title="rgw_data_sync.cc" alt="" coords="132,80,260,107"/>
+<area shape="rect" id="node4" href="$rgw__json__enc_8cc.html" title="rgw_json_enc.cc" alt="" coords="284,80,404,107"/>
+<area shape="rect" id="node5" href="$rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="429,80,528,107"/>
+<area shape="rect" id="node6" href="$rgw__sync_8cc.html" title="rgw_sync.cc" alt="" coords="553,80,649,107"/>
+</map>

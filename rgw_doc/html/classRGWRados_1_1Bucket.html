@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -114,15 +114,21 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0b8a2a812ab7cdac5c27f7cb76bd0771"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRados_1_1Bucket.html#a0b8a2a812ab7cdac5c27f7cb76bd0771">Bucket</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *_store, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;_bucket)</td></tr>
-<tr class="separator:a0b8a2a812ab7cdac5c27f7cb76bd0771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f23cc30f9b2e3c82ca223e5a003e8e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRados_1_1Bucket.html#a7f23cc30f9b2e3c82ca223e5a003e8e5">Bucket</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *_store, <a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a> &amp;_bucket_info)</td></tr>
+<tr class="separator:a7f23cc30f9b2e3c82ca223e5a003e8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af205db822507daa17f79f73621aac239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRados_1_1Bucket.html#af205db822507daa17f79f73621aac239">get_store</a> ()</td></tr>
 <tr class="separator:af205db822507daa17f79f73621aac239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0baca503fd3d7af44362dd3ec31083f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRados_1_1Bucket.html#a0baca503fd3d7af44362dd3ec31083f1">get_bucket</a> ()</td></tr>
 <tr class="separator:a0baca503fd3d7af44362dd3ec31083f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d1f2eebbede771b600f15d724640f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRados_1_1Bucket.html#a17d1f2eebbede771b600f15d724640f6">get_bucket_info</a> ()</td></tr>
+<tr class="separator:a17d1f2eebbede771b600f15d724640f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7604cc504f47045614c7726be1c3d26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRados_1_1Bucket.html#ab7604cc504f47045614c7726be1c3d26">get_shard_id</a> ()</td></tr>
+<tr class="separator:ab7604cc504f47045614c7726be1c3d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23dd48c9cec3a7b0f3975dce571753b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRados_1_1Bucket.html#ac23dd48c9cec3a7b0f3975dce571753b">set_shard_id</a> (int id)</td></tr>
+<tr class="separator:ac23dd48c9cec3a7b0f3975dce571753b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0b8a2a812ab7cdac5c27f7cb76bd0771"></a>
+<a class="anchor" id="a7f23cc30f9b2e3c82ca223e5a003e8e5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -138,8 +144,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;&#160;</td>
-          <td class="paramname"><em>_bucket</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>_bucket_info</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -180,6 +186,52 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a17d1f2eebbede771b600f15d724640f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRGWBucketInfo.html">RGWBucketInfo</a>&amp; RGWRados::Bucket::get_bucket_info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab7604cc504f47045614c7726be1c3d26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWRados::Bucket::get_shard_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af205db822507daa17f79f73621aac239"></a>
 <div class="memitem">
 <div class="memproto">
@@ -203,13 +255,37 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac23dd48c9cec3a7b0f3975dce571753b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWRados::Bucket::set_shard_id </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="rgw__rados_8h_source.html">rgw_rados.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

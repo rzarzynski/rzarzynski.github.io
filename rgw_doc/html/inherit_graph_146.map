@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structRGWRados_1_1Object_1_1Read_1_1Params.html" title="RGWRados::Object::Read\l::Params" alt="" coords="5,5,184,46"/>
+<area shape="rect" id="node1" href="$classRGWGetDataCB.html" title="RGWGetDataCB" alt="" coords="5,132,128,159"/>
+<area shape="rect" id="node2" href="$classRGWGetObj__CB.html" title="RGWGetObj_CB" alt="" coords="201,5,324,32"/>
+<area shape="rect" id="node3" href="$classRGWRadosPutObj.html" title="RGWRadosPutObj" alt="" coords="196,56,329,83"/>
+<area shape="rect" id="node4" href="$classRGWRESTStreamOutCB.html" title="RGWRESTStreamOutCB" alt="" coords="176,107,349,133"/>
+<area shape="rect" id="node5" href="$classRGWStreamIntoBufferlist.html" title="RGWStreamIntoBufferlist" alt="" coords="177,157,348,184"/>
+<area shape="rect" id="node6" href="$classStreamIntoBufferlist.html" title="StreamIntoBufferlist" alt="" coords="193,208,332,235"/>
+<area shape="rect" id="node7" href="$classStreamObjData.html" title="StreamObjData" alt="" coords="207,259,319,285"/>
 </map>

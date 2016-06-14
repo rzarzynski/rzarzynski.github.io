@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
@@ -79,7 +80,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
-      <li><a href="functions_vars.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_vars.html#index__"><span>_</span></a></li>
+      <li><a href="functions_vars_a.html#index_a"><span>a</span></a></li>
       <li><a href="functions_vars_b.html#index_b"><span>b</span></a></li>
       <li><a href="functions_vars_c.html#index_c"><span>c</span></a></li>
       <li><a href="functions_vars_d.html#index_d"><span>d</span></a></li>
@@ -88,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_vars_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_vars_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_vars_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_vars_j.html#index_j"><span>j</span></a></li>
       <li><a href="functions_vars_k.html#index_k"><span>k</span></a></li>
       <li><a href="functions_vars_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_vars_m.html#index_m"><span>m</span></a></li>
@@ -126,10 +129,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>rados
 : <a class="el" href="structget__obj__data.html#a48a088f4e8491c3154a47163b0a292dd">get_obj_data</a>
-, <a class="el" href="classRGWRados.html#a08d161062a2f92e1d6fc7214ec157a26">RGWRados</a>
+, <a class="el" href="classRGWRados.html#a54c587e6694e3d59ce0512cfd1d6082a">RGWRados</a>
+</li>
+<li>rados_map
+: <a class="el" href="classRGWRados.html#a1ec44a7d336ce56573a1febfab871bf4">RGWRados</a>
+</li>
+<li>range_parsed
+: <a class="el" href="classRGWGetObj.html#ad223af95b61e98ff878f26c07530ef64">RGWGetObj</a>
 </li>
 <li>range_str
 : <a class="el" href="classRGWGetObj.html#a8cacf6d973716127f7dc87e7327f7f7a">RGWGetObj</a>
+</li>
+<li>raw_data
+: <a class="el" href="structRGWSLOInfo.html#a432589ca4ccb07c5299241afdffc6a99">RGWSLOInfo</a>
+</li>
+<li>raw_data_len
+: <a class="el" href="structRGWSLOInfo.html#a95a62804c5b5b097cb5a610eb9b6a76c">RGWSLOInfo</a>
+</li>
+<li>rcb
+: <a class="el" href="classrgw_1_1RGWListBucketsRequest.html#add7324e84d5ebafd1e1a086bd4813800">rgw::RGWListBucketsRequest</a>
+, <a class="el" href="classrgw_1_1RGWReaddirRequest.html#a03a640cceaa49b1f4ad1bb83f5ca38c7">rgw::RGWReaddirRequest</a>
 </li>
 <li>read_iter
 : <a class="el" href="structRGWUsageIter.html#a242f813ccc935639e7956df3ffd2d7dd">RGWUsageIter</a>
@@ -137,8 +156,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>read_list
 : <a class="el" href="structget__obj__data.html#afaa74751e72c1278af73464be992332d">get_obj_data</a>
 </li>
+<li>read_only
+: <a class="el" href="structRGWZone.html#a916c40f3c4e1d3dc927a1a2d9df2219b">RGWZone</a>
+</li>
 <li>read_params
 : <a class="el" href="structRGWRados_1_1SystemObject_1_1Read.html#a56c11ae2eada5f29e6bf46a010a96eeb">RGWRados::SystemObject::Read</a>
+</li>
+<li>read_resid
+: <a class="el" href="classrgw_1_1RGWReadRequest.html#a01013af3b107e3ddef71ceb071379bbf">rgw::RGWReadRequest</a>
 </li>
 <li>read_size
 : <a class="el" href="structRGWRados_1_1Object_1_1Read_1_1Params.html#a946c3b9672cea76b85cfb5f3e303cdc4">RGWRados::Object::Read::Params</a>
@@ -147,31 +172,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWMetadataLogData.html#a3b57bbe2de362d47ba6844d98b362b49">RGWMetadataLogData</a>
 , <a class="el" href="structRGWObjVersionTracker.html#a431b0a1cb0d7ebd40d1529aa7d6415eb">RGWObjVersionTracker</a>
 </li>
+<li>realm
+: <a class="el" href="classRGWRados.html#a8ee24c8127a72184f04e991a18beb884">RGWRados</a>
+</li>
+<li>realm_epoch
+: <a class="el" href="structrgw__mdlog__info.html#a66b8a82bece2c17d28259af23e311518">rgw_mdlog_info</a>
+, <a class="el" href="structrgw__meta__sync__info.html#a740e3e13fe7e6a9c99c8863a492831c3">rgw_meta_sync_info</a>
+</li>
+<li>realm_id
+: <a class="el" href="structRGWZoneGroup.html#af23dbd4ef2466a4637a4fec28ab47081">RGWZoneGroup</a>
+, <a class="el" href="structRGWZoneParams.html#ab3b882db8ec50cfa8365851d4ada4091">RGWZoneParams</a>
+</li>
+<li>redirect
+: <a class="el" href="structreq__state.html#aa7baf0a7eccf2d866dd02b21aef3b96b">req_state</a>
+, <a class="el" href="structRGWBWRedirectInfo.html#afad8bbc79df1268c54bbc37dc3030a02">RGWBWRedirectInfo</a>
+</li>
+<li>redirect_all
+: <a class="el" href="structRGWBucketWebsiteConf.html#a5d38494e523b18043d9f84df6c06a2d3">RGWBucketWebsiteConf</a>
+</li>
+<li>redirect_info
+: <a class="el" href="structRGWBWRoutingRule.html#a67fd7f3283011142ad2551100eeda8a2">RGWBWRoutingRule</a>
+</li>
+<li>referer_list
+: <a class="el" href="classRGWAccessControlList.html#a82a8c842d7e5d01de6a51a00e8f45ea5">RGWAccessControlList</a>
+</li>
 <li>referrer
 : <a class="el" href="structrgw__log__entry.html#aa932df5727bfae228024fb9370c161b5">rgw_log_entry</a>
 </li>
-<li>region
-: <a class="el" href="classKeystoneToken_1_1Service_1_1Endpoint.html#a9af6586a052459d16f68cbf63e58e352">KeystoneToken::Service::Endpoint</a>
-, <a class="el" href="structRGWBucketInfo.html#a5c96824ff9354992b7bbac21ccd37ca4">RGWBucketInfo</a>
-, <a class="el" href="classRGWRados.html#aa19ea9467b9e4b28b2fcac9c522cfe7a">RGWRados</a>
-</li>
-<li>region_conn_map
-: <a class="el" href="classRGWRados.html#a597c9b5d978ce2e973c1aa9c91e5b3ce">RGWRados</a>
-</li>
-<li>region_endpoint
-: <a class="el" href="structreq__state.html#a33d944c352ea80043788c42f2f7bc15e">req_state</a>
-</li>
-<li>region_map
-: <a class="el" href="classRGWRados.html#a3eb908e346a99de3678ac572e0691e69">RGWRados</a>
-</li>
-<li>region_name
-: <a class="el" href="classRGWRados.html#a9ac42fdd9d3c0a71a0ecedc44a4fff91">RGWRados</a>
-</li>
 <li>regions
-: <a class="el" href="structRGWRegionMap.html#a77869b8fef2b29a1cf8e821eb4436850">RGWRegionMap</a>
+: <a class="el" href="structRGWRegionMap.html#a17745e0024851fb64b3cba40c3eeebf6">RGWRegionMap</a>
 </li>
-<li>regions_by_api
-: <a class="el" href="structRGWRegionMap.html#ab8459cb31651a41823daee7be25ba81f">RGWRegionMap</a>
+<li>registered
+: <a class="el" href="structrgw__http__req__data.html#a9ce63ffabf9689756ce6138666bf14b8">rgw_http_req_data</a>
 </li>
 <li>relative_uri
 : <a class="el" href="structreq__state.html#a004fabcfb7244e3ed536dedbb6a98be1">req_state</a>
@@ -186,8 +218,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>removed
 : <a class="el" href="structRGWOLHInfo.html#a26957082c07725e6aaac40ff527d74e8">RGWOLHInfo</a>
 </li>
-<li>replace_attrs
-: <a class="el" href="classRGWCopyObj.html#abb4bbf7c06d7f631ac1bbe8317fa1ab9">RGWCopyObj</a>
+<li>replace_key_prefix_with
+: <a class="el" href="structRGWBWRedirectInfo.html#a57abe04da6e44c61bb95606a31c52ee4">RGWBWRedirectInfo</a>
+</li>
+<li>replace_key_with
+: <a class="el" href="structRGWBWRedirectInfo.html#a4c2d874fd23fd9b0e955dbb98cdf10d2">RGWBWRedirectInfo</a>
+</li>
+<li>req
+: <a class="el" href="structreq__state.html#adf4535128e46b2acb27745f75d99ac83">req_state</a>
 </li>
 <li>req_hdrs
 : <a class="el" href="classRGWOptionsCORS.html#a4d16266c6f5d755249c0936c58f06d8e">RGWOptionsCORS</a>
@@ -202,10 +240,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structRGWRequest.html#abd1898340e5652302ec8b465db894025">RGWRequest</a>
 </li>
 <li>req_throttle
-: <a class="el" href="classRGWProcess.html#aad068dd3f2834a3240945734d0f1cd6c">RGWProcess</a>
+: <a class="el" href="classRGWAsyncRadosProcessor.html#a700b8270c3fb5484190a05133167594e">RGWAsyncRadosProcessor</a>
+, <a class="el" href="classRGWProcess.html#aad068dd3f2834a3240945734d0f1cd6c">RGWProcess</a>
 </li>
 <li>req_wq
-: <a class="el" href="classRGWProcess.html#a9dd4cded0a6cc1f0fe2ea8d2e2feab6e">RGWProcess</a>
+: <a class="el" href="classRGWAsyncRadosProcessor.html#a97ce7df8843cb244462bfe7ccee355e5">RGWAsyncRadosProcessor</a>
+, <a class="el" href="classRGWProcess.html#a9dd4cded0a6cc1f0fe2ea8d2e2feab6e">RGWProcess</a>
 </li>
 <li>request_method
 : <a class="el" href="structRGWLoadGenRequestEnv.html#a8a1e73234911885daaecb97026138413">RGWLoadGenRequestEnv</a>
@@ -215,6 +255,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>request_uri
 : <a class="el" href="structreq__info.html#ac7aed51ef2fcafd803617b94c175214e">req_info</a>
+</li>
+<li>request_uri_aws4
+: <a class="el" href="structreq__info.html#aa387888fcf3f3b7bf40bb62fa2532e4b">req_info</a>
+</li>
+<li>requester_pays
+: <a class="el" href="structRGWBucketInfo.html#a4d9a43e1bfb4df06f5e1fc52bf891b04">RGWBucketInfo</a>
+, <a class="el" href="classRGWGetRequestPayment.html#a5332c8b98e96cfd8f1664cc6cfb1a68f">RGWGetRequestPayment</a>
+, <a class="el" href="classRGWSetRequestPayment.html#a22b0b1ba4b542671057b5b128a62dcaa">RGWSetRequestPayment</a>
 </li>
 <li>resource
 : <a class="el" href="structRGWLoadGenRequest.html#a4afcb2fd471bb6a4eac19e3e1818bccc">RGWLoadGenRequest</a>
@@ -238,67 +286,72 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>result
 : <a class="el" href="structRGWRados_1_1Object_1_1Delete.html#ab84436cdf83ff7bc1da7b3787ca20c30">RGWRados::Object::Delete</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Stat.html#aa33123d1944446cd830120c5d7fd7e9c">RGWRados::Object::Stat</a>
 </li>
 <li>ret
 : <a class="el" href="structrgw__err.html#aed30303a5c88cd248b40b13d329f6cc6">rgw_err</a>
-, <a class="el" href="classRGWAbortMultipart.html#a5b59f30cd54c538a1c62fecef8cb1790">RGWAbortMultipart</a>
-, <a class="el" href="classRGWCompleteMultipart.html#a553ca1207df7c89ebd5fc5797fd465da">RGWCompleteMultipart</a>
-, <a class="el" href="classRGWCopyObj.html#a0f5a2e8d7c797d89318a3d938d87912f">RGWCopyObj</a>
-, <a class="el" href="classRGWCreateBucket.html#a396fa65a7638d0103039add6af74fb31">RGWCreateBucket</a>
-, <a class="el" href="classRGWDeleteBucket.html#acb5e547377b83a5e15a00aaa9d7eacac">RGWDeleteBucket</a>
-, <a class="el" href="classRGWDeleteCORS.html#ac0c46ce58d32499680ec48702387175d">RGWDeleteCORS</a>
-, <a class="el" href="classRGWDeleteMultiObj.html#ad711b19729664a54775300f5346198cc">RGWDeleteMultiObj</a>
-, <a class="el" href="classRGWDeleteObj.html#a0c1a02583a9db70220ebd51795e50cfc">RGWDeleteObj</a>
-, <a class="el" href="classRGWGetACLs.html#ae6b4f3a625de73549f14c920b2f04928">RGWGetACLs</a>
-, <a class="el" href="classRGWGetCORS.html#aa539f9b1b9155b33ffb11a4e8865b774">RGWGetCORS</a>
-, <a class="el" href="classRGWGetObj.html#af95bca6cf04feefefd4af5e1ad5e32a1">RGWGetObj</a>
-, <a class="el" href="classRGWInitMultipart.html#a3f5ee9836157add4ba61b531fef4bc4c">RGWInitMultipart</a>
-, <a class="el" href="classRGWListBucket.html#a70b64a07fe7d02670add97dede14af84">RGWListBucket</a>
-, <a class="el" href="classRGWListBucketMultiparts.html#a216aaa00ec608bb176bfdc2313c612b9">RGWListBucketMultiparts</a>
-, <a class="el" href="classRGWListBuckets.html#aa9c8b0da4ecbac1fb5c6e69824c6a7e8">RGWListBuckets</a>
-, <a class="el" href="classRGWListMultipart.html#a43d2a066c469988d7998f2144dfb006f">RGWListMultipart</a>
-, <a class="el" href="classRGWOptionsCORS.html#ac286f141cd93dfd3cc957d141224039b">RGWOptionsCORS</a>
-, <a class="el" href="classRGWPostObj.html#a88674d665ba56f2c169b7599d876ac6d">RGWPostObj</a>
-, <a class="el" href="classRGWPutACLs.html#af1edf2abe065f08a82a133edfd58a482">RGWPutACLs</a>
-, <a class="el" href="classRGWPutCORS.html#a40d6db27b85acda931f544a458ff3662">RGWPutCORS</a>
-, <a class="el" href="classRGWPutMetadata.html#af71046977bf8ab32d7deb07c67634bd7">RGWPutMetadata</a>
-, <a class="el" href="classRGWPutObj.html#a9180381226ca20583a4337870cb94f81">RGWPutObj</a>
-, <a class="el" href="classRGWSetBucketVersioning.html#aa83bf57b72ff1167eba8f74d295fd1a7">RGWSetBucketVersioning</a>
-, <a class="el" href="classRGWSetTempUrl.html#ae299c46cc08d23ee668855b611d66136">RGWSetTempUrl</a>
-, <a class="el" href="classRGWStatAccount.html#a26842e70840bf6d3257a10e9f19eac32">RGWStatAccount</a>
-, <a class="el" href="classRGWStatBucket.html#aa14423b20212876834885056403cade7">RGWStatBucket</a>
+, <a class="el" href="structrgw__http__req__data.html#a4e4ccde019de83160fe6d5967779531b">rgw_http_req_data</a>
+, <a class="el" href="structRGWRados_1_1Object_1_1Stat_1_1State.html#a339712e07fd602c8b10ba0e8c2fbea58">RGWRados::Object::Stat::State</a>
+</li>
+<li>retcode
+: <a class="el" href="classRGWCoroutine.html#afe652dd81659a23225be50fb0a4a7edb">RGWCoroutine</a>
 </li>
 <li>rgw_attr
 : <a class="el" href="structgeneric__attr.html#a4c4420c28f288ed38fd002657a364f81">generic_attr</a>
 , <a class="el" href="structrgw__http__attr.html#a49180a4825d4cd0d25079fbc091ba533">rgw_http_attr</a>
 </li>
+<li>rgw_fh
+: <a class="el" href="classrgw_1_1RGWListBucketsRequest.html#a1c63eb2c03904d626e62a8401be1b92c">rgw::RGWListBucketsRequest</a>
+, <a class="el" href="classrgw_1_1RGWReaddirRequest.html#a34f5489c4294a9f4cdc4c7ab8ebd2aba">rgw::RGWReaddirRequest</a>
+, <a class="el" href="classrgw_1_1RGWReadRequest.html#a945f24e31d3b6d132a519a94d9ffd9db">rgw::RGWReadRequest</a>
+, <a class="el" href="classrgw_1_1RGWStatLeafRequest.html#abfe276bd033d1f434448006d50b91678">rgw::RGWStatLeafRequest</a>
+, <a class="el" href="classrgw_1_1RGWWriteRequest.html#a5d8fc3081e34fd66e4c13df88e225ddf">rgw::RGWWriteRequest</a>
+</li>
 <li>rgw_perm
 : <a class="el" href="structs3__acl__header.html#a7afb4ec8e552cd407bb64f1e27667626">s3_acl_header</a>
+</li>
+<li>rgw_tag
+: <a class="el" href="structbucket__list__entry.html#a4aaf92d03c1269dc5b32a8db1940855e">bucket_list_entry</a>
 </li>
 <li>rm_xattrs
 : <a class="el" href="structObjectCacheInfo.html#a5e1bc8fa55139ae547eed0ccdffc594f">ObjectCacheInfo</a>
 </li>
 <li>rmattr_names
-: <a class="el" href="classRGWPutMetadata.html#a04a1869985a217046ebdfa3966a74f81">RGWPutMetadata</a>
+: <a class="el" href="classRGWCreateBucket.html#a8d58283c36dc25b89377734b6e83180d">RGWCreateBucket</a>
+, <a class="el" href="classRGWPutMetadataAccount.html#a5b43fb1443d633b2e98d3ee53ed05546">RGWPutMetadataAccount</a>
+, <a class="el" href="classRGWPutMetadataBucket.html#a42c93f80c5cdd2fa5c4d66ce5c2a3f84">RGWPutMetadataBucket</a>
 </li>
 <li>rmattrs
 : <a class="el" href="structRGWRados_1_1Object_1_1Write_1_1MetaParams.html#a8258684f6c8ddf156f6ca92e56b946e2">RGWRados::Object::Write::MetaParams</a>
 </li>
 <li>roles
-: <a class="el" href="classKeystoneToken_1_1User.html#a241192435236cd94de34e7a496a98bdb">KeystoneToken::User</a>
+: <a class="el" href="classKeystoneToken.html#abb945b938ee7075620b5c86c8f7186dc">KeystoneToken</a>
+</li>
+<li>roles_v2
+: <a class="el" href="classKeystoneToken_1_1User.html#ae2aabba2f9971fe924c466e1410534b4">KeystoneToken::User</a>
+</li>
+<li>root_name
+: <a class="el" href="classrgw_1_1RGWFileHandle.html#a932accea77101187fee3a915b0d20588">rgw::RGWFileHandle</a>
+</li>
+<li>routing_rules
+: <a class="el" href="structRGWBucketWebsiteConf.html#ac07b90a6c26f8c4649983f0fbc905aa6">RGWBucketWebsiteConf</a>
 </li>
 <li>rule
 : <a class="el" href="classRGWOptionsCORS.html#accb753a8278683edafd0a02ca100388c">RGWOptionsCORS</a>
 </li>
 <li>rules
-: <a class="el" href="classRGWCORSConfiguration.html#a10732164b6934759f546f524cb5da34f">RGWCORSConfiguration</a>
+: <a class="el" href="structRGWBWRoutingRules.html#a17664ff41410c8087e9544705118730d">RGWBWRoutingRules</a>
+, <a class="el" href="classRGWCORSConfiguration.html#a10732164b6934759f546f524cb5da34f">RGWCORSConfiguration</a>
 , <a class="el" href="classRGWObjManifest.html#a8e9b53b6c3ad1ce16d251bcd243f4493">RGWObjManifest</a>
+</li>
+<li>run_context
+: <a class="el" href="structRGWCoroutinesEnv.html#a60ca8ad04bb6860500068061d4ed35b1">RGWCoroutinesEnv</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

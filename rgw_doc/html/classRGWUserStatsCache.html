@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -97,14 +97,14 @@ Inheritance diagram for RGWUserStatsCache:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWUserStatsCache__inherit__graph.png" border="0" usemap="#RGWUserStatsCache_inherit__map" alt="Inheritance graph"/></div>
 <map name="RGWUserStatsCache_inherit__map" id="RGWUserStatsCache_inherit__map">
-<area shape="rect" id="node2" href="classRGWQuotaCache.html" title="{RGWQuotaCache\&lt; string \&gt;\n|# store\l# stats_map\l# async_refcount\l|+ RGWQuotaCache()\l+ ~RGWQuotaCache()\l+ get_stats()\l+ adjust_stats()\l+ can_use_cached_stats()\l+ set_stats()\l+ async_refresh()\l+ async_refresh_response()\l+ allocate_refresh_handler()\l# fetch_stats_from_storage()\l# map_find()\l# map_find_and_update()\l# map_add()\l# data_modified()\l}" alt="" coords="5,6,195,303"/></map>
+<area shape="rect" id="node2" href="classRGWQuotaCache.html" title="{RGWQuotaCache\&lt; rgw\l_user \&gt;\n|# store\l# stats_map\l# async_refcount\l|+ RGWQuotaCache()\l+ ~RGWQuotaCache()\l+ get_stats()\l+ adjust_stats()\l+ can_use_cached_stats()\l+ set_stats()\l+ async_refresh()\l+ async_refresh_response()\l+ allocate_refresh_handler()\l# fetch_stats_from_storage()\l# map_find()\l# map_find_and_update()\l# map_add()\l# data_modified()\l}" alt="" coords="5,5,195,317"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for RGWUserStatsCache:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWUserStatsCache__coll__graph.png" border="0" usemap="#RGWUserStatsCache_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWUserStatsCache_coll__map" id="RGWUserStatsCache_coll__map">
-<area shape="rect" id="node2" href="classRGWQuotaCache.html" title="{RGWQuotaCache\&lt; string \&gt;\n|# stats_map\l# async_refcount\l|+ RGWQuotaCache()\l+ ~RGWQuotaCache()\l+ get_stats()\l+ adjust_stats()\l+ can_use_cached_stats()\l+ set_stats()\l+ async_refresh()\l+ async_refresh_response()\l+ allocate_refresh_handler()\l# fetch_stats_from_storage()\l# map_find()\l# map_find_and_update()\l# map_add()\l# data_modified()\l}" alt="" coords="469,1305,659,1588"/><area shape="rect" id="node3" href="classRGWRados.html" title="{RGWRados\n|+ zone_conn_map\l+ region_conn_map\l# cct\l# rados\l# gc_pool_ctx\l# pools_initialized\l# region_name\l# zone_name\l|+ RGWRados()\l+ set_context()\l+ set_region()\l+ set_zone()\l+ ~RGWRados()\l+ get_required_alignment()\l+ get_max_chunk_size()\l+ list_raw_objects()\l+ list_raw_prefixed_objs()\l+ list_regions()\land 167 more...\l}" alt="" coords="593,862,769,1189"/><area shape="rect" id="node7" href="structRGWRegion.html" title="{RGWRegion\n|+ name\l+ api_name\l+ endpoints\l+ is_master\l+ master_zone\l+ zones\l+ placement_targets\l+ default_placement\l+ hostnames\l+ cct\l|+ RGWRegion()\l+ encode()\l+ decode()\l+ init()\l+ create_default()\l+ store_info()\l+ read_info()\l+ read_default()\l+ set_as_default()\l+ equals()\l+ dump()\l+ decode_json()\l+ get_pool_name()\l}" alt="" coords="683,1254,823,1639"/><area shape="rect" id="node4" href="structRGWRegionMap.html" title="{RGWRegionMap\n|+ lock\l+ regions\l+ regions_by_api\l+ master_region\l|+ RGWRegionMap()\l+ encode()\l+ decode()\l+ get_params()\l+ read()\l+ store()\l+ update()\l+ dump()\l+ decode_json()\l}" alt="" coords="24,551,164,790"/><area shape="rect" id="node5" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size_kb\l+ max_objects\l+ enabled\l+ max_size_soft_threshold\l+ max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,72,184,267"/><area shape="rect" id="node6" href="classRGWMetadataManager.html" title="{RGWMetadataManager\n||+ RGWMetadataManager()\l+ ~RGWMetadataManager()\l+ register_handler()\l+ get_handler()\l+ put_entry()\l+ remove_entry()\l+ set_attr()\l+ set_attrs()\l+ get()\l+ put()\land 9 more...\l}" alt="" coords="189,559,376,783"/><area shape="rect" id="node8" href="classRGWDataChangesLog.html" title="{RGWDataChangesLog\n||+ RGWDataChangesLog()\l+ ~RGWDataChangesLog()\l+ choose_oid()\l+ add_entry()\l+ renew_entries()\l+ list_entries()\l+ trim_entries()\l+ trim_entries()\l+ get_info()\l+ lock_exclusive()\l+ unlock()\l+ list_entries()\l+ going_down()\l}" alt="" coords="400,544,584,797"/><area shape="rect" id="node9" href="classRGWRESTConn.html" title="{RGWRESTConn\n||+ RGWRESTConn()\l+ get_url()\l+ forward()\l+ put_obj_init()\l+ complete_request()\l+ get_obj()\l+ complete_request()\l}" alt="" coords="609,588,753,753"/><area shape="rect" id="node10" href="classRGWQuotaHandler.html" title="{RGWQuotaHandler\n||+ RGWQuotaHandler()\l+ ~RGWQuotaHandler()\l+ check_quota()\l+ update_stats()\l+ generate_handler()\l+ free_handler()\l}" alt="" coords="779,595,941,746"/><area shape="rect" id="node11" href="structRGWZoneParams.html" title="{RGWZoneParams\n|+ name\l+ is_master\l+ placement_pools\l|+ RGWZoneParams()\l+ init_name()\l+ init()\l+ init_default()\l+ store_info()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ get_pool_name()\l}" alt="" coords="965,551,1113,790"/><area shape="rect" id="node12" href="structRGWAccessKey.html" title="{RGWAccessKey\n|+ id\l+ key\l+ subuser\l|+ RGWAccessKey()\l+ encode()\l+ decode()\l+ dump()\l+ dump_plain()\l+ dump()\l+ decode_json()\l+ decode_json()\l+ generate_test_instances()\l}" alt="" coords="844,57,1028,281"/><area shape="rect" id="node13" href="structrgw__bucket.html" title="{rgw_bucket\n|+ name\l+ data_pool\l+ data_extra_pool\l+ index_pool\l+ marker\l+ bucket_id\l+ oid\l|+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="1052,6,1236,333"/><area shape="rect" id="node14" href="structRGWZone.html" title="{RGWZone\n|+ name\l+ endpoints\l+ log_meta\l+ log_data\l+ bucket_index_max_shards\l|+ RGWZone()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="1139,573,1328,768"/></map>
+<area shape="rect" id="node2" href="classRGWQuotaCache.html" title="{RGWQuotaCache\&lt; rgw\l_user \&gt;\n|# stats_map\l# async_refcount\l|+ RGWQuotaCache()\l+ ~RGWQuotaCache()\l+ get_stats()\l+ adjust_stats()\l+ can_use_cached_stats()\l+ set_stats()\l+ async_refresh()\l+ async_refresh_response()\l+ allocate_refresh_handler()\l# fetch_stats_from_storage()\l# map_find()\l# map_find_and_update()\l# map_add()\l# data_modified()\l}" alt="" coords="1149,1487,1339,1785"/><area shape="rect" id="node3" href="classRGWRados.html" title="{RGWRados\n|+ zone_conn_map\l+ zonegroup_conn_map\l+ zone_id_by_name\l+ zone_name_by_id\l+ period_puller\l+ period_history\l# cct\l# rados\l# next_rados_handle\l# handle_lock\l# rados_map\l# gc_pool_ctx\l# objexp_pool_ctx\l# pools_initialized\l# finisher\l# zone_short_id\l|+ RGWRados()\l+ get_new_req_id()\l+ set_context()\l+ init_host_id()\l+ get_zone_conn_by_id()\l+ get_zone_conn_by_name()\l+ find_zone_id_by_name()\l+ get_zonegroup()\l+ get_zone_params()\l+ get_zonegroup()\land 225 more...\l+ make_bucket_entry_name()\l}" alt="" coords="1224,720,1419,1179"/><area shape="rect" id="node12" href="classRGWSystemMetaObj.html" title="{RGWSystemMetaObj\n|# cct\l|+ RGWSystemMetaObj()\l+ RGWSystemMetaObj()\l+ RGWSystemMetaObj()\l+ RGWSystemMetaObj()\l+ RGWSystemMetaObj()\l+ get_name()\l+ get_id()\l+ set_name()\l+ set_id()\l+ clear_id()\land 22 more...\l# store_name()\l# store_info()\l# read_info()\l# read_id()\l# read_default()\l# use_default()\l}" alt="" coords="1577,1480,1745,1792"/><area shape="rect" id="node4" href="classRGWCoroutinesManagerRegistry.html" title="{RGWCoroutinesManagerRegistry\n||+ RGWCoroutinesManagerRegistry()\l+ ~RGWCoroutinesManagerRegistry()\l+ add()\l+ remove()\l+ hook_to_admin_command()\l+ call()\l+ dump()\l}" alt="" coords="25,259,271,424"/><area shape="rect" id="node7" href="classRGWChainedCacheImpl.html" title="{RGWChainedCacheImpl\&lt; T \&gt;\n||+ RGWChainedCacheImpl()\l+ init()\l+ find()\l+ put()\l+ chain_cb()\l+ invalidate()\l+ invalidate_all()\l}" alt="" coords="482,259,680,424"/><area shape="rect" id="node8" href="classRGWChainedCache.html" title="{RGWChainedCache\n||+ ~RGWChainedCache()\l+ chain_cb()\l+ invalidate()\l+ invalidate_all()\l}" alt="" coords="497,6,665,127"/><area shape="rect" id="node9" href="classRGWMetadataManager.html" title="{RGWMetadataManager\n||+ RGWMetadataManager()\l+ ~RGWMetadataManager()\l+ init()\l+ get_oldest_log_period()\l+ get_log()\l+ register_handler()\l+ get_handler()\l+ put_entry()\l+ remove_entry()\l+ get()\land 10 more...\l}" alt="" coords="705,229,892,453"/><area shape="rect" id="node10" href="classRGWDataChangesLog.html" title="{RGWDataChangesLog\n||+ RGWDataChangesLog()\l+ ~RGWDataChangesLog()\l+ choose_oid()\l+ add_entry()\l+ get_log_shard_id()\l+ renew_entries()\l+ list_entries()\l+ trim_entries()\l+ trim_entries()\l+ get_info()\land 6 more...\l}" alt="" coords="916,229,1100,453"/><area shape="rect" id="node11" href="classRGWRealm.html" title="{RGWRealm\n||+ RGWRealm()\l+ RGWRealm()\l+ RGWRealm()\l+ RGWRealm()\l+ encode()\l+ decode()\l+ create()\l+ delete_obj()\l+ get_pool_name()\l+ get_default_oid()\land 11 more...\l}" alt="" coords="1389,1901,1519,2125"/><area shape="rect" id="node17" href="structRGWZoneGroup.html" title="{RGWZoneGroup\n|+ endpoints\l+ is_master\l+ zones\l+ placement_targets\l+ hostnames\l+ hostnames_s3website\l+ api_hostname_map\l+ api_endpoints_map\l|+ RGWZoneGroup()\l+ RGWZoneGroup()\l+ RGWZoneGroup()\l+ RGWZoneGroup()\l+ is_master_zonegroup()\l+ update_master()\l+ post_process_params()\l+ encode()\l+ decode()\l+ read_default_id()\land 13 more...\l+ generate_test_instances()\l}" alt="" coords="1569,1843,1753,2184"/><area shape="rect" id="node18" href="structRGWZoneParams.html" title="{RGWZoneParams\n|+ user_uid_pool\l+ placement_pools\l|+ RGWZoneParams()\l+ RGWZoneParams()\l+ RGWZoneParams()\l+ RGWZoneParams()\l+ get_pool_name()\l+ get_default_oid()\l+ get_names_oid_prefix()\l+ get_info_oid_prefix()\l+ get_predefined_name()\l+ init()\land 9 more...\l+ generate_test_instances()\l}" alt="" coords="1992,1887,2176,2140"/><area shape="rect" id="node19" href="structRGWAccessKey.html" title="{RGWAccessKey\n||+ RGWAccessKey()\l+ RGWAccessKey()\l+ encode()\l+ decode()\l+ dump()\l+ dump_plain()\l+ dump()\l+ decode_json()\l+ decode_json()\l+ generate_test_instances()\l}" alt="" coords="2104,486,2288,695"/><area shape="rect" id="node20" href="structrgw__bucket.html" title="{rgw_bucket\n||+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ rgw_bucket()\l+ convert()\l+ encode()\l+ decode()\l+ get_data_extra_pool()\l+ dump()\l+ decode_json()\l+ operator\&lt;()\l+ generate_test_instances()\l}" alt="" coords="2273,1203,2457,1456"/><area shape="rect" id="node21" href="structRGWZone.html" title="{RGWZone\n|+ endpoints\l+ log_meta\l+ log_data\l+ read_only\l+ bucket_index_max_shards\l|+ RGWZone()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ is_read_only()\l+ generate_test_instances()\l}" alt="" coords="1265,229,1455,453"/><area shape="rect" id="node14" href="classRGWRESTConn.html" title="{RGWRESTConn\n||+ RGWRESTConn()\l+ get_url()\l+ get_url()\l+ get_self_zonegroup()\l+ get_remote_id()\l+ get_key()\l+ get_ctx()\l+ get_endpoint_count()\l+ forward()\l+ put_obj_init()\land 6 more...\l}" alt="" coords="1479,229,1632,453"/><area shape="rect" id="node15" href="classRGWPeriod.html" title="{RGWPeriod\n||+ RGWPeriod()\l+ RGWPeriod()\l+ get_id()\l+ get_epoch()\l+ get_realm_epoch()\l+ get_predecessor()\l+ get_master_zone()\l+ get_master_zonegroup()\l+ get_realm()\l+ get_map()\land 32 more...\l+ get_staging_id()\l}" alt="" coords="1658,222,1832,461"/><area shape="rect" id="node16" href="classRGWQuotaHandler.html" title="{RGWQuotaHandler\n||+ RGWQuotaHandler()\l+ ~RGWQuotaHandler()\l+ check_quota()\l+ update_stats()\l+ generate_handler()\l+ free_handler()\l}" alt="" coords="295,266,457,417"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -113,60 +113,60 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2bd14c219d5fb563f38d2c82a6c9bc68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf3a36331db104a62650a6b9a0aa7be5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#acf3a36331db104a62650a6b9a0aa7be5">~RGWUserStatsCache</a> ()</td></tr>
 <tr class="separator:acf3a36331db104a62650a6b9a0aa7be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5f8d86c93fc2733fb7e42d30cdac1ba"><td class="memItemLeft" align="right" valign="top">AsyncRefreshHandler *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#af5f8d86c93fc2733fb7e42d30cdac1ba">allocate_refresh_handler</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket)</td></tr>
-<tr class="separator:af5f8d86c93fc2733fb7e42d30cdac1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c1ee0b9823e7bc96ced063fbcf7b33"><td class="memItemLeft" align="right" valign="top">AsyncRefreshHandler *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#ab0c1ee0b9823e7bc96ced063fbcf7b33">allocate_refresh_handler</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket)</td></tr>
+<tr class="separator:ab0c1ee0b9823e7bc96ced063fbcf7b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86c2d79c246b99fd831fc63dc845dbdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a86c2d79c246b99fd831fc63dc845dbdb">can_use_cached_stats</a> (<a class="el" href="structRGWQuotaInfo.html">RGWQuotaInfo</a> &amp;quota, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats)</td></tr>
 <tr class="separator:a86c2d79c246b99fd831fc63dc845dbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b6735a563aaceff90c183d61e869180"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a4b6735a563aaceff90c183d61e869180">going_down</a> ()</td></tr>
 <tr class="separator:a4b6735a563aaceff90c183d61e869180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54fb1ccca1699a8cf961cef71e1f2fdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a54fb1ccca1699a8cf961cef71e1f2fdf">stop</a> ()</td></tr>
 <tr class="separator:a54fb1ccca1699a8cf961cef71e1f2fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classRGWQuotaCache"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classRGWQuotaCache')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classRGWQuotaCache.html">RGWQuotaCache&lt; string &gt;</a></td></tr>
+<tr class="inherit_header pub_methods_classRGWQuotaCache"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classRGWQuotaCache')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classRGWQuotaCache.html">RGWQuotaCache&lt; rgw_user &gt;</a></td></tr>
 <tr class="memitem:a1971ecf9d7e1eb2c04865e8eac8b1209 inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a1971ecf9d7e1eb2c04865e8eac8b1209">RGWQuotaCache</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *_store, int size)</td></tr>
 <tr class="separator:a1971ecf9d7e1eb2c04865e8eac8b1209 inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4be34274e4c9a8de4ed775d250b9f7f inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#ab4be34274e4c9a8de4ed775d250b9f7f">~RGWQuotaCache</a> ()</td></tr>
 <tr class="separator:ab4be34274e4c9a8de4ed775d250b9f7f inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71c9884b29c4c19784f6866d8fb655e8 inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a71c9884b29c4c19784f6866d8fb655e8">get_stats</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats, <a class="el" href="structRGWQuotaInfo.html">RGWQuotaInfo</a> &amp;quota)</td></tr>
-<tr class="separator:a71c9884b29c4c19784f6866d8fb655e8 inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8acddcdd324b9a4d0f64b9ae76ce1901 inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a8acddcdd324b9a4d0f64b9ae76ce1901">adjust_stats</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, int objs_delta, uint64_t added_bytes, uint64_t removed_bytes)</td></tr>
-<tr class="separator:a8acddcdd324b9a4d0f64b9ae76ce1901 inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af37ce4036639e271d6c070f6ae18a1ef inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#af37ce4036639e271d6c070f6ae18a1ef">set_stats</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &amp;qs, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats)</td></tr>
-<tr class="separator:af37ce4036639e271d6c070f6ae18a1ef inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7d6b6592775c470e262e1870db751da inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#ac7d6b6592775c470e262e1870db751da">async_refresh</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &amp;qs)</td></tr>
-<tr class="separator:ac7d6b6592775c470e262e1870db751da inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fa1a451c50f9982cf8206f7bbe5c870 inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a3fa1a451c50f9982cf8206f7bbe5c870">async_refresh_response</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats)</td></tr>
-<tr class="separator:a3fa1a451c50f9982cf8206f7bbe5c870 inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0bbf0f0510cf6fdaf92398015f2eeb inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a1b0bbf0f0510cf6fdaf92398015f2eeb">get_stats</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats, <a class="el" href="structRGWQuotaInfo.html">RGWQuotaInfo</a> &amp;quota)</td></tr>
+<tr class="separator:a1b0bbf0f0510cf6fdaf92398015f2eeb inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea15230a380a71157bb292992e4f607 inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a7ea15230a380a71157bb292992e4f607">adjust_stats</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, int objs_delta, uint64_t added_bytes, uint64_t removed_bytes)</td></tr>
+<tr class="separator:a7ea15230a380a71157bb292992e4f607 inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81bd315d7c70e10c277d5790d9575f39 inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a81bd315d7c70e10c277d5790d9575f39">set_stats</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &amp;qs, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats)</td></tr>
+<tr class="separator:a81bd315d7c70e10c277d5790d9575f39 inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1670fcab93ad6bc8c1817f97ff83dc3 inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#ab1670fcab93ad6bc8c1817f97ff83dc3">async_refresh</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &amp;qs)</td></tr>
+<tr class="separator:ab1670fcab93ad6bc8c1817f97ff83dc3 inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d45772e02b95b07be5bc1527c8a0697 inherit pub_methods_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a2d45772e02b95b07be5bc1527c8a0697">async_refresh_response</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats)</td></tr>
+<tr class="separator:a2d45772e02b95b07be5bc1527c8a0697 inherit pub_methods_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ab2917821e83ef342f6014b48b6a24886"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#ab2917821e83ef342f6014b48b6a24886">map_find</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &amp;qs)</td></tr>
-<tr class="separator:ab2917821e83ef342f6014b48b6a24886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d9becea87f94d1d65345761ede756b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a25d9becea87f94d1d65345761ede756b">map_find_and_update</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, lru_map&lt; string, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &gt;::UpdateContext *ctx)</td></tr>
-<tr class="separator:a25d9becea87f94d1d65345761ede756b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a242e23579f71ed9aa289955d1b3575ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a242e23579f71ed9aa289955d1b3575ba">map_add</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &amp;qs)</td></tr>
-<tr class="separator:a242e23579f71ed9aa289955d1b3575ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05bbf30f93b72af726dbad469e97017b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a05bbf30f93b72af726dbad469e97017b">fetch_stats_from_storage</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats)</td></tr>
-<tr class="separator:a05bbf30f93b72af726dbad469e97017b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5a3d90c23ea1bd6bd5955bbbf540ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a7e5a3d90c23ea1bd6bd5955bbbf540ed">sync_bucket</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket)</td></tr>
-<tr class="separator:a7e5a3d90c23ea1bd6bd5955bbbf540ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a955b9a18352d46e4bf2a397350d8a7b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a955b9a18352d46e4bf2a397350d8a7b5">sync_user</a> (const string &amp;user)</td></tr>
-<tr class="separator:a955b9a18352d46e4bf2a397350d8a7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a2373f407f1f525c945522f0d38cbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#aa9a2373f407f1f525c945522f0d38cbf">map_find</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &amp;qs)</td></tr>
+<tr class="separator:aa9a2373f407f1f525c945522f0d38cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e1ec50abe273276445322f45c4037c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#ac5e1ec50abe273276445322f45c4037c">map_find_and_update</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, lru_map&lt; <a class="el" href="structrgw__user.html">rgw_user</a>, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &gt;::UpdateContext *ctx)</td></tr>
+<tr class="separator:ac5e1ec50abe273276445322f45c4037c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5e4ca9c43542dd0124df6aaf64ffb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a2a5e4ca9c43542dd0124df6aaf64ffb7">map_add</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &amp;qs)</td></tr>
+<tr class="separator:a2a5e4ca9c43542dd0124df6aaf64ffb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09d2c3937cbbbd3e6a6517befc61bce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#ac09d2c3937cbbbd3e6a6517befc61bce">fetch_stats_from_storage</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &amp;stats)</td></tr>
+<tr class="separator:ac09d2c3937cbbbd3e6a6517befc61bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af82665a417aaf31dde69038802efadcb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#af82665a417aaf31dde69038802efadcb">sync_bucket</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;<a class="el" href="structrgw__user.html">rgw_user</a>, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket)</td></tr>
+<tr class="separator:af82665a417aaf31dde69038802efadcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae22b6774e29919b1e74a4a63ec2cca8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#ae22b6774e29919b1e74a4a63ec2cca8c">sync_user</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user)</td></tr>
+<tr class="separator:ae22b6774e29919b1e74a4a63ec2cca8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae960bf36c705c18deed61711c4e36e0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#ae960bf36c705c18deed61711c4e36e0b">sync_all_users</a> ()</td></tr>
 <tr class="separator:ae960bf36c705c18deed61711c4e36e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76fc3c072a6fa55c9f39ebede08edec4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a76fc3c072a6fa55c9f39ebede08edec4">data_modified</a> (const string &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket)</td></tr>
-<tr class="separator:a76fc3c072a6fa55c9f39ebede08edec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41360c58968ec23658654ed6d482068d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a41360c58968ec23658654ed6d482068d">swap_modified_buckets</a> (map&lt; <a class="el" href="structrgw__bucket.html">rgw_bucket</a>, string &gt; &amp;out)</td></tr>
-<tr class="separator:a41360c58968ec23658654ed6d482068d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad914388d7c4060c014aab89093f9e52f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#ad914388d7c4060c014aab89093f9e52f">data_modified</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;user, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket)</td></tr>
+<tr class="separator:ad914388d7c4060c014aab89093f9e52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eec91672b7f6e0c7a9bbb328c988545"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a1eec91672b7f6e0c7a9bbb328c988545">swap_modified_buckets</a> (map&lt; <a class="el" href="structrgw__bucket.html">rgw_bucket</a>, <a class="el" href="structrgw__user.html">rgw_user</a> &gt; &amp;out)</td></tr>
+<tr class="separator:a1eec91672b7f6e0c7a9bbb328c988545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18bad64508c120544a74db3646cfa96c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a18bad64508c120544a74db3646cfa96c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRGWUserStatsCache.html#a18bad64508c120544a74db3646cfa96c">stop_thread</a> (T **pthr)</td></tr>
 <tr class="separator:a18bad64508c120544a74db3646cfa96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_classRGWQuotaCache"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classRGWQuotaCache')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classRGWQuotaCache.html">RGWQuotaCache&lt; string &gt;</a></td></tr>
+<tr class="inherit_header pro_attribs_classRGWQuotaCache"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classRGWQuotaCache')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classRGWQuotaCache.html">RGWQuotaCache&lt; rgw_user &gt;</a></td></tr>
 <tr class="memitem:ab4b0bf2be0f3dcfc6057da739d7e6936 inherit pro_attribs_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#ab4b0bf2be0f3dcfc6057da739d7e6936">store</a></td></tr>
 <tr class="separator:ab4b0bf2be0f3dcfc6057da739d7e6936 inherit pro_attribs_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a492ebc5568cbda47f79f400c53de73ed inherit pro_attribs_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">lru_map&lt; string, <br class="typebreak"/>
+<tr class="memitem:a492ebc5568cbda47f79f400c53de73ed inherit pro_attribs_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">lru_map&lt; <a class="el" href="structrgw__user.html">rgw_user</a>, <br class="typebreak"/>
 <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a492ebc5568cbda47f79f400c53de73ed">stats_map</a></td></tr>
 <tr class="separator:a492ebc5568cbda47f79f400c53de73ed inherit pro_attribs_classRGWQuotaCache"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a577a015625c8c1e6f06b5817da1f2fcf inherit pro_attribs_classRGWQuotaCache"><td class="memItemLeft" align="right" valign="top">RefCountedWaitObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWQuotaCache.html#a577a015625c8c1e6f06b5817da1f2fcf">async_refcount</a></td></tr>
@@ -231,7 +231,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="af5f8d86c93fc2733fb7e42d30cdac1ba"></a>
+<a class="anchor" id="ab0c1ee0b9823e7bc96ced063fbcf7b33"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -241,7 +241,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">AsyncRefreshHandler* RGWUserStatsCache::allocate_refresh_handler </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
@@ -263,7 +263,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classRGWQuotaCache.html#a31071edbfc9e65d3c8264f2efe8dfa5b">RGWQuotaCache&lt; string &gt;</a>.</p>
+<p>Implements <a class="el" href="classRGWQuotaCache.html#a3dbe8cb1138f092badbe4480f8a7cbd4">RGWQuotaCache&lt; rgw_user &gt;</a>.</p>
 
 </div>
 </div>
@@ -299,11 +299,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classRGWQuotaCache.html#a96077160567c2a3f1ebe6658a454943b">RGWQuotaCache&lt; string &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classRGWQuotaCache.html#a96077160567c2a3f1ebe6658a454943b">RGWQuotaCache&lt; rgw_user &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a76fc3c072a6fa55c9f39ebede08edec4"></a>
+<a class="anchor" id="ad914388d7c4060c014aab89093f9e52f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -313,7 +313,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void RGWUserStatsCache::data_modified </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
@@ -335,11 +335,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classRGWQuotaCache.html#a8b1fba5621e8a9b8af634c9dda96a356">RGWQuotaCache&lt; string &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classRGWQuotaCache.html#af4da6b050a8d07250d159382df14f137">RGWQuotaCache&lt; rgw_user &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a05bbf30f93b72af726dbad469e97017b"></a>
+<a class="anchor" id="ac09d2c3937cbbbd3e6a6517befc61bce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -349,7 +349,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">int RGWUserStatsCache::fetch_stats_from_storage </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
@@ -377,7 +377,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classRGWQuotaCache.html#aa7ac25213de9e75d251f2789a4e2d9fc">RGWQuotaCache&lt; string &gt;</a>.</p>
+<p>Implements <a class="el" href="classRGWQuotaCache.html#a3e9d83c470f7796572d27e183e75b6b4">RGWQuotaCache&lt; rgw_user &gt;</a>.</p>
 
 </div>
 </div>
@@ -404,7 +404,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a242e23579f71ed9aa289955d1b3575ba"></a>
+<a class="anchor" id="a2a5e4ca9c43542dd0124df6aaf64ffb7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -414,7 +414,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void RGWUserStatsCache::map_add </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
@@ -442,11 +442,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classRGWQuotaCache.html#a2bc33c03f1bfd745d70bb959a6c34b87">RGWQuotaCache&lt; string &gt;</a>.</p>
+<p>Implements <a class="el" href="classRGWQuotaCache.html#adcf383e06cc525724715906c92aa1556">RGWQuotaCache&lt; rgw_user &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab2917821e83ef342f6014b48b6a24886"></a>
+<a class="anchor" id="aa9a2373f407f1f525c945522f0d38cbf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -456,7 +456,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool RGWUserStatsCache::map_find </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
@@ -484,11 +484,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classRGWQuotaCache.html#a45c11ed3321eb28efbaf75953a668537">RGWQuotaCache&lt; string &gt;</a>.</p>
+<p>Implements <a class="el" href="classRGWQuotaCache.html#aea211f719f28be5ca594f9cb4b78023c">RGWQuotaCache&lt; rgw_user &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a25d9becea87f94d1d65345761ede756b"></a>
+<a class="anchor" id="ac5e1ec50abe273276445322f45c4037c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -498,7 +498,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool RGWUserStatsCache::map_find_and_update </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
@@ -510,7 +510,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">lru_map&lt; string, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &gt;::UpdateContext *&#160;</td>
+          <td class="paramtype">lru_map&lt; <a class="el" href="structrgw__user.html">rgw_user</a>, <a class="el" href="structRGWQuotaCacheStats.html">RGWQuotaCacheStats</a> &gt;::UpdateContext *&#160;</td>
           <td class="paramname"><em>ctx</em>&#160;</td>
         </tr>
         <tr>
@@ -526,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classRGWQuotaCache.html#a7908dcb04071cb10496ef2f723e56e27">RGWQuotaCache&lt; string &gt;</a>.</p>
+<p>Implements <a class="el" href="classRGWQuotaCache.html#a0c4f5eb8d631bb1726c0e9fb6c5fb1f8">RGWQuotaCache&lt; rgw_user &gt;</a>.</p>
 
 </div>
 </div>
@@ -579,7 +579,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a41360c58968ec23658654ed6d482068d"></a>
+<a class="anchor" id="a1eec91672b7f6e0c7a9bbb328c988545"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -589,7 +589,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="memname">void RGWUserStatsCache::swap_modified_buckets </td>
           <td>(</td>
-          <td class="paramtype">map&lt; <a class="el" href="structrgw__bucket.html">rgw_bucket</a>, string &gt; &amp;&#160;</td>
+          <td class="paramtype">map&lt; <a class="el" href="structrgw__bucket.html">rgw_bucket</a>, <a class="el" href="structrgw__user.html">rgw_user</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>out</em></td><td>)</td>
           <td></td>
         </tr>
@@ -626,7 +626,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7e5a3d90c23ea1bd6bd5955bbbf540ed"></a>
+<a class="anchor" id="af82665a417aaf31dde69038802efadcb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -636,8 +636,8 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="memname">int RGWUserStatsCache::sync_bucket </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>user</em>, </td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
+          <td class="paramname"><em>rgw_user</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -660,7 +660,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a955b9a18352d46e4bf2a397350d8a7b5"></a>
+<a class="anchor" id="ae22b6774e29919b1e74a4a63ec2cca8c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -670,7 +670,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="memname">int RGWUserStatsCache::sync_user </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>user</em></td><td>)</td>
           <td></td>
         </tr>
@@ -690,7 +690,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

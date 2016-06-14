@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -84,6 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classRGWWatcher-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -107,13 +108,21 @@ Collaboration diagram for RGWWatcher:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac8b05f6b9a640b01d92edaaa830f1cd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html#ac8b05f6b9a640b01d92edaaa830f1cd4">RGWWatcher</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *r)</td></tr>
-<tr class="separator:ac8b05f6b9a640b01d92edaaa830f1cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af62cbb7b959844330ed3f05fab999a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html#a8af62cbb7b959844330ed3f05fab999a">notify</a> (uint8_t opcode, uint64_t ver, bufferlist &amp;bl)</td></tr>
-<tr class="separator:a8af62cbb7b959844330ed3f05fab999a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d7957c0f342a53695c4314443b9492"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html#a24d7957c0f342a53695c4314443b9492">RGWWatcher</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *r, int i, const string &amp;o)</td></tr>
+<tr class="separator:a24d7957c0f342a53695c4314443b9492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ade376008b41763be78c2fa1fbac4df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html#a7ade376008b41763be78c2fa1fbac4df">handle_notify</a> (uint64_t notify_id, uint64_t cookie, uint64_t notifier_id, bufferlist &amp;bl)</td></tr>
+<tr class="separator:a7ade376008b41763be78c2fa1fbac4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04b58d0e50c788158a93e70bc48b97f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html#aa04b58d0e50c788158a93e70bc48b97f">handle_error</a> (uint64_t cookie, int err)</td></tr>
+<tr class="separator:aa04b58d0e50c788158a93e70bc48b97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac971331e99dac70335dce5e16943b738"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html#ac971331e99dac70335dce5e16943b738">reinit</a> ()</td></tr>
+<tr class="separator:ac971331e99dac70335dce5e16943b738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6467906a386ff3e890b189f6a188fb3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html#aa6467906a386ff3e890b189f6a188fb3">unregister_watch</a> ()</td></tr>
+<tr class="separator:aa6467906a386ff3e890b189f6a188fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d9c7a2f0bdf91cf4c6f452b64021c47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html#a6d9c7a2f0bdf91cf4c6f452b64021c47">register_watch</a> ()</td></tr>
+<tr class="separator:a6d9c7a2f0bdf91cf4c6f452b64021c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac8b05f6b9a640b01d92edaaa830f1cd4"></a>
+<a class="anchor" id="a24d7957c0f342a53695c4314443b9492"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -124,8 +133,24 @@ Public Member Functions</h2></td></tr>
           <td class="memname">RGWWatcher::RGWWatcher </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
-          <td class="paramname"><em>r</em></td><td>)</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -138,7 +163,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8af62cbb7b959844330ed3f05fab999a"></a>
+<a class="anchor" id="aa04b58d0e50c788158a93e70bc48b97f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -146,16 +171,56 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void RGWWatcher::notify </td>
+          <td class="memname">void RGWWatcher::handle_error </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>opcode</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>cookie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ade376008b41763be78c2fa1fbac4df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWWatcher::handle_notify </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>notify_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>ver</em>, </td>
+          <td class="paramname"><em>cookie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>notifier_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -178,13 +243,82 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6d9c7a2f0bdf91cf4c6f452b64021c47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWWatcher::register_watch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac971331e99dac70335dce5e16943b738"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWWatcher::reinit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa6467906a386ff3e890b189f6a188fb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWWatcher::unregister_watch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="rgw__rados_8cc.html">rgw_rados.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

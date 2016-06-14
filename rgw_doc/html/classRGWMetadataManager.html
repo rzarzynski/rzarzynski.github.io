@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -106,18 +106,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a72eaa634969ee85580ece9f4e7fe3a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa76000f1c0de920bcb7da2e421331811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#aa76000f1c0de920bcb7da2e421331811">~RGWMetadataManager</a> ()</td></tr>
 <tr class="separator:aa76000f1c0de920bcb7da2e421331811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cf4fe71d69d936d5b1a649a279d4673"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a4cf4fe71d69d936d5b1a649a279d4673">init</a> (const std::string &amp;current_period)</td></tr>
+<tr class="separator:a4cf4fe71d69d936d5b1a649a279d4673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad025c646151915b76f34331dea144a0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWPeriodHistory_1_1Cursor.html">RGWPeriodHistory::Cursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#ad025c646151915b76f34331dea144a0a">get_oldest_log_period</a> () const </td></tr>
+<tr class="separator:ad025c646151915b76f34331dea144a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cac73dbb24b3f9bc1906b716e648390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a3cac73dbb24b3f9bc1906b716e648390">get_log</a> (const std::string &amp;period)</td></tr>
+<tr class="memdesc:a3cac73dbb24b3f9bc1906b716e648390"><td class="mdescLeft">&#160;</td><td class="mdescRight">find or create the metadata log for the given period  <a href="#a3cac73dbb24b3f9bc1906b716e648390">More...</a><br/></td></tr>
+<tr class="separator:a3cac73dbb24b3f9bc1906b716e648390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e553dfebabdbcc237994b9a08040035"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a3e553dfebabdbcc237994b9a08040035">register_handler</a> (<a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *handler)</td></tr>
 <tr class="separator:a3e553dfebabdbcc237994b9a08040035"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1d59acbc63d8fc9077542c37a2baabc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#ac1d59acbc63d8fc9077542c37a2baabc">get_handler</a> (const char *type)</td></tr>
-<tr class="separator:ac1d59acbc63d8fc9077542c37a2baabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add45f2b54278b71e1ec4fbfe9823da52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#add45f2b54278b71e1ec4fbfe9823da52">put_entry</a> (<a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *handler, const string &amp;key, bufferlist &amp;bl, bool exclusive, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t mtime, map&lt; string, bufferlist &gt; *pattrs=NULL)</td></tr>
-<tr class="separator:add45f2b54278b71e1ec4fbfe9823da52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4020a7c9533e3a33b10c4c29de5687aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a4020a7c9533e3a33b10c4c29de5687aa">get_handler</a> (const string &amp;type)</td></tr>
+<tr class="separator:a4020a7c9533e3a33b10c4c29de5687aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572e4d01593f3ce44bf6b0f7dded8beb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a572e4d01593f3ce44bf6b0f7dded8beb">put_entry</a> (<a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *handler, const string &amp;key, bufferlist &amp;bl, bool exclusive, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time mtime, map&lt; string, bufferlist &gt; *pattrs=NULL)</td></tr>
+<tr class="separator:a572e4d01593f3ce44bf6b0f7dded8beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cedb06caecf8a95225a371141da64f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a4cedb06caecf8a95225a371141da64f6">remove_entry</a> (<a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *handler, string &amp;key, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
 <tr class="separator:a4cedb06caecf8a95225a371141da64f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a475c7a8414675cb8dd88916f84aaddb7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a475c7a8414675cb8dd88916f84aaddb7">set_attr</a> (<a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *handler, string &amp;key, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, string &amp;attr, bufferlist &amp;bl, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
-<tr class="separator:a475c7a8414675cb8dd88916f84aaddb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad33895062b36b8f773a29a5af39d141a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#ad33895062b36b8f773a29a5af39d141a">set_attrs</a> (<a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *handler, string &amp;key, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, map&lt; string, bufferlist &gt; &amp;attrs, map&lt; string, bufferlist &gt; *rmattrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
-<tr class="separator:ad33895062b36b8f773a29a5af39d141a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a062b933d0bc3345412fecf7e82212a36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a062b933d0bc3345412fecf7e82212a36">get</a> (string &amp;metadata_key, Formatter *f)</td></tr>
 <tr class="separator:a062b933d0bc3345412fecf7e82212a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7629f0dd4c22b0da90a4826a23744989"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a7629f0dd4c22b0da90a4826a23744989">put</a> (string &amp;metadata_key, bufferlist &amp;bl, <a class="el" href="classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491b">RGWMetadataHandler::sync_type_t</a> sync_mode, obj_version *existing_version=NULL)</td></tr>
@@ -134,12 +137,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2db86f321b4603842d30511800d3b248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a497a10b771d57f1bfc7db7558e9c663c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a497a10b771d57f1bfc7db7558e9c663c">get_sections</a> (list&lt; string &gt; &amp;sections)</td></tr>
 <tr class="separator:a497a10b771d57f1bfc7db7558e9c663c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a192a859857642804f2afcaa5c07d6a65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a192a859857642804f2afcaa5c07d6a65">lock_exclusive</a> (string &amp;metadata_key, utime_t duration, string &amp;owner_id)</td></tr>
-<tr class="separator:a192a859857642804f2afcaa5c07d6a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fccbf9299b67443ef081354dd417ea7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a8fccbf9299b67443ef081354dd417ea7">lock_exclusive</a> (string &amp;metadata_key, timespan duration, string &amp;owner_id)</td></tr>
+<tr class="separator:a8fccbf9299b67443ef081354dd417ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ed993ac59c10b725e38629456ffe902"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a2ed993ac59c10b725e38629456ffe902">unlock</a> (string &amp;metadata_key, string &amp;owner_id)</td></tr>
 <tr class="separator:a2ed993ac59c10b725e38629456ffe902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acca06bb2b79edd8e67d3dd39cd6179de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#acca06bb2b79edd8e67d3dd39cd6179de">get_log</a> ()</td></tr>
-<tr class="separator:acca06bb2b79edd8e67d3dd39cd6179de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdf69841c4291ccefdf0f011440b59c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataManager.html#a6bdf69841c4291ccefdf0f011440b59c">get_log_shard_id</a> (const string &amp;section, const string &amp;key, int *shard_id)</td></tr>
+<tr class="separator:a6bdf69841c4291ccefdf0f011440b59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a72eaa634969ee85580ece9f4e7fe3a2a"></a>
@@ -236,14 +239,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac1d59acbc63d8fc9077542c37a2baabc"></a>
+<a class="anchor" id="a4020a7c9533e3a33b10c4c29de5687aa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> * RGWMetadataManager::get_handler </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -252,7 +255,57 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acca06bb2b79edd8e67d3dd39cd6179de"></a>
+<a class="anchor" id="a3cac73dbb24b3f9bc1906b716e648390"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a> * RGWMetadataManager::get_log </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>period</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>find or create the metadata log for the given period </p>
+
+</div>
+</div>
+<a class="anchor" id="a6bdf69841c4291ccefdf0f011440b59c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWMetadataManager::get_log_shard_id </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>shard_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad025c646151915b76f34331dea144a0a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -260,10 +313,10 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRGWMetadataLog.html">RGWMetadataLog</a>* RGWMetadataManager::get_log </td>
+          <td class="memname"><a class="el" href="classRGWPeriodHistory_1_1Cursor.html">RGWPeriodHistory::Cursor</a> RGWMetadataManager::get_oldest_log_period </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -284,6 +337,22 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">list&lt; string &gt; &amp;&#160;</td>
           <td class="paramname"><em>sections</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4cf4fe71d69d936d5b1a649a279d4673"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWMetadataManager::init </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>current_period</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -371,7 +440,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a192a859857642804f2afcaa5c07d6a65"></a>
+<a class="anchor" id="a8fccbf9299b67443ef081354dd417ea7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -384,7 +453,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t&#160;</td>
+          <td class="paramtype">timespan&#160;</td>
           <td class="paramname"><em>duration</em>, </td>
         </tr>
         <tr>
@@ -441,7 +510,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="add45f2b54278b71e1ec4fbfe9823da52"></a>
+<a class="anchor" id="a572e4d01593f3ce44bf6b0f7dded8beb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -478,7 +547,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>mtime</em>, </td>
         </tr>
         <tr>
@@ -561,106 +630,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a475c7a8414675cb8dd88916f84aaddb7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RGWMetadataManager::set_attr </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *&#160;</td>
-          <td class="paramname"><em>handler</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
-          <td class="paramname"><em>attr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bufferlist &amp;&#160;</td>
-          <td class="paramname"><em>bl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *&#160;</td>
-          <td class="paramname"><em>objv_tracker</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad33895062b36b8f773a29a5af39d141a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RGWMetadataManager::set_attrs </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *&#160;</td>
-          <td class="paramname"><em>handler</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">map&lt; string, bufferlist &gt; &amp;&#160;</td>
-          <td class="paramname"><em>attrs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">map&lt; string, bufferlist &gt; *&#160;</td>
-          <td class="paramname"><em>rmattrs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *&#160;</td>
-          <td class="paramname"><em>objv_tracker</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a2ed993ac59c10b725e38629456ffe902"></a>
 <div class="memitem">
 <div class="memproto">
@@ -694,7 +663,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

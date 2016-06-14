@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structRGWRegionPlacementTarget.html" title="RGWRegionPlacementTarget" alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node1" href="$classRGWMetadataHandler.html" title="RGWMetadataHandler" alt="" coords="5,96,160,123"/>
+<area shape="rect" id="node2" href="$classRGWBucketInstanceMetadataHandler.html" title="RGWBucketInstanceMetadata\lHandler" alt="" coords="208,5,408,46"/>
+<area shape="rect" id="node3" href="$classRGWBucketMetadataHandler.html" title="RGWBucketMetadataHandler" alt="" coords="211,71,405,97"/>
+<area shape="rect" id="node4" href="$classRGWMetadataTopHandler.html" title="RGWMetadataTopHandler" alt="" coords="220,121,396,148"/>
+<area shape="rect" id="node5" href="$classRGWUserMetadataHandler.html" title="RGWUserMetadataHandler" alt="" coords="217,172,399,199"/>
 </map>

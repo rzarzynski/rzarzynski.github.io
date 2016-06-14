@@ -1,5 +1,6 @@
 <map id="RGWProcessFrontend" name="RGWProcessFrontend">
-<area shape="rect" id="node3" href="$classRGWFCGXFrontend.html" title="{RGWFCGXFrontend\n||+ RGWFCGXFrontend()\l+ init()\l}" alt="" coords="5,419,168,511"/>
-<area shape="rect" id="node4" href="$classRGWLoadGenFrontend.html" title="{RGWLoadGenFrontend\n||+ RGWLoadGenFrontend()\l+ init()\l}" alt="" coords="192,419,371,511"/>
-<area shape="rect" id="node2" href="$classRGWFrontend.html" title="{RGWFrontend\n||+ ~RGWFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l}" alt="" coords="117,5,251,141"/>
+<area shape="rect" id="node3" href="$classrgw_1_1RGWLibFrontend.html" title="{rgw::RGWLibFrontend\n||+ RGWLibFrontend()\l+ init()\l+ get_process()\l+ enqueue_req()\l+ execute_req()\l+ start_req()\l+ finish_req()\l}" alt="" coords="5,477,157,643"/>
+<area shape="rect" id="node4" href="$classRGWFCGXFrontend.html" title="{RGWFCGXFrontend\n||+ RGWFCGXFrontend()\l+ init()\l}" alt="" coords="181,514,344,606"/>
+<area shape="rect" id="node5" href="$classRGWLoadGenFrontend.html" title="{RGWLoadGenFrontend\n||+ RGWLoadGenFrontend()\l+ init()\l}" alt="" coords="368,514,547,606"/>
+<area shape="rect" id="node2" href="$classRGWFrontend.html" title="{RGWFrontend\n||+ ~RGWFrontend()\l+ init()\l+ run()\l+ stop()\l+ join()\l+ pause_for_new_config()\l+ unpause_with_new_config()\l}" alt="" coords="165,5,360,171"/>
 </map>

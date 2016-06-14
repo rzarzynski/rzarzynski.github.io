@@ -1,3 +1,3 @@
 <map id="RGWChainedCacheImpl&lt; T &gt;" name="RGWChainedCacheImpl&lt; T &gt;">
-<area shape="rect" id="node2" href="$classRGWChainedCache.html" title="{RGWChainedCache\n||+ ~RGWChainedCache()\l+ chain_cb()\l+ invalidate()\l}" alt="" coords="19,5,188,112"/>
+<area shape="rect" id="node2" href="$classRGWChainedCache.html" title="{RGWChainedCache\n||+ ~RGWChainedCache()\l+ chain_cb()\l+ invalidate()\l+ invalidate_all()\l}" alt="" coords="19,6,188,127"/>
 </map>

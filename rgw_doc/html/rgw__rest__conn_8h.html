@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -82,38 +82,125 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">rgw_rest_conn.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="rgw__rest__client_8h_source.html">rgw_rest_client.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="rgw__rados_8h_source.html">rgw_rados.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__rest__client_8h_source.html">rgw_rest_client.h</a>&quot;</code><br/>
+<code>#include &quot;common/ceph_json.h&quot;</code><br/>
+<code>#include &quot;common/RefCountedObj.h&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_rest_conn.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rest__conn_8h__incl.png" border="0" usemap="#rgw__rest__conn_8h" alt=""/></div>
 <map name="rgw__rest__conn_8h" id="rgw__rest__conn_8h">
-<area shape="rect" id="node2" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="838,80,959,107"/><area shape="rect" id="node4" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="890,155,1011,181"/><area shape="rect" id="node5" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="895,229,1005,256"/><area shape="rect" id="node16" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="765,312,843,339"/><area shape="rect" id="node18" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="867,312,953,339"/><area shape="rect" id="node19" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1131,312,1224,339"/><area shape="rect" id="node22" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="1248,312,1341,339"/></map>
+<area shape="rect" id="node2" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="956,80,1049,107"/><area shape="rect" id="node47" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="1074,80,1195,107"/><area shape="rect" id="node8" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1809,245,1919,272"/><area shape="rect" id="node41" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="2822,163,2900,189"/><area shape="rect" id="node43" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="945,163,1060,189"/><area shape="rect" id="node45" href="rgw__meta__sync__status_8h.html" title="rgw_meta_sync_status.h" alt="" coords="207,163,375,189"/><area shape="rect" id="node46" href="rgw__period__puller_8h.html" title="rgw_period_puller.h" alt="" coords="1385,163,1519,189"/><area shape="rect" id="node19" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1931,328,2009,355"/><area shape="rect" id="node20" href="rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1224,411,1353,437"/><area shape="rect" id="node21" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1379,411,1465,437"/><area shape="rect" id="node22" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2696,328,2789,355"/><area shape="rect" id="node25" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="3051,328,3144,355"/><area shape="rect" id="node28" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="2085,328,2192,355"/><area shape="rect" id="node34" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1821,328,1907,355"/><area shape="rect" id="node29" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="2144,411,2225,437"/><area shape="rect" id="node44" href="rgw__period__history_8h.html" title="rgw_period_history.h" alt="" coords="917,245,1059,272"/><area shape="rect" id="node48" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="2998,163,3119,189"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rest__conn_8h__dep__incl.png" border="0" usemap="#rgw__rest__conn_8hdep" alt=""/></div>
 <map name="rgw__rest__conn_8hdep" id="rgw__rest__conn_8hdep">
-<area shape="rect" id="node2" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="2497,80,2591,107"/><area shape="rect" id="node47" href="rgw__rest__conn_8cc.html" title="rgw_rest_conn.cc" alt="" coords="3687,155,3812,181"/><area shape="rect" id="node3" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1619,155,1705,181"/><area shape="rect" id="node7" href="rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="1802,229,1904,256"/><area shape="rect" id="node8" href="rgw__bucket_8cc.html" title="rgw_bucket.cc" alt="" coords="1929,229,2036,256"/><area shape="rect" id="node10" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="1428,453,1524,480"/><area shape="rect" id="node11" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="1196,229,1269,256"/><area shape="rect" id="node14" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="360,453,451,480"/><area shape="rect" id="node25" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="44,379,125,405"/><area shape="rect" id="node26" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="2033,379,2164,405"/><area shape="rect" id="node33" href="rgw__quota_8cc.html" title="rgw_quota.cc" alt="" coords="2279,229,2379,256"/><area shape="rect" id="node34" href="rgw__user_8cc.html" title="rgw_user.cc" alt="" coords="2060,229,2153,256"/><area shape="rect" id="node35" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="2145,155,2244,181"/><area shape="rect" id="node36" href="rgw__json__enc_8cc.html" title="rgw_json_enc.cc" alt="" coords="2505,229,2625,256"/><area shape="rect" id="node37" href="rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="2650,229,2749,256"/><area shape="rect" id="node38" href="rgw__cache_8h.html" title="rgw_cache.h" alt="" coords="2705,155,2801,181"/><area shape="rect" id="node40" href="rgw__dencoder_8cc.html" title="rgw_dencoder.cc" alt="" coords="3298,229,3419,256"/><area shape="rect" id="node41" href="rgw__gc_8h.html" title="rgw_gc.h" alt="" coords="2607,155,2680,181"/><area shape="rect" id="node43" href="rgw__log_8cc.html" title="rgw_log.cc" alt="" coords="2825,155,2911,181"/><area shape="rect" id="node44" href="rgw__metadata_8cc.html" title="rgw_metadata.cc" alt="" coords="2935,155,3057,181"/><area shape="rect" id="node45" href="rgw__replica__log_8cc.html" title="rgw_replica_log.cc" alt="" coords="3081,155,3211,181"/><area shape="rect" id="node46" href="rgw__rest__client_8cc.html" title="rgw_rest_client.cc" alt="" coords="3236,155,3364,181"/><area shape="rect" id="node48" href="rgw__tools_8cc.html" title="rgw_tools.cc" alt="" coords="3388,155,3484,181"/><area shape="rect" id="node49" href="rgw__usage_8cc.html" title="rgw_usage.cc" alt="" coords="3509,155,3611,181"/><area shape="rect" id="node4" href="rgw__acl_8cc.html" title="rgw_acl.cc" alt="" coords="469,229,555,256"/><area shape="rect" id="node5" href="rgw__acl__s3_8cc.html" title="rgw_acl_s3.cc" alt="" coords="579,229,685,256"/><area shape="rect" id="node6" href="rgw__acl__swift_8cc.html" title="rgw_acl_swift.cc" alt="" coords="709,229,829,256"/><area shape="rect" id="node9" href="rgw__cors__s3_8cc.html" title="rgw_cors_s3.cc" alt="" coords="145,229,260,256"/><area shape="rect" id="node19" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="2192,453,2315,480"/><area shape="rect" id="node23" href="rgw__swift_8cc.html" title="rgw_swift.cc" alt="" coords="240,453,336,480"/><area shape="rect" id="node31" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="1715,379,1825,405"/><area shape="rect" id="node12" href="rgw__rest_8h.html" title="rgw_rest.h" alt="" coords="995,304,1076,331"/><area shape="rect" id="node13" href="rgw__rest__swift_8h.html" title="rgw_rest_swift.h" alt="" coords="202,379,320,405"/><area shape="rect" id="node17" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="941,453,1072,480"/><area shape="rect" id="node21" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="2388,453,2523,480"/><area shape="rect" id="node22" href="rgw__swift__auth_8h.html" title="rgw_swift_auth.h" alt="" coords="345,379,465,405"/><area shape="rect" id="node27" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="643,379,757,405"/><area shape="rect" id="node28" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="833,379,983,405"/><area shape="rect" id="node29" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="1007,379,1147,405"/><area shape="rect" id="node30" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="1850,379,2008,405"/><area shape="rect" id="node32" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="1305,304,1409,331"/><area shape="rect" id="node16" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="1223,379,1348,405"/><area shape="rect" id="node18" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="1372,379,1487,405"/><area shape="rect" id="node20" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="1562,379,1691,405"/><area shape="rect" id="node24" href="rgw__swift__auth_8cc.html" title="rgw_swift_auth.cc" alt="" coords="508,453,636,480"/><area shape="rect" id="node15" href="rgw__rest__swift_8cc.html" title="rgw_rest_swift.cc" alt="" coords="91,453,216,480"/><area shape="rect" id="node39" href="rgw__cache_8cc.html" title="rgw_cache.cc" alt="" coords="2881,229,2983,256"/><area shape="rect" id="node42" href="rgw__gc_8cc.html" title="rgw_gc.cc" alt="" coords="2773,229,2855,256"/></map>
+<area shape="rect" id="node2" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="1253,80,1357,107"/><area shape="rect" id="node18" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="2415,155,2496,181"/><area shape="rect" id="node27" href="rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="2519,80,2621,107"/><area shape="rect" id="node28" href="rgw__cr__rest_8h.html" title="rgw_cr_rest.h" alt="" coords="2697,80,2799,107"/><area shape="rect" id="node29" href="rgw__data__sync_8cc.html" title="rgw_data_sync.cc" alt="" coords="2521,155,2649,181"/><area shape="rect" id="node31" href="rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="2846,155,2945,181"/><area shape="rect" id="node32" href="rgw__sync_8cc.html" title="rgw_sync.cc" alt="" coords="2971,155,3067,181"/><area shape="rect" id="node33" href="rgw__period__puller_8cc.html" title="rgw_period_puller.cc" alt="" coords="2924,80,3064,107"/><area shape="rect" id="node34" href="rgw__rest__conn_8cc.html" title="rgw_rest_conn.cc" alt="" coords="3089,80,3215,107"/><area shape="rect" id="node3" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="819,155,933,181"/><area shape="rect" id="node4" href="librgw_8cc.html" title="librgw.cc" alt="" coords="328,379,401,405"/><area shape="rect" id="node5" href="rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="671,379,756,405"/><area shape="rect" id="node6" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="1196,229,1292,256"/><area shape="rect" id="node7" href="rgw__os__lib_8cc.html" title="rgw_os_lib.cc" alt="" coords="846,379,948,405"/><area shape="rect" id="node9" href="rgw__lib_8h.html" title="rgw_lib.h" alt="" coords="457,155,531,181"/><area shape="rect" id="node13" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="265,229,356,256"/><area shape="rect" id="node14" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="1243,155,1368,181"/><area shape="rect" id="node16" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="1038,155,1167,181"/><area shape="rect" id="node19" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="1443,155,1575,181"/><area shape="rect" id="node20" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="1600,155,1715,181"/><area shape="rect" id="node21" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="1739,155,1889,181"/><area shape="rect" id="node22" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="1914,155,2053,181"/><area shape="rect" id="node23" href="rgw__rest__realm_8cc.html" title="rgw_rest_realm.cc" alt="" coords="2078,155,2207,181"/><area shape="rect" id="node24" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="2231,155,2389,181"/><area shape="rect" id="node25" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="5,229,115,256"/><area shape="rect" id="node26" href="rgw__rest__s3website_8h.html" title="rgw_rest_s3website.h" alt="" coords="41,155,189,181"/><area shape="rect" id="node8" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="788,229,911,256"/><area shape="rect" id="node10" href="rgw__os__lib_8h.html" title="rgw_os_lib.h" alt="" coords="403,304,497,331"/><area shape="rect" id="node11" href="rgw__lib__frontend_8h.html" title="rgw_lib_frontend.h" alt="" coords="523,304,651,331"/><area shape="rect" id="node12" href="rgw__file_8h.html" title="rgw_file.h" alt="" coords="583,229,661,256"/><area shape="rect" id="node15" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="1317,229,1448,256"/><area shape="rect" id="node17" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="1036,229,1171,256"/><area shape="rect" id="node30" href="rgw__period__pusher_8cc.html" title="rgw_period_pusher.cc" alt="" coords="2673,155,2821,181"/></map>
 </div>
 </div>
 <p><a href="rgw__rest__conn_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrgw__http__param__pair.html">rgw_http_param_pair</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTConn.html">RGWRESTConn</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWStreamIntoBufferlist.html">RGWStreamIntoBufferlist</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTReadResource.html">RGWRESTReadResource</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTPostResource.html">RGWRESTPostResource</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab0edc0439b5263cfb45f90f6f8edf71c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab0edc0439b5263cfb45f90f6f8edf71c"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rgw__rest__conn_8h.html#ab0edc0439b5263cfb45f90f6f8edf71c">parse_decode_json</a> (CephContext *cct, T &amp;t, bufferlist &amp;bl)</td></tr>
+<tr class="separator:ab0edc0439b5263cfb45f90f6f8edf71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14583ec12a68d63cf797488bb75ec5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__conn_8h.html#aa14583ec12a68d63cf797488bb75ec5c">make_param_list</a> (const <a class="el" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> *pp)</td></tr>
+<tr class="separator:aa14583ec12a68d63cf797488bb75ec5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aa14583ec12a68d63cf797488bb75ec5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> make_param_list </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> *&#160;</td>
+          <td class="paramname"><em>pp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0edc0439b5263cfb45f90f6f8edf71c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int parse_decode_json </td>
+          <td>(</td>
+          <td class="paramtype">CephContext *&#160;</td>
+          <td class="paramname"><em>cct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bufferlist &amp;&#160;</td>
+          <td class="paramname"><em>bl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

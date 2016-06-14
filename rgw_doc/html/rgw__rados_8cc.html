@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -93,17 +93,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;sys/types.h&gt;</code><br/>
+<code>#include &lt;boost/algorithm/string.hpp&gt;</code><br/>
 <code>#include &quot;common/ceph_json.h&quot;</code><br/>
 <code>#include &quot;common/utf8.h&quot;</code><br/>
 <code>#include &quot;common/errno.h&quot;</code><br/>
 <code>#include &quot;common/Formatter.h&quot;</code><br/>
 <code>#include &quot;common/Throttle.h&quot;</code><br/>
+<code>#include &quot;common/Finisher.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__rados_8h_source.html">rgw_rados.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__cache_8h_source.html">rgw_cache.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__acl_8h_source.html">rgw_acl.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__acl__s3_8h_source.html">rgw_acl_s3.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__metadata_8h_source.html">rgw_metadata.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__bucket_8h_source.html">rgw_bucket.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__rest__conn_8h_source.html">rgw_rest_conn.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__cr__rados_8h_source.html">rgw_cr_rados.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__cr__rest_8h_source.html">rgw_cr_rest.h</a>&quot;</code><br/>
 <code>#include &quot;cls/rgw/cls_rgw_ops.h&quot;</code><br/>
 <code>#include &quot;cls/rgw/cls_rgw_types.h&quot;</code><br/>
 <code>#include &quot;cls/rgw/cls_rgw_client.h&quot;</code><br/>
@@ -111,9 +116,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;cls/version/cls_version_client.h&quot;</code><br/>
 <code>#include &quot;cls/log/cls_log_client.h&quot;</code><br/>
 <code>#include &quot;cls/statelog/cls_statelog_client.h&quot;</code><br/>
+<code>#include &quot;cls/timeindex/cls_timeindex_client.h&quot;</code><br/>
 <code>#include &quot;cls/lock/cls_lock_client.h&quot;</code><br/>
 <code>#include &quot;cls/user/cls_user_client.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__tools_8h_source.html">rgw_tools.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__coroutine_8h_source.html">rgw_coroutine.h</a>&quot;</code><br/>
 <code>#include &quot;common/Clock.h&quot;</code><br/>
 <code>#include &quot;include/rados/librados.hpp&quot;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
@@ -124,23 +131,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;auth/Crypto.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__log_8h_source.html">rgw_log.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__gc_8h_source.html">rgw_gc.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__object__expirer__core_8h_source.html">rgw_object_expirer_core.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__sync_8h_source.html">rgw_sync.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__data__sync_8h_source.html">rgw_data_sync.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__realm__watcher_8h_source.html">rgw_realm_watcher.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_rados.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rados_8cc__incl.png" border="0" usemap="#rgw__rados_8cc" alt=""/></div>
 <map name="rgw__rados_8cc" id="rgw__rados_8cc">
-<area shape="rect" id="node10" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="2099,171,2192,197"/><area shape="rect" id="node21" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1151,419,1229,445"/><area shape="rect" id="node27" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1785,253,1863,280"/><area shape="rect" id="node28" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="2040,253,2155,280"/><area shape="rect" id="node30" href="rgw__cache_8h.html" title="rgw_cache.h" alt="" coords="1332,88,1428,115"/><area shape="rect" id="node32" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="827,336,925,363"/><area shape="rect" id="node36" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1738,88,1837,115"/><area shape="rect" id="node37" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1355,253,1444,280"/><area shape="rect" id="node50" href="rgw__gc_8h.html" title="rgw_gc.h" alt="" coords="2079,88,2152,115"/><area shape="rect" id="node15" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1843,336,1953,363"/><area shape="rect" id="node29" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="2467,253,2585,280"/><area shape="rect" id="node35" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="700,419,781,445"/></map>
+<area shape="rect" id="node12" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="902,245,996,272"/><area shape="rect" id="node19" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1444,320,1522,347"/><area shape="rect" id="node20" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1052,320,1166,347"/><area shape="rect" id="node22" href="rgw__cache_8h.html" title="rgw_cache.h" alt="" coords="1124,171,1220,197"/><area shape="rect" id="node24" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1863,245,1941,272"/><area shape="rect" id="node25" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="1761,171,1860,197"/><area shape="rect" id="node26" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1244,171,1344,197"/><area shape="rect" id="node27" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1343,245,1432,272"/><area shape="rect" id="node28" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="727,171,845,197"/><area shape="rect" id="node29" href="rgw__cr__rados_8h.html" title="rgw_cr_rados.h" alt="" coords="376,88,486,115"/><area shape="rect" id="node30" href="rgw__coroutine_8h.html" title="rgw_coroutine.h" alt="" coords="537,171,652,197"/><area shape="rect" id="node31" href="rgw__cr__rest_8h.html" title="rgw_cr_rest.h" alt="" coords="726,88,828,115"/><area shape="rect" id="node46" href="rgw__gc_8h.html" title="rgw_gc.h" alt="" coords="233,171,306,197"/><area shape="rect" id="node47" href="rgw__object__expirer__core_8h.html" title="rgw_object_expirer\l_core.h" alt="" coords="1581,81,1710,122"/><area shape="rect" id="node48" href="rgw__sync_8h.html" title="rgw_sync.h" alt="" coords="511,88,600,115"/><area shape="rect" id="node49" href="rgw__data__sync_8h.html" title="rgw_data_sync.h" alt="" coords="903,88,1024,115"/><area shape="rect" id="node50" href="rgw__realm__watcher_8h.html" title="rgw_realm_watcher.h" alt="" coords="21,245,168,272"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWWatcher.html">RGWWatcher</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetaNotifierManager.html">RGWMetaNotifierManager</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataNotifierManager.html">RGWDataNotifierManager</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRadosThread.html">RGWRadosThread</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetaNotifier.html">RGWMetaNotifier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataNotifier.html">RGWDataNotifier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSyncProcessorThread.html">RGWSyncProcessorThread</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetaSyncProcessorThread.html">RGWMetaSyncProcessorThread</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataSyncProcessorThread.html">RGWDataSyncProcessorThread</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlog__list__state.html">log_list_state</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlog__show__state.html">log_show_state</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRadosPutObj.html">RGWRadosPutObj</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structobj__time__weight.html">obj_time_weight</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structget__obj__aio__data.html">get_obj_aio_data</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,8 +180,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetBucketStatsContext.html">RGWGetBucketStatsContext</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUserStatsContext.html">RGWGetUserStatsContext</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbucket__info__entry.html">bucket_info_entry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWAccessListFilterPrefix.html">RGWAccessListFilterPrefix</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,18 +192,28 @@ Macros</h2></td></tr>
 <tr class="separator:a2b240e7afeff403d2410e523a9f7312c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2d1a1347b3df816d18b0430f630ece6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ac2d1a1347b3df816d18b0430f630ece6">RGW_USAGE_OBJ_PREFIX</a>&#160;&#160;&#160;&quot;usage.&quot;</td></tr>
 <tr class="separator:ac2d1a1347b3df816d18b0430f630ece6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b8824c4a4db1506a8bf6ee67b4f008b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a0b8824c4a4db1506a8bf6ee67b4f008b">RGW_DEFAULT_ZONE_ROOT_POOL</a>&#160;&#160;&#160;&quot;.rgw.root&quot;</td></tr>
-<tr class="separator:a0b8824c4a4db1506a8bf6ee67b4f008b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6a6146f863065337a90bb52c9663139"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ab6a6146f863065337a90bb52c9663139">RGW_DEFAULT_REGION_ROOT_POOL</a>&#160;&#160;&#160;&quot;.rgw.root&quot;</td></tr>
-<tr class="separator:ab6a6146f863065337a90bb52c9663139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3775f4786feaacf81e05db22528328a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#af3775f4786feaacf81e05db22528328a">FIRST_EPOCH</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:af3775f4786feaacf81e05db22528328a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a5c61078344fa02ddf5184cffcac0a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a4a5c61078344fa02ddf5184cffcac0a6">RGW_STATELOG_OBJ_PREFIX</a>&#160;&#160;&#160;&quot;statelog.&quot;</td></tr>
 <tr class="separator:a4a5c61078344fa02ddf5184cffcac0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5580a2b7c4743669bb9ca22b07e84324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a5580a2b7c4743669bb9ca22b07e84324">dout_subsys</a>&#160;&#160;&#160;ceph_subsys_rgw</td></tr>
 <tr class="separator:a5580a2b7c4743669bb9ca22b07e84324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a415167a842f3b3014a33a23b3cf746a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a415167a842f3b3014a33a23b3cf746a9">TAG_LEN</a>&#160;&#160;&#160;24</td></tr>
 <tr class="separator:a415167a842f3b3014a33a23b3cf746a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6abf991143240c920bf5a04cc96f6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a4f6abf991143240c920bf5a04cc96f6b">DATA_SYNC_INIT_WAIT_SEC</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:a4f6abf991143240c920bf5a04cc96f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f47a991aa234fabe9d2617657acbf7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#af0f47a991aa234fabe9d2617657acbf7">MAX_SHARDS_PRIME</a>&#160;&#160;&#160;7877</td></tr>
+<tr class="separator:af0f47a991aa234fabe9d2617657acbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07304aef9993918f4b1fe1b4f8dda69c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a07304aef9993918f4b1fe1b4f8dda69c">MAX_OBJEXP_SHARDS_PRIME</a>&#160;&#160;&#160;7877</td></tr>
+<tr class="separator:a07304aef9993918f4b1fe1b4f8dda69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56327fa14cd6884a5c5a14609a43cfb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a56327fa14cd6884a5c5a14609a43cfb7">MAX_CREATE_RETRIES</a>&#160;&#160;&#160;20 /* need to bound retries */</td></tr>
 <tr class="separator:a56327fa14cd6884a5c5a14609a43cfb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559af0e5a7ad6c1693c0387eefde89bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a559af0e5a7ad6c1693c0387eefde89bf">HEAD_SIZE</a>&#160;&#160;&#160;512 * 1024</td></tr>
+<tr class="separator:a559af0e5a7ad6c1693c0387eefde89bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e817bb96172e443b859c0f81b8785a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ae7e817bb96172e443b859c0f81b8785a">COPY_BUF_SIZE</a>&#160;&#160;&#160;(4 * 1024 * 1024)</td></tr>
+<tr class="separator:ae7e817bb96172e443b859c0f81b8785a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9496e26af9447ed476ffa99438cee49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#af9496e26af9447ed476ffa99438cee49">MAX_COMPLETE_RETRY</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:af9496e26af9447ed476ffa99438cee49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a389dd5398d15be0a98756235e791e6cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a389dd5398d15be0a98756235e791e6cd">NUM_ENTRIES</a>&#160;&#160;&#160;1000</td></tr>
 <tr class="separator:a389dd5398d15be0a98756235e791e6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e331caa6984892b8664d1a61a16a100"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a3e331caa6984892b8664d1a61a16a100">OLH_PENDING_TAG_LEN</a>&#160;&#160;&#160;32</td></tr>
@@ -188,16 +225,26 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a10d4a35a3573048226e39dd338cc0ece"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a10d4a35a3573048226e39dd338cc0ece">add_new_connection_to_map</a> (map&lt; string, <a class="el" href="classRGWRESTConn.html">RGWRESTConn</a> * &gt; &amp;region_conn_map, <a class="el" href="structRGWRegion.html">RGWRegion</a> &amp;region, <a class="el" href="classRGWRESTConn.html">RGWRESTConn</a> *new_connection)</td></tr>
-<tr class="separator:a10d4a35a3573048226e39dd338cc0ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bb2bc61a9ff1aa40c19577841face3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a1bb2bc61a9ff1aa40c19577841face3f">get_zones_pool_names_set</a> (CephContext *cct, <a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const list&lt; string &gt; &amp;zones, const string &amp;my_zone_id, set&lt; string &gt; &amp;pool_names)</td></tr>
+<tr class="separator:a1bb2bc61a9ff1aa40c19577841face3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b363f545c6e039dccc4dc4ac484ab2c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a9b363f545c6e039dccc4dc4ac484ab2c">fix_zone_pool_name</a> (set&lt; string &gt; pool_names, const string &amp;default_prefix, const string &amp;default_suffix, const string &amp;suggested_name)</td></tr>
+<tr class="separator:a9b363f545c6e039dccc4dc4ac484ab2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49cf0986bf2d1e525b8246fa5f3f2c1"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ab49cf0986bf2d1e525b8246fa5f3f2c1">gen_short_zone_id</a> (const std::string zone_id)</td></tr>
+<tr class="separator:ab49cf0986bf2d1e525b8246fa5f3f2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa0f8154c8daf5fd92befec79673d4e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#aaa0f8154c8daf5fd92befec79673d4e5">add_new_connection_to_map</a> (map&lt; string, <a class="el" href="classRGWRESTConn.html">RGWRESTConn</a> * &gt; &amp;zonegroup_conn_map, const <a class="el" href="structRGWZoneGroup.html">RGWZoneGroup</a> &amp;zonegroup, <a class="el" href="classRGWRESTConn.html">RGWRESTConn</a> *new_connection)</td></tr>
+<tr class="separator:aaa0f8154c8daf5fd92befec79673d4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa59a917c44fce84dce5c08cce638f27b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#aa59a917c44fce84dce5c08cce638f27b">usage_log_hash</a> (CephContext *cct, const string &amp;name, string &amp;hash, uint32_t index)</td></tr>
 <tr class="separator:aa59a917c44fce84dce5c08cce638f27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128e3f477a77aeec51ac81401c04562a"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a128e3f477a77aeec51ac81401c04562a">objexp_hint_get_keyext</a> (const string &amp;tenant_name, const string &amp;bucket_name, const string &amp;bucket_id, const <a class="el" href="structrgw__obj__key.html">rgw_obj_key</a> &amp;obj_key)</td></tr>
+<tr class="separator:a128e3f477a77aeec51ac81401c04562a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8691b6fc355297a79e507bbd2007040c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a8691b6fc355297a79e507bbd2007040c">rgw_policy_from_attrset</a> (CephContext *cct, map&lt; string, bufferlist &gt; &amp;attrset, <a class="el" href="classRGWAccessControlPolicy.html">RGWAccessControlPolicy</a> *policy)</td></tr>
 <tr class="separator:a8691b6fc355297a79e507bbd2007040c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5394a91b025fd09a99c70ca53d59905a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a5394a91b025fd09a99c70ca53d59905a">set_copy_attrs</a> (map&lt; string, bufferlist &gt; &amp;src_attrs, map&lt; string, bufferlist &gt; &amp;attrs, bool replace_attrs, bool intra_region)</td></tr>
-<tr class="separator:a5394a91b025fd09a99c70ca53d59905a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52115e18448d62233e96f456862ec62a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a52115e18448d62233e96f456862ec62a">accumulate_raw_stats</a> (rgw_bucket_dir_header &amp;header, map&lt; <a class="el" href="rgw__common_8h.html#aeac15a8adcd97f2b0b033244c5377bf1">RGWObjCategory</a>, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &gt; &amp;stats)</td></tr>
-<tr class="separator:a52115e18448d62233e96f456862ec62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f0c3ac1b08545f5d4175615eed6a74"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a65f0c3ac1b08545f5d4175615eed6a74">set_copy_attrs</a> (map&lt; string, bufferlist &gt; &amp;src_attrs, map&lt; string, bufferlist &gt; &amp;attrs, <a class="el" href="classRGWRados.html#acf6063a74d8174f965ace73d8c72d237">RGWRados::AttrsMod</a> attrs_mod)</td></tr>
+<tr class="separator:a65f0c3ac1b08545f5d4175615eed6a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad49e7a9f855e7d0cba848ed5ed5740"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#aaad49e7a9f855e7d0cba848ed5ed5740">operator&lt;&lt;</a> (ostream &amp;out, const <a class="el" href="structobj__time__weight.html">obj_time_weight</a> &amp;o)</td></tr>
+<tr class="separator:aaad49e7a9f855e7d0cba848ed5ed5740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9264ad5f164c489756f3500df10a4245"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a9264ad5f164c489756f3500df10a4245">accumulate_raw_stats</a> (const rgw_bucket_dir_header &amp;header, map&lt; <a class="el" href="rgw__common_8h.html#aeac15a8adcd97f2b0b033244c5377bf1">RGWObjCategory</a>, <a class="el" href="structRGWStorageStats.html">RGWStorageStats</a> &gt; &amp;stats)</td></tr>
+<tr class="separator:a9264ad5f164c489756f3500df10a4245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b3aa439c7d0abaf28d1856921f9b06d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a3b3aa439c7d0abaf28d1856921f9b06d">generate_fake_tag</a> (CephContext *cct, map&lt; string, bufferlist &gt; &amp;attrset, <a class="el" href="classRGWObjManifest.html">RGWObjManifest</a> &amp;manifest, bufferlist &amp;manifest_bl, bufferlist &amp;tag_bl)</td></tr>
 <tr class="separator:a3b3aa439c7d0abaf28d1856921f9b06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeffbb173be76489afbffac17148ad1d2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#aeffbb173be76489afbffac17148ad1d2">is_olh</a> (map&lt; string, bufferlist &gt; &amp;attrs)</td></tr>
@@ -225,29 +272,84 @@ Variables</h2></td></tr>
 <tr class="separator:ab2db3a5d0813e9d1bca3e336749b9341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3af2e89636bd0bbd1ab66390853f76e4"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a3af2e89636bd0bbd1ab66390853f76e4">dir_oid_prefix</a> = &quot;.dir.&quot;</td></tr>
 <tr class="separator:a3af2e89636bd0bbd1ab66390853f76e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa26b05e9de4e1ab9bb080315d3700229"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#aa26b05e9de4e1ab9bb080315d3700229">default_storage_pool</a> = &quot;.rgw.buckets&quot;</td></tr>
-<tr class="separator:aa26b05e9de4e1ab9bb080315d3700229"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab89b7d61604a533768c62d22404e768f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ab89b7d61604a533768c62d22404e768f">default_storage_extra_pool</a> = &quot;.rgw.buckets.extra&quot;</td></tr>
-<tr class="separator:ab89b7d61604a533768c62d22404e768f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06bd7e583ba65b81e361cb579dd66f42"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a06bd7e583ba65b81e361cb579dd66f42">default_storage_pool_suffix</a> = &quot;rgw.buckets.data&quot;</td></tr>
+<tr class="separator:a06bd7e583ba65b81e361cb579dd66f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af52eed494d62265404bfdc7f11640ed4"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#af52eed494d62265404bfdc7f11640ed4">default_bucket_index_pool_suffix</a> = &quot;rgw.buckets.index&quot;</td></tr>
+<tr class="separator:af52eed494d62265404bfdc7f11640ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e6d0ac8c5956ffe0565c2becad51bf"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a01e6d0ac8c5956ffe0565c2becad51bf">default_storage_extra_pool_suffix</a> = &quot;rgw.buckets.non-ec&quot;</td></tr>
+<tr class="separator:a01e6d0ac8c5956ffe0565c2becad51bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42c004bc2fb70718f18f9bf38fe741b2"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a42c004bc2fb70718f18f9bf38fe741b2">avail_pools</a> = &quot;.pools.avail&quot;</td></tr>
 <tr class="separator:a42c004bc2fb70718f18f9bf38fe741b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e178620f5b0f0d2613e63b9b0c97a17"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a2e178620f5b0f0d2613e63b9b0c97a17">zone_info_oid_prefix</a> = &quot;zone_info.&quot;</td></tr>
 <tr class="separator:a2e178620f5b0f0d2613e63b9b0c97a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea313b5ea031a829a00d655b714be5cd"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#aea313b5ea031a829a00d655b714be5cd">zone_names_oid_prefix</a> = &quot;zone_names.&quot;</td></tr>
+<tr class="separator:aea313b5ea031a829a00d655b714be5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a677370ed6b9223315b5a9d7a68e5da20"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a677370ed6b9223315b5a9d7a68e5da20">region_info_oid_prefix</a> = &quot;region_info.&quot;</td></tr>
 <tr class="separator:a677370ed6b9223315b5a9d7a68e5da20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096f848f39fd0b4bb061a5c6e89da654"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a096f848f39fd0b4bb061a5c6e89da654">zone_group_info_oid_prefix</a> = &quot;zonegroup_info.&quot;</td></tr>
+<tr class="separator:a096f848f39fd0b4bb061a5c6e89da654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b10e99223a2e7058298a51f085da68"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ad7b10e99223a2e7058298a51f085da68">realm_names_oid_prefix</a> = &quot;realms_names.&quot;</td></tr>
+<tr class="separator:ad7b10e99223a2e7058298a51f085da68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d4fa7a6d2af21d8b19f0ee096270f2f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a5d4fa7a6d2af21d8b19f0ee096270f2f">realm_info_oid_prefix</a> = &quot;realms.&quot;</td></tr>
+<tr class="separator:a5d4fa7a6d2af21d8b19f0ee096270f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a235aeced8c48f779a839c2f8692d3704"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a235aeced8c48f779a839c2f8692d3704">default_region_info_oid</a> = &quot;default.region&quot;</td></tr>
 <tr class="separator:a235aeced8c48f779a839c2f8692d3704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75fd22850f06a11524452fc05d2c2ee6"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a75fd22850f06a11524452fc05d2c2ee6">default_zone_group_info_oid</a> = &quot;default.zonegroup&quot;</td></tr>
+<tr class="separator:a75fd22850f06a11524452fc05d2c2ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1600d800a30bb996816245eaea31eac1"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a1600d800a30bb996816245eaea31eac1">period_info_oid_prefix</a> = &quot;periods.&quot;</td></tr>
+<tr class="separator:a1600d800a30bb996816245eaea31eac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a550fb6823765a9bcc269017254769"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a36a550fb6823765a9bcc269017254769">period_latest_epoch_info_oid</a> = &quot;.latest_epoch&quot;</td></tr>
+<tr class="separator:a36a550fb6823765a9bcc269017254769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30d5ac15be70a1c288524a7ee0594323"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a30d5ac15be70a1c288524a7ee0594323">region_map_oid</a> = &quot;region_map&quot;</td></tr>
 <tr class="separator:a30d5ac15be70a1c288524a7ee0594323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5909bcf8e015114cb148bb59fe95315"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ad5909bcf8e015114cb148bb59fe95315">zonegroup_map_oid</a> = &quot;zonegroup_map&quot;</td></tr>
+<tr class="separator:ad5909bcf8e015114cb148bb59fe95315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf14ca34146310ea5033d089736cdda"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#abcf14ca34146310ea5033d089736cdda">log_lock_name</a> = &quot;rgw_log_lock&quot;</td></tr>
 <tr class="separator:abcf14ca34146310ea5033d089736cdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11dd6a7532039298fa8227eb7e7c0e9"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ad11dd6a7532039298fa8227eb7e7c0e9">default_realm_info_oid</a> = &quot;default.realm&quot;</td></tr>
+<tr class="separator:ad11dd6a7532039298fa8227eb7e7c0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601861d6eb11ee95238759d6b507b8ae"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a601861d6eb11ee95238759d6b507b8ae">default_zonegroup_name</a> = &quot;default&quot;</td></tr>
+<tr class="separator:a601861d6eb11ee95238759d6b507b8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc485e650d7f7321cb2164bb316e967e"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#abc485e650d7f7321cb2164bb316e967e">default_zone_name</a> = &quot;default&quot;</td></tr>
+<tr class="separator:abc485e650d7f7321cb2164bb316e967e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05030bedde71ce201a1cc08fb71f6277"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a05030bedde71ce201a1cc08fb71f6277">zonegroup_names_oid_prefix</a> = &quot;zonegroups_names.&quot;</td></tr>
+<tr class="separator:a05030bedde71ce201a1cc08fb71f6277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe4c0865b925fc9d2c9bc37d50047427"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="rgw__common_8h.html#aeac15a8adcd97f2b0b033244c5377bf1">RGWObjCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#afe4c0865b925fc9d2c9bc37d50047427">main_category</a> = <a class="el" href="rgw__common_8h.html#aeac15a8adcd97f2b0b033244c5377bf1a7ef2319c6c4c9e6eb00926f1123bac18">RGW_OBJ_CATEGORY_MAIN</a></td></tr>
 <tr class="separator:afe4c0865b925fc9d2c9bc37d50047427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf78982a38a1b7688906677516a04088"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRGWChainedCacheImpl.html">RGWChainedCacheImpl</a><br class="typebreak"/>
-&lt; <a class="el" href="structbucket__info__entry.html">bucket_info_entry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#abf78982a38a1b7688906677516a04088">binfo_cache</a></td></tr>
-<tr class="separator:abf78982a38a1b7688906677516a04088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a793267e6546841ccbce932cc856f9"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#ad6a793267e6546841ccbce932cc856f9">RGW_DEFAULT_ZONE_ROOT_POOL</a> = &quot;rgw.root&quot;</td></tr>
+<tr class="separator:ad6a793267e6546841ccbce932cc856f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec50fa9122a6d5046e2c67e7c306216"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#abec50fa9122a6d5046e2c67e7c306216">RGW_DEFAULT_ZONEGROUP_ROOT_POOL</a> = &quot;rgw.root&quot;</td></tr>
+<tr class="separator:abec50fa9122a6d5046e2c67e7c306216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5341ca6dabf19ad6e29d56d453379e51"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a5341ca6dabf19ad6e29d56d453379e51">RGW_DEFAULT_REALM_ROOT_POOL</a> = &quot;rgw.root&quot;</td></tr>
+<tr class="separator:a5341ca6dabf19ad6e29d56d453379e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4740dea7669ad1c907224043330af87b"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rados_8cc.html#a4740dea7669ad1c907224043330af87b">RGW_DEFAULT_PERIOD_ROOT_POOL</a> = &quot;rgw.root&quot;</td></tr>
+<tr class="separator:a4740dea7669ad1c907224043330af87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ae7e817bb96172e443b859c0f81b8785a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COPY_BUF_SIZE&#160;&#160;&#160;(4 * 1024 * 1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f6abf991143240c920bf5a04cc96f6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DATA_SYNC_INIT_WAIT_SEC&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a5580a2b7c4743669bb9ca22b07e84324"></a>
 <div class="memitem">
 <div class="memproto">
@@ -266,6 +368,30 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define dout_subsys&#160;&#160;&#160;ceph_subsys_rgw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af3775f4786feaacf81e05db22528328a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIRST_EPOCH&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a559af0e5a7ad6c1693c0387eefde89bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEAD_SIZE&#160;&#160;&#160;512 * 1024</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -278,6 +404,18 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define MAX_BUCKET_INDEX_SHARDS_PRIME&#160;&#160;&#160;7877</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af9496e26af9447ed476ffa99438cee49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_COMPLETE_RETRY&#160;&#160;&#160;100</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -302,6 +440,30 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define MAX_ECANCELED_RETRY&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a07304aef9993918f4b1fe1b4f8dda69c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_OBJEXP_SHARDS_PRIME&#160;&#160;&#160;7877</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af0f47a991aa234fabe9d2617657acbf7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_SHARDS_PRIME&#160;&#160;&#160;7877</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -338,30 +500,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define OLH_PENDING_TAG_LEN&#160;&#160;&#160;32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab6a6146f863065337a90bb52c9663139"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RGW_DEFAULT_REGION_ROOT_POOL&#160;&#160;&#160;&quot;.rgw.root&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0b8824c4a4db1506a8bf6ee67b4f008b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RGW_DEFAULT_ZONE_ROOT_POOL&#160;&#160;&#160;&quot;.rgw.root&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -503,7 +641,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a52115e18448d62233e96f456862ec62a"></a>
+<a class="anchor" id="a9264ad5f164c489756f3500df10a4245"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -513,7 +651,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static void accumulate_raw_stats </td>
           <td>(</td>
-          <td class="paramtype">rgw_bucket_dir_header &amp;&#160;</td>
+          <td class="paramtype">const rgw_bucket_dir_header &amp;&#160;</td>
           <td class="paramname"><em>header</em>, </td>
         </tr>
         <tr>
@@ -537,7 +675,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a10d4a35a3573048226e39dd338cc0ece"></a>
+<a class="anchor" id="aaa0f8154c8daf5fd92befec79673d4e5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -548,13 +686,13 @@ Variables</h2></td></tr>
           <td class="memname">static void add_new_connection_to_map </td>
           <td>(</td>
           <td class="paramtype">map&lt; string, <a class="el" href="classRGWRESTConn.html">RGWRESTConn</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>region_conn_map</em>, </td>
+          <td class="paramname"><em>zonegroup_conn_map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structRGWRegion.html">RGWRegion</a> &amp;&#160;</td>
-          <td class="paramname"><em>region</em>, </td>
+          <td class="paramtype">const <a class="el" href="structRGWZoneGroup.html">RGWZoneGroup</a> &amp;&#160;</td>
+          <td class="paramname"><em>zonegroup</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -577,8 +715,8 @@ Variables</h2></td></tr>
 <p>Add new connection to connections map </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">region_conn_map</td><td>map which new connection will be added to </td></tr>
-    <tr><td class="paramname">region</td><td>region which new connection will connect to </td></tr>
+    <tr><td class="paramname">zonegroup_conn_map</td><td>map which new connection will be added to </td></tr>
+    <tr><td class="paramname">zonegroup</td><td>zonegroup which new connection will connect to </td></tr>
     <tr><td class="paramname">new_connection</td><td>pointer to new connection instance </td></tr>
   </table>
   </dd>
@@ -615,6 +753,68 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b363f545c6e039dccc4dc4ac484ab2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string fix_zone_pool_name </td>
+          <td>(</td>
+          <td class="paramtype">set&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>pool_names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>default_prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>default_suffix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>suggested_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab49cf0986bf2d1e525b8246fa5f3f2c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t gen_short_zone_id </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>zone_id</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -678,6 +878,50 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1bb2bc61a9ff1aa40c19577841face3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_zones_pool_names_set </td>
+          <td>(</td>
+          <td class="paramtype">CephContext *&#160;</td>
+          <td class="paramname"><em>cct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
+          <td class="paramname"><em>store</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const list&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>zones</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>my_zone_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">set&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pool_names</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a25285c4105a9295db48ef72dd2c659d2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -726,6 +970,86 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a128e3f477a77aeec51ac81401c04562a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string objexp_hint_get_keyext </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>tenant_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>bucket_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>bucket_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrgw__obj__key.html">rgw_obj_key</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaad49e7a9f855e7d0cba848ed5ed5740"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structobj__time__weight.html">obj_time_weight</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8691b6fc355297a79e507bbd2007040c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -758,7 +1082,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5394a91b025fd09a99c70ca53d59905a"></a>
+<a class="anchor" id="a65f0c3ac1b08545f5d4175615eed6a74"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -780,14 +1104,8 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>replace_attrs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>intra_region</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classRGWRados.html#acf6063a74d8174f965ace73d8c72d237">RGWRados::AttrsMod</a>&#160;</td>
+          <td class="paramname"><em>attrs_mod</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -882,7 +1200,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abf78982a38a1b7688906677516a04088"></a>
+<a class="anchor" id="aee80a884046a20cab48f95a33f352507"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -890,7 +1208,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRGWChainedCacheImpl.html">RGWChainedCacheImpl</a>&lt;<a class="el" href="structbucket__info__entry.html">bucket_info_entry</a>&gt; binfo_cache</td>
+          <td class="memname"><a class="el" href="classRGWCache.html">RGWCache</a>&lt;<a class="el" href="classRGWRados.html">RGWRados</a>&gt; cached_rados_provider</td>
         </tr>
       </table>
   </td>
@@ -902,7 +1220,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aee80a884046a20cab48f95a33f352507"></a>
+<a class="anchor" id="af52eed494d62265404bfdc7f11640ed4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -910,7 +1228,27 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRGWCache.html">RGWCache</a>&lt;<a class="el" href="classRGWRados.html">RGWRados</a>&gt; cached_rados_provider</td>
+          <td class="memname">string default_bucket_index_pool_suffix = &quot;rgw.buckets.index&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad11dd6a7532039298fa8227eb7e7c0e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string default_realm_info_oid = &quot;default.realm&quot;</td>
         </tr>
       </table>
   </td>
@@ -942,7 +1280,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab89b7d61604a533768c62d22404e768f"></a>
+<a class="anchor" id="a01e6d0ac8c5956ffe0565c2becad51bf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -950,7 +1288,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string default_storage_extra_pool = &quot;.rgw.buckets.extra&quot;</td>
+          <td class="memname">string default_storage_extra_pool_suffix = &quot;rgw.buckets.non-ec&quot;</td>
         </tr>
       </table>
   </td>
@@ -962,7 +1300,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa26b05e9de4e1ab9bb080315d3700229"></a>
+<a class="anchor" id="a06bd7e583ba65b81e361cb579dd66f42"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -970,7 +1308,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string default_storage_pool = &quot;.rgw.buckets&quot;</td>
+          <td class="memname">string default_storage_pool_suffix = &quot;rgw.buckets.data&quot;</td>
         </tr>
       </table>
   </td>
@@ -978,6 +1316,50 @@ Variables</h2></td></tr>
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a75fd22850f06a11524452fc05d2c2ee6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string default_zone_group_info_oid = &quot;default.zonegroup&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abc485e650d7f7321cb2164bb316e967e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string default_zone_name = &quot;default&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a601861d6eb11ee95238759d6b507b8ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string default_zonegroup_name = &quot;default&quot;</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -1082,6 +1464,46 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1600d800a30bb996816245eaea31eac1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string period_info_oid_prefix = &quot;periods.&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a36a550fb6823765a9bcc269017254769"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string period_latest_epoch_info_oid = &quot;.latest_epoch&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8ac682ba13fd36e90aa408e1ee2b3681"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1091,6 +1513,46 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classRGWRados.html">RGWRados</a> rados_provider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5d4fa7a6d2af21d8b19f0ee096270f2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string realm_info_oid_prefix = &quot;realms.&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7b10e99223a2e7058298a51f085da68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string realm_names_oid_prefix = &quot;realms_names.&quot;</td>
         </tr>
       </table>
   </td>
@@ -1142,6 +1604,86 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4740dea7669ad1c907224043330af87b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string RGW_DEFAULT_PERIOD_ROOT_POOL = &quot;rgw.root&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5341ca6dabf19ad6e29d56d453379e51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string RGW_DEFAULT_REALM_ROOT_POOL = &quot;rgw.root&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad6a793267e6546841ccbce932cc856f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string RGW_DEFAULT_ZONE_ROOT_POOL = &quot;rgw.root&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abec50fa9122a6d5046e2c67e7c306216"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string RGW_DEFAULT_ZONEGROUP_ROOT_POOL = &quot;rgw.root&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab2db3a5d0813e9d1bca3e336749b9341"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1151,6 +1693,26 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">string shadow_ns = &quot;shadow&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a096f848f39fd0b4bb061a5c6e89da654"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string zone_group_info_oid_prefix = &quot;zonegroup_info.&quot;</td>
         </tr>
       </table>
   </td>
@@ -1182,10 +1744,70 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aea313b5ea031a829a00d655b714be5cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string zone_names_oid_prefix = &quot;zone_names.&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad5909bcf8e015114cb148bb59fe95315"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string zonegroup_map_oid = &quot;zonegroup_map&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a05030bedde71ce201a1cc08fb71f6277"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string zonegroup_names_oid_prefix = &quot;zonegroups_names.&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

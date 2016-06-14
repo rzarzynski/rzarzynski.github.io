@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ Collaboration diagram for ACLGrant:</div>
 <div class="dyncontent">
 <div class="center"><img src="classACLGrant__coll__graph.png" border="0" usemap="#ACLGrant_coll__map" alt="Collaboration graph"/></div>
 <map name="ACLGrant_coll__map" id="ACLGrant_coll__map">
-<area shape="rect" id="node2" href="classACLPermission.html" title="{ACLPermission\n|# flags\l|+ ACLPermission()\l+ ~ACLPermission()\l+ get_permissions()\l+ set_permissions()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="5,6,189,186"/><area shape="rect" id="node3" href="classACLGranteeType.html" title="{ACLGranteeType\n|# type\l|+ ACLGranteeType()\l+ ~ACLGranteeType()\l+ get_type()\l+ set()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="213,6,397,186"/></map>
+<area shape="rect" id="node2" href="classACLPermission.html" title="{ACLPermission\n|# flags\l|+ ACLPermission()\l+ ~ACLPermission()\l+ get_permissions()\l+ set_permissions()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="5,182,189,362"/><area shape="rect" id="node3" href="structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="319,160,417,384"/><area shape="rect" id="node5" href="classACLGranteeType.html" title="{ACLGranteeType\n|# type\l|+ ACLGranteeType()\l+ ~ACLGranteeType()\l+ get_type()\l+ set()\l+ encode()\l+ decode()\l+ dump()\l+ generate_test_instances()\l}" alt="" coords="441,182,625,362"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -115,14 +115,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a044d74071313089397bd58a030c2b800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae590e31f1c9f23ccf0e56b6e2b8e9573"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#ae590e31f1c9f23ccf0e56b6e2b8e9573">~ACLGrant</a> ()</td></tr>
 <tr class="separator:ae590e31f1c9f23ccf0e56b6e2b8e9573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e3870f8b64e264d8ef58db4edf0bfff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a9e3870f8b64e264d8ef58db4edf0bfff">get_id</a> (string &amp;_id)</td></tr>
-<tr class="separator:a9e3870f8b64e264d8ef58db4edf0bfff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c724541cf428849dc0f6278ac51caf2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a3c724541cf428849dc0f6278ac51caf2">get_id</a> (<a class="el" href="structrgw__user.html">rgw_user</a> &amp;_id) const </td></tr>
+<tr class="separator:a3c724541cf428849dc0f6278ac51caf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9d578be3bdee0e4e7b53ea29b890e50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classACLGranteeType.html">ACLGranteeType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#ad9d578be3bdee0e4e7b53ea29b890e50">get_type</a> ()</td></tr>
 <tr class="separator:ad9d578be3bdee0e4e7b53ea29b890e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435df339b5bf0de65ed57b044abe61dd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classACLGranteeType.html">ACLGranteeType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a435df339b5bf0de65ed57b044abe61dd">get_type</a> () const </td></tr>
+<tr class="separator:a435df339b5bf0de65ed57b044abe61dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a154aaf5f53d6206020cd0ad5940d3b5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classACLPermission.html">ACLPermission</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a154aaf5f53d6206020cd0ad5940d3b5d">get_permission</a> ()</td></tr>
 <tr class="separator:a154aaf5f53d6206020cd0ad5940d3b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68c1d5564d938fb73ec5745eea482b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a68c1d5564d938fb73ec5745eea482b17">get_group</a> ()</td></tr>
-<tr class="separator:a68c1d5564d938fb73ec5745eea482b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe7602f08b13c07bf2360e045e1a6fc4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classACLPermission.html">ACLPermission</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#abe7602f08b13c07bf2360e045e1a6fc4">get_permission</a> () const </td></tr>
+<tr class="separator:abe7602f08b13c07bf2360e045e1a6fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0502367665337bb435b09546d7e18978"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a0502367665337bb435b09546d7e18978">get_group</a> () const </td></tr>
+<tr class="separator:a0502367665337bb435b09546d7e18978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae00a519696dcdc7230c185a735e4a9"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#aaae00a519696dcdc7230c185a735e4a9">get_referer</a> () const </td></tr>
+<tr class="separator:aaae00a519696dcdc7230c185a735e4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1f2313a0811d02c30050060fe72b2dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#aa1f2313a0811d02c30050060fe72b2dd">encode</a> (bufferlist &amp;bl) const </td></tr>
 <tr class="separator:aa1f2313a0811d02c30050060fe72b2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76dd6cb9b972b6f253086db6e7e298ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a76dd6cb9b972b6f253086db6e7e298ce">decode</a> (bufferlist::iterator &amp;bl)</td></tr>
@@ -131,10 +137,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9b29ff9cc87e77fb64d6c8db8d42e37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94d065df4b4ad14785517cff89290049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a94d065df4b4ad14785517cff89290049">uri_to_group</a> (string &amp;uri)</td></tr>
 <tr class="separator:a94d065df4b4ad14785517cff89290049"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14718453522e8447a854b5efa69259bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a14718453522e8447a854b5efa69259bd">set_canon</a> (string &amp;_id, string &amp;_name, int perm)</td></tr>
-<tr class="separator:a14718453522e8447a854b5efa69259bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a455a7fa0d54a49b7338c0f9c85b8af60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a455a7fa0d54a49b7338c0f9c85b8af60">set_group</a> (<a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a> _group, int perm)</td></tr>
-<tr class="separator:a455a7fa0d54a49b7338c0f9c85b8af60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ed7830e5d257d37b2d670e1be94807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a54ed7830e5d257d37b2d670e1be94807">set_canon</a> (const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;_id, const string &amp;_name, const uint32_t perm)</td></tr>
+<tr class="separator:a54ed7830e5d257d37b2d670e1be94807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1796faf4223ef1af8a59aa7c2392b67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#ae1796faf4223ef1af8a59aa7c2392b67">set_group</a> (<a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a> _group, const uint32_t perm)</td></tr>
+<tr class="separator:ae1796faf4223ef1af8a59aa7c2392b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a80f4b0c64c4eda8ff66ca8c8c31222"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a8a80f4b0c64c4eda8ff66ca8c8c31222">set_referer</a> (const std::string &amp;_url_spec, const uint32_t perm)</td></tr>
+<tr class="separator:a8a80f4b0c64c4eda8ff66ca8c8c31222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -145,8 +153,8 @@ Static Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:abb425975d1b7d2a282dd11a24dcf6af4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classACLGranteeType.html">ACLGranteeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#abb425975d1b7d2a282dd11a24dcf6af4">type</a></td></tr>
 <tr class="separator:abb425975d1b7d2a282dd11a24dcf6af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2373ea71450bd2be220dcfae8e092398"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a2373ea71450bd2be220dcfae8e092398">id</a></td></tr>
-<tr class="separator:a2373ea71450bd2be220dcfae8e092398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add26b4555c6a77287c174a2b46a5da3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__user.html">rgw_user</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#add26b4555c6a77287c174a2b46a5da3a">id</a></td></tr>
+<tr class="separator:add26b4555c6a77287c174a2b46a5da3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1995145c286ca23cdf29624163558baa"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a1995145c286ca23cdf29624163558baa">email</a></td></tr>
 <tr class="separator:a1995145c286ca23cdf29624163558baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4884985364edf3fe307b78701d0fc4e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classACLPermission.html">ACLPermission</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a4884985364edf3fe307b78701d0fc4e4">permission</a></td></tr>
@@ -155,6 +163,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:af0ee730a7003b9e055c8c73e1bd0cac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66ea20624fa408c0408766036b94fe79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a66ea20624fa408c0408766036b94fe79">group</a></td></tr>
 <tr class="separator:a66ea20624fa408c0408766036b94fe79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c84a448fca899f34ba0b8bca20f860"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACLGrant.html#a13c84a448fca899f34ba0b8bca20f860">url_spec</a></td></tr>
+<tr class="separator:a13c84a448fca899f34ba0b8bca20f860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a044d74071313089397bd58a030c2b800"></a>
@@ -292,7 +302,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a68c1d5564d938fb73ec5745eea482b17"></a>
+<a class="anchor" id="a0502367665337bb435b09546d7e18978"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -303,7 +313,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="rgw__acl_8h.html#ab148697d72cabed7ca7af8a9f269de98">ACLGroupTypeEnum</a> ACLGrant::get_group </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -315,7 +325,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9e3870f8b64e264d8ef58db4edf0bfff"></a>
+<a class="anchor" id="a3c724541cf428849dc0f6278ac51caf2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -325,9 +335,9 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool ACLGrant::get_id </td>
           <td>(</td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>_id</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -362,6 +372,52 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abe7602f08b13c07bf2360e045e1a6fc4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classACLPermission.html">ACLPermission</a>&amp; ACLGrant::get_permission </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaae00a519696dcdc7230c185a735e4a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string&amp; ACLGrant::get_referer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad9d578be3bdee0e4e7b53ea29b890e50"></a>
 <div class="memitem">
 <div class="memproto">
@@ -385,7 +441,30 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a14718453522e8447a854b5efa69259bd"></a>
+<a class="anchor" id="a435df339b5bf0de65ed57b044abe61dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classACLGranteeType.html">ACLGranteeType</a>&amp; ACLGrant::get_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a54ed7830e5d257d37b2d670e1be94807"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -395,19 +474,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ACLGrant::set_canon </td>
           <td>(</td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structrgw__user.html">rgw_user</a> &amp;&#160;</td>
           <td class="paramname"><em>_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>perm</em>&#160;</td>
         </tr>
         <tr>
@@ -425,7 +504,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a455a7fa0d54a49b7338c0f9c85b8af60"></a>
+<a class="anchor" id="ae1796faf4223ef1af8a59aa7c2392b67"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -441,7 +520,41 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>perm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8a80f4b0c64c4eda8ff66ca8c8c31222"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACLGrant::set_referer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_url_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>perm</em>&#160;</td>
         </tr>
         <tr>
@@ -516,7 +629,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2373ea71450bd2be220dcfae8e092398"></a>
+<a class="anchor" id="add26b4555c6a77287c174a2b46a5da3a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -524,7 +637,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string ACLGrant::id</td>
+          <td class="memname"><a class="el" href="structrgw__user.html">rgw_user</a> ACLGrant::id</td>
         </tr>
       </table>
   </td>
@@ -596,6 +709,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a13c84a448fca899f34ba0b8bca20f860"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ACLGrant::url_spec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rgw__acl_8h_source.html">rgw_acl.h</a></li>
 <li><a class="el" href="rgw__dencoder_8cc.html">rgw_dencoder.cc</a></li>
@@ -604,7 +737,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

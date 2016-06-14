@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -111,18 +111,18 @@ Collaboration diagram for RGWCache&lt; T &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c75c7615c819040174640c03ce4e9d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#a5c75c7615c819040174640c03ce4e9d0">RGWCache</a> ()</td></tr>
 <tr class="separator:a5c75c7615c819040174640c03ce4e9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac69796dfa7fecc656f748fb304f28911"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#ac69796dfa7fecc656f748fb304f28911">set_attr</a> (void *ctx, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, const char *name, bufferlist &amp;bl, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
-<tr class="separator:ac69796dfa7fecc656f748fb304f28911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49dd72e1611971d3ce6f28ad5c6d6997"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#a49dd72e1611971d3ce6f28ad5c6d6997">set_attrs</a> (void *ctx, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, map&lt; string, bufferlist &gt; &amp;attrs, map&lt; string, bufferlist &gt; *rmattrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
-<tr class="separator:a49dd72e1611971d3ce6f28ad5c6d6997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab29cf320b6690a607b3c9c4f6a9eb8e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#ab29cf320b6690a607b3c9c4f6a9eb8e5">put_system_obj_impl</a> (<a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, uint64_t size, time_t *mtime, map&lt; std::string, bufferlist &gt; &amp;attrs, int flags, bufferlist &amp;data, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, time_t set_mtime)</td></tr>
-<tr class="separator:ab29cf320b6690a607b3c9c4f6a9eb8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada4475a66070769c08acf7174369f26e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#ada4475a66070769c08acf7174369f26e">put_obj_data</a> (void *ctx, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, const char *data, off_t ofs, size_t len, bool exclusive)</td></tr>
-<tr class="separator:ada4475a66070769c08acf7174369f26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8f1191640ec01b6efce85a17395892a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#ac8f1191640ec01b6efce85a17395892a">get_system_obj</a> (<a class="el" href="structRGWObjectCtx.html">RGWObjectCtx</a> &amp;obj_ctx, <a class="el" href="structRGWRados_1_1SystemObject_1_1Read_1_1GetObjState.html">RGWRados::SystemObject::Read::GetObjState</a> &amp;read_state, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, bufferlist &amp;bl, off_t ofs, off_t end, <a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *cache_info)</td></tr>
-<tr class="separator:ac8f1191640ec01b6efce85a17395892a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c5b0f89c74da19ad808454ed5ecac1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#a43c5b0f89c74da19ad808454ed5ecac1">raw_obj_stat</a> (<a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, uint64_t *psize, time_t *pmtime, uint64_t *epoch, map&lt; string, bufferlist &gt; *attrs, bufferlist *first_chunk, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
-<tr class="separator:a43c5b0f89c74da19ad808454ed5ecac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5d8642eae6023dc6b910a7d37821ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#aff5d8642eae6023dc6b910a7d37821ba">register_chained_cache</a> (<a class="el" href="classRGWChainedCache.html">RGWChainedCache</a> *cc)</td></tr>
+<tr class="separator:aff5d8642eae6023dc6b910a7d37821ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05615a8191adbd0f1d9a2f8ea86ffd68"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#a05615a8191adbd0f1d9a2f8ea86ffd68">system_obj_set_attrs</a> (void *ctx, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, map&lt; string, bufferlist &gt; &amp;attrs, map&lt; string, bufferlist &gt; *rmattrs, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
+<tr class="separator:a05615a8191adbd0f1d9a2f8ea86ffd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bebccdcf985e72c9d76d42cbf477fd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#a2bebccdcf985e72c9d76d42cbf477fd4">put_system_obj_impl</a> (<a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, uint64_t size, real_time *mtime, map&lt; std::string, bufferlist &gt; &amp;attrs, int flags, bufferlist &amp;data, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, real_time set_mtime)</td></tr>
+<tr class="separator:a2bebccdcf985e72c9d76d42cbf477fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1e253ba14ebad962410d52339f5e33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#a2e1e253ba14ebad962410d52339f5e33">put_system_obj_data</a> (void *ctx, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, bufferlist &amp;bl, off_t ofs, bool exclusive)</td></tr>
+<tr class="separator:a2e1e253ba14ebad962410d52339f5e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7f36e5bfb830be024cf84b22e84a00b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#af7f36e5bfb830be024cf84b22e84a00b">get_system_obj</a> (<a class="el" href="structRGWObjectCtx.html">RGWObjectCtx</a> &amp;obj_ctx, <a class="el" href="structRGWRados_1_1SystemObject_1_1Read_1_1GetObjState.html">RGWRados::SystemObject::Read::GetObjState</a> &amp;read_state, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker, <a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, bufferlist &amp;bl, off_t ofs, off_t end, map&lt; string, bufferlist &gt; *attrs, <a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *cache_info)</td></tr>
+<tr class="separator:af7f36e5bfb830be024cf84b22e84a00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26bca560d0d337c043234983a0e673af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#a26bca560d0d337c043234983a0e673af">raw_obj_stat</a> (<a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, uint64_t *psize, real_time *pmtime, uint64_t *epoch, map&lt; string, bufferlist &gt; *attrs, bufferlist *first_chunk, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
+<tr class="separator:a26bca560d0d337c043234983a0e673af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afce1284529762097216d7556ed196ef1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#afce1284529762097216d7556ed196ef1">delete_system_obj</a> (<a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;obj, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *objv_tracker)</td></tr>
 <tr class="separator:afce1284529762097216d7556ed196ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10cb7c502aab88178fbab6537e960aba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCache.html#a10cb7c502aab88178fbab6537e960aba">chain_cache_entry</a> (list&lt; <a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> * &gt; &amp;cache_info_entries, <a class="el" href="structRGWChainedCache_1_1Entry.html">RGWChainedCache::Entry</a> *chained_entry)</td></tr>
@@ -219,7 +219,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac8f1191640ec01b6efce85a17395892a"></a>
+<a class="anchor" id="af7f36e5bfb830be024cf84b22e84a00b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -270,6 +270,12 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">map&lt; string, bufferlist &gt; *&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="structrgw__cache__entry__info.html">rgw_cache_entry_info</a> *&#160;</td>
           <td class="paramname"><em>cache_info</em>&#160;</td>
         </tr>
@@ -283,14 +289,14 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ada4475a66070769c08acf7174369f26e"></a>
+<a class="anchor" id="a2e1e253ba14ebad962410d52339f5e33"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classRGWCache.html">RGWCache</a>&lt; T &gt;::put_obj_data </td>
+          <td class="memname">int <a class="el" href="classRGWCache.html">RGWCache</a>&lt; T &gt;::put_system_obj_data </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
@@ -304,20 +310,14 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
+          <td class="paramtype">bufferlist &amp;&#160;</td>
+          <td class="paramname"><em>bl</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">off_t&#160;</td>
           <td class="paramname"><em>ofs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>len</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -335,7 +335,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ab29cf320b6690a607b3c9c4f6a9eb8e5"></a>
+<a class="anchor" id="a2bebccdcf985e72c9d76d42cbf477fd4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -356,7 +356,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *&#160;</td>
           <td class="paramname"><em>mtime</em>, </td>
         </tr>
         <tr>
@@ -386,7 +386,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>set_mtime</em>&#160;</td>
         </tr>
         <tr>
@@ -399,7 +399,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a43c5b0f89c74da19ad808454ed5ecac1"></a>
+<a class="anchor" id="a26bca560d0d337c043234983a0e673af"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -420,7 +420,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramtype">real_time *&#160;</td>
           <td class="paramname"><em>pmtime</em>, </td>
         </tr>
         <tr>
@@ -457,60 +457,40 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac69796dfa7fecc656f748fb304f28911"></a>
+<a class="anchor" id="aff5d8642eae6023dc6b910a7d37821ba"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classRGWCache.html">RGWCache</a>&lt; T &gt;::set_attr </td>
+          <td class="memname">void <a class="el" href="classRGWCache.html">RGWCache</a>&lt; T &gt;::register_chained_cache </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="classRGWChainedCache.html">RGWChainedCache</a> *&#160;</td>
+          <td class="paramname"><em>cc</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classrgw__obj.html">rgw_obj</a> &amp;&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bufferlist &amp;&#160;</td>
-          <td class="paramname"><em>bl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> *&#160;</td>
-          <td class="paramname"><em>objv_tracker</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a49dd72e1611971d3ce6f28ad5c6d6997"></a>
+<a class="anchor" id="a05615a8191adbd0f1d9a2f8ea86ffd68"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classRGWCache.html">RGWCache</a>&lt; T &gt;::set_attrs </td>
+          <td class="memname">int <a class="el" href="classRGWCache.html">RGWCache</a>&lt; T &gt;::system_obj_set_attrs </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
@@ -555,7 +535,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:41 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

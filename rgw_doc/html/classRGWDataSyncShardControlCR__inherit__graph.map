@@ -1,0 +1,5 @@
+<map id="RGWDataSyncShardControlCR" name="RGWDataSyncShardControlCR">
+<area shape="rect" id="node2" href="$classRGWBackoffControlCR.html" title="{RGWBackoffControlCR\n||+ RGWBackoffControlCR()\l+ ~RGWBackoffControlCR()\l+ alloc_cr()\l+ alloc_finisher_cr()\l+ operate()\l# backoff_ptr()\l# cr_lock()\l# get_cr()\l}" alt="" coords="57,683,247,863"/>
+<area shape="rect" id="node3" href="$classRGWCoroutine.html" title="{RGWCoroutine\n|# _yield_ret\l# drain_cr\l# cct\l# stack\l# retcode\l# state\l# spawned\l# error_stream\l|+ RGWCoroutine()\l+ ~RGWCoroutine()\l+ operate()\l+ is_done()\l+ is_error()\l+ log_error()\l+ error_str()\l+ set_retcode()\l+ get_ret_status()\l+ call()\land 12 more...\l# set_state()\l# set_cr_error()\l# set_cr_done()\l# set_io_blocked()\l# io_block()\l# reset_description()\l# set_description()\l# set_status()\l# set_status()\l}" alt="" coords="82,176,221,635"/>
+<area shape="rect" id="node5" href="$classboost_1_1asio_1_1coroutine.html" title="{boost::asio::coroutine\n||+ coroutine()\l+ is_child()\l+ is_parent()\l+ is_complete()\l}" alt="" coords="160,6,307,127"/>
+</map>

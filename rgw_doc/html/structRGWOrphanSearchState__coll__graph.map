@@ -1,0 +1,4 @@
+<map id="RGWOrphanSearchState" name="RGWOrphanSearchState">
+<area shape="rect" id="node2" href="$structRGWOrphanSearchStage.html" title="{RGWOrphanSearchStage\n|+ stage\l+ shard\l|+ RGWOrphanSearchStage()\l+ RGWOrphanSearchStage()\l+ RGWOrphanSearchStage()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="5,160,197,325"/>
+<area shape="rect" id="node4" href="$structRGWOrphanSearchInfo.html" title="{RGWOrphanSearchInfo\n|+ num_shards\l+ start_time\l|+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="221,182,380,303"/>
+</map>

@@ -1,3 +1,3 @@
 <map id="RGWXMLParser" name="RGWXMLParser">
-<area shape="rect" id="node2" href="$classXMLObj.html" title="{XMLObj\n|# data\l# children\l# attr_map\l|+ XMLObj()\l+ ~XMLObj()\l+ xml_start()\l+ xml_end()\l+ xml_handle_data()\l+ get_data()\l+ get_parent()\l+ add_child()\l+ get_attr()\l+ find()\l+ find_first()\l}" alt="" coords="9,5,148,259"/>
+<area shape="rect" id="node2" href="$classXMLObj.html" title="{XMLObj\n|# children\l# attr_map\l|+ XMLObj()\l+ ~XMLObj()\l+ xml_start()\l+ xml_end()\l+ xml_handle_data()\l+ get_data()\l+ get_parent()\l+ add_child()\l+ get_attr()\l+ find()\l+ find_first()\l}" alt="" coords="9,147,148,386"/>
 </map>

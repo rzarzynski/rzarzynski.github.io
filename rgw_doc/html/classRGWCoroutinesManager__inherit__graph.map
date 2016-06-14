@@ -1,0 +1,7 @@
+<map id="RGWCoroutinesManager" name="RGWCoroutinesManager">
+<area shape="rect" id="node2" href="$classRGWDataNotifierManager.html" title="{RGWDataNotifierManager\n||+ RGWDataNotifierManager()\l+ notify_all()\l}" alt="" coords="5,433,200,525"/>
+<area shape="rect" id="node3" href="$classRGWMetaNotifierManager.html" title="{RGWMetaNotifierManager\n||+ RGWMetaNotifierManager()\l+ notify_all()\l}" alt="" coords="225,433,420,525"/>
+<area shape="rect" id="node4" href="$classRGWRemoteBucketLog.html" title="{RGWRemoteBucketLog\n||+ RGWRemoteBucketLog()\l+ init()\l+ finish()\l+ read_sync_status_cr()\l+ init_sync_status_cr()\l+ run_sync_cr()\l+ wakeup()\l}" alt="" coords="445,396,627,561"/>
+<area shape="rect" id="node5" href="$classRGWRemoteDataLog.html" title="{RGWRemoteDataLog\n||+ RGWRemoteDataLog()\l+ init()\l+ finish()\l+ read_log_info()\l+ read_source_log_shards_info()\l+ read_source_log_shards_next()\l+ get_shard_info()\l+ read_sync_status()\l+ init_sync_status()\l+ run_sync()\l+ wakeup()\l}" alt="" coords="651,367,865,591"/>
+<area shape="rect" id="node6" href="$classRGWRemoteMetaLog.html" title="{RGWRemoteMetaLog\n||+ RGWRemoteMetaLog()\l+ ~RGWRemoteMetaLog()\l+ init()\l+ finish()\l+ read_log_info()\l+ read_master_log_shards_info()\l+ read_master_log_shards_next()\l+ read_sync_status()\l+ init_sync_status()\l+ run_sync()\l+ wakeup()\l+ get_sync_env()\l+ get_sync_status()\l}" alt="" coords="891,352,1107,605"/>
+</map>

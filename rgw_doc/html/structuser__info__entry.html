@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -95,7 +95,7 @@ Collaboration diagram for user_info_entry:</div>
 <div class="dyncontent">
 <div class="center"><img src="structuser__info__entry__coll__graph.png" border="0" usemap="#user__info__entry_coll__map" alt="Collaboration graph"/></div>
 <map name="user__info__entry_coll__map" id="user__info__entry_coll__map">
-<area shape="rect" id="node2" href="structRGWUserInfo.html" title="{RGWUserInfo\n|+ auid\l+ user_id\l+ display_name\l+ user_email\l+ access_keys\l+ swift_keys\l+ subusers\l+ suspended\l+ max_buckets\l+ op_mask\l+ system\l+ default_placement\l+ placement_tags\l+ temp_url_keys\l|+ RGWUserInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ clear()\l+ generate_test_instances()\l}" alt="" coords="99,278,283,634"/><area shape="rect" id="node3" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size_kb\l+ max_objects\l+ enabled\l+ max_size_soft_threshold\l+ max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,5,184,200"/><area shape="rect" id="node4" href="classRGWUserCaps.html" title="{RGWUserCaps\n||+ add_from_string()\l+ remove_from_string()\l+ encode()\l+ decode()\l+ check_cap()\l+ dump()\l+ dump()\l+ decode_json()\l+ parse_cap_perm()\l}" alt="" coords="208,5,365,200"/><area shape="rect" id="node5" href="structRGWObjVersionTracker.html" title="{RGWObjVersionTracker\n|+ read_version\l+ write_version\l|+ version_for_read()\l+ version_for_write()\l+ version_for_check()\l+ prepare_op_for_read()\l+ prepare_op_for_write()\l+ apply_write()\l+ clear()\l+ generate_new_write_ver()\l}" alt="" coords="307,359,489,553"/></map>
+<area shape="rect" id="node2" href="structRGWUserInfo.html" title="{RGWUserInfo\n|+ auid\l+ access_keys\l+ swift_keys\l+ subusers\l+ suspended\l+ max_buckets\l+ op_mask\l+ admin\l+ system\l+ placement_tags\l+ temp_url_keys\l|+ RGWUserInfo()\l+ get_key0()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l+ generate_test_instances()\l}" alt="" coords="197,461,381,773"/><area shape="rect" id="node3" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size\l+ max_objects\l+ enabled\l+ check_on_raw\l# max_size_soft_threshold\l# max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,167,184,377"/><area shape="rect" id="node4" href="structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="371,160,469,384"/><area shape="rect" id="node6" href="classRGWUserCaps.html" title="{RGWUserCaps\n||+ add_from_string()\l+ remove_from_string()\l+ encode()\l+ decode()\l+ check_cap()\l+ is_valid_cap_type()\l+ dump()\l+ dump()\l+ decode_json()\l+ parse_cap_perm()\l}" alt="" coords="493,167,651,377"/><area shape="rect" id="node7" href="structRGWObjVersionTracker.html" title="{RGWObjVersionTracker\n|+ read_version\l+ write_version\l|+ version_for_read()\l+ version_for_write()\l+ version_for_check()\l+ prepare_op_for_read()\l+ prepare_op_for_write()\l+ apply_write()\l+ clear()\l+ generate_new_write_ver()\l}" alt="" coords="406,520,588,715"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -104,8 +104,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a6a1eecaa933a579121be42753298dd94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26d06e6a8d8a868c2380ef5a8d37d536"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuser__info__entry.html#a26d06e6a8d8a868c2380ef5a8d37d536">objv_tracker</a></td></tr>
 <tr class="separator:a26d06e6a8d8a868c2380ef5a8d37d536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bba1dcd3d3dbd94d7a9ff3e1299788c"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuser__info__entry.html#a8bba1dcd3d3dbd94d7a9ff3e1299788c">mtime</a></td></tr>
-<tr class="separator:a8bba1dcd3d3dbd94d7a9ff3e1299788c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6212116fec2ead99a7f03154775b80a"><td class="memItemLeft" align="right" valign="top">real_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuser__info__entry.html#ae6212116fec2ead99a7f03154775b80a">mtime</a></td></tr>
+<tr class="separator:ae6212116fec2ead99a7f03154775b80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a6a1eecaa933a579121be42753298dd94"></a>
@@ -120,12 +120,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8bba1dcd3d3dbd94d7a9ff3e1299788c"></a>
+<a class="anchor" id="ae6212116fec2ead99a7f03154775b80a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">time_t user_info_entry::mtime</td>
+          <td class="memname">real_time user_info_entry::mtime</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -150,7 +150,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

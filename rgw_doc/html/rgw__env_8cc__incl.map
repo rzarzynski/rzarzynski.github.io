@@ -1,8 +1,14 @@
 <map id="rgw_env.cc" name="rgw_env.cc">
-<area shape="rect" id="node2" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="821,155,931,181"/>
-<area shape="rect" id="node26" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="1989,80,2067,107"/>
-<area shape="rect" id="node13" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="227,237,305,264"/>
-<area shape="rect" id="node15" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="117,237,203,264"/>
-<area shape="rect" id="node16" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1089,237,1183,264"/>
-<area shape="rect" id="node19" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2065,237,2159,264"/>
+<area shape="rect" id="node2" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1645,155,1755,181"/>
+<area shape="rect" id="node38" href="$rgw__log_8h.html" title="rgw_log.h" alt="" coords="2641,80,2719,107"/>
+<area shape="rect" id="node13" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1558,237,1636,264"/>
+<area shape="rect" id="node14" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="1227,320,1356,347"/>
+<area shape="rect" id="node15" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1433,320,1519,347"/>
+<area shape="rect" id="node16" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="2368,237,2461,264"/>
+<area shape="rect" id="node19" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2628,469,2721,496"/>
+<area shape="rect" id="node22" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="1813,237,1920,264"/>
+<area shape="rect" id="node30" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1945,237,2031,264"/>
+<area shape="rect" id="node23" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="1595,320,1676,347"/>
+<area shape="rect" id="node34" href="$rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2107,320,2221,347"/>
+<area shape="rect" id="node35" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="2229,395,2349,421"/>
 </map>

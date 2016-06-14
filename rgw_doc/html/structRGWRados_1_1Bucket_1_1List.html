@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -103,7 +103,7 @@ Collaboration diagram for RGWRados::Bucket::List:</div>
 <div class="dyncontent">
 <div class="center"><img src="structRGWRados_1_1Bucket_1_1List__coll__graph.png" border="0" usemap="#RGWRados_1_1Bucket_1_1List_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWRados_1_1Bucket_1_1List_coll__map" id="RGWRados_1_1Bucket_1_1List_coll__map">
-<area shape="rect" id="node2" href="classRGWRados_1_1Bucket.html" title="{RGWRados::Bucket\n||+ Bucket()\l+ get_store()\l+ get_bucket()\l}" alt="" coords="5,361,147,468"/><area shape="rect" id="node3" href="structrgw__obj__key.html" title="{rgw_obj_key\n|+ name\l+ instance\l|+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="151,6,265,274"/><area shape="rect" id="node4" href="structRGWRados_1_1Bucket_1_1List_1_1Params.html" title="{RGWRados::Bucket::List\l::Params\n|+ prefix\l+ delim\l+ ns\l+ enforce_ns\l+ list_versions\l|+ Params()\l}" alt="" coords="305,339,476,490"/><area shape="rect" id="node5" href="classRGWAccessListFilter.html" title="{RGWAccessListFilter\n||+ ~RGWAccessListFilter()\l+ filter()\l}" alt="" coords="302,94,479,186"/></map>
+<area shape="rect" id="node2" href="classRGWRados_1_1Bucket.html" title="{RGWRados::Bucket\n||+ Bucket()\l+ get_store()\l+ get_bucket()\l+ get_bucket_info()\l+ get_shard_id()\l+ set_shard_id()\l}" alt="" coords="5,521,147,671"/><area shape="rect" id="node3" href="structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="203,160,317,443"/><area shape="rect" id="node5" href="structRGWRados_1_1Bucket_1_1List_1_1Params.html" title="{RGWRados::Bucket::List\l::Params\n|+ enforce_ns\l+ list_versions\l|+ Params()\l}" alt="" coords="305,543,476,649"/><area shape="rect" id="node6" href="classRGWAccessListFilter.html" title="{RGWAccessListFilter\n||+ ~RGWAccessListFilter()\l+ filter()\l}" alt="" coords="434,255,611,347"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -148,7 +148,7 @@ Public Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -214,7 +214,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>get listing of the objects in a bucket. bucket: bucket to list contents of max: maximum number of results to return prefix: only return results that match this prefix delim: do not include results that match this string. Any skipped results will have the matching portion of their name inserted in common_prefixes with a "true" mark. marker: if filled in, begin the listing with this object. result: the objects are put in here. common_prefixes: if delim is filled in, any matching prefixes are placed here. </p>
+<p>get listing of the objects in a bucket. bucket: bucket to list contents of max: maximum number of results to return prefix: only return results that match this prefix delim: do not include results that match this string. Any skipped results will have the matching portion of their name inserted in common_prefixes with a "true" mark. marker: if filled in, begin the listing with this object. end_marker: if filled in, end the listing with this object. result: the objects are put in here. common_prefixes: if delim is filled in, any matching prefixes are placed here. </p>
 
 </div>
 </div>
@@ -262,7 +262,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:44 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,0 +1,4 @@
+<map id="RGWQuotaInfoApplier" name="RGWQuotaInfoApplier">
+<area shape="rect" id="node2" href="$classRGWQuotaInfoDefApplier.html" title="{RGWQuotaInfoDefApplier\n||+ is_size_exceeded()\l+ is_num_objs_exceeded()\l}" alt="" coords="5,190,184,282"/>
+<area shape="rect" id="node3" href="$classRGWQuotaInfoRawApplier.html" title="{RGWQuotaInfoRawApplier\n||+ is_size_exceeded()\l+ is_num_objs_exceeded()\l}" alt="" coords="208,190,387,282"/>
+</map>

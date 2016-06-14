@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -91,57 +91,420 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef CEPH_RGW_REST_CONN_H</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CEPH_RGW_REST_CONN_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rgw__rest__client_8h.html">rgw_rest_client.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span>CephContext;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="classRGWRados.html">RGWRados</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span>RGWGetObjData;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rgw__rados_8h.html">rgw_rados.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rgw__rest__client_8h.html">rgw_rest_client.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;common/ceph_json.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;common/RefCountedObj.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWRESTConn.html">RGWRESTConn</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  CephContext *cct;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  map&lt;int, string&gt; endpoints;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="structRGWAccessKey.html">RGWAccessKey</a> key;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">string</span> region;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  atomic_t counter;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classRGWRESTConn.html#a3085a750861b2d60382196d45249d446">RGWRESTConn</a>(CephContext *_cct, <a class="code" href="classRGWRados.html">RGWRados</a> *<a class="code" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, list&lt;string&gt;&amp; endpoints);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#af19c7e204d2dbd1ec4e276ab961836e4">get_url</a>(<span class="keywordtype">string</span>&amp; endpoint);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">/* sync request */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#af02c5f4f0321249d3a211b80535b1044">forward</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; uid, <a class="code" href="structreq__info.html">req_info</a>&amp; info, obj_version *objv, <span class="keywordtype">size_t</span> max_response, bufferlist *inbl, bufferlist *outbl);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">/* async request */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#a580b24d5d05c19330c8e9eea2f2111d9">put_obj_init</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; uid, <a class="code" href="classrgw__obj.html">rgw_obj</a>&amp; obj, uint64_t obj_size,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                   map&lt;string, bufferlist&gt;&amp; attrs, <a class="code" href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a> **req);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#a1ae7df3fdb3713856cd5c8a1c3a5b533">complete_request</a>(<a class="code" href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a> *req, <span class="keywordtype">string</span>&amp; etag, time_t *mtime);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#a77ef9388d8bf09690b1a6649970e6244">get_obj</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; uid, <a class="code" href="structreq__info.html">req_info</a> *info <span class="comment">/* optional */</span>, <a class="code" href="classrgw__obj.html">rgw_obj</a>&amp; obj, <span class="keywordtype">bool</span> prepend_metadata, <a class="code" href="classRGWGetDataCB.html">RGWGetDataCB</a> *cb, <a class="code" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> **req);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#a1ae7df3fdb3713856cd5c8a1c3a5b533">complete_request</a>(<a class="code" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> *req, <span class="keywordtype">string</span>&amp; etag, time_t *mtime, map&lt;string, string&gt;&amp; attrs);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classRGWRESTConn_html_af19c7e204d2dbd1ec4e276ab961836e4"><div class="ttname"><a href="classRGWRESTConn.html#af19c7e204d2dbd1ec4e276ab961836e4">RGWRESTConn::get_url</a></div><div class="ttdeci">int get_url(string &amp;endpoint)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:20</div></div>
-<div class="ttc" id="classRGWRESTConn_html_a1ae7df3fdb3713856cd5c8a1c3a5b533"><div class="ttname"><a href="classRGWRESTConn.html#a1ae7df3fdb3713856cd5c8a1c3a5b533">RGWRESTConn::complete_request</a></div><div class="ttdeci">int complete_request(RGWRESTStreamWriteRequest *req, string &amp;etag, time_t *mtime)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:73</div></div>
-<div class="ttc" id="classRGWRados_html"><div class="ttname"><a href="classRGWRados.html">RGWRados</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:1158</div></div>
-<div class="ttc" id="classRGWRESTConn_html_af02c5f4f0321249d3a211b80535b1044"><div class="ttname"><a href="classRGWRESTConn.html#af02c5f4f0321249d3a211b80535b1044">RGWRESTConn::forward</a></div><div class="ttdeci">int forward(const string &amp;uid, req_info &amp;info, obj_version *objv, size_t max_response, bufferlist *inbl, bufferlist *outbl)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:33</div></div>
-<div class="ttc" id="rgw__admin_8cc_html_a9b49a835107f65049c05bddc99751652"><div class="ttname"><a href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a></div><div class="ttdeci">static RGWRados * store</div><div class="ttdef"><b>Definition:</b> rgw_admin.cc:40</div></div>
-<div class="ttc" id="structreq__info_html"><div class="ttname"><a href="structreq__info.html">req_info</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:906</div></div>
-<div class="ttc" id="classRGWRESTConn_html_a580b24d5d05c19330c8e9eea2f2111d9"><div class="ttname"><a href="classRGWRESTConn.html#a580b24d5d05c19330c8e9eea2f2111d9">RGWRESTConn::put_obj_init</a></div><div class="ttdeci">int put_obj_init(const string &amp;uid, rgw_obj &amp;obj, uint64_t obj_size, map&lt; string, bufferlist &gt; &amp;attrs, RGWRESTStreamWriteRequest **req)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:58</div></div>
-<div class="ttc" id="classRGWRESTConn_html"><div class="ttname"><a href="classRGWRESTConn.html">RGWRESTConn</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:13</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span>CephContext;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="classRGWRados.html">RGWRados</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span>RGWGetObjData;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="rgw__rest__conn_8h.html#ab0edc0439b5263cfb45f90f6f8edf71c">   18</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="rgw__rest__conn_8h.html#ab0edc0439b5263cfb45f90f6f8edf71c">parse_decode_json</a>(CephContext *cct, T&amp; t, bufferlist&amp; bl)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  JSONParser p;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">int</span> ret = p.parse(bl.c_str(), bl.length());</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="rgw__basic__types_8cc.html#a83dfe8268c0c76ff6ceaf083ad129d5c">decode_json_obj</a>(t, &amp;p);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  } <span class="keywordflow">catch</span> (JSONDecoder::err&amp; e) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> -EINVAL;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structrgw__http__param__pair.html">   34</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structrgw__http__param__pair.html#a1fc3e9fe0c072f8701bd6ac94ab3dfeb">   35</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structrgw__http__param__pair.html#a1fc3e9fe0c072f8701bd6ac94ab3dfeb">key</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structrgw__http__param__pair.html#a5bb3284c07554d4c6723a63e79bcb875">   36</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structrgw__http__param__pair.html#a5bb3284c07554d4c6723a63e79bcb875">val</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// copy a null-terminated rgw_http_param_pair list into a list of string pairs</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="rgw__rest__conn_8h.html#aa14583ec12a68d63cf797488bb75ec5c">   40</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> <a class="code" href="rgw__rest__conn_8h.html#aa14583ec12a68d63cf797488bb75ec5c">make_param_list</a>(<span class="keyword">const</span> <a class="code" href="structrgw__http__param__pair.html">rgw_http_param_pair</a>* pp)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> params;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">while</span> (pp &amp;&amp; pp-&gt;<a class="code" href="structrgw__http__param__pair.html#a1fc3e9fe0c072f8701bd6ac94ab3dfeb">key</a>) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">string</span> k = pp-&gt;<a class="code" href="structrgw__http__param__pair.html#a1fc3e9fe0c072f8701bd6ac94ab3dfeb">key</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">string</span> v = (pp-&gt;<a class="code" href="structrgw__http__param__pair.html#a5bb3284c07554d4c6723a63e79bcb875">val</a> ? pp-&gt;<a class="code" href="structrgw__http__param__pair.html#a5bb3284c07554d4c6723a63e79bcb875">val</a> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    params.emplace_back(make_pair(std::move(k), std::move(v)));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    ++pp;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">return</span> params;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWRESTConn.html">RGWRESTConn</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  CephContext *cct;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  vector&lt;string&gt; endpoints;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="structRGWAccessKey.html">RGWAccessKey</a> key;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">string</span> self_zone_group;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">string</span> remote_id;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  atomic_t counter;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classRGWRESTConn.html#a1222b9db7e56d62089670c04a8e9c665">RGWRESTConn</a>(CephContext *_cct, <a class="code" href="classRGWRados.html">RGWRados</a> *<a class="code" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; _remote_id, <span class="keyword">const</span> list&lt;string&gt;&amp; endpoints);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#ac833f895cae6760d02b776c2a597f02d">get_url</a>(<span class="keywordtype">string</span>&amp; endpoint);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classRGWRESTConn.html#ac833f895cae6760d02b776c2a597f02d">get_url</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html#a728bf5cde5f0e9774196f4a67224a5e3">   66</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code" href="classRGWRESTConn.html#a728bf5cde5f0e9774196f4a67224a5e3">get_self_zonegroup</a>() {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> self_zone_group;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html#ae5a35907a2b268f4a2cd5b9376a0dbe1">   69</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code" href="classRGWRESTConn.html#ae5a35907a2b268f4a2cd5b9376a0dbe1">get_remote_id</a>() {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> remote_id;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html#af51316213202907acf9ba8d79181d4d1">   72</a></span>&#160;  <a class="code" href="structRGWAccessKey.html">RGWAccessKey</a>&amp; <a class="code" href="classRGWRESTConn.html#af51316213202907acf9ba8d79181d4d1">get_key</a>() {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> key;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html#acef1ef09ba761a6f76018cc74a685e56">   76</a></span>&#160;  CephContext *<a class="code" href="classRGWRESTConn.html#acef1ef09ba761a6f76018cc74a685e56">get_ctx</a>() {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> cct;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html#aef331778dac9cd6c5e3611c3b0f23822">   79</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classRGWRESTConn.html#aef331778dac9cd6c5e3611c3b0f23822">get_endpoint_count</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> endpoints.size(); }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="comment">/* sync request */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#a66e78683f8354dcb707e0c4033f34c95">forward</a>(<span class="keyword">const</span> <a class="code" href="structrgw__user.html">rgw_user</a>&amp; uid, <a class="code" href="structreq__info.html">req_info</a>&amp; info, obj_version *objv, <span class="keywordtype">size_t</span> max_response, bufferlist *inbl, bufferlist *outbl);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">/* async request */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#a5f5886b0cbcfe558a37729c3075ca10c">put_obj_init</a>(<span class="keyword">const</span> <a class="code" href="structrgw__user.html">rgw_user</a>&amp; uid, <a class="code" href="classrgw__obj.html">rgw_obj</a>&amp; obj, uint64_t obj_size,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                   map&lt;string, bufferlist&gt;&amp; attrs, <a class="code" href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a> **req);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#a8292d4688357649352203ee83f76af32">complete_request</a>(<a class="code" href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a> *req, <span class="keywordtype">string</span>&amp; etag, ceph::real_time *mtime);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#af62ce2c2c39172fd7ce1e2d45e73f349">get_obj</a>(<span class="keyword">const</span> <a class="code" href="structrgw__user.html">rgw_user</a>&amp; uid, <a class="code" href="structreq__info.html">req_info</a> *info <span class="comment">/* optional */</span>, <a class="code" href="classrgw__obj.html">rgw_obj</a>&amp; obj,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;              <span class="keyword">const</span> ceph::real_time *mod_ptr, <span class="keyword">const</span> ceph::real_time *unmod_ptr,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;              uint32_t mod_zone_id, uint64_t mod_pg_ver,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;              <span class="keywordtype">bool</span> prepend_metadata, <a class="code" href="classRGWGetDataCB.html">RGWGetDataCB</a> *cb, <a class="code" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> **req);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#a8292d4688357649352203ee83f76af32">complete_request</a>(<a class="code" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> *req, <span class="keywordtype">string</span>&amp; etag, ceph::real_time *mtime, map&lt;string, string&gt;&amp; attrs);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#ab425bae908b67669e5d805c8ef3d5346">get_resource</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; resource,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;           <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *extra_params,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                   map&lt;string, string&gt;* extra_headers,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                   bufferlist&amp; bl, <a class="code" href="classRGWHTTPManager.html">RGWHTTPManager</a> *mgr = NULL);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">get_json_resource</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; resource, <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *params, T&amp; t);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">get_json_resource</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; resource, <span class="keyword">const</span> <a class="code" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> *pp, T&amp; t);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">  108</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">RGWRESTConn::get_json_resource</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; resource, <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *params, T&amp; t)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  bufferlist bl;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">int</span> ret = <a class="code" href="classRGWRESTConn.html#ab425bae908b67669e5d805c8ef3d5346">get_resource</a>(resource, params, NULL, bl);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  ret = <a class="code" href="rgw__rest__conn_8h.html#ab0edc0439b5263cfb45f90f6f8edf71c">parse_decode_json</a>(cct, t, bl);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classRGWRESTConn.html#abc7c4a64af0822cb4fe312a80d4a329d">  125</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">RGWRESTConn::get_json_resource</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; resource,  <span class="keyword">const</span> <a class="code" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> *pp, T&amp; t)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> params = <a class="code" href="rgw__rest__conn_8h.html#aa14583ec12a68d63cf797488bb75ec5c">make_param_list</a>(pp);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">get_json_resource</a>(resource, &amp;params, t);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classRGWStreamIntoBufferlist.html">  131</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWStreamIntoBufferlist.html">RGWStreamIntoBufferlist</a> : <span class="keyword">public</span> <a class="code" href="classRGWGetDataCB.html">RGWGetDataCB</a> {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  bufferlist&amp; bl;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classRGWStreamIntoBufferlist.html#a4ec6854e29cb1654a290f3ebdf73fa7b">  134</a></span>&#160;  <a class="code" href="classRGWStreamIntoBufferlist.html#a4ec6854e29cb1654a290f3ebdf73fa7b">RGWStreamIntoBufferlist</a>(bufferlist&amp; _bl) : bl(_bl) {}</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classRGWStreamIntoBufferlist.html#ad420dec7edcb092b1cfee75b8ca1c0e7">  135</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWStreamIntoBufferlist.html#ad420dec7edcb092b1cfee75b8ca1c0e7">handle_data</a>(bufferlist&amp; inbl, off_t bl_ofs, off_t bl_len) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    bl.claim_append(inbl);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> bl_len;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html">  141</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWRESTReadResource.html">RGWRESTReadResource</a> : <span class="keyword">public</span> RefCountedObject {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  CephContext *cct;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <a class="code" href="classRGWRESTConn.html">RGWRESTConn</a> *conn;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">string</span> resource;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> params;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  map&lt;string, string&gt; headers;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  bufferlist bl;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <a class="code" href="classRGWStreamIntoBufferlist.html">RGWStreamIntoBufferlist</a> cb;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="classRGWHTTPManager.html">RGWHTTPManager</a> *mgr;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <a class="code" href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a> req;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">void</span> init_common(<a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *extra_headers);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="classRGWRESTReadResource.html#a92177e7e6de645d4204ffbdf5971b5de">RGWRESTReadResource</a>(<a class="code" href="classRGWRESTConn.html">RGWRESTConn</a> *_conn,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;              <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; _resource,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;              <span class="keyword">const</span> <a class="code" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> *pp,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;              <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *extra_headers,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;              <a class="code" href="classRGWHTTPManager.html">RGWHTTPManager</a> *_mgr);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="classRGWRESTReadResource.html#a92177e7e6de645d4204ffbdf5971b5de">RGWRESTReadResource</a>(<a class="code" href="classRGWRESTConn.html">RGWRESTConn</a> *_conn,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;              <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; _resource,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;              <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a>&amp; _params,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;              <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *extra_headers,</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;              <a class="code" href="classRGWHTTPManager.html">RGWHTTPManager</a> *_mgr);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html#a0161e8ac59f42ec6b9770ef5c0f33c5f">  168</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRGWRESTReadResource.html#a0161e8ac59f42ec6b9770ef5c0f33c5f">set_user_info</a>(<span class="keywordtype">void</span> *user_info) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    req.<a class="code" href="classRGWHTTPClient.html#a67ad4f0175fb610332e4ffc238576152">set_user_info</a>(user_info);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  }</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html#acee43a8b0d6cbd76c11e0985d83f3701">  171</a></span>&#160;  <span class="keywordtype">void</span> *<a class="code" href="classRGWRESTReadResource.html#acee43a8b0d6cbd76c11e0985d83f3701">get_user_info</a>() {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">return</span> req.<a class="code" href="classRGWHTTPClient.html#ab3eec0a953dde4bf4d16b29d8cb19313">get_user_info</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#ad3be8260e29e04a7db1e2eea9beb8e94">decode_resource</a>(T *dest);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#abbff0f1ac6951288540cae8fbe1fc8a4">read</a>();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#a5685337f6e8d7dd617cd0f5f03d8942a">aio_read</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html#af62d90cd9d6f60bba2e23dbf445624c4">  182</a></span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classRGWRESTReadResource.html#af62d90cd9d6f60bba2e23dbf445624c4">to_str</a>() {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">return</span> req.<a class="code" href="classRGWHTTPClient.html#a082c54458f5cce8855798cf5eed59d4a">to_str</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html#a5a76d0940a6b5c3c6820acd88a7e4c09">  186</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#a5a76d0940a6b5c3c6820acd88a7e4c09">get_http_status</a>() {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span> req.<a class="code" href="classRGWRESTSimpleRequest.html#acdf31f113f00dd9a4372d52759e2faa6">get_http_status</a>();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html#a50a53ed099b8acb8aed831a7bb63317f">  190</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#a50a53ed099b8acb8aed831a7bb63317f">wait_bl</a>(bufferlist *pbl) {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">int</span> ret = req.<a class="code" href="classRGWHTTPClient.html#a292dde78cd86b1b620774194a1602109">wait</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (req.<a class="code" href="classRGWRESTSimpleRequest.html#a742242e61d7173569df520e4151b9501">get_status</a>() &lt; 0) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="keywordflow">return</span> req.<a class="code" href="classRGWRESTSimpleRequest.html#a742242e61d7173569df520e4151b9501">get_status</a>();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    *pbl = bl;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#ada5e3d51aaa4118d258b7cd3d318d86d">wait</a>(T *dest);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#a84676ed5278944afe7ce0ad9e78049cd">fetch</a>(T *dest);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;};</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html#ad3be8260e29e04a7db1e2eea9beb8e94">  212</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#ad3be8260e29e04a7db1e2eea9beb8e94">RGWRESTReadResource::decode_resource</a>(T *dest)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordtype">int</span> ret = req.<a class="code" href="classRGWRESTSimpleRequest.html#a742242e61d7173569df520e4151b9501">get_status</a>();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  ret = <a class="code" href="rgw__rest__conn_8h.html#ab0edc0439b5263cfb45f90f6f8edf71c">parse_decode_json</a>(cct, *dest, bl);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html#a84676ed5278944afe7ce0ad9e78049cd">  226</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#a84676ed5278944afe7ce0ad9e78049cd">RGWRESTReadResource::fetch</a>(T *dest)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">int</span> ret = <a class="code" href="classRGWRESTReadResource.html#abbff0f1ac6951288540cae8fbe1fc8a4">read</a>();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  ret = <a class="code" href="classRGWRESTReadResource.html#ad3be8260e29e04a7db1e2eea9beb8e94">decode_resource</a>(dest);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="classRGWRESTReadResource.html#ada5e3d51aaa4118d258b7cd3d318d86d">  241</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classRGWRESTReadResource.html#ada5e3d51aaa4118d258b7cd3d318d86d">RGWRESTReadResource::wait</a>(T *dest)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keywordtype">int</span> ret = req.<a class="code" href="classRGWHTTPClient.html#a292dde78cd86b1b620774194a1602109">wait</a>();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  ret = <a class="code" href="classRGWRESTReadResource.html#ad3be8260e29e04a7db1e2eea9beb8e94">decode_resource</a>(dest);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="classRGWRESTPostResource.html">  255</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWRESTPostResource.html">RGWRESTPostResource</a> : <span class="keyword">public</span> RefCountedObject {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  CephContext *cct;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <a class="code" href="classRGWRESTConn.html">RGWRESTConn</a> *conn;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordtype">string</span> resource;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> params;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  map&lt;string, string&gt; headers;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  bufferlist bl;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <a class="code" href="classRGWStreamIntoBufferlist.html">RGWStreamIntoBufferlist</a> cb;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <a class="code" href="classRGWHTTPManager.html">RGWHTTPManager</a> *mgr;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <a class="code" href="classRGWRESTStreamRWRequest.html">RGWRESTStreamRWRequest</a> req;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keywordtype">void</span> init_common(<a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *extra_headers);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <a class="code" href="classRGWRESTPostResource.html#ae2a91c6d92514ee6fd2d4a72d92a1e91">RGWRESTPostResource</a>(<a class="code" href="classRGWRESTConn.html">RGWRESTConn</a> *_conn,</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;              <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; _resource,</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;              <span class="keyword">const</span> <a class="code" href="structrgw__http__param__pair.html">rgw_http_param_pair</a> *pp,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;              <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *extra_headers,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;              <a class="code" href="classRGWHTTPManager.html">RGWHTTPManager</a> *_mgr);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <a class="code" href="classRGWRESTPostResource.html#ae2a91c6d92514ee6fd2d4a72d92a1e91">RGWRESTPostResource</a>(<a class="code" href="classRGWRESTConn.html">RGWRESTConn</a> *_conn,</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;              <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; _resource,</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;              <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a>&amp; params,</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;              <a class="code" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> *extra_headers,</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;              <a class="code" href="classRGWHTTPManager.html">RGWHTTPManager</a> *_mgr);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="classRGWRESTPostResource.html#a3557555690f849a6cea8cbee8c5b1fb7">  282</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRGWRESTPostResource.html#a3557555690f849a6cea8cbee8c5b1fb7">set_user_info</a>(<span class="keywordtype">void</span> *user_info) {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    req.<a class="code" href="classRGWHTTPClient.html#a67ad4f0175fb610332e4ffc238576152">set_user_info</a>(user_info);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  }</div>
+<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="classRGWRESTPostResource.html#aea99a73b00408f161ce20ee1998c5a8a">  285</a></span>&#160;  <span class="keywordtype">void</span> *<a class="code" href="classRGWRESTPostResource.html#aea99a73b00408f161ce20ee1998c5a8a">get_user_info</a>() {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">return</span> req.<a class="code" href="classRGWHTTPClient.html#ab3eec0a953dde4bf4d16b29d8cb19313">get_user_info</a>();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTPostResource.html#a0e3ea835776544cc39c0d4920e6f148e">decode_resource</a>(T *dest);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTPostResource.html#a8cd5b86ba0594bf344c79a5f3f7c4589">send</a>(bufferlist&amp; bl);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTPostResource.html#a5e7d4fa514a6516f1f1d86d672cdcfe7">aio_send</a>(bufferlist&amp; bl);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="classRGWRESTPostResource.html#a95a2a544712da79c2109852b9a4cf513">  296</a></span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classRGWRESTPostResource.html#a95a2a544712da79c2109852b9a4cf513">to_str</a>() {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">return</span> req.<a class="code" href="classRGWHTTPClient.html#a082c54458f5cce8855798cf5eed59d4a">to_str</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="classRGWRESTPostResource.html#a078897f86b7f5521964a654960a9d5d1">  300</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTPostResource.html#a078897f86b7f5521964a654960a9d5d1">get_http_status</a>() {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">return</span> req.<a class="code" href="classRGWRESTSimpleRequest.html#acdf31f113f00dd9a4372d52759e2faa6">get_http_status</a>();</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="classRGWRESTPostResource.html#aa87c88d2d62819562c43f33a1ef8210b">  304</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTPostResource.html#aa87c88d2d62819562c43f33a1ef8210b">wait_bl</a>(bufferlist *pbl) {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">int</span> ret = req.<a class="code" href="classRGWHTTPClient.html#a292dde78cd86b1b620774194a1602109">wait</a>();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">if</span> (req.<a class="code" href="classRGWRESTSimpleRequest.html#a742242e61d7173569df520e4151b9501">get_status</a>() &lt; 0) {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      <span class="keywordflow">return</span> req.<a class="code" href="classRGWRESTSimpleRequest.html#a742242e61d7173569df520e4151b9501">get_status</a>();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    *pbl = bl;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWRESTPostResource.html#a48b909b70a89e07062727e946b3a7b55">wait</a>(T *dest);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;};</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="classRGWRESTPostResource.html#a0e3ea835776544cc39c0d4920e6f148e">  322</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classRGWRESTPostResource.html#a0e3ea835776544cc39c0d4920e6f148e">RGWRESTPostResource::decode_resource</a>(T *dest)</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordtype">int</span> ret = req.<a class="code" href="classRGWRESTSimpleRequest.html#a742242e61d7173569df520e4151b9501">get_status</a>();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  ret = <a class="code" href="rgw__rest__conn_8h.html#ab0edc0439b5263cfb45f90f6f8edf71c">parse_decode_json</a>(cct, *dest, bl);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="classRGWRESTPostResource.html#a48b909b70a89e07062727e946b3a7b55">  336</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classRGWRESTPostResource.html#a48b909b70a89e07062727e946b3a7b55">RGWRESTPostResource::wait</a>(T *dest)</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;{</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keywordtype">int</span> ret = req.<a class="code" href="classRGWHTTPClient.html#a292dde78cd86b1b620774194a1602109">wait</a>();</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  ret = <a class="code" href="classRGWRESTPostResource.html#a0e3ea835776544cc39c0d4920e6f148e">decode_resource</a>(dest);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;}</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classRGWRESTReadResource_html_a5685337f6e8d7dd617cd0f5f03d8942a"><div class="ttname"><a href="classRGWRESTReadResource.html#a5685337f6e8d7dd617cd0f5f03d8942a">RGWRESTReadResource::aio_read</a></div><div class="ttdeci">int aio_read()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:263</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_aa87c88d2d62819562c43f33a1ef8210b"><div class="ttname"><a href="classRGWRESTPostResource.html#aa87c88d2d62819562c43f33a1ef8210b">RGWRESTPostResource::wait_bl</a></div><div class="ttdeci">int wait_bl(bufferlist *pbl)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:304</div></div>
+<div class="ttc" id="structrgw__http__param__pair_html_a1fc3e9fe0c072f8701bd6ac94ab3dfeb"><div class="ttname"><a href="structrgw__http__param__pair.html#a1fc3e9fe0c072f8701bd6ac94ab3dfeb">rgw_http_param_pair::key</a></div><div class="ttdeci">const char * key</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:35</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_a92177e7e6de645d4204ffbdf5971b5de"><div class="ttname"><a href="classRGWRESTReadResource.html#a92177e7e6de645d4204ffbdf5971b5de">RGWRESTReadResource::RGWRESTReadResource</a></div><div class="ttdeci">RGWRESTReadResource(RGWRESTConn *_conn, const string &amp;_resource, const rgw_http_param_pair *pp, param_vec_t *extra_headers, RGWHTTPManager *_mgr)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:216</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_a078897f86b7f5521964a654960a9d5d1"><div class="ttname"><a href="classRGWRESTPostResource.html#a078897f86b7f5521964a654960a9d5d1">RGWRESTPostResource::get_http_status</a></div><div class="ttdeci">int get_http_status()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:300</div></div>
+<div class="ttc" id="rgw__basic__types_8cc_html_a83dfe8268c0c76ff6ceaf083ad129d5c"><div class="ttname"><a href="rgw__basic__types_8cc.html#a83dfe8268c0c76ff6ceaf083ad129d5c">decode_json_obj</a></div><div class="ttdeci">void decode_json_obj(rgw_user &amp;val, JSONObj *obj)</div><div class="ttdef"><b>Definition:</b> rgw_basic_types.cc:4</div></div>
+<div class="ttc" id="classRGWRESTConn_html_a728bf5cde5f0e9774196f4a67224a5e3"><div class="ttname"><a href="classRGWRESTConn.html#a728bf5cde5f0e9774196f4a67224a5e3">RGWRESTConn::get_self_zonegroup</a></div><div class="ttdeci">const string &amp; get_self_zonegroup()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:66</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_a95a2a544712da79c2109852b9a4cf513"><div class="ttname"><a href="classRGWRESTPostResource.html#a95a2a544712da79c2109852b9a4cf513">RGWRESTPostResource::to_str</a></div><div class="ttdeci">string to_str()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:296</div></div>
+<div class="ttc" id="classRGWRESTConn_html_ab425bae908b67669e5d805c8ef3d5346"><div class="ttname"><a href="classRGWRESTConn.html#ab425bae908b67669e5d805c8ef3d5346">RGWRESTConn::get_resource</a></div><div class="ttdeci">int get_resource(const string &amp;resource, param_vec_t *extra_params, map&lt; string, string &gt; *extra_headers, bufferlist &amp;bl, RGWHTTPManager *mgr=NULL)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:177</div></div>
+<div class="ttc" id="classRGWRESTConn_html_aef331778dac9cd6c5e3611c3b0f23822"><div class="ttname"><a href="classRGWRESTConn.html#aef331778dac9cd6c5e3611c3b0f23822">RGWRESTConn::get_endpoint_count</a></div><div class="ttdeci">size_t get_endpoint_count() const </div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:79</div></div>
+<div class="ttc" id="classRGWHTTPClient_html_ab3eec0a953dde4bf4d16b29d8cb19313"><div class="ttname"><a href="classRGWHTTPClient.html#ab3eec0a953dde4bf4d16b29d8cb19313">RGWHTTPClient::get_user_info</a></div><div class="ttdeci">void * get_user_info()</div><div class="ttdef"><b>Definition:</b> rgw_http_client.h:103</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_abbff0f1ac6951288540cae8fbe1fc8a4"><div class="ttname"><a href="classRGWRESTReadResource.html#abbff0f1ac6951288540cae8fbe1fc8a4">RGWRESTReadResource::read</a></div><div class="ttdeci">int read()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:250</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_a0e3ea835776544cc39c0d4920e6f148e"><div class="ttname"><a href="classRGWRESTPostResource.html#a0e3ea835776544cc39c0d4920e6f148e">RGWRESTPostResource::decode_resource</a></div><div class="ttdeci">int decode_resource(T *dest)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:322</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html"><div class="ttname"><a href="classRGWRESTPostResource.html">RGWRESTPostResource</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:255</div></div>
+<div class="ttc" id="classRGWRESTConn_html_acef1ef09ba761a6f76018cc74a685e56"><div class="ttname"><a href="classRGWRESTConn.html#acef1ef09ba761a6f76018cc74a685e56">RGWRESTConn::get_ctx</a></div><div class="ttdeci">CephContext * get_ctx()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:76</div></div>
+<div class="ttc" id="classRGWRESTConn_html_af62ce2c2c39172fd7ce1e2d45e73f349"><div class="ttname"><a href="classRGWRESTConn.html#af62ce2c2c39172fd7ce1e2d45e73f349">RGWRESTConn::get_obj</a></div><div class="ttdeci">int get_obj(const rgw_user &amp;uid, req_info *info, rgw_obj &amp;obj, const ceph::real_time *mod_ptr, const ceph::real_time *unmod_ptr, uint32_t mod_zone_id, uint64_t mod_pg_ver, bool prepend_metadata, RGWGetDataCB *cb, RGWRESTStreamReadRequest **req)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:118</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_af62d90cd9d6f60bba2e23dbf445624c4"><div class="ttname"><a href="classRGWRESTReadResource.html#af62d90cd9d6f60bba2e23dbf445624c4">RGWRESTReadResource::to_str</a></div><div class="ttdeci">string to_str()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:182</div></div>
+<div class="ttc" id="classRGWRESTSimpleRequest_html_acdf31f113f00dd9a4372d52759e2faa6"><div class="ttname"><a href="classRGWRESTSimpleRequest.html#acdf31f113f00dd9a4372d52759e2faa6">RGWRESTSimpleRequest::get_http_status</a></div><div class="ttdeci">int get_http_status()</div><div class="ttdef"><b>Definition:</b> rgw_rest_client.h:61</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_a48b909b70a89e07062727e946b3a7b55"><div class="ttname"><a href="classRGWRESTPostResource.html#a48b909b70a89e07062727e946b3a7b55">RGWRESTPostResource::wait</a></div><div class="ttdeci">int wait(T *dest)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:336</div></div>
+<div class="ttc" id="classRGWRESTConn_html_ac833f895cae6760d02b776c2a597f02d"><div class="ttname"><a href="classRGWRESTConn.html#ac833f895cae6760d02b776c2a597f02d">RGWRESTConn::get_url</a></div><div class="ttdeci">string get_url()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:33</div></div>
+<div class="ttc" id="classRGWHTTPClient_html_a292dde78cd86b1b620774194a1602109"><div class="ttname"><a href="classRGWHTTPClient.html#a292dde78cd86b1b620774194a1602109">RGWHTTPClient::wait</a></div><div class="ttdeci">int wait()</div><div class="ttdef"><b>Definition:</b> rgw_http_client.cc:349</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_a8cd5b86ba0594bf344c79a5f3f7c4589"><div class="ttname"><a href="classRGWRESTPostResource.html#a8cd5b86ba0594bf344c79a5f3f7c4589">RGWRESTPostResource::send</a></div><div class="ttdeci">int send(bufferlist &amp;bl)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:308</div></div>
+<div class="ttc" id="rgw__rest__conn_8h_html_ab0edc0439b5263cfb45f90f6f8edf71c"><div class="ttname"><a href="rgw__rest__conn_8h.html#ab0edc0439b5263cfb45f90f6f8edf71c">parse_decode_json</a></div><div class="ttdeci">static int parse_decode_json(CephContext *cct, T &amp;t, bufferlist &amp;bl)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:18</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_acee43a8b0d6cbd76c11e0985d83f3701"><div class="ttname"><a href="classRGWRESTReadResource.html#acee43a8b0d6cbd76c11e0985d83f3701">RGWRESTReadResource::get_user_info</a></div><div class="ttdeci">void * get_user_info()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:171</div></div>
+<div class="ttc" id="classRGWHTTPClient_html_a67ad4f0175fb610332e4ffc238576152"><div class="ttname"><a href="classRGWHTTPClient.html#a67ad4f0175fb610332e4ffc238576152">RGWHTTPClient::set_user_info</a></div><div class="ttdeci">void set_user_info(void *info)</div><div class="ttdef"><b>Definition:</b> rgw_http_client.h:99</div></div>
+<div class="ttc" id="classRGWRados_html"><div class="ttname"><a href="classRGWRados.html">RGWRados</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:1702</div></div>
+<div class="ttc" id="classRGWRESTStreamRWRequest_html"><div class="ttname"><a href="classRGWRESTStreamRWRequest.html">RGWRESTStreamRWRequest</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_client.h:85</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_ad3be8260e29e04a7db1e2eea9beb8e94"><div class="ttname"><a href="classRGWRESTReadResource.html#ad3be8260e29e04a7db1e2eea9beb8e94">RGWRESTReadResource::decode_resource</a></div><div class="ttdeci">int decode_resource(T *dest)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:212</div></div>
+<div class="ttc" id="rgw__admin_8cc_html_a9b49a835107f65049c05bddc99751652"><div class="ttname"><a href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a></div><div class="ttdeci">static RGWRados * store</div><div class="ttdef"><b>Definition:</b> rgw_admin.cc:46</div></div>
+<div class="ttc" id="classRGWRESTConn_html_a66e78683f8354dcb707e0c4033f34c95"><div class="ttname"><a href="classRGWRESTConn.html#a66e78683f8354dcb707e0c4033f34c95">RGWRESTConn::forward</a></div><div class="ttdeci">int forward(const rgw_user &amp;uid, req_info &amp;info, obj_version *objv, size_t max_response, bufferlist *inbl, bufferlist *outbl)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:47</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_a84676ed5278944afe7ce0ad9e78049cd"><div class="ttname"><a href="classRGWRESTReadResource.html#a84676ed5278944afe7ce0ad9e78049cd">RGWRESTReadResource::fetch</a></div><div class="ttdeci">int fetch(T *dest)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:226</div></div>
+<div class="ttc" id="classRGWRESTSimpleRequest_html_a742242e61d7173569df520e4151b9501"><div class="ttname"><a href="classRGWRESTSimpleRequest.html#a742242e61d7173569df520e4151b9501">RGWRESTSimpleRequest::get_status</a></div><div class="ttdeci">int get_status()</div><div class="ttdef"><b>Definition:</b> rgw_rest_client.cc:17</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html"><div class="ttname"><a href="classRGWRESTReadResource.html">RGWRESTReadResource</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:141</div></div>
+<div class="ttc" id="structreq__info_html"><div class="ttname"><a href="structreq__info.html">req_info</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:1097</div></div>
+<div class="ttc" id="structrgw__http__param__pair_html"><div class="ttname"><a href="structrgw__http__param__pair.html">rgw_http_param_pair</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:34</div></div>
+<div class="ttc" id="classRGWRESTConn_html_ae5a35907a2b268f4a2cd5b9376a0dbe1"><div class="ttname"><a href="classRGWRESTConn.html#ae5a35907a2b268f4a2cd5b9376a0dbe1">RGWRESTConn::get_remote_id</a></div><div class="ttdeci">const string &amp; get_remote_id()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:69</div></div>
+<div class="ttc" id="classRGWRESTConn_html_a1222b9db7e56d62089670c04a8e9c665"><div class="ttname"><a href="classRGWRESTConn.html#a1222b9db7e56d62089670c04a8e9c665">RGWRESTConn::RGWRESTConn</a></div><div class="ttdeci">RGWRESTConn(CephContext *_cct, RGWRados *store, const string &amp;_remote_id, const list&lt; string &gt; &amp;endpoints)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:9</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_a5a76d0940a6b5c3c6820acd88a7e4c09"><div class="ttname"><a href="classRGWRESTReadResource.html#a5a76d0940a6b5c3c6820acd88a7e4c09">RGWRESTReadResource::get_http_status</a></div><div class="ttdeci">int get_http_status()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:186</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_a5e7d4fa514a6516f1f1d86d672cdcfe7"><div class="ttname"><a href="classRGWRESTPostResource.html#a5e7d4fa514a6516f1f1d86d672cdcfe7">RGWRESTPostResource::aio_send</a></div><div class="ttdeci">int aio_send(bufferlist &amp;bl)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:322</div></div>
+<div class="ttc" id="classRGWRESTConn_html_a8292d4688357649352203ee83f76af32"><div class="ttname"><a href="classRGWRESTConn.html#a8292d4688357649352203ee83f76af32">RGWRESTConn::complete_request</a></div><div class="ttdeci">int complete_request(RGWRESTStreamWriteRequest *req, string &amp;etag, ceph::real_time *mtime)</div></div>
+<div class="ttc" id="structrgw__http__param__pair_html_a5bb3284c07554d4c6723a63e79bcb875"><div class="ttname"><a href="structrgw__http__param__pair.html#a5bb3284c07554d4c6723a63e79bcb875">rgw_http_param_pair::val</a></div><div class="ttdeci">const char * val</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:36</div></div>
+<div class="ttc" id="classRGWRESTConn_html"><div class="ttname"><a href="classRGWRESTConn.html">RGWRESTConn</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:52</div></div>
+<div class="ttc" id="rgw__rados_8h_html"><div class="ttname"><a href="rgw__rados_8h.html">rgw_rados.h</a></div></div>
 <div class="ttc" id="rgw__rest__client_8h_html"><div class="ttname"><a href="rgw__rest__client_8h.html">rgw_rest_client.h</a></div></div>
-<div class="ttc" id="classRGWGetDataCB_html"><div class="ttname"><a href="classRGWGetDataCB.html">RGWGetDataCB</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:122</div></div>
-<div class="ttc" id="classRGWRESTConn_html_a3085a750861b2d60382196d45249d446"><div class="ttname"><a href="classRGWRESTConn.html#a3085a750861b2d60382196d45249d446">RGWRESTConn::RGWRESTConn</a></div><div class="ttdeci">RGWRESTConn(CephContext *_cct, RGWRados *store, list&lt; string &gt; &amp;endpoints)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:9</div></div>
-<div class="ttc" id="classrgw__obj_html"><div class="ttname"><a href="classrgw__obj.html">rgw_obj</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:1159</div></div>
-<div class="ttc" id="classRGWRESTConn_html_a77ef9388d8bf09690b1a6649970e6244"><div class="ttname"><a href="classRGWRESTConn.html#a77ef9388d8bf09690b1a6649970e6244">RGWRESTConn::get_obj</a></div><div class="ttdeci">int get_obj(const string &amp;uid, req_info *info, rgw_obj &amp;obj, bool prepend_metadata, RGWGetDataCB *cb, RGWRESTStreamReadRequest **req)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:81</div></div>
-<div class="ttc" id="classRGWRESTStreamWriteRequest_html"><div class="ttname"><a href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_client.h:58</div></div>
-<div class="ttc" id="structRGWAccessKey_html"><div class="ttname"><a href="structRGWAccessKey.html">RGWAccessKey</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:347</div></div>
-<div class="ttc" id="classRGWRESTStreamReadRequest_html"><div class="ttname"><a href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_client.h:77</div></div>
+<div class="ttc" id="classRGWRESTConn_html_a5f5886b0cbcfe558a37729c3075ca10c"><div class="ttname"><a href="classRGWRESTConn.html#a5f5886b0cbcfe558a37729c3075ca10c">RGWRESTConn::put_obj_init</a></div><div class="ttdeci">int put_obj_init(const rgw_user &amp;uid, rgw_obj &amp;obj, uint64_t obj_size, map&lt; string, bufferlist &gt; &amp;attrs, RGWRESTStreamWriteRequest **req)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:74</div></div>
+<div class="ttc" id="classRGWGetDataCB_html"><div class="ttname"><a href="classRGWGetDataCB.html">RGWGetDataCB</a></div><div class="ttdef"><b>Definition:</b> rgw_rados.h:133</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_a50a53ed099b8acb8aed831a7bb63317f"><div class="ttname"><a href="classRGWRESTReadResource.html#a50a53ed099b8acb8aed831a7bb63317f">RGWRESTReadResource::wait_bl</a></div><div class="ttdeci">int wait_bl(bufferlist *pbl)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:190</div></div>
+<div class="ttc" id="classRGWStreamIntoBufferlist_html_ad420dec7edcb092b1cfee75b8ca1c0e7"><div class="ttname"><a href="classRGWStreamIntoBufferlist.html#ad420dec7edcb092b1cfee75b8ca1c0e7">RGWStreamIntoBufferlist::handle_data</a></div><div class="ttdeci">int handle_data(bufferlist &amp;inbl, off_t bl_ofs, off_t bl_len)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:135</div></div>
+<div class="ttc" id="rgw__rest__conn_8h_html_aa14583ec12a68d63cf797488bb75ec5c"><div class="ttname"><a href="rgw__rest__conn_8h.html#aa14583ec12a68d63cf797488bb75ec5c">make_param_list</a></div><div class="ttdeci">param_vec_t make_param_list(const rgw_http_param_pair *pp)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:40</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_ae2a91c6d92514ee6fd2d4a72d92a1e91"><div class="ttname"><a href="classRGWRESTPostResource.html#ae2a91c6d92514ee6fd2d4a72d92a1e91">RGWRESTPostResource::RGWRESTPostResource</a></div><div class="ttdeci">RGWRESTPostResource(RGWRESTConn *_conn, const string &amp;_resource, const rgw_http_param_pair *pp, param_vec_t *extra_headers, RGWHTTPManager *_mgr)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.cc:274</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_aea99a73b00408f161ce20ee1998c5a8a"><div class="ttname"><a href="classRGWRESTPostResource.html#aea99a73b00408f161ce20ee1998c5a8a">RGWRESTPostResource::get_user_info</a></div><div class="ttdeci">void * get_user_info()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:285</div></div>
+<div class="ttc" id="classRGWStreamIntoBufferlist_html"><div class="ttname"><a href="classRGWStreamIntoBufferlist.html">RGWStreamIntoBufferlist</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:131</div></div>
+<div class="ttc" id="classRGWRESTConn_html_af21d5a3af44bf9a306d28ce5817bfc24"><div class="ttname"><a href="classRGWRESTConn.html#af21d5a3af44bf9a306d28ce5817bfc24">RGWRESTConn::get_json_resource</a></div><div class="ttdeci">int get_json_resource(const string &amp;resource, param_vec_t *params, T &amp;t)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:108</div></div>
+<div class="ttc" id="classRGWRESTConn_html_af51316213202907acf9ba8d79181d4d1"><div class="ttname"><a href="classRGWRESTConn.html#af51316213202907acf9ba8d79181d4d1">RGWRESTConn::get_key</a></div><div class="ttdeci">RGWAccessKey &amp; get_key()</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:72</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_ada5e3d51aaa4118d258b7cd3d318d86d"><div class="ttname"><a href="classRGWRESTReadResource.html#ada5e3d51aaa4118d258b7cd3d318d86d">RGWRESTReadResource::wait</a></div><div class="ttdeci">int wait(T *dest)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:241</div></div>
+<div class="ttc" id="classRGWHTTPClient_html_a082c54458f5cce8855798cf5eed59d4a"><div class="ttname"><a href="classRGWHTTPClient.html#a082c54458f5cce8855798cf5eed59d4a">RGWHTTPClient::to_str</a></div><div class="ttdeci">string to_str()</div><div class="ttdef"><b>Definition:</b> rgw_http_client.cc:283</div></div>
+<div class="ttc" id="classrgw__obj_html"><div class="ttname"><a href="classrgw__obj.html">rgw_obj</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:1423</div></div>
+<div class="ttc" id="classRGWHTTPManager_html"><div class="ttname"><a href="classRGWHTTPManager.html">RGWHTTPManager</a></div><div class="ttdef"><b>Definition:</b> rgw_http_client.h:217</div></div>
+<div class="ttc" id="rgw__http__client_8h_html_a9650c8e0fbf9fde5b11de5976da095b6"><div class="ttname"><a href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a></div><div class="ttdeci">vector&lt; param_pair_t &gt; param_vec_t</div><div class="ttdef"><b>Definition:</b> rgw_http_client.h:14</div></div>
+<div class="ttc" id="classRGWRESTReadResource_html_a0161e8ac59f42ec6b9770ef5c0f33c5f"><div class="ttname"><a href="classRGWRESTReadResource.html#a0161e8ac59f42ec6b9770ef5c0f33c5f">RGWRESTReadResource::set_user_info</a></div><div class="ttdeci">void set_user_info(void *user_info)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:168</div></div>
+<div class="ttc" id="classRGWRESTStreamWriteRequest_html"><div class="ttname"><a href="classRGWRESTStreamWriteRequest.html">RGWRESTStreamWriteRequest</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_client.h:66</div></div>
+<div class="ttc" id="structRGWAccessKey_html"><div class="ttname"><a href="structRGWAccessKey.html">RGWAccessKey</a></div><div class="ttdef"><b>Definition:</b> rgw_common.h:434</div></div>
+<div class="ttc" id="structrgw__user_html"><div class="ttname"><a href="structrgw__user.html">rgw_user</a></div><div class="ttdef"><b>Definition:</b> rgw_basic_types.h:8</div></div>
+<div class="ttc" id="classRGWRESTStreamReadRequest_html"><div class="ttname"><a href="classRGWRESTStreamReadRequest.html">RGWRESTStreamReadRequest</a></div><div class="ttdef"><b>Definition:</b> rgw_rest_client.h:118</div></div>
+<div class="ttc" id="classRGWRESTPostResource_html_a3557555690f849a6cea8cbee8c5b1fb7"><div class="ttname"><a href="classRGWRESTPostResource.html#a3557555690f849a6cea8cbee8c5b1fb7">RGWRESTPostResource::set_user_info</a></div><div class="ttdeci">void set_user_info(void *user_info)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:282</div></div>
+<div class="ttc" id="classRGWStreamIntoBufferlist_html_a4ec6854e29cb1654a290f3ebdf73fa7b"><div class="ttname"><a href="classRGWStreamIntoBufferlist.html#a4ec6854e29cb1654a290f3ebdf73fa7b">RGWStreamIntoBufferlist::RGWStreamIntoBufferlist</a></div><div class="ttdeci">RGWStreamIntoBufferlist(bufferlist &amp;_bl)</div><div class="ttdef"><b>Definition:</b> rgw_rest_conn.h:134</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

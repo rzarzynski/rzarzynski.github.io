@@ -1,4 +1,18 @@
 <map id="rgw_civetweb.h" name="rgw_civetweb.h">
-<area shape="rect" id="node2" href="$rgw__civetweb_8cc.html" title="rgw_civetweb.cc" alt="" coords="5,80,125,107"/>
-<area shape="rect" id="node3" href="$rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="149,80,245,107"/>
+<area shape="rect" id="node2" href="$rgw__frontend_8h.html" title="rgw_frontend.h" alt="" coords="729,80,836,107"/>
+<area shape="rect" id="node17" href="$rgw__civetweb_8cc.html" title="rgw_civetweb.cc" alt="" coords="861,80,981,107"/>
+<area shape="rect" id="node3" href="$librgw_8cc.html" title="librgw.cc" alt="" coords="5,379,79,405"/>
+<area shape="rect" id="node4" href="$rgw__lib_8h.html" title="rgw_lib.h" alt="" coords="211,155,284,181"/>
+<area shape="rect" id="node6" href="$rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="331,379,416,405"/>
+<area shape="rect" id="node11" href="$rgw__civetweb__frontend_8cc.html" title="rgw_civetweb_frontend.cc" alt="" coords="513,155,687,181"/>
+<area shape="rect" id="node12" href="$rgw__fcgi__process_8cc.html" title="rgw_fcgi_process.cc" alt="" coords="711,155,853,181"/>
+<area shape="rect" id="node13" href="$rgw__frontend_8cc.html" title="rgw_frontend.cc" alt="" coords="879,155,993,181"/>
+<area shape="rect" id="node14" href="$rgw__loadgen__process_8cc.html" title="rgw_loadgen_process.cc" alt="" coords="1018,155,1184,181"/>
+<area shape="rect" id="node15" href="$rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="1209,155,1305,181"/>
+<area shape="rect" id="node16" href="$rgw__process_8cc.html" title="rgw_process.cc" alt="" coords="1329,155,1444,181"/>
+<area shape="rect" id="node5" href="$rgw__os__lib_8h.html" title="rgw_os_lib.h" alt="" coords="38,304,132,331"/>
+<area shape="rect" id="node8" href="$rgw__lib__frontend_8h.html" title="rgw_lib_frontend.h" alt="" coords="157,304,285,331"/>
+<area shape="rect" id="node9" href="$rgw__file_8h.html" title="rgw_file.h" alt="" coords="286,229,364,256"/>
+<area shape="rect" id="node10" href="$rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="120,229,211,256"/>
+<area shape="rect" id="node7" href="$rgw__os__lib_8cc.html" title="rgw_os_lib.cc" alt="" coords="170,379,272,405"/>
 </map>

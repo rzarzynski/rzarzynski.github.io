@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">RGWMetadataLogData Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="rgw__metadata_8h_source.html">rgw_metadata.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for RGWMetadataLogData:</div>
 <div class="dyncontent">
@@ -109,6 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a55f078ad11607c6564a5088bd68f930e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a928ed1601f369d0a3226650ff1879e33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWMetadataLogData.html#a928ed1601f369d0a3226650ff1879e33">dump</a> (Formatter *f) const </td></tr>
 <tr class="separator:a928ed1601f369d0a3226650ff1879e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfedc5e4dc5e0fb18e82908b78b1a27e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWMetadataLogData.html#acfedc5e4dc5e0fb18e82908b78b1a27e">decode_json</a> (JSONObj *obj)</td></tr>
+<tr class="separator:acfedc5e4dc5e0fb18e82908b78b1a27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -147,9 +151,6 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a55f078ad11607c6564a5088bd68f930e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void RGWMetadataLogData::decode </td>
@@ -159,11 +160,22 @@ Public Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acfedc5e4dc5e0fb18e82908b78b1a27e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWMetadataLogData::decode_json </td>
+          <td>(</td>
+          <td class="paramtype">JSONObj *&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -171,9 +183,6 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a928ed1601f369d0a3226650ff1879e33"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void RGWMetadataLogData::dump </td>
@@ -183,11 +192,6 @@ Public Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -195,9 +199,6 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a7755e34d89d0f60a4acfb58a4105ce9a"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void RGWMetadataLogData::encode </td>
@@ -207,11 +208,6 @@ Public Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -253,13 +249,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li><a class="el" href="rgw__metadata_8h_source.html">rgw_metadata.h</a></li>
 <li><a class="el" href="rgw__metadata_8cc.html">rgw_metadata.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,5 +1,0 @@
-<map id="RGWPutMetadata_ObjStore" name="RGWPutMetadata_ObjStore">
-<area shape="rect" id="node4" href="$classRGWPutMetadata__ObjStore__SWIFT.html" title="{RGWPutMetadata_ObjStore\l_SWIFT\n||+ RGWPutMetadata_ObjStore\l_SWIFT()\l+ ~RGWPutMetadata_ObjStore\l_SWIFT()\l+ get_params()\l+ send_response()\l}" alt="" coords="9,869,215,1035"/>
-<area shape="rect" id="node2" href="$classRGWPutMetadata.html" title="{RGWPutMetadata\n|# ret\l# rmattr_names\l# has_policy\l# has_cors\l# policy\l# cors_config\l# placement_rule\l|+ RGWPutMetadata()\l+ init()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ get_params()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="37,382,185,679"/>
-<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l|+ RGWOp()\l+ ~RGWOp()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\l+ verify_op_mask()\land 7 more...\l# init_quota()\l}" alt="" coords="23,6,200,333"/>
-</map>

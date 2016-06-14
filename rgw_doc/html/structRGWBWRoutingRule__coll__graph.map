@@ -1,0 +1,5 @@
+<map id="RGWBWRoutingRule" name="RGWBWRoutingRule">
+<area shape="rect" id="node2" href="$structRGWBWRedirectInfo.html" title="{RGWBWRedirectInfo\n||+ encode()\l+ decode()\l+ dump()\l+ dump_xml()\l+ decode_json()\l+ decode_xml()\l}" alt="" coords="132,526,279,677"/>
+<area shape="rect" id="node3" href="$structRGWRedirectInfo.html" title="{RGWRedirectInfo\n|+ http_redirect_code\l|+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="192,161,332,282"/>
+<area shape="rect" id="node5" href="$structRGWBWRoutingRuleCondition.html" title="{RGWBWRoutingRuleCondition\n|+ http_error_code_returned\l_equals\l|+ encode()\l+ decode()\l+ dump()\l+ dump_xml()\l+ decode_json()\l+ decode_xml()\l+ check_key_condition()\l+ check_error_code_condition()\l}" alt="" coords="269,307,472,501"/>
+</map>

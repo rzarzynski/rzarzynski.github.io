@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -82,16 +82,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">rgw_xml.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;map&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;iosfwd&gt;</code><br/>
 <code>#include &lt;include/types.h&gt;</code><br/>
-<code>#include &lt;expat.h&gt;</code><br/>
+<code>#include &lt;common/Formatter.h&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_xml.h:</div>
 <div class="dyncontent">
@@ -104,7 +105,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__xml_8h__dep__incl.png" border="0" usemap="#rgw__xml_8hdep" alt=""/></div>
 <map name="rgw__xml_8hdep" id="rgw__xml_8hdep">
-<area shape="rect" id="node2" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="857,80,956,107"/><area shape="rect" id="node27" href="rgw__cors__s3_8h.html" title="rgw_cors_s3.h" alt="" coords="1453,80,1560,107"/><area shape="rect" id="node29" href="rgw__multi_8cc.html" title="rgw_multi.cc" alt="" coords="1852,155,1948,181"/><area shape="rect" id="node30" href="rgw__multi_8h.html" title="rgw_multi.h" alt="" coords="1715,80,1804,107"/><area shape="rect" id="node32" href="rgw__multi__del_8cc.html" title="rgw_multi_del.cc" alt="" coords="1972,155,2092,181"/><area shape="rect" id="node33" href="rgw__multi__del_8h.html" title="rgw_multi_del.h" alt="" coords="1881,80,1993,107"/><area shape="rect" id="node34" href="rgw__xml_8cc.html" title="rgw_xml.cc" alt="" coords="2070,80,2159,107"/><area shape="rect" id="node3" href="librgw_8cc.html" title="librgw.cc" alt="" coords="756,155,829,181"/><area shape="rect" id="node4" href="rgw__acl_8cc.html" title="rgw_acl.cc" alt="" coords="1108,155,1193,181"/><area shape="rect" id="node5" href="rgw__acl__s3_8cc.html" title="rgw_acl_s3.cc" alt="" coords="1217,155,1324,181"/><area shape="rect" id="node6" href="rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="207,155,309,181"/><area shape="rect" id="node7" href="rgw__bucket_8cc.html" title="rgw_bucket.cc" alt="" coords="335,155,441,181"/><area shape="rect" id="node8" href="rgw__dencoder_8cc.html" title="rgw_dencoder.cc" alt="" coords="466,155,587,181"/><area shape="rect" id="node9" href="rgw__json__enc_8cc.html" title="rgw_json_enc.cc" alt="" coords="612,155,732,181"/><area shape="rect" id="node10" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="855,155,959,181"/><area shape="rect" id="node25" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="1588,155,1669,181"/><area shape="rect" id="node26" href="rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="983,155,1083,181"/><area shape="rect" id="node11" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="781,304,877,331"/><area shape="rect" id="node12" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="667,229,792,256"/><area shape="rect" id="node14" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="867,229,981,256"/><area shape="rect" id="node16" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="1006,229,1135,256"/><area shape="rect" id="node18" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="1316,229,1407,256"/><area shape="rect" id="node19" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="1159,229,1291,256"/><area shape="rect" id="node20" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="5,229,120,256"/><area shape="rect" id="node21" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="145,229,295,256"/><area shape="rect" id="node22" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="319,229,459,256"/><area shape="rect" id="node23" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="483,229,641,256"/><area shape="rect" id="node24" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="1431,229,1541,256"/><area shape="rect" id="node13" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="625,304,756,331"/><area shape="rect" id="node15" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="901,304,1024,331"/><area shape="rect" id="node17" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="1048,304,1183,331"/><area shape="rect" id="node28" href="rgw__cors__s3_8cc.html" title="rgw_cors_s3.cc" alt="" coords="1449,155,1564,181"/><area shape="rect" id="node31" href="rgw__multiparser_8cc.html" title="rgw_multiparser.cc" alt="" coords="1695,155,1827,181"/></map>
+<area shape="rect" id="node2" href="rgw__website_8h.html" title="rgw_website.h" alt="" coords="2205,80,2312,107"/><area shape="rect" id="node41" href="rgw__multi__del_8h.html" title="rgw_multi_del.h" alt="" coords="3859,229,3972,256"/><area shape="rect" id="node42" href="rgw__multi__del_8cc.html" title="rgw_multi_del.cc" alt="" coords="3909,304,4029,331"/><area shape="rect" id="node43" href="rgw__xml_8cc.html" title="rgw_xml.cc" alt="" coords="4049,229,4137,256"/><area shape="rect" id="node44" href="rgw__xml__enc_8cc.html" title="rgw_xml_enc.cc" alt="" coords="4163,229,4279,256"/><area shape="rect" id="node46" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="3065,379,3164,405"/><area shape="rect" id="node47" href="rgw__cors__s3_8h.html" title="rgw_cors_s3.h" alt="" coords="3575,552,3681,579"/><area shape="rect" id="node48" href="rgw__multi_8cc.html" title="rgw_multi.cc" alt="" coords="3875,155,3971,181"/><area shape="rect" id="node49" href="rgw__multi_8h.html" title="rgw_multi.h" alt="" coords="3963,80,4052,107"/><area shape="rect" id="node3" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="2203,155,2313,181"/><area shape="rect" id="node45" href="rgw__website_8cc.html" title="rgw_website.cc" alt="" coords="2066,155,2179,181"/><area shape="rect" id="node4" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="2055,304,2148,331"/><area shape="rect" id="node6" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="679,461,752,488"/><area shape="rect" id="node7" href="rgw__request_8h.html" title="rgw_request.h" alt="" coords="444,552,548,579"/><area shape="rect" id="node8" href="rgw__lib_8h.html" title="rgw_lib.h" alt="" coords="579,635,652,661"/><area shape="rect" id="node9" href="rgw__os__lib_8h.html" title="rgw_os_lib.h" alt="" coords="413,709,507,736"/><area shape="rect" id="node11" href="rgw__file_8h.html" title="rgw_file.h" alt="" coords="5,709,83,736"/><area shape="rect" id="node12" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="899,709,989,736"/><area shape="rect" id="node13" href="rgw__process_8h.html" title="rgw_process.h" alt="" coords="572,552,679,579"/><area shape="rect" id="node17" href="rgw__json__enc_8cc.html" title="rgw_json_enc.cc" alt="" coords="3095,552,3215,579"/><area shape="rect" id="node18" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1189,379,1275,405"/><area shape="rect" id="node20" href="rgw__acl__swift_8cc.html" title="rgw_acl_swift.cc" alt="" coords="1329,461,1449,488"/><area shape="rect" id="node22" href="rgw__bucket_8cc.html" title="rgw_bucket.cc" alt="" coords="1524,461,1631,488"/><area shape="rect" id="node28" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1901,379,2000,405"/><area shape="rect" id="node29" href="rgw__dencoder_8cc.html" title="rgw_dencoder.cc" alt="" coords="2727,461,2848,488"/><area shape="rect" id="node30" href="rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="3747,379,3833,405"/><area shape="rect" id="node31" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="3544,304,3659,331"/><area shape="rect" id="node32" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="3537,229,3657,256"/><area shape="rect" id="node33" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="2899,229,2977,256"/><area shape="rect" id="node34" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="2031,229,2145,256"/><area shape="rect" id="node35" href="rgw__resolve_8h.html" title="rgw_resolve.h" alt="" coords="378,635,480,661"/><area shape="rect" id="node36" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1173,304,1261,331"/><area shape="rect" id="node37" href="rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="3391,552,3500,579"/><area shape="rect" id="node38" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="777,461,900,488"/><area shape="rect" id="node39" href="rgw__auth__s3_8h.html" title="rgw_auth_s3.h" alt="" coords="3807,552,3913,579"/><area shape="rect" id="node40" href="rgw__replica__log_8h.html" title="rgw_replica_log.h" alt="" coords="2372,379,2495,405"/><area shape="rect" id="node5" href="librgw_8cc.html" title="librgw.cc" alt="" coords="812,784,885,811"/><area shape="rect" id="node10" href="rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="417,784,503,811"/><area shape="rect" id="node15" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="3183,635,3264,661"/><area shape="rect" id="node21" href="rgw__admin_8cc.html" title="rgw_admin.cc" alt="" coords="2090,461,2192,488"/><area shape="rect" id="node24" href="rgw__object__expirer_8cc.html" title="rgw_object_expirer.cc" alt="" coords="2247,552,2395,579"/><area shape="rect" id="node25" href="rgw__object__expirer__core_8h.html" title="rgw_object_expirer\l_core.h" alt="" coords="2268,454,2397,495"/><area shape="rect" id="node26" href="rgw__object__expirer__core_8cc.html" title="rgw_object_expirer\l_core.cc" alt="" coords="2420,545,2549,586"/><area shape="rect" id="node27" href="rgw__rados_8cc.html" title="rgw_rados.cc" alt="" coords="1762,552,1861,579"/><area shape="rect" id="node14" href="rgw__rest__s3_8h.html" title="rgw_rest_s3.h" alt="" coords="1083,552,1187,579"/><area shape="rect" id="node16" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="3479,635,3589,661"/><area shape="rect" id="node19" href="rgw__acl__s3_8cc.html" title="rgw_acl_s3.cc" alt="" coords="1655,461,1761,488"/><area shape="rect" id="node23" href="rgw__cors__s3_8cc.html" title="rgw_cors_s3.cc" alt="" coords="3340,635,3455,661"/><area shape="rect" id="node50" href="rgw__multiparser_8cc.html" title="rgw_multiparser.cc" alt="" coords="4046,155,4177,181"/></map>
 </div>
 </div>
 <p><a href="rgw__xml_8h_source.html">Go to the source code of this file.</a></p>
@@ -117,11 +118,884 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWXMLParser.html">RGWXMLParser</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWXMLDecoder.html">RGWXMLDecoder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWXMLDecoder_1_1err.html">RGWXMLDecoder::err</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWXMLDecoder_1_1XMLParser.html">RGWXMLDecoder::XMLParser</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1512966c3f0c8cf0ea07adbfb90d7fd8"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a1512966c3f0c8cf0ea07adbfb90d7fd8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a> (T &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a1512966c3f0c8cf0ea07adbfb90d7fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804378698f01ebcf44f6b99264667669"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a804378698f01ebcf44f6b99264667669">decode_xml_obj</a> (string &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a804378698f01ebcf44f6b99264667669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa7479dbd3fc32aca23a6238db8baba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#aaaa7479dbd3fc32aca23a6238db8baba">decode_xml_obj</a> (unsigned long long &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:aaaa7479dbd3fc32aca23a6238db8baba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03535d4545eff5f544fc67f9188d7fe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a03535d4545eff5f544fc67f9188d7fe5">decode_xml_obj</a> (long long &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a03535d4545eff5f544fc67f9188d7fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ed9c832b95dc897ae5c092db0d7e47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a93ed9c832b95dc897ae5c092db0d7e47">decode_xml_obj</a> (unsigned long &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a93ed9c832b95dc897ae5c092db0d7e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb43ce8212a351530cb1a05e78aae373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#abb43ce8212a351530cb1a05e78aae373">decode_xml_obj</a> (long &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:abb43ce8212a351530cb1a05e78aae373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a3c62316a3b42837cc71cc3b6948f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a72a3c62316a3b42837cc71cc3b6948f4">decode_xml_obj</a> (unsigned &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a72a3c62316a3b42837cc71cc3b6948f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082e62f066401915a993652a9be8b695"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a082e62f066401915a993652a9be8b695">decode_xml_obj</a> (int &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a082e62f066401915a993652a9be8b695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5df6028cd38f960f2840255b589bb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a3c5df6028cd38f960f2840255b589bb1">decode_xml_obj</a> (bool &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a3c5df6028cd38f960f2840255b589bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f71cf2b9459bc13e2367ead3bc61e6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a3f71cf2b9459bc13e2367ead3bc61e6e">decode_xml_obj</a> (bufferlist &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a3f71cf2b9459bc13e2367ead3bc61e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a202f385daa322119d197c230b5b8b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a8a202f385daa322119d197c230b5b8b9">decode_xml_obj</a> (utime_t &amp;val, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a8a202f385daa322119d197c230b5b8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb7c612b8406cf9b2e19c3181f7c9d2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3bb7c612b8406cf9b2e19c3181f7c9d2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a3bb7c612b8406cf9b2e19c3181f7c9d2">do_decode_xml_obj</a> (list&lt; T &gt; &amp;l, const string &amp;name, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a3bb7c612b8406cf9b2e19c3181f7c9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8318c6859ba5d860715dd903ec1e48"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a1f8318c6859ba5d860715dd903ec1e48"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a1f8318c6859ba5d860715dd903ec1e48">do_decode_xml_obj</a> (vector&lt; T &gt; &amp;l, const string &amp;name, <a class="el" href="classXMLObj.html">XMLObj</a> *obj)</td></tr>
+<tr class="separator:a1f8318c6859ba5d860715dd903ec1e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199944c869c074e870e46bb9a2a5ad82"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a199944c869c074e870e46bb9a2a5ad82"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a> (const char *name, const T &amp;val, ceph::Formatter *f)</td></tr>
+<tr class="separator:a199944c869c074e870e46bb9a2a5ad82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d3a2aff2f148c36642e08dc4a408f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#ae5d3a2aff2f148c36642e08dc4a408f1">encode_xml</a> (const char *name, const string &amp;val, ceph::Formatter *f)</td></tr>
+<tr class="separator:ae5d3a2aff2f148c36642e08dc4a408f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af998895d4be0a680f83d624589058c28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#af998895d4be0a680f83d624589058c28">encode_xml</a> (const char *name, const char *val, ceph::Formatter *f)</td></tr>
+<tr class="separator:af998895d4be0a680f83d624589058c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e55a17a0487aed24fb395d382986caf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a0e55a17a0487aed24fb395d382986caf">encode_xml</a> (const char *name, bool val, ceph::Formatter *f)</td></tr>
+<tr class="separator:a0e55a17a0487aed24fb395d382986caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3810b35cdf187a5ea45867ce0c1befbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a3810b35cdf187a5ea45867ce0c1befbc">encode_xml</a> (const char *name, int val, ceph::Formatter *f)</td></tr>
+<tr class="separator:a3810b35cdf187a5ea45867ce0c1befbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d596f99e663bf20c2bd6f358dfaf09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a34d596f99e663bf20c2bd6f358dfaf09">encode_xml</a> (const char *name, unsigned val, ceph::Formatter *f)</td></tr>
+<tr class="separator:a34d596f99e663bf20c2bd6f358dfaf09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb69d0d72aadf945ccba979959b292f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a8fb69d0d72aadf945ccba979959b292f">encode_xml</a> (const char *name, long val, ceph::Formatter *f)</td></tr>
+<tr class="separator:a8fb69d0d72aadf945ccba979959b292f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedffbe82af38dee4f423511efb7ab1cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#aedffbe82af38dee4f423511efb7ab1cf">encode_xml</a> (const char *name, unsigned long val, ceph::Formatter *f)</td></tr>
+<tr class="separator:aedffbe82af38dee4f423511efb7ab1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56e39103ccca29712cc49d0086787d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#ac56e39103ccca29712cc49d0086787d5">encode_xml</a> (const char *name, long long val, ceph::Formatter *f)</td></tr>
+<tr class="separator:ac56e39103ccca29712cc49d0086787d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d82085336bc5d3180ce1cb1d565470"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a37d82085336bc5d3180ce1cb1d565470">encode_xml</a> (const char *name, const utime_t &amp;val, ceph::Formatter *f)</td></tr>
+<tr class="separator:a37d82085336bc5d3180ce1cb1d565470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c403e454972b3838827de01724319ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a3c403e454972b3838827de01724319ff">encode_xml</a> (const char *name, const bufferlist &amp;bl, ceph::Formatter *f)</td></tr>
+<tr class="separator:a3c403e454972b3838827de01724319ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458ccfd0105a82b1c8d83d8028d3734c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a458ccfd0105a82b1c8d83d8028d3734c">encode_xml</a> (const char *name, long long unsigned val, ceph::Formatter *f)</td></tr>
+<tr class="separator:a458ccfd0105a82b1c8d83d8028d3734c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219b6bc10af4fa3620f3b872d561a4bf"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a219b6bc10af4fa3620f3b872d561a4bf"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="rgw__xml_8h.html#a219b6bc10af4fa3620f3b872d561a4bf">do_encode_xml</a> (const char *name, const std::list&lt; T &gt; &amp;l, const char *entry_name, ceph::Formatter *f)</td></tr>
+<tr class="separator:a219b6bc10af4fa3620f3b872d561a4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a1512966c3f0c8cf0ea07adbfb90d7fd8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a804378698f01ebcf44f6b99264667669"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaaa7479dbd3fc32aca23a6238db8baba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long long &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03535d4545eff5f544fc67f9188d7fe5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">long long &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a93ed9c832b95dc897ae5c092db0d7e47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abb43ce8212a351530cb1a05e78aae373"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">long &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a72a3c62316a3b42837cc71cc3b6948f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">unsigned &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a082e62f066401915a993652a9be8b695"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3c5df6028cd38f960f2840255b589bb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3f71cf2b9459bc13e2367ead3bc61e6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">bufferlist &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8a202f385daa322119d197c230b5b8b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3bb7c612b8406cf9b2e19c3181f7c9d2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f8318c6859ba5d860715dd903ec1e48"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_decode_xml_obj </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classXMLObj.html">XMLObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a219b6bc10af4fa3620f3b872d561a4bf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::list&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>entry_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a199944c869c074e870e46bb9a2a5ad82"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae5d3a2aff2f148c36642e08dc4a408f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af998895d4be0a680f83d624589058c28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0e55a17a0487aed24fb395d382986caf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3810b35cdf187a5ea45867ce0c1befbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a34d596f99e663bf20c2bd6f358dfaf09"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8fb69d0d72aadf945ccba979959b292f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aedffbe82af38dee4f423511efb7ab1cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac56e39103ccca29712cc49d0086787d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37d82085336bc5d3180ce1cb1d565470"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const utime_t &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3c403e454972b3838827de01724319ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bufferlist &amp;&#160;</td>
+          <td class="paramname"><em>bl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a458ccfd0105a82b1c8d83d8028d3734c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encode_xml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long long unsigned&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ceph::Formatter *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

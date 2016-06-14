@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -85,10 +85,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classRGWHTTPClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">RGWHTTPClient Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">RGWHTTPClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -98,7 +102,7 @@ Inheritance diagram for RGWHTTPClient:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWHTTPClient__inherit__graph.png" border="0" usemap="#RGWHTTPClient_inherit__map" alt="Inheritance graph"/></div>
 <map name="RGWHTTPClient_inherit__map" id="RGWHTTPClient_inherit__map">
-<area shape="rect" id="node2" href="classRGW__Auth__S3__Keystone__ValidateToken.html" title="{RGW_Auth_S3_Keystone\l_ValidateToken\n|+ response\l|+ RGW_Auth_S3_Keystone\l_ValidateToken()\l+ receive_header()\l+ receive_data()\l+ send_data()\l+ validate_s3token()\l}" alt="" coords="5,395,192,560"/><area shape="rect" id="node3" href="classRGWPostHTTPData.html" title="{RGWPostHTTPData\n||+ RGWPostHTTPData()\l+ set_post_data()\l+ send_data()\l+ receive_data()\l+ receive_header()\l}" alt="" coords="216,409,380,545"/><area shape="rect" id="node4" href="classRGWRESTSimpleRequest.html" title="{RGWRESTSimpleRequest\n|# http_status\l# status\l# url\l# out_headers\l# params\l# send_iter\l# max_response\l# response\l|+ RGWRESTSimpleRequest()\l+ receive_header()\l+ receive_data()\l+ send_data()\l+ get_response()\l+ execute()\l+ forward_request()\l+ get_out_headers()\l# handle_header()\l# append_param()\l# get_params_str()\l# sign_request()\l}" alt="" coords="405,307,604,648"/><area shape="rect" id="node7" href="classRGWValidateKeystoneToken.html" title="{RGWValidateKeystoneToken\n||+ RGWValidateKeystoneToken()\l+ receive_data()\l+ receive_header()\l+ send_data()\l}" alt="" coords="629,417,843,538"/><area shape="rect" id="node8" href="classRGWValidateSwiftToken.html" title="{RGWValidateSwiftToken\n||+ RGWValidateSwiftToken()\l+ receive_header()\l+ receive_data()\l+ send_data()\l# RGWValidateSwiftToken()\l}" alt="" coords="867,409,1055,545"/><area shape="rect" id="node5" href="classRGWRESTStreamReadRequest.html" title="{RGWRESTStreamReadRequest\n||+ send_data()\l+ receive_data()\l+ RGWRESTStreamReadRequest()\l+ ~RGWRESTStreamReadRequest()\l+ get_obj()\l+ complete()\l+ set_in_cb()\l# handle_header()\l}" alt="" coords="251,697,492,877"/><area shape="rect" id="node6" href="classRGWRESTStreamWriteRequest.html" title="{RGWRESTStreamWriteRequest\n||+ add_output_data()\l+ send_data()\l+ RGWRESTStreamWriteRequest()\l+ ~RGWRESTStreamWriteRequest()\l+ put_obj_init()\l+ complete()\l+ get_out_cb()\l}" alt="" coords="517,704,757,869"/></map>
+<area shape="rect" id="node2" href="classRGW__Auth__S3__Keystone__ValidateToken.html" title="{RGW_Auth_S3_Keystone\l_ValidateToken\n|+ response\l|+ RGW_Auth_S3_Keystone\l_ValidateToken()\l+ receive_header()\l+ receive_data()\l+ send_data()\l+ validate_s3token()\l}" alt="" coords="5,659,192,824"/><area shape="rect" id="node3" href="classRGWHTTPHeadersCollector.html" title="{RGWHTTPHeadersCollector\n||+ RGWHTTPHeadersCollector()\l+ get_headers()\l+ get_header_value()\l# receive_header()\l# receive_data()\l# send_data()\l}" alt="" coords="216,666,425,817"/><area shape="rect" id="node6" href="classRGWRESTSimpleRequest.html" title="{RGWRESTSimpleRequest\n|# http_status\l# status\l# url\l# out_headers\l# params\l# send_iter\l# max_response\l# response\l|+ RGWRESTSimpleRequest()\l+ set_headers()\l+ set_params()\l+ receive_header()\l+ receive_data()\l+ send_data()\l+ get_response()\l+ execute()\l+ forward_request()\l+ get_out_headers()\l+ get_http_status()\l+ get_status()\l# handle_header()\l# append_param()\l# get_params_str()\l# sign_request()\l}" alt="" coords="457,541,656,941"/><area shape="rect" id="node4" href="classRGWHTTPTransceiver.html" title="{RGWHTTPTransceiver\n||+ RGWHTTPTransceiver()\l+ RGWHTTPTransceiver()\l+ set_post_data()\l# send_data()\l# receive_data()\l}" alt="" coords="224,1027,403,1163"/><area shape="rect" id="node5" href="classKeystoneService_1_1RGWKeystoneHTTPTransceiver.html" title="{KeystoneService::RGWKeystone\lHTTPTransceiver\n||+ RGWKeystoneHTTPTransceiver()\l+ get_subject_token()\l}" alt="" coords="190,1248,423,1355"/><area shape="rect" id="node7" href="classRGWRESTStreamRWRequest.html" title="{RGWRESTStreamRWRequest\n||+ send_data()\l+ receive_data()\l+ RGWRESTStreamRWRequest()\l+ ~RGWRESTStreamRWRequest()\l+ get_obj()\l+ get_resource()\l+ complete()\l+ set_outbl()\l+ set_in_cb()\l# handle_header()\l}" alt="" coords="441,990,673,1199"/><area shape="rect" id="node9" href="classRGWRESTStreamWriteRequest.html" title="{RGWRESTStreamWriteRequest\n||+ add_output_data()\l+ send_data()\l+ RGWRESTStreamWriteRequest()\l+ ~RGWRESTStreamWriteRequest()\l+ put_obj_init()\l+ complete()\l+ get_out_cb()\l}" alt="" coords="698,1012,939,1177"/><area shape="rect" id="node8" href="classRGWRESTStreamReadRequest.html" title="{RGWRESTStreamReadRequest\n||+ RGWRESTStreamReadRequest()\l}" alt="" coords="447,1263,680,1340"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for RGWHTTPClient:</div>
@@ -110,40 +114,84 @@ Collaboration diagram for RGWHTTPClient:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ee0df7b3e36dd4ec6b3b185c6e28c2f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a9ee0df7b3e36dd4ec6b3b185c6e28c2f">~RGWHTTPClient</a> ()</td></tr>
-<tr class="separator:a9ee0df7b3e36dd4ec6b3b185c6e28c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea3fd6cc48200b2ca7ff69ac55276ef4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#aea3fd6cc48200b2ca7ff69ac55276ef4">RGWHTTPClient</a> (CephContext *_cct)</td></tr>
-<tr class="separator:aea3fd6cc48200b2ca7ff69ac55276ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f46e4b01e10497e17759adadba7c82a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a4f46e4b01e10497e17759adadba7c82a">~RGWHTTPClient</a> ()</td></tr>
+<tr class="separator:a4f46e4b01e10497e17759adadba7c82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec6b13da7fbf22430bb4dd46c2afb1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a7ec6b13da7fbf22430bb4dd46c2afb1f">RGWHTTPClient</a> (CephContext *<a class="el" href="classRGWHTTPClient.html#a577ad5453b6eaf55cc40b7b0ede288fa">cct</a>)</td></tr>
+<tr class="separator:a7ec6b13da7fbf22430bb4dd46c2afb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ad4f0175fb610332e4ffc238576152"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a67ad4f0175fb610332e4ffc238576152">set_user_info</a> (void *info)</td></tr>
+<tr class="separator:a67ad4f0175fb610332e4ffc238576152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3eec0a953dde4bf4d16b29d8cb19313"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#ab3eec0a953dde4bf4d16b29d8cb19313">get_user_info</a> ()</td></tr>
+<tr class="separator:ab3eec0a953dde4bf4d16b29d8cb19313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7305e34e137182705aaf8b2ca3f69138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a7305e34e137182705aaf8b2ca3f69138">append_header</a> (const string &amp;name, const string &amp;val)</td></tr>
 <tr class="separator:a7305e34e137182705aaf8b2ca3f69138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a7caeb5c460432a1f200e43c70153fa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a6a7caeb5c460432a1f200e43c70153fa">receive_header</a> (void *ptr, size_t len)=0</td></tr>
-<tr class="separator:a6a7caeb5c460432a1f200e43c70153fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a897492bfd6445405618b6f3b6cc8bd0d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a897492bfd6445405618b6f3b6cc8bd0d">receive_data</a> (void *ptr, size_t len)=0</td></tr>
-<tr class="separator:a897492bfd6445405618b6f3b6cc8bd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500061f39f2dc679d5dd2526c9d182de"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a500061f39f2dc679d5dd2526c9d182de">send_data</a> (void *ptr, size_t len)=0</td></tr>
-<tr class="separator:a500061f39f2dc679d5dd2526c9d182de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a340f32b14fc826866fe476175ceb2ed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a340f32b14fc826866fe476175ceb2ed8">set_send_length</a> (size_t len)</td></tr>
 <tr class="separator:a340f32b14fc826866fe476175ceb2ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a81ef79b3b47a7ca73b1cd8ff9b435"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a20a81ef79b3b47a7ca73b1cd8ff9b435">get_http_status</a> () const </td></tr>
+<tr class="separator:a20a81ef79b3b47a7ca73b1cd8ff9b435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db09d373a335c53cf1fd6d6339b5feb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a1db09d373a335c53cf1fd6d6339b5feb">set_verify_ssl</a> (bool flag)</td></tr>
+<tr class="separator:a1db09d373a335c53cf1fd6d6339b5feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a737fa5db31f98b7688d96e9f3888d1f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a737fa5db31f98b7688d96e9f3888d1f3">process</a> (const char *method, const char *url)</td></tr>
 <tr class="separator:a737fa5db31f98b7688d96e9f3888d1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae85981f5d5416a973d8b40c0983d38a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#ae85981f5d5416a973d8b40c0983d38a4">process</a> (const char *url)</td></tr>
 <tr class="separator:ae85981f5d5416a973d8b40c0983d38a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a523c7df9ea9f1effaccb000b57090c8b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a523c7df9ea9f1effaccb000b57090c8b">init_async</a> (const char *method, const char *url, void **handle)</td></tr>
-<tr class="separator:a523c7df9ea9f1effaccb000b57090c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05833f91d3a28e572ee393a54a6d3c74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a05833f91d3a28e572ee393a54a6d3c74">process_request</a> (void *handle, bool wait_for_data, bool *done)</td></tr>
-<tr class="separator:a05833f91d3a28e572ee393a54a6d3c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f5ac01dafe0d4bcb8550e00e7162ffd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a9f5ac01dafe0d4bcb8550e00e7162ffd">complete_request</a> (void *handle)</td></tr>
-<tr class="separator:a9f5ac01dafe0d4bcb8550e00e7162ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a292dde78cd86b1b620774194a1602109"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a292dde78cd86b1b620774194a1602109">wait</a> ()</td></tr>
+<tr class="separator:a292dde78cd86b1b620774194a1602109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7426fa342d771443a57b3f2b94b1ce35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__http__req__data.html">rgw_http_req_data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a7426fa342d771443a57b3f2b94b1ce35">get_req_data</a> ()</td></tr>
+<tr class="separator:a7426fa342d771443a57b3f2b94b1ce35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082c54458f5cce8855798cf5eed59d4a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a082c54458f5cce8855798cf5eed59d4a">to_str</a> ()</td></tr>
+<tr class="separator:a082c54458f5cce8855798cf5eed59d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7628b9964add89b9a65dac0ba6297408"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a7628b9964add89b9a65dac0ba6297408">get_req_retcode</a> ()</td></tr>
+<tr class="separator:a7628b9964add89b9a65dac0ba6297408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aa6e8e107f6ea30ddf4640af5451a3d7e"><td class="memItemLeft" align="right" valign="top">static const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#aa6e8e107f6ea30ddf4640af5451a3d7e">HTTP_STATUS_NOSTATUS</a> = 0</td></tr>
+<tr class="separator:aa6e8e107f6ea30ddf4640af5451a3d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c142b0062c6b4437567a5d8afad7ca0"><td class="memItemLeft" align="right" valign="top">static const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a5c142b0062c6b4437567a5d8afad7ca0">HTTP_STATUS_UNAUTHORIZED</a> = 401</td></tr>
+<tr class="separator:a5c142b0062c6b4437567a5d8afad7ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edc393d3d74d8f78d520c3109fe4822"><td class="memItemLeft" align="right" valign="top">static const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a4edc393d3d74d8f78d520c3109fe4822">HTTP_STATUS_NOTFOUND</a> = 404</td></tr>
+<tr class="separator:a4edc393d3d74d8f78d520c3109fe4822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af03f4e490b614eb2c6e968d45b698ed1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#af03f4e490b614eb2c6e968d45b698ed1">init_request</a> (const char *method, const char *url, <a class="el" href="structrgw__http__req__data.html">rgw_http_req_data</a> *req_data)</td></tr>
+<tr class="separator:af03f4e490b614eb2c6e968d45b698ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52335db52c21b8c1994f7f64f805632"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#ad52335db52c21b8c1994f7f64f805632">receive_header</a> (void *ptr, size_t len)</td></tr>
+<tr class="separator:ad52335db52c21b8c1994f7f64f805632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f2bec74a0a4fef10872db0f73b6541"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a63f2bec74a0a4fef10872db0f73b6541">receive_data</a> (void *ptr, size_t len)</td></tr>
+<tr class="separator:a63f2bec74a0a4fef10872db0f73b6541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac285bd96558ae37986933d557c951d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#aaac285bd96558ae37986933d557c951d">send_data</a> (void *ptr, size_t len)</td></tr>
+<tr class="separator:aaac285bd96558ae37986933d557c951d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:abd8fbd77908a89ff6291662854b89b68"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#abd8fbd77908a89ff6291662854b89b68">simple_receive_http_header</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
+<tr class="separator:abd8fbd77908a89ff6291662854b89b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9629077d9c96442434da1d5dee6880cb"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a9629077d9c96442434da1d5dee6880cb">receive_http_header</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
+<tr class="separator:a9629077d9c96442434da1d5dee6880cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a923163ec9c0c814039adbd41c213eddd"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a923163ec9c0c814039adbd41c213eddd">simple_receive_http_data</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
+<tr class="separator:a923163ec9c0c814039adbd41c213eddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c3637b14b2ba94d473c5cd5fdace00"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#af5c3637b14b2ba94d473c5cd5fdace00">receive_http_data</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
+<tr class="separator:af5c3637b14b2ba94d473c5cd5fdace00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524331338f36ad7b99ab91e16479d6d3"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a524331338f36ad7b99ab91e16479d6d3">simple_send_http_data</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
+<tr class="separator:a524331338f36ad7b99ab91e16479d6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99088a5023d90e504e378e44f8636a60"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a99088a5023d90e504e378e44f8636a60">send_http_data</a> (void *ptr, size_t size, size_t nmemb, void *_info)</td></tr>
+<tr class="separator:a99088a5023d90e504e378e44f8636a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a577ad5453b6eaf55cc40b7b0ede288fa"><td class="memItemLeft" align="right" valign="top">CephContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a577ad5453b6eaf55cc40b7b0ede288fa">cct</a></td></tr>
 <tr class="separator:a577ad5453b6eaf55cc40b7b0ede288fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a847b5e2c3911747875ecc2a4fd403d84"><td class="memItemLeft" align="right" valign="top">list&lt; pair&lt; string, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a847b5e2c3911747875ecc2a4fd403d84">headers</a></td></tr>
-<tr class="separator:a847b5e2c3911747875ecc2a4fd403d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e913442cfc918ac84ea6121d31c53cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a5e913442cfc918ac84ea6121d31c53cf">headers</a></td></tr>
+<tr class="separator:a5e913442cfc918ac84ea6121d31c53cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a6fb4557cd8e7d4571f10ae2a4773eb86"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHTTPClient.html#a6fb4557cd8e7d4571f10ae2a4773eb86">RGWHTTPManager</a></td></tr>
+<tr class="separator:a6fb4557cd8e7d4571f10ae2a4773eb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9ee0df7b3e36dd4ec6b3b185c6e28c2f"></a>
+<a class="anchor" id="a4f46e4b01e10497e17759adadba7c82a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -151,7 +199,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual RGWHTTPClient::~RGWHTTPClient </td>
+          <td class="memname">RGWHTTPClient::~RGWHTTPClient </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -159,14 +207,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="aea3fd6cc48200b2ca7ff69ac55276ef4"></a>
+<a class="anchor" id="a7ec6b13da7fbf22430bb4dd46c2afb1f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -177,13 +225,13 @@ Protected Attributes</h2></td></tr>
           <td class="memname">RGWHTTPClient::RGWHTTPClient </td>
           <td>(</td>
           <td class="paramtype">CephContext *&#160;</td>
-          <td class="paramname"><em>_cct</em></td><td>)</td>
+          <td class="paramname"><em>cct</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -225,15 +273,60 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9f5ac01dafe0d4bcb8550e00e7162ffd"></a>
+<a class="anchor" id="a20a81ef79b3b47a7ca73b1cd8ff9b435"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long RGWHTTPClient::get_http_status </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7426fa342d771443a57b3f2b94b1ce35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrgw__http__req__data.html">rgw_http_req_data</a>* RGWHTTPClient::get_req_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7628b9964add89b9a65dac0ba6297408"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int RGWHTTPClient::complete_request </td>
+          <td class="memname">int RGWHTTPClient::get_req_retcode </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -241,12 +334,38 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a523c7df9ea9f1effaccb000b57090c8b"></a>
+<a class="anchor" id="ab3eec0a953dde4bf4d16b29d8cb19313"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int RGWHTTPClient::init_async </td>
+          <td class="memname">void* RGWHTTPClient::get_user_info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af03f4e490b614eb2c6e968d45b698ed1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWHTTPClient::init_request </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>method</em>, </td>
@@ -260,8 +379,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void **&#160;</td>
-          <td class="paramname"><em>handle</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structrgw__http__req__data.html">rgw_http_req_data</a> *&#160;</td>
+          <td class="paramname"><em>req_data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -269,6 +388,11 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -323,39 +447,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a05833f91d3a28e572ee393a54a6d3c74"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RGWHTTPClient::process_request </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>wait_for_data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>done</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a897492bfd6445405618b6f3b6cc8bd0d"></a>
+<a class="anchor" id="a63f2bec74a0a4fef10872db0f73b6541"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -382,16 +474,16 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGW__Auth__S3__Keystone__ValidateToken.html#a275bdd35003d0c56073f989bb1c7d22f">RGW_Auth_S3_Keystone_ValidateToken</a>, <a class="el" href="classRGWValidateKeystoneToken.html#aae00991bea036fba1c88d5623da071cb">RGWValidateKeystoneToken</a>, <a class="el" href="classRGWPostHTTPData.html#a9334980229d3bba94b3989d0777ad7f6">RGWPostHTTPData</a>, <a class="el" href="classRGWRESTStreamReadRequest.html#aa0b4bb8359b31e30bbf29ba9d2957ad2">RGWRESTStreamReadRequest</a>, <a class="el" href="classRGWRESTSimpleRequest.html#afb08584193f60c3c55e84ee3623239e4">RGWRESTSimpleRequest</a>, and <a class="el" href="classRGWValidateSwiftToken.html#a464e1aa4dd8b72e6640d018eb27f7797">RGWValidateSwiftToken</a>.</p>
+<p>Reimplemented in <a class="el" href="classRGW__Auth__S3__Keystone__ValidateToken.html#a275bdd35003d0c56073f989bb1c7d22f">RGW_Auth_S3_Keystone_ValidateToken</a>, <a class="el" href="classRGWHTTPTransceiver.html#a5966840534e7473fd66628f036795261">RGWHTTPTransceiver</a>, <a class="el" href="classRGWHTTPHeadersCollector.html#a98d68fe006e6bb448a7cdca60fbbfcf3">RGWHTTPHeadersCollector</a>, <a class="el" href="classRGWRESTStreamRWRequest.html#aea28fec368852d4e6e21b9ab353d5fa7">RGWRESTStreamRWRequest</a>, and <a class="el" href="classRGWRESTSimpleRequest.html#afb08584193f60c3c55e84ee3623239e4">RGWRESTSimpleRequest</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6a7caeb5c460432a1f200e43c70153fa"></a>
+<a class="anchor" id="ad52335db52c21b8c1994f7f64f805632"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -418,16 +510,108 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGW__Auth__S3__Keystone__ValidateToken.html#aa01fe71c2ee69e1d051f5f90bb7f80dc">RGW_Auth_S3_Keystone_ValidateToken</a>, <a class="el" href="classRGWValidateKeystoneToken.html#acffaf97ec5a1185f24375844289909d8">RGWValidateKeystoneToken</a>, <a class="el" href="classRGWPostHTTPData.html#a4cf0bcf891be099c6cf41b211a544a60">RGWPostHTTPData</a>, <a class="el" href="classRGWRESTSimpleRequest.html#abed7e7e9dd71546976e6150f44583aff">RGWRESTSimpleRequest</a>, and <a class="el" href="classRGWValidateSwiftToken.html#a1bb5fb18875b0137314e8dff02b748e7">RGWValidateSwiftToken</a>.</p>
+<p>Reimplemented in <a class="el" href="classRGW__Auth__S3__Keystone__ValidateToken.html#aa01fe71c2ee69e1d051f5f90bb7f80dc">RGW_Auth_S3_Keystone_ValidateToken</a>, <a class="el" href="classRGWHTTPHeadersCollector.html#a8e665774efd8f01928672438afc69fa8">RGWHTTPHeadersCollector</a>, and <a class="el" href="classRGWRESTSimpleRequest.html#abed7e7e9dd71546976e6150f44583aff">RGWRESTSimpleRequest</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a500061f39f2dc679d5dd2526c9d182de"></a>
+<a class="anchor" id="af5c3637b14b2ba94d473c5cd5fdace00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t RGWHTTPClient::receive_http_data </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nmemb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9629077d9c96442434da1d5dee6880cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t RGWHTTPClient::receive_http_header </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nmemb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaac285bd96558ae37986933d557c951d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -454,12 +638,58 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGW__Auth__S3__Keystone__ValidateToken.html#a70ea6fd5aadbf241ff46c6c11b163639">RGW_Auth_S3_Keystone_ValidateToken</a>, <a class="el" href="classRGWValidateKeystoneToken.html#ab1575715bf70c63876fb3c1479793c3d">RGWValidateKeystoneToken</a>, <a class="el" href="classRGWPostHTTPData.html#a0e82f335402fcd632176631cdffe4578">RGWPostHTTPData</a>, <a class="el" href="classRGWRESTStreamReadRequest.html#a55ce17c714626fbb0b32619818d4a99b">RGWRESTStreamReadRequest</a>, <a class="el" href="classRGWRESTStreamWriteRequest.html#a7101b31228cbdc965d2c58f81776a6a8">RGWRESTStreamWriteRequest</a>, <a class="el" href="classRGWRESTSimpleRequest.html#a4b4e000123833e6927a2201c3acd5961">RGWRESTSimpleRequest</a>, and <a class="el" href="classRGWValidateSwiftToken.html#a38de3eb40a4ff5362e14c295ab7cc841">RGWValidateSwiftToken</a>.</p>
+<p>Reimplemented in <a class="el" href="classRGW__Auth__S3__Keystone__ValidateToken.html#a70ea6fd5aadbf241ff46c6c11b163639">RGW_Auth_S3_Keystone_ValidateToken</a>, <a class="el" href="classRGWHTTPTransceiver.html#aa987543ac7a929d1e0599def686d96c8">RGWHTTPTransceiver</a>, <a class="el" href="classRGWHTTPHeadersCollector.html#a15de432c44913abcb17acdadbdf40097">RGWHTTPHeadersCollector</a>, <a class="el" href="classRGWRESTStreamRWRequest.html#acadf319f4a7c14fea54f514b2c35deae">RGWRESTStreamRWRequest</a>, <a class="el" href="classRGWRESTStreamWriteRequest.html#a7101b31228cbdc965d2c58f81776a6a8">RGWRESTStreamWriteRequest</a>, and <a class="el" href="classRGWRESTSimpleRequest.html#a4b4e000123833e6927a2201c3acd5961">RGWRESTSimpleRequest</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a99088a5023d90e504e378e44f8636a60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t RGWHTTPClient::send_http_data </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nmemb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -487,6 +717,243 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a67ad4f0175fb610332e4ffc238576152"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWHTTPClient::set_user_info </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1db09d373a335c53cf1fd6d6339b5feb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWHTTPClient::set_verify_ssl </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a923163ec9c0c814039adbd41c213eddd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t RGWHTTPClient::simple_receive_http_data </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nmemb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abd8fbd77908a89ff6291662854b89b68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t RGWHTTPClient::simple_receive_http_header </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nmemb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a524331338f36ad7b99ab91e16479d6d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t RGWHTTPClient::simple_send_http_data </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nmemb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a082c54458f5cce8855798cf5eed59d4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string RGWHTTPClient::to_str </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a292dde78cd86b1b620774194a1602109"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWHTTPClient::wait </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a6fb4557cd8e7d4571f10ae2a4773eb86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classRGWHTTPManager.html">RGWHTTPManager</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a577ad5453b6eaf55cc40b7b0ede288fa"></a>
 <div class="memitem">
@@ -508,7 +975,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a847b5e2c3911747875ecc2a4fd403d84"></a>
+<a class="anchor" id="a5e913442cfc918ac84ea6121d31c53cf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -516,12 +983,72 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">list&lt;pair&lt;string, string&gt; &gt; RGWHTTPClient::headers</td>
+          <td class="memname"><a class="el" href="rgw__http__client_8h.html#a9650c8e0fbf9fde5b11de5976da095b6">param_vec_t</a> RGWHTTPClient::headers</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa6e8e107f6ea30ddf4640af5451a3d7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long RGWHTTPClient::HTTP_STATUS_NOSTATUS = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4edc393d3d74d8f78d520c3109fe4822"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long RGWHTTPClient::HTTP_STATUS_NOTFOUND = 404</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5c142b0062c6b4437567a5d8afad7ca0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long RGWHTTPClient::HTTP_STATUS_UNAUTHORIZED = 401</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -535,7 +1062,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

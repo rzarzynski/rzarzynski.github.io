@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -99,13 +99,15 @@ Collaboration diagram for RGWUserInfo:</div>
 <div class="dyncontent">
 <div class="center"><img src="structRGWUserInfo__coll__graph.png" border="0" usemap="#RGWUserInfo_coll__map" alt="Collaboration graph"/></div>
 <map name="RGWUserInfo_coll__map" id="RGWUserInfo_coll__map">
-<area shape="rect" id="node2" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size_kb\l+ max_objects\l+ enabled\l+ max_size_soft_threshold\l+ max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,5,184,200"/><area shape="rect" id="node3" href="classRGWUserCaps.html" title="{RGWUserCaps\n||+ add_from_string()\l+ remove_from_string()\l+ encode()\l+ decode()\l+ check_cap()\l+ dump()\l+ dump()\l+ decode_json()\l+ parse_cap_perm()\l}" alt="" coords="208,5,365,200"/></map>
+<area shape="rect" id="node2" href="structRGWQuotaInfo.html" title="{RGWQuotaInfo\n|+ max_size\l+ max_objects\l+ enabled\l+ check_on_raw\l# max_size_soft_threshold\l# max_objs_soft_threshold\l|+ RGWQuotaInfo()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="5,167,184,377"/><area shape="rect" id="node3" href="structrgw__user.html" title="{rgw_user\n||+ rgw_user()\l+ rgw_user()\l+ rgw_user()\l+ encode()\l+ decode()\l+ to_str()\l+ clear()\l+ empty()\l+ to_str()\l+ from_str()\land 6 more...\l}" alt="" coords="371,160,469,384"/><area shape="rect" id="node5" href="classRGWUserCaps.html" title="{RGWUserCaps\n||+ add_from_string()\l+ remove_from_string()\l+ encode()\l+ decode()\l+ check_cap()\l+ is_valid_cap_type()\l+ dump()\l+ dump()\l+ decode_json()\l+ parse_cap_perm()\l}" alt="" coords="493,167,651,377"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab2adf45239ad176ce5bcce3880b2731c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#ab2adf45239ad176ce5bcce3880b2731c">RGWUserInfo</a> ()</td></tr>
 <tr class="separator:ab2adf45239ad176ce5bcce3880b2731c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941652b16cf57188c5eb1ea7109d45a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGWAccessKey.html">RGWAccessKey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a941652b16cf57188c5eb1ea7109d45a3">get_key0</a> ()</td></tr>
+<tr class="separator:a941652b16cf57188c5eb1ea7109d45a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f6f9b96f94012eb18a493f7ca42290b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a0f6f9b96f94012eb18a493f7ca42290b">encode</a> (bufferlist &amp;bl) const </td></tr>
 <tr class="separator:a0f6f9b96f94012eb18a493f7ca42290b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa691d58feea20a318745610a27017cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#aa691d58feea20a318745610a27017cad">decode</a> (bufferlist::iterator &amp;bl)</td></tr>
@@ -114,8 +116,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad7435f41b606f189ddf9775ba50e3aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dbd5777d720b36e2b98ae21b22f9bb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a9dbd5777d720b36e2b98ae21b22f9bb3">decode_json</a> (JSONObj *obj)</td></tr>
 <tr class="separator:a9dbd5777d720b36e2b98ae21b22f9bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab74b6ab5eaf5b6ad8b1e87b4cd7f9d18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#ab74b6ab5eaf5b6ad8b1e87b4cd7f9d18">clear</a> ()</td></tr>
-<tr class="separator:ab74b6ab5eaf5b6ad8b1e87b4cd7f9d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -126,8 +126,8 @@ Static Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad797498b82e69e77aa8098eaed0c760e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#ad797498b82e69e77aa8098eaed0c760e">auid</a></td></tr>
 <tr class="separator:ad797498b82e69e77aa8098eaed0c760e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52be19316e19174f6c85862f2167bd3c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a52be19316e19174f6c85862f2167bd3c">user_id</a></td></tr>
-<tr class="separator:a52be19316e19174f6c85862f2167bd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf5afa289f85baa264c25a90ddc0f0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrgw__user.html">rgw_user</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a8bf5afa289f85baa264c25a90ddc0f0d">user_id</a></td></tr>
+<tr class="separator:a8bf5afa289f85baa264c25a90ddc0f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4751851fa40c4ba025b80c7b7d811a6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#ae4751851fa40c4ba025b80c7b7d811a6">display_name</a></td></tr>
 <tr class="separator:ae4751851fa40c4ba025b80c7b7d811a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbbdcc3f121751d3814c22e7f8eabd61"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#acbbdcc3f121751d3814c22e7f8eabd61">user_email</a></td></tr>
@@ -140,12 +140,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ae615b0ece386e5159bea4459ada88d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81065331037350bfcb6b561178198399"><td class="memItemLeft" align="right" valign="top">__u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a81065331037350bfcb6b561178198399">suspended</a></td></tr>
 <tr class="separator:a81065331037350bfcb6b561178198399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a772097b773cc0852176149e252695"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a58a772097b773cc0852176149e252695">max_buckets</a></td></tr>
-<tr class="separator:a58a772097b773cc0852176149e252695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729153caee8cada7a38cd84efba6a67f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a729153caee8cada7a38cd84efba6a67f">max_buckets</a></td></tr>
+<tr class="separator:a729153caee8cada7a38cd84efba6a67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76ca3fbea907a5d9845e195dd7fe362e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a76ca3fbea907a5d9845e195dd7fe362e">op_mask</a></td></tr>
 <tr class="separator:a76ca3fbea907a5d9845e195dd7fe362e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a962a26b28cfc1e8a08f48ac7c13fd6db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRGWUserCaps.html">RGWUserCaps</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a962a26b28cfc1e8a08f48ac7c13fd6db">caps</a></td></tr>
 <tr class="separator:a962a26b28cfc1e8a08f48ac7c13fd6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08308f2bebe6a5435ca7aff0c2832eb7"><td class="memItemLeft" align="right" valign="top">__u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a08308f2bebe6a5435ca7aff0c2832eb7">admin</a></td></tr>
+<tr class="separator:a08308f2bebe6a5435ca7aff0c2832eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac68fe77da7f6b553b1ba3f380c9c7069"><td class="memItemLeft" align="right" valign="top">__u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#ac68fe77da7f6b553b1ba3f380c9c7069">system</a></td></tr>
 <tr class="separator:ac68fe77da7f6b553b1ba3f380c9c7069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ddfa62ca0c2787590c0dc3efd31754f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRGWUserInfo.html#a5ddfa62ca0c2787590c0dc3efd31754f">default_placement</a></td></tr>
@@ -184,29 +186,6 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab74b6ab5eaf5b6ad8b1e87b4cd7f9d18"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RGWUserInfo::clear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="aa691d58feea20a318745610a27017cad"></a>
 <div class="memitem">
 <div class="memproto">
@@ -311,6 +290,29 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a941652b16cf57188c5eb1ea7109d45a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRGWAccessKey.html">RGWAccessKey</a>* RGWUserInfo::get_key0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="af3be88f32b8f2fbc9260dd2f5a866091"></a>
 <div class="memitem">
@@ -318,6 +320,18 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">map&lt;string, <a class="el" href="structRGWAccessKey.html">RGWAccessKey</a>&gt; RGWUserInfo::access_keys</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a08308f2bebe6a5435ca7aff0c2832eb7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__u8 RGWUserInfo::admin</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -384,12 +398,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a58a772097b773cc0852176149e252695"></a>
+<a class="anchor" id="a729153caee8cada7a38cd84efba6a67f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t RGWUserInfo::max_buckets</td>
+          <td class="memname">int32_t RGWUserInfo::max_buckets</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -492,12 +506,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a52be19316e19174f6c85862f2167bd3c"></a>
+<a class="anchor" id="a8bf5afa289f85baa264c25a90ddc0f0d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string RGWUserInfo::user_id</td>
+          <td class="memname"><a class="el" href="structrgw__user.html">rgw_user</a> RGWUserInfo::user_id</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -524,7 +538,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:33 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:45 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

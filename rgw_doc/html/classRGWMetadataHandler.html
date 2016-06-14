@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classRGWMetadataHandler-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -101,7 +102,7 @@ Inheritance diagram for RGWMetadataHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRGWMetadataHandler__inherit__graph.png" border="0" usemap="#RGWMetadataHandler_inherit__map" alt="Inheritance graph"/></div>
 <map name="RGWMetadataHandler_inherit__map" id="RGWMetadataHandler_inherit__map">
-<area shape="rect" id="node2" href="classRGWBucketInstanceMetadataHandler.html" title="{RGWBucketInstanceMetadata\lHandler\n||+ get_type()\l+ get()\l+ put()\l+ remove()\l+ get_pool_and_oid()\l+ list_keys_init()\l+ list_keys_next()\l+ list_keys_complete()\l+ get_hash_key()\l}" alt="" coords="5,294,204,503"/><area shape="rect" id="node3" href="classRGWBucketMetadataHandler.html" title="{RGWBucketMetadataHandler\n||+ get_type()\l+ get()\l+ put()\l+ remove()\l+ get_pool_and_oid()\l+ list_keys_init()\l+ list_keys_next()\l+ list_keys_complete()\l}" alt="" coords="229,309,424,489"/><area shape="rect" id="node4" href="classRGWMetadataTopHandler.html" title="{RGWMetadataTopHandler\n||+ RGWMetadataTopHandler()\l+ get_type()\l+ get()\l+ put()\l+ get_pool_and_oid()\l+ remove()\l+ list_keys_init()\l+ list_keys_next()\l+ list_keys_complete()\l}" alt="" coords="449,301,644,496"/><area shape="rect" id="node5" href="classRGWUserMetadataHandler.html" title="{RGWUserMetadataHandler\n||+ get_type()\l+ get()\l+ put()\l+ remove()\l+ get_pool_and_oid()\l+ list_keys_init()\l+ list_keys_next()\l+ list_keys_complete()\l}" alt="" coords="669,309,851,489"/></map>
+<area shape="rect" id="node2" href="classRGWBucketInstanceMetadataHandler.html" title="{RGWBucketInstanceMetadata\lHandler\n||+ get_type()\l+ get()\l+ put()\l+ remove()\l+ get_pool_and_oid()\l+ list_keys_init()\l+ list_keys_next()\l+ list_keys_complete()\l+ get_hash_key()\l}" alt="" coords="5,307,204,517"/><area shape="rect" id="node3" href="classRGWBucketMetadataHandler.html" title="{RGWBucketMetadataHandler\n||+ get_type()\l+ get()\l+ put()\l+ remove()\l+ get_pool_and_oid()\l+ list_keys_init()\l+ list_keys_next()\l+ list_keys_complete()\l}" alt="" coords="229,322,424,502"/><area shape="rect" id="node4" href="classRGWMetadataTopHandler.html" title="{RGWMetadataTopHandler\n||+ RGWMetadataTopHandler()\l+ get_type()\l+ get()\l+ put()\l+ get_pool_and_oid()\l+ remove()\l+ list_keys_init()\l+ list_keys_next()\l+ list_keys_complete()\l}" alt="" coords="449,315,644,509"/><area shape="rect" id="node5" href="classRGWUserMetadataHandler.html" title="{RGWUserMetadataHandler\n||+ get_type()\l+ get()\l+ put()\l+ remove()\l+ get_pool_and_oid()\l+ list_keys_init()\l+ list_keys_next()\l+ list_keys_complete()\l}" alt="" coords="669,322,851,502"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for RGWMetadataHandler:</div>
@@ -125,13 +126,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a947d34ff5fe37050650f92eccef33420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a473a0a0489824f5753a1835ddc1cdf70"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#a473a0a0489824f5753a1835ddc1cdf70">get_type</a> ()=0</td></tr>
 <tr class="separator:a473a0a0489824f5753a1835ddc1cdf70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c82ff8aaf70e8d6bc9795f65edec069"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#a1c82ff8aaf70e8d6bc9795f65edec069">get</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;entry, <a class="el" href="classRGWMetadataObject.html">RGWMetadataObject</a> **obj)=0</td></tr>
+<tr class="memitem:a1c82ff8aaf70e8d6bc9795f65edec069"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#a1c82ff8aaf70e8d6bc9795f65edec069">get</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;entry, <a class="el" href="classRGWMetadataObject.html">RGWMetadataObject</a> **obj)=0</td></tr>
 <tr class="separator:a1c82ff8aaf70e8d6bc9795f65edec069"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8edec575303e3da80a29f20d1b2376d8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#a8edec575303e3da80a29f20d1b2376d8">put</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;entry, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> &amp;objv_tracker, time_t mtime, JSONObj *obj, <a class="el" href="classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491b">sync_type_t</a> type)=0</td></tr>
-<tr class="separator:a8edec575303e3da80a29f20d1b2376d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5eb481d5e75b623ed19c7b2aff9b6c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#aed5eb481d5e75b623ed19c7b2aff9b6c">remove</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;entry, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> &amp;objv_tracker)=0</td></tr>
+<tr class="memitem:ab2c4dda8f730dba75c953b2c00eabd7d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#ab2c4dda8f730dba75c953b2c00eabd7d">put</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;entry, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> &amp;objv_tracker, real_time mtime, JSONObj *obj, <a class="el" href="classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491b">sync_type_t</a> type)=0</td></tr>
+<tr class="separator:ab2c4dda8f730dba75c953b2c00eabd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed5eb481d5e75b623ed19c7b2aff9b6c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#aed5eb481d5e75b623ed19c7b2aff9b6c">remove</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, string &amp;entry, <a class="el" href="structRGWObjVersionTracker.html">RGWObjVersionTracker</a> &amp;objv_tracker)=0</td></tr>
 <tr class="separator:aed5eb481d5e75b623ed19c7b2aff9b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac60df741f6a7cae7685e55916b97cc1d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#ac60df741f6a7cae7685e55916b97cc1d">list_keys_init</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, void **phandle)=0</td></tr>
+<tr class="memitem:ac60df741f6a7cae7685e55916b97cc1d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#ac60df741f6a7cae7685e55916b97cc1d">list_keys_init</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, void **phandle)=0</td></tr>
 <tr class="separator:ac60df741f6a7cae7685e55916b97cc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae084903ff87089f67a39c1fb915bbbc5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#ae084903ff87089f67a39c1fb915bbbc5">list_keys_next</a> (void *handle, int max, list&lt; string &gt; &amp;keys, bool *truncated)=0</td></tr>
 <tr class="separator:ae084903ff87089f67a39c1fb915bbbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,10 +148,15 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aa4ea57bd4bec30539febcf70b48b8752"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#aa4ea57bd4bec30539febcf70b48b8752">get_pool_and_oid</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__admin_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;key, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, string &amp;oid)=0</td></tr>
+<tr class="memitem:aa4ea57bd4bec30539febcf70b48b8752"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#aa4ea57bd4bec30539febcf70b48b8752">get_pool_and_oid</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *<a class="el" href="rgw__object__expirer_8cc.html#a9b49a835107f65049c05bddc99751652">store</a>, const string &amp;key, <a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, string &amp;oid)=0</td></tr>
 <tr class="separator:aa4ea57bd4bec30539febcf70b48b8752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72cd162beee0932e64742b2326c2f94c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#a72cd162beee0932e64742b2326c2f94c">check_versions</a> (const obj_version &amp;ondisk, const time_t &amp;ondisk_time, const obj_version &amp;incoming, const time_t &amp;incoming_time, <a class="el" href="classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491b">sync_type_t</a> sync_mode)</td></tr>
-<tr class="separator:a72cd162beee0932e64742b2326c2f94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117340ebd45072870a6ae18c3cc35607"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#a117340ebd45072870a6ae18c3cc35607">check_versions</a> (const obj_version &amp;ondisk, const real_time &amp;ondisk_time, const obj_version &amp;incoming, const real_time &amp;incoming_time, <a class="el" href="classRGWMetadataHandler.html#aadf01b0eb3cd3b7c6bfaeee13428491b">sync_type_t</a> sync_mode)</td></tr>
+<tr class="separator:a117340ebd45072870a6ae18c3cc35607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad9935248896a0f7d1e95a797dbcf1496"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataHandler.html#ad9935248896a0f7d1e95a797dbcf1496">parse_bucket</a> (const string &amp;bucket, string &amp;tenant_name, string &amp;bucket_name)</td></tr>
+<tr class="separator:ad9935248896a0f7d1e95a797dbcf1496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -203,7 +209,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a72cd162beee0932e64742b2326c2f94c"></a>
+<a class="anchor" id="a117340ebd45072870a6ae18c3cc35607"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -219,7 +225,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const time_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>ondisk_time</em>, </td>
         </tr>
         <tr>
@@ -231,7 +237,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const time_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>incoming_time</em>, </td>
         </tr>
         <tr>
@@ -524,7 +530,47 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8edec575303e3da80a29f20d1b2376d8"></a>
+<a class="anchor" id="ad9935248896a0f7d1e95a797dbcf1496"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void RGWMetadataHandler::parse_bucket </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>bucket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>tenant_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>bucket_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab2c4dda8f730dba75c953b2c00eabd7d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -552,7 +598,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t&#160;</td>
+          <td class="paramtype">real_time&#160;</td>
           <td class="paramname"><em>mtime</em>, </td>
         </tr>
         <tr>
@@ -580,7 +626,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classRGWUserMetadataHandler.html#af10d0d2a4cb4a8962fd331d87af0a699">RGWUserMetadataHandler</a>, <a class="el" href="classRGWBucketInstanceMetadataHandler.html#a9925c1409394d310ba650b96fbdeabb0">RGWBucketInstanceMetadataHandler</a>, <a class="el" href="classRGWBucketMetadataHandler.html#aa430f1978db0c461ec8a140c849d41dd">RGWBucketMetadataHandler</a>, and <a class="el" href="classRGWMetadataTopHandler.html#aabd4d3630ffa6d00d3924611ad1522ca">RGWMetadataTopHandler</a>.</p>
+<p>Implemented in <a class="el" href="classRGWUserMetadataHandler.html#ad861f0b427b873e8148e22d9d108f487">RGWUserMetadataHandler</a>, <a class="el" href="classRGWBucketInstanceMetadataHandler.html#a2a8140f7084500a5f170ed684ad0a8f3">RGWBucketInstanceMetadataHandler</a>, <a class="el" href="classRGWBucketMetadataHandler.html#a2eb1a2656809dcfc11445197d9d1f474">RGWBucketMetadataHandler</a>, and <a class="el" href="classRGWMetadataTopHandler.html#aa1f3e2e7e13ec6cbfb1228a23ada70aa">RGWMetadataTopHandler</a>.</p>
 
 </div>
 </div>
@@ -687,7 +733,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

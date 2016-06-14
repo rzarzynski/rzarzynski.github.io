@@ -1,8 +1,14 @@
 <map id="rgw_fcgi.h" name="rgw_fcgi.h">
-<area shape="rect" id="node2" href="$rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="935,80,1044,107"/>
-<area shape="rect" id="node5" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="934,155,1044,181"/>
-<area shape="rect" id="node15" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="253,237,331,264"/>
-<area shape="rect" id="node17" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="142,237,228,264"/>
-<area shape="rect" id="node18" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1921,237,2015,264"/>
-<area shape="rect" id="node21" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2112,237,2205,264"/>
+<area shape="rect" id="node4" href="$rgw__client__io_8h.html" title="rgw_client_io.h" alt="" coords="988,80,1097,107"/>
+<area shape="rect" id="node9" href="$rgw__common_8h.html" title="rgw_common.h" alt="" coords="1155,155,1265,181"/>
+<area shape="rect" id="node18" href="$rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="573,237,651,264"/>
+<area shape="rect" id="node19" href="$rgw__basic__types_8h.html" title="rgw_basic_types.h" alt="" coords="596,320,725,347"/>
+<area shape="rect" id="node20" href="$rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="333,320,419,347"/>
+<area shape="rect" id="node21" href="$rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="1049,237,1143,264"/>
+<area shape="rect" id="node24" href="$rgw__string_8h.html" title="rgw_string.h" alt="" coords="2359,469,2452,496"/>
+<area shape="rect" id="node26" href="$rgw__website_8h.html" title="rgw_website.h" alt="" coords="112,237,219,264"/>
+<area shape="rect" id="node34" href="$rgw__auth_8h.html" title="rgw_auth.h" alt="" coords="1167,237,1253,264"/>
+<area shape="rect" id="node27" href="$rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="124,320,205,347"/>
+<area shape="rect" id="node38" href="$rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="2643,320,2757,347"/>
+<area shape="rect" id="node39" href="$rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="2513,395,2633,421"/>
 </map>

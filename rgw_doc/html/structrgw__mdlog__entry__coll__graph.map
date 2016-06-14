@@ -1,0 +1,3 @@
+<map id="rgw_mdlog_entry" name="rgw_mdlog_entry">
+<area shape="rect" id="node3" href="$structRGWMetadataLogData.html" title="{RGWMetadataLogData\n|+ read_version\l+ write_version\l+ status\l|+ RGWMetadataLogData()\l+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="84,5,263,171"/>
+</map>

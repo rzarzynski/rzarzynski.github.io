@@ -1,3 +1,3 @@
 <map id="RGWLoadGenProcess" name="RGWLoadGenProcess">
-<area shape="rect" id="node2" href="$classRGWProcess.html" title="{RGWProcess\n|# store\l# olog\l# m_tp\l# req_throttle\l# rest\l# conf\l# sock_fd\l# req_wq\l# max_req_id\l|+ RGWProcess()\l+ ~RGWProcess()\l+ run()\l+ handle_request()\l+ close_fd()\l}" alt="" coords="27,5,156,259"/>
+<area shape="rect" id="node2" href="$classRGWProcess.html" title="{RGWProcess\n|# cct\l# store\l# olog\l# m_tp\l# req_throttle\l# rest\l# conf\l# sock_fd\l# req_wq\l|+ RGWProcess()\l+ ~RGWProcess()\l+ run()\l+ handle_request()\l+ pause()\l+ unpause_with_new_config()\l+ close_fd()\l}" alt="" coords="5,5,200,288"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="rgw_bucket_shard_sync_info" name="rgw_bucket_shard_sync_info">
+<area shape="rect" id="node2" href="$structrgw__bucket__shard__inc__sync__marker.html" title="{rgw_bucket_shard_inc\l_sync_marker\n||+ rgw_bucket_shard_inc\l_sync_marker()\l+ encode_attr()\l+ encode()\l+ decode()\l+ dump()\l+ operator\&lt;()\l}" alt="" coords="42,467,205,647"/>
+<area shape="rect" id="node5" href="$structrgw__obj__key.html" title="{rgw_obj_key\n||+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ rgw_obj_key()\l+ set()\l+ transform()\l+ set()\l+ set()\l+ empty()\l+ operator==()\l+ operator\&lt;()\l+ operator\&lt;=()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="188,160,303,443"/>
+<area shape="rect" id="node4" href="$structrgw__bucket__shard__full__sync__marker.html" title="{rgw_bucket_shard_full\l_sync_marker\n|+ count\l|+ rgw_bucket_shard_full\l_sync_marker()\l+ encode_attr()\l+ encode()\l+ decode()\l+ dump()\l}" alt="" coords="191,672,355,837"/>
+</map>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -89,24 +89,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">rgw_rest_s3.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="rgw__op_8h_source.html">rgw_op.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &lt;mutex&gt;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__op_8h_source.html">rgw_op.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__http__errors_8h_source.html">rgw_http_errors.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__acl__s3_8h_source.html">rgw_acl_s3.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__policy__s3_8h_source.html">rgw_policy_s3.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rgw__keystone_8h_source.html">rgw_keystone.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__rest__conn_8h_source.html">rgw_rest_conn.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="rgw__ldap_8h_source.html">rgw_ldap.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rgw_rest_s3.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rest__s3_8h__incl.png" border="0" usemap="#rgw__rest__s3_8h" alt=""/></div>
 <map name="rgw__rest__s3_8h" id="rgw__rest__s3_8h">
-<area shape="rect" id="node2" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="1596,80,1669,107"/><area shape="rect" id="node44" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="261,229,384,256"/><area shape="rect" id="node45" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="3087,395,3185,421"/><area shape="rect" id="node49" href="rgw__policy__s3_8h.html" title="rgw_policy_s3.h" alt="" coords="3261,395,3376,421"/><area shape="rect" id="node50" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="144,80,259,107"/><area shape="rect" id="node7" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1221,395,1331,421"/><area shape="rect" id="node16" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="2555,477,2633,504"/><area shape="rect" id="node18" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="2658,477,2744,504"/><area shape="rect" id="node19" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="109,477,203,504"/><area shape="rect" id="node28" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="1863,229,1956,256"/><area shape="rect" id="node38" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1590,155,1676,181"/><area shape="rect" id="node42" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="1381,155,1480,181"/><area shape="rect" id="node22" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="3436,477,3529,504"/><area shape="rect" id="node34" href="rgw__log_8h.html" title="rgw_log.h" alt="" coords="1314,312,1392,339"/><area shape="rect" id="node36" href="rgw__metadata_8h.html" title="rgw_metadata.h" alt="" coords="1852,312,1967,339"/><area shape="rect" id="node37" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="2042,312,2160,339"/><area shape="rect" id="node39" href="rgw__tools_8h.html" title="rgw_tools.h" alt="" coords="1149,312,1237,339"/><area shape="rect" id="node40" href="rgw__formats_8h.html" title="rgw_formats.h" alt="" coords="1621,312,1725,339"/><area shape="rect" id="node48" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="2820,477,2901,504"/></map>
+<area shape="rect" id="node3" href="rgw__op_8h.html" title="rgw_op.h" alt="" coords="1111,80,1184,107"/><area shape="rect" id="node30" href="rgw__http__errors_8h.html" title="rgw_http_errors.h" alt="" coords="1411,80,1533,107"/><area shape="rect" id="node31" href="rgw__acl__s3_8h.html" title="rgw_acl_s3.h" alt="" coords="1905,304,2004,331"/><area shape="rect" id="node35" href="rgw__policy__s3_8h.html" title="rgw_policy_s3.h" alt="" coords="199,304,315,331"/><area shape="rect" id="node37" href="rgw__keystone_8h.html" title="rgw_keystone.h" alt="" coords="139,155,253,181"/><area shape="rect" id="node40" href="rgw__rest__conn_8h.html" title="rgw_rest_conn.h" alt="" coords="429,80,547,107"/><area shape="rect" id="node42" href="rgw__ldap_8h.html" title="rgw_ldap.h" alt="" coords="2475,155,2560,181"/><area shape="rect" id="node14" href="rgw__common_8h.html" title="rgw_common.h" alt="" coords="1241,304,1351,331"/><area shape="rect" id="node20" href="rgw__acl_8h.html" title="rgw_acl.h" alt="" coords="1337,379,1415,405"/><area shape="rect" id="node21" href="rgw__cors_8h.html" title="rgw_cors.h" alt="" coords="1439,379,1525,405"/><area shape="rect" id="node22" href="rgw__quota_8h.html" title="rgw_quota.h" alt="" coords="540,379,633,405"/><area shape="rect" id="node24" href="rgw__rados_8h.html" title="rgw_rados.h" alt="" coords="809,229,903,256"/><area shape="rect" id="node26" href="rgw__user_8h.html" title="rgw_user.h" alt="" coords="1763,155,1849,181"/><area shape="rect" id="node29" href="rgw__bucket_8h.html" title="rgw_bucket.h" alt="" coords="899,155,999,181"/><area shape="rect" id="node23" href="rgw__string_8h.html" title="rgw_string.h" alt="" coords="423,379,516,405"/><area shape="rect" id="node34" href="rgw__xml_8h.html" title="rgw_xml.h" alt="" coords="1855,379,1936,405"/><area shape="rect" id="node38" href="rgw__http__client_8h.html" title="rgw_http_client.h" alt="" coords="338,229,459,256"/><area shape="rect" id="node41" href="rgw__rest__client_8h.html" title="rgw_rest_client.h" alt="" coords="278,155,399,181"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="rgw__rest__s3_8h__dep__incl.png" border="0" usemap="#rgw__rest__s3_8hdep" alt=""/></div>
 <map name="rgw__rest__s3_8hdep" id="rgw__rest__s3_8hdep">
-<area shape="rect" id="node2" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="161,155,257,181"/><area shape="rect" id="node3" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="47,80,172,107"/><area shape="rect" id="node5" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="247,80,361,107"/><area shape="rect" id="node7" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="386,80,515,107"/><area shape="rect" id="node9" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="540,80,631,107"/><area shape="rect" id="node10" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="655,80,787,107"/><area shape="rect" id="node11" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="812,80,927,107"/><area shape="rect" id="node12" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="951,80,1101,107"/><area shape="rect" id="node13" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="1126,80,1265,107"/><area shape="rect" id="node14" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="1290,80,1448,107"/><area shape="rect" id="node15" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="1473,80,1583,107"/><area shape="rect" id="node4" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="5,155,136,181"/><area shape="rect" id="node6" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="281,155,404,181"/><area shape="rect" id="node8" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="428,155,563,181"/></map>
+<area shape="rect" id="node2" href="rgw__rest__user_8h.html" title="rgw_rest_user.h" alt="" coords="585,80,700,107"/><area shape="rect" id="node3" href="librgw_8cc.html" title="librgw.cc" alt="" coords="397,304,471,331"/><area shape="rect" id="node4" href="rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="5,304,91,331"/><area shape="rect" id="node5" href="rgw__main_8cc.html" title="rgw_main.cc" alt="" coords="816,155,912,181"/><area shape="rect" id="node6" href="rgw__os__lib_8cc.html" title="rgw_os_lib.cc" alt="" coords="270,304,372,331"/><area shape="rect" id="node8" href="rgw__lib_8h.html" title="rgw_lib.h" alt="" coords="176,80,249,107"/><area shape="rect" id="node12" href="rgw__rest_8cc.html" title="rgw_rest.cc" alt="" coords="301,155,392,181"/><area shape="rect" id="node13" href="rgw__rest__usage_8h.html" title="rgw_rest_usage.h" alt="" coords="852,80,977,107"/><area shape="rect" id="node15" href="rgw__rest__bucket_8h.html" title="rgw_rest_bucket.h" alt="" coords="1002,80,1131,107"/><area shape="rect" id="node17" href="rgw__op_8cc.html" title="rgw_op.cc" alt="" coords="1155,80,1236,107"/><area shape="rect" id="node18" href="rgw__rest__config_8cc.html" title="rgw_rest_config.cc" alt="" coords="1262,80,1393,107"/><area shape="rect" id="node19" href="rgw__rest__log_8cc.html" title="rgw_rest_log.cc" alt="" coords="1419,80,1533,107"/><area shape="rect" id="node20" href="rgw__rest__metadata_8cc.html" title="rgw_rest_metadata.cc" alt="" coords="1558,80,1708,107"/><area shape="rect" id="node21" href="rgw__rest__opstate_8cc.html" title="rgw_rest_opstate.cc" alt="" coords="1733,80,1872,107"/><area shape="rect" id="node22" href="rgw__rest__realm_8cc.html" title="rgw_rest_realm.cc" alt="" coords="1897,80,2025,107"/><area shape="rect" id="node23" href="rgw__rest__replica__log_8cc.html" title="rgw_rest_replica_log.cc" alt="" coords="2050,80,2208,107"/><area shape="rect" id="node24" href="rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="2247,155,2357,181"/><area shape="rect" id="node25" href="rgw__rest__s3website_8h.html" title="rgw_rest_s3website.h" alt="" coords="2284,80,2432,107"/><area shape="rect" id="node7" href="rgw__rest__user_8cc.html" title="rgw_rest_user.cc" alt="" coords="568,155,691,181"/><area shape="rect" id="node9" href="rgw__os__lib_8h.html" title="rgw_os_lib.h" alt="" coords="43,229,137,256"/><area shape="rect" id="node10" href="rgw__lib__frontend_8h.html" title="rgw_lib_frontend.h" alt="" coords="264,229,392,256"/><area shape="rect" id="node11" href="rgw__file_8h.html" title="rgw_file.h" alt="" coords="97,155,175,181"/><area shape="rect" id="node14" href="rgw__rest__usage_8cc.html" title="rgw_rest_usage.cc" alt="" coords="937,155,1068,181"/><area shape="rect" id="node16" href="rgw__rest__bucket_8cc.html" title="rgw_rest_bucket.cc" alt="" coords="1093,155,1228,181"/></map>
 </div>
 </div>
 <p><a href="rgw__rest__s3_8h_source.html">Go to the source code of this file.</a></p>
@@ -117,6 +120,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWListBuckets__ObjStore__S3.html">RGWListBuckets_ObjStore_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetUsage__ObjStore__S3.html">RGWGetUsage_ObjStore_S3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWListBucket__ObjStore__S3.html">RGWListBucket_ObjStore_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetBucketLogging__ObjStore__S3.html">RGWGetBucketLogging_ObjStore_S3</a></td></tr>
@@ -126,6 +131,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetBucketVersioning__ObjStore__S3.html">RGWGetBucketVersioning_ObjStore_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSetBucketVersioning__ObjStore__S3.html">RGWSetBucketVersioning_ObjStore_S3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetBucketWebsite__ObjStore__S3.html">RGWGetBucketWebsite_ObjStore_S3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSetBucketWebsite__ObjStore__S3.html">RGWSetBucketWebsite_ObjStore_S3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDeleteBucketWebsite__ObjStore__S3.html">RGWDeleteBucketWebsite_ObjStore_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWStatBucket__ObjStore__S3.html">RGWStatBucket_ObjStore_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +168,10 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWOptionsCORS__ObjStore__S3.html">RGWOptionsCORS_ObjStore_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWGetRequestPayment__ObjStore__S3.html">RGWGetRequestPayment_ObjStore_S3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWSetRequestPayment__ObjStore__S3.html">RGWSetRequestPayment_ObjStore_S3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWInitMultipart__ObjStore__S3.html">RGWInitMultipart_ObjStore_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWCompleteMultipart__ObjStore__S3.html">RGWCompleteMultipart_ObjStore_S3</a></td></tr>
@@ -175,13 +190,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__Auth__S3.html">RGWHandler_Auth_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__ObjStore__S3.html">RGWHandler_ObjStore_S3</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__REST__S3.html">RGWHandler_REST_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__ObjStore__Service__S3.html">RGWHandler_ObjStore_Service_S3</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__REST__Service__S3.html">RGWHandler_REST_Service_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__ObjStore__Bucket__S3.html">RGWHandler_ObjStore_Bucket_S3</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__REST__Bucket__S3.html">RGWHandler_REST_Bucket_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__ObjStore__Obj__S3.html">RGWHandler_ObjStore_Obj_S3</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWHandler__REST__Obj__S3.html">RGWHandler_REST_Obj_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWRESTMgr__S3.html">RGWRESTMgr_S3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,6 +212,12 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ad92598bbb8713be8f973a1a03e163995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8h.html#ad92598bbb8713be8f973a1a03e163995">rgw_get_errno_s3</a> (struct <a class="el" href="structrgw__http__errors.html">rgw_http_errors</a> *e, int err_no)</td></tr>
 <tr class="separator:ad92598bbb8713be8f973a1a03e163995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3a7c693096e039e45e333d5f9680ce"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8h.html#a7b3a7c693096e039e45e333d5f9680ce">looks_like_ip_address</a> (const char *bucket)</td></tr>
+<tr class="separator:a7b3a7c693096e039e45e333d5f9680ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5d7366f67380e0de2809c98048e8ec"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8h.html#afc5d7366f67380e0de2809c98048e8ec">valid_s3_object_name</a> (const string &amp;name)</td></tr>
+<tr class="separator:afc5d7366f67380e0de2809c98048e8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f6b612231d1cae3a1b67e2e9bf1bbb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rgw__rest__s3_8h.html#af1f6b612231d1cae3a1b67e2e9bf1bbb">valid_s3_bucket_name</a> (const string &amp;name, bool relaxed=false)</td></tr>
+<tr class="separator:af1f6b612231d1cae3a1b67e2e9bf1bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a5087ff42fca94b3be0d905302806d180"></a>
@@ -224,6 +245,30 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a7b3a7c693096e039e45e333d5f9680ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool looks_like_ip_address </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>bucket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad92598bbb8713be8f973a1a03e163995"></a>
 <div class="memitem">
 <div class="memproto">
@@ -250,10 +295,68 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af1f6b612231d1cae3a1b67e2e9bf1bbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int valid_s3_bucket_name </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>relaxed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afc5d7366f67380e0de2809c98048e8ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool valid_s3_object_name </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:40 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

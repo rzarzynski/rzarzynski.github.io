@@ -1,0 +1,5 @@
+<map id="RGWBulkDelete_ObjStore" name="RGWBulkDelete_ObjStore">
+<area shape="rect" id="node4" href="$classRGWBulkDelete__ObjStore__SWIFT.html" title="{RGWBulkDelete_ObjStore\l_SWIFT\n||+ RGWBulkDelete_ObjStore\l_SWIFT()\l+ ~RGWBulkDelete_ObjStore\l_SWIFT()\l+ get_data()\l+ send_response()\l}" alt="" coords="9,811,207,976"/>
+<area shape="rect" id="node2" href="$classRGWBulkDelete.html" title="{RGWBulkDelete\n|+ MAX_CHUNK_ENTRIES\l# deleter\l|+ RGWBulkDelete()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ get_data()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="15,411,200,621"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="11,6,205,362"/>
+</map>

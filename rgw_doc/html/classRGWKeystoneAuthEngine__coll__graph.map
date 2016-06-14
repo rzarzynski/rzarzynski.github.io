@@ -1,0 +1,5 @@
+<map id="RGWKeystoneAuthEngine" name="RGWKeystoneAuthEngine">
+<area shape="rect" id="node2" href="$classRGWTokenBasedAuthEngine.html" title="{RGWTokenBasedAuthEngine\n|# token\l|+ RGWTokenBasedAuthEngine()\l+ is_applicable()\l}" alt="" coords="5,229,219,321"/>
+<area shape="rect" id="node3" href="$classRGWAuthEngine.html" title="{RGWAuthEngine\n|# cct\l|+ get_name()\l+ is_applicable()\l+ authenticate()\l+ ~RGWAuthEngine()\l# RGWAuthEngine()\l# RGWAuthEngine()\l# operator=()\l}" alt="" coords="37,5,187,171"/>
+<area shape="rect" id="node4" href="$structRGWRemoteAuthApplier_1_1Factory.html" title="{RGWRemoteAuthApplier\l::Factory\n||+ ~Factory()\l+ create_apl_remote()\l}" alt="" coords="244,221,412,328"/>
+</map>

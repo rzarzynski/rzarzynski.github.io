@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structRGWRados_1_1SystemObject_1_1Read_1_1GetObjState.html" title="RGWRados::SystemObject\l::Read::GetObjState" alt="" coords="5,5,189,46"/>
+<area shape="rect" id="node1" href="$classRGWIdentityApplier.html" title="RGWIdentityApplier" alt="" coords="5,136,144,163"/>
+<area shape="rect" id="node2" href="$classRGWAuthApplier.html" title="RGWAuthApplier" alt="" coords="192,136,315,163"/>
+<area shape="rect" id="node3" href="$classRGWDecoratingAuthApplier.html" title="RGWDecoratingAuthApplier\l\&lt; DecorateeT \&gt;" alt="" coords="379,5,565,46"/>
+<area shape="rect" id="node4" href="$classRGWDecoratingAuthApplier_3_01RGWAuthApplier_1_1aplptr__t_01_4.html" title="RGWDecoratingAuthApplier\l\&lt; RGWAuthApplier::aplptr_t \&gt;" alt="" coords="373,70,571,111"/>
+<area shape="rect" id="node5" href="$classRGWDecoratingAuthApplier.html" title="RGWDecoratingAuthApplier\&lt; T \&gt;" alt="" coords="363,136,581,163"/>
+<area shape="rect" id="node7" href="$classRGWLocalAuthApplier.html" title="RGWLocalAuthApplier" alt="" coords="395,187,549,213"/>
+<area shape="rect" id="node9" href="$classRGWRemoteAuthApplier.html" title="RGWRemoteAuthApplier" alt="" coords="388,237,556,264"/>
+<area shape="rect" id="node6" href="$classRGWThirdPartyAccountAuthApplier.html" title="RGWThirdPartyAccountAuth\lApplier\&lt; T \&gt;" alt="" coords="630,125,821,166"/>
+<area shape="rect" id="node8" href="$classRGWTempURLAuthApplier.html" title="RGWTempURLAuthApplier" alt="" coords="634,191,817,217"/>
 </map>

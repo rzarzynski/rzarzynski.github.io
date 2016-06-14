@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -91,49 +91,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef CEPH_RGW_FCGI_H</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CEPH_RGW_FCGI_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rgw__client__io_8h.html">rgw_client_io.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">struct </span>FCGX_Request;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classRGWFCGX.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWFCGX.html">RGWFCGX</a> : <span class="keyword">public</span> <a class="code" href="classRGWClientIO.html">RGWClientIO</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  FCGX_Request *fcgx;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRGWFCGX.html#ad5446d3ec77666be39a785fc2ef701e8">init_env</a>(CephContext *cct);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a23b124607468d6cc69dd5e751f6bdee4">write_data</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a494f87b025f4d6dceea1ab89cd97fc66">read_data</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a67f2b03d85630cf244eb8468cce7f347">send_status</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *status, <span class="keyword">const</span> <span class="keywordtype">char</span> *status_name);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a91c4aa732686791b0f11a5ec5e6723d8">send_100_continue</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#adf98264d92ff6b4fdd9f78d41a72b59a">complete_header</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classRGWFCGX.html#aee33db3e33838506b9d9e894adf98b94">   24</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#aee33db3e33838506b9d9e894adf98b94">complete_request</a>() { <span class="keywordflow">return</span> 0; }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a246d6e4f0ea4c22ad27a03935d791159">send_content_length</a>(uint64_t len);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classRGWFCGX.html#a1994db9f4e0eda6f7da0a2f60f5d59d9">   27</a></span>&#160;  <a class="code" href="classRGWFCGX.html#a1994db9f4e0eda6f7da0a2f60f5d59d9">RGWFCGX</a>(FCGX_Request *_fcgx) : fcgx(_fcgx) {}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRGWFCGX.html#a522db9a9e4f4f1e730c61b6368cee60f">flush</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;acconfig.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef FASTCGI_INCLUDE_DIR</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># include &quot;fastcgi/fcgiapp.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># include &quot;fcgiapp.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rgw__client__io_8h.html">rgw_client_io.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">struct </span>FCGX_Request;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classRGWFCGX.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWFCGX.html">RGWFCGX</a> : <span class="keyword">public</span> <a class="code" href="classRGWStreamIO.html">RGWStreamIO</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  FCGX_Request *fcgx;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">int</span> status_num;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRGWFCGX.html#ad5446d3ec77666be39a785fc2ef701e8">init_env</a>(CephContext *cct);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a23b124607468d6cc69dd5e751f6bdee4">write_data</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a494f87b025f4d6dceea1ab89cd97fc66">read_data</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a3fda45a8c408cec6a80e6678fdd42d9d">send_status</a>(<span class="keywordtype">int</span> status, <span class="keyword">const</span> <span class="keywordtype">char</span> *status_name);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a91c4aa732686791b0f11a5ec5e6723d8">send_100_continue</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#adf98264d92ff6b4fdd9f78d41a72b59a">complete_header</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classRGWFCGX.html#aee33db3e33838506b9d9e894adf98b94">   32</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#aee33db3e33838506b9d9e894adf98b94">complete_request</a>() { <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classRGWFCGX.html#a246d6e4f0ea4c22ad27a03935d791159">send_content_length</a>(uint64_t len);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classRGWFCGX.html#a1994db9f4e0eda6f7da0a2f60f5d59d9">   35</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classRGWFCGX.html#a1994db9f4e0eda6f7da0a2f60f5d59d9">RGWFCGX</a>(FCGX_Request *_fcgx) : fcgx(_fcgx), status_num(0) {}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRGWFCGX.html#a522db9a9e4f4f1e730c61b6368cee60f">flush</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="rgw__client__io_8h_html"><div class="ttname"><a href="rgw__client__io_8h.html">rgw_client_io.h</a></div></div>
 <div class="ttc" id="classRGWFCGX_html_a522db9a9e4f4f1e730c61b6368cee60f"><div class="ttname"><a href="classRGWFCGX.html#a522db9a9e4f4f1e730c61b6368cee60f">RGWFCGX::flush</a></div><div class="ttdeci">void flush()</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:24</div></div>
 <div class="ttc" id="classRGWFCGX_html_a494f87b025f4d6dceea1ab89cd97fc66"><div class="ttname"><a href="classRGWFCGX.html#a494f87b025f4d6dceea1ab89cd97fc66">RGWFCGX::read_data</a></div><div class="ttdeci">int read_data(char *buf, int len)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:19</div></div>
-<div class="ttc" id="classRGWFCGX_html_a1994db9f4e0eda6f7da0a2f60f5d59d9"><div class="ttname"><a href="classRGWFCGX.html#a1994db9f4e0eda6f7da0a2f60f5d59d9">RGWFCGX::RGWFCGX</a></div><div class="ttdeci">RGWFCGX(FCGX_Request *_fcgx)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.h:27</div></div>
-<div class="ttc" id="classRGWFCGX_html_a246d6e4f0ea4c22ad27a03935d791159"><div class="ttname"><a href="classRGWFCGX.html#a246d6e4f0ea4c22ad27a03935d791159">RGWFCGX::send_content_length</a></div><div class="ttdeci">int send_content_length(uint64_t len)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:48</div></div>
-<div class="ttc" id="classRGWFCGX_html"><div class="ttname"><a href="classRGWFCGX.html">RGWFCGX</a></div><div class="ttdef"><b>Definition:</b> rgw_fcgi.h:13</div></div>
-<div class="ttc" id="classRGWFCGX_html_a67f2b03d85630cf244eb8468cce7f347"><div class="ttname"><a href="classRGWFCGX.html#a67f2b03d85630cf244eb8468cce7f347">RGWFCGX::send_status</a></div><div class="ttdeci">int send_status(const char *status, const char *status_name)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:34</div></div>
-<div class="ttc" id="classRGWFCGX_html_a91c4aa732686791b0f11a5ec5e6723d8"><div class="ttname"><a href="classRGWFCGX.html#a91c4aa732686791b0f11a5ec5e6723d8">RGWFCGX::send_100_continue</a></div><div class="ttdeci">int send_100_continue()</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:39</div></div>
-<div class="ttc" id="classRGWClientIO_html"><div class="ttname"><a href="classRGWClientIO.html">RGWClientIO</a></div><div class="ttdef"><b>Definition:</b> rgw_client_io.h:13</div></div>
-<div class="ttc" id="classRGWFCGX_html_adf98264d92ff6b4fdd9f78d41a72b59a"><div class="ttname"><a href="classRGWFCGX.html#adf98264d92ff6b4fdd9f78d41a72b59a">RGWFCGX::complete_header</a></div><div class="ttdeci">int complete_header()</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:55</div></div>
+<div class="ttc" id="classRGWFCGX_html_a3fda45a8c408cec6a80e6678fdd42d9d"><div class="ttname"><a href="classRGWFCGX.html#a3fda45a8c408cec6a80e6678fdd42d9d">RGWFCGX::send_status</a></div><div class="ttdeci">int send_status(int status, const char *status_name)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:34</div></div>
+<div class="ttc" id="classRGWStreamIO_html"><div class="ttname"><a href="classRGWStreamIO.html">RGWStreamIO</a></div><div class="ttdef"><b>Definition:</b> rgw_client_io.h:42</div></div>
+<div class="ttc" id="classRGWFCGX_html_a1994db9f4e0eda6f7da0a2f60f5d59d9"><div class="ttname"><a href="classRGWFCGX.html#a1994db9f4e0eda6f7da0a2f60f5d59d9">RGWFCGX::RGWFCGX</a></div><div class="ttdeci">RGWFCGX(FCGX_Request *_fcgx)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.h:35</div></div>
+<div class="ttc" id="classRGWFCGX_html_a246d6e4f0ea4c22ad27a03935d791159"><div class="ttname"><a href="classRGWFCGX.html#a246d6e4f0ea4c22ad27a03935d791159">RGWFCGX::send_content_length</a></div><div class="ttdeci">int send_content_length(uint64_t len)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:49</div></div>
+<div class="ttc" id="classRGWFCGX_html"><div class="ttname"><a href="classRGWFCGX.html">RGWFCGX</a></div><div class="ttdef"><b>Definition:</b> rgw_fcgi.h:18</div></div>
+<div class="ttc" id="classRGWFCGX_html_a91c4aa732686791b0f11a5ec5e6723d8"><div class="ttname"><a href="classRGWFCGX.html#a91c4aa732686791b0f11a5ec5e6723d8">RGWFCGX::send_100_continue</a></div><div class="ttdeci">int send_100_continue()</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:40</div></div>
+<div class="ttc" id="classRGWFCGX_html_adf98264d92ff6b4fdd9f78d41a72b59a"><div class="ttname"><a href="classRGWFCGX.html#adf98264d92ff6b4fdd9f78d41a72b59a">RGWFCGX::complete_header</a></div><div class="ttdeci">int complete_header()</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:63</div></div>
 <div class="ttc" id="classRGWFCGX_html_ad5446d3ec77666be39a785fc2ef701e8"><div class="ttname"><a href="classRGWFCGX.html#ad5446d3ec77666be39a785fc2ef701e8">RGWFCGX::init_env</a></div><div class="ttdeci">void init_env(CephContext *cct)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:29</div></div>
 <div class="ttc" id="classRGWFCGX_html_a23b124607468d6cc69dd5e751f6bdee4"><div class="ttname"><a href="classRGWFCGX.html#a23b124607468d6cc69dd5e751f6bdee4">RGWFCGX::write_data</a></div><div class="ttdeci">int write_data(const char *buf, int len)</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.cc:14</div></div>
-<div class="ttc" id="classRGWFCGX_html_aee33db3e33838506b9d9e894adf98b94"><div class="ttname"><a href="classRGWFCGX.html#aee33db3e33838506b9d9e894adf98b94">RGWFCGX::complete_request</a></div><div class="ttdeci">int complete_request()</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.h:24</div></div>
+<div class="ttc" id="classRGWFCGX_html_aee33db3e33838506b9d9e894adf98b94"><div class="ttname"><a href="classRGWFCGX.html#aee33db3e33838506b9d9e894adf98b94">RGWFCGX::complete_request</a></div><div class="ttdeci">int complete_request()</div><div class="ttdef"><b>Definition:</b> rgw_fcgi.h:32</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:38 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

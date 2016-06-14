@@ -1,0 +1,7 @@
+<map id="RGWRadosThread" name="RGWRadosThread">
+<area shape="rect" id="node2" href="$classRGWDataNotifier.html" title="{RGWDataNotifier\n||+ RGWDataNotifier()\l+ process()\l}" alt="" coords="5,293,149,385"/>
+<area shape="rect" id="node3" href="$classRGWMetaNotifier.html" title="{RGWMetaNotifier\n||+ RGWMetaNotifier()\l+ process()\l}" alt="" coords="175,293,321,385"/>
+<area shape="rect" id="node4" href="$classRGWSyncProcessorThread.html" title="{RGWSyncProcessorThread\n||+ RGWSyncProcessorThread()\l+ ~RGWSyncProcessorThread()\l+ init()\l+ process()\l}" alt="" coords="346,278,557,399"/>
+<area shape="rect" id="node5" href="$classRGWDataSyncProcessorThread.html" title="{RGWDataSyncProcessorThread\n||+ RGWDataSyncProcessorThread()\l+ wakeup_sync_shards()\l+ init()\l+ process()\l}" alt="" coords="207,449,439,570"/>
+<area shape="rect" id="node6" href="$classRGWMetaSyncProcessorThread.html" title="{RGWMetaSyncProcessorThread\n||+ RGWMetaSyncProcessorThread()\l+ wakeup_sync_shards()\l+ init()\l+ process()\l}" alt="" coords="463,449,696,570"/>
+</map>

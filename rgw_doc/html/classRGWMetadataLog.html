@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -108,27 +108,37 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95ab0f7bd543e6a375d982858950e02d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a95ab0f7bd543e6a375d982858950e02d">RGWMetadataLog</a> (CephContext *_cct, <a class="el" href="classRGWRados.html">RGWRados</a> *_store)</td></tr>
-<tr class="separator:a95ab0f7bd543e6a375d982858950e02d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a553a63dcfddcd0feb7eb3010e51a9170"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a553a63dcfddcd0feb7eb3010e51a9170">add_entry</a> (<a class="el" href="classRGWRados.html">RGWRados</a> *store, <a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *handler, const string &amp;section, const string &amp;key, bufferlist &amp;bl)</td></tr>
-<tr class="separator:a553a63dcfddcd0feb7eb3010e51a9170"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a212175f7d18883ac76373868616e67ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a212175f7d18883ac76373868616e67ad">init_list_entries</a> (int shard_id, utime_t &amp;from_time, utime_t &amp;end_time, string &amp;marker, void **handle)</td></tr>
-<tr class="separator:a212175f7d18883ac76373868616e67ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa628211fd6dfec7e4cadad13a41f292b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#aa628211fd6dfec7e4cadad13a41f292b">RGWMetadataLog</a> (CephContext *_cct, <a class="el" href="classRGWRados.html">RGWRados</a> *_store, const std::string &amp;period)</td></tr>
+<tr class="separator:aa628211fd6dfec7e4cadad13a41f292b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa6724b01556b42030a191288cda42e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a4aa6724b01556b42030a191288cda42e">get_shard_oid</a> (int id, string &amp;oid) const </td></tr>
+<tr class="separator:a4aa6724b01556b42030a191288cda42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff3a7bd94a00961d351a62d5160c07d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#aaff3a7bd94a00961d351a62d5160c07d">add_entry</a> (<a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *handler, const string &amp;section, const string &amp;key, bufferlist &amp;bl)</td></tr>
+<tr class="separator:aaff3a7bd94a00961d351a62d5160c07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9082fc55ef71a4cef73aa3962c9732ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a9082fc55ef71a4cef73aa3962c9732ee">store_entries_in_shard</a> (list&lt; cls_log_entry &gt; &amp;entries, int shard_id, librados::AioCompletion *completion)</td></tr>
+<tr class="separator:a9082fc55ef71a4cef73aa3962c9732ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5f32dfee58421f9f4646da837afa59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#adb5f32dfee58421f9f4646da837afa59">init_list_entries</a> (int shard_id, const real_time &amp;from_time, const real_time &amp;end_time, string &amp;marker, void **handle)</td></tr>
+<tr class="separator:adb5f32dfee58421f9f4646da837afa59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4afea886b639d8f3a85dfd09fea0eef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a4afea886b639d8f3a85dfd09fea0eef8">complete_list_entries</a> (void *handle)</td></tr>
 <tr class="separator:a4afea886b639d8f3a85dfd09fea0eef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aba97e2dc1901d087472504c486131c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a8aba97e2dc1901d087472504c486131c">list_entries</a> (void *handle, int max_entries, list&lt; cls_log_entry &gt; &amp;entries, string *out_marker, bool *truncated)</td></tr>
 <tr class="separator:a8aba97e2dc1901d087472504c486131c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1301e95480faa6d7a053bcc5422f9441"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a1301e95480faa6d7a053bcc5422f9441">trim</a> (int shard_id, const utime_t &amp;from_time, const utime_t &amp;end_time, const string &amp;start_marker, const string &amp;end_marker)</td></tr>
-<tr class="separator:a1301e95480faa6d7a053bcc5422f9441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37b639b7ce54f3f55c6ff49540658a3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a37b639b7ce54f3f55c6ff49540658a3d">trim</a> (int shard_id, const real_time &amp;from_time, const real_time &amp;end_time, const string &amp;start_marker, const string &amp;end_marker)</td></tr>
+<tr class="separator:a37b639b7ce54f3f55c6ff49540658a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc6c16abaa2213ce03fee6f9a9ffb7ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#adc6c16abaa2213ce03fee6f9a9ffb7ee">get_info</a> (int shard_id, <a class="el" href="structRGWMetadataLogInfo.html">RGWMetadataLogInfo</a> *info)</td></tr>
 <tr class="separator:adc6c16abaa2213ce03fee6f9a9ffb7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0a4b20ecf2d4185253224e094dee509"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#ab0a4b20ecf2d4185253224e094dee509">lock_exclusive</a> (int shard_id, utime_t &amp;duration, string &amp;zone_id, string &amp;owner_id)</td></tr>
-<tr class="separator:ab0a4b20ecf2d4185253224e094dee509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a457deb288f3010ced6d040741a615aa0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a457deb288f3010ced6d040741a615aa0">get_info_async</a> (int shard_id, <a class="el" href="structRGWMetadataLogInfo.html">RGWMetadataLogInfo</a> *info, <a class="el" href="classRGWCompletionManager.html">RGWCompletionManager</a> *completion_manager, void *user_info, int *pret)</td></tr>
+<tr class="separator:a457deb288f3010ced6d040741a615aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae092ec9afa5f4614e5d14a9d3a7223"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#a5ae092ec9afa5f4614e5d14a9d3a7223">lock_exclusive</a> (int shard_id, timespan duration, string &amp;zone_id, string &amp;owner_id)</td></tr>
+<tr class="separator:a5ae092ec9afa5f4614e5d14a9d3a7223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7fb29bf73a022f37d327effcd24472d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#af7fb29bf73a022f37d327effcd24472d">unlock</a> (int shard_id, string &amp;zone_id, string &amp;owner_id)</td></tr>
 <tr class="separator:af7fb29bf73a022f37d327effcd24472d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00eb77e516deadc49358941e28f5ea3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#af00eb77e516deadc49358941e28f5ea3">update_shards</a> (list&lt; int &gt; &amp;shards)</td></tr>
+<tr class="separator:af00eb77e516deadc49358941e28f5ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4638e8d2d55d4601bae83139165b0b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWMetadataLog.html#ad4638e8d2d55d4601bae83139165b0b1">read_clear_modified</a> (set&lt; int &gt; &amp;modified)</td></tr>
+<tr class="separator:ad4638e8d2d55d4601bae83139165b0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a95ab0f7bd543e6a375d982858950e02d"></a>
+<a class="anchor" id="aa628211fd6dfec7e4cadad13a41f292b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,7 +155,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
-          <td class="paramname"><em>_store</em>&#160;</td>
+          <td class="paramname"><em>_store</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>period</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -163,19 +179,13 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a553a63dcfddcd0feb7eb3010e51a9170"></a>
+<a class="anchor" id="aaff3a7bd94a00961d351a62d5160c07d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int RGWMetadataLog::add_entry </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classRGWRados.html">RGWRados</a> *&#160;</td>
-          <td class="paramname"><em>store</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="classRGWMetadataHandler.html">RGWMetadataHandler</a> *&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
@@ -249,7 +259,85 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a212175f7d18883ac76373868616e67ad"></a>
+<a class="anchor" id="a457deb288f3010ced6d040741a615aa0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWMetadataLog::get_info_async </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shard_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structRGWMetadataLogInfo.html">RGWMetadataLogInfo</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRGWCompletionManager.html">RGWCompletionManager</a> *&#160;</td>
+          <td class="paramname"><em>completion_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pret</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4aa6724b01556b42030a191288cda42e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWMetadataLog::get_shard_oid </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>oid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb5f32dfee58421f9f4646da837afa59"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -262,13 +350,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>from_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>end_time</em>, </td>
         </tr>
         <tr>
@@ -337,7 +425,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab0a4b20ecf2d4185253224e094dee509"></a>
+<a class="anchor" id="a5ae092ec9afa5f4614e5d14a9d3a7223"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -350,7 +438,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">timespan&#160;</td>
           <td class="paramname"><em>duration</em>, </td>
         </tr>
         <tr>
@@ -375,7 +463,55 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1301e95480faa6d7a053bcc5422f9441"></a>
+<a class="anchor" id="ad4638e8d2d55d4601bae83139165b0b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWMetadataLog::read_clear_modified </td>
+          <td>(</td>
+          <td class="paramtype">set&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>modified</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9082fc55ef71a4cef73aa3962c9732ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWMetadataLog::store_entries_in_shard </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; cls_log_entry &gt; &amp;&#160;</td>
+          <td class="paramname"><em>entries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shard_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">librados::AioCompletion *&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37b639b7ce54f3f55c6ff49540658a3d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -388,13 +524,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>from_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>end_time</em>, </td>
         </tr>
         <tr>
@@ -451,6 +587,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af00eb77e516deadc49358941e28f5ea3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWMetadataLog::update_shards </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shards</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rgw__metadata_8h_source.html">rgw_metadata.h</a></li>
 <li><a class="el" href="rgw__metadata_8cc.html">rgw_metadata.cc</a></li>
@@ -458,7 +610,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:42 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

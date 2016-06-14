@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['obj_5fiterator',['obj_iterator',['../classRGWObjManifest_1_1obj__iterator.html',1,'RGWObjManifest']]],
-  ['object',['Object',['../classRGWRados_1_1Object.html',1,'RGWRados']]],
-  ['objectcache',['ObjectCache',['../classObjectCache.html',1,'']]],
-  ['objectcacheentry',['ObjectCacheEntry',['../structObjectCacheEntry.html',1,'']]],
-  ['objectcacheinfo',['ObjectCacheInfo',['../structObjectCacheInfo.html',1,'']]],
-  ['objectmetainfo',['ObjectMetaInfo',['../structObjectMetaInfo.html',1,'']]],
-  ['opslogsocket',['OpsLogSocket',['../classOpsLogSocket.html',1,'']]]
+  ['metaparams',['MetaParams',['../structRGWRados_1_1Object_1_1Write_1_1MetaParams.html',1,'RGWRados::Object::Write']]],
+  ['multipartmetafilter',['MultipartMetaFilter',['../classMultipartMetaFilter.html',1,'']]]
 ];

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -116,22 +116,28 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7392b031c0a2762d0e030d8c56e1ff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46a18ac8de8232b38652ec9052c7bac9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a46a18ac8de8232b38652ec9052c7bac9">add_entry</a> (<a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, int shard_id)</td></tr>
 <tr class="separator:a46a18ac8de8232b38652ec9052c7bac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e7037a9e18f965bffc75d81b010dad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a12e7037a9e18f965bffc75d81b010dad">get_log_shard_id</a> (<a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;bucket, int shard_id)</td></tr>
+<tr class="separator:a12e7037a9e18f965bffc75d81b010dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e2784c0fa4cb6b806a3477c4a9de132"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a8e2784c0fa4cb6b806a3477c4a9de132">renew_entries</a> ()</td></tr>
 <tr class="separator:a8e2784c0fa4cb6b806a3477c4a9de132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa8a7db0eef82275cb64402170f96afd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#afa8a7db0eef82275cb64402170f96afd">list_entries</a> (int shard, utime_t &amp;start_time, utime_t &amp;end_time, int max_entries, list&lt; <a class="el" href="structrgw__data__change.html">rgw_data_change</a> &gt; &amp;entries, const string &amp;marker, string *out_marker, bool *truncated)</td></tr>
-<tr class="separator:afa8a7db0eef82275cb64402170f96afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ddc12c09dd55b20ce595415da567cf3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a4ddc12c09dd55b20ce595415da567cf3">trim_entries</a> (int shard_id, const utime_t &amp;start_time, const utime_t &amp;end_time, const string &amp;start_marker, const string &amp;end_marker)</td></tr>
-<tr class="separator:a4ddc12c09dd55b20ce595415da567cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0602b99a9caaaa5ba5654d39d7f309f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a0602b99a9caaaa5ba5654d39d7f309f1">trim_entries</a> (const utime_t &amp;start_time, const utime_t &amp;end_time, const string &amp;start_marker, const string &amp;end_marker)</td></tr>
-<tr class="separator:a0602b99a9caaaa5ba5654d39d7f309f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34a7840881a81f8d019efbd3318e9c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#af34a7840881a81f8d019efbd3318e9c8">list_entries</a> (int shard, const real_time &amp;start_time, const real_time &amp;end_time, int max_entries, list&lt; <a class="el" href="structrgw__data__change__log__entry.html">rgw_data_change_log_entry</a> &gt; &amp;entries, const string &amp;marker, string *out_marker, bool *truncated)</td></tr>
+<tr class="separator:af34a7840881a81f8d019efbd3318e9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f759b81a721e744e72ba61d0e90b683"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a8f759b81a721e744e72ba61d0e90b683">trim_entries</a> (int shard_id, const real_time &amp;start_time, const real_time &amp;end_time, const string &amp;start_marker, const string &amp;end_marker)</td></tr>
+<tr class="separator:a8f759b81a721e744e72ba61d0e90b683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab153ea52b80a42e12057db48d9cf4c61"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#ab153ea52b80a42e12057db48d9cf4c61">trim_entries</a> (const real_time &amp;start_time, const real_time &amp;end_time, const string &amp;start_marker, const string &amp;end_marker)</td></tr>
+<tr class="separator:ab153ea52b80a42e12057db48d9cf4c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2392e0d960d7ff6d5d407efc748a3949"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a2392e0d960d7ff6d5d407efc748a3949">get_info</a> (int shard_id, <a class="el" href="structRGWDataChangesLogInfo.html">RGWDataChangesLogInfo</a> *info)</td></tr>
 <tr class="separator:a2392e0d960d7ff6d5d407efc748a3949"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d6cd5932616a60bc9c9946c8859232"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a25d6cd5932616a60bc9c9946c8859232">lock_exclusive</a> (int shard_id, utime_t &amp;duration, string &amp;zone_id, string &amp;owner_id)</td></tr>
-<tr class="separator:a25d6cd5932616a60bc9c9946c8859232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85159a02409fee1cde726f5c27636c31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a85159a02409fee1cde726f5c27636c31">lock_exclusive</a> (int shard_id, timespan duration, string &amp;zone_id, string &amp;owner_id)</td></tr>
+<tr class="separator:a85159a02409fee1cde726f5c27636c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a739cc49806dfe0d4f05910a691f6344c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a739cc49806dfe0d4f05910a691f6344c">unlock</a> (int shard_id, string &amp;zone_id, string &amp;owner_id)</td></tr>
 <tr class="separator:a739cc49806dfe0d4f05910a691f6344c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7449be9ef023c6a0e083a8f9608e7108"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a7449be9ef023c6a0e083a8f9608e7108">list_entries</a> (utime_t &amp;start_time, utime_t &amp;end_time, int max_entries, list&lt; <a class="el" href="structrgw__data__change.html">rgw_data_change</a> &gt; &amp;entries, <a class="el" href="structRGWDataChangesLog_1_1LogMarker.html">LogMarker</a> &amp;marker, bool *ptruncated)</td></tr>
-<tr class="separator:a7449be9ef023c6a0e083a8f9608e7108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cb9549156dd21348b0688096ee554a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#ab6cb9549156dd21348b0688096ee554a">list_entries</a> (const real_time &amp;start_time, const real_time &amp;end_time, int max_entries, list&lt; <a class="el" href="structrgw__data__change__log__entry.html">rgw_data_change_log_entry</a> &gt; &amp;entries, <a class="el" href="structRGWDataChangesLog_1_1LogMarker.html">LogMarker</a> &amp;marker, bool *ptruncated)</td></tr>
+<tr class="separator:ab6cb9549156dd21348b0688096ee554a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf013c88153db4e2921f4481b29b3c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a3cf013c88153db4e2921f4481b29b3c2">mark_modified</a> (int shard_id, <a class="el" href="structrgw__bucket__shard.html">rgw_bucket_shard</a> &amp;bs)</td></tr>
+<tr class="separator:a3cf013c88153db4e2921f4481b29b3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cae148465c559298e5ce58ae361be90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a7cae148465c559298e5ce58ae361be90">read_clear_modified</a> (map&lt; int, set&lt; string &gt; &gt; &amp;modified)</td></tr>
+<tr class="separator:a7cae148465c559298e5ce58ae361be90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cbbe248b69fe62cfb9e86007f6d17bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRGWDataChangesLog.html#a4cbbe248b69fe62cfb9e86007f6d17bf">going_down</a> ()</td></tr>
 <tr class="separator:a4cbbe248b69fe62cfb9e86007f6d17bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -254,6 +260,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a12e7037a9e18f965bffc75d81b010dad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RGWDataChangesLog::get_log_shard_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrgw__bucket.html">rgw_bucket</a> &amp;&#160;</td>
+          <td class="paramname"><em>bucket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shard_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4cbbe248b69fe62cfb9e86007f6d17bf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -269,7 +301,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afa8a7db0eef82275cb64402170f96afd"></a>
+<a class="anchor" id="af34a7840881a81f8d019efbd3318e9c8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -282,13 +314,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>start_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>end_time</em>, </td>
         </tr>
         <tr>
@@ -300,7 +332,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">list&lt; <a class="el" href="structrgw__data__change.html">rgw_data_change</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">list&lt; <a class="el" href="structrgw__data__change__log__entry.html">rgw_data_change_log_entry</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>entries</em>, </td>
         </tr>
         <tr>
@@ -331,20 +363,20 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7449be9ef023c6a0e083a8f9608e7108"></a>
+<a class="anchor" id="ab6cb9549156dd21348b0688096ee554a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int RGWDataChangesLog::list_entries </td>
           <td>(</td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>start_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>end_time</em>, </td>
         </tr>
         <tr>
@@ -356,7 +388,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">list&lt; <a class="el" href="structrgw__data__change.html">rgw_data_change</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">list&lt; <a class="el" href="structrgw__data__change__log__entry.html">rgw_data_change_log_entry</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>entries</em>, </td>
         </tr>
         <tr>
@@ -381,7 +413,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a25d6cd5932616a60bc9c9946c8859232"></a>
+<a class="anchor" id="a85159a02409fee1cde726f5c27636c31"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -397,7 +429,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">utime_t &amp;&#160;</td>
+          <td class="paramtype">timespan&#160;</td>
           <td class="paramname"><em>duration</em>, </td>
         </tr>
         <tr>
@@ -427,6 +459,48 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3cf013c88153db4e2921f4481b29b3c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWDataChangesLog::mark_modified </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shard_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrgw__bucket__shard.html">rgw_bucket_shard</a> &amp;&#160;</td>
+          <td class="paramname"><em>bs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7cae148465c559298e5ce58ae361be90"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RGWDataChangesLog::read_clear_modified </td>
+          <td>(</td>
+          <td class="paramtype">map&lt; int, set&lt; string &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>modified</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8e2784c0fa4cb6b806a3477c4a9de132"></a>
 <div class="memitem">
 <div class="memproto">
@@ -442,7 +516,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4ddc12c09dd55b20ce595415da567cf3"></a>
+<a class="anchor" id="a8f759b81a721e744e72ba61d0e90b683"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -455,13 +529,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>start_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>end_time</em>, </td>
         </tr>
         <tr>
@@ -486,20 +560,20 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0602b99a9caaaa5ba5654d39d7f309f1"></a>
+<a class="anchor" id="ab153ea52b80a42e12057db48d9cf4c61"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int RGWDataChangesLog::trim_entries </td>
           <td>(</td>
-          <td class="paramtype">const utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>start_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const utime_t &amp;&#160;</td>
+          <td class="paramtype">const real_time &amp;&#160;</td>
           <td class="paramname"><em>end_time</em>, </td>
         </tr>
         <tr>
@@ -571,7 +645,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:32 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:41 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

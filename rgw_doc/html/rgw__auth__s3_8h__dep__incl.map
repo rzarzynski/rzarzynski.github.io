@@ -1,5 +1,7 @@
 <map id="rgw_auth_s3.h" name="rgw_auth_s3.h">
-<area shape="rect" id="node2" href="$rgw__loadgen_8cc.html" title="rgw_loadgen.cc" alt="" coords="5,80,117,107"/>
-<area shape="rect" id="node3" href="$rgw__rest__client_8cc.html" title="rgw_rest_client.cc" alt="" coords="143,80,271,107"/>
-<area shape="rect" id="node4" href="$rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="295,80,405,107"/>
+<area shape="rect" id="node2" href="$librgw_8cc.html" title="librgw.cc" alt="" coords="5,80,79,107"/>
+<area shape="rect" id="node3" href="$rgw__file_8cc.html" title="rgw_file.cc" alt="" coords="104,80,189,107"/>
+<area shape="rect" id="node4" href="$rgw__loadgen_8cc.html" title="rgw_loadgen.cc" alt="" coords="214,80,327,107"/>
+<area shape="rect" id="node5" href="$rgw__rest__client_8cc.html" title="rgw_rest_client.cc" alt="" coords="352,80,480,107"/>
+<area shape="rect" id="node6" href="$rgw__rest__s3_8cc.html" title="rgw_rest_s3.cc" alt="" coords="505,80,615,107"/>
 </map>

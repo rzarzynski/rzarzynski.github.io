@@ -38,7 +38,7 @@ PROJECT_NAME           = "Ceph RADOS Gateway"
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 4ba3d575b80ab88421d684e9d5b382b9ac0ae678
+PROJECT_NUMBER         = 54b6c99f8f191958919a1d08a57b4bbad18ba57a
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a

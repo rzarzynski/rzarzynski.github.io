@@ -1,0 +1,4 @@
+<map id="RGWDeleteBucketWebsite_ObjStore_S3" name="RGWDeleteBucketWebsite_ObjStore_S3">
+<area shape="rect" id="node2" href="$classRGWDeleteBucketWebsite.html" title="{RGWDeleteBucketWebsite\n||+ RGWDeleteBucketWebsite()\l+ verify_permission()\l+ pre_exec()\l+ execute()\l+ send_response()\l+ name()\l+ get_type()\l+ op_mask()\l}" alt="" coords="5,411,208,591"/>
+<area shape="rect" id="node3" href="$classRGWOp.html" title="{RGWOp\n|# s\l# dialect_handler\l# store\l# bucket_cors\l# cors_exist\l# bucket_quota\l# user_quota\l# op_ret\l|+ RGWOp()\l+ ~RGWOp()\l+ get_ret()\l+ init_processing()\l+ init()\l+ read_bucket_cors()\l+ generate_cors_headers()\l+ verify_params()\l+ prefetch_data()\l+ verify_permission()\land 9 more...\l# do_aws4_auth_completion()\l# init_quota()\l}" alt="" coords="9,6,204,362"/>
+</map>

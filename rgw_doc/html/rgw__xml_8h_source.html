@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Ceph RADOS Gateway
-   &#160;<span id="projectnumber">4ba3d575b80ab88421d684e9d5b382b9ac0ae678</span>
+   &#160;<span id="projectnumber">54b6c99f8f191958919a1d08a57b4bbad18ba57a</span>
    </div>
   </td>
  </tr>
@@ -93,96 +93,304 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;include/types.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;expat.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;common/Formatter.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="classXMLObj.html">XMLObj</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classXMLObjIter.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classXMLObjIter.html">XMLObjIter</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">typedef</span> map&lt;string, XMLObj *&gt;::iterator map_iter_t;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  map_iter_t cur;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  map_iter_t end;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  ~<a class="code" href="classXMLObjIter.html">XMLObjIter</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">void</span> set(<span class="keyword">const</span> XMLObjIter::map_iter_t &amp;_cur, <span class="keyword">const</span> XMLObjIter::map_iter_t &amp;_end);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *get_next();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classXMLObj.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classXMLObj.html">XMLObj</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *parent;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">string</span> obj_type;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classXMLObj.html#a4703347c6f2545f5465622b0b7d8646f">   42</a></span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classXMLObj.html#a4703347c6f2545f5465622b0b7d8646f">data</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classXMLObj.html#a2079a51509acbdd6e12be4900b5e88c6">   43</a></span>&#160;  multimap&lt;string, XMLObj *&gt; <a class="code" href="classXMLObj.html#a2079a51509acbdd6e12be4900b5e88c6">children</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classXMLObj.html#a6454d3c4e8a5b173e99417e1ee949d13">   44</a></span>&#160;  map&lt;string, string&gt; <a class="code" href="classXMLObj.html#a6454d3c4e8a5b173e99417e1ee949d13">attr_map</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classXMLObj.html#a54469a1b31d2623718d274dea3699fbc">   47</a></span>&#160;  <a class="code" href="classXMLObj.html#a54469a1b31d2623718d274dea3699fbc">XMLObj</a>() : parent(NULL) {}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classXMLObj.html">XMLObj</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="rgw__xml_8cc.html#a35189ca8257e68e1af0a6995c9335a46">xml_start</a>(<a class="code" href="classXMLObj.html">XMLObj</a> *parent, <span class="keyword">const</span> <span class="keywordtype">char</span> *el, <span class="keyword">const</span> <span class="keywordtype">char</span> **attr);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="rgw__xml_8cc.html#a2383d9a2d721aa6ba89c5d804e8f4f96">xml_end</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *el);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> xml_handle_data(<span class="keyword">const</span> <span class="keywordtype">char</span> *s, <span class="keywordtype">int</span> len);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">string</span>&amp; get_data();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *get_parent();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> add_child(<span class="keywordtype">string</span> el, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">bool</span> get_attr(<span class="keywordtype">string</span> name, <span class="keywordtype">string</span>&amp; attr);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a> find(<span class="keywordtype">string</span> name);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *find_first(<span class="keywordtype">string</span> name);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">friend</span> ostream&amp; <a class="code" href="rgw__common_8cc.html#a6f439a4d4eed591b4403c88cdda86d61">operator&lt;&lt;</a>(ostream&amp; out, <a class="code" href="classXMLObj.html">XMLObj</a>&amp; obj);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="classXMLObj.html">XMLObj</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classXMLObjIter.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classXMLObjIter.html">XMLObjIter</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">typedef</span> map&lt;string, XMLObj *&gt;::iterator map_iter_t;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  map_iter_t cur;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  map_iter_t end;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  ~<a class="code" href="classXMLObjIter.html">XMLObjIter</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> set(<span class="keyword">const</span> XMLObjIter::map_iter_t &amp;_cur, <span class="keyword">const</span> XMLObjIter::map_iter_t &amp;_end);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *get_next();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classXMLObj.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classXMLObj.html">XMLObj</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *parent;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">string</span> obj_type;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classXMLObj.html#a4703347c6f2545f5465622b0b7d8646f">   41</a></span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classXMLObj.html#a4703347c6f2545f5465622b0b7d8646f">data</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classXMLObj.html#a2079a51509acbdd6e12be4900b5e88c6">   42</a></span>&#160;  multimap&lt;string, XMLObj *&gt; <a class="code" href="classXMLObj.html#a2079a51509acbdd6e12be4900b5e88c6">children</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classXMLObj.html#a6454d3c4e8a5b173e99417e1ee949d13">   43</a></span>&#160;  map&lt;string, string&gt; <a class="code" href="classXMLObj.html#a6454d3c4e8a5b173e99417e1ee949d13">attr_map</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classXMLObj.html#a54469a1b31d2623718d274dea3699fbc">   46</a></span>&#160;  <a class="code" href="classXMLObj.html#a54469a1b31d2623718d274dea3699fbc">XMLObj</a>() : parent(NULL) {}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classXMLObj.html">XMLObj</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="rgw__xml_8cc.html#a35189ca8257e68e1af0a6995c9335a46">xml_start</a>(<a class="code" href="classXMLObj.html">XMLObj</a> *parent, <span class="keyword">const</span> <span class="keywordtype">char</span> *el, <span class="keyword">const</span> <span class="keywordtype">char</span> **attr);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="rgw__xml_8cc.html#a2383d9a2d721aa6ba89c5d804e8f4f96">xml_end</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *el);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> xml_handle_data(<span class="keyword">const</span> <span class="keywordtype">char</span> *s, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">string</span>&amp; get_data();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *get_parent();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> add_child(<span class="keywordtype">string</span> el, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">bool</span> get_attr(<span class="keywordtype">string</span> name, <span class="keywordtype">string</span>&amp; attr);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a> find(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *find_first(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">friend</span> ostream&amp; <a class="code" href="rgw__auth_8h.html#a64a275835e5ee8f31bb17c21b2e9e547">operator&lt;&lt;</a>(ostream &amp;out, <span class="keyword">const</span> <a class="code" href="classXMLObj.html">XMLObj</a> &amp;obj);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">struct </span>XML_ParserStruct;</div>
 <div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classRGWXMLParser.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWXMLParser.html">RGWXMLParser</a> : <span class="keyword">public</span> <a class="code" href="classXMLObj.html">XMLObj</a></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  XML_Parser p;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  XML_ParserStruct *p;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">char</span> *buf;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">int</span> buf_len;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *cur_obj;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  vector&lt;XMLObj *&gt; objs;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classXMLObj.html">XMLObj</a> *alloc_obj(<span class="keyword">const</span> <span class="keywordtype">char</span> *el) = 0;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classRGWXMLParser.html">RGWXMLParser</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classRGWXMLParser.html">RGWXMLParser</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">bool</span> init();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="rgw__xml_8cc.html#a35189ca8257e68e1af0a6995c9335a46">xml_start</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *el, <span class="keyword">const</span> <span class="keywordtype">char</span> **attr);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="rgw__xml_8cc.html#a2383d9a2d721aa6ba89c5d804e8f4f96">xml_end</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *el);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="rgw__xml_8cc.html#ab92fddf1af7fc81f504fffc33cefdf87">handle_data</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *s, <span class="keywordtype">int</span> len);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">bool</span> parse(<span class="keyword">const</span> <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len, <span class="keywordtype">int</span> done);</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classRGWXMLParser.html#a7ff304e0fd16c480c5db18d7812a5149">   81</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classRGWXMLParser.html#a7ff304e0fd16c480c5db18d7812a5149">get_xml</a>() { <span class="keywordflow">return</span> buf; }</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classRGWXMLParser.html#a3c783e72de374d4363d3ea0829bf55f7">   82</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRGWXMLParser.html#a3c783e72de374d4363d3ea0829bf55f7">set_failure</a>() { success = <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  list&lt;XMLObj *&gt; allocated_objs;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  list&lt;XMLObj&gt; unallocated_objs;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classRGWXMLParser.html#a8483cdf8e55b2de971b102b91b4d975e">   73</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classXMLObj.html">XMLObj</a> *<a class="code" href="classRGWXMLParser.html#a8483cdf8e55b2de971b102b91b4d975e">alloc_obj</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *el) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="classRGWXMLParser.html">RGWXMLParser</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classRGWXMLParser.html">RGWXMLParser</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">bool</span> init();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="rgw__xml_8cc.html#a35189ca8257e68e1af0a6995c9335a46">xml_start</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *el, <span class="keyword">const</span> <span class="keywordtype">char</span> **attr);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="rgw__xml_8cc.html#a2383d9a2d721aa6ba89c5d804e8f4f96">xml_end</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *el);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="rgw__xml_8cc.html#ab92fddf1af7fc81f504fffc33cefdf87">handle_data</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *s, <span class="keywordtype">int</span> len);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">bool</span> success;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">bool</span> parse(<span class="keyword">const</span> <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len, <span class="keywordtype">int</span> done);</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classRGWXMLParser.html#a7ff304e0fd16c480c5db18d7812a5149">   85</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classRGWXMLParser.html#a7ff304e0fd16c480c5db18d7812a5149">get_xml</a>() { <span class="keywordflow">return</span> buf; }</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classRGWXMLParser.html#a3c783e72de374d4363d3ea0829bf55f7">   86</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRGWXMLParser.html#a3c783e72de374d4363d3ea0829bf55f7">set_failure</a>() { success = <span class="keyword">false</span>; }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classXMLObjIter_html"><div class="ttname"><a href="classXMLObjIter.html">XMLObjIter</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:19</div></div>
-<div class="ttc" id="classXMLObj_html_a2079a51509acbdd6e12be4900b5e88c6"><div class="ttname"><a href="classXMLObj.html#a2079a51509acbdd6e12be4900b5e88c6">XMLObj::children</a></div><div class="ttdeci">multimap&lt; string, XMLObj * &gt; children</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:43</div></div>
-<div class="ttc" id="rgw__xml_8cc_html_ab92fddf1af7fc81f504fffc33cefdf87"><div class="ttname"><a href="rgw__xml_8cc.html#ab92fddf1af7fc81f504fffc33cefdf87">handle_data</a></div><div class="ttdeci">static void handle_data(void *data, const char *s, int len)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:191</div></div>
-<div class="ttc" id="classRGWXMLParser_html_a7ff304e0fd16c480c5db18d7812a5149"><div class="ttname"><a href="classRGWXMLParser.html#a7ff304e0fd16c480c5db18d7812a5149">RGWXMLParser::get_xml</a></div><div class="ttdeci">const char * get_xml()</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:81</div></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">bool</span> success;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classRGWXMLDecoder.html">   92</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRGWXMLDecoder.html">RGWXMLDecoder</a> {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="structRGWXMLDecoder_1_1err.html">   94</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structRGWXMLDecoder_1_1err.html">err</a> {</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="structRGWXMLDecoder_1_1err.html#ad4f0a865a2705eabf20343152ebf93e5">   95</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structRGWXMLDecoder_1_1err.html#ad4f0a865a2705eabf20343152ebf93e5">message</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structRGWXMLDecoder_1_1err.html#a169d61f9b54937faf3c8843e2604e860">   97</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structRGWXMLDecoder_1_1err.html#a169d61f9b54937faf3c8843e2604e860">err</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; m) : message(m) {}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  };</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classRGWXMLDecoder_1_1XMLParser.html">  100</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classRGWXMLDecoder_1_1XMLParser.html">XMLParser</a> : <span class="keyword">public</span> <a class="code" href="classRGWXMLParser.html">RGWXMLParser</a> {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classRGWXMLDecoder_1_1XMLParser.html#a42b82ea5b37e298def5876ec22b6a588">  102</a></span>&#160;    <a class="code" href="classRGWXMLDecoder_1_1XMLParser.html#a42b82ea5b37e298def5876ec22b6a588">XMLParser</a>() {}</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classRGWXMLDecoder_1_1XMLParser.html#a0a662cfdc74251a5c2f1091a08ae221a">  103</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classRGWXMLDecoder_1_1XMLParser.html#a0a662cfdc74251a5c2f1091a08ae221a">~XMLParser</a>() {}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  } parser;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classRGWXMLDecoder.html#a7fc5700c6a6d4fd231bc9335629b0293">  106</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classRGWXMLDecoder.html#a7fc5700c6a6d4fd231bc9335629b0293">RGWXMLDecoder</a>(bufferlist&amp; bl) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span> (!parser.parse(bl.c_str(), bl.length(), 1)) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      cout &lt;&lt; <span class="stringliteral">&quot;RGWXMLDecoder::err()&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="structRGWXMLDecoder_1_1err.html">RGWXMLDecoder::err</a>(<span class="stringliteral">&quot;failed to parse XML input&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> decode_xml(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, T&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj, <span class="keywordtype">bool</span> mandatory = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> C&gt;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> decode_xml(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, C&amp; container, <span class="keywordtype">void</span> (*cb)(C&amp;, <a class="code" href="classXMLObj.html">XMLObj</a> *obj), <a class="code" href="classXMLObj.html">XMLObj</a> *obj, <span class="keywordtype">bool</span> mandatory = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> decode_xml(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, T&amp; val, T&amp; default_val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">  124</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(T&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  val.decode_xml(obj);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="rgw__xml_8h.html#a804378698f01ebcf44f6b99264667669">  129</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(<span class="keywordtype">string</span>&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  val = obj-&gt;<a class="code" href="classXMLObj.html#ac9a48a4a7566aab11df1c5b64df12922">get_data</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span>&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(<span class="keywordtype">long</span>&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(<span class="keywordtype">unsigned</span>&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(<span class="keywordtype">int</span>&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(<span class="keywordtype">bool</span>&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(bufferlist&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keyword">class </span>utime_t;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(utime_t&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="rgw__xml_8h.html#a3bb7c612b8406cf9b2e19c3181f7c9d2">  146</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a3bb7c612b8406cf9b2e19c3181f7c9d2">do_decode_xml_obj</a>(list&lt;T&gt;&amp; l, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name, <a class="code" href="classXMLObj.html">XMLObj</a> *obj)</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  l.clear();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a> iter = obj-&gt;<a class="code" href="classXMLObj.html#acb6bca6a22205e7a99799dce9d901b0d">find</a>(name);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *o;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordflow">while</span> ((o = iter.<a class="code" href="classXMLObjIter.html#a3a22d90225f573459c9c5afc925eceb3">get_next</a>())) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    T val;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(val, o);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    l.push_back(val);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="rgw__xml_8h.html#a1f8318c6859ba5d860715dd903ec1e48">  161</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a3bb7c612b8406cf9b2e19c3181f7c9d2">do_decode_xml_obj</a>(vector&lt;T&gt;&amp; l, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name, <a class="code" href="classXMLObj.html">XMLObj</a> *obj)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  l.clear();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a> iter = obj-&gt;<a class="code" href="classXMLObj.html#acb6bca6a22205e7a99799dce9d901b0d">find</a>(name);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *o;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">while</span> (o = iter.<a class="code" href="classXMLObjIter.html#a3a22d90225f573459c9c5afc925eceb3">get_next</a>()) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    T val;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(val, o);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    l.push_back(val);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classRGWXMLDecoder.html#afd109a7a9a8e6466d3365860e0b2426f">  176</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classRGWXMLDecoder.html#afd109a7a9a8e6466d3365860e0b2426f">RGWXMLDecoder::decode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, T&amp; val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj, <span class="keywordtype">bool</span> mandatory)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a> iter = obj-&gt;<a class="code" href="classXMLObj.html#acb6bca6a22205e7a99799dce9d901b0d">find</a>(name);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *o = iter.<a class="code" href="classXMLObjIter.html#a3a22d90225f573459c9c5afc925eceb3">get_next</a>();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordflow">if</span> (!o) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> (mandatory) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      <span class="keywordtype">string</span> s = <span class="stringliteral">&quot;missing mandatory field &quot;</span> + string(name);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="structRGWXMLDecoder_1_1err.html">err</a>(s);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    val = T();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(val, o);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  } <span class="keywordflow">catch</span> (<a class="code" href="structRGWXMLDecoder_1_1err.html">err</a>&amp; e) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">string</span> s = string(name) + <span class="stringliteral">&quot;: &quot;</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    s.append(e.<a class="code" href="structRGWXMLDecoder_1_1err.html#ad4f0a865a2705eabf20343152ebf93e5">message</a>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="structRGWXMLDecoder_1_1err.html">err</a>(s);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> C&gt;</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classRGWXMLDecoder.html#aa1d965e1f9f5c5c81d2af5dee3301a77">  201</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classRGWXMLDecoder.html#afd109a7a9a8e6466d3365860e0b2426f">RGWXMLDecoder::decode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, C&amp; container, <span class="keywordtype">void</span> (*cb)(C&amp;, <a class="code" href="classXMLObj.html">XMLObj</a> *), <a class="code" href="classXMLObj.html">XMLObj</a> *obj, <span class="keywordtype">bool</span> mandatory)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  container.clear();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a> iter = obj-&gt;<a class="code" href="classXMLObj.html#acb6bca6a22205e7a99799dce9d901b0d">find</a>(name);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *o = iter.<a class="code" href="classXMLObjIter.html#a3a22d90225f573459c9c5afc925eceb3">get_next</a>();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordflow">if</span> (!o) {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">if</span> (mandatory) {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      <span class="keywordtype">string</span> s = <span class="stringliteral">&quot;missing mandatory field &quot;</span> + string(name);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="structRGWXMLDecoder_1_1err.html">err</a>(s);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(container, cb, o);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  } <span class="keywordflow">catch</span> (<a class="code" href="structRGWXMLDecoder_1_1err.html">err</a>&amp; e) {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">string</span> s = string(name) + <span class="stringliteral">&quot;: &quot;</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    s.append(e.<a class="code" href="structRGWXMLDecoder_1_1err.html#ad4f0a865a2705eabf20343152ebf93e5">message</a>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="structRGWXMLDecoder_1_1err.html">err</a>(s);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="classRGWXMLDecoder.html#a511dc0824064150f71c7cce182136cda">  227</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRGWXMLDecoder.html#afd109a7a9a8e6466d3365860e0b2426f">RGWXMLDecoder::decode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, T&amp; val, T&amp; default_val, <a class="code" href="classXMLObj.html">XMLObj</a> *obj)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;{</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <a class="code" href="classXMLObjIter.html">XMLObjIter</a> iter = obj-&gt;<a class="code" href="classXMLObj.html#acb6bca6a22205e7a99799dce9d901b0d">find</a>(name);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <a class="code" href="classXMLObj.html">XMLObj</a> *o = iter.<a class="code" href="classXMLObjIter.html#a3a22d90225f573459c9c5afc925eceb3">get_next</a>();</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="keywordflow">if</span> (!o) {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    val = default_val;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a>(val, o);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  } <span class="keywordflow">catch</span> (<a class="code" href="structRGWXMLDecoder_1_1err.html">err</a>&amp; e) {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    val = default_val;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">string</span> s = string(name) + <span class="stringliteral">&quot;: &quot;</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    s.append(e.<a class="code" href="structRGWXMLDecoder_1_1err.html#ad4f0a865a2705eabf20343152ebf93e5">message</a>);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="structRGWXMLDecoder_1_1err.html">err</a>(s);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">  247</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> T&amp; val, ceph::Formatter *f)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;{</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  f-&gt;open_object_section(name);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  val.dump_xml(f);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  f-&gt;close_section();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> <span class="keywordtype">char</span> *val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">bool</span> val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">unsigned</span> val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">long</span> val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">long</span> <span class="keywordtype">long</span> val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> utime_t&amp; val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> bufferlist&amp; bl, ceph::Formatter *f);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">long</span> <span class="keywordtype">long</span> val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> val, ceph::Formatter *f);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="rgw__xml_8h.html#a219b6bc10af4fa3620f3b872d561a4bf">  268</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="rgw__xml_8h.html#a219b6bc10af4fa3620f3b872d561a4bf">do_encode_xml</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> std::list&lt;T&gt;&amp; l, <span class="keyword">const</span> <span class="keywordtype">char</span> *entry_name, ceph::Formatter *f)</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  f-&gt;open_array_section(name);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">typename</span> std::list&lt;T&gt;::const_iterator iter = l.begin(); iter != l.end(); ++iter) {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a>(entry_name, *iter, f);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  f-&gt;close_section();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classXMLObjIter_html"><div class="ttname"><a href="classXMLObjIter.html">XMLObjIter</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:18</div></div>
+<div class="ttc" id="rgw__auth_8h_html_a64a275835e5ee8f31bb17c21b2e9e547"><div class="ttname"><a href="rgw__auth_8h.html#a64a275835e5ee8f31bb17c21b2e9e547">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const RGWIdentityApplier &amp;id)</div><div class="ttdef"><b>Definition:</b> rgw_auth.h:57</div></div>
+<div class="ttc" id="classRGWXMLDecoder_html_afd109a7a9a8e6466d3365860e0b2426f"><div class="ttname"><a href="classRGWXMLDecoder.html#afd109a7a9a8e6466d3365860e0b2426f">RGWXMLDecoder::decode_xml</a></div><div class="ttdeci">static bool decode_xml(const char *name, T &amp;val, XMLObj *obj, bool mandatory=false)</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:176</div></div>
+<div class="ttc" id="structRGWXMLDecoder_1_1err_html"><div class="ttname"><a href="structRGWXMLDecoder_1_1err.html">RGWXMLDecoder::err</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:94</div></div>
+<div class="ttc" id="classRGWXMLDecoder_1_1XMLParser_html"><div class="ttname"><a href="classRGWXMLDecoder_1_1XMLParser.html">RGWXMLDecoder::XMLParser</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:100</div></div>
+<div class="ttc" id="classXMLObj_html_a2079a51509acbdd6e12be4900b5e88c6"><div class="ttname"><a href="classXMLObj.html#a2079a51509acbdd6e12be4900b5e88c6">XMLObj::children</a></div><div class="ttdeci">multimap&lt; string, XMLObj * &gt; children</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:42</div></div>
+<div class="ttc" id="rgw__xml_8cc_html_ab92fddf1af7fc81f504fffc33cefdf87"><div class="ttname"><a href="rgw__xml_8cc.html#ab92fddf1af7fc81f504fffc33cefdf87">handle_data</a></div><div class="ttdeci">static void handle_data(void *data, const char *s, int len)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:197</div></div>
+<div class="ttc" id="classRGWXMLParser_html_a7ff304e0fd16c480c5db18d7812a5149"><div class="ttname"><a href="classRGWXMLParser.html#a7ff304e0fd16c480c5db18d7812a5149">RGWXMLParser::get_xml</a></div><div class="ttdeci">const char * get_xml()</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:85</div></div>
 <div class="ttc" id="classRGWXMLParser_html"><div class="ttname"><a href="classRGWXMLParser.html">RGWXMLParser</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:63</div></div>
-<div class="ttc" id="classXMLObj_html_a54469a1b31d2623718d274dea3699fbc"><div class="ttname"><a href="classXMLObj.html#a54469a1b31d2623718d274dea3699fbc">XMLObj::XMLObj</a></div><div class="ttdeci">XMLObj()</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:47</div></div>
-<div class="ttc" id="rgw__xml_8cc_html_a2383d9a2d721aa6ba89c5d804e8f4f96"><div class="ttname"><a href="rgw__xml_8cc.html#a2383d9a2d721aa6ba89c5d804e8f4f96">xml_end</a></div><div class="ttdeci">static void xml_end(void *data, const char *el)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:176</div></div>
-<div class="ttc" id="classXMLObj_html"><div class="ttname"><a href="classXMLObj.html">XMLObj</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:37</div></div>
-<div class="ttc" id="rgw__common_8cc_html_a6f439a4d4eed591b4403c88cdda86d61"><div class="ttname"><a href="rgw__common_8cc.html#a6f439a4d4eed591b4403c88cdda86d61">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;oss, const rgw_err &amp;err)</div><div class="ttdef"><b>Definition:</b> rgw_common.cc:240</div></div>
-<div class="ttc" id="classRGWXMLParser_html_a3c783e72de374d4363d3ea0829bf55f7"><div class="ttname"><a href="classRGWXMLParser.html#a3c783e72de374d4363d3ea0829bf55f7">RGWXMLParser::set_failure</a></div><div class="ttdeci">void set_failure()</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:82</div></div>
-<div class="ttc" id="rgw__xml_8cc_html_a35189ca8257e68e1af0a6995c9335a46"><div class="ttname"><a href="rgw__xml_8cc.html#a35189ca8257e68e1af0a6995c9335a46">xml_start</a></div><div class="ttdeci">static void xml_start(void *data, const char *el, const char **attr)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:132</div></div>
-<div class="ttc" id="classXMLObj_html_a6454d3c4e8a5b173e99417e1ee949d13"><div class="ttname"><a href="classXMLObj.html#a6454d3c4e8a5b173e99417e1ee949d13">XMLObj::attr_map</a></div><div class="ttdeci">map&lt; string, string &gt; attr_map</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:44</div></div>
-<div class="ttc" id="classXMLObj_html_a4703347c6f2545f5465622b0b7d8646f"><div class="ttname"><a href="classXMLObj.html#a4703347c6f2545f5465622b0b7d8646f">XMLObj::data</a></div><div class="ttdeci">string data</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:42</div></div>
+<div class="ttc" id="classXMLObj_html_a54469a1b31d2623718d274dea3699fbc"><div class="ttname"><a href="classXMLObj.html#a54469a1b31d2623718d274dea3699fbc">XMLObj::XMLObj</a></div><div class="ttdeci">XMLObj()</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:46</div></div>
+<div class="ttc" id="rgw__xml_8h_html_a1512966c3f0c8cf0ea07adbfb90d7fd8"><div class="ttname"><a href="rgw__xml_8h.html#a1512966c3f0c8cf0ea07adbfb90d7fd8">decode_xml_obj</a></div><div class="ttdeci">void decode_xml_obj(T &amp;val, XMLObj *obj)</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:124</div></div>
+<div class="ttc" id="classRGWXMLDecoder_html_a7fc5700c6a6d4fd231bc9335629b0293"><div class="ttname"><a href="classRGWXMLDecoder.html#a7fc5700c6a6d4fd231bc9335629b0293">RGWXMLDecoder::RGWXMLDecoder</a></div><div class="ttdeci">RGWXMLDecoder(bufferlist &amp;bl)</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:106</div></div>
+<div class="ttc" id="classXMLObj_html_ac9a48a4a7566aab11df1c5b64df12922"><div class="ttname"><a href="classXMLObj.html#ac9a48a4a7566aab11df1c5b64df12922">XMLObj::get_data</a></div><div class="ttdeci">string &amp; get_data()</div></div>
+<div class="ttc" id="classRGWXMLDecoder_1_1XMLParser_html_a42b82ea5b37e298def5876ec22b6a588"><div class="ttname"><a href="classRGWXMLDecoder_1_1XMLParser.html#a42b82ea5b37e298def5876ec22b6a588">RGWXMLDecoder::XMLParser::XMLParser</a></div><div class="ttdeci">XMLParser()</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:102</div></div>
+<div class="ttc" id="structRGWXMLDecoder_1_1err_html_a169d61f9b54937faf3c8843e2604e860"><div class="ttname"><a href="structRGWXMLDecoder_1_1err.html#a169d61f9b54937faf3c8843e2604e860">RGWXMLDecoder::err::err</a></div><div class="ttdeci">err(const string &amp;m)</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:97</div></div>
+<div class="ttc" id="classRGWXMLParser_html_a8483cdf8e55b2de971b102b91b4d975e"><div class="ttname"><a href="classRGWXMLParser.html#a8483cdf8e55b2de971b102b91b4d975e">RGWXMLParser::alloc_obj</a></div><div class="ttdeci">virtual XMLObj * alloc_obj(const char *el)</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:73</div></div>
+<div class="ttc" id="rgw__xml_8h_html_a3bb7c612b8406cf9b2e19c3181f7c9d2"><div class="ttname"><a href="rgw__xml_8h.html#a3bb7c612b8406cf9b2e19c3181f7c9d2">do_decode_xml_obj</a></div><div class="ttdeci">void do_decode_xml_obj(list&lt; T &gt; &amp;l, const string &amp;name, XMLObj *obj)</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:146</div></div>
+<div class="ttc" id="rgw__xml_8h_html_a219b6bc10af4fa3620f3b872d561a4bf"><div class="ttname"><a href="rgw__xml_8h.html#a219b6bc10af4fa3620f3b872d561a4bf">do_encode_xml</a></div><div class="ttdeci">static void do_encode_xml(const char *name, const std::list&lt; T &gt; &amp;l, const char *entry_name, ceph::Formatter *f)</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:268</div></div>
+<div class="ttc" id="classXMLObj_html_acb6bca6a22205e7a99799dce9d901b0d"><div class="ttname"><a href="classXMLObj.html#acb6bca6a22205e7a99799dce9d901b0d">XMLObj::find</a></div><div class="ttdeci">XMLObjIter find(string name)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:110</div></div>
+<div class="ttc" id="rgw__xml_8h_html_a199944c869c074e870e46bb9a2a5ad82"><div class="ttname"><a href="rgw__xml_8h.html#a199944c869c074e870e46bb9a2a5ad82">encode_xml</a></div><div class="ttdeci">static void encode_xml(const char *name, const T &amp;val, ceph::Formatter *f)</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:247</div></div>
+<div class="ttc" id="rgw__xml_8cc_html_a2383d9a2d721aa6ba89c5d804e8f4f96"><div class="ttname"><a href="rgw__xml_8cc.html#a2383d9a2d721aa6ba89c5d804e8f4f96">xml_end</a></div><div class="ttdeci">static void xml_end(void *data, const char *el)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:182</div></div>
+<div class="ttc" id="classXMLObj_html"><div class="ttname"><a href="classXMLObj.html">XMLObj</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:36</div></div>
+<div class="ttc" id="classRGWXMLDecoder_html"><div class="ttname"><a href="classRGWXMLDecoder.html">RGWXMLDecoder</a></div><div class="ttdef"><b>Definition:</b> rgw_xml.h:92</div></div>
+<div class="ttc" id="classRGWXMLParser_html_a3c783e72de374d4363d3ea0829bf55f7"><div class="ttname"><a href="classRGWXMLParser.html#a3c783e72de374d4363d3ea0829bf55f7">RGWXMLParser::set_failure</a></div><div class="ttdeci">void set_failure()</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:86</div></div>
+<div class="ttc" id="rgw__xml_8cc_html_a35189ca8257e68e1af0a6995c9335a46"><div class="ttname"><a href="rgw__xml_8cc.html#a35189ca8257e68e1af0a6995c9335a46">xml_start</a></div><div class="ttdeci">static void xml_start(void *data, const char *el, const char **attr)</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:134</div></div>
+<div class="ttc" id="classXMLObjIter_html_a3a22d90225f573459c9c5afc925eceb3"><div class="ttname"><a href="classXMLObjIter.html#a3a22d90225f573459c9c5afc925eceb3">XMLObjIter::get_next</a></div><div class="ttdeci">XMLObj * get_next()</div><div class="ttdef"><b>Definition:</b> rgw_xml.cc:38</div></div>
+<div class="ttc" id="classRGWXMLDecoder_1_1XMLParser_html_a0a662cfdc74251a5c2f1091a08ae221a"><div class="ttname"><a href="classRGWXMLDecoder_1_1XMLParser.html#a0a662cfdc74251a5c2f1091a08ae221a">RGWXMLDecoder::XMLParser::~XMLParser</a></div><div class="ttdeci">virtual ~XMLParser()</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:103</div></div>
+<div class="ttc" id="classXMLObj_html_a6454d3c4e8a5b173e99417e1ee949d13"><div class="ttname"><a href="classXMLObj.html#a6454d3c4e8a5b173e99417e1ee949d13">XMLObj::attr_map</a></div><div class="ttdeci">map&lt; string, string &gt; attr_map</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:43</div></div>
+<div class="ttc" id="structRGWXMLDecoder_1_1err_html_ad4f0a865a2705eabf20343152ebf93e5"><div class="ttname"><a href="structRGWXMLDecoder_1_1err.html#ad4f0a865a2705eabf20343152ebf93e5">RGWXMLDecoder::err::message</a></div><div class="ttdeci">string message</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:95</div></div>
+<div class="ttc" id="classXMLObj_html_a4703347c6f2545f5465622b0b7d8646f"><div class="ttname"><a href="classXMLObj.html#a4703347c6f2545f5465622b0b7d8646f">XMLObj::data</a></div><div class="ttdeci">string data</div><div class="ttdef"><b>Definition:</b> rgw_xml.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 12:10:31 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 14 2016 21:41:39 for Ceph RADOS Gateway by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

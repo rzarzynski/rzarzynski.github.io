@@ -1,0 +1,3 @@
+<map id="rgw_data_change_log_entry" name="rgw_data_change_log_entry">
+<area shape="rect" id="node3" href="$structrgw__data__change.html" title="{rgw_data_change\n|+ entity_type\l+ timestamp\l|+ encode()\l+ decode()\l+ dump()\l+ decode_json()\l}" alt="" coords="129,147,252,283"/>
+</map>

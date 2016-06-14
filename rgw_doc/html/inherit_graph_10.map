@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structKey.html" title="Key" alt="" coords="5,5,51,32"/>
+<area shape="rect" id="node2" href="$classC__InitTimeout.html" title="C_InitTimeout" alt="" coords="152,5,256,32"/>
+<area shape="rect" id="node3" href="$classrgw_1_1C__InitTimeout.html" title="rgw::C_InitTimeout" alt="" coords="137,56,271,83"/>
+<area shape="rect" id="node4" href="$classRGWRealmReloader_1_1C__Reload.html" title="RGWRealmReloader::C\l_Reload" alt="" coords="123,107,285,149"/>
 </map>

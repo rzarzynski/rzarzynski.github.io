@@ -1,5 +1,6 @@
 <map id="RGWLoadGenIO" name="RGWLoadGenIO">
-<area shape="rect" id="node2" href="$classRGWClientIO.html" title="{RGWClientIO\n||+ ~RGWClientIO()\l+ RGWClientIO()\l+ init()\l+ print()\l+ write()\l+ flush()\l+ read()\l+ send_status()\l+ send_100_continue()\l+ complete_header()\land 6 more...\l# init_env()\l# write_data()\l# read_data()\l}" alt="" coords="9,510,163,778"/>
-<area shape="rect" id="node3" href="$classRGWEnv.html" title="{RGWEnv\n||+ RGWEnv()\l+ ~RGWEnv()\l+ init()\l+ init()\l+ set()\l+ get()\l+ get_int()\l+ get_bool()\l+ get_size()\l+ exists()\l+ exists_prefix()\l+ remove()\l+ get_map()\l}" alt="" coords="29,192,144,445"/>
-<area shape="rect" id="node4" href="$classRGWConf.html" title="{RGWConf\n|+ enable_ops_log\l+ enable_usage_log\l+ defer_to_bucket_acls\l|+ RGWConf()\l# init()\l}" alt="" coords="7,6,165,127"/>
+<area shape="rect" id="node2" href="$classRGWStreamIO.html" title="{RGWStreamIO\n||+ ~RGWStreamIO()\l+ RGWStreamIO()\l+ print()\l+ write()\l+ flush()\l+ read()\l+ grab_aws4_sha256_hash()\l+ send_status()\l+ send_100_continue()\l+ complete_header()\l+ send_content_length()\l+ get_bytes_sent()\l+ get_bytes_received()\l# write_data()\l# read_data()\l}" alt="" coords="5,771,195,1053"/>
+<area shape="rect" id="node3" href="$classRGWClientIO.html" title="{RGWClientIO\n||+ ~RGWClientIO()\l+ RGWClientIO()\l+ init()\l+ get_env()\l+ account()\l+ set_account()\l+ complete_request()\l+ get_bytes_sent()\l+ get_bytes_received()\l# init_env()\l}" alt="" coords="23,510,176,719"/>
+<area shape="rect" id="node4" href="$classRGWEnv.html" title="{RGWEnv\n||+ RGWEnv()\l+ ~RGWEnv()\l+ init()\l+ init()\l+ set()\l+ get()\l+ get_int()\l+ get_bool()\l+ get_size()\l+ exists()\l+ exists_prefix()\l+ remove()\l+ get_map()\l}" alt="" coords="42,192,157,445"/>
+<area shape="rect" id="node5" href="$classRGWConf.html" title="{RGWConf\n|+ enable_ops_log\l+ enable_usage_log\l+ defer_to_bucket_acls\l|+ RGWConf()\l# init()\l}" alt="" coords="21,6,179,127"/>
 </map>
